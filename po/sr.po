@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-01 15:24+0100\n"
-"PO-Revision-Date: 2003-11-01 15:25+0100\n"
+"POT-Creation-Date: 2003-11-07 04:54+0100\n"
+"PO-Revision-Date: 2003-11-07 04:56+0100\n"
 "Last-Translator: Данило Шеган <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <serbiangnome-lista@nongnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -509,6 +509,30 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. lost their content
 #. one field per author
 #. general case
+#. This file is part of Pybliographer
+#.
+#. Copyright (C) 1998-2003 Peter Schulte-Stracke
+#. Email : Peter.Schulte-Stracke@t-online.de
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. set by
+#. A text is either a string or a list:
+#. what does that mean ??
+#. error situation
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -562,8 +586,7 @@ msgstr "Изаберите ваше поставке"
 #. Create the edition widget...
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
-#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:291
-#: Pyblio/GnomeUI/Fields.py:473
+#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:374
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -587,14 +610,13 @@ msgid "Update"
 msgstr "Допуни"
 
 #: Pyblio/GnomeUI/Config.py:433 Pyblio/GnomeUI/Config.py:537
-#: Pyblio/GnomeUI/Fields.py:373
 msgid "Remove"
 msgstr "Уклони"
 
 #. Bottom
 #. m.row.changed(row)
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:534 Pyblio/GnomeUI/Fields.py:370
+#: Pyblio/GnomeUI/Config.py:534
 msgid "Set"
 msgstr "Постави"
 
@@ -831,28 +853,19 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#. search the program in the current path
-#: Pyblio/GnomeUI/Document.py:745
-msgid ""
-"Please install bug-buddy\n"
-"to use this feature"
-msgstr ""
-"Молим инсталирајте брата буба\n"
-"да бисте користили ову могућност"
-
-#: Pyblio/GnomeUI/Document.py:758
+#: Pyblio/GnomeUI/Document.py:738
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Овај програм је заштићен ауторским правима према Гнуовој ОЈЛ (GPL)"
 
-#: Pyblio/GnomeUI/Document.py:759
+#: Pyblio/GnomeUI/Document.py:739
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Гномово сучеље за систем Пиблиотекара."
 
-#: Pyblio/GnomeUI/Document.py:768
+#: Pyblio/GnomeUI/Document.py:748
 msgid "Gnome Translation Team"
 msgstr "Гномов преводилачки тим"
 
-#: Pyblio/GnomeUI/Document.py:773
+#: Pyblio/GnomeUI/Document.py:753
 msgid "Pybliographer Home Page"
 msgstr "Домаћа страница Пиблиотекара"
 
@@ -882,7 +895,7 @@ msgstr "Домаћа страница Пиблиотекара"
 msgid "Last Name, First Name"
 msgstr "Презиме, име"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:39
+#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
 #: glade/config1.glade.h:14
 msgid "Text"
 msgstr "Текст"
@@ -922,8 +935,12 @@ msgstr "Обриши"
 msgid "[ Drop an Entry here ]"
 msgstr "[ Овде убаците унос ]"
 
+#. Config save?
+#. print 'SELF:FM[P][2]:', self.fm[p] [2]
+#. ------------------------------------------------------------
+#. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:106
+#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:207
 #: glade/config1.glade.h:8
 msgid "Entry type"
 msgstr "Врста уноса"
@@ -941,11 +958,11 @@ msgstr "Образуј поље"
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:325
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:408
 msgid "Mandatory"
 msgstr "Обавезно"
 
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:409
 msgid "Optional"
 msgstr "Необавезно"
 
@@ -1027,66 +1044,54 @@ msgstr "Обично уређивање"
 #.
 #.
 #. TO DO:
-#. correctly create entry types
-#: Pyblio/GnomeUI/Fields.py:38
+#. adapt menu item for this dialog
+#. cleaning up
+#: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
 msgstr "Аутори"
 
-#: Pyblio/GnomeUI/Fields.py:40 glade/config1.glade.h:16
+#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
 msgid "URL"
 msgstr "Адреса"
 
 # Или ставити „референца“, пошто није баш јасно да ли се „позива на“, или „позива се из“
-#: Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Fields.py:43
 msgid "Reference"
 msgstr "Позива се на"
 
-#: Pyblio/GnomeUI/Fields.py:42
+#: Pyblio/GnomeUI/Fields.py:44
 msgid "Date"
 msgstr "Датум"
 
 #. self.dialog.set_parent (parent) ####
-#: Pyblio/GnomeUI/Fields.py:61
+#: Pyblio/GnomeUI/Fields.py:63
 msgid "Entry types and field names configuration"
 msgstr "Подешавање врсте уноса и имена поља"
 
-#. content of the dialog  Page 1
-#: Pyblio/GnomeUI/Fields.py:69 glade/config1.glade.h:11
+#. ------------------------------------------------------------
+#. Page 1
+#: Pyblio/GnomeUI/Fields.py:102 glade/config1.glade.h:11
 msgid "Name"
 msgstr "Име"
 
-#: Pyblio/GnomeUI/Fields.py:72 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:105 glade/config1.glade.h:15
 msgid "Type"
 msgstr "Врста"
 
-#. PAGE 3
-#: Pyblio/GnomeUI/Fields.py:126
+#. ------------------------------------------------------------
+#. Page 3
+#: Pyblio/GnomeUI/Fields.py:263
 msgid "Available"
 msgstr "Доступно"
 
-#: Pyblio/GnomeUI/Fields.py:135
+#: Pyblio/GnomeUI/Fields.py:273
 msgid "Associated"
 msgstr "У вези са"
 
-#: Pyblio/GnomeUI/Fields.py:332
-msgid "Entries configuration"
-msgstr "Подешавање уноса"
-
-#: Pyblio/GnomeUI/Fields.py:343
-msgid "Entry"
-msgstr "Унос"
-
-#: Pyblio/GnomeUI/Fields.py:354
-msgid "Entry Name:"
-msgstr "Име уноса:"
-
-#: Pyblio/GnomeUI/Fields.py:359
-msgid "Status"
-msgstr "Стање"
-
-#: Pyblio/GnomeUI/Fields.py:359 glade/search.glade.h:4
-msgid "Field"
-msgstr "Поље"
+#: Pyblio/GnomeUI/Fields.py:293
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Поља везана са уносом врсте <b>%s</b>"
 
 #. This file is part of pybliographer
 #.
@@ -1221,6 +1226,27 @@ msgstr "Обриши..."
 #. we must be after the entry...
 #. well, show the user its entry must be after the bounds
 #. what menu items are accessible ?
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. Fill in the combo boxes
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1778,6 +1804,10 @@ msgstr "Затвори"
 msgid "Expert Search"
 msgstr "Стручна претрага"
 
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Поље"
+
 #: glade/search.glade.h:5
 msgid "Pattern"
 msgstr "Образац"
@@ -1863,12 +1893,6 @@ msgstr ""
 #. Quand on a tout lu, le programme est fini !
 #. ---------- Initialisations du parser
 #. save history
-#. Site configuration
-#. ==================================================
-#. define autoloaded formats
-#. define styles and outputs
-#. define key formats
-#. Parse the configuration directory
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
@@ -2101,6 +2125,25 @@ msgstr "pybtex: упозорење: наредни кључеви нису ра�
 #: scripts/pybtex.py:63
 msgid "no style defined"
 msgstr "стил није одређен"
+
+#~ msgid ""
+#~ "Please install bug-buddy\n"
+#~ "to use this feature"
+#~ msgstr ""
+#~ "Молим инсталирајте брата буба\n"
+#~ "да бисте користили ову могућност"
+
+#~ msgid "Entries configuration"
+#~ msgstr "Подешавање уноса"
+
+#~ msgid "Entry"
+#~ msgstr "Унос"
+
+#~ msgid "Entry Name:"
+#~ msgstr "Име уноса:"
+
+#~ msgid "Status"
+#~ msgstr "Стање"
 
 #~ msgid "Search Command:"
 #~ msgstr "Наредба за претрагу:"

@@ -23,7 +23,9 @@
 bibliography '''
 
 # TO DO:
-# correctly create entry types
+# adapt menu item for this dialog
+# cleaning up
+
 
 import gobject, gtk
 
@@ -61,9 +63,40 @@ class FieldsDialog:
         self.dialog.set_title (_("Entry types and field names configuration"))
         self.warning = 0
         self.parent = parent
+        self.init_page_1()
+        self.init_page_2()
+        self.init_page_3()
+        self.show()
 
-        # content of the dialog  Page 1
+        self.changed = 0
+        return
 
+    def show(self):
+        self.dialog.show_all ()
+
+    def on_close (self, w):
+        self.dialog.hide_all()
+
+    def on_add(self, *args):
+        page = self.w.get_current_page ()
+        if page == 0: self.page1_add (*args)
+        elif page == 1: self.page2_add (*args)
+        elif page == 2: self.page3_add (*args)
+        
+    def on_remove (self, *args):
+        page = self.w.get_current_page()
+        if page == 0: self.page1_rm (*args)
+        elif page == 1: self.page2_rm (*args)
+        elif page == 2: self.page3_rm (*args)
+
+    def on_help (self, *args):
+        print 'ON HELP:', args
+
+    #------------------------------------------------------------
+    # Page 1
+
+    def init_page_1 (self):
+        
         self.fields1 = self.xml.get_widget('f_list_1')
         rend = gtk.CellRendererText()
         col = gtk.TreeViewColumn(_('Name'), rend, text = 0)
@@ -73,15 +106,16 @@ class FieldsDialog:
         self.fields1.append_column(col)
         
         self.fm = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                gobject.TYPE_PYOBJECT)
-        self.fields1.set_model(self.fm)
+                                gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
+        self.sfm = gtk.TreeModelSort(self.fm)
+        self.sfm.set_sort_column_id(2, gtk.SORT_ASCENDING)
+        self.fields1.set_model(self.sfm)
         self.s1 = self.fields1.get_selection()
         self.s1.connect ('changed', self.list_1_select)
-        data = copy.copy (Config.get ('base/fields').data)
-        keys = data.keys ()
-        keys.sort ()
-        for item in [data[key] for key in keys]:
-            self.fm.append((item.name, _typename [item.type], item.type))
+        self.fields = copy.copy (Config.get ('base/fields').data)
+        for key, item in  self.fields.iteritems():
+            self.fm.append((item.name,
+                            _typename [item.type], key, item)) 
         
         self.name1 = self.xml.get_widget('name1')
         self.menu1 = self.xml.get_widget('type1')
@@ -93,39 +127,143 @@ class FieldsDialog:
         self.menu1.set_history (0)
         self.current_menu = self.menu_items [0]
 
-        # PAGE 2
+    def page1_add (self, *args):
+        t = self.menu_items[0]
+        description = Types.FieldDescription('')
+        iter = self.fm.append((
+            'new field', _typename[t], '_nNEW FIELD_',
+            description))
+        if iter:
+            s_iter = self.sfm.convert_child_iter_to_iter(None, iter)
+            s_path = self.sfm.get_path(s_iter)
+            self.fields1.scroll_to_cell(s_path)
+            self.s1.select_iter(s_iter)
+            # Config save?
+            
+    def page1_rm (self, *args):
+        m, iter = self.s1.get_selected()
+        if iter:
+            p = self.sfm.convert_iter_to_child_iter(None, iter)
+            #print 'SELF:FM[P][2]:', self.fm[p] [2]
+            try: del self.fields [self.fm[p][2]]
+            except KeyError: pass
+            self.fm.remove(p)
+            Config.set_and_save('base/fields', self.fields)
+
+    def list_1_select (self, sel):
+        m, iter = sel.get_selected()
+        if iter:
+            p = self.sfm.convert_iter_to_child_iter(None, iter)
+            data = self.fm[p]
+            self.name1.set_text(self.fm[p][0])
+            try:
+                self.menu1.set_history (
+                    self.menu_items.index(self.fm[p][3].type))
+            except ValueError:
+                print self.menu_items, self.fm[p][0], self.fm[p][2]
+
+    def on_name1_changed (self, *args):
+        sel = self.fields1.get_selection()
+        m, iter = sel.get_selected()
+        if iter:
+            p = self.sfm.convert_iter_to_child_iter(None, iter)
+            newname = self.name1.get_text()
+            try: del self.fields [self.fm[p][2]]
+            except KeyError: pass
+            self.fm[p] [3].name = newname
+            self.fm[p] [0] = newname
+            self.fields [newname.lower()] = self.fm[p][3]
+            self.change_fields()
+
+    def on_type1_changed (self, *args):
+        x = self.menu_items[self.menu1.get_history()]
+        sel = self.fields1.get_selection()
+        m, iter = sel.get_selected()
+        if iter:
+            p = self.sfm.convert_iter_to_child_iter(None, iter)
+            print 'TYP!', args, x, sel, m, iter
+            self.fm[p] [1] = _typename[x]
+            self.fm[p] [3].type = x
+            self.change_fields()
+            
+
+    #------------------------------------------------------------
+    # Page 2
+
+    def init_page_2 (self):
+                # PAGE 2
 
         self.entries2 = self.xml.get_widget('e_list_2')
-        self.em = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
+        self.em = gtk.ListStore(gobject.TYPE_STRING,
+                                gobject.TYPE_PYOBJECT,
+                                gobject.TYPE_STRING )
         self.entries = copy.copy (Config.get ('base/entries').data)
-        keys = self.entries.keys()
-        keys.sort()
-        for i in [self.entries[x] for x in keys]:
-            self.em.append ((i.name, i))
+        for i in self.entries.itervalues():
+            self.em.append ((i.name, i, i.name.lower()))
+        self.sem = gtk.TreeModelSort(self.em)
+        self.sem.set_sort_column_id(2, gtk.SORT_ASCENDING)
+        self.entries2.set_model(self.sem)
         rend = gtk.CellRendererText()
         col = gtk.TreeViewColumn(_('Entry type'), rend, text = 0)
         self.entries2.append_column(col)
-        self.entries2.set_model(self.em)
-        self.name2 = self.xml.get_widget('entryname2')
+        self.name2 = self.xml.get_widget('name2')
         self.s2 = self.entries2.get_selection()
         self.s2.connect('changed', self.elist_select)
 
-        # PAGE 3
+    def page2_add (self, *args):
+        description = Types.EntryDescription('NEW')
+        iter = self.em.append(('NEW', description, 'new'))
+        if iter:
+            s_iter = self.sem.convert_child_iter_to_iter(None, iter)
+            s_path = self.sem.get_path(s_iter)
+            self.entries2.scroll_to_cell(s_path)
+            self.s2.select_iter(s_iter)
+            self.entries [self.em[iter][2]] = self.em[iter][1]
 
-        self.menu3 = self.xml.get_widget ('menu3')
-        menu = gtk.Menu ()
-        self.menu3.set_menu (menu)
-        for item in self.em:
-            Utils.popup_add (menu, item[0], self.select_menu, item[1])
-        self.menu3.set_history (0)
-        self.menu3.connect ('changed', self.menu3_select)
+    def page2_rm (self, *args):
+        m, iter = self.s2.get_selected()
+        if iter:
+            p = self.sem.convert_iter_to_child_iter(None, iter)
+            del self.entries [self.em[p] [2]]
+            self.em.remove(p)
+            Config.set_and_save('base/entries', self.entries)
+
+    def elist_select (self, sel): self.list_2_select(sel)
+
+    def list_2_select (self, sel):
+        m, iter = sel.get_selected()
+        if iter:
+            p = self.sem.convert_iter_to_child_iter(None, iter)
+            self.name2.set_text (self.em[p] [0])
+            self.page3_setup (self.em[p] [1])
+
+    def on_name2_changed (self, *args):
+        sel = self.entries2.get_selection()
+        m, iter = sel.get_selected()
+        if iter:
+            p = self.sem.convert_iter_to_child_iter(None, iter)
+            newname = self.name2.get_text()
+            try: del self.entries [self.em[p][2]]
+            except KeyError: pass
+            self.em[p][1].name = newname
+            self.em[p][0] = newname
+            self.em[p][2] = newname.lower()
+            self.entries[newname.lower()] = self.em[p][1]
+            Config.set_and_save ('base/entries', self.entries)
+
+
+    #------------------------------------------------------------
+    # Page 3
+
+    def init_page_3 (self):
         
         self.flist3a = self.xml.get_widget ('f_list_3a')
-        self.flist3a.set_model (self.fm)
+        self.flist3a.set_model (self.sfm)       
         rend = gtk.CellRendererText()
         col = gtk.TreeViewColumn(_('Available'), rend, text = 0)
         self.flist3a.append_column(col)
         self.s3a = self.flist3a.get_selection()
+        self.label3 = self.xml.get_widget ('entry_type_label')
         self.flist3b = self.xml.get_widget ('f_list_3b')
         rend = gtk.CellRendererToggle()
         rend.connect('toggled', self.toggle_mandatory)
@@ -142,53 +280,39 @@ class FieldsDialog:
         self.ssm.set_sort_column_id(0, gtk.SORT_ASCENDING)
         self.flist3b.set_model(self.ssm)
         self.s3b = self.flist3b.get_selection()
-        self.show()
 
 
-        self.changed = 0
-        return
+    def page3_setup (self, item):
+        self.sm.clear()
+        self.current_entry = item
+        for i in item.mandatory:
+             self.sm.append((i.name, True, i.name, i))
+        for i in item.optional:
+             self.sm.append((i.name, False, i.name, i))
+        self.label3.set_markup (
+            _('Fields associated with <b>%s</b> entry type' %(
+            item.name)))
 
-    def show(self):
-        self.dialog.show_all ()
+    def page3_add (self, *args):
+        m, iter = self.s3a.get_selected()
+        if iter:
+            p = self.sfm.convert_iter_to_child_iter(None, iter)
+            field = self.fm[p] [3]
+            self.current_entry.optional.append(field)
+            self.sm.append ((field.name, False, field.name, field))
+            Config.set_and_save('base/entries', self.entries)
 
-    def on_close (self, w):
-        self.dialog.hide_all()
-
-    def on_add(self, *args):
-        page = self.w.get_current_page()
-        print 'ADD PAGE:', page
-        if page == 0:
-            t = self.menu_items[0]
-            iter = self.fm.append(('new field', _typename[t], t))
-            if iter:
-                path = self.fm.get_path (iter)
-                self.fields1.scroll_to_cell(path)
-                self.s1.select_iter(iter)
-        elif page == 1:
-            iter = self.em.append(('NEU', None))
-            if iter:
-                path = self.em.get_path (iter)
-                self.entries2.scroll_to_cell(path)
-                self.s2.select_iter(iter)
-        elif page == 2:
-            
-            pass
-        
-    def on_remove (self, *args):
-        page = self.w.get_current_page()
-        if page == 0:
-            m, iter = self.s1.get_selected()
-            if iter:
-                m.remove(iter)
-        elif page == 1:
-            m, iter = self.s2.get_selected()
-            if iter:
-                m.remove(iter)
-        elif page == 2:
-            pass
-
-    def on_help (self, *args):
-        print 'ON HELP:', args
+    def page3_rm (self, *args):
+        m, iter = self.s3b.get_selected()
+        if iter:
+            p = self.ssm.convert_iter_to_child_iter (None, iter)
+            field = self.sm[p] [3]
+            if self.sm[p] [1]:
+                self.current_entry.mandatory.remove(field)
+            else:
+                self.current_entry.optional.remove(field)
+            del self.sm [p]
+            Config.set_and_save('base/entries', self.entries)
 
     def toggle_mandatory (self, rend, path):
         p = self.ssm.convert_path_to_child_path(path)
@@ -196,63 +320,22 @@ class FieldsDialog:
         field = self.sm[iter][3]
         x = self.sm.get_value (iter, 1)
         self.sm.set_value(iter, 1, not x)
-        sel = self.menu3.get_history()
-        item = self.em[sel][1]
         if x:
-            item.mandatory.remove(field)
-            item.optional.append(field)
+            self.current_entry.mandatory.remove(field)
+            self.current_entry.optional.append(field)
         else:
-            item.optional.remove(field)
-            item.mandatory.append(field)
-        self.entries [item.name] = item
+            self.current_entry.optional.remove(field)
+            self.current_entry.mandatory.append(field)
+        self.entries [self.current_entry.name] = self.current_entry
         Config.set_and_save ('base/entries', self.entries)
-            
-
-    def list_1_select (self, sel):
-        m, iter = sel.get_selected()
-        print 'SELECT:', m, iter
-        if iter:
-            data = m[iter]
-            self.name1.set_text(data[0])
-            self.menu1.set_history (self.menu_items.index(data[2]))
-
-    def elist_select (self, sel):
-        m, iter = sel.get_selected()
-        print 'SELECT:', m, iter
-        if iter:
-            data = m[iter]
-            self.name2.set_text(data[0])
-            
-    def menu3_select (self, *args):
-        sel = self.menu3.get_history()
-        item = self.em[sel]
-        print 'MENU3:', args, sel, item
-        self.sm.clear()
-
-        for i in item[1].mandatory:
-            print i
-            self.sm.append((i.name, True, i.name, i))
-        for i in item[1].optional:
-            print i
-            self.sm.append((i.name, False, i.name, i))
-
-    def on_name1_changed (self, *args):
-        sel = self.fields1.get_selection()
-        m, iter = sel.get_selected()
-        m[iter] [0] = self.name1.get_text()
-
-    def on_type1_changed (self, *args):
-        print 'TYP!', args
-        x = self.menu_items[self.menu1.get_history()]
-        sel = self.fields1.get_selection()
-        m, iter = sel.get_selected()
-        if iter:
-            m[iter] [1] = _typename[x]
-            m[iter] [2] = x
 
     def select_menu (self, w, data):
         self.current_menu = data
         return
+
+    def change_fields (self, item=None):
+        Config.set_and_save('base/fields', self.fields)
+        
 
     def set (self, data):
         self.list.freeze ()
@@ -326,187 +409,7 @@ _status = (
     _("Optional")
     )
 
-class EntriesDialog:
-
-    def __init__ (self, parent = None):
-        self.w = GnomeDialog (_("Entries configuration"),
-                              gtk.STOCK_BUTTON_APPLY,
-                              gtk.STOCK_BUTTON_CANCEL)
-        if parent: self.w.set_parent (parent)
-        self.parent = parent
-        
-        self.w.button_connect (0, self.apply)
-        self.w.set_close (1)
-        self.w.set_policy (True, True, False)
-
-        scroll = gtk.ScrolledWindow ()
-        self.main = gtk.CList (1, (_("Entry"),))
-        self.main.connect ('select_row', self.select_main)
-        (width, height) = self.main.size_request ()
-        self.main.set_usize (width, 4 * height)
-        scroll.add (self.main)
-        self.w.vbox.pack_start (scroll)
-
-        self.w.vbox.pack_start (gtk.HSeparator ())
-
-        self.name = gtk.Entry ()
-        h = gtk.HBox (spacing = 5)
-        h.pack_start (gtk.Label (_("Entry Name:")), False, False)
-        h.pack_start (self.name)
-        self.w.vbox.pack_start (h, False, False)
-        
-        scroll = gtk.ScrolledWindow ()
-        self.choice = gtk.CList (2, (_("Status"), _("Field")))
-        (width, height) = self.choice.size_request ()
-        self.choice.set_usize (width, 4 * height)
-        self.choice.set_reorderable (True)
-        self.choice.set_selection_mode (gtk.SELECTION_BROWSE)
-        self.choice.set_column_auto_resize (0, True)
-        self.choice.connect ('select_row', self.select_choice)
-        scroll.add (self.choice)
-        self.w.vbox.pack_start (scroll)
-
-        bbox = gtk.HButtonBox ()
-        button = gtk.Button (_("Set"))
-        button.connect ('clicked', self.add_cb)
-        bbox.add (button)
-        button = gtk.Button (_("Remove"))
-        button.connect ('clicked', self.remove_cb)
-        bbox.add (button)
-        self.w.vbox.pack_start (bbox, False, False)
-
-        self.entries = copy.copy (Config.get ('base/entries').data)
-        self.update_main ()
-
-        # fill the second list
-        fields = Config.get ('base/fields').data
-        keys = fields.keys ()
-        keys.sort ()
-        for key in keys:
-            item = fields [key]
-            self.choice.append ((_status [0], item.name))
-            self.choice.set_row_data (self.choice.rows - 1,
-                                      [item, 0])
-            
-        self.w.show_all ()
-
-        self.changed = 0
-        return
-
-    def select_main (self, w, row, col, event):
-        item = self.entries [self.main.get_row_data (row)]
-        self.name.set_text (item.name)
-
-        self.update_choice (item.mandatory, item.optional)
-        return
-
-
-    def update_main (self):
-        self.main.freeze ()
-        self.main.clear ()
-        keys = self.entries.keys ()
-        keys.sort ()
-        for key in keys:
-            item = self.entries [key]
-            self.main.append ((item.name,))
-            self.main.set_row_data (self.main.rows - 1,
-                                      key)
-        self.main.thaw ()
-        return
-    
-    def update_choice (self, mdt, opt):
-        self.choice.freeze ()
-        self.choice.clear ()
-
-        fields = copy.copy (Config.get ('base/fields').data)
-
-        text = _status [1]
-        for item in mdt:
-            self.choice.append ((text, item.name))
-            self.choice.set_row_data (self.choice.rows - 1,
-                                      [item, 1])
-            del fields [string.lower (item.name)]
-            
-        text = _status [2]
-        for item in opt:
-            self.choice.append ((text, item.name))
-            self.choice.set_row_data (self.choice.rows - 1,
-                                      [item, 2])
-            del fields [string.lower (item.name)]
-
-        keys = fields.keys ()
-        keys.sort ()
-        text = _status [0]
-        for key in keys:
-            item = fields [key]
-            self.choice.append ((text, item.name))
-            self.choice.set_row_data (self.choice.rows - 1,
-                                      [item, 0])
-
-        self.choice.thaw ()
-        return
-    
-    def select_choice (self, w, row, col, event):
-        if col != 0: return
-        
-        item = self.choice.get_row_data (row)
-        if item is None: return
-        
-        item [1] = (item [1] + 1) % 3
-        self.choice.set_text (row, 0, _status [item [1]])
-        return
-    
-    def apply (self, * arg):
-        if not self.changed: return
-        
-        Config.set ('base/entries', self.entries)
-
-        default  = string.lower (Config.get ('base/defaulttype').data.name)
-        def_type = Config.get ('base/entries').data [default]
-        
-        Config.set ('base/defaulttype', def_type)
-        
-        Config.save_user ({'base/entries' : self.entries,
-                           'base/defaulttype' : def_type})
-
-        if self.parent:
-            self.parent.warning (_("Some changes require to restart Pybliographic\n"
-                                   "to be correctly taken into account"))
-        return
-
-    def add_cb (self, * arg):
-        name = string.strip (self.name.get_text ())
-        if not name: return
-
-        newentry = Types.EntryDescription (name)
-        cat = [[], []]
-        for i in range (self.choice.rows):
-            item = self.choice.get_row_data (i)
-            if item [1]:
-                cat [item [1] - 1].append (item [0])
-
-        newentry.mandatory = cat [0]
-        newentry.optional  = cat [1]
-
-        self.entries [string.lower (name)] = newentry
-        self.update_main ()
-
-        self.changed = 1
-        return
-
-    def remove_cb (self, * arg):
-        selection = self.main.selection
-        if not selection: return
-        selection = selection [0]
-
-        del self.entries [self.main.get_row_data (selection)]
-        self.update_main ()
-
-        self.changed = 1
-        return
-    
 __fields_object = None
-__entries_object = None
 
 def run (w):
     global __fields_object
@@ -515,9 +418,3 @@ def run (w):
     else:
         __fields_object = FieldsDialog(w)
 
-def run_entries (w):
-    global __entries_object
-    if __entries_object:
-        __entries_object.show()
-    else:
-        __entries_object = EntriesDialog(w)
