@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-14 02:09+0100\n"
-"PO-Revision-Date: 2003-11-14 02:11+0100\n"
+"POT-Creation-Date: 2004-01-10 03:59+0100\n"
+"PO-Revision-Date: 2004-01-10 04:00+0100\n"
 "Last-Translator: Данило Шеган <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <serbiangnome-lista@nongnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -38,7 +38,7 @@ msgstr ""
 #.
 #.
 #. ok, load the module
-#: Pyblio/Autoload.py:76
+#: Pyblio/Autoload.py:80
 #, python-format
 msgid "warning: can't import %s: %s"
 msgstr "упозорење: не могу да увезем %s: %s"
@@ -47,7 +47,7 @@ msgstr "упозорење: не могу да увезем %s: %s"
 #. are we preregistering an existing key ?
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -83,7 +83,7 @@ msgstr "упозорење: не могу да увезем %s: %s"
 #. --------------------------------------------------
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -206,7 +206,7 @@ msgstr "Речник (%s, %s)"
 #. that we don't get infinite loops here...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -226,7 +226,7 @@ msgstr "Речник (%s, %s)"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -269,7 +269,7 @@ msgstr "у %s"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -344,9 +344,10 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. write the entries with no cross references
 #. Ouvrir le fichier associe
 #. create a database to generate correct keys
+#. -*- coding: latin-1 -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -408,7 +409,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -430,7 +431,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -480,7 +481,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. correct the number of dots...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -512,7 +513,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. general case
 #. This file is part of Pybliographer
 #.
-#. Copyright (C) 1998-2003 Peter Schulte-Stracke
+#. Copyright (C) 1998-2004 Peter Schulte-Stracke
 #. Email : Peter.Schulte-Stracke@t-online.de
 #.
 #. This program is free software; you can redistribute it and/or
@@ -536,7 +537,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. error situation
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -558,7 +559,7 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #. completer les champs
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -577,17 +578,12 @@ msgstr "%s:%d: кључ „%s“ је већ одређен"
 #.
 #.
 #. TO DO:
-#. Parent for dialogue
 #. List view troubles
-#. self.dialog.set_parent (parent) ####
-#: Pyblio/GnomeUI/Config.py:64
-msgid "Choose your preferences"
-msgstr "Изаберите ваше поставке"
-
 #. Create the edition widget...
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
-#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:412
+#. Put the complete table in a scrolled window
+#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -602,31 +598,30 @@ msgstr ""
 #. Boolean... So we cast it to an int for compatibility
 #. print 'SET TUPLE:', value, item
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:427
+#: Pyblio/GnomeUI/Config.py:431
 msgid "Add"
 msgstr "Додај"
 
-#: Pyblio/GnomeUI/Config.py:430
+#: Pyblio/GnomeUI/Config.py:434
 msgid "Update"
 msgstr "Допуни"
 
-#: Pyblio/GnomeUI/Config.py:433 Pyblio/GnomeUI/Config.py:537
+#: Pyblio/GnomeUI/Config.py:437 Pyblio/GnomeUI/Config.py:549
 msgid "Remove"
 msgstr "Уклони"
 
 #. Bottom
-#. m.row.changed(row)
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:534
+#: Pyblio/GnomeUI/Config.py:546
 msgid "Set"
 msgstr "Постави"
 
 #. Bottom
-#: Pyblio/GnomeUI/Config.py:549
+#: Pyblio/GnomeUI/Config.py:561
 msgid "Key:"
 msgstr "Кључ:"
 
-#: Pyblio/GnomeUI/Config.py:551
+#: Pyblio/GnomeUI/Config.py:563
 msgid "Value:"
 msgstr "Вредност:"
 
@@ -641,7 +636,7 @@ msgstr "Вредност:"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -667,9 +662,15 @@ msgstr "Вредност:"
 #. application variables
 #. set the default sort method
 #. remove !
+#. This list contains the info needed to create the "Previous Documents" menu.
+#. This list contains the names of the menu entries that can be
+#. fetched back by factory.get_widget calls. The two lists
+#. differ as the factory.create_items () function interprets
+#. underscores to mark shortcuts, whereas the get_widget call
+#. does not escape the underscores...
 #. Display name in the menu
 #. Bind the actual file info to each menu entry
-#: Pyblio/GnomeUI/Document.py:193
+#: Pyblio/GnomeUI/Document.py:204
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -678,7 +679,7 @@ msgstr ""
 "не могу да отворим датотеку „%s“ ради уписа:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:214
+#: Pyblio/GnomeUI/Document.py:225
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -687,42 +688,42 @@ msgstr ""
 "Грешка при обради „%s“:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:230
+#: Pyblio/GnomeUI/Document.py:241
 msgid "New database"
 msgstr "Нова база"
 
-#: Pyblio/GnomeUI/Document.py:238 Pyblio/GnomeUI/Document.py:242
+#: Pyblio/GnomeUI/Document.py:249 Pyblio/GnomeUI/Document.py:253
 msgid "[no entry]"
 msgstr "[нема уноса]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:239
+#: Pyblio/GnomeUI/Document.py:250
 msgid "[1 entry]"
 msgstr "[1 унос]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:240
+#: Pyblio/GnomeUI/Document.py:251
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d уноса]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:243
+#: Pyblio/GnomeUI/Document.py:254
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 унос]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:244
+#: Pyblio/GnomeUI/Document.py:255
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d унос]"
 
-#: Pyblio/GnomeUI/Document.py:249
+#: Pyblio/GnomeUI/Document.py:260
 msgid "[modified]"
 msgstr "[измењен]"
 
-#: Pyblio/GnomeUI/Document.py:259
+#: Pyblio/GnomeUI/Document.py:270
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -731,31 +732,31 @@ msgstr ""
 "Занемарити измене?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:284
+#: Pyblio/GnomeUI/Document.py:295
 msgid "Your query returned no result"
 msgstr "Ваш упит није вратио резултат"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:294
+#: Pyblio/GnomeUI/Document.py:305
 msgid "Merge file"
 msgstr "Споји датотеку"
 
-#: Pyblio/GnomeUI/Document.py:306 Pyblio/GnomeUI/Document.py:360
+#: Pyblio/GnomeUI/Document.py:317 Pyblio/GnomeUI/Document.py:371
 msgid "Open error"
 msgstr "Грешка при отварању"
 
 #. loop over the entries
-#: Pyblio/GnomeUI/Document.py:330
+#: Pyblio/GnomeUI/Document.py:341
 msgid "Merge status"
 msgstr "Стање спајања"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:341
+#: Pyblio/GnomeUI/Document.py:352
 msgid "Open file"
 msgstr "Отвори датотеку"
 
 #. eventually warn interested objects
-#: Pyblio/GnomeUI/Document.py:387
+#: Pyblio/GnomeUI/Document.py:398
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -763,7 +764,7 @@ msgstr ""
 "База података је измењена споља.\n"
 "Преснимити измене?"
 
-#: Pyblio/GnomeUI/Document.py:397
+#: Pyblio/GnomeUI/Document.py:408
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -772,7 +773,7 @@ msgstr ""
 "Не могу да сачувам „%s“:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:405
+#: Pyblio/GnomeUI/Document.py:416
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -782,11 +783,11 @@ msgstr ""
 
 #. get the current modification date
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:419
+#: Pyblio/GnomeUI/Document.py:430
 msgid "Save As..."
 msgstr "Сачувај као..."
 
-#: Pyblio/GnomeUI/Document.py:425
+#: Pyblio/GnomeUI/Document.py:436
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -795,7 +796,7 @@ msgstr ""
 "Датотека „%s“ већ постоји.\n"
 "Преснимити је?"
 
-#: Pyblio/GnomeUI/Document.py:432
+#: Pyblio/GnomeUI/Document.py:443
 #, python-format
 msgid ""
 "During opening:\n"
@@ -804,11 +805,11 @@ msgstr ""
 "При отварању:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:450
+#: Pyblio/GnomeUI/Document.py:461
 msgid "Reopen error"
 msgstr "Грешка при поновном отварању"
 
-#: Pyblio/GnomeUI/Document.py:491
+#: Pyblio/GnomeUI/Document.py:502
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -817,32 +818,35 @@ msgstr ""
 "Већ постоји унос са називом „%s“.\n"
 "Да га преименује и дода у сваком случају?"
 
-#: Pyblio/GnomeUI/Document.py:528
+#: Pyblio/GnomeUI/Document.py:539
 msgid "Really remove all the entries ?"
 msgstr "Да заиста уклони све уносе?"
 
-#: Pyblio/GnomeUI/Document.py:548
+#: Pyblio/GnomeUI/Document.py:559
 msgid "Create new entry"
 msgstr "Додај нови унос"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:562
+#: Pyblio/GnomeUI/Document.py:573
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Да заиста уредим %d уноса?"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:600
+#: Pyblio/GnomeUI/Document.py:611
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Да уклоним свих %d уноса?"
 
-#: Pyblio/GnomeUI/Document.py:602
+#: Pyblio/GnomeUI/Document.py:613
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Да уклоним унос „%s“?"
 
-#: Pyblio/GnomeUI/Document.py:666 Pyblio/GnomeUI/Document.py:673
+#. Check if we are toggling or changing
+#. We are still filtering according to the same field,
+#. simply toggle the direction
+#: Pyblio/GnomeUI/Document.py:690 Pyblio/GnomeUI/Document.py:697
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -859,25 +863,34 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#: Pyblio/GnomeUI/Document.py:743
+#: Pyblio/GnomeUI/Document.py:769
+#, python-format
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr ""
+"Не могу да прикажем документацију:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:777
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Овај програм је заштићен ауторским правима према Гнуовој ОЈЛ (GPL)"
 
-#: Pyblio/GnomeUI/Document.py:744
+#: Pyblio/GnomeUI/Document.py:778
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Гномово сучеље за систем Пиблиотекара."
 
-#: Pyblio/GnomeUI/Document.py:753
+#: Pyblio/GnomeUI/Document.py:787
 msgid "Gnome Translation Team"
 msgstr "Гномов преводилачки тим"
 
-#: Pyblio/GnomeUI/Document.py:758
+#: Pyblio/GnomeUI/Document.py:792
 msgid "Pybliographer Home Page"
 msgstr "Домаћа страница Пиблиотекара"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1009,7 +1022,7 @@ msgstr "Обично уређивање"
 #. set window size
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1032,7 +1045,7 @@ msgstr "Обично уређивање"
 #. Add a button to open the URL
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1105,7 +1118,7 @@ msgstr "Поља везана са уносом врсте <b>%s</b>"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1125,7 +1138,7 @@ msgstr "Поља везана са уносом врсте <b>%s</b>"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1161,7 +1174,7 @@ msgstr "Врста библиографије:"
 #. construct a nice URL
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1182,7 +1195,7 @@ msgstr "Врста библиографије:"
 #. Fill the output format drop-down menu
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1238,7 +1251,7 @@ msgstr "Обриши..."
 #. what menu items are accessible ?
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1259,7 +1272,7 @@ msgstr "Обриши..."
 #. Fill in the combo boxes
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1283,7 +1296,7 @@ msgstr "Обриши..."
 #. Related string definitions
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1309,7 +1322,7 @@ msgstr "Обриши..."
 #. get the modification date...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1361,7 +1374,7 @@ msgstr ""
 #. Do not allow removal of the root.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1406,7 +1419,7 @@ msgstr "[Вредност кључа]"
 #. Store the direction of sorting in each item
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1434,7 +1447,7 @@ msgstr "Догодиле су се следеће грешке:\n"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1458,7 +1471,7 @@ msgstr "Догодиле су се следеће грешке:\n"
 #. clean up our garbage
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1480,7 +1493,7 @@ msgstr "Догодиле су се следеће грешке:\n"
 #. --------------------------------------------------
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1500,7 +1513,7 @@ msgstr "Догодиле су се следеће грешке:\n"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1520,7 +1533,7 @@ msgstr "Догодиле су се следеће грешке:\n"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1556,7 +1569,7 @@ msgstr "нема излазне цеви „%s“"
 #. print self.pout.read ()
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1679,18 +1692,18 @@ msgid "Format entries"
 msgstr "Облик уноса"
 
 #: glade/format.glade.h:4
-msgid "Output file:\n"
-msgstr "Излазна датотека:\n"
+msgid "Output file:"
+msgstr "Излазна датотека:"
 
-#: glade/format.glade.h:6
+#: glade/format.glade.h:5
 msgid "Output format:"
 msgstr "Излазни облик:"
 
-#: glade/format.glade.h:7
+#: glade/format.glade.h:6
 msgid "Save Formatted as"
 msgstr "Сачувај уобиличено као"
 
-#: glade/format.glade.h:8
+#: glade/format.glade.h:7
 msgid "Style Selection"
 msgstr "Избор стила"
 
@@ -1771,62 +1784,66 @@ msgid "Cite..."
 msgstr "Цитирај..."
 
 #: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr "Садржај"
+
+#: glade/pyblio.glade.h:4
 msgid "Fields..."
 msgstr "Поља"
 
-#: glade/pyblio.glade.h:4
+#: glade/pyblio.glade.h:5
 msgid "Forget all changes"
 msgstr "Одбаци све измене"
 
-#: glade/pyblio.glade.h:5
+#: glade/pyblio.glade.h:6
 msgid "Format..."
 msgstr "Облик..."
 
-#: glade/pyblio.glade.h:6
+#: glade/pyblio.glade.h:7
 msgid "Medline Query..."
 msgstr "Medline упит..."
 
-#: glade/pyblio.glade.h:7
+#: glade/pyblio.glade.h:8
 msgid "Merge With..."
 msgstr "Споји са..."
 
-#: glade/pyblio.glade.h:8
+#: glade/pyblio.glade.h:9
 msgid "Open File"
 msgstr "Отвори датотеку"
 
-#: glade/pyblio.glade.h:9
+#: glade/pyblio.glade.h:10
 msgid "Previous Documents"
 msgstr "Претходни документи"
 
-#: glade/pyblio.glade.h:10
+#: glade/pyblio.glade.h:11
 msgid "Pybliographer"
 msgstr "Пиблиотекар"
 
-#: glade/pyblio.glade.h:11
+#: glade/pyblio.glade.h:12
 msgid "S_ort..."
 msgstr "У_реди..."
 
-#: glade/pyblio.glade.h:12
+#: glade/pyblio.glade.h:13
 msgid "Save File"
 msgstr "Сачувај датотеку"
 
-#: glade/pyblio.glade.h:13
+#: glade/pyblio.glade.h:14
 msgid "Settings"
 msgstr "Подешавања"
 
-#: glade/pyblio.glade.h:14
+#: glade/pyblio.glade.h:15
 msgid "_Add..."
 msgstr "_Додај..."
 
-#: glade/pyblio.glade.h:15
+#: glade/pyblio.glade.h:16
 msgid "_Delete..."
 msgstr "О_бриши..."
 
-#: glade/pyblio.glade.h:16
+#: glade/pyblio.glade.h:17
 msgid "_Edit..."
 msgstr "У_ређивање..."
 
-#: glade/pyblio.glade.h:17
+#: glade/pyblio.glade.h:18
 msgid "_New"
 msgstr "_Ново"
 
@@ -1869,7 +1886,7 @@ msgstr "Постави као подразумевано"
 #. ! @python_path@
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1887,34 +1904,34 @@ msgstr "Постави као подразумевано"
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
 #.
-#: pybliographer.py:40
+#: pybliographer.py:45
 #, python-format
 msgid "This is %s, version %s"
 msgstr "Ово је %s, издање %s"
 
-#: pybliographer.py:44 pybliographer.py:51
+#: pybliographer.py:49 pybliographer.py:56
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
 msgstr "Ово је слободан софтвер БЕЗ ИКАКВЕ ГАРАНЦИЈЕ."
 
-#: pybliographer.py:45
+#: pybliographer.py:50
 msgid "For details, type `warranty'."
 msgstr "За детаље, укуцајте „warranty“."
 
 #. ---------- Lire les fichiers de conf
 #. Fichiers standards
 #. Fichiers passes en argument au programme
-#: pybliographer.py:108 pybliographer.py:160
+#: pybliographer.py:113 pybliographer.py:165
 #, python-format
 msgid "%s: error: can't open file `%s'"
 msgstr "%s: грешка: не могу да отворим датотеку „%s“"
 
-#: pybliographer.py:121
+#: pybliographer.py:126
 #, python-format
 msgid "For help, run %s and type `help' at the prompt"
 msgstr "Ради помоћи, покрените %s и укуцајте „help“ за упит"
 
 #. ---------- Initialisation
-#: pybliographer.py:130
+#: pybliographer.py:135
 msgid ""
 "Useful commands:\n"
 "\thelp     to get some help\n"
@@ -1930,7 +1947,7 @@ msgstr ""
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1960,7 +1977,7 @@ msgstr ""
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2022,7 +2039,7 @@ msgstr "не могу да нађем наредне уносе: %s"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2051,7 +2068,7 @@ msgstr "pybconvert: лош облик претварања"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2097,7 +2114,7 @@ msgstr "не могу да нађем стил „%s“"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2118,7 +2135,7 @@ msgstr "не могу да нађем стил „%s“"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2159,6 +2176,9 @@ msgstr "pybtex: упозорење: наредни кључеви нису ра�
 #: scripts/pybtex.py:63
 msgid "no style defined"
 msgstr "стил није одређен"
+
+#~ msgid "Choose your preferences"
+#~ msgstr "Изаберите ваше поставке"
 
 #~ msgid "Entries..."
 #~ msgstr "Уноси..."
