@@ -68,9 +68,19 @@
     
     <para>Once you have opened a  database, or started to create a new
       one, the  main window (see <xref  linkend="figmain" />) displays a
-      list of all  the entries on the top part of  it.  Clicking on an
-      entry displays its full content on the lower part of the window.
-      It is  also possible to  use the arrow  keys to navigate  in the
+      list of all the entries on the top part of it. The fields 
+      diplayed here can be configured under the <menuchoice><guimenu>
+      Settings</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> 
+      menu item.</para>
+
+    <tip>
+      <para>It is possible to display two types of combined fields: 
+      <emphasis>-author/editor</emphasis> and <emphasis>-author/title-</emphasis>.
+      </para>
+    </tip>
+
+      <para>Clicking on an entry displays its full content on the lower part of 
+      the window. It is also possible to use the arrow keys to navigate in the 
       upper list.</para>
 
     <tip>

@@ -83,28 +83,35 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>Annotation support</term>
+            <term>i18n fixes</term>
             <listitem>
               <para>
-                Added support for annotations and longtext.
+                Fixed some translation issues in scripts and gui.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>New tool</term>
+            <term>New mime system</term>
             <listitem>
               <para>
-                Added a new script: pybtext. It can process text files containing 
-                citations. New styles are also provided.
+                Added support for the new mime system in Gnome 2.8.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Bugfixes</term>
+            <term>New file selector</term>
             <listitem>
               <para>
-                Fixes in the ISI and OVID parsers, fixed LyX citing on python2.2, 
-                fixed native editing of a new entry, fixed history in Medline queries, etc.
+                Use of the new Gtk File selector (if it is available).
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Other bugfixes and improvements</term>
+            <listitem>
+              <para>
+                Fixes and improvements in the synthetic fields and in the Ovid parser, 
+		fixed arguments handling in pybliographic, fixed bugs #1024414, #1024412, etc.
               </para>
             </listitem>
           </varlistentry>

@@ -1,10 +1,10 @@
 Summary: A framework for working with bibliographic databases.
 Name: pybliographer
-Version: 1.2.4
+Version: 1.2.5
 Release: 1.rhfdr_core_1
 License: GPL
 Group: Applications/Publishing
-Source: http://dl.sf.net/pybliographer/pybliographer-1.2.4.tar.gz
+Source: http://dl.sf.net/pybliographer/pybliographer-1.2.5.tar.gz
 Url: http://www.pybliographer.org/
 Packager: Zoltan Kota <z.kota at gmx.net>
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -20,7 +20,6 @@ BuildRequires: gnome-python2-gconf >= 2.0.0
 BuildRequires: python-bibtex >= 1.1.93.1
 BuildRequires: gettext
 BuildRequires: scrollkeeper >= 0.1.4
-BuildRequires: intltool
 
 Requires: python >= 2.2
 Requires: pygtk2 >= 2.0.0
@@ -29,7 +28,7 @@ Requires: gnome-python2 >= 2.0.0
 Requires: gnome-python2-gconf >= 2.0.0
 Requires: python-bibtex >= 1.1.93.1
 Requires: recode >= 3.6-11
-
+Requires: desktop-file-utils
 
 %description
 Pybliographer is a tool for managing bibliographic databases. It can be 
@@ -57,17 +56,33 @@ rm -rf $RPM_BUILD_ROOT
 
 %__rm -rf $RPM_BUILD_ROOT%{_localstatedir}/scrollkeeper
 
+# Compile .pyc and .pyo
+%{__python} -c "import compileall; compileall.compile_dir('$RPM_BUILD_ROOT%{_datadir}/pybliographer', ddir='%{_datadir}/pybliographer', force=1)"
+%{__python} -O -c "import compileall; compileall.compile_dir('$RPM_BUILD_ROOT%{_datadir}/pybliographer', ddir='%{_datadir}/pybliographer', force=1)"
+
 
 %{find_lang} %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+
 %post
 scrollkeeper-update
 
+# run update-desktop-database if exists
+if [ -x update-desktop-database ]; then
+	update-desktop-database %{_datadir}/applications
+fi
+
+
 %postun
 scrollkeeper-update
+
+# run update-desktop-database if exists
+if [ -x update-desktop-database ]; then
+	update-desktop-database %{_datadir}/applications
+fi
 
 
 %files -f %{name}.lang
@@ -80,7 +95,24 @@ scrollkeeper-update
 %{_datadir}/omf/pybliographer
 %{_datadir}/pixmaps/*
 %dir %{_datadir}/pybliographer
-%{_datadir}/pybliographer/Pyblio
+%{_datadir}/pybliographer/Pyblio/ConfDir/*.py
+%{_datadir}/pybliographer/Pyblio/ConfDir/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/ConfDir/*.pyo
+%{_datadir}/pybliographer/Pyblio/Format/*.py
+%{_datadir}/pybliographer/Pyblio/Format/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/Format/*.pyo
+%{_datadir}/pybliographer/Pyblio/GnomeUI/*.py
+%{_datadir}/pybliographer/Pyblio/GnomeUI/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/GnomeUI/*.pyo
+%{_datadir}/pybliographer/Pyblio/Output/*.py
+%{_datadir}/pybliographer/Pyblio/Output/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/Output/*.pyo
+%{_datadir}/pybliographer/Pyblio/Style/*.py
+%{_datadir}/pybliographer/Pyblio/Style/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/Style/*.pyo
+%{_datadir}/pybliographer/Pyblio/*.py
+%{_datadir}/pybliographer/Pyblio/*.pyc
+%ghost %{_datadir}/pybliographer/Pyblio/*.pyo
 %{_datadir}/pybliographer/Styles
 %{_datadir}/pybliographer/glade
 %{_datadir}/pybliographer/pybcheck.py
@@ -90,43 +122,20 @@ scrollkeeper-update
 %{_datadir}/pybliographer/pybliographic.py
 %{_datadir}/pybliographer/pybtex.py
 %{_datadir}/pybliographer/pybtext.py
+%ghost %{_datadir}/pybliographer/pybcheck.pyc
+%ghost %{_datadir}/pybliographer/pybcompact.pyc
+%ghost %{_datadir}/pybliographer/pybconvert.pyc
+%ghost %{_datadir}/pybliographer/pybformat.pyc
+%ghost %{_datadir}/pybliographer/pybliographic.pyc
+%ghost %{_datadir}/pybliographer/pybtex.pyc
+%ghost %{_datadir}/pybliographer/pybtext.pyc
+%ghost %{_datadir}/pybliographer/pybcheck.pyo
+%ghost %{_datadir}/pybliographer/pybcompact.pyo
+%ghost %{_datadir}/pybliographer/pybconvert.pyo
+%ghost %{_datadir}/pybliographer/pybformat.pyo
+%ghost %{_datadir}/pybliographer/pybliographic.pyo
+%ghost %{_datadir}/pybliographer/pybtex.pyo
+%ghost %{_datadir}/pybliographer/pybtext.pyo
 %config %{_datadir}/pybliographer/pybrc.py
 %ghost %{_datadir}/pybliographer/pybrc.pyc
-
-%changelog
-* Fri Jul 23 2004 Zoltan Kota <z.kota at gmx.net> - 1.2.4-1.rhfdr_core_1
-- new version
-- using macros for rm and localstatedir
-- add intltool in buildrequires
-
-* Mon Mar 22 2004 Zoltan Kota <z.kota at gmx.net> - 1.2.3-1.rhfdr_core_1
-- new version
-- remove desktop file fix and perl from buildrequires
-- changing pybrc.pyc to ghost in file list
-
-* Wed Feb 18 2004 Zoltan Kota <z.kota at gmx.net> 1.2.2-4.rhfdr_core_1
-- fix requires and buildrequires
-- change rpm group category
-- some rpm cosmetics
-
-* Tue Jan 20 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-3.rhfdr_core_1
-- fixing requires version numbers
-
-* Mon Jan 12 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-2.rhfdr_core_1
-- fixing Categories in pybliographic.desktop
-
-* Thu Jan 8 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-1.rhfdr_core_1
-- new version
-- added omf file to the filelist
-- added 'post' and 'pustun' (scrollkeeper-update)
-- removed docbook-utils from BuildReq
-- added scrollkeeper to PreReq
-- using 'configure' and 'makeinstall' macros
-- added rm -rf to 'install' section to remove temporary scrollkeeper files
-- using macros in filelist
-
-* Tue Jan 6 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.1-2.rhfdr_core_1
-- Fix buildrequires and requires
-
-* Wed Nov 21 2003 Zoltán Kóta <z.kota at gmx.net>
-- initial RPM package for Redhat Fedora Core 1
+%ghost %{_datadir}/pybliographer/pybrc.pyo
