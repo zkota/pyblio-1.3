@@ -24,7 +24,8 @@
 
 import sys, string
 
-sys.argv = sys.argv [:2] + ['--'] + sys.argv [2:]
+files    = sys.argv [2:]
+sys.argv = sys.argv [:2] + ['--'] + files
 
 # correctly identify the program
 import pygtk
@@ -46,9 +47,9 @@ ui_version = _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
     _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
     
 # clean up our garbage
-sys.argv = sys.argv [:2] + sys.argv [3:]
+sys.argv = sys.argv [:2] + files
 
-del sys
+del sys, files
 
 import gtk.glade
 

@@ -2,6 +2,22 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2004-09-24 21:14:54 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-155
+
+    Summary:
+      fixed handling of sys.argv
+    Revision:
+      pybliographer--stable--1.2--patch-155
+
+    It seems that the gnome / gtk init code eats up the '--' option I carefully
+    add to separate file names from options. So don't count on it to restore the
+    arguments when the init is over.
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/GnomeUI/__init__.py
+
+
 2004-09-24 21:09:44 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-154
 
     Summary:
