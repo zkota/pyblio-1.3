@@ -19,4 +19,4 @@ Icon=pybliographic.png
 Exec=pybliographic
 Terminal=false
 Type=Application
-Categories=GNOME;Applications;Office;
+Categories=GNOME;Application;Office;

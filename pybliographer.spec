@@ -1,70 +1,91 @@
-%define pyb_prefix   /usr
+%define name pybliographer
+%define version 1.2.2
+%define release 1.rhfdr_core_1
 
 Summary: A framework for working with bibliographic databases.
-Name: pybliographer
-Version: 1.0.3
-Release: 4
-Copyright: GPL
+Name: %{name}
+Version: %{version}
+Release: %{release}
+License: GPL
 Group: Applications/Productivity
-Source: pybliographer-1.0.3.tar.gz
-Patch: pybliographer.patch
-Requires: python, pygnome >= 1.0.53
-Packager: Konrad Hinsen <hinsen@cnrs-orleans.fr>
-BuildRoot: /var/tmp/pybliographer-root
+Source: http://prdownloads.sourceforge.net/pybliographer-1.2.2.tar.gz
+Url: http://pybliographer.org/
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
+BuildArch: noarch
+
+PreReq: scrollkeeper >= 0.1.4
+
+Buildrequires: gnome-python2
+Buildrequires: gnome-python2-gconf
+Buildrequires: python-bibtex
+Buildrequires: pygtk2-libglade
+
+Requires: python
+Requires: python-bibtex >= 1.1.93.1
+Requires: recode
+Requires: gnome-python2
+Requires: gnome-python2-gconf
+Requires: pygtk2
+Requires: pygtk2-libglade
+
 
 %description
-Pybliographer is a tool for managing bibliographic databases. It currently supports the following formats: 
+Pybliographer is a tool for managing bibliographic databases. It can be 
+used for searching, editing, reformatting, etc. In fact, it's a simple 
+framework that provides easy to use python classes and functions, and 
+therefore can be extended to many uses (generating HTML pages according
+to bibliographic searches, etc).
+In addition to the scripting environment, a graphical Gnome interface 
+is available. It provides powerful editing capabilities, a nice 
+hierarchical search mechanism, direct insertion of references into LyX, 
+direct queries on Medline, and more. It currently supports the following 
+file formats: BibTeX, ISI, Medline, Ovid, Refer.
 
-- BibTeX (quite complete) 
-- Medline (read-only) 
-- Ovid files (from ovid.com) 
-- Refer and EndNote (read only)
-- SGML DocBook (write only) 
-
-Pybliographer can be used for searching, editing, reformatting, etc.
-In fact, it's a simple framework that provides easy to use python
-classes and functions, and therefore can be extended to any usage
-(generating HTML pages according to bibliographic searches, etc).
-
-In addition to the scripting environment, a graphical GNOME interface
-is available. It provides powerful editing capabilities, in addition
-to a nice hierarchical search mechanism.
 
 %prep
-%setup -n pybliographer-1.0.3
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{pyb_prefix}
-%patch
+%setup -q
 
 %build
+%configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT install
+%makeinstall
 
-%files
-%{pyb_prefix}/bin/pybcheck    
-%{pyb_prefix}/bin/pybconvert	
-%{pyb_prefix}/bin/pybliographer  
-%{pyb_prefix}/bin/pybtex
-%{pyb_prefix}/bin/pybcompact  
-%{pyb_prefix}/bin/pybformat	
-%{pyb_prefix}/bin/pybliographic
-%{pyb_prefix}/include/bibtex.h
-%{pyb_prefix}/lib/libbibtex.a  
-%{pyb_prefix}/lib/libbibtex.la  
-%{pyb_prefix}/lib/libbibtex.so  
-%{pyb_prefix}/lib/libbibtex.so.1  
-%{pyb_prefix}/lib/libbibtex.so.1.0.0
-%{pyb_prefix}/lib/pybliographer
-%{pyb_prefix}/share/pybliographer
-%{pyb_prefix}/share/gnome/apps/Applications/pybliographic.desktop 
-%{pyb_prefix}/share/gnome/help/pybliographic
-%{pyb_prefix}/share/mime-info/pybliographic.keys
-%{pyb_prefix}/share/mime-info/pybliographic.mime
-%{pyb_prefix}/share/pixmaps/pybliographic-logo.png
-%{pyb_prefix}/share/pixmaps/pybliographic.png
-%{pyb_prefix}/share/locale/fr/LC_MESSAGES/pybliographer.mo
-%{pyb_prefix}/share/locale/it/LC_MESSAGES/pybliographer.mo
-%{pyb_prefix}/share/locale/de/LC_MESSAGES/pybliographer.mo
-%{pyb_prefix}/share/locale/hu/LC_MESSAGES/pybliographer.mo
+/bin/rm -rf $RPM_BUILD_ROOT/var/scrollkeeper
+
+
+%{find_lang} %{name}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%post
+scrollkeeper-update
+
+%postun
+scrollkeeper-update
+
+
+%files -f %{name}.lang
+%defattr(-,root,root)
+%doc AUTHORS COPYING* ChangeLog* INSTALL NEWS README TODO
+%{_bindir}/*
+%{_datadir}/gnome/apps/Applications/pybliographic.desktop
+%{_datadir}/gnome/help/pybliographer
+%{_datadir}/mime-info/*
+%{_datadir}/omf/pybliographer
+%{_datadir}/pixmaps/*
+%dir %{_datadir}/pybliographer
+%{_datadir}/pybliographer/Pyblio
+%{_datadir}/pybliographer/Styles
+%{_datadir}/pybliographer/glade
+%{_datadir}/pybliographer/pybcheck.py
+%{_datadir}/pybliographer/pybcompact.py
+%{_datadir}/pybliographer/pybconvert.py
+%{_datadir}/pybliographer/pybformat.py
+%{_datadir}/pybliographer/pybliographic.py
+%{_datadir}/pybliographer/pybtex.py
+%config %{_datadir}/pybliographer/pybrc.py
+%config %{_datadir}/pybliographer/pybrc.pyc
