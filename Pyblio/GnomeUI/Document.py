@@ -124,12 +124,12 @@ class Document (Connector.Publisher):
     def _title_set (self):
         
         if self.data.key is None:
-            self.w.set_title (_('Pybliographic - Unnamed database'))
+            self.w.set_title (_('Unnamed bibliographic database'))
             return
 
         name = os.path.basename (self.data.key.url [2])
         
-        self.w.set_title (_('Pybliographic - %s') % name)
+        self.w.set_title (name)
         return
         
 
