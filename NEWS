@@ -1,6 +1,6 @@
 -*- text -*-
 
-New in 1.2.4 - 2004-06-22
+New in 1.2.4 - 2004-07-18
 
         * Fixes in the ISI and Ovid parsers (Peter)
         * Fixed LyX citing on python2.2
@@ -9,6 +9,8 @@ New in 1.2.4 - 2004-06-22
 	* Improved documentation and translations (Zoltán)
 	* Fixed history in Medline queries
 	* Added support for annotations (Peter)
+	* Fixed i18n support for dynamic windows
+	* Fixed issue with empty crossrefs (bug #980549)
 
 
 New in 1.2.3 - 2004-03-11
