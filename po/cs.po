@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-03 04:28+0100\n"
-"PO-Revision-Date: 2003-11-03 13:16+0100\n"
+"POT-Creation-Date: 2003-11-10 04:28+0100\n"
+"PO-Revision-Date: 2003-11-10 16:04+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -584,8 +584,7 @@ msgstr "Zvolte svá nastavení"
 #. Create the edition widget...
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
-#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:291
-#: Pyblio/GnomeUI/Fields.py:473
+#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:374
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -609,14 +608,13 @@ msgid "Update"
 msgstr "Aktualizovat"
 
 #: Pyblio/GnomeUI/Config.py:433 Pyblio/GnomeUI/Config.py:537
-#: Pyblio/GnomeUI/Fields.py:373
 msgid "Remove"
 msgstr "Odstranit"
 
 #. Bottom
 #. m.row.changed(row)
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:534 Pyblio/GnomeUI/Fields.py:370
+#: Pyblio/GnomeUI/Config.py:534
 msgid "Set"
 msgstr "Nastavit"
 
@@ -839,6 +837,7 @@ msgstr ""
 "Nemohu se připojit k LyX:\n"
 "%s"
 
+# Sheesh.
 #. filter out special keys
 #. the user searches the first entry in its ordering that starts with this letter
 #. two keys in a same shot: we search for the composition of the words
@@ -847,29 +846,19 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#. search the program in the current path
-#: Pyblio/GnomeUI/Document.py:745
-msgid ""
-"Please install bug-buddy\n"
-"to use this feature"
-msgstr ""
-"Pro použití této funkce\n"
-"prosím nainstalujte bug-buddy"
-
-# Sheesh.
-#: Pyblio/GnomeUI/Document.py:758
+#: Pyblio/GnomeUI/Document.py:738
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Tento program je chráněn copyrightem a šířen pod podmínkami GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:759
+#: Pyblio/GnomeUI/Document.py:739
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Rozhraní pro Gnome k systému Pybliographer."
 
-#: Pyblio/GnomeUI/Document.py:768
+#: Pyblio/GnomeUI/Document.py:748
 msgid "Gnome Translation Team"
 msgstr "Tým překladatelů Gnome"
 
-#: Pyblio/GnomeUI/Document.py:773
+#: Pyblio/GnomeUI/Document.py:753
 msgid "Pybliographer Home Page"
 msgstr "Domovská stránka Pybliographeru"
 
@@ -899,7 +888,7 @@ msgstr "Domovská stránka Pybliographeru"
 msgid "Last Name, First Name"
 msgstr "Příjmení, křestní jméno"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:39
+#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
 #: glade/config1.glade.h:14
 msgid "Text"
 msgstr "Text"
@@ -939,8 +928,12 @@ msgstr "Odstranit"
 msgid "[ Drop an Entry here ]"
 msgstr "[ Pusťte sem položku ]"
 
+#. Config save?
+#. print 'SELF:FM[P][2]:', self.fm[p] [2]
+#. ------------------------------------------------------------
+#. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:106
+#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:207
 #: glade/config1.glade.h:8
 msgid "Entry type"
 msgstr "Typ položky"
@@ -958,11 +951,11 @@ msgstr "Vytvořit pole"
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:325
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:408
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:409
 msgid "Optional"
 msgstr "Nepovinné"
 
@@ -1044,65 +1037,53 @@ msgstr "Standardní úpravy"
 #.
 #.
 #. TO DO:
-#. correctly create entry types
-#: Pyblio/GnomeUI/Fields.py:38
+#. adapt menu item for this dialog
+#. cleaning up
+#: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
 msgstr "Autoři"
 
-#: Pyblio/GnomeUI/Fields.py:40 glade/config1.glade.h:16
+#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
 msgid "URL"
 msgstr "URL"
 
-#: Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Fields.py:43
 msgid "Reference"
 msgstr "Odkaz"
 
-#: Pyblio/GnomeUI/Fields.py:42
+#: Pyblio/GnomeUI/Fields.py:44
 msgid "Date"
 msgstr "Datum"
 
 #. self.dialog.set_parent (parent) ####
-#: Pyblio/GnomeUI/Fields.py:61
+#: Pyblio/GnomeUI/Fields.py:63
 msgid "Entry types and field names configuration"
 msgstr "Nastavení typů položek a názvů polí"
 
-#. content of the dialog  Page 1
-#: Pyblio/GnomeUI/Fields.py:69 glade/config1.glade.h:11
+#. ------------------------------------------------------------
+#. Page 1
+#: Pyblio/GnomeUI/Fields.py:102 glade/config1.glade.h:11
 msgid "Name"
 msgstr "Název"
 
-#: Pyblio/GnomeUI/Fields.py:72 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:105 glade/config1.glade.h:15
 msgid "Type"
 msgstr "Typ"
 
-#. PAGE 3
-#: Pyblio/GnomeUI/Fields.py:126
+#. ------------------------------------------------------------
+#. Page 3
+#: Pyblio/GnomeUI/Fields.py:263
 msgid "Available"
 msgstr "Dostupné"
 
-#: Pyblio/GnomeUI/Fields.py:135
+#: Pyblio/GnomeUI/Fields.py:273
 msgid "Associated"
 msgstr "Související"
 
-#: Pyblio/GnomeUI/Fields.py:332
-msgid "Entries configuration"
-msgstr "Nastavení položek"
-
-#: Pyblio/GnomeUI/Fields.py:343
-msgid "Entry"
-msgstr "Položka"
-
-#: Pyblio/GnomeUI/Fields.py:354
-msgid "Entry Name:"
-msgstr "Název položky:"
-
-#: Pyblio/GnomeUI/Fields.py:359
-msgid "Status"
-msgstr "Stav"
-
-#: Pyblio/GnomeUI/Fields.py:359 glade/search.glade.h:4
-msgid "Field"
-msgstr "Pole"
+#: Pyblio/GnomeUI/Fields.py:293
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Pole asociovaná s typem pole <b>%s</b>"
 
 #. This file is part of pybliographer
 #.
@@ -1815,6 +1796,10 @@ msgstr "Zavřít"
 msgid "Expert Search"
 msgstr "Hledání pro experty"
 
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Pole"
+
 #: glade/search.glade.h:5
 msgid "Pattern"
 msgstr "Vzor"
@@ -2132,3 +2117,22 @@ msgstr "pybtex: varování: následující klíče nebyly nalezeny"
 #: scripts/pybtex.py:63
 msgid "no style defined"
 msgstr "nedefinován styl"
+
+#~ msgid ""
+#~ "Please install bug-buddy\n"
+#~ "to use this feature"
+#~ msgstr ""
+#~ "Pro použití této funkce\n"
+#~ "prosím nainstalujte bug-buddy"
+
+#~ msgid "Entries configuration"
+#~ msgstr "Nastavení položek"
+
+#~ msgid "Entry"
+#~ msgstr "Položka"
+
+#~ msgid "Entry Name:"
+#~ msgstr "Název položky:"
+
+#~ msgid "Status"
+#~ msgstr "Stav"
