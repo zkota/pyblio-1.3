@@ -1,5 +1,5 @@
 # unit test for userformat
-
+# -*- coding: latin-1 -*-
 
 import unittest, sys
 
@@ -10,8 +10,7 @@ from Pyblio import Fields, userformat
 
 
 class author_editor_format_test (unittest.TestCase):
-
-    
+   
 
     def test01 (self):
         ag = Fields.AuthorGroup()
@@ -41,10 +40,16 @@ class author_editor_format_test (unittest.TestCase):
         ag.append (Fields.Author ("Françoise Sagan"))
         item = {'author': ag, 'title': 'Bonjour tristesse'}
         r = userformat.author_title_format (item)
-        print r
         self.assertEqual (r, 'Sagan, F.: Bonjour tristesse')
 
-        
+    def test03 (self):
+
+	ag = Fields.AuthorGroup ()
+
+	ag.append (Fields.Author ("Jäger, Herbert"))
+        item = {'author': ag, 'title': 'Bonjour tristesse'}
+        r = userformat.author_title_format (item)
+	self.assertEqual (r, 'Jäger, H.: Bonjour tristesse')
 
 if __name__ == '__main__':
     unittest.main ()

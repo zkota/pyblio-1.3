@@ -1,5 +1,6 @@
 # This file is part of Pybliographer
-# 
+# -*- coding: latin-1 -*-
+
 # Copyright (C) 2004 Peter Schulte-Stracke
 # Email : mail@schulte-stracke.de
 #          
@@ -66,6 +67,10 @@ def author_title_format (item):
     return ''.join (s)
 
 
+### Local Variables:
+### Mode: python
+### py-master-file : "ut_userformat.py"
+### End:
 
             
         

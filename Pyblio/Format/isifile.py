@@ -158,13 +158,13 @@ class IsifileIterator(Iterator.Iterator):
             group = Fields.AuthorGroup()
             for item in lines[key]:
                 if string.strip(item) =='[Anon]' :
-                    auth = item
+                    auth = [item]
                 else:        
                     name, firstn = string.split (item, ',')
-                    auth = name + ', '
-                    for i in string.strip(firstn):
-                        auth = auth + i +'.'
-                group.append (Fields.Author(auth))
+                    auth = ["%s, " % name]
+                    for i in string.strip (firstn):
+                        auth.append ("%s. " % i)
+                group.append (Fields.Author("".join(auth)))
             in_table['author'] = group
             del lines[key]                  
 

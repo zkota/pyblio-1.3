@@ -25,7 +25,7 @@
 #  - DnD with the world
 #  - Copy/Paste with the world
 
-
+######################### UNICODE ############################
 
 
 ''' Main index containing the columned view of the entries '''
@@ -320,26 +320,28 @@ class Index (Connector.Publisher):
         Utils.set_cursor (self.w, 'clock')
         
         self.model.clear ()
-        #print `iterator`
+
         for entry in iterator:
             row = []
-            #print entry
+
             i = 0
             for f in self.fields:
                 row.append (i)
                 i = i + 1
                 
                 if f == '-key-':
-                    row.append (str (entry.key.key))
+                    row.append ((str (entry.key.key)).decode ('latin-1'))
                     
                 elif f == '-type-':
-                    row.append (str (entry.type.name))
+                    row.append (str (entry.type.name)) ## ascii
                     
                 elif f == '-author/editor-':
-                    row.append (userformat.author_editor_format (entry))
+                    row.append (userformat.author_editor_format
+				(entry).decode ('latin-1'))
 
                 elif f == '-author/title-':
-                    row.append (userformat.author_title_format (entry))
+                    row.append (userformat.author_title_format
+				(entry).decode ('latin-1'))
                     
                 elif entry.has_key (f):
                     

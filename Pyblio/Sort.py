@@ -138,8 +138,11 @@ class FieldSort (AnySort):
                     string.lower (other.field))
 
     def extractor (self, entry):
-        return   [str(entry[self.field]).rstrip().lower()]
-
+	try:
+	    return   [str(entry[self.field]).rstrip().lower()]
+	except KeyError :
+	    return []
+	
     def author_editor_extractor (self, entry):
         return map (rakify, entry.get('author', entry.get('editor', [])))
  

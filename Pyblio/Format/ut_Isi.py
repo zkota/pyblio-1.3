@@ -28,6 +28,11 @@ GA BK33K
 %% * size *  27 p.
 ER
 """
+example_2 = """AU X, ABC
+   Y, D
+   Z, EFGH
+ER
+"""
 
 class ReaderCase (unittest.TestCase):
 
@@ -56,7 +61,25 @@ class ReaderCase (unittest.TestCase):
 		    "Invalid Field %s(%s) = %s" % (
 		    k, e [k].__class__,  e [k]))
 	    e = rdr.next()
-		
+
+    def test02 (self):
+	"""Test that Initials are formatted correctly.
+	According to Bibtex specs, they must be separated
+	by period, space ('. ')."""
+	comparison = {'X': 'A. B. C.',
+		      'Y': 'D.',
+		      'Z': 'E. F. G. H.'}
+	    
+	inpt = cStringIO.StringIO (example_2)
+	rdr = isifile.IsifileIterator (inpt)
+	e = rdr.first ()
+	while e:
+	    print e
+	    for auth in e['author']:
+		print auth
+		self.assertEqual (
+		    auth.first, comparison [auth.last])
+	    e = rdr.next ()
 
 def suite():
     theSuite = unittest.TestSuite()
