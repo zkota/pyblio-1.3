@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-01 04:31+0100\n"
-"PO-Revision-Date: 2004-03-01 15:29+0100\n"
+"POT-Creation-Date: 2004-03-12 04:28+0100\n"
+"PO-Revision-Date: 2004-03-12 14:50+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -344,7 +344,7 @@ msgstr "Příjmení, křestní jméno"
 msgid "Text"
 msgstr "Text"
 
-#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:757
+#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
 msgid "Error in native string parsing"
 msgstr "Chyba ve zpracovávání nativního řetězce"
 
@@ -416,15 +416,25 @@ msgstr "Neplatný formát klíček"
 msgid "Key `%s' already exists"
 msgstr "Klíč `%s' již existuje"
 
-#: Pyblio/GnomeUI/Editor.py:770
+# GREAT idea
+#: Pyblio/GnomeUI/Editor.py:712
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "Pole `%s' obsahuje symbol mimo Latin-1"
+
+#: Pyblio/GnomeUI/Editor.py:777
+msgid "Your text contains non Latin-1 symbols"
+msgstr "Váš text obsahuje symboly mimo Latin-1"
+
+#: Pyblio/GnomeUI/Editor.py:799
 msgid "Edit entry"
 msgstr "Upravit položku"
 
-#: Pyblio/GnomeUI/Editor.py:784 Pyblio/GnomeUI/Editor.py:840
+#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:862
+#: Pyblio/GnomeUI/Editor.py:891
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
 
@@ -519,7 +529,7 @@ msgstr "[Typ položky]"
 msgid "[Key Value]"
 msgstr "[Hodnota klíče]"
 
-#: Pyblio/GnomeUI/Utils.py:196
+#: Pyblio/GnomeUI/Utils.py:194
 msgid "The following errors occured:\n"
 msgstr "Došlo k následujícím chybám:\n"
 
@@ -558,6 +568,21 @@ msgstr "nevím, jak otevřít `%s'"
 #, python-format
 msgid "method `%s' provides no iterator"
 msgstr "metoda `%s' neposkytuje iterátor"
+
+#: Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "chybí atribut '%s'"
+
+#: Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
+msgstr "neplatný otevírací tag: %s"
+
+#: Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "neplatný ukončovací tag: %s"
 
 #: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
 #: glade/medline.glade.h:1 glade/search.glade.h:1
