@@ -29,8 +29,8 @@ localedir   = "@localedir@"
 
 import sys
 
-sys.path.append (data_pybdir)
-sys.path.append (lib_pybdir)
+sys.path.insert (0, data_pybdir)
+sys.path.insert (0, lib_pybdir)
 sys.path.insert (0, '.')
 
 import locale

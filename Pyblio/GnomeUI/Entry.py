@@ -81,7 +81,7 @@ class Entry:
         
         self.buff.insert_with_tags (iter, entry.type.name,
                                     self.tag ['title'])
-        self.buff.insert_with_tags (iter, ' ['+ str (entry.key.key) + ']\n\n',
+        self.buff.insert_with_tags (iter, ' {'+ str (entry.key.key) + '}\n\n',
                                     self.tag ['title'])
 
         dico = entry.keys ()

@@ -23,13 +23,19 @@ Fields.Reference.widget   = Editor.Reference
 Fields.Date.widget        = Editor.Date
 Fields.Date.justification = gtk.JUSTIFY_RIGHT
 
-h ['author'].width     = 150
-h ['editor'].width     = 150
-h ['title'].width      = 200
-h ['booktitle'].width  = 200
-h ['date'].width       = 50
+for f, w in (('author', 150),
+             ('editor', 150),
+             ('title',  200),
+             ('booktitle', 200),
+             ('date', 50)):
+    
+    if not h.has_key (f):
+        continue
 
-h ['abstract'].widget  = Editor.Text
+    h [f].width = w
+    
+if h.has_key ('abstract'):
+    h ['abstract'].widget = Editor.Text
 
 Config.set ('gnomeui/default',  (150, gtk.JUSTIFY_LEFT, Editor.Entry))
 
