@@ -1,274 +1,306 @@
 # Pybliographer German Translation
 # Copyright (C) 1999, 2000 Free Software Foundation, Inc.
-# Christian Meyer <linux@chrisime.de>, 2000.#
-#
+# Christian Meyer <linux@chrisime.de>, 2000.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Oct  9 22:20:02 2003\n"
-"PO-Revision-Date: 2001-02-06 14:51+0100\n"
-"Last-Translator: Christian Meyer <cm@ggtt.de>\n"
+"POT-Creation-Date: 2005-01-14 02:10+0100\n"
+"PO-Revision-Date: 2005-01-14 02:08+0100\n"
+"Last-Translator: Frank Arnold <frank@scirocco-5v-turbo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Pyblio/Autoload.py:57
+#: Pyblio/Autoload.py:78
+#, python-format
 msgid "warning: can't import %s: %s"
 msgstr "Warnung: %s kann nicht importiert werden: %s"
 
-#: ../Pyblio/Config.py:53
+#: Pyblio/Config.py:50
+#, python-format
 msgid "value of `%s' should be of type %s"
-msgstr "Wert von `%s' sollte vom Typ %s sein"
+msgstr "Wert von »%s« sollte vom Typ %s sein"
 
-#: ../Pyblio/Config.py:204
+#: Pyblio/Config.py:209
 msgid "String"
 msgstr "String"
 
-#: ../Pyblio/Config.py:213
+#: Pyblio/Config.py:218
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../Pyblio/Config.py:232
+#: Pyblio/Config.py:237
 msgid "Integer"
 msgstr "Integer"
 
-#: ../Pyblio/Config.py:234
+#: Pyblio/Config.py:239
+#, python-format
 msgid "Integer under %d"
 msgstr "Integer unter %d"
 
-#: ../Pyblio/Config.py:236
+#: Pyblio/Config.py:241
+#, python-format
 msgid "Integer over %d"
-msgstr "Integer �ber %d"
+msgstr "Integer über %d"
 
-#: ../Pyblio/Config.py:238
+#: Pyblio/Config.py:243
+#, python-format
 msgid "Integer between %d and %d"
 msgstr "Integer zwischen %d und %d"
 
-#: ../Pyblio/Config.py:250
+#: Pyblio/Config.py:255
+#, python-format
 msgid "Element in `%s'"
-msgstr "Element in `%s'"
+msgstr "Element in »%s«"
 
-#: ../Pyblio/Config.py:270
+#: Pyblio/Config.py:275
+#, python-format
 msgid "Tuple (%s)"
-msgstr "Sequenz(Tupel) (%s)"
+msgstr "Sequenz (Tupel) (%s)"
 
-#: ../Pyblio/Config.py:291
+#: Pyblio/Config.py:296
+#, python-format
 msgid "List (%s)"
 msgstr "Liste (%s)"
 
-#: ../Pyblio/Config.py:316
+#: Pyblio/Config.py:321
+#, python-format
 msgid "Dictionary (%s, %s)"
-msgstr "W�rterbuch (%s, %s)"
+msgstr "Wörterbuch (%s, %s)"
 
-#: ../Pyblio/Fields.py:265
+#: Pyblio/Fields.py:264
 msgid "Illegal year value"
-msgstr "Falscher Wert f�r Jahr"
+msgstr "Falscher Wert für Jahr"
 
-#: ../Pyblio/Fields.py:269
+#: Pyblio/Fields.py:268
 msgid "Illegal month value"
-msgstr "Falscher Wert f�r Monat"
+msgstr "Falscher Wert für Monat"
 
-#: ../Pyblio/Fields.py:273
+#: Pyblio/Fields.py:272
 msgid "Illegal day value"
-msgstr "Falscher Wert f�r Tag"
+msgstr "Falscher Wert für Tag"
 
-#: ../Pyblio/Fields.py:443
+#: Pyblio/Fields.py:459
+#, python-format
 msgid "in %s"
 msgstr "in %s"
 
-#: ../Pyblio/Format/BibTeX.py:346 ../Pyblio/Format/BibTeX.py:404
+#: Pyblio/Format/BibTeX.py:369 Pyblio/Format/BibTeX.py:427
+#, python-format
 msgid "key `%s' is malformed"
-msgstr "Syntax des Schl�ssels `%s' ist falsch"
+msgstr "Syntax des Schlüssels »%s« ist falsch"
 
-#: ../Pyblio/Format/BibTeX.py:367 ../Pyblio/Format/BibTeX.py:388
+#: Pyblio/Format/BibTeX.py:390 Pyblio/Format/BibTeX.py:411
+#, python-format
 msgid "%s:%d: key `%s' already defined"
-msgstr "%s:%d: Schl�ssel `%s' schon definiert"
+msgstr "%s:%d: Schlüssel »%s« schon definiert"
 
-#: ../Pyblio/GnomeUI/Config.py:64
-msgid "Choose your preferences"
-msgstr "W�hlen Sie Ihre Einstellungen"
-
-#: ../Pyblio/GnomeUI/Config.py:145 ../Pyblio/GnomeUI/Fields.py:291
-#: ../Pyblio/GnomeUI/Fields.py:473
+#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
 msgstr ""
-"Einige �nderungen erfordern den Neustart von `Pybliographic'\n"
-"um korrekt �bernommen zu werden"
+"Einige Änderungen erfordern den Neustart von »Pybliographer«\n"
+"um korrekt übernommen zu werden"
 
-#: ../Pyblio/GnomeUI/Config.py:425
+#: Pyblio/GnomeUI/Config.py:429
 msgid "Add"
-msgstr "Hinzuf�gen"
+msgstr "Hinzufügen"
 
-#: ../Pyblio/GnomeUI/Config.py:428
+#: Pyblio/GnomeUI/Config.py:432
 msgid "Update"
 msgstr "Auffrischen"
 
-#: ../Pyblio/GnomeUI/Config.py:431 ../Pyblio/GnomeUI/Config.py:535
-#: ../Pyblio/GnomeUI/Fields.py:373
+#: Pyblio/GnomeUI/Config.py:435 Pyblio/GnomeUI/Config.py:547
 msgid "Remove"
 msgstr "Entfernen"
 
-#: ../Pyblio/GnomeUI/Config.py:532 ../Pyblio/GnomeUI/Fields.py:370
+#: Pyblio/GnomeUI/Config.py:544
 msgid "Set"
 msgstr "Festlegen"
 
-#: ../Pyblio/GnomeUI/Config.py:547
+#: Pyblio/GnomeUI/Config.py:559
 msgid "Key:"
-msgstr "Schl�ssel:"
+msgstr "Schlüssel:"
 
-#: ../Pyblio/GnomeUI/Config.py:549
+#: Pyblio/GnomeUI/Config.py:561
 msgid "Value:"
 msgstr "Wert:"
 
-#: ../Pyblio/GnomeUI/Document.py:194
+#: Pyblio/GnomeUI/Document.py:132
+msgid "Unnamed bibliographic database"
+msgstr "Unbenannte bibliographische Datenbank"
+
+#: Pyblio/GnomeUI/Document.py:221
+#, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
 "%s"
 msgstr ""
-"Datei `%s' kann nicht zum Schreiben ge�ffnet werden:\n"
+"Datei »%s« kann nicht zum Schreiben geöffnet werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:215
+#: Pyblio/GnomeUI/Document.py:242
+#, python-format
 msgid ""
 "Error while parsing `%s':\n"
 "%s"
 msgstr ""
-"Fehler beim Parsen `%s':\n"
+"Fehler beim Parsen »%s«:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:234
+#: Pyblio/GnomeUI/Document.py:258
 msgid "New database"
 msgstr "Neue Datenbank"
 
-#: ../Pyblio/GnomeUI/Document.py:242 ../Pyblio/GnomeUI/Document.py:246
+#: Pyblio/GnomeUI/Document.py:266 Pyblio/GnomeUI/Document.py:270
 msgid "[no entry]"
 msgstr "[kein Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:243
+#: Pyblio/GnomeUI/Document.py:267
 msgid "[1 entry]"
 msgstr "[1 Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:244
+#: Pyblio/GnomeUI/Document.py:268
+#, python-format
 msgid "[%d entries]"
-msgstr "[%d Eintr�ge]"
+msgstr "[%d Einträge]"
 
-#: ../Pyblio/GnomeUI/Document.py:247
+#: Pyblio/GnomeUI/Document.py:271
+#, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:248
+#: Pyblio/GnomeUI/Document.py:272
+#, python-format
 msgid "[%d/%d entries]"
-msgstr "[%d/%d Eintr�ge]"
+msgstr "[%d/%d Einträge]"
 
-#: ../Pyblio/GnomeUI/Document.py:253
+#: Pyblio/GnomeUI/Document.py:277
 msgid "[modified]"
-msgstr "[ge�ndert]"
+msgstr "[geändert]"
 
-#: ../Pyblio/GnomeUI/Document.py:263
+#: Pyblio/GnomeUI/Document.py:290
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
 msgstr ""
-"Diese Datenbank wurde ge�ndert.\n"
-"�nderungen verwerfen ?"
+"Diese Datenbank wurde geändert.\n"
+"Änderungen verwerfen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:293
+#. no result.
+#: Pyblio/GnomeUI/Document.py:315
+msgid "Your query returned no result"
+msgstr "Die Abfrage lieferte kein Ergebnis"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:325
 msgid "Merge file"
-msgstr "Datei zusammenf�hren"
+msgstr "Datei zusammenführen"
 
-#: ../Pyblio/GnomeUI/Document.py:305 ../Pyblio/GnomeUI/Document.py:359
+#: Pyblio/GnomeUI/Document.py:337 Pyblio/GnomeUI/Document.py:391
 msgid "Open error"
-msgstr "Fehler beim �ffnen"
+msgstr "Fehler beim Öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:329
+#: Pyblio/GnomeUI/Document.py:361
 msgid "Merge status"
-msgstr "Status der Zusammenf�hrung"
+msgstr "Status der Zusammenführung"
 
-#: ../Pyblio/GnomeUI/Document.py:340
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:372
 msgid "Open file"
-msgstr "Datei �ffnen"
+msgstr "Datei öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:386
+#: Pyblio/GnomeUI/Document.py:420
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
 msgstr ""
-"Diese Datenbank wurde extern ver�ndert.\n"
-"�nderungen verwerfen ?"
+"Diese Datenbank wurde extern verändert.\n"
+"Änderungen verwerfen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:396
+#: Pyblio/GnomeUI/Document.py:430
+#, python-format
 msgid ""
 "Unable to save `%s':\n"
 "%s"
 msgstr ""
-"`%s' kann nicht gespeichert werden:\n"
+"»%s« kann nicht gespeichert werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:404
+#: Pyblio/GnomeUI/Document.py:438
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
 msgstr ""
-"Ein interner Fehler trat w�hrend des Speicherns auf\n"
-"Probieren Sie `Speichern unter...'"
+"Ein interner Fehler trat während des Speicherns auf\n"
+"Probieren Sie »Speichern unter...«"
 
-#: ../Pyblio/GnomeUI/Document.py:418
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:452
 msgid "Save As..."
 msgstr "Speichern unter..."
 
-#: ../Pyblio/GnomeUI/Document.py:424
+#: Pyblio/GnomeUI/Document.py:458
+#, python-format
 msgid ""
 "The file `%s' already exists.\n"
 "Overwrite it ?"
 msgstr ""
-"Die Datei `%s' existiert bereits.\n"
-"�berschreiben ?"
+"Die Datei »%s« existiert bereits.\n"
+"Überschreiben ?"
 
-#: ../Pyblio/GnomeUI/Document.py:431
+#: Pyblio/GnomeUI/Document.py:465
+#, python-format
 msgid ""
 "During opening:\n"
 "%s"
 msgstr ""
-"W�hrend des �ffnens:\n"
+"Während des Öffnens:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:449
+#: Pyblio/GnomeUI/Document.py:483
 msgid "Reopen error"
-msgstr "Fehler beim erneuten �ffnen"
+msgstr "Fehler beim erneuten Öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:490
+#: Pyblio/GnomeUI/Document.py:530
+#, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
 "Rename and add it anyway ?"
 msgstr ""
-"Ein Eintrag mit dem Namen `%s' existiert bereits.\n"
-"Trotzdem umbenennen und hinzuf�gen ?"
+"Ein Eintrag mit dem Namen »%s« existiert bereits.\n"
+"Trotzdem umbenennen und hinzufügen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:527
+#: Pyblio/GnomeUI/Document.py:567
 msgid "Really remove all the entries ?"
-msgstr "Wirklich alle Eintr�ge entfernen ?"
+msgstr "Wirklich alle Einträge entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:547
+#: Pyblio/GnomeUI/Document.py:587
 msgid "Create new entry"
 msgstr "Neuen Eintrag erstellen"
 
-#: ../Pyblio/GnomeUI/Document.py:561
+#: Pyblio/GnomeUI/Document.py:601
+#, python-format
 msgid "Really edit %d entries ?"
-msgstr "Wirklich %d Eintr�ge bearbeiten ?"
+msgstr "Wirklich %d Einträge bearbeiten ?"
 
-#: ../Pyblio/GnomeUI/Document.py:599
+#: Pyblio/GnomeUI/Document.py:639
+#, python-format
 msgid "Remove all the %d entries ?"
-msgstr "Alle %d Eintr�ge entfernen ?"
+msgstr "Alle %d Einträge entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:601
+#: Pyblio/GnomeUI/Document.py:641
+#, python-format
 msgid "Remove entry `%s' ?"
-msgstr "Eintrag `%s' entfernen ?"
+msgstr "Eintrag »%s« entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:665 ../Pyblio/GnomeUI/Document.py:672
+#: Pyblio/GnomeUI/Document.py:728 Pyblio/GnomeUI/Document.py:736
+#, python-format
 msgid ""
 "Can't connect to LyX:\n"
 "%s"
@@ -276,619 +308,838 @@ msgstr ""
 "Es kann keine Verbindung zu LyX hergestellt werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:749
+#: Pyblio/GnomeUI/Document.py:809
+#, python-format
 msgid ""
-"Please install bug-buddy\n"
-"to use this feature"
+"Can't display documentation:\n"
+"%s"
 msgstr ""
-"Bitte `bug-buddy' installieren\n"
-"um diese Funktion zu benutzen"
+"Konnte Dokumentation nicht anzeigen:\n"
+"%s"
 
-#: ../Pyblio/GnomeUI/Document.py:762
+#: Pyblio/GnomeUI/Document.py:817
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dieses Programm steht unter der GNU GPL"
 
-#: ../Pyblio/GnomeUI/Document.py:763
+#: Pyblio/GnomeUI/Document.py:818
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome-Schnittstelle zum Pybliographer-System."
 
-#: ../Pyblio/GnomeUI/Document.py:772
+#: Pyblio/GnomeUI/Document.py:828
 msgid "Gnome Translation Team"
-msgstr ""
+msgstr "Gnome Translation Team"
 
-#: ../Pyblio/GnomeUI/Document.py:777
+#: Pyblio/GnomeUI/Document.py:833
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer-Homepage"
 
-#: ../Pyblio/GnomeUI/Editor.py:38
+#: Pyblio/GnomeUI/Editor.py:39
 msgid "Last Name, First Name"
 msgstr "Name, Vorname"
 
-#: ../Pyblio/GnomeUI/Editor.py:39 ../Pyblio/GnomeUI/Fields.py:39
+#: Pyblio/GnomeUI/Editor.py:40 Pyblio/GnomeUI/Editor.py:1286
+#: Pyblio/GnomeUI/Fields.py:39 glade/config1.glade.h:14
+#: glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Text"
 
-#: ../Pyblio/GnomeUI/Editor.py:322
+#: Pyblio/GnomeUI/Editor.py:137 Pyblio/GnomeUI/Editor.py:969
+msgid "Error in native string parsing"
+msgstr "Fehler beim »Stringparsen«"
+
+#: Pyblio/GnomeUI/Editor.py:316
 msgid "Day"
 msgstr "Tag"
 
-#: ../Pyblio/GnomeUI/Editor.py:331
+#: Pyblio/GnomeUI/Editor.py:325
 msgid "Month"
 msgstr "Monat"
 
-#: ../Pyblio/GnomeUI/Editor.py:340
+#: Pyblio/GnomeUI/Editor.py:334
 msgid "Year"
 msgstr "Jahr"
 
-#: ../Pyblio/GnomeUI/Editor.py:365
+#: Pyblio/GnomeUI/Editor.py:359
 msgid "Invalid day field in date"
-msgstr "Ung�ltiger Tag in Datum"
+msgstr "Ungültiger Tag in Datum"
 
-#: ../Pyblio/GnomeUI/Editor.py:373
+#: Pyblio/GnomeUI/Editor.py:367
 msgid "Invalid month field in date"
-msgstr "Ung�ltiger Monat in Datum"
+msgstr "Ungültiger Monat in Datum"
 
-#: ../Pyblio/GnomeUI/Editor.py:381
+#: Pyblio/GnomeUI/Editor.py:375
 msgid "Invalid year field in date"
-msgstr "Ung�ltiges Jahr in Datum"
+msgstr "Ungültiges Jahr in Datum"
 
-#: ../Pyblio/GnomeUI/Editor.py:431 ../Pyblio/GnomeUI/Search.py:86
+#. A delete button
+#: Pyblio/GnomeUI/Editor.py:423 Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
-msgstr "L�schen"
+msgstr "Löschen"
 
-#: ../Pyblio/GnomeUI/Editor.py:442 ../Pyblio/GnomeUI/Editor.py:454
-#: ../Pyblio/GnomeUI/Editor.py:457
+#: Pyblio/GnomeUI/Editor.py:434 Pyblio/GnomeUI/Editor.py:447
+#: Pyblio/GnomeUI/Editor.py:450
 msgid "[ Drop an Entry here ]"
-msgstr ""
+msgstr "[ Eintrag hierher ziehen ]"
 
-#: ../Pyblio/GnomeUI/Editor.py:527 ../Pyblio/GnomeUI/Fields.py:106
+#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
+#: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
-msgstr "Eingabetyp"
+msgstr "Eintragstyp"
 
-#: ../Pyblio/GnomeUI/Editor.py:529
+#: Pyblio/GnomeUI/Editor.py:525
 msgid "Key"
-msgstr "Schl�ssel"
+msgstr "Schlüssel"
 
-#: ../Pyblio/GnomeUI/Editor.py:570
+#: Pyblio/GnomeUI/Editor.py:566
 msgid "Create Field"
-msgstr "Feld anlegen"
+msgstr "Feld erstellen"
 
-#: ../Pyblio/GnomeUI/Editor.py:625
-msgid "Extra"
-msgstr "Extra"
+#. navigation buttons
+#: Pyblio/GnomeUI/Editor.py:571
+msgid "Back"
+msgstr "Zurück"
 
-#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:325
+#: Pyblio/GnomeUI/Editor.py:574
+msgid "Next"
+msgstr "Vor"
+
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:451
 msgid "Mandatory"
 msgstr "Erforderlich"
 
-#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:452
 msgid "Optional"
 msgstr "Optional"
 
-#: ../Pyblio/GnomeUI/Editor.py:694
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Editor.py:1201
+msgid "Notes"
+msgstr "Notizen"
+
+#: Pyblio/GnomeUI/Editor.py:691
+msgid "Extra"
+msgstr "Zusatz"
+
+#: Pyblio/GnomeUI/Editor.py:866
 msgid "Invalid key format"
-msgstr "Ung�ltiges Schl�sselformat"
+msgstr "Ungültiges Schlüsselformat"
 
-#: ../Pyblio/GnomeUI/Editor.py:702
+#: Pyblio/GnomeUI/Editor.py:874
+#, python-format
 msgid "Key `%s' already exists"
-msgstr "Schl�ssel `%s' existiert bereits"
+msgstr "Schlüssel »%s« ist bereits vorhanden"
 
-#: ../Pyblio/GnomeUI/Editor.py:763
-msgid "Error in native string parsing"
-msgstr "Fehler beim `Stringparsen'"
+#: Pyblio/GnomeUI/Editor.py:891
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr ""
+"Das »%s«-Feld enthält ein Zeichen, dass nicht im Latin-1 Zeichensatz "
+"enthalten ist"
 
-#: ../Pyblio/GnomeUI/Editor.py:776
+#: Pyblio/GnomeUI/Editor.py:961
+msgid "Your text contains non Latin-1 symbols"
+msgstr ""
+"Der Text enthält Zeichen, die nicht im Latin-1 Zeichensatz enthalten sind."
+
+#: Pyblio/GnomeUI/Editor.py:982
 msgid "Edit entry"
 msgstr "Eintrag bearbeiten"
 
-#: ../Pyblio/GnomeUI/Editor.py:790 ../Pyblio/GnomeUI/Editor.py:846
+#: Pyblio/GnomeUI/Editor.py:996 Pyblio/GnomeUI/Editor.py:1067
 msgid "Native Editing"
 msgstr "Bearbeitung von Native"
 
-#: ../Pyblio/GnomeUI/Editor.py:868
+#: Pyblio/GnomeUI/Editor.py:1096
 msgid "Standard Editing"
 msgstr "Standardbearbeitung"
 
-#: ../Pyblio/GnomeUI/Fields.py:38
+#: Pyblio/GnomeUI/Editor.py:1223
+msgid "mandatory"
+msgstr "erforderlich"
+
+#: Pyblio/GnomeUI/Editor.py:1289
+msgid "Enter text here"
+msgstr "Text hier eingeben"
+
+#: Pyblio/GnomeUI/Editor.py:1341
+msgid "New Annotation Name"
+msgstr "Neuer Anmerkungsname"
+
+#: Pyblio/GnomeUI/Editor.py:1347
+msgid "Name of the new annotation:"
+msgstr "Name der neuen Anmerkung"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"URL konnte nicht geöffnet werden:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Fields.py:38
 msgid "Authors"
-msgstr ""
+msgstr "Autoren"
 
-#: ../Pyblio/GnomeUI/Fields.py:40
+#: Pyblio/GnomeUI/Fields.py:40
+msgid "Long Text"
+msgstr "Langer Text"
+
+#: Pyblio/GnomeUI/Fields.py:41 glade/config1.glade.h:16
+#: glade/fields1.glade.h:21
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
-#: ../Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Fields.py:42
 msgid "Reference"
 msgstr "Referenz"
 
-#: ../Pyblio/GnomeUI/Fields.py:42
-#, fuzzy
+#: Pyblio/GnomeUI/Fields.py:43
 msgid "Date"
-msgstr "Auffrischen"
+msgstr "Datum"
 
-#: ../Pyblio/GnomeUI/Fields.py:61
-#, fuzzy
-msgid "Entry types and field names configuration"
-msgstr "Konfiguration der Eintr�ge"
-
-#: ../Pyblio/GnomeUI/Fields.py:69
+#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
+#: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Name"
 
-#: ../Pyblio/GnomeUI/Fields.py:72
+#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
+#: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Typ"
 
-#: ../Pyblio/GnomeUI/Fields.py:126
+#: Pyblio/GnomeUI/Fields.py:300
 msgid "Available"
-msgstr ""
+msgstr "Verfügbar"
 
-#: ../Pyblio/GnomeUI/Fields.py:135
+#: Pyblio/GnomeUI/Fields.py:310
 msgid "Associated"
-msgstr ""
+msgstr "Assoziiert"
 
-#: ../Pyblio/GnomeUI/Fields.py:332
-msgid "Entries configuration"
-msgstr "Konfiguration der Eintr�ge"
+#: Pyblio/GnomeUI/Fields.py:321
+msgid "Please, select an entry type from previous page."
+msgstr "Bitte einen Eintragstyp aus der vorhergehenden Seite wählen"
 
-#: ../Pyblio/GnomeUI/Fields.py:343
-msgid "Entry"
-msgstr "Eintrag"
+#: Pyblio/GnomeUI/Fields.py:332
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Mit Eintragstyp <b>%s</b> assoziierte Felder"
 
-#: ../Pyblio/GnomeUI/Fields.py:354
-msgid "Entry Name:"
-msgstr "Name des Eintrags:"
-
-#: ../Pyblio/GnomeUI/Fields.py:359 ../glade/search-intl.c:11
-msgid "Field"
-msgstr "Feld"
-
-#: ../Pyblio/GnomeUI/Fields.py:359
-msgid "Status"
-msgstr "Status"
-
-#: ../Pyblio/GnomeUI/FileSelector.py:40
+#: Pyblio/GnomeUI/FileSelector.py:50
 msgid "File"
 msgstr "Datei"
 
-#: ../Pyblio/GnomeUI/FileSelector.py:75
+#: Pyblio/GnomeUI/FileSelector.py:94
 msgid "Bibliography type:"
 msgstr "Bibliographietyp:"
 
-#: ../Pyblio/GnomeUI/Index.py:94
+#: Pyblio/GnomeUI/Index.py:104
 msgid "Add..."
-msgstr "Hinzuf�gen..."
+msgstr "Hinzufügen…"
 
-#: ../Pyblio/GnomeUI/Index.py:96
+#: Pyblio/GnomeUI/Index.py:106
 msgid "Edit..."
-msgstr "Bearbeiten..."
+msgstr "Bearbeiten…"
 
-#: ../Pyblio/GnomeUI/Index.py:98
-#, fuzzy
+#: Pyblio/GnomeUI/Index.py:108
 msgid "Delete..."
-msgstr "L�schen"
+msgstr "Löschen…"
 
-#: ../Pyblio/GnomeUI/Search.py:71
+#. The root of the search tree is the full database
+#: Pyblio/GnomeUI/Search.py:71
 msgid "Full database"
-msgstr "Komplette Datenbank"
+msgstr "Gesamte Datenbank"
 
-#: ../Pyblio/GnomeUI/Search.py:141
+#: Pyblio/GnomeUI/Search.py:142
 msgid "internal error during evaluation"
-msgstr "Interner Fehler w�hrend Auswertung"
+msgstr "Interner Fehler während der Evaluierung"
 
-#: ../Pyblio/GnomeUI/Search.py:195
+#: Pyblio/GnomeUI/Search.py:196
+#, python-format
 msgid ""
 "while compiling %s\n"
 "error: %s"
 msgstr ""
-"Beim Compilieren von `%s'\n"
+"Beim Compilieren von »%s«\n"
 "Fehler: %s"
 
-#: ../Pyblio/GnomeUI/Sort.py:97
+#. These are additional search fields
+#: Pyblio/GnomeUI/Sort.py:97
 msgid "[Entry Type]"
-msgstr "[Eingabetyp]"
+msgstr "[Eintragstyp]"
 
-#: ../Pyblio/GnomeUI/Sort.py:98
+#: Pyblio/GnomeUI/Sort.py:98
 msgid "[Key Value]"
-msgstr "[Schl�sselwert]"
+msgstr "[Schlüsselvariable]"
 
-#: ../Pyblio/GnomeUI/Utils.py:196
-#, fuzzy
+#: Pyblio/GnomeUI/Utils.py:193
 msgid "The following errors occured:\n"
+msgstr "Die folgenden Fehler traten auf:\n"
+
+#: Pyblio/GnomeUI/__init__.py:45
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "Dies ist Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+
+#: Pyblio/LyX.py:37
+#, python-format
+msgid "no input pipe `%s'"
+msgstr "keine Eingabe-Pipe »%s«"
+
+#: Pyblio/LyX.py:43
+#, python-format
+msgid "no output pipe `%s'"
+msgstr "keine Ausgabe-Pipe »%s«"
+
+# wie kann man "opener" richtig(!!) übersetzen?
+#: Pyblio/Open.py:95
+#, python-format
+msgid "method `%s' provides no opener"
+msgstr "Methode »%s« stellt keinen Öffner bereit"
+
+#: Pyblio/Open.py:103 Pyblio/Open.py:149
+#, python-format
+msgid "File `%s' does not exist"
+msgstr "Datei »%s« existiert nicht"
+
+#: Pyblio/Open.py:114 Pyblio/Open.py:160
+#, python-format
+msgid "don't know how to open `%s'"
+msgstr "Wie soll »%s« geöffnet werden?"
+
+#: Pyblio/Open.py:141
+#, python-format
+msgid "method `%s' provides no iterator"
+msgstr "Methode »%s« unterstützt keinen Iterator"
+
+#: Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "»%s«-Attribut fehlt"
+
+#: Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
 msgstr ""
-"Die folgenden Fehler traten auf:\n"
+"Ungültige Öffnungsmarkierung:\n"
+"%s"
+
+#: Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "Ungültige Schlussmarkierung: %s"
+
+#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
+#: glade/medline.glade.h:1 glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>Eintragstyp</b>"
+
+#: glade/config1.glade.h:3
+msgid "A"
+msgstr "A"
+
+#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+msgid "Association"
+msgstr "Assoziation"
+
+#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+msgid "Datum"
+msgstr "Datum"
+
+#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "Editor"
+
+#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "Einträge"
+
+#: glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "FELD DEFINITION"
+
+#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+msgid "Fields "
+msgstr "Felder "
+
+#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+msgid "Name "
+msgstr "Name "
+
+#: glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr "Pybliographer Einstellungen"
+
+#: glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "Vorgabefelder"
+
+#: glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr "Eintragstypen- und Feldnameneinstellungen"
+
+#: glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr "Informationen zum <b>Artikel</b>-Eintragstyp"
+
+#: glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+"Bitte einen Eintragstyp wählen und seine\n"
+"assoziierten (erforderlichen und optionalen)\n"
+"Felder auf der nächsten Seite festlegen.\n"
+"\n"
+"\n"
 "\n"
 
-#: ../Pyblio/LyX.py:39
-msgid "no input pipe `%s'"
-msgstr "keine Eingabe-Pipe `%s'"
+#: glade/format.glade.h:2
+msgid "Bibliography style:"
+msgstr "Bibliographiestil:"
 
-#: ../Pyblio/LyX.py:45
-msgid "no output pipe `%s'"
-msgstr "keine Ausgabe-Pipe `%s'"
+#: glade/format.glade.h:3
+msgid "Format entries"
+msgstr "Einträge formatieren"
 
-# wie kann man "opener" richtig(!!) �bersetzen?
-#: ../Pyblio/Open.py:97
-msgid "method `%s' provides no opener"
-msgstr "Methode `%s' stellt keinen �ffner bereit"
+#: glade/format.glade.h:4
+msgid "Output file:"
+msgstr "Ausgabedatei:"
 
-#: ../Pyblio/Open.py:105 ../Pyblio/Open.py:151
-msgid "File `%s' does not exist"
-msgstr "Datei `%s' existiert nicht"
+#: glade/format.glade.h:5
+msgid "Output format:"
+msgstr "Ausgabeformat:"
 
-#: ../Pyblio/Open.py:116 ../Pyblio/Open.py:162
-msgid "don't know how to open `%s'"
-msgstr "Wie soll `%s' ge�ffnet werden?"
+#: glade/format.glade.h:6
+msgid "Save Formatted as"
+msgstr "Formatiert speichern unter"
 
-#: ../Pyblio/Open.py:143
-msgid "method `%s' provides no iterator"
-msgstr "Methode `%s' unterst�tzt keinen Iterator"
+#: glade/format.glade.h:7
+msgid "Style Selection"
+msgstr "Stilauswahl"
 
-#: ../pybliographer.py:40
+#: glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr "Medline-Abfrage erstellen"
+
+#: glade/medline.glade.h:3
+msgid "From:"
+msgstr "Von:"
+
+#: glade/medline.glade.h:4
+msgid "Limited to:"
+msgstr "Begrenzt auf:"
+
+#: glade/medline.glade.h:5
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+"Maximale Anzahl\n"
+"der Ergebnisse:"
+
+#: glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr "Medline-Abfrage"
+
+#: glade/medline.glade.h:8
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+"Nur Exemplare \n"
+"vor Druck"
+
+#: glade/medline.glade.h:10
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+"Nur Exemplare \n"
+"mit Zusammenfassung"
+
+#: glade/medline.glade.h:12
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+"Durchsuche \n"
+"PubMed nach:"
+
+#: glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"Auflistung beginnen \n"
+"bei Resultat Nummer:"
+
+#: glade/medline.glade.h:16
+msgid "To:"
+msgstr "Bis:"
+
+#: glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+"Format JJJJ/MM/TT verwenden\n"
+"Monat und Tag sind optional."
+
+#: glade/pyblio.glade.h:1
+msgid "Cite"
+msgstr "Zitat"
+
+#: glade/pyblio.glade.h:2
+msgid "Cite..."
+msgstr "Zitat…"
+
+#: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr "Inhalt"
+
+#: glade/pyblio.glade.h:4
+msgid "Fields..."
+msgstr "Felder…"
+
+#: glade/pyblio.glade.h:5
+msgid "Forget all changes"
+msgstr "Alle Änderungen verwerfen"
+
+#: glade/pyblio.glade.h:6
+msgid "Format..."
+msgstr "Format…"
+
+#: glade/pyblio.glade.h:7
+msgid "Medline Query..."
+msgstr "Medline-Abfrage…"
+
+#: glade/pyblio.glade.h:8
+msgid "Merge With..."
+msgstr "Zusammenführen mit…"
+
+#: glade/pyblio.glade.h:9
+msgid "Open File"
+msgstr "Datei öffnen"
+
+#: glade/pyblio.glade.h:10
+msgid "Previous Documents"
+msgstr "Vorhergehende Dokumente"
+
+#: glade/pyblio.glade.h:11
+msgid "Pybliographer"
+msgstr "Pybliographer"
+
+#: glade/pyblio.glade.h:12
+msgid "S_ort..."
+msgstr "S_ortieren…"
+
+#: glade/pyblio.glade.h:13
+msgid "Save File"
+msgstr "Datei speichern"
+
+#: glade/pyblio.glade.h:14
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: glade/pyblio.glade.h:15
+msgid "_Add..."
+msgstr "Hinzu_fügen…"
+
+#: glade/pyblio.glade.h:16
+msgid "_Delete..."
+msgstr "_Löschen…"
+
+#: glade/pyblio.glade.h:17
+msgid "_Edit..."
+msgstr "_Bearbeiten…"
+
+#: glade/pyblio.glade.h:18
+msgid "_New"
+msgstr "_Neu"
+
+#: glade/search.glade.h:2
+msgid "Close"
+msgstr "Schließen"
+
+#: glade/search.glade.h:3
+msgid "Expert Search"
+msgstr "Erweiterte Suche"
+
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Feld"
+
+#: glade/search.glade.h:5
+msgid "Pattern"
+msgstr "Muster"
+
+#: glade/search.glade.h:6
+msgid "Query"
+msgstr "Abfrage"
+
+#: glade/search.glade.h:7
+msgid "Search"
+msgstr "Suche"
+
+#: glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "Einfache Suche"
+
+#: glade/sort.glade.h:1
+msgid "Select sort criterions"
+msgstr "Sortierungskriterien auswählen"
+
+#: glade/sort.glade.h:2
+msgid "Set as default"
+msgstr "Als Vorgabe setzen"
+
+#: pybliographer.py:43
+#, python-format
 msgid "This is %s, version %s"
 msgstr "Willkommen zu %s, Version %s"
 
-#: ../pybliographer.py:44 ../pybliographer.py:51
+#: pybliographer.py:47 pybliographer.py:54
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
 msgstr "Dies ist freie Software OHNE JEDE GARANTIE."
 
-#: ../pybliographer.py:45
+#: pybliographer.py:48
 msgid "For details, type `warranty'."
-msgstr "F�r Details, w�hlen Sie `warranty'."
+msgstr "Für Details, wählen Sie »warranty«."
 
-#: ../pybliographer.py:108 ../pybliographer.py:160
+#: pybliographer.py:111 pybliographer.py:163
+#, python-format
 msgid "%s: error: can't open file `%s'"
-msgstr "%s: Fehler: kann Datei `%s' nicht �ffnen"
+msgstr "%s: Fehler: kann Datei »%s« nicht öffnen"
 
-#: ../pybliographer.py:121
+#: pybliographer.py:124
+#, python-format
 msgid "For help, run %s and type `help' at the prompt"
-msgstr "F�r Hilfe %s starten und `help' auf der Kommandozeile eingeben"
+msgstr "Für Hilfe %s starten und »help« auf der Kommandozeile eingeben"
 
-#: ../pybliographer.py:130
+#: pybliographer.py:133
 msgid ""
 "Useful commands:\n"
 "\thelp     to get some help\n"
 "\tquit     to quit\n"
 msgstr ""
-"N�tzliche Befehle:\n"
-"\thelp     f�r Hilfe\n"
+"Nützliche Befehle:\n"
+"\thelp     für Hilfe\n"
 "\tquit     zum Beenden\n"
 
-#: ../scripts/pybcompact.py:29
+#. save history
+#: pybliographic.desktop.in.h:1
+msgid "Bibliography Manager"
+msgstr "Bibliographieverwaltung"
+
+#: pybliographic.desktop.in.h:2
+msgid "Manage bibliographic databases"
+msgstr "Bibliographische Datenbanken verwalten"
+
+#: pybliographic.desktop.in.h:3
+msgid "Pybliographic Bibliography Manager"
+msgstr "Pybliographic Bibliographie-Verwaltung"
+
+#: scripts/pybcheck.py:31
+msgid "usage: pybcheck <file | directory>..."
+msgstr "Aufruf: pybcheck <Datei | Verzeichnis>..."
+
+#: scripts/pybcheck.py:60
+#, python-format
+msgid "file `%s' is ok [%d entries]"
+msgstr "Datei »%s« ist in Ordnung [%d Einträge]"
+
+#: scripts/pybcompact.py:30
 msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
 msgstr "Benutzung: pybcompact <latex-Datei> <bibtex-Dateien...>"
 
-#: ../scripts/pybcompact.py:33
+#: scripts/pybcompact.py:34
+#, python-format
 msgid "pybcompact: error: %s\n"
 msgstr "pybcompact:-Fehler: %s\n"
 
-#: ../scripts/pybcompact.py:96
+#: scripts/pybcompact.py:97
 msgid "no entry"
 msgstr "kein Eintrag"
 
-#: ../scripts/pybcompact.py:141
+#: scripts/pybcompact.py:142 scripts/pybtext.py:240
+#, python-format
 msgid "can't find the following entries: %s"
-msgstr "die folgenden Eintr�ge k�nnen nicht gefunden werden: %s"
+msgstr "die folgenden Einträge können nicht gefunden werden: %s"
 
-#: ../scripts/pybconvert.py:28
+#: scripts/pybconvert.py:29
 msgid "usage: pybconvert <source>..<target> <input> [output]"
 msgstr "Benutzung: pybconvert <Quelle>..<Ziel> <Eingabe> [Ausgabe]"
 
-#: ../scripts/pybconvert.py:37
-msgid "pybconvert: bad conversion format"
-msgstr "pybconvert: falsches Konvertierungsformat"
+#: scripts/pybconvert.py:38
+msgid "pybconvert: error: bad conversion format"
+msgstr "pybconvert: Fehler: Falsches Ausgabeformat"
 
-#: ../scripts/pybformat.py:33
-msgid "usage: pybformat [bibtexfiles...]\n"
-msgstr "Benutzung: pybformat [bibtex-Dateien...]\n"
+#: scripts/pybformat.py:34
+msgid ""
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
+msgstr ""
+"Aufruf: pybformat [Optionen] <Datenbank...>\n"
+"\n"
+"    Optionen:\n"
+"      -o Datei, --output=Datei\t\tEinen Ausgabedateinamen angeben\n"
+"      -s Stil, --style=Stil\t\tEinen Bibliographiestil angeben\n"
+"      -f Format, --format=Format\tEin Ausgabeformat angeben\n"
+"      -H Kopf, --header=Kopf\tEine Kopfdatei angeben\n"
+"      -F Fuß, --footer=footer\tEine Fußdatei angeben\n"
+"      -l 'output', --list='output'\tAlle verfügbaren Ausgabeformate "
+"auflisten\n"
+"      -h, --help\t\t\tDiese Hilfe anzeigen\n"
+"      -v, --version\t\t\tVersionsinformationen anzeigen\n"
+"    "
 
-#: ../scripts/pybformat.py:37
+#: scripts/pybformat.py:49
+#, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: Fehler: %s\n"
 
-#: ../scripts/pybformat.py:43
+#: scripts/pybformat.py:55
+#, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: Warnung: %s\n"
 
-#: ../scripts/pybformat.py:140 ../scripts/pybtex.py:85
-msgid "can't find style `%s'"
-msgstr "Stil `%s' wurde nicht gefunden"
+#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
+#: scripts/pybtext.py:321
+#, python-format
+msgid "can't open `%s': %s"
+msgstr "»%s« konnte nicht geöffnet werden: %s"
 
-#: ../scripts/pybtex.py:33
+#: scripts/pybformat.py:97
+#, python-format
+msgid "unknown list `%s'"
+msgstr "Unbekannte Liste »%s«"
+
+#: scripts/pybformat.py:100
+#, python-format
+msgid "pybformat: available values for `%s':"
+msgstr "pybformat: Verfügbare Variablen für »%s«"
+
+#: scripts/pybformat.py:104
+#, python-format
+msgid "empty value list `%s'"
+msgstr "Leere Variablenliste »%s«"
+
+#: scripts/pybformat.py:132
+msgid "too few arguments"
+msgstr "Zu wenige Argumente"
+
+#: scripts/pybformat.py:139 scripts/pybtext.py:117
+#, python-format
+msgid "unknown output format `%s'"
+msgstr "Unbekanntes Ausgabeformat »%s«"
+
+#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
+#, python-format
+msgid "can't find style `%s'"
+msgstr "Stil »%s« wurde nicht gefunden"
+
+#: scripts/pybformat.py:155
+#, python-format
+msgid "pybformat: using style `%s', format `%s'\n"
+msgstr "pybformat: Benutzung von Stil »%s«, Format »%s«\n"
+
+#: scripts/pybformat.py:170
+#, python-format
+msgid "can't open header `%s': %s"
+msgstr "Kopf »%s« konnte nicht geöffnet werden: %s"
+
+#: scripts/pybformat.py:178
+#, python-format
+msgid "can't open database: %s"
+msgstr "Datenbank konnte nicht geöffnet werden: %s"
+
+#: scripts/pybformat.py:193
+#, python-format
+msgid "can't open footer `%s': %s"
+msgstr "Fuß »%s« konnte nicht geöffnet werden: %s"
+
+#: scripts/pybtex.py:34
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
 msgstr "Benutzung: pybtex <latex-Datei> [bibtex-Dateien...]"
 
-#: ../scripts/pybtex.py:37
+#: scripts/pybtex.py:38
+#, python-format
 msgid "pybtex: error: %s\n"
 msgstr "pybtex: Fehler: %s\n"
 
-#: ../scripts/pybtex.py:58
+#. warn the user that some entries were not found
+#: scripts/pybtex.py:59
 msgid "pybtex: warning: the following keys were not resolved"
-msgstr "pybtex: Warnung: die folgenden Schl�ssel wurden nicht aufgel�st"
+msgstr "pybtex: Warnung: die folgenden Schlüssel wurden nicht aufgelöst"
 
-#: ../scripts/pybtex.py:63
+#. If the LaTeX document declares no style...
+#: scripts/pybtex.py:64
 msgid "no style defined"
 msgstr "kein Stil definiert"
 
-#: ../glade/format-intl.c:8
-msgid "Format entries"
-msgstr "Eintr�ge formatieren"
-
-#: ../glade/format-intl.c:9
-msgid "Bibliography style:"
-msgstr "Bibliographiestil:"
-
-#: ../glade/format-intl.c:10
-msgid "Output format:"
-msgstr "Ausgabeformat:"
-
-#: ../glade/format-intl.c:11
-#, fuzzy
-msgid "Output file:\n"
-msgstr "Ausgabedatei:"
-
-#: ../glade/format-intl.c:13 ../glade/format-intl.c:14
-#: ../glade/medline-intl.c:12 ../glade/medline-intl.c:17
-#: ../glade/medline-intl.c:22 ../glade/medline-intl.c:23
-#: ../glade/medline-intl.c:24 ../glade/medline-intl.c:25
-#: ../glade/medline-intl.c:26 ../glade/medline-intl.c:27
-#: ../glade/medline-intl.c:28 ../glade/medline-intl.c:29
-#: ../glade/medline-intl.c:31 ../glade/medline-intl.c:33
-#: ../glade/search-intl.c:13 ../glade/search-intl.c:14
-#: ../glade/search-intl.c:17
-msgid "*"
+#: scripts/pybtext.py:41
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
 msgstr ""
+"Aufruf: pybtext [-o Ausgabedatei] [-s Stil] <Textdatei> <Bib-Dateien...>"
 
-#: ../glade/medline-intl.c:8
-msgid "Medline Query"
-msgstr ""
+#: scripts/pybtext.py:45
+#, python-format
+msgid "pybtext: error: %s\n"
+msgstr "pybtext: Fehler: %s\n"
 
-#: ../glade/medline-intl.c:9
-msgid "Enter your Medline Query"
-msgstr ""
+#: scripts/pybtext.py:50
+#, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "pybtext: Warnung: %s\n"
 
-#: ../glade/medline-intl.c:10
-msgid ""
-"Search \n"
-"PubMed for:"
-msgstr ""
+#: scripts/pybtext.py:124
+#, python-format
+msgid "File already exists: `%s'"
+msgstr "Datei ist bereits vorhanden: »%s«"
 
-#: ../glade/medline-intl.c:13
-msgid ""
-"Maximum number\n"
-"of results:"
-msgstr ""
+#: scripts/pybtext.py:127
+#, python-format
+msgid "A file with the same name already exists: `%s'"
+msgstr "Eine Datei mit gleichem Namen ist bereits vorhanden: »%s«"
 
-#: ../glade/medline-intl.c:15
-msgid ""
-"Starting listing at\n"
-"result number:"
-msgstr ""
+#: scripts/pybtext.py:178
+msgid "no citation found"
+msgstr "kein Zitat gefunden"
 
-#: ../glade/medline-intl.c:18
-msgid ""
-"Only items \n"
-"with abstracts"
-msgstr ""
+#: scripts/pybtext.py:193
+#, python-format
+msgid "pybtext: using style `%s', format `%s'\n"
+msgstr "pybtext: Benutzung von Stil »%s«, Format »%s«\n"
 
-#: ../glade/medline-intl.c:20
-msgid ""
-"Only items \n"
-"ahead of print"
-msgstr ""
+#: scripts/pybtext.py:316
+#, python-format
+msgid "can't create `%s'"
+msgstr "»%s« konnte nicht erstellt werden"
 
-#: ../glade/medline-intl.c:30
-msgid "From:"
-msgstr ""
+#: scripts/pybtext.py:342
+#, python-format
+msgid "can't remove `%s'"
+msgstr "»%s« konnte nicht gelöscht werden"
 
-#: ../glade/medline-intl.c:32
-msgid "To:"
-msgstr ""
-
-#: ../glade/medline-intl.c:34
-msgid ""
-"Use the format YYYY/MM/DD\n"
-"Month and day are optional."
-msgstr ""
-
-#: ../glade/medline-intl.c:36
-msgid "Limited to:"
-msgstr ""
-
-#: ../glade/pyblio-intl.c:8
-#, fuzzy
-msgid "Pybliographer"
-msgstr "Pybliographer-Homepage"
-
-#: ../glade/pyblio-intl.c:9
-msgid "_New"
-msgstr "_Neu"
-
-#: ../glade/pyblio-intl.c:10
-#, fuzzy
-msgid "Merge With..."
-msgstr "_Zusammenf�hren mit..."
-
-#: ../glade/pyblio-intl.c:11
-msgid "Medline Query..."
-msgstr ""
-
-#: ../glade/pyblio-intl.c:12
-msgid "Previous Documents"
-msgstr "Bisherige Dokumente"
-
-#: ../glade/pyblio-intl.c:13
-msgid "_Add..."
-msgstr "_Hinzuf�gen..."
-
-#: ../glade/pyblio-intl.c:14
-msgid "_Edit..."
-msgstr "_Bearbeiten..."
-
-#: ../glade/pyblio-intl.c:15
-#, fuzzy
-msgid "_Delete..."
-msgstr "L�schen"
-
-#: ../glade/pyblio-intl.c:16
-msgid "S_ort..."
-msgstr "_Sortieren..."
-
-#: ../glade/pyblio-intl.c:17 ../glade/pyblio-intl.c:25
-msgid "Cite"
-msgstr "Zitat"
-
-#: ../glade/pyblio-intl.c:18
-#, fuzzy
-msgid "Cite..."
-msgstr "Zitat"
-
-#: ../glade/pyblio-intl.c:19
-#, fuzzy
-msgid "Format..."
-msgstr "_Formatieren..."
-
-#: ../glade/pyblio-intl.c:20
-#, fuzzy
-msgid "Settings"
-msgstr "_Einstellungen"
-
-#: ../glade/pyblio-intl.c:21
-#, fuzzy
-msgid "Fields..."
-msgstr "_Felder..."
-
-#: ../glade/pyblio-intl.c:22
-#, fuzzy
-msgid "Entries..."
-msgstr "_Eintr�ge..."
-
-#: ../glade/pyblio-intl.c:23
-#, fuzzy
-msgid "Open File"
-msgstr "Datei �ffnen"
-
-#: ../glade/pyblio-intl.c:24
-#, fuzzy
-msgid "Save File"
-msgstr "Datei"
-
-#: ../glade/search-intl.c:8 ../glade/search-intl.c:9
-msgid "Search"
-msgstr "Suchen"
-
-#: ../glade/search-intl.c:10
-msgid "Close"
-msgstr "Schlie�en"
-
-#: ../glade/search-intl.c:12
-msgid "Pattern"
-msgstr "Muster"
-
-#: ../glade/search-intl.c:15
-msgid "Simple Search"
-msgstr "Einfache Suche"
-
-#: ../glade/search-intl.c:16
-msgid "Query"
-msgstr ""
-
-#: ../glade/search-intl.c:18
-msgid "Expert Search"
-msgstr "Expertensuche"
-
-#: ../glade/sort-intl.c:8
-msgid "Select sort criterions"
-msgstr "Auswahl der Sortierkriterien"
-
-#: ../glade/sort-intl.c:9
-msgid "Set as default"
-msgstr ""
-
-#, fuzzy
-#~ msgid "Search Command:"
-#~ msgstr "Suchbefehl:"
-
-#~ msgid "Sort direction"
-#~ msgstr "Sortierrichtung"
-
-#~ msgid "Sort criterions"
-#~ msgstr "Sortierkriterien"
-
-#~ msgid "Reorder"
-#~ msgstr "Neu ordnen"
-
-#~ msgid "Groups the active fields on the top of the list"
-#~ msgstr "Gruppiert die aktiven Felder am Anfang der Liste"
-
-#~ msgid "Unselect all"
-#~ msgstr "Alle abw�hlen"
-
-#~ msgid "Removes all the sort criterions"
-#~ msgstr "Entfernt alle Sortierkriterien"
-
-#~ msgid "_Previous Documents"
-#~ msgstr "_Bisherige Dokumente"
-
-#~ msgid "About..."
-#~ msgstr "�ber..."
-
-#~ msgid "Submit a Bug Report"
-#~ msgstr "Fehlerbericht senden"
-
-#~ msgid "_Delete"
-#~ msgstr "_L�schen"
-
-#~ msgid "_Cite"
-#~ msgstr "_Zitat"
-
-#~ msgid "_File"
-#~ msgstr "_Datei"
-
-#~ msgid "_Edit"
-#~ msgstr "_Bearbeiten"
-
-#~ msgid "_Help"
-#~ msgstr "_Hilfe"
-
-#~ msgid "Open"
-#~ msgstr "_�ffnen"
-
-#~ msgid "Save"
-#~ msgstr "Speichern"
-
-#~ msgid "Find"
-#~ msgstr "Finden"
-
-#~ msgid "Select style"
-#~ msgstr "Stil ausw�hlen"
-
-#~ msgid "Select output file"
-#~ msgstr "Ausgabedatei ausw�hlen"
-
-#~ msgid ""
-#~ "Item `%s':\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Element `%s' :\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "True"
-#~ msgstr "Wahr"
-
-#~ msgid "False"
-#~ msgstr "Falsch"
-
-#~ msgid "Value"
-#~ msgstr "Wert"
-
-#~ msgid "Fields configuration"
-#~ msgstr "Felder-Konfiguration"
-
-#~ msgid "Name:"
-#~ msgstr "Name:"
-
-#~ msgid "Type:"
-#~ msgstr "Typ:"
+#: scripts/pybtext.py:344
+msgid "Done"
+msgstr "Fertig"
