@@ -20,6 +20,7 @@
 
 LANGUAGES = 					\
 	az 					\
+	cs 					\
 	da 					\
 	de 					\
 	fi 					\
