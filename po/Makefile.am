@@ -20,13 +20,17 @@
 
 LANGUAGES = 		\
 	az 		\
+	ca		\
 	cs 		\
 	da 		\
 	de 		\
 	el		\
+	en_CA		\
+	en_GB		\
 	es		\
 	fi 		\
 	fr 		\
+	hr		\
 	hu 		\
 	it 		\
 	ja 		\
@@ -40,7 +44,9 @@ LANGUAGES = 		\
 	sr 		\
 	sv 		\
 	tr 		\
-	uk
+	uk		\
+	zh_CN
+
 
 EXTRA_DIST = $(LANGUAGES:%=%.po)
 
