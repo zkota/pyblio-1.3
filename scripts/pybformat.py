@@ -158,7 +158,6 @@ if header:
     except IOError, err:
         error (_("can't open header `%s': %s") % (header, str (err).decode (charset)))
 
-
 # write the data
 for file in files:
 
@@ -180,7 +179,6 @@ if footer:
                 outfile.write (line)
         h.close ()
     except IOError, err:
-	sys.stderr.write ("%s\n" % err)
         error (_("can't open footer `%s': %s") % (footer, str (err).decode (charset)))
 
         

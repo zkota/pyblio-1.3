@@ -59,7 +59,6 @@ def list_entries (file):
     except IOError, err:
         error ("`%s': %s" % (auxfile, str (err).decode (charset)))
 
-
     citations = []
 
     # parse the whole file
