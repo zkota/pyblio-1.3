@@ -47,6 +47,8 @@ app_DATA = pybliographic.desktop
 bin_SCRIPTS = pybliographer
 
 EXTRA_DIST = 	setup-check.py			\
+		ChangeLog-1.2			\
+		ChangeLog-1.0			\
 		pybrc.py 			\
 	 	pybliographer.py 		\
 		etc/installer.in		\

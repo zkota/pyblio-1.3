@@ -38,6 +38,8 @@ LANGUAGES = 					\
 	tr 					\
 	uk
 
+EXTRA_DIST = $(LANGUAGES:%=%.po)
+
 MO = $(LANGUAGES:%=%.mo)
 
 localedir = $(datadir)/locale

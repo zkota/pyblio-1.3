@@ -1,6 +1,14 @@
 -*- text -*-
 
-New in 1.1.93 - 
+New in 1.2.0 - 2003-11-13
+
+        * New improved Fields and Entries configuration dialog
+	* Localization of the GUI
+        * Clickable URLs
+	* Misc. bug fixes
+
+
+New in 1.1.93 - 2003-10-05
 
         * Fixed data loss when switching between native and nromal
           edit mode.
