@@ -1,20 +1,19 @@
 # English/GB translation of pybliographer.
-# Copyright (C) 2004 THE pybliographer'S COPYRIGHT HOLDER
+# Copyright (C) 2004 The GNOME Foundation
 # This file is distributed under the same license as the pybliographer package.
 # David Lodge <dave@cirt.net>, 2004.
-# 
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-27 22:00+0100\n"
-"PO-Revision-Date: 2004-07-27 22:02+0100\n"
+"POT-Creation-Date: 2004-07-31 12:58+0100\n"
+"PO-Revision-Date: 2004-07-31 12:58+0100\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English/GB <en@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
 #. This file is part of pybliographer
@@ -380,7 +379,7 @@ msgstr "%s:%d: key `%s' already defined"
 #. AU auteurs *
 #. TI titre
 #. LA langue *
-#. MH mots cl�s *
+#. MH mots clés *
 #. PT *  type : JOURNAL ARTICLE, REVIEW, REVIEW, TUTORIAL,CLINICAL TRIAL,
 #. RANDOMIZED CONTROLLED TRIAL, LETTER, EDITORIAL, MULTICENTER STUDY,
 #. NEWS, HISTORICAL ARTICLE
@@ -390,16 +389,16 @@ msgstr "%s:%d: key `%s' already defined"
 #. TA titre de la revue
 #. PG
 #. SB
-#. CY pays d'�dition ?
+#. CY pays d'édition ?
 #. IP
 #. VI
 #. JC
-#. AA semble �tre toujours Author ou AUTHOR
+#. AA semble être toujours Author ou AUTHOR
 #. EM date de?? en yyyymm
 #. AB
 #. AD
 #. PMID
-#. SO  r�f�rence compl�te
+#. SO  référence complète
 #. RN semble indexer des substances chimiques
 #. TT titre dans la langue d'origine
 #. 4099 URL vers l'article
@@ -578,7 +577,7 @@ msgstr "%s:%d: key `%s' already defined"
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
 #. Put the complete table in a scrolled window
-#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:411
+#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -961,7 +960,7 @@ msgstr "[ Drop an Entry here ]"
 #. ------------------------------------------------------------
 #. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:230
+#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Entry type"
@@ -985,11 +984,11 @@ msgstr "Next"
 
 #. Notebook
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:445
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:451
 msgid "Mandatory"
 msgstr "Mandatory"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:452
 msgid "Optional"
 msgstr "Optional"
 
@@ -1140,12 +1139,12 @@ msgstr "Date"
 
 #. ------------------------------------------------------------
 #. Page 1
-#: Pyblio/GnomeUI/Fields.py:118 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Name"
 
-#: Pyblio/GnomeUI/Fields.py:121 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Type"
@@ -1153,19 +1152,19 @@ msgstr "Type"
 #. print self.entries.keys()
 #. ------------------------------------------------------------
 #. Page 3
-#: Pyblio/GnomeUI/Fields.py:294
+#: Pyblio/GnomeUI/Fields.py:300
 msgid "Available"
 msgstr "Available"
 
-#: Pyblio/GnomeUI/Fields.py:304
+#: Pyblio/GnomeUI/Fields.py:310
 msgid "Associated"
 msgstr "Associated"
 
-#: Pyblio/GnomeUI/Fields.py:315
+#: Pyblio/GnomeUI/Fields.py:321
 msgid "Please, select an entry type from previous page."
 msgstr "Please select an entry type from previous page."
 
-#: Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Fields.py:332
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Fields associated with <b>%s</b> entry type"
@@ -2404,7 +2403,7 @@ msgstr "pybcompact: error: %s\n"
 #. we have to enter an additional .aux file
 #. ensure citation keys unicity
 #. is there something to do ?
-#: scripts/pybcompact.py:98
+#: scripts/pybcompact.py:97
 msgid "no entry"
 msgstr "no entry"
 
@@ -2423,7 +2422,7 @@ msgstr "no entry"
 #. if we found some entries in the current database...
 #. is it finished ?
 #. check if we were able to solve all the citations
-#: scripts/pybcompact.py:143 scripts/pybtext.py:240
+#: scripts/pybcompact.py:142 scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "can't find the following entries: %s"
@@ -2480,53 +2479,73 @@ msgstr "pybconvert: error: bad conversion format"
 #.
 #: scripts/pybformat.py:34
 msgid ""
-"usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
-"footer] <database...>"
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
 msgstr ""
-"usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
-"footer] <database...>"
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
 
-#: scripts/pybformat.py:38
+#: scripts/pybformat.py:49
 #, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: error: %s\n"
 
-#: scripts/pybformat.py:44
+#: scripts/pybformat.py:55
 #, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: warning: %s\n"
 
 #. creating an ordered list of database keys to pass through
 #. creating the reference list
-#: scripts/pybformat.py:79 scripts/pybtext.py:252 scripts/pybtext.py:278
+#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
 #: scripts/pybtext.py:321
 #, python-format
 msgid "can't open `%s': %s"
 msgstr "can't open `%s': %s"
 
-#: scripts/pybformat.py:86
+#: scripts/pybformat.py:97
 #, python-format
 msgid "unknown list `%s'"
 msgstr "unknown list `%s'"
 
-#: scripts/pybformat.py:89
+#: scripts/pybformat.py:100
 #, python-format
 msgid "pybformat: available values for `%s':"
 msgstr "pybformat: available values for `%s':"
 
-#: scripts/pybformat.py:93
+#: scripts/pybformat.py:104
 #, python-format
 msgid "empty value list `%s'"
 msgstr "empty value list `%s'"
 
 #. test input arguments
 #. user gave wrong arguments...
-#: scripts/pybformat.py:121
+#: scripts/pybformat.py:132
 msgid "too few arguments"
 msgstr "too few arguments"
 
 #. get the specified style and the output
-#: scripts/pybformat.py:128 scripts/pybtext.py:117
+#: scripts/pybformat.py:139 scripts/pybtext.py:117
 #, python-format
 msgid "unknown output format `%s'"
 msgstr "unknown output format `%s'"
@@ -2536,30 +2555,30 @@ msgstr "unknown output format `%s'"
 #. --------------------------------------------------
 #. Create a formatter that writes in the .bbl file
 #. Search style in local path and standard installation
-#: scripts/pybformat.py:141 scripts/pybtex.py:86 scripts/pybtext.py:94
+#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
 #, python-format
 msgid "can't find style `%s'"
 msgstr "can't find style `%s'"
 
-#: scripts/pybformat.py:144
+#: scripts/pybformat.py:155
 #, python-format
 msgid "pybformat: using style `%s', format `%s'\n"
 msgstr "pybformat: using style `%s', format `%s'\n"
 
 #. first, write the header
-#: scripts/pybformat.py:159
+#: scripts/pybformat.py:170
 #, python-format
 msgid "can't open header `%s': %s"
 msgstr "can't open header `%s': %s"
 
 #. write the data
-#: scripts/pybformat.py:168
+#: scripts/pybformat.py:178
 #, python-format
 msgid "can't open database: %s"
 msgstr "can't open database: %s"
 
 #. last, write the footer
-#: scripts/pybformat.py:184
+#: scripts/pybformat.py:193
 #, python-format
 msgid "can't open footer `%s': %s"
 msgstr "can't open footer `%s': %s"
@@ -2655,7 +2674,7 @@ msgstr "no style defined"
 #.
 #. This script processes a text file with citations and creates a
 #. reference list according to the given style.
-#. Created by Zoltán Kóta. March, 2004.
+#. Created by ZoltÃ¡n KÃ³ta. March, 2004.
 #: scripts/pybtext.py:41
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
 msgstr "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
@@ -2715,6 +2734,13 @@ msgstr "can't remove `%s'"
 #: scripts/pybtext.py:344
 msgid "Done"
 msgstr "Done"
+
+#~ msgid ""
+#~ "usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
+#~ "footer] <database...>"
+#~ msgstr ""
+#~ "usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
+#~ "footer] <database...>"
 
 #~ msgid "usage: pybformat [bibtexfiles...]\n"
 #~ msgstr "usage: pybformat [bibtexfiles...]\n"
