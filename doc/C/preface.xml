@@ -78,7 +78,8 @@
       <para>
         You can find a complete list of bugs fixed and features added
         in the <filename>News</filename> and <filename>ChangeLog
-        </filename> files supplied with the package.
+        </filename> files supplied with the package. See the source tarball or 
+        the default doc directory of your distribution (e.g. /usr/share/doc).
       </para>
 
     </sect1>

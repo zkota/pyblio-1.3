@@ -11,7 +11,7 @@
   <para>To execute a script written for &pyb;, simply run </para>
 
   <screen>
-    <prompt>bash$ </prompt><command>pybliographer </command><replaceable>myscript.py</replaceable>
+    <prompt>bash$ </prompt><command>pybliographer [--quiet] </command><replaceable>myscript.py</replaceable>
   </screen>
 
   <para>You can alternatively start your script by 
@@ -98,9 +98,9 @@
 	<prompt>bash$ </prompt><command>pybformat</command> [options] <filename>database...</filename>
       </screen>
 
-      <para>This    command    will     use    the    format    called
-	<emphasis>alpha</emphasis>   to  create   a   bibliography  in
-	<emphasis>LaTeX</emphasis>.  Several  options are available to
+      <para>This command without options will use the style called 
+	<emphasis>alpha</emphasis> to create a bibliography in 
+	<emphasis>Text</emphasis> format. Several options are available to 
 	create these documents:</para>
 
       <itemizedlist>
@@ -112,7 +112,7 @@
 	</listitem>
 	<listitem>
 	  <para><option>--format=... or -f ...</option>: specify an
-	  output format (like HTML, LaTeX,...). Default is
+	  output format (HTML, LaTeX, Raw, Text). Default is
 	  Text.</para>
 	</listitem>
 	<listitem>
@@ -134,6 +134,25 @@
       </itemizedlist>
 
     </sect2>
+
+    <sect2 id="script-scripting-existing-pybtex">
+      <title>pybtex</title>
+      
+      <abstract>
+	<para>This tool searches for the citations in a LaTeX 
+	document and generates a LaTeX bibliography file.</para>
+      </abstract>
+      
+      <para>This tool reads a LaTeX <filename>.aux</filename> file, 
+      and extracting the corresponding entries from the specified 
+      BibTeX databases creates a LaTeX bbl file.</para>
+
+      <para>The form of the command is</para>
+      <screen>
+	<prompt>bash$ </prompt><command>pybtex</command> <filename>latexfile</filename> [<filename>bibtexfiles</filename>...]
+      </screen>
+    </sect2>
+
   </sect1>
 
   <sect1 id="script-scripting-writing">

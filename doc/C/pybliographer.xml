@@ -7,8 +7,8 @@
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
 <!ENTITY appversion "1.2.2">
-<!ENTITY manrevision "2.1">
-<!ENTITY date "January 2004">
+<!ENTITY manrevision "2.2">
+<!ENTITY date "February 2004">
 <!ENTITY app "Pybliographer">
 
 <!ENTITY preface SYSTEM "preface.xml">
@@ -82,6 +82,13 @@
       <revision> 
 		<revnumber>&app; Manual V&manrevision;</revnumber> 
 		<date>&date;</date> 
+		<revdescription> 
+	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
+	  	</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>&app; Manual V2.1</revnumber> 
+		<date>January 2004</date>
 		<revdescription> 
 	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
 	  	</revdescription> 

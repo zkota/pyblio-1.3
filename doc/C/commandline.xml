@@ -19,4 +19,43 @@
   <para>To get some help about how to use &app; in this mode, type 
   <command>help</command> at the &pyb; prompt.</para>
 
+  <para>The next example shows how to open a database and make a simple 
+  search in it. See the following commands and the output:</para>
+  <screen>
+  >> db = bibopen ("database.bib")
+  >> iterator = search (db, 'author = Mantsch')
+  >> ls (iterator)
+  The Use and Misuse of FTIR Spectro  Jackson, Michael; Mantsc  [JM95            ]
+  Phospholipid phase transitions in   Mantsch, H. H.; McElhane  [MM01            ]
+  >> 
+  </screen>
+  <para>To see the complete entries listed by the command <command>ls (iterator)</command>:
+  </para>
+  <screen>
+  >> more (iterator)
+  Article [JM95]
+  ----------------------------------------------------------------------
+    Author         Jackson, Michael; Mantsch, Henry H.
+    Title          The Use and Misuse of FTIR Spectroscopy in the
+                   Determination of Protein Structure
+    Journal        Critical Reviews in Biochemistry and Molecular Biology
+    Date           1995
+    Volume         30
+    Number         2
+    Pages          95-120
+    keywords       infrared spectroscopy; proteins; secondary structure;
+                   quantitation
+    comments       Review
+ 
+  Article [MM01]
+  ----------------------------------------------------------------------
+    Author         Mantsch, H. H.; McElhaney, R. N.
+    Title          Phospholipid phase transitions in model and biological
+                   membranes as studied by infrared spectroscopy
+    Journal        Chemistry and Physics of Lipids
+    Date           1991
+    Volume         57
+  --More--
+  </screen>
+
 </chapter>
