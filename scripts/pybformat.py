@@ -31,7 +31,18 @@ import locale
 charset = locale.getlocale () [1] or 'ascii'
 
 def usage ():
-    print _("usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F footer] <database...>").encode (charset)
+    print _("""usage: pybformat [options] <database...>
+
+    options:
+      -o file, --output=file		specify an output filename
+      -s style, --style=style		specify a bibliography style
+      -f format, --format=format	specify an output format
+      -H header, --header=header	defines a header file
+      -F footer, --footer=footer	defines a footer file
+      -l 'output', --list='output'	lists the available output formats
+      -h, --help			show this help message
+      -v, --version			show this help message
+    """).encode (charset)
     return
 
 def error (text, exit = 1):

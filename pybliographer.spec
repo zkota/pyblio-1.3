@@ -4,8 +4,9 @@ Version: 1.2.4
 Release: 1.rhfdr_core_1
 License: GPL
 Group: Applications/Publishing
-Source: http://dl.sf.net/pybliographer/pybliographer-%{version}.tar.gz
+Source: http://dl.sf.net/pybliographer/pybliographer-1.2.4.tar.gz
 Url: http://www.pybliographer.org/
+Packager: Zoltan Kota <z.kota at gmx.net>
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 
@@ -19,6 +20,7 @@ BuildRequires: gnome-python2-gconf >= 2.0.0
 BuildRequires: python-bibtex >= 1.1.93.1
 BuildRequires: gettext
 BuildRequires: scrollkeeper >= 0.1.4
+BuildRequires: intltool
 
 Requires: python >= 2.2
 Requires: pygtk2 >= 2.0.0
@@ -53,7 +55,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
-/bin/rm -rf $RPM_BUILD_ROOT/var/scrollkeeper
+%__rm -rf $RPM_BUILD_ROOT%{_localstatedir}/scrollkeeper
 
 
 %{find_lang} %{name}
@@ -70,7 +72,7 @@ scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING* ChangeLog* INSTALL NEWS README TODO
+%doc AUTHORS COPYING* ChangeLog* NEWS README TODO
 %{_bindir}/*
 %{_datadir}/applications/pybliographic.desktop
 %{_datadir}/gnome/help/pybliographer
@@ -90,3 +92,41 @@ scrollkeeper-update
 %{_datadir}/pybliographer/pybtext.py
 %config %{_datadir}/pybliographer/pybrc.py
 %ghost %{_datadir}/pybliographer/pybrc.pyc
+
+%changelog
+* Fri Jul 23 2004 Zoltan Kota <z.kota at gmx.net> - 1.2.4-1.rhfdr_core_1
+- new version
+- using macros for rm and localstatedir
+- add intltool in buildrequires
+
+* Mon Mar 22 2004 Zoltan Kota <z.kota at gmx.net> - 1.2.3-1.rhfdr_core_1
+- new version
+- remove desktop file fix and perl from buildrequires
+- changing pybrc.pyc to ghost in file list
+
+* Wed Feb 18 2004 Zoltan Kota <z.kota at gmx.net> 1.2.2-4.rhfdr_core_1
+- fix requires and buildrequires
+- change rpm group category
+- some rpm cosmetics
+
+* Tue Jan 20 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-3.rhfdr_core_1
+- fixing requires version numbers
+
+* Mon Jan 12 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-2.rhfdr_core_1
+- fixing Categories in pybliographic.desktop
+
+* Thu Jan 8 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.2-1.rhfdr_core_1
+- new version
+- added omf file to the filelist
+- added 'post' and 'pustun' (scrollkeeper-update)
+- removed docbook-utils from BuildReq
+- added scrollkeeper to PreReq
+- using 'configure' and 'makeinstall' macros
+- added rm -rf to 'install' section to remove temporary scrollkeeper files
+- using macros in filelist
+
+* Tue Jan 6 2004 Zoltán Kóta <z.kota at gmx.net> 1.2.1-2.rhfdr_core_1
+- Fix buildrequires and requires
+
+* Wed Nov 21 2003 Zoltán Kóta <z.kota at gmx.net>
+- initial RPM package for Redhat Fedora Core 1
