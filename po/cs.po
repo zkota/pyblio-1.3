@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-20 04:33+0100\n"
-"PO-Revision-Date: 2004-02-20 14:49+0100\n"
+"POT-Creation-Date: 2004-03-01 04:31+0100\n"
+"PO-Revision-Date: 2004-03-01 15:29+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -344,87 +344,87 @@ msgstr "Příjmení, křestní jméno"
 msgid "Text"
 msgstr "Text"
 
-#: Pyblio/GnomeUI/Editor.py:322
+#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:757
+msgid "Error in native string parsing"
+msgstr "Chyba ve zpracovávání nativního řetězce"
+
+#: Pyblio/GnomeUI/Editor.py:315
 msgid "Day"
 msgstr "Den"
 
-#: Pyblio/GnomeUI/Editor.py:331
+#: Pyblio/GnomeUI/Editor.py:324
 msgid "Month"
 msgstr "Měsíc"
 
-#: Pyblio/GnomeUI/Editor.py:340
+#: Pyblio/GnomeUI/Editor.py:333
 msgid "Year"
 msgstr "Rok"
 
-#: Pyblio/GnomeUI/Editor.py:365
+#: Pyblio/GnomeUI/Editor.py:358
 msgid "Invalid day field in date"
 msgstr "Neplatné pole dne v datu"
 
-#: Pyblio/GnomeUI/Editor.py:373
+#: Pyblio/GnomeUI/Editor.py:366
 msgid "Invalid month field in date"
 msgstr "Neplatné pole měsíce v datu"
 
-#: Pyblio/GnomeUI/Editor.py:381
+#: Pyblio/GnomeUI/Editor.py:374
 msgid "Invalid year field in date"
 msgstr "Neplatné pole roku v datu"
 
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:429 Pyblio/GnomeUI/Search.py:86
+#: Pyblio/GnomeUI/Editor.py:422 Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Odstranit"
 
-#: Pyblio/GnomeUI/Editor.py:440 Pyblio/GnomeUI/Editor.py:453
-#: Pyblio/GnomeUI/Editor.py:456
+#: Pyblio/GnomeUI/Editor.py:433 Pyblio/GnomeUI/Editor.py:446
+#: Pyblio/GnomeUI/Editor.py:449
 msgid "[ Drop an Entry here ]"
 msgstr "[ Pusťte sem položku ]"
 
-#: Pyblio/GnomeUI/Editor.py:528 Pyblio/GnomeUI/Fields.py:231
+#: Pyblio/GnomeUI/Editor.py:521 Pyblio/GnomeUI/Fields.py:231
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Typ položky"
 
-#: Pyblio/GnomeUI/Editor.py:530
+#: Pyblio/GnomeUI/Editor.py:523
 msgid "Key"
 msgstr "Klíč"
 
-#: Pyblio/GnomeUI/Editor.py:571
+#: Pyblio/GnomeUI/Editor.py:564
 msgid "Create Field"
 msgstr "Vytvořit pole"
 
-#: Pyblio/GnomeUI/Editor.py:626 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:446
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: Pyblio/GnomeUI/Editor.py:626 Pyblio/GnomeUI/Fields.py:447
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:447
 msgid "Optional"
 msgstr "Nepovinné"
 
-#: Pyblio/GnomeUI/Editor.py:626
+#: Pyblio/GnomeUI/Editor.py:619
 msgid "Extra"
 msgstr "Přídavné"
 
-#: Pyblio/GnomeUI/Editor.py:695
+#: Pyblio/GnomeUI/Editor.py:688
 msgid "Invalid key format"
 msgstr "Neplatný formát klíček"
 
-#: Pyblio/GnomeUI/Editor.py:703
+#: Pyblio/GnomeUI/Editor.py:696
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Klíč `%s' již existuje"
 
-#: Pyblio/GnomeUI/Editor.py:764
-msgid "Error in native string parsing"
-msgstr "Chyba ve zpracovávání nativního řetězce"
-
-#: Pyblio/GnomeUI/Editor.py:777
+#: Pyblio/GnomeUI/Editor.py:770
 msgid "Edit entry"
 msgstr "Upravit položku"
 
-#: Pyblio/GnomeUI/Editor.py:791 Pyblio/GnomeUI/Editor.py:847
+#: Pyblio/GnomeUI/Editor.py:784 Pyblio/GnomeUI/Editor.py:840
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:869
+#: Pyblio/GnomeUI/Editor.py:862
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
 
@@ -522,6 +522,11 @@ msgstr "[Hodnota klíče]"
 #: Pyblio/GnomeUI/Utils.py:196
 msgid "The following errors occured:\n"
 msgstr "Došlo k následujícím chybám:\n"
+
+#: Pyblio/GnomeUI/__init__.py:46
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "Toto je Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
 
 #: Pyblio/LyX.py:39
 #, python-format
