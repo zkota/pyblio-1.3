@@ -21,11 +21,14 @@ Autoload.preregister ('format', 'ISIFile', 'Pyblio.Format.isifile', '.*\.isi')
 
 Autoload.preregister ('style', 'Generic', 'Pyblio.Style.Generic')
 Autoload.preregister ('style', 'apa4e',   'Pyblio.Style.apa4e')
+Autoload.preregister ('style', 'abbrv',   'Pyblio.Style.abbrv')
 
-Autoload.preregister ('output', 'Text',  'Pyblio.Output.text')
-Autoload.preregister ('output', 'Raw',   'Pyblio.Output.raw')
-Autoload.preregister ('output', 'HTML',  'Pyblio.Output.html')
-Autoload.preregister ('output', 'LaTeX', 'Pyblio.Output.LaTeX')
+Autoload.preregister ('output', 'Text',    'Pyblio.Output.text')
+Autoload.preregister ('output', 'Raw',     'Pyblio.Output.raw')
+Autoload.preregister ('output', 'HTML',    'Pyblio.Output.html')
+Autoload.preregister ('output', 'LaTeX',   'Pyblio.Output.LaTeX')
+Autoload.preregister ('output', 'Textnum', 'Pyblio.Output.textnum')
+Autoload.preregister ('output', 'Textau',  'Pyblio.Output.textau')
 
 # define key formats
 

@@ -1,0 +1,31 @@
+This is the title here
+
+This paper is demonstrating the significance of strong, reciprocal protein 
+lipid interactions in native thylakoids [DKP+99].
+The techniques used here complement each other because 
+electron paramagnetic resonance (EPR) detects only the spin 
+label in these experiments and has a time window that is optimal 
+for lipid chain dynamics, whereas Fourier transform infrared 
+(FTIR) detects all lipid and protein vibrations simultaneously on 
+a fast time scale [MM01]. FTIR spectroscopy is widely used to study 
+protein secondary structure [JM95,AKM95] and lipid chain vibrations 
+[MM01]. Motional coupling between large, relatively immobile 
+membrane proteins and mobile fluid lipids results in motionally 
+restricted protein-solvating [M99] first-shell lipids [M01,M01a,MH98]. This 
+appears as 
+immobile component in EPR spectra of spin-labeled lipid 
+analogues as demonstrated in numerous membrane systems, 
+including thylakoids. By quantitating these lipids, we have 
+estimated changes in the size of protein assemblies of major 
+thylakoid membrane protein complexes. The partitioning of 
+2,2,6,6,-tetramethylpiperidine-1-oxyl (TEMPO) between membranous 
+and aqueous environments depends on lipid packing 
+and fluidity in the lipid bilayer and can be measured with EPR 
+[Smirnov95]. A drop in the membranous TEMPO signal (in EPR) and 
+a simultaneous increase in the CH2 vibration frequency (in 
+FTIR) diagnosed a lipid transition that was interpreted as the 
+formation of a nonbilayer phase. The temperature of this 
+transition was found to vary during greening. The present study 
+provides data on the time course of the thermal behavior of, and 
+on the protein-lipid rearrangements in the thylakoid membrane 
+during development.

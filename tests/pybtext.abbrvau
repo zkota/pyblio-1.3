@@ -1,0 +1,82 @@
+This is the title here
+
+This paper is demonstrating the significance of strong, reciprocal protein 
+lipid interactions in native thylakoids [Droppa et al., 1999].
+The techniques used here complement each other because 
+electron paramagnetic resonance (EPR) detects only the spin 
+label in these experiments and has a time window that is optimal 
+for lipid chain dynamics, whereas Fourier transform infrared 
+(FTIR) detects all lipid and protein vibrations simultaneously on 
+a fast time scale [Mantsch and McElhaney, 1991]. FTIR spectroscopy is widely used to study 
+protein secondary structure [Jackson and Mantsch, 1995; Axelsen et al., 1995] and lipid chain vibrations 
+[Mantsch and McElhaney, 1991]. Motional coupling between large, relatively immobile 
+membrane proteins and mobile fluid lipids results in motionally 
+restricted protein-solvating [Marsh, 1999] first-shell lipids [Marsh, 2001a; Marsh, 2001b; Marsh and Horváth, 1998]. This 
+appears as 
+immobile component in EPR spectra of spin-labeled lipid 
+analogues as demonstrated in numerous membrane systems, 
+including thylakoids. By quantitating these lipids, we have 
+estimated changes in the size of protein assemblies of major 
+thylakoid membrane protein complexes. The partitioning of 
+2,2,6,6,-tetramethylpiperidine-1-oxyl (TEMPO) between membranous 
+and aqueous environments depends on lipid packing 
+and fluidity in the lipid bilayer and can be measured with EPR 
+[Smirnov et al., 1995]. A drop in the membranous TEMPO signal (in EPR) and 
+a simultaneous increase in the CH2 vibration frequency (in 
+FTIR) diagnosed a lipid transition that was interpreted as the 
+formation of a nonbilayer phase. The temperature of this 
+transition was found to vary during greening. The present study 
+provides data on the time course of the thermal behavior of, and 
+on the protein-lipid rearrangements in the thylakoid membrane 
+during development.
+
+
+References:
+
+
+[Axelsen et al., 1995] 
+      Axelsen, P. H., Kaufman, B. K., McElhaney, R. N. and Lewis, R. N. A. H.
+      The Infrared Dichroism of Transmembrane Helical Polypeptides.
+      Biophysical Journal, 69:2770-2781, 1995.
+
+[Droppa et al., 1999] 
+      Droppa, M., Kóta, Z., Páli, T., Szalontai, B., Horváth, L. I. and
+      Horváth, G. Structural-Functional organization of thylakoids in
+      developing chloroplasts, 1999, pages 55-60. Kluwer Academic Publishers,
+      1999.
+
+[Jackson and Mantsch, 1995] 
+      Jackson, M. and Mantsch, H. H. The Use and Misuse of FTIR Spectroscopy
+      in the Determination of Protein Structure. Critical Reviews in
+      Biochemistry and Molecular Biology, 30(2):95-120, 1995.
+
+[Mantsch and McElhaney, 1991] 
+      Mantsch, H. H. and McElhaney, R. N. Phospholipid phase transitions in
+      model and biological membranes as studied by infrared spectroscopy.
+      Chemistry and Physics of Lipids, 57:213-226, 1991.
+
+[Marsh and Horváth, 1998] 
+      Marsh, D. and Horváth, L. I. Structure, dynamics and composition of the
+      lipid-protein interface. Perspectives from spin-labelling. Biochimica et
+      Biophysica Acta, 1376:267-296, 1998.
+
+[Marsh, 1999] 
+      Marsh, D. Interactions at the Membrane Surface Studied by Spin Label ESR
+      Spectroscopy. Bioscience Reports, 19(4):253-259, 1999.
+
+[Marsh, 2001a] 
+      Marsh, D. Polarity and permeation profiles in lipid membranes. PNAS,
+      98(14):7777-7782, 2001.
+
+[Marsh, 2001b] 
+      Marsh, D. Polarity and permeation profiles in lipid membranes. Part II..
+      PNAS, 98(14):7783-7785, 2001.
+
+[Smirnov et al., 1995] 
+      Smirnov, A. I., Smirnova, T. I. and Morse, P. D. Very High Frequency
+      Electron Paramagnetic Resonance of 2,2,6,6- Tetramethyl-1-Piperidinyloxy
+      in 1,2-Dipalmitoyl-sn-Glycero-3-Phosphatidylcholine Liposomes:
+      Partitioning and Molecular Dynamics. Biophysical Journal,
+      68(6):2350-2360, 1995.
+
+

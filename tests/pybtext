@@ -1,0 +1,15 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/../scripts/pybtext.py"
+
+for style in Alpha abbrvbib abbrvnum abbrvau ; do
+    run ${com} -o tmp.text -s ${srcdir}/../Styles/${style} ${srcdir}/pybtext.txt ${srcdir}/pybtext.bib > /dev/null
+    run diff tmp.text ${srcdir}/pybtext.${style}
+    run rm -f tmp.text
+done
+
+tst_stop

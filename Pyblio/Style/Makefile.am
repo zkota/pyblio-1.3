@@ -25,7 +25,8 @@ EXTRA_DIST = 	__init__.py	\
 		apa4e.py	\
 		Utils.py	\
 		Generic.py	\
-		Parser.py
+		Parser.py	\
+		abbrv.py
 
 
 pyb_DATA = $(EXTRA_DIST)

@@ -26,14 +26,16 @@ bin_SCRIPTS = 	pybliographic	\
 		pybconvert	\
 		pybcompact	\
 		pybtex		\
-		pybformat
+		pybformat	\
+		pybtext
 
 pyb_SCRIPTS = 	pybliographic.py	\
 		pybcheck.py 		\
 		pybconvert.py 		\
 		pybcompact.py 		\
 		pybtex.py		\
-		pybformat.py		
+		pybformat.py		\
+		pybtext.py	
 
 noinst_SCRIPTS = pybscript
 
@@ -43,9 +45,10 @@ EXTRA_DIST = 	pybscript.in			\
 		pybconvert.py			\
 		pybtex.py			\
 		pybformat.py			\
-		pybcompact.py
+		pybcompact.py			\
+		pybtext.py
 
-#pybliographic pybcheck pybconvert pybcompact pybtex pybformat:
+#pybliographic pybcheck pybconvert pybcompact pybtex pybformat pybtext:
 $(bin_SCRIPTS):
 	$(LN_S) pybscript $@
 

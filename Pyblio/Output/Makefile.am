@@ -26,6 +26,8 @@ EXTRA_DIST = 	__init__.py	\
 		LaTeX.py	\
 		text.py		\
 		raw.py		\
-		html.py
+		html.py		\
+		textau.py	\
+		textnum.py
 
 pyb_DATA = $(EXTRA_DIST)

@@ -19,40 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Pyblio
+# This module holds variables needed for pybtext.py.
+# Created by Zoltán Kóta. March, 2004.
 
-EXTRA_DIST = \
-	version.py.in	\
-	$(PYTHON)
-
-PYTHON = \
-	Autoload.py 	\
-	Base.py 	\
-	Config.py 	\
-	Connector.py 	\
-	Exceptions.py 	\
-	Fields.py 	\
-	Formatter.py 	\
-	Help.py 	\
-	Iterator.py 	\
-	Key.py 		\
-	LyX.py 		\
-	Open.py 	\
-	Search.py 	\
-	Selection.py 	\
-	Sort.py 	\
-	TextUI.py 	\
-	Types.py 	\
-	Utils.py 	\
-	__init__.py 	\
-	Query.py	\
-	pybtextvar.py	\
-	recode.py
-
-SUBDIRS = GnomeUI Output Format ConfDir Style
-
-pyb_DATA = $(PYTHON) version.py
-
-version.py: $(srcdir)/version.py.in ../etc/installer
-	$(SHELL) ../etc/installer < $(srcdir)/version.py.in > version.py
-	@if test $(srcdir) != '.' ; then cp -f version.py $(srcdir) ; fi
+oldnew = {}

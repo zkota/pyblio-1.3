@@ -27,7 +27,9 @@ TESTS = \
 	$(srcdir)/pybformat	\
 	$(srcdir)/pybtex	\
 	$(srcdir)/compact	\
-	$(srcdir)/format
+	$(srcdir)/format	\
+	$(srcdir)/format2	\
+	$(srcdir)/pybtext
 
 EXTRA_DIST =  \
 	bibtex.bib		\
@@ -51,5 +53,17 @@ EXTRA_DIST =  \
 	pubmed.bib		\
 	ovid.ovid		\
 	refer.refer		\
+	format2.html		\
+	format2.raw		\
+	format2.latex		\
+	format2.text		\
+	format2.textau		\
+	format2.textnum		\
+	pybtext.abbrvau		\
+	pybtext.abbrvbib	\
+	pybtext.abbrvnum	\
+	pybtext.Alpha		\
+	pybtext.bib		\
+	pybtext.txt		\
 	testing.sh
 

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/format.py ${srcdir}/pybtext.bib"
+
+for type in raw html latex ; do
+    run ${com} ${srcdir}/../Styles/abbrvau.xml ${type} > tmp.fmt
+    run diff tmp.fmt ${srcdir}/format2.${type}
+    run rm -f tmp.fmt
+done
+
+run ${com} ${srcdir}/../Styles/abbrvbib.xml text > tmp.fmt
+run diff tmp.fmt ${srcdir}/format2.text
+run rm -f tmp.fmt
+
+run ${com} ${srcdir}/../Styles/abbrvnum.xml textnum > tmp.fmt
+run diff tmp.fmt ${srcdir}/format2.textnum
+run rm -f tmp.fmt
+
+run ${com} ${srcdir}/../Styles/abbrvau.xml textau > tmp.fmt
+run diff tmp.fmt ${srcdir}/format2.textau
+run rm -f tmp.fmt
+
+tst_stop
