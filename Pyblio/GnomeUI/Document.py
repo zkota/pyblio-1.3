@@ -678,6 +678,12 @@ class Document (Connector.Publisher):
 
 
     def lyx_cite (self, * arg):
+
+        import locale
+        enc = locale.getpreferredencoding ()
+
+        print enc
+        
         entries = self.index.selection ()
         if not entries: return
         
@@ -686,15 +692,19 @@ class Document (Connector.Publisher):
 
             try:
                 self.lyx = LyX.LyXClient ()
+
             except IOError, msg:
-                self.w.error (_("Can't connect to LyX:\n%s") % msg [1])
+                msg = msg [1].decode (enc)
+                self.w.error (_("Can't connect to LyX:\n%s") % msg)
                 return
 
         keys = string.join (map (lambda x: x.key.key, entries), ', ')
         try:
             self.lyx ('citation-insert', keys)
+
         except IOError, msg:
-            self.w.error (_("Can't connect to LyX:\n%s") % msg [1])
+            msg = msg [1].decode (enc)
+            self.w.error (_("Can't connect to LyX:\n%s") % msg)
         return
     
 
