@@ -88,4 +88,4 @@ scrollkeeper-update
 %{_datadir}/pybliographer/pybliographic.py
 %{_datadir}/pybliographer/pybtex.py
 %config %{_datadir}/pybliographer/pybrc.py
-%config %{_datadir}/pybliographer/pybrc.pyc
+%ghost %{_datadir}/pybliographer/pybrc.pyc

@@ -72,6 +72,16 @@
       entry displays its full content on the lower part of the window.
       It is  also possible to  use the arrow  keys to navigate  in the
       upper list.</para>
+
+    <tip>
+      <para>If an entry contains an <emphasis>URL</emphasis> field, 
+      clicking on the small box next to the url, the appropriate 
+      application is launched to view the target object 
+      (e.g. PDF viewer for pdf files, web browser for http address).
+      See <xref linkend="gui-edit" /> about how to add an URL field to 
+      an entry.</para>
+    </tip>
+
     
     <para>Clicking     on    an     entry    while     pressing    the
       <keysym>Shift</keysym> key extends  the selection to the clicked
@@ -319,9 +329,28 @@
     </para>
     <tip>
       <para>You can customize the mandatory and optional fields for 
-      the different type of entries. See <xref linkend="gui-settings" />
-      for more information.</para>
+      the different type of entries. For example, associating the 
+      <emphasis>URL</emphasis> field with a given type of entry, it is 
+      possible to assign an url to an entry (e.g. the 
+      location of the pdf version of an article or the address of a 
+      website). See <xref linkend="figediturl" />. More information about 
+      the association of fields can be found in 
+      <xref linkend="gui-settings" />.</para>
     </tip>
+
+    <figure id="figediturl">
+      <title>The Edition window - Optional fields</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/edit2.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows the optional fields containing URL.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
 
     <para>The  following  keyboard   shortcuts  are  available  during
       edition  (in   addition  to   the  standard  ones   provided  by
