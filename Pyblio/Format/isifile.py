@@ -198,15 +198,42 @@ class IsifileIterator(Iterator.Iterator):
                 lines['DE'].append ('; ' + val)
             else :
                 lines['DE'] = [val]
-            del lines[key]    
+            del lines[key]
+
+        # journal titles come in various forms
+       
+        if lines.has_key ('SO'):
+            uc_title =  ' '.join(lines['SO'])
+            in_table ['journal'] = uc_title
+            if lines.has_key('JI'):
+                uc_title = re.split(r"([- .,/]+)", uc_title)
+                ca_title = re.split(r"[- .,/]+", ' '.join(lines['JI']))
+                i , Title = 0, []
+                for word in uc_title:
+                    Word = string.capitalize(word)
+                    if word == ca_title [i]:
+                        Title.append (word)
+                        i += 1
+                    elif Word.startswith(ca_title[i]):
+                        Title.append(Word)
+                        i += 1
+                    else:
+                        Title.append(string.lower(word))
+                del lines['JI']
+                in_table['journal'] =  "".join(Title)
+            del lines['SO']
+
+
 
         for key in lines.keys():
+
             if key_map.has_key(key):
                 in_table [key_map [key][0]] =  Fields.Text (
                     string.join (lines[key], key_map[key][1]))
             else:
                 in_table ['isifile-' + string.lower(key)] = Fields.Text (
                     string.join (lines[key], " ; "))
+
         return Base.Entry ( None, type, in_table)
 
 class Isifile (Base.DataBase):
