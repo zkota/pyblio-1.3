@@ -27,6 +27,7 @@
 
 
 
+
 ''' Main index containing the columned view of the entries '''
 
 from Pyblio import Fields, Config, Connector, Types, Sort
@@ -50,7 +51,6 @@ for c in ascii_letters + digits:
     _safechar [ord (c)] = c
 
 _safechar = ''.join (_safechar)
-
 
 class Index (Connector.Publisher):
     ''' Graphical index of an iterator '''

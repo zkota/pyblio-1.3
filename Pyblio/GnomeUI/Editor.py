@@ -766,6 +766,7 @@ class RealEditor (Connector.Publisher):
         modified = False
         for i in self.lt_nodes:
             modified |= i.get('modified', False)
+            
         return modified
         
     def lt_prev (self):
@@ -1299,7 +1300,10 @@ class LT_Widget_2:
             start, end = self.buff.get_bounds()
             key = self.node['key']
             text = self.buff.get_text (start, end)
-            self.entry[key].text = text
+            if text.strip():
+                self.entry[key] = Fields.LongText(text)
+            else:
+                del self.entry [key]
             self.node.setdefault ('modified', True)
             
         
