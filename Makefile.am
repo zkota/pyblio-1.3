@@ -58,6 +58,7 @@ EXTRA_DIST = 	setup-check.py			\
 		pybliographic.keys.in		\
 		pybliographic.mime		\
 		pybliographic.desktop		\
+		pybliographic.desktop.in	\
 		pybliographic.png		\
 		pybliographic-logo.png
 

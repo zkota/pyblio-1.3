@@ -178,7 +178,6 @@ def error_dialog (title, err, parent = None):
                               gtk.BUTTONS_CLOSE,
                               title)
 
-    dialog.set_default_size (500, 250)
     
     buff = gtk.TextBuffer ()
     title = buff.create_tag ('title', weight = pango.WEIGHT_BOLD)
@@ -187,6 +186,7 @@ def error_dialog (title, err, parent = None):
     text.set_editable (False)
     text.set_cursor_visible (False)
     text.set_buffer (buff)
+    text.set_size_request (400, 200)
 
     iter = buff.get_start_iter ()
     
