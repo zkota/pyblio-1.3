@@ -493,6 +493,10 @@ class Document (Connector.Publisher):
         self.issue ('close-document', self)
         return 1
 
+    def close_or_exit (self, * arg):
+        self.issue ('close-document', self, True)
+        return 1
+
 
     def close_document_request (self):
         return self.confirm ()
