@@ -1,4 +1,4 @@
-import sys, string, re, traceback
+import sys, string, re, traceback, os
 
 base_version = string.split (sys.version) [0]
 base_version = re.match ('[\d\.]+', base_version).group (0)
@@ -21,6 +21,14 @@ def error (msg):
 
     sys.exit (1)
 
+def warning (msg):
+    fd = open ('conftest.out', 'a')
+    fd.write ('Status="%s"\n' % msg)
+    fd.close ()
+    
+    return
+
+
 testversion = map (int, string.split (sys.argv [1], '.'))
 if len (testversion) < 3: testversion.append (0)
 
@@ -41,9 +49,36 @@ try:
     
     import gnome
     import gtk.glade
-
+    import gnome.ui
     import gconf
 
+except ImportError, msg:
+
+    error ('missing dependency: %s' % msg)
+
+except AssertionError, msg:
+
+    error ('gtk problem: %s' % msg)
+
+except RuntimeError, msg:
+
+    if os.environ.get ('DISPLAY', '') != '':
+
+        etype, value, tb = sys.exc_info ()
+        traceback.print_exception (etype, value, tb)
+
+        error ('unexpected runtime error')
+
+    warning ('cannot test gtk [no DISPLAY]')
+
+except:
+    etype, value, tb = sys.exc_info ()
+    traceback.print_exception (etype, value, tb)
+
+    error ('unexpected error')
+
+
+try:
     import _recode
     import _bibtex
 
@@ -55,14 +90,12 @@ try:
     if l != c:
         error ('broken recode version')
     
+
 except ImportError, msg:
 
     error ('missing dependency: %s' % msg)
 
-except AssertionError, msg:
-
-    error ('gtk problem: %s' % msg)
-
+    
 except:
     etype, value, tb = sys.exc_info ()
     traceback.print_exception (etype, value, tb)

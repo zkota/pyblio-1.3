@@ -54,7 +54,11 @@ else
 fi
 
 if test $result = 0 ; then
-	AC_MSG_RESULT([yes (python version ${Python_Version})])
+	if test -z "${Status}" ; then
+	  AC_MSG_RESULT([yes (python version ${Python_Version})])
+        else
+          AC_MSG_RESULT([assuming yes (${Status})])
+        fi
 else
 	AC_MSG_RESULT([no])
 	AC_MSG_ERROR([${Status}])
