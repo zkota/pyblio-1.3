@@ -706,7 +706,7 @@ class RealEditor (Connector.Publisher):
             try:
                 result = item.update (self.entry)
                 
-            except UnicodeEncodeError:
+            except UnicodeError:
                 f = Types.get_field (item.field)
                 
                 ui.gnome_error_dialog_parented (_("The `%s' field contains a non Latin-1 symbol") %
@@ -773,7 +773,7 @@ class NativeEditor (Connector.Publisher):
         try:
             text = text.encode ('latin-1')
             
-        except UnicodeEncodeError:
+        except UnicodeError:
             ui.gnome_error_dialog_parented (_("Your text contains non Latin-1 symbols"),
                                             self.w.get_toplevel ())
             return None
