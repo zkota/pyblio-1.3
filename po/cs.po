@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-27 15:23+0200\n"
-"PO-Revision-Date: 2004-07-27 16:47+0200\n"
+"POT-Creation-Date: 2004-07-29 20:17+0200\n"
+"PO-Revision-Date: 2004-07-29 21:39+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +100,7 @@ msgstr "klíč `%s' není ve správném tvaru"
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: klíč `%s' je již definován"
 
-#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:411
+#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -383,7 +383,7 @@ msgstr "Odstranit"
 msgid "[ Drop an Entry here ]"
 msgstr "[ Pusťte sem položku ]"
 
-#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:230
+#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Typ položky"
@@ -405,11 +405,11 @@ msgstr "Zpět"
 msgid "Next"
 msgstr "Vpřed"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:445
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:451
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:452
 msgid "Optional"
 msgstr "Nepovinné"
 
@@ -498,29 +498,29 @@ msgstr "Odkaz"
 msgid "Date"
 msgstr "Datum"
 
-#: Pyblio/GnomeUI/Fields.py:118 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Název"
 
-#: Pyblio/GnomeUI/Fields.py:121 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Typ"
 
-#: Pyblio/GnomeUI/Fields.py:294
+#: Pyblio/GnomeUI/Fields.py:300
 msgid "Available"
 msgstr "Dostupné"
 
-#: Pyblio/GnomeUI/Fields.py:304
+#: Pyblio/GnomeUI/Fields.py:310
 msgid "Associated"
 msgstr "Související"
 
-#: Pyblio/GnomeUI/Fields.py:315
+#: Pyblio/GnomeUI/Fields.py:321
 msgid "Please, select an entry type from previous page."
 msgstr "Vyberte prosím typ položky na předchozí straně."
 
-#: Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Fields.py:332
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Pole asociovaná s typem pole <b>%s</b>"
@@ -964,11 +964,11 @@ msgstr "použití: pybcompact <souborlatex> <souborybibtex...>"
 msgid "pybcompact: error: %s\n"
 msgstr "fpybcompact: chyba: %s\n"
 
-#: scripts/pybcompact.py:98
+#: scripts/pybcompact.py:97
 msgid "no entry"
 msgstr "žádná položka"
 
-#: scripts/pybcompact.py:143 scripts/pybtext.py:240
+#: scripts/pybcompact.py:142 scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "nemohu najít následující položky: %s"
@@ -983,71 +983,93 @@ msgstr "pybconvert: chyba: špatný formát konverze"
 
 #: scripts/pybformat.py:34
 msgid ""
-"usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
-"footer] <database...>"
-msgstr "usage: pybformat [-o výstupnísoubor] [-s styl] [-f formát] [-H hlavička] [-F patička] <databáze...>"
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
+msgstr ""
+"použití: pybformat [přepínače] <databáze...>\n"
+"\n"
+"    přepínače:\n"
+"      -o soubor, --output=soubor\turčení názvu souboru s výstupem\n"
+"      -s styl, --style=styl\t\turčení stylu bibliografie\n"
+"      -f formát, --format=formát\turčení formátu výstupu\n"
+"      -H hlavička, --header=hlavička\tdefinuje soubor hlavičky\n"
+"      -F patička, --footer=patička\tdefinuje soubor patičky\n"
+"      -l 'výstup', --list='výstup'\tvypíše dostupné formáty výstupu\n"
+"      -h, --help\t\t\tzobrazit tuto zprávu s nápovědou\n"
+"      -v, --version\t\t\tzobrazit tuto zprávu s nápovědou\n"
+"    "
 
-#: scripts/pybformat.py:38
+#: scripts/pybformat.py:49
 #, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: chyba: %s\n"
 
-#: scripts/pybformat.py:44
+#: scripts/pybformat.py:55
 #, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: varování: %s\n"
 
-#: scripts/pybformat.py:79 scripts/pybtext.py:252 scripts/pybtext.py:278
+#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
 #: scripts/pybtext.py:321
 #, python-format
 msgid "can't open `%s': %s"
 msgstr "nemohu otevřít `%s': %s"
 
-#: scripts/pybformat.py:86
+#: scripts/pybformat.py:97
 #, python-format
 msgid "unknown list `%s'"
 msgstr "neznámý seznam `%s'"
 
-#: scripts/pybformat.py:89
+#: scripts/pybformat.py:100
 #, python-format
 msgid "pybformat: available values for `%s':"
 msgstr "pybformat: dostupné hodnoty pro `%s':"
 
-#: scripts/pybformat.py:93
+#: scripts/pybformat.py:104
 #, python-format
 msgid "empty value list `%s'"
 msgstr "prázdný seznam hodnot `%s'"
 
-#: scripts/pybformat.py:121
+#: scripts/pybformat.py:132
 msgid "too few arguments"
 msgstr "příliš málo parametrů"
 
-#: scripts/pybformat.py:128 scripts/pybtext.py:117
+#: scripts/pybformat.py:139 scripts/pybtext.py:117
 #, python-format
 msgid "unknown output format `%s'"
 msgstr "neznámý formát výstupu `%s'"
 
-#: scripts/pybformat.py:141 scripts/pybtex.py:86 scripts/pybtext.py:94
+#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
 #, python-format
 msgid "can't find style `%s'"
 msgstr "nemohu najít styl `%s'"
 
-#: scripts/pybformat.py:144
+#: scripts/pybformat.py:155
 #, python-format
 msgid "pybformat: using style `%s', format `%s'\n"
 msgstr "pybformat: používám styl `%s', formát `%s'\n"
 
-#: scripts/pybformat.py:159
+#: scripts/pybformat.py:170
 #, python-format
 msgid "can't open header `%s': %s"
 msgstr "nemohu otevřít hlavičku `%s': %s"
 
-#: scripts/pybformat.py:168
+#: scripts/pybformat.py:178
 #, python-format
 msgid "can't open database: %s"
 msgstr "nemohu otevřít databázi: %s"
 
-#: scripts/pybformat.py:184
+#: scripts/pybformat.py:193
 #, python-format
 msgid "can't open footer `%s': %s"
 msgstr "nemohu otevřít patičku `%s': %s"
