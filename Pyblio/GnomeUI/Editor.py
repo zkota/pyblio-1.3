@@ -127,26 +127,20 @@ class TextBase (BaseField):
         return
 
     
-    def update (self, entry):
-        text = string.rstrip (self.edit.get_chars (0, -1)).encode ('latin-1')
-        if text == self.string: return 0
-
-        if text == '':
-            del entry [self.field]
-            return 1
-
-        self.update_content (entry, text)
-        return 1
-
-
     def update_content (self, entry, text):
         if text [0] == '@' and hasattr (entry, 'set_native'):
-            entry.set_native (self.field, string.lstrip (text [1:]))
-            return
+            try:
+                entry.set_native (self.field, string.lstrip (text [1:]))
+                
+            except Exceptions.ParserError, msg:
+                Utils.error_dialog (_("Error in native string parsing"), str (msg))
+                return -1
+            
+            return 1
 
         text = string.lstrip (text)
         entry [self.field] = Fields.Text (text)
-        return
+        return 1
 
     
 class Entry (TextBase):
@@ -198,8 +192,7 @@ class Entry (TextBase):
             del entry [self.field]
             return 1
 
-        self.update_content (entry, text)
-        return 1
+        return self.update_content (entry, text)
 
 
 
@@ -235,8 +228,8 @@ class Text (TextBase):
             del entry [self.field]
             return 1
 
-        self.update_content (entry, text)
-        return 1
+        return self.update_content (entry, text)
+
 
 class AuthorGroup (BaseField):
     
