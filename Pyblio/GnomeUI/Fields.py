@@ -43,22 +43,26 @@ _typename = {
     Fields.Date        : _('Date')
     }
 
-class FieldsDialog:
+class FieldsDialog (Utils.GladeWindow):
+
+    gladeinfo = {
+
+        'file': 'fields1.glade',
+        'name': 'fields',
+        'root': 'fields1'
+        
+        }
 
     def __init__ (self, parent = None):
 
-        gp = os.path.join (version.pybdir, 'glade', 'fields1.glade')
+        Utils.GladeWindow.__init__ (self, parent)
         
-        self.xml = gtk.glade.XML (gp, 'fields1')
-        self.xml.signal_autoconnect (self)
-
         self.dialog = self.xml.get_widget ('fields1')
         self.w = self.xml.get_widget ('notebook')
 
         tooltips = gtk.Tooltips ()
         tooltips.enable ()
         
-        if parent: self.dialog.set_transient_for (parent)
         self.warning = 0
         self.parent = parent
         self.init_page_1()
@@ -74,7 +78,9 @@ class FieldsDialog:
 
     def on_close (self, w):
         self.dialog.hide_all()
-
+        self.size_save ()
+        return
+    
     def on_add(self, *args):
         page = self.w.get_current_page ()
         if page == 0: self.page1_add (*args)
@@ -323,8 +329,8 @@ class FieldsDialog:
         for i in item.optional:
              self.sm.append((i.name, False, i.name, i))
         self.label3.set_markup (
-            _('Fields associated with <b>%s</b> entry type' %(
-            item.name)))
+            _('Fields associated with <b>%s</b> entry type') %
+            item.name)
         self.check()
 
     def page3_add (self, *args):
