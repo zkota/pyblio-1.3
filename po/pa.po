@@ -1,0 +1,977 @@
+# translation of pa.po to Punjabi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Amanpreet Singh Alam <aalam@redhat.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-18 10:56+0530\n"
+"PO-Revision-Date: 2005-01-18 11:44+0530\n"
+"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Pyblio/Autoload.py:57
+#, python-format
+msgid "warning: can't import %s: %s"
+msgstr "ਚੇਤਾਵਨੀ: %s ਨੂੰ ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ: %s"
+
+#: Pyblio/Config.py:53
+#, python-format
+msgid "value of `%s' should be of type %s"
+msgstr ""
+
+#: Pyblio/Config.py:196
+msgid "String"
+msgstr "ਸਤਰ"
+
+#: Pyblio/Config.py:205
+msgid "Boolean"
+msgstr "ਬੁਲੀਅਨ"
+
+#: Pyblio/Config.py:224
+msgid "Integer"
+msgstr "ਇੰਟੀਜਰ"
+
+#: Pyblio/Config.py:226
+#, python-format
+msgid "Integer under %d"
+msgstr "%d ਰਾਹੀਂ ਇੰਟੀਜਰ"
+
+#: Pyblio/Config.py:228
+#, python-format
+msgid "Integer over %d"
+msgstr "%d ਰਾਹੀਂ ਇੰਟੀਜਰ"
+
+#: Pyblio/Config.py:230
+#, python-format
+msgid "Integer between %d and %d"
+msgstr ""
+
+#: Pyblio/Config.py:242
+#, python-format
+msgid "Element in `%s'"
+msgstr "%s ਵਿੱਚ ਇਕਾਈ"
+
+#: Pyblio/Config.py:262
+#, python-format
+msgid "Tuple (%s)"
+msgstr "ਟਪਲ (%s)"
+
+#: Pyblio/Config.py:283
+#, python-format
+msgid "List (%s)"
+msgstr "ਸੂਚੀ (%s)"
+
+#: Pyblio/Config.py:308
+#, python-format
+msgid "Dictionary (%s, %s)"
+msgstr "ਸ਼ਬਦ-ਕੋਸ਼ (%s, %s)"
+
+#: Pyblio/Fields.py:269
+msgid "Illegal year value"
+msgstr "ਗਲਤ ਸਾਲ ਮੁੱਲ"
+
+#: Pyblio/Fields.py:273
+msgid "Illegal month value"
+msgstr "ਗਲਤ ਮਹੀਨਾ ਮੁੱਲ"
+
+#: Pyblio/Fields.py:277
+msgid "Illegal day value"
+msgstr "ਗਲਤ ਦਿਨ ਮੁੱਲ"
+
+#: Pyblio/Fields.py:460
+#, python-format
+msgid "in %s"
+msgstr "%s ਵਿੱਚ"
+
+#: Pyblio/LyX.py:39
+#, python-format
+msgid "no input pipe `%s'"
+msgstr ""
+
+#: Pyblio/LyX.py:45
+#, python-format
+msgid "no output pipe `%s'"
+msgstr ""
+
+#: Pyblio/Open.py:97
+#, python-format
+msgid "method `%s' provides no opener"
+msgstr ""
+
+#: Pyblio/Open.py:105 Pyblio/Open.py:151
+#, python-format
+msgid "File `%s' does not exist"
+msgstr "ਫਾਇਲ %s ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
+
+#: Pyblio/Open.py:116 Pyblio/Open.py:162
+#, python-format
+msgid "don't know how to open `%s'"
+msgstr ""
+
+#: Pyblio/Open.py:143
+#, python-format
+msgid "method `%s' provides no iterator"
+msgstr ""
+
+#: Pyblio/Format/BibTeX.py:351 Pyblio/Format/BibTeX.py:412
+#, python-format
+msgid "key `%s' is malformed"
+msgstr ""
+
+#: Pyblio/Format/BibTeX.py:372 Pyblio/Format/BibTeX.py:395
+#, python-format
+msgid "%s:%d: key `%s' already defined"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "ਆਖਰੀ ਨਾਂ, ਪਹਿਲਾਂ ਨਾਂ"
+
+#: Pyblio/GnomeUI/Editor.py:39
+msgid "Text"
+msgstr "ਪਾਠ"
+
+#: Pyblio/GnomeUI/Editor.py:42
+msgid "Reference"
+msgstr "ਹਵਾਲਾ"
+
+#: Pyblio/GnomeUI/Editor.py:258
+msgid "Day"
+msgstr "ਦਿਨ"
+
+#: Pyblio/GnomeUI/Editor.py:267
+msgid "Month"
+msgstr "ਮਹੀਨਾ"
+
+#: Pyblio/GnomeUI/Editor.py:276
+msgid "Year"
+msgstr "ਸਾਲ"
+
+#: Pyblio/GnomeUI/Editor.py:301
+msgid "Invalid day field in date"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:309
+msgid "Invalid month field in date"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:317
+msgid "Invalid year field in date"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:426
+msgid "Entry type"
+msgstr "ਇੰਦਰਾਜ ਕਿਸਮ"
+
+#: Pyblio/GnomeUI/Editor.py:428 Pyblio/GnomeUI/Config.py:482
+msgid "Key"
+msgstr "ਕੁੰਜੀ"
+
+#: Pyblio/GnomeUI/Editor.py:471
+msgid "Create Field"
+msgstr "ਖੇਤਰ ਬਣਾਓ"
+
+#: Pyblio/GnomeUI/Editor.py:539 Pyblio/GnomeUI/Fields.py:191
+msgid "Mandatory"
+msgstr "ਲਾਜ਼ਮੀ"
+
+#: Pyblio/GnomeUI/Editor.py:539 Pyblio/GnomeUI/Fields.py:192
+msgid "Optional"
+msgstr "ਚੋਣਵਾਂ"
+
+#: Pyblio/GnomeUI/Editor.py:539
+msgid "Extra"
+msgstr "ਵਾਧੂ"
+
+#: Pyblio/GnomeUI/Editor.py:601
+msgid "Invalid key format"
+msgstr "ਗਲਤ ਕੁੰਜੀ ਫਾਰਮਿਟ"
+
+#: Pyblio/GnomeUI/Editor.py:609
+#, python-format
+msgid "Key `%s' already exists"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:676
+msgid "Error in native string parsing"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:689
+msgid "Edit entry"
+msgstr "ਇੰਦਰਾਜ ਸੋਧ"
+
+#: Pyblio/GnomeUI/Editor.py:703 Pyblio/GnomeUI/Editor.py:744
+msgid "Native Editing"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:756
+msgid "Standard Editing"
+msgstr "ਮਿਆਰੀ ਸੰਪਾਦਨ"
+
+#: Pyblio/GnomeUI/FileSelector.py:40 Pyblio/GnomeUI/Document.py:291
+#: Pyblio/GnomeUI/Document.py:308
+msgid "File"
+msgstr "ਫਾਇਲ"
+
+#: Pyblio/GnomeUI/FileSelector.py:106
+msgid "Bibliography type:"
+msgstr ""
+
+#: Pyblio/GnomeUI/Index.py:77
+msgid "Add..."
+msgstr "ਸ਼ਾਮਿਲ..."
+
+#: Pyblio/GnomeUI/Index.py:78
+msgid "Edit..."
+msgstr "ਸੋਧ..."
+
+#: Pyblio/GnomeUI/Index.py:79 Pyblio/GnomeUI/Search.py:178
+msgid "Delete"
+msgstr "ਹਟਾਓ"
+
+#: Pyblio/GnomeUI/Index.py:80
+msgid "Toggle..."
+msgstr "ਤਬਦੀਲ..."
+
+#: Pyblio/GnomeUI/Search.py:109
+msgid "Search"
+msgstr "ਖੋਜ"
+
+#: Pyblio/GnomeUI/Search.py:133 Pyblio/GnomeUI/Fields.py:225
+msgid "Field"
+msgstr "ਖੇਤਰ"
+
+#: Pyblio/GnomeUI/Search.py:134
+msgid "Pattern"
+msgstr "ਪ੍ਰਤੀਰੂਪ"
+
+#: Pyblio/GnomeUI/Search.py:151
+msgid "Simple Search"
+msgstr "ਸਧਾਰਨ ਖੋਜ"
+
+#: Pyblio/GnomeUI/Search.py:155
+msgid "Search command:"
+msgstr "ਖੋਜ ਕਮਾਂਡ:"
+
+#: Pyblio/GnomeUI/Search.py:161
+msgid "Expert Search"
+msgstr "ਤਕਨੀਕੀ ਖੋਜ"
+
+#. initialize the tree with the full database
+#: Pyblio/GnomeUI/Search.py:199
+msgid "Full database"
+msgstr "ਪੂਰਾ ਡਾਟਾਬੇਸ"
+
+#: Pyblio/GnomeUI/Search.py:241
+msgid "internal error during evaluation"
+msgstr "ਜਾਂਚ ਦੌਰਾਨ ਅੰਦਰੂਨੀ ਗਲਤੀ ਆਈ ਹੈ"
+
+#: Pyblio/GnomeUI/Search.py:290
+#, python-format
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:49
+msgid "Select sort criterions"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:60
+msgid "Sort direction"
+msgstr "ਖੋਜ ਦਿਸ਼ਾ"
+
+#: Pyblio/GnomeUI/Sort.py:60
+msgid "Sort criterions"
+msgstr "ਖੋਜ ਸੀਮਾ"
+
+#: Pyblio/GnomeUI/Sort.py:73
+msgid "[Entry Type]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:74
+msgid "[Key Value]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:99
+msgid "Reorder"
+msgstr "ਮੁੜ-ਕ੍ਰਮਬੱਧ"
+
+#: Pyblio/GnomeUI/Sort.py:100
+msgid "Groups the active fields on the top of the list"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:104
+msgid "Unselect all"
+msgstr "ਸਭ ਨਾ-ਚੁਣੋ"
+
+#: Pyblio/GnomeUI/Sort.py:105
+msgid "Removes all the sort criterions"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:109
+msgid "Set as default"
+msgstr "ਮੂਲ ਤੌਰ ਤੇ ਨਿਰਧਾਰਨ"
+
+#: Pyblio/GnomeUI/Sort.py:110
+msgid "Use this sort criterion as the default for new files"
+msgstr ""
+
+#: Pyblio/GnomeUI/Utils.py:164
+msgid ""
+"The following errors occured:\n"
+"\n"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:58
+msgid "_New"
+msgstr "ਨਵਾਂ(_N)"
+
+#: Pyblio/GnomeUI/Document.py:60
+msgid "Open _Database..."
+msgstr "ਡਾਟਾਬੇਸ ਖੋਲੋ(_D)..."
+
+#: Pyblio/GnomeUI/Document.py:62
+msgid "_Merge with..."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:63
+msgid "_Import ..."
+msgstr "ਆਯਾਤ(_I)..."
+
+#: Pyblio/GnomeUI/Document.py:64
+msgid "Online Query"
+msgstr "ਆਨਲਾਇਟ ਸਵਾਲ"
+
+#: Pyblio/GnomeUI/Document.py:65
+msgid "PubMed/Medline..."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:67
+msgid "SPIRES Server..."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:69
+msgid "Z39.50 Server..."
+msgstr "Z39.50 ਸਰਵਰ..."
+
+#: Pyblio/GnomeUI/Document.py:71
+msgid "Generic Server..."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:78
+msgid "_Previous Documents"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:85
+msgid "About..."
+msgstr "ਇਸ ਬਾਰੇ..."
+
+#: Pyblio/GnomeUI/Document.py:96
+msgid "_Add..."
+msgstr "ਸ਼ਾਮਿਲ(_A)..."
+
+#: Pyblio/GnomeUI/Document.py:97
+msgid "_Edit..."
+msgstr "ਸੋਧ(_E)..."
+
+#: Pyblio/GnomeUI/Document.py:98
+msgid "_Delete"
+msgstr "ਹਟਾਓ(_D)"
+
+#: Pyblio/GnomeUI/Document.py:101
+msgid "S_ort..."
+msgstr "ਕ੍ਰਮਬੱਧ(_o)..."
+
+#: Pyblio/GnomeUI/Document.py:105 Pyblio/GnomeUI/Document.py:126
+msgid "_Cite"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:106
+msgid "_Format..."
+msgstr "ਫਾਰਮਿਟ(_F)..."
+
+#: Pyblio/GnomeUI/Document.py:110
+msgid "_Fields..."
+msgstr "ਖੇਤਰ(_F)..."
+
+#: Pyblio/GnomeUI/Document.py:111
+msgid "_Entries..."
+msgstr "ਇੰਦਰਾਜ਼(_E)..."
+
+#: Pyblio/GnomeUI/Document.py:117
+msgid "_Old Style"
+msgstr "ਪੁਰਾਣੀ ਸ਼ੈਲੀ(_O)"
+
+#: Pyblio/GnomeUI/Document.py:123
+msgid "_File"
+msgstr "ਫਾਇਲ(_F)"
+
+#: Pyblio/GnomeUI/Document.py:124
+msgid "_Edit"
+msgstr "ਸੋਧ(_E)"
+
+#: Pyblio/GnomeUI/Document.py:125
+msgid "_View"
+msgstr "ਵੇਖੋ(_V)"
+
+#: Pyblio/GnomeUI/Document.py:127
+msgid "_Settings"
+msgstr "ਵਿਵਸਥਾ(_S)"
+
+#: Pyblio/GnomeUI/Document.py:128
+msgid "_Help"
+msgstr "ਸਹਾਇਤਾ(_H)"
+
+#: Pyblio/GnomeUI/Document.py:132
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: Pyblio/GnomeUI/Document.py:133
+msgid "Save"
+msgstr "ਸੰਭਾਲੋ"
+
+#: Pyblio/GnomeUI/Document.py:135
+msgid "Find"
+msgstr "ਖੋਜ"
+
+#: Pyblio/GnomeUI/Document.py:136
+msgid "Cite"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:138
+msgid "Close"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: Pyblio/GnomeUI/Document.py:292 Pyblio/GnomeUI/Document.py:309
+msgid "Previous Documents"
+msgstr "ਪੁਰਾਣਾ ਦਸਤਾਵੇਜ਼"
+
+#: Pyblio/GnomeUI/Document.py:334
+#, python-format
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:356
+#, python-format
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:375
+msgid "New database"
+msgstr "ਨਵਾਂ ਡਾਟਾਬੇਸ"
+
+#: Pyblio/GnomeUI/Document.py:383 Pyblio/GnomeUI/Document.py:387
+msgid "[no entry]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:384
+msgid "[1 entry]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:385
+#, python-format
+msgid "[%d entries]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:388
+#, python-format
+msgid "[%d/1 entry]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:389
+#, python-format
+msgid "[%d/%d entries]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:394
+msgid "[modified]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:404
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:528 Pyblio/GnomeUI/Document.py:1043
+msgid "Medline/PubMed Online Search Help"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:561
+msgid "Online PubMed/Medline Query"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:591
+msgid "Search PubMed for: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:593 Pyblio/GnomeUI/Document.py:932
+msgid ""
+"Maximum number\n"
+"of results: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:595 Pyblio/GnomeUI/Document.py:934
+msgid ""
+"Start listing at\n"
+"result number: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:602
+msgid "Limited to:"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:736
+msgid "From:"
+msgstr "ਵਲੋਂ: "
+
+#: Pyblio/GnomeUI/Document.py:739
+msgid "To:"
+msgstr "ਵੱਲ਼: "
+
+#: Pyblio/GnomeUI/Document.py:746
+msgid "Use the format YYYY/MM/DD; month and day are optional."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:796
+msgid "No Results Found"
+msgstr "ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਲੱਭਾ ਹੈ"
+
+#: Pyblio/GnomeUI/Document.py:805
+msgid "Search Error"
+msgstr "ਖੋਜ ਗਲਤੀ"
+
+#: Pyblio/GnomeUI/Document.py:816
+msgid "Z39.50 Server Query Help"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:900
+msgid "Enter Your Query"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:920 Pyblio/GnomeUI/Document.py:1063
+msgid "Query server: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1055
+msgid "SPIRES Query"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1074
+msgid "Author: "
+msgstr "ਲੇਖਕ: "
+
+#: Pyblio/GnomeUI/Document.py:1081
+msgid "Title: "
+msgstr "ਸਿਰਲੇਖ: "
+
+#: Pyblio/GnomeUI/Document.py:1088
+msgid "Citation: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1095
+msgid "Report Number: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1102
+msgid "Affiliation: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1109
+msgid "Collaboration: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1116
+msgid "Keywords: "
+msgstr "ਕੀਵਰਡ: "
+
+#: Pyblio/GnomeUI/Document.py:1123
+msgid "Country: "
+msgstr "ਦੇਸ਼: "
+
+#: Pyblio/GnomeUI/Document.py:1130
+msgid "Eprint: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1140
+msgid "Number: "
+msgstr "ਅੰਕ: "
+
+#: Pyblio/GnomeUI/Document.py:1147
+msgid "Topcite: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1155
+msgid "In RPP?: "
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1165
+msgid "Journal: "
+msgstr "ਜਰਨਲ: "
+
+#: Pyblio/GnomeUI/Document.py:1197
+msgid "vol,pg"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1204
+msgid "Published: "
+msgstr "ਪ੍ਰਕਾਸ਼ਨ: "
+
+#: Pyblio/GnomeUI/Document.py:1214
+msgid "Date: "
+msgstr "ਮਿਤੀ: "
+
+#: Pyblio/GnomeUI/Document.py:1234
+msgid "Sort by: "
+msgstr "ਕ੍ਰਮਬੱਧ: "
+
+#: Pyblio/GnomeUI/Document.py:1253
+msgid "Merge file"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1265 Pyblio/GnomeUI/Document.py:1328
+#: Pyblio/GnomeUI/Document.py:1379
+msgid "Open error"
+msgstr "ਖੋਲਣ ਗਲਤੀ"
+
+#: Pyblio/GnomeUI/Document.py:1289
+msgid "Merge status"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1301
+msgid "Open database"
+msgstr "ਡਾਟਾਬੇਸ ਖੋਲੋ"
+
+#: Pyblio/GnomeUI/Document.py:1354
+msgid "Open file"
+msgstr "ਫਾਇਲ ਖੋਲੋ"
+
+#: Pyblio/GnomeUI/Document.py:1420
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1431
+#, python-format
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"%s ਨੂੰ ਸੰਭਾਲਣ ਵਿੱਚ ਅਸਫਲ:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:1440
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1455
+msgid "Save As..."
+msgstr "ਇਸਤਰਾਂ ਸੰਭਾਲੋ..."
+
+#: Pyblio/GnomeUI/Document.py:1462
+#, python-format
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"ਫਾਇਲ %s ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ।\n"
+"ਉੱਪਰ ਲਿਖਣਾ ਹੈ?"
+
+#: Pyblio/GnomeUI/Document.py:1469
+#, python-format
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"ਖੋਲਣ ਦੌਰਾਨ ਗਲਤੀ:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:1487
+msgid "Reopen error"
+msgstr "ਮੁੜ-ਖੋਲਣ ਵਿੱਚ ਗਲਤੀ ਹੈ"
+
+#: Pyblio/GnomeUI/Document.py:1529
+#, python-format
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1566
+msgid "Really remove all the entries ?"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1586
+msgid "Create new entry"
+msgstr "ਨਵਾਂ ਇੰਦਰਾਜ ਬਣਾਓ"
+
+#: Pyblio/GnomeUI/Document.py:1600
+#, python-format
+msgid "Really edit %d entries ?"
+msgstr "ਕੀ %d ਇੰਦਰਾਜਾਂ ਨੂੰ ਸੋਧਣਾ ਹੈ?"
+
+#: Pyblio/GnomeUI/Document.py:1641
+#, python-format
+msgid "Remove all the %d entries ?"
+msgstr "ਕੀ ਸਭ %d ਇੰਦਰਾਜਾਂ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
+
+#: Pyblio/GnomeUI/Document.py:1643
+#, python-format
+msgid "Remove entry `%s' ?"
+msgstr "%s ਇੰਦਰਾਜ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
+
+#: Pyblio/GnomeUI/Document.py:1709 Pyblio/GnomeUI/Document.py:1716
+#, python-format
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1764
+msgid ""
+"Please install bug-buddy\n"
+"to use this feature"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:1775
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "ਇਹ ਕਾਰਜ ਜੀਪੀਐਲ ਲਾਇਸੈਂਸ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਧੀਨ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਹੈ"
+
+#: Pyblio/GnomeUI/Document.py:1777
+msgid "Gnome interface to the Pybliographer system."
+msgstr "ਪਬਲਿਉਗ੍ਰਾਫਰ ਸਿਸਟਮ ਲਈ ਗਨੋਮ ਚਿਹਰਾ ਮੋਹਰਾ ਹੈ।੭"
+
+#: Pyblio/GnomeUI/Document.py:1782
+msgid "Pybliographer Home Page"
+msgstr "ਪਬਲਿਉਗ੍ਰਾਫਰ ਮੁੱਖ ਸਫਾ"
+
+#: Pyblio/GnomeUI/Format.py:37
+msgid "Format entries"
+msgstr "ਫਾਰਿਮਟ ਇੰਦਰਾਜ਼"
+
+#: Pyblio/GnomeUI/Format.py:51
+msgid "Bibliography style:"
+msgstr ""
+
+#: Pyblio/GnomeUI/Format.py:52
+msgid "Select style"
+msgstr "ਸ਼ੈਲੀ ਚੁਣੋ"
+
+#: Pyblio/GnomeUI/Format.py:58
+msgid "Output format:"
+msgstr "ਆਉਟਪੁੱਟ ਫਾਰਮਿਟ:"
+
+#: Pyblio/GnomeUI/Format.py:75
+msgid "Output File:"
+msgstr "ਆਉਟਪੁੱਟ ਫਾਇਲ:"
+
+#: Pyblio/GnomeUI/Format.py:76
+msgid "Select output file"
+msgstr "ਆਉਟਪੁੱਟ ਫਾਇਲ ਚੁਣੋ"
+
+#: Pyblio/GnomeUI/Config.py:45
+msgid "Choose your preferences"
+msgstr "ਆਪਣੀ ਪਸੰਦ ਚੁਣੋ"
+
+#: Pyblio/GnomeUI/Config.py:93
+#, python-format
+msgid ""
+"Item `%s':\n"
+"\n"
+"%s"
+msgstr ""
+"ਇਕਾਈ `%s':\n"
+"\n"
+"%s"
+
+#: Pyblio/GnomeUI/Config.py:128 Pyblio/GnomeUI/Fields.py:157
+#: Pyblio/GnomeUI/Fields.py:339
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+
+#: Pyblio/GnomeUI/Config.py:249
+msgid "True"
+msgstr "ਸਹੀਂ"
+
+#: Pyblio/GnomeUI/Config.py:250
+msgid "False"
+msgstr "ਗਲਤ"
+
+#: Pyblio/GnomeUI/Config.py:390
+msgid "Add"
+msgstr "ਸ਼ਾਮਿਲ"
+
+#: Pyblio/GnomeUI/Config.py:393
+msgid "Update"
+msgstr "ਨਵੀਨੀਕਰਨ"
+
+#: Pyblio/GnomeUI/Config.py:396 Pyblio/GnomeUI/Config.py:494
+#: Pyblio/GnomeUI/Fields.py:96 Pyblio/GnomeUI/Fields.py:239
+msgid "Remove"
+msgstr "ਹਟਾਓ"
+
+#: Pyblio/GnomeUI/Config.py:482
+msgid "Value"
+msgstr "ਮੁੱਲ"
+
+#: Pyblio/GnomeUI/Config.py:491 Pyblio/GnomeUI/Fields.py:93
+#: Pyblio/GnomeUI/Fields.py:236
+msgid "Set"
+msgstr "ਨਿਰਧਾਰਨ"
+
+#: Pyblio/GnomeUI/Config.py:507
+msgid "Key:"
+msgstr "ਕੁੰਜੀ:"
+
+#: Pyblio/GnomeUI/Config.py:509
+msgid "Value:"
+msgstr "ਮੁੱਲ:"
+
+#: Pyblio/GnomeUI/Fields.py:45
+msgid "Fields configuration"
+msgstr "ਖੇਤਰ ਸੰਰਚਨਾ"
+
+#: Pyblio/GnomeUI/Fields.py:59
+msgid "Name"
+msgstr "ਨਾਂ"
+
+#: Pyblio/GnomeUI/Fields.py:59
+msgid "Type"
+msgstr "ਕਿਸਮ"
+
+#: Pyblio/GnomeUI/Fields.py:70
+msgid "Name:"
+msgstr "ਨਾਂ:"
+
+#: Pyblio/GnomeUI/Fields.py:72
+msgid "Type:"
+msgstr "ਕਿਸਮ:"
+
+#: Pyblio/GnomeUI/Fields.py:198
+msgid "Entries configuration"
+msgstr "ਇੰਦਰਾਜ ਸੰਰਚਨਾ"
+
+#: Pyblio/GnomeUI/Fields.py:209
+msgid "Entry"
+msgstr "ਇੰਦਰਾਜ"
+
+#: Pyblio/GnomeUI/Fields.py:220
+msgid "Entry Name:"
+msgstr "ਇੰਦਰਾਜ ਨਾਂ:"
+
+#: Pyblio/GnomeUI/Fields.py:225
+msgid "Status"
+msgstr "ਸਥਿਤੀ"
+
+#: pybliographer.py:45
+#, python-format
+msgid "This is %s, version %s"
+msgstr "ਇਹ %s ਹੈ, ਸੰਸਕਰਣ %s"
+
+#: pybliographer.py:49 pybliographer.py:56
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "ਇਹ ਸਾਫਟਵੇਅਰ ਮੁਫਤ ਹੈ ਅਤੇ ਬਿਨਾਂ ਕਿਸੇ ਵਾਰੰਟੀ ਦੇ ਉਪਲੱਬਧ ਹੈ।"
+
+#: pybliographer.py:50
+msgid "For details, type `warranty'."
+msgstr "ਵੇਰਵੇ ਲਈ, `warranty' ਲਿਖੋ"
+
+#: pybliographer.py:113 pybliographer.py:165
+#, python-format
+msgid "%s: error: can't open file `%s'"
+msgstr ""
+
+#: pybliographer.py:126
+#, python-format
+msgid "For help, run %s and type `help' at the prompt"
+msgstr ""
+
+#: pybliographer.py:135
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+
+#: scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr ""
+
+#: scripts/pybcompact.py:33
+#, python-format
+msgid "pybcompact: error: %s\n"
+msgstr ""
+
+#: scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "ਕੋਈ ਇੰਦਰਾਜ ਨਹੀਂ"
+
+#: scripts/pybcompact.py:141
+#, python-format
+msgid "can't find the following entries: %s"
+msgstr ""
+
+#: scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr ""
+
+#: scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr ""
+
+#: scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr ""
+
+#: scripts/pybformat.py:37
+#, python-format
+msgid "pybformat: error: %s\n"
+msgstr ""
+
+#: scripts/pybformat.py:43
+#, python-format
+msgid "pybformat: warning: %s\n"
+msgstr ""
+
+#: scripts/pybformat.py:140 scripts/pybtex.py:85
+#, python-format
+msgid "can't find style `%s'"
+msgstr "ਸ਼ੈਲੀ %s ਨਹੀਂ ਲੱਭੀ ਨਹੀਂ ਹੈ"
+
+#: scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr ""
+
+#: scripts/pybtex.py:37
+#, python-format
+msgid "pybtex: error: %s\n"
+msgstr ""
+
+#. warn the user that some entries were not found
+#: scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr ""
+
+#. If the LaTeX document declares no style...
+#: scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "ਕੋਈ ਸ਼ੈਲੀ ਪ੍ਰਭਾਸ਼ਿਤ ਨਹੀਂ"
+

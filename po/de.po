@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-14 02:10+0100\n"
-"PO-Revision-Date: 2005-01-14 02:08+0100\n"
+"POT-Creation-Date: 2005-01-17 14:28+0100\n"
+"PO-Revision-Date: 2005-01-17 14:28+0100\n"
 "Last-Translator: Frank Arnold <frank@scirocco-5v-turbo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,19 +72,19 @@ msgstr "Liste (%s)"
 msgid "Dictionary (%s, %s)"
 msgstr "Wörterbuch (%s, %s)"
 
-#: Pyblio/Fields.py:264
+#: Pyblio/Fields.py:262
 msgid "Illegal year value"
 msgstr "Falscher Wert für Jahr"
 
-#: Pyblio/Fields.py:268
+#: Pyblio/Fields.py:266
 msgid "Illegal month value"
 msgstr "Falscher Wert für Monat"
 
-#: Pyblio/Fields.py:272
+#: Pyblio/Fields.py:270
 msgid "Illegal day value"
 msgstr "Falscher Wert für Tag"
 
-#: Pyblio/Fields.py:459
+#: Pyblio/Fields.py:464
 #, python-format
 msgid "in %s"
 msgstr "in %s"
@@ -299,7 +299,7 @@ msgstr "Alle %d Einträge entfernen ?"
 msgid "Remove entry `%s' ?"
 msgstr "Eintrag »%s« entfernen ?"
 
-#: Pyblio/GnomeUI/Document.py:728 Pyblio/GnomeUI/Document.py:736
+#: Pyblio/GnomeUI/Document.py:732 Pyblio/GnomeUI/Document.py:740
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -308,7 +308,7 @@ msgstr ""
 "Es kann keine Verbindung zu LyX hergestellt werden:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:809
+#: Pyblio/GnomeUI/Document.py:813
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -317,19 +317,19 @@ msgstr ""
 "Konnte Dokumentation nicht anzeigen:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:817
+#: Pyblio/GnomeUI/Document.py:821
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dieses Programm steht unter der GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:818
+#: Pyblio/GnomeUI/Document.py:822
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome-Schnittstelle zum Pybliographer-System."
 
-#: Pyblio/GnomeUI/Document.py:828
+#: Pyblio/GnomeUI/Document.py:832
 msgid "Gnome Translation Team"
 msgstr "Gnome Translation Team"
 
-#: Pyblio/GnomeUI/Document.py:833
+#: Pyblio/GnomeUI/Document.py:837
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer-Homepage"
 
@@ -525,13 +525,17 @@ msgstr "Bitte einen Eintragstyp aus der vorhergehenden Seite wählen"
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Mit Eintragstyp <b>%s</b> assoziierte Felder"
 
-#: Pyblio/GnomeUI/FileSelector.py:50
+#: Pyblio/GnomeUI/FileSelector.py:46
 msgid "File"
 msgstr "Datei"
 
-#: Pyblio/GnomeUI/FileSelector.py:94
+#: Pyblio/GnomeUI/FileSelector.py:101
 msgid "Bibliography type:"
 msgstr "Bibliographietyp:"
+
+#: Pyblio/GnomeUI/FileSelector.py:119
+msgid " - According to file suffix - "
+msgstr " - Der Dateiendung entsprechend - "
 
 #: Pyblio/GnomeUI/Index.py:104
 msgid "Add..."
@@ -572,7 +576,7 @@ msgstr "[Eintragstyp]"
 msgid "[Key Value]"
 msgstr "[Schlüsselvariable]"
 
-#: Pyblio/GnomeUI/Utils.py:193
+#: Pyblio/GnomeUI/Utils.py:194
 msgid "The following errors occured:\n"
 msgstr "Die folgenden Fehler traten auf:\n"
 
@@ -966,11 +970,11 @@ msgstr "Benutzung: pybcompact <latex-Datei> <bibtex-Dateien...>"
 msgid "pybcompact: error: %s\n"
 msgstr "pybcompact:-Fehler: %s\n"
 
-#: scripts/pybcompact.py:97
+#: scripts/pybcompact.py:99
 msgid "no entry"
 msgstr "kein Eintrag"
 
-#: scripts/pybcompact.py:142 scripts/pybtext.py:240
+#: scripts/pybcompact.py:144 scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "die folgenden Einträge können nicht gefunden werden: %s"
