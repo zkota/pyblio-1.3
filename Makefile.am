@@ -20,7 +20,7 @@
 # 
 
 pybdir  = $(datadir)/$(PACKAGE)
-appdir  = $(datadir)/gnome/apps/Applications
+appdir  = $(datadir)/applications
 
 SUBDIRS = 	Pyblio 		\
 		glade		\
