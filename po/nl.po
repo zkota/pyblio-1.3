@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-12 04:28+0100\n"
-"PO-Revision-Date: 2004-03-12 11:26+0100\n"
+"POT-Creation-Date: 2004-06-04 04:20+0200\n"
+"PO-Revision-Date: 2004-06-06 13:25+0200\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "Alle %d ingangen verwijderen?"
 msgid "Remove entry `%s' ?"
 msgstr "Ingang `%s' verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:718 Pyblio/GnomeUI/Document.py:727
+#: Pyblio/GnomeUI/Document.py:724 Pyblio/GnomeUI/Document.py:733
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -308,7 +308,7 @@ msgstr ""
 "Kan niet verbinden met LyX:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:799
+#: Pyblio/GnomeUI/Document.py:805
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -317,19 +317,19 @@ msgstr ""
 "Kan documentatie niet weergeven:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:807
+#: Pyblio/GnomeUI/Document.py:813
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dit programma is auteursrechtelijk beschermd onder de GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:808
+#: Pyblio/GnomeUI/Document.py:814
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome gebruikersinterface voor het Pybliographer systeem."
 
-#: Pyblio/GnomeUI/Document.py:818
+#: Pyblio/GnomeUI/Document.py:824
 msgid "Gnome Translation Team"
 msgstr "Elros Cyriatan"
 
-#: Pyblio/GnomeUI/Document.py:823
+#: Pyblio/GnomeUI/Document.py:829
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer thuispagina"
 
@@ -431,9 +431,18 @@ msgstr "Ingang bewerken"
 msgid "Native Editing"
 msgstr "Bewerken in eigen formaat"
 
-#: Pyblio/GnomeUI/Editor.py:891
+#: Pyblio/GnomeUI/Editor.py:897
 msgid "Standard Editing"
 msgstr "Standaard bewerkmodus"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"Kan URL niet openen:\n"
+"%s"
 
 #: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
