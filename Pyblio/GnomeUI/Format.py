@@ -61,7 +61,7 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
         self._w_menu.set_history (0)
         self.menu_item = outlist [0]
 
-        path = os.path.join (version.prefix, 'Styles')
+        path = os.path.join (version.pybdir, 'Styles')
         
         self._w_style_entry.set_default_path (path)
         self._w_format.show ()

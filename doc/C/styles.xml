@@ -1,4 +1,4 @@
-<chapter>
+<chapter id="styles">
   <title>Creating new Styles</title>
   
   <para>It is possible to describe your own bibliography style, by
@@ -16,7 +16,7 @@
     which describes  the allowed  syntax in details.  This DTD  can be
     found in the same directory as the default style files.</para>
 
-  <sect1>
+  <sect1 id="styles-global">
     <title>Global formatting</title>
     
     <para>The XML style file describes how the different data fields
@@ -30,7 +30,7 @@
       functions, grouped in a module. Let's consider the following
       example:</para>
     
-    <programlisting>
+<programlisting>
   &lt;module name="generic">
     &lt;define field="author">full_authors&lt;/define>
     &lt;define field="editor">first_last_full_authors&lt;/define>
@@ -56,7 +56,7 @@
 
     </sect1>
 
-    <sect1>
+    <sect1 id="styles-definition">
       <title>Bibliography definition</title>
       
       <para>Once the basic formatting definitions have been specified,
@@ -125,7 +125,7 @@
     <para>The existing style files are a good source of examples.</para>
     </sect1>
 
-  <sect1>
+  <sect1 id="styles-future">
     <title>Future of the format</title>
 
     <para>In the future, this rudimentary format will most likely be
@@ -135,20 +135,3 @@
   </sect1>
 </chapter>
 
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:nil
-sgml-parent-document:("pyblio.sgml" "book" "chapter")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

@@ -44,4 +44,5 @@ s%@python_path@%@Python@%g
 s%@package@%@PACKAGE@%g
 s%@version@%@VERSION@%g
 s%@localedir@%${localedir}%g
+s%@p_datadir@%${datadir}%g
 "

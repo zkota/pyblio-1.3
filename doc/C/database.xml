@@ -1,12 +1,14 @@
 <refentry id="class-database">
+ <refentryinfo>
+  <title>Class database</title>
+ </refentryinfo>
   <refnamediv>
     <refname>Base.DataBase</refname>
     <refpurpose>Represents a bibliographic database</refpurpose>
   </refnamediv>
 
   <refsynopsisdiv>
-    <programlisting>
-class <classname>Base.DataBase</classname>:
+    <programlisting>class <classname>Base.DataBase</classname>:
     <link linkend="mem-database-key"><varname>self.key</varname></link>
     <link linkend="mem-database-id"><varname>self.id</varname></link>
 
@@ -176,21 +178,3 @@ l = len (database)
 
   </refsect1>
 </refentry>
-
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:nil
-sgml-parent-document:("pyblio.sgml" "reference" "refentry")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

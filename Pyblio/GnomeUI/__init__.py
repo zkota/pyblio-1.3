@@ -35,7 +35,8 @@ import gnome.ui
 
 from Pyblio import version
 
-gnome.init ('Pybliographer', version.version)
+prg = gnome.init ('pybliographer', version.version)
+prg.set_property (gnome.PARAM_APP_DATADIR, version.datadir)
 
 # clean up our garbage
 sys.argv = sys.argv [:2] + sys.argv [3:]

@@ -1,4 +1,7 @@
 <refentry id="class-selection">
+ <refentryinfo>
+  <title>Class selection</title>
+ </refentryinfo>
   <refnamediv>
     <refname>Selection.Selection</refname>
     <refpurpose>Defines restrictions on an iterator</refpurpose>
@@ -69,21 +72,3 @@ selection = Selection (search = some_search, sort = some_sorting)
 
   </refsect1>
 </refentry>
-
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:nil
-sgml-parent-document:("pyblio.sgml" "reference" "refentry")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

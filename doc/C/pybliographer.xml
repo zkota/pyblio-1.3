@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+
+<!ENTITY legal SYSTEM "legal.xml">
+
+<!ENTITY pyb "pybliographer">
+<!ENTITY pyc "pybliographic">
+<!ENTITY appversion "1.2.1">
+<!ENTITY manrevision "2.1">
+<!ENTITY date "January 2004">
+<!ENTITY app "Pybliographer">
+
+<!ENTITY preface SYSTEM "preface.xml">
+<!ENTITY gui    SYSTEM "gui.xml">
+<!ENTITY command SYSTEM "commandline.xml">
+<!ENTITY script SYSTEM "script.xml"> 
+<!ENTITY config SYSTEM "config.xml"> 
+<!ENTITY styles SYSTEM "styles.xml"> 
+
+<!ENTITY ref-iter   SYSTEM "iterator.xml"> 
+<!ENTITY ref-db     SYSTEM "database.xml"> 
+<!ENTITY ref-sel    SYSTEM "selection.xml"> 
+<!ENTITY ref-key    SYSTEM "key.xml"> 
+<!ENTITY ref-entry  SYSTEM "entry.xml"> 
+<!ENTITY ref-url    SYSTEM "url.xml"> 
+<!ENTITY ref-tester SYSTEM "tester.xml"> 
+<!ENTITY ref-sort   SYSTEM "sort.xml"> 
+
+<!ENTITY authors SYSTEM "authors.xml">
+]>
+
+<!-- =============Document Header ============================= -->
+<book id="index" lang="en">
+    <title>&app; Manual V&manrevision;</title>
+  <bookinfo>
+    <copyright> 
+      <year>2003, 2004</year> 
+      <holder>Zolt&#225;n K&#243;ta</holder> 
+    </copyright> 
+    <copyright> 
+      <year>1999-2004</year> 
+      <holder>Fr&#233;d&#233;ric Gobry</holder> 
+    </copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+
+   &legal;
+
+    <authorgroup> 
+      <author> 
+		<firstname>Zolt&#225;n</firstname> 
+		<surname>K&#243;ta</surname> 
+      </author> 
+      <author> 
+		<firstname>Fr&#233;d&#233;ric</firstname> 
+		<surname>Gobry</surname> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+		<revnumber>&app; Manual V&manrevision;</revnumber> 
+		<date>&date;</date> 
+		<revdescription> 
+	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
+	  	</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>&app; Documentation</revnumber> 
+		<date>1999</date> 
+		<revdescription> 
+	  		<para role="author">Fr&#233;d&#233;ric Gobry</para>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>This manual describes version &appversion; of &app;.
+    </releaseinfo> 
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>To report a bug or make a suggestion regarding the &app; 
+      application or this manual, follow the directions in the  
+      <ulink type="http" url="http://www.pybliographer.org/help">
+      Pybliographer help page</ulink>.
+      </para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+
+   <indexterm zone="index"> 
+    <primary>Pybliographer</primary> 
+   </indexterm> 
+   <indexterm zone="index"> 
+    <primary>pybliographer</primary> 
+  </indexterm>
+
+  </bookinfo> 
+
+
+<!-- ============= Document Body ============================= -->
+
+  <preface id="book-preface">
+    <title>Preface</title>
+    &preface;
+  </preface>
+
+  <chapter id="getting-started">
+    <title>Getting started with &app;</title>
+
+    <sect1 id="introduction">
+      <title>What is Pybliographer?</title>
+      <para>Pybliographer  is a  tool for  working  with bibliographic
+	databases. It provides a general framework that can be used to
+	manipulate these databases  with a simple graphical interface,
+	but  that  can  also be  easily  extended  by  the mean  of  a
+	scripting language, to fit a wide range of needs.</para>
+    </sect1>
+
+    <sect1 id="how-to-start">
+       <title>How to start Pybliographer?</title>
+       <para>You can start <application>&app;</application> in the 
+       following ways:</para>
+    <variablelist>
+    	<varlistentry>
+    		<term>Graphical mode</term>
+    		<listitem>
+    		<para>To start <application>&app;</application> in 
+                 graphical mode from a command line, type the following
+                 command, then press <keycap>Return</keycap>:</para>
+    		<para> 
+			<command>pybliographic</command> 
+    		</para> 
+    		<para>For information on the graphical interface, see
+                <xref linkend="graphical-interface" />.</para>
+		</listitem>
+    	</varlistentry>
+        <varlistentry>
+    		<term>Command line mode</term>
+    		<listitem>
+    		<para>You can start <application>&app;</application>
+                also in command line mode by typing the following 
+                command followed by pressing <keycap>Return</keycap>:
+                </para>
+    		<para> 
+			<command>pybliographer</command> 
+    		</para> 
+    		<para>For information on the command line interface, 
+                see <xref linkend="command-line" />.</para>
+		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>From the gnome menu</term>
+    		<listitem>
+    		<para>If the desktop file of the package is correctly
+                installed in your sytem, you can find a launcher under 
+                the gnome menu to start the graphical interface of &app;.
+                </para>
+    		</listitem>
+    	</varlistentry>
+    </variablelist> 
+    </sect1>
+  </chapter>
+
+
+    &gui;
+ 
+    &command;
+
+    &script;
+  
+    &config;
+  
+    &styles;
+
+  <reference id="reference">
+    <title>Class reference</title>
+
+    <partintro>
+      <para>Here, you'll find the list of all the basic classes used
+	in &pyb;. They belong to the <classname>Pyblio</classname>
+	module and hence are usually imported and used by code that
+	looks like:
+<programlisting> 
+from Pyblio import Base, Open, Selection
+
+entry = Base.Entry (...)
+
+</programlisting>
+      </para>
+    </partintro>
+
+    <!-- Base -->
+    &ref-db;
+    &ref-entry;
+
+    <!-- Fields -->
+    &ref-url;
+
+    <!-- Iterator -->
+    &ref-iter;
+
+    <!-- Key -->
+    &ref-key;
+    
+    <!-- Search -->
+    &ref-tester;
+
+    <!-- Selection -->
+    &ref-sel;
+
+    <!-- Sort -->
+    &ref-sort;
+
+  </reference>
+
+    &authors;
+
+</book>

@@ -85,7 +85,7 @@ class GladeWindow:
 
     def __init__ (self, parent = None, window = None):
         
-        gp = os.path.join (version.prefix, 'glade',
+        gp = os.path.join (version.pybdir, 'glade',
                            self.gladeinfo ['file'])
         
         self.xml = gtk.glade.XML (gp, window, domain = "pybliographer")

@@ -48,7 +48,7 @@ class FieldsDialog:
 
     def __init__ (self, parent = None):
 
-        gp = os.path.join (version.prefix, 'glade', 'fields1.glade')
+        gp = os.path.join (version.pybdir, 'glade', 'fields1.glade')
         
         self.xml = gtk.glade.XML (gp, 'fields1')
         self.xml.signal_autoconnect (self)

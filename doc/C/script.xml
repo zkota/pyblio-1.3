@@ -1,4 +1,4 @@
-<chapter>
+<chapter id="script-scripting">
   <title>The scripting language</title>
 
   <para>&pyb; is in fact a simple set of classes and functions written
@@ -11,7 +11,7 @@
   <para>To execute a script written for &pyb;, simply run </para>
 
   <screen>
-    <prompt>></> <command>pybliographer</> <filename>myscript.py</>
+    <prompt>bash$ </prompt><command>pybliographer </command><replaceable>myscript.py</replaceable>
   </screen>
 
   <para>You can alternatively start your script by 
@@ -23,7 +23,7 @@
     and make it executable.
   </para>
 
-  <sect1>
+  <sect1 id="script-scripting-existing">
     <title>Existing scripts</title>
 
     <para>Some  scripts  are  provided  with  pybliographer,  both  as
@@ -31,12 +31,11 @@
       readable         with        basical         knowledge        of
       <productname>python</productname>.</para>
 
-    <sect2>
+    <sect2 id="script-scripting-existing-pybcheck">
       <title>pybcheck</title>
       
-      
       <abstract>
-	<para>This tool takes a list  of files or directory, and check
+      	<para>This tool takes a list  of files or directory, and check
 	if  they   are  valid  (syntax,  no  entries   with  the  same
 	key,...)</para>
       </abstract>
@@ -44,12 +43,12 @@
       <para>It  is possible  to use  its output  directly in  an emacs
 	compile buffer,  in order to jump directly  to the encountered
 	errors. To do so,  type <keysym>M-x compile</keysym>, then the
-	command                                       <command>pybcheck
+	command <command>pybcheck
 	<filename>yourfiles</filename></command>,  and use  the middle
 	button of the mouse to jump into the faulty file.</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="script-scripting-existing-pybcompact">
       <title>pybcompact</title>
       
       <abstract>
@@ -69,7 +68,7 @@
 	BibTeX databases the corresponding entries.</para>
     </sect2>
 
-    <sect2>
+    <sect2 id="script-scripting-existing-pybconvert">
       <title>pybconvert</title>
       
       <abstract>
@@ -81,11 +80,11 @@
 	to BibTeX for example, just run: </para>
 
       <screen>
-	<prompt>&gt; </><command>pybconvert</> refer..bibtex <filename>toto.refer</> <filename>toto.bib</>
+	<prompt>bash$ </prompt><command>pybconvert</command> refer..bibtex <replaceable>toto.refer</replaceable> <replaceable>toto.bib</replaceable>
       </screen>
     </sect2>
 
-    <sect2>
+    <sect2 id="script-scripting-existing-pybformat">
       <title>pybformat</title>
 
       <abstract>
@@ -96,7 +95,7 @@
       
       <para>The general form of the command is</para>
       <screen>
-	<prompt>&gt; </><command>pybformat</> [options] <filename>database...</>
+	<prompt>bash$ </prompt><command>pybformat</command> [options] <filename>database...</filename>
       </screen>
 
       <para>This    command    will     use    the    format    called
@@ -137,7 +136,7 @@
     </sect2>
   </sect1>
 
-  <sect1>
+  <sect1 id="script-scripting-writing">
     <title>Writing your own scripts</title>
 
     <para>To start writing your own script, you can read what follows,
@@ -145,12 +144,12 @@
     to fit your  personal needs can be a good way  of testing what you
     read.</para>
 
-    <sect2>
+    <sect2 id="script-scripting-writing-concepts">
       <title>Some concepts</title>
 
       <para>This section describes some basic classes and ideas that
       are useful to understand how &pyb; works. More information can
-	be found in <xref linkend="reference">.</para> 
+	be found in <xref linkend="reference" />.</para>
 
       <para>In the following, all the  modules that will be refered to
 	belong to  the <symbol>Pyblio</symbol> domain.   So, to access
@@ -196,20 +195,3 @@
 
   </sect1>
 </chapter>
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:t
-sgml-parent-document:("pyblio.sgml" "book" "chapter")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

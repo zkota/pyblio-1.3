@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+<omf>
+  <resource>
+    <creator>
+      gobry@puck.ch (Fr&#233;d&#233;ric Gobry)
+    </creator>
+    <contributor>
+      kota@szbk.u-szeged.hu (Zolt&#225;n K&#243;ta)
+    </contributor>
+    <title>
+      Pybliographer Manual
+    </title>
+    <date>
+      2004-01-05
+    </date>
+    <version identifier="2.1" date="2004-01-05" description="Updated for Pybliographer 1.2.1"/>
+    <subject category="GNOME|Applications|Office"/>
+    <description>
+      User manual for the Pybliographer application.
+    </description>
+    <type>
+      user's guide
+    </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:/usr/share/gnome/help/pybliographer/C/pybliographer.xml"/>
+    <language code="C"/>
+    <relation seriesid="ef478e44-3f87-11d8-99e5-aa7db3d8400c"/>
+    <rights type="GNU FDL" license.version="1.1"/>
+  </resource>
+</omf>

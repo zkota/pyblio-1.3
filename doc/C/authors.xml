@@ -1,0 +1,82 @@
+  <appendix id="authors">
+    <title>Authors</title>
+     <para><application>&app;</application> was originally written by 
+     Frédéric Gobry. Many thanks to all contributors for their fruitful
+     work.</para>
+
+     <para><emphasis>Contributions:</emphasis></para>
+
+       <variablelist>
+         <varlistentry>
+         <term>Yuri Bongiorno</term>
+             <listitem>
+               <para>documentation, translations</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Hervé Dréau</term>
+             <listitem>
+               <para>internationalization, UI goodies</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Frédéric Gobry</term>
+             <listitem>
+               <para>project maintainer, core application, Gnome
+                interface, documentation</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Zoltán Kóta</term>
+             <listitem>
+               <para>documentation, packaging</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Travis Oliphant</term>
+             <listitem>
+               <para>original Ovid parser</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Darrell Rudmann</term>
+             <listitem>
+               <para>APA 4th edition style</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>Peter Schulte-Stracke</term>
+             <listitem>
+               <para>application design, requirement docs, import 
+                and ui code</para>
+             </listitem>
+         </varlistentry>
+         <varlistentry>
+         <term>John Vu</term>
+             <listitem>
+               <para>Medline database parser</para>
+             </listitem>
+         </varlistentry>
+         </variablelist>
+          
+    <para>
+     Thanks to everyone who helped out with the bug tracking process.
+    </para>
+      <para>
+       Many thanks also to the Documentation Translators and the Gnome 
+       Translation Teams.
+      </para>
+    <para>
+      This manual was written with the help of the GNOME Documentation
+      Project.
+    </para>         
+    <para>
+      If you contributed to this project but do not see your name here, 
+      please contact the project maintainer and he'll list you.
+    </para>
+   <para>
+      For more information please visit the
+      <application>&app;</application> <ulink
+      url="http://www.pybliographer.org" type="http">website</ulink>.
+   </para>
+</appendix>

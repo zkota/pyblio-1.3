@@ -18,36 +18,20 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
 
-SGML = 	gui.sgml pyblio.sgml script.sgml config.sgml \
-	iterator.sgml database.sgml selection.sgml key.sgml entry.sgml \
-	url.sgml styles.sgml
+# Standard Gnome boilerplate for doc installation
+figdir = figures
+docname = pybliographer
+lang = C
+omffile = pybliographer-C.omf
 
-EXTRA_DIST = \
-	topic.dat $(SGML)\
-	edit.png main.png open.png search.png
+entities = 						\
+	legal.xml authors.xml commandline.xml 		\
+	config.xml database.xml entry.xml gui.xml 	\
+	iterator.xml key.xml preface.xml 		\
+	script.xml selection.xml sort.xml 		\
+	styles.xml tester.xml url.xml
 
-pybliographic_helpdir = $(datadir)/gnome/help/pybliographic/C
+include $(top_srcdir)/xmldocs.make
 
-all: pyblio/book1.html
+dist-hook: app-dist-hook
 
-pyblio/book1.html: $(SGML)
-	db2html pyblio.sgml || echo "** can't regenerate documentation"
-
-install-data-local:
-	$(mkinstalldirs) $(DESTDIR)$(pybliographic_helpdir)
-	$(INSTALL_DATA)  $(srcdir)/topic.dat $(DESTDIR)$(pybliographic_helpdir)
-	@echo "installing HTML files"
-	@if test -d pyblio ; then cp -rf $(srcdir)/pyblio/* $(DESTDIR)$(pybliographic_helpdir) ; fi
-	@echo "installing PNG files"
-	@for file in $(srcdir)/*.png ; do \
-		$(INSTALL_DATA) $$file $(DESTDIR)$(pybliographic_helpdir) ; \
-	done
-
-dist-hook:
-	if test -d pyblio ; then cp -rf $(srcdir)/pyblio $(distdir) ; fi
-
-doc-pack:
-	mkdir documentation
-	cp -r pyblio/* *.png documentation
-	tar zcvf doc-pack.tar.gz documentation
-	rm -rf documentation

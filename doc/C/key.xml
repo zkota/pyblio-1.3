@@ -1,4 +1,7 @@
 <refentry id="class-key">
+ <refentryinfo>
+  <title>Class key</title>
+ </refentryinfo>
   <refnamediv>
     <refname>Key.Key</refname>
     
@@ -46,21 +49,3 @@ class <classname>Key.Key</classname>:
 
   </refsect1>
 </refentry>
-
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:nil
-sgml-parent-document:("pyblio.sgml" "reference" "refentry")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

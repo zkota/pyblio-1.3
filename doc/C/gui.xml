@@ -1,17 +1,18 @@
-<chapter>
+<chapter id="graphical-interface">
   <title>The graphical interface</title>
   
   <para>The graphical user interface is called &pyc;. It provides a
     simple  access  to the  most  common features  of the  underlying
     engine, &pyb; and lets you search, sort and modify bibliographic
     entries. Moreover, direct insertion of references into 
-    <ulink url="http://www.lyx.org/"><citetitle>Lyx</citetitle>
-    </ulink> and <ulink url="http://kile.sourceforge.net/">
-    <citetitle>Kile</citetitle></ulink>, direct queries on Medline, and
+    <ulink type="http" url="http://www.lyx.org/"><application>Lyx
+    </application></ulink> and <ulink type="http" 
+    url="http://kile.sourceforge.net/"><application>Kile</application>
+    </ulink>, direct queries on Medline, and
     saving selected references in different formats are also possible.
   </para>
 
-  <sect1>
+  <sect1 id="gui-creating">
     <title>Creating a new database</title> 
 
     <para>When &pyc; is opened, you  can immediately begin to create a
@@ -26,11 +27,11 @@
     </para>
     
     <para>You will find more information on the main window's usage in
-      <xref linkend="gui-navigate">.</para>
+      <xref linkend="gui-navigate" />.</para>
 
   </sect1>
 
-  <sect1>
+  <sect1 id="gui-opening">
     <title>Opening a database</title>
     
     <para>To    open    an    existing    database, click on the 
@@ -39,13 +40,22 @@
       <guimenu>File</guimenu> <guimenuitem>Open</guimenuitem>
       </menuchoice>.</para>
     
-    <Figure id="figopen">
-      <Title>Opening a database </Title> 
-      <Graphic FileRef="open"></Graphic>
-    </Figure>
+    <figure id="figopen">
+      <title>Opening a database</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/open.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; open file window.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
     
     <para>A   file   selection  dialog   will   pop   up  (see   <xref
-      linkend="figopen">) and let  you select a file or enter an
+      linkend="figopen" />) and let  you select a file or enter an
       URL. The type of the database  can also be selected. In the case
       of a  new database,  it is mandatory  to select a  type, whereas
       while opening an  existing database, the type can  be guessed if
@@ -57,7 +67,7 @@
     <title>Navigating in the entries</title>
     
     <para>Once you have opened a  database, or started to create a new
-      one, the  main window (see <xref  linkend="figmain">) displays a
+      one, the  main window (see <xref  linkend="figmain" />) displays a
       list of all  the entries on the top part of  it.  Clicking on an
       entry displays its full content on the lower part of the window.
       It is  also possible to  use the arrow  keys to navigate  in the
@@ -69,12 +79,21 @@
       toggles the entry without altering  the state of the rest of the
       selection.</para>
 
-    <Figure id="figmain">
-      <Title>The main window</Title> 
-      <Graphic FileRef="main"></Graphic>
-    </Figure>
-    
-    <para>Clicking the right button of the mouse in the list opens a
+    <figure id="figmain">
+      <title>The main window</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/main.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; main window.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
+
+     <para>Clicking the right button of the mouse in the list opens a
       contextual menu. With this menu you can:</para>
     
     <itemizedlist>
@@ -97,7 +116,7 @@
       the entries according to the corresponding field.</para>
   </sect1>
   
-  <sect1>
+  <sect1 id="gui-searching">
     <title>Searching</title>
     
     <para>&pyc; offers  a quite powerful serching  mechanism. To open
@@ -105,15 +124,24 @@
       button or on <menuchoice> <guimenu>Edit</guimenu>
       <guimenuitem>Search</guimenuitem> </menuchoice> in the menu.
 
-      The  dialog   that  appears  (see   <xref  linkend="figsearch">)
+      The  dialog   that  appears  (see   <xref  linkend="figsearch" />)
       displays a search form at the top.</para>
+
+    <figure id="figsearch">
+      <title>The Search dialog</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/search.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; search dialog.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
     
-    <Figure id="figsearch">
-      <Title>The Search dialog</Title> 
-      <Graphic FileRef="search"></Graphic>
-    </Figure>
-    
-    <sect2>
+    <sect2 id="gui-searching-simple">
       <title>Simple searches</title>
       
       <para>With a simple  search, you can select the  field that will
@@ -124,7 +152,7 @@
 
     </sect2>
     
-    <sect2>
+    <sect2 id="gui-searching-expert">
       <title>Expert searches</title>
       
       <para>An expert search is an expression that looks like:</para>
@@ -137,7 +165,7 @@
 	where     the     field    <emphasis>title</emphasis>     does
 	<emphasis>not</emphasis> match <emphasis>test</emphasis>.  The
 	boolean          <symbol>and</symbol>         is         noted
-	<symbol>&</symbol>.</para>
+	<symbol>&amp;</symbol>.</para>
       
       <para>There  are  other  commands  available for  this  type  of
 	search:</para>
@@ -173,7 +201,7 @@
       </itemizedlist>
     </sect2>
     
-    <sect2>
+    <sect2 id="gui-searching-hierarchical">
       <title>Hierarchical searches</title>
       
       <para>After a  search, only the selected items  are displayed in
@@ -197,14 +225,14 @@
     
   </sect1>
 
-  <sect1>
+  <sect1 id="gui-sorting">
     <title>Sorting</title>
 
     <para>Clicking on the title of each column in the main index
     provides some rudimentary way of sorting a database. A much
     powerful method is to open the sort dialog (in <menuchoice>
     <guimenu>Edit</guimenu> <guimenuitem>Sort</guimenuitem>
-    </menuchoice>). This menu, displayed in <xref linkend="figsort">,
+    </menuchoice>). This menu, displayed in <xref linkend="figsort" />,
     gives a list of fields which can be used as sort criterions, plus
     a flag indicating how they are currently used. By clicking twice 
     on the item, it is possible to choose how the field will be used:
@@ -226,25 +254,44 @@
     order in the list. To modify this order, simply drag and drop an
     item to change its position.</para>
 
-      <Figure id="figsort">
-	<Title>The Sort dialog</Title> 
-	<Graphic FileRef="sort"></Graphic>
-      </Figure>
+    <figure id="figsort">
+      <title>The Sort dialog</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/sort.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; sort dialog.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
+
   </sect1>
 
   <sect1 id="gui-edit">
     <title>Editing</title>
 
-    <sect2>
+    <sect2 id="gui-edit-basic">
       <title>Basic editing</title>
-      
-      <Figure id="figedit">
-	<Title>The Edition window</Title> 
-	<Graphic FileRef="edit"></Graphic>
-      </Figure>
+
+    <figure id="figedit">
+      <title>The Edition window</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/edit.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; edition window.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
       
       <para>The    edition    window    is    represented    in    <xref
-      linkend="figedit">.  On  the  right  of  each  field,  a  symbol
+      linkend="figedit" />.  On  the  right  of  each  field,  a  symbol
       indicates if &pyb;  has been able to render  all the information
       given in that  field. For example, a BibTeX  field containing an
       unknown command  name cannot  be correctly represented.  In that
@@ -254,7 +301,7 @@
     <warning>
       <para>If you edit such an  entry, you can loose  the additional
       information it  contained. To avoid this,  consider using native
-      editing (see <xref linkend="gui-native">).</para>
+      editing (see <xref linkend="gui-edit-native" />).</para>
     </warning>
 
     <para>To  edit the  entries, simply  type the  corresponding text,
@@ -270,7 +317,7 @@
     </para>
     <tip>
       <para>You can customize the mandatory and optional fields for 
-      the different type of entries. See <xref linkend="gui-settings">
+      the different type of entries. See <xref linkend="gui-settings" />
       for more information.</para>
     </tip>
 
@@ -279,17 +326,22 @@
       Gtk):</para>
     <itemizedlist>
       <listitem>
-	<para><keysym>Ctrl-TAB</keysym> to jump to the next field</para>
+	<para>
+        <keycombo><keycap>Ctrl</keycap><keycap>TAB</keycap></keycombo>
+        to jump to the next field</para>
       </listitem>
 	<listitem>
-	<para><keysym>Shift-TAB</keysym> to jump to the previous
-	  field</para>
+	<para>
+        <keycombo><keycap>Shift</keycap><keycap>TAB</keycap></keycombo>
+        to jump to the previous field</para>
       </listitem>
       <listitem>
-	<para><keysym>Ctrl-Enter</keysym> to accept the modifications</para>
+	<para>
+        <keycombo><keycap>Ctrl</keycap><keycap>Enter</keycap></keycombo>
+        to accept the modifications</para>
       </listitem>
       <listitem>
-	<para><keysym>Escape</keysym> to cancel the edition</para>
+	<para><keycap>Esc</keycap> to cancel the edition</para>
       </listitem>
     </itemizedlist>
 
@@ -302,7 +354,7 @@
       entry.</para>
     </sect2>
 
-    <sect2 id="gui-native">
+    <sect2 id="gui-edit-native">
       <title>Native editing</title>
 
       <para>For databases  like BibTeX that provide  a specific syntax
@@ -325,8 +377,8 @@
     
   </sect1>
 
-  <sect1>
-    <title>Using &pyc; with <productname>LyX</productname></title>
+  <sect1 id="gui-lyx">
+    <title>Using &pyc; with <application>LyX</application></title>
     
     <para>It  is possible  to directly  use &pyb;  in order  to insert
       bibliographic references  into LyX. To  do so, one first  has to
@@ -340,8 +392,8 @@
 
     <para>Then,  in &pyc;,  it is  possible to  select one  or several
       entries and insert their references into a running LyX simply by
-      clicking  the <guibutton>Cite</guibutton>  button,  or selecting
-      the
+      clicking  the <guibutton>Cite</guibutton>  toolbar button,  or 
+      selecting the
       <menuchoice><guimenu>Cite</guimenu>
 	<guimenuitem>Cite</guimenuitem>
       </menuchoice>
@@ -353,24 +405,34 @@
       therefore  it is necessary  to use  <command>bibtex</command> as
       described in the LyX documentation.</para>
     <note>
-    <para>&pyc; can interact with <productname>Kile</productname> 
-     (&gt;= 1.6) practically in the same way, since <productname>Kile
-     </productname> can also read <emphasis>lyx pipe</emphasis>.</para>
+    <para>&pyc; can interact with <application>Kile</application>
+     (&gt;= 1.6) practically in the same way, since <application>Kile
+     </application> can also read <emphasis>lyx pipe</emphasis>.</para>
     </note>
   </sect1>
 
-  <sect1>
+  <sect1 id="gui-formats">
     <title>Saving entries in different formats</title>
 
     <para>Selected entries can be saved in different formats using  
     the <menuchoice><guimenu>Cite</guimenu> <guimenuitem>Format
-    </guimenuitem></menuchoice> menu item (<xref linkend="figformat">).
+    </guimenuitem></menuchoice> menu item (<xref linkend="figformat" />).
     </para>
 
-    <Figure id="figformat">
-	<Title>Formatting entries</Title> 
-	<Graphic FileRef="format"></Graphic>
-      </Figure>
+    <figure id="figformat">
+      <title>Formatting entries</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/format.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; formatting entries dialog.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
+
 
     <para>As a result, a formatted output file is generated according 
     to a bibliographic style, either in HTML, LaTeX, Raw or Text format. 
@@ -378,22 +440,31 @@
     can also be created easily.</para> 
   </sect1>
 
-  <sect1>
+  <sect1 id="gui-pubmed">
     <title>Searching in PubMed</title>
     
     <para>With &pyc;, it is possible to perform a Medline search. To 
     use this option, click on the <menuchoice><guimenu>File</guimenu> 
     <guimenuitem>Medline query</guimenuitem></menuchoice> menu item. The
-    upcoming window is represented in <xref linkend="figmed">.</para>
+    upcoming window is represented in <xref linkend="figmed" />.</para>
 
-    <Figure id="figmed">
-	<Title>Medline query</Title> 
-	<Graphic FileRef="medline"></Graphic>
-      </Figure>
+    <figure id="figmed">
+      <title>Medline query</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/medline.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; medline search dialog.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
 
      <para>The keyword, you are looking for, should be written into the 
      <emphasis>Search PubMed for</emphasis> field. As it can be seen 
-     in <xref linkend="figmed">, a number of options (limitations) can
+     in <xref linkend="figmed" />, a number of options (limitations) can
      be set, which can help to obtain an optimal search result. The 
      matched references, resulted in by the query, appear in the main 
      window as a new database.</para>
@@ -405,23 +476,33 @@
     <para>Under the <menuchoice><guimenu>Settings</guimenu></menuchoice>
     menu, you can find some options to customize &pyb;.</para>
 
-    <sect2>
+    <sect2 id="gui-settings-fields">
     <title>Entry types and field names configuration</title>
 
-    <Figure id="figfields">
-	<Title>Configuration of fields and entry types</Title> 
-	<Graphic FileRef="fields"></Graphic>
-      </Figure>
+    <figure id="figfields">
+      <title>Configuration of fields and entry types</title>
+       <screenshot>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="figures/fields.png" format="PNG"/>
+         </imageobject>
+         <textobject> 
+	      <phrase>Shows &app; fields and entry types configuration
+              dialog.</phrase>
+	 </textobject> 
+        </mediaobject>
+       </screenshot>
+    </figure>
 
     <para>Selecting the <menuchoice><guimenu>Settings</guimenu> 
     <guimenuitem>Fields</guimenuitem></menuchoice> menu item, it 
     is possible to add or remove fields, to set their type, and 
     to define which fields should be associated with a given type of 
     entry. In addition, the mandatory and optional fields are also can
-    be varied. In <xref linkend="figfields">, as an example, the
+    be varied. In <xref linkend="figfields" />, as an example, the
     association of the Article entry type can be seen.</para>
     </sect2>
-    <sect2>
+    <sect2 id="gui-settings-pref">
     <title>Preferences</title>
 
     <para>Clicking on the <menuchoice><guimenu>Settings</guimenu> 
@@ -433,21 +514,3 @@
     </sect2>
   </sect1>
 </chapter>
-
-<!-- Keep this comment at the end of the file
-Local variables:
-mode: sgml
-sgml-omittag:t
-sgml-shorttag:t
-sgml-namecase-general:t
-sgml-general-insert-case:lower
-sgml-minimize-attributes:nil
-sgml-always-quote-attributes:t
-sgml-indent-step:2
-sgml-indent-data:t
-sgml-parent-document:("pyblio.sgml" "book" "chapter")
-sgml-exposed-tags:nil
-sgml-local-catalogs:nil
-sgml-local-ecat-files:nil
-End:
--->

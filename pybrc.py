@@ -36,7 +36,7 @@ Autoload.preregister ('key', 'Default', 'Pyblio.Utils')
 rootconfig = os.path.join ('Pyblio', 'ConfDir')
 
 if not os.path.isdir (rootconfig):
-    rootconfig = os.path.join (version.prefix, 'Pyblio', 'ConfDir')
+    rootconfig = os.path.join (version.pybdir, 'Pyblio', 'ConfDir')
     
 if os.path.isdir (rootconfig):
     Config.parse_directory (rootconfig)

@@ -1,0 +1,22 @@
+<chapter id="command-line">
+  <title>The command line interface</title>
+
+  <para>To start &app; in command line mode, type the following 
+  command:</para>
+  <screen>
+  <prompt>bash$ </prompt><userinput>pybliographer</userinput>
+  This is pybliographer, version 1.2.1
+  Copyright (C) 1998-2003 Frederic GOBRY
+  This is free software with ABSOLUTELY NO WARRANTY.
+  For details, type `warranty'.
+  Useful commands:
+         help     to get some help
+         quit     to quit
+                                                                                
+  >>
+  </screen>
+
+  <para>To get some help about how to use &app; in this mode, type 
+  <command>help</command> at the &pyb; prompt.</para>
+
+</chapter>

@@ -24,6 +24,7 @@
 ''' This module defines a Document class '''
 
 from gnome import ui
+import gnome
 import gtk
 import gtk.glade
 
@@ -53,7 +54,7 @@ class Document (Connector.Publisher):
     def __init__ (self, database):
 
 
-        gp = os.path.join (version.prefix, 'glade', 'pyblio.glade')
+        gp = os.path.join (version.pybdir, 'glade', 'pyblio.glade')
         
         self.xml = gtk.glade.XML (gp, 'main', domain = 'pybliographer')
         self.xml.signal_autoconnect (self)
@@ -745,6 +746,16 @@ class Document (Connector.Publisher):
 
         return
 
+    def on_documentation (self, *args):
+        import gobject
+
+        try:
+            gnome.help_display ('pybliographer', '')
+            
+        except gobject.GError, msg:
+            self.w.error (_("Can't display documentation:\n%s") % msg)
+            
+        return
     
     def about (self, *arg):
         
