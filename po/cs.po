@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-04 05:42+0200\n"
-"PO-Revision-Date: 2004-07-04 17:04+0200\n"
+"POT-Creation-Date: 2004-07-14 16:13+0200\n"
+"PO-Revision-Date: 2004-07-14 23:02+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -90,12 +90,12 @@ msgstr "Neplatná hodnota dne"
 msgid "in %s"
 msgstr "v %s"
 
-#: Pyblio/Format/BibTeX.py:368 Pyblio/Format/BibTeX.py:426
+#: Pyblio/Format/BibTeX.py:369 Pyblio/Format/BibTeX.py:427
 #, python-format
 msgid "key `%s' is malformed"
 msgstr "klíč `%s' není ve správném tvaru"
 
-#: Pyblio/Format/BibTeX.py:389 Pyblio/Format/BibTeX.py:410
+#: Pyblio/Format/BibTeX.py:390 Pyblio/Format/BibTeX.py:411
 #, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: klíč `%s' je již definován"
@@ -339,12 +339,13 @@ msgstr "Domovská stránka Pybliographeru"
 msgid "Last Name, First Name"
 msgstr "Příjmení, křestní jméno"
 
-#: Pyblio/GnomeUI/Editor.py:45 Pyblio/GnomeUI/Fields.py:41
-#: glade/config1.glade.h:14 glade/fields1.glade.h:19
+#: Pyblio/GnomeUI/Editor.py:45 Pyblio/GnomeUI/Editor.py:1285
+#: Pyblio/GnomeUI/Fields.py:41 glade/config1.glade.h:14
+#: glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Text"
 
-#: Pyblio/GnomeUI/Editor.py:142 Pyblio/GnomeUI/Editor.py:967
+#: Pyblio/GnomeUI/Editor.py:142 Pyblio/GnomeUI/Editor.py:968
 msgid "Error in native string parsing"
 msgstr "Chyba ve zpracovávání nativního řetězce"
 
@@ -416,7 +417,7 @@ msgstr "Povinné"
 msgid "Optional"
 msgstr "Nepovinné"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Editor.py:1199
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Editor.py:1200
 msgid "Notes"
 msgstr "Poznámky"
 
@@ -424,46 +425,50 @@ msgstr "Poznámky"
 msgid "Extra"
 msgstr "Přídavné"
 
-#: Pyblio/GnomeUI/Editor.py:864
+#: Pyblio/GnomeUI/Editor.py:865
 msgid "Invalid key format"
 msgstr "Neplatný formát klíček"
 
-#: Pyblio/GnomeUI/Editor.py:872
+#: Pyblio/GnomeUI/Editor.py:873
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Klíč `%s' již existuje"
 
 # GREAT idea
-#: Pyblio/GnomeUI/Editor.py:889
+#: Pyblio/GnomeUI/Editor.py:890
 #, python-format
 msgid "The `%s' field contains a non Latin-1 symbol"
 msgstr "Pole `%s' obsahuje symbol mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:959
+#: Pyblio/GnomeUI/Editor.py:960
 msgid "Your text contains non Latin-1 symbols"
 msgstr "Váš text obsahuje symboly mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:980
+#: Pyblio/GnomeUI/Editor.py:981
 msgid "Edit entry"
 msgstr "Upravit položku"
 
-#: Pyblio/GnomeUI/Editor.py:994 Pyblio/GnomeUI/Editor.py:1065
+#: Pyblio/GnomeUI/Editor.py:995 Pyblio/GnomeUI/Editor.py:1066
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:1094
+#: Pyblio/GnomeUI/Editor.py:1095
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:1221
+#: Pyblio/GnomeUI/Editor.py:1222
 msgid "mandatory"
 msgstr "povinné"
 
-#: Pyblio/GnomeUI/Editor.py:1286
+#: Pyblio/GnomeUI/Editor.py:1288
 msgid "Enter text here"
 msgstr "Sem zadejte text"
 
-#: Pyblio/GnomeUI/Editor.py:1341
+#: Pyblio/GnomeUI/Editor.py:1340
+msgid "New Annotation Name"
+msgstr "Název nové poznámky"
+
+#: Pyblio/GnomeUI/Editor.py:1346
 msgid "Name of the new annotation:"
 msgstr "Název nové poznámky:"
 
@@ -1011,7 +1016,8 @@ msgstr "nedefinován styl"
 
 #: scripts/pybtext.py:40
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
-msgstr "použití: pybtext [-o výstupnísoubor] [-s styl] <soubortextu> <souborybib...>"
+msgstr ""
+"použití: pybtext [-o výstupnísoubor] [-s styl] <soubortextu> <souborybib...>"
 
 #: scripts/pybtext.py:44
 #, python-format
