@@ -39,7 +39,6 @@ class Sort:
         
         S = []
         extractors = [f.get_extractor() for f in self.fields]
-
         for e in iterator:
             s = []
             for f in extractors:

@@ -30,6 +30,14 @@ class SearchSelection (Iterator):
         self.iter   = iterator
         return
 
+    def __iter__ (self):
+        test = self.search.match
+        for i in self.iter :
+            if test(i):
+                yield i
+        raise StopIteration
+    
+
 
     def first (self):
         entry = self.iter.first ()

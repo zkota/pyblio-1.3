@@ -29,8 +29,12 @@ class Iterator:
         return self
 
     def __iter__ (self):
-        raise NotImplementedError
-
+        retval =  self.first ()
+        while retval != None:
+            yield retval
+            retval = self.next()
+        raise StopIteration
+            
     def set_position (self, pos=0):
         self._position = 0
 
