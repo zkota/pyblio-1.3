@@ -51,7 +51,7 @@ all: $(MO)
 %.mo: %.po
 	msgfmt $< -o $@
 
-install-data-hook:
+install-data-hook: all
 	for f in $(LANGUAGES) ; \
 	  do $(mkinstalldirs) $(DESTDIR)$(localedir)/$${f}/LC_MESSAGES ; \
 	  $(install_sh_DATA) $${f}.mo \

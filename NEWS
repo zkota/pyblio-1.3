@@ -1,5 +1,12 @@
 -*- text -*-
 
+New in 1.2.1 - 2003-11-
+
+        * Updated translations (fr, it, nl, pt, sr)
+	* Fixed crash on document history
+	* Better detection of requirements
+
+
 New in 1.2.0 - 2003-11-13
 
         * New improved Fields and Entries configuration dialog

@@ -47,11 +47,18 @@ try:
 	
     pygtk.require ('2.0')
     
-    import gnome
+    import gnome, gtk
     import gtk.glade
     import gnome.ui
     import gconf
 
+    v = string.join (map (str, gtk.pygtk_version), '.')
+    
+    fd = open ('conftest.out', 'a')
+    fd.write ('PyGtk_Version="%s"\n' % v)
+    fd.close ()
+
+    
 except ImportError, msg:
 
     error ('missing dependency: %s' % msg)

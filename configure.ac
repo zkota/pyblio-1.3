@@ -23,7 +23,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.57)
 
-AC_INIT(pybliographer, 1.2.0)
+AC_INIT(pybliographer, 1.2.1)
 AM_INIT_AUTOMAKE
 
 AC_CONFIG_SRCDIR(pybliographer.py)
@@ -55,7 +55,7 @@ fi
 
 if test $result = 0 ; then
 	if test -z "${Status}" ; then
-	  AC_MSG_RESULT([yes (python version ${Python_Version})])
+	  AC_MSG_RESULT([yes (python ${Python_Version}, python-gtk ${PyGtk_Version})])
         else
           AC_MSG_RESULT([assuming yes (${Status})])
         fi

@@ -33,22 +33,27 @@ sys.path.append (data_pybdir)
 sys.path.append (lib_pybdir)
 sys.path.insert (0, '.')
 
+import locale
+locale.setlocale (locale.LC_ALL, '')
+
 import gettext
 gettext.install (progname, localedir, unicode = True)
 
+charset = locale.getlocale () [1]
+
 def print_version ():
-	print _("This is %s, version %s") % (progname, version)
+	print (_("This is %s, version %s") % (progname, version)).encode (charset)
 
 def copyright ():
 	print 'Copyright (C) 1998-2003 Frederic GOBRY'
-	print _("This is free software with ABSOLUTELY NO WARRANTY.")
-	print _("For details, type `warranty'.")
+	print _("This is free software with ABSOLUTELY NO WARRANTY.").encode (charset)
+	print _("For details, type `warranty'.").encode (charset)
 
 def warranty ():
 	print_version ()
 	print 'Copyright (C) 1998-2003 Frederic GOBRY'
 	
-	print _("This is free software with ABSOLUTELY NO WARRANTY.")
+	print _("This is free software with ABSOLUTELY NO WARRANTY.").encode (charset)
 	print """
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -105,8 +110,8 @@ for opt, value in optlist:
 		try:
 			os.stat (value)
 		except os.error:
-			print _("%s: error: can't open file `%s'") \
-			      % (progname, value)
+			print (_("%s: error: can't open file `%s'") \
+			      % (progname, value)).encode (charset)
 			sys.exit (1)
 		
 		sources.append (value)
@@ -118,8 +123,8 @@ for opt, value in optlist:
 
 	if opt == '-h' or opt == '--help':
 		print_version ()
-		print _("For help, run %s and type `help' at the prompt") \
-		      % progname
+		print (_("For help, run %s and type `help' at the prompt") 
+		       % progname).encode (charset)
 		sys.exit (0)
 		
 # ---------- Initialisation
@@ -127,7 +132,7 @@ for opt, value in optlist:
 if not quiet:
 	print_version ()
 	copyright ()
-	print _("Useful commands:\n	help     to get some help\n	quit     to quit\n")
+	print _("Useful commands:\n	help     to get some help\n	quit     to quit\n").encode (charset)
 
 # ---------- Lire les fichiers de conf
 
@@ -157,7 +162,7 @@ if len (args) > 0 :
 	try:
 		os.stat (filename)
 	except os.error:
-		print _("%s: error: can't open file `%s'") % (progname, filename)
+		print (_("%s: error: can't open file `%s'") % (progname, filename)).encode (charset)
 		sys.exit (1)
 	else:
 		execfile (filename, user_global)

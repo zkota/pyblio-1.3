@@ -73,8 +73,12 @@ class Loader:
         try:
             exec ('import ' + self.module)
         except ImportError, err:
-            print _("warning: can't import %s: %s") % \
-                  (self.module, str (err))
+
+            import locale
+            charset = locale.getlocale () [1]
+            
+            print (_("warning: can't import %s: %s") %
+                   (self.module, str (err))).encode (charset)
             return 0
         
         self.is_loaded ()
