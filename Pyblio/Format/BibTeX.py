@@ -57,7 +57,7 @@ def _fieldtype (field):
     return 0
 
 
-extended_date = re.compile ('^[\{"]\s*(\d+)\s*[\}"]\s*#\s*(\w+)$')
+extended_date = re.compile ('^[\{"]?\s*(\d+)\s*[\}"]?\s*#\s*(\w+)$')
 
 
 class BibTextField (Text):
@@ -478,6 +478,8 @@ def entry_write (entry, output):
     for key in convert.keys ():
         monthlist [convert [key] - 1] = key
 
+    dateformat = Config.get ('bibtex+/dateformat').data
+    
     if native:
 	# loop over all the fields
 	for field in entry.keys ():
@@ -490,7 +492,8 @@ def entry_write (entry, output):
 		if date.month:
                     month = monthlist [date.month - 1]
                     if date.day:
-                        month = '{%d } # %s' % (date.day, month)
+                        month = dateformat % {'day':    date.day,
+                                              'month' : month}
                         
 		    dico [datefields [field] [1]] = month
 			 
@@ -510,7 +513,8 @@ def entry_write (entry, output):
 		if date.month:
                     month = monthlist [date.month - 1]
                     if date.day:
-                        month = '{%d } # %s' % (date.day, month)
+                        month = dateformat % {'day':    date.day,
+                                              'month' : month}
                         
 		    dico [datefields [field] [1]] = month
 			 

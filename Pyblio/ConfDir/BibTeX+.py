@@ -20,6 +20,9 @@ Config.define ('bibtex+/override', """ A boolean indicating if the
 macro definitions provided here should override the ones given in a
 file """, Config.Boolean ())
 
+Config.define ('bibtex+/dateformat', """ A template used for date formatting """,
+               Config.String ())
+
 
 Config.set ('bibtex+/braces', 1)
 
@@ -30,4 +33,5 @@ Config.set ('bibtex+/capitalize', {
                
 Config.set ('bibtex+/override', 0)
 
+Config.set ('bibtex+/dateformat', "{%(day)d } # %(month)s")
 
