@@ -1,5 +1,17 @@
 -*- text -*-
 
+New in 1.2.5 - 2004-11-25
+
+       * translation of the extra scripts  (Zoltán)
+       * fixed use of translations in the interface (Zoltán)
+       * fixed arguments handling in pybliographic (Frédéric)
+       * Gnome 2.8 compatibility (Zoltán)
+       * fixed bugs #1024414, #1024412 (Fred)
+       * use of the new Gtk File selector (Tom Parker)
+       * many fixes in the Ovid parser (Peter)
+       * fixes and improvements in the synthetic fields (Peter)
+
+
 New in 1.2.4 - 2004-07-18
 
         * Fixes in the ISI and Ovid parsers (Peter)
