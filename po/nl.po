@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "POT-Creation-Date: 2003-10-07 20:41+0200\n"
-"PO-Revision-Date: 2003-10-24 22:24+0100\n"
+"PO-Revision-Date: 2003-10-31 21:35+0100\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. ok, load the module
 #: Pyblio/Autoload.py:57
 #, python-format
@@ -61,7 +61,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Prendre ses propres entrees
 #. et ajouter celles qu'on n'a pas
 #. call a key generator
@@ -97,7 +97,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. type definition
 #. callback definition
 #: Pyblio/Config.py:53
@@ -144,7 +144,7 @@ msgstr "Element in `%s'"
 #: Pyblio/Config.py:270
 #, python-format
 msgid "Tuple (%s)"
-msgstr ""
+msgstr "Resultaat paar (%s)"
 
 #: Pyblio/Config.py:291
 #, python-format
@@ -219,7 +219,7 @@ msgstr "Woordenboek (%s, %s)"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -239,7 +239,7 @@ msgstr "Woordenboek (%s, %s)"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. manually split the author into subfields.
 #. strict parsing, the whole block is the last name
 #. lazy parsing, last name is after lowercase or is last word
@@ -282,7 +282,7 @@ msgstr "in %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Extension module for BibTeX files
 #. this database is shared between all the unpickled entries
 #. Check for date fields
@@ -359,7 +359,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Extension module for Medline files
 #. rewind the file
 #. Skip whitespace
@@ -421,7 +421,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
@@ -443,7 +443,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. create list from month dict
 #. rewind the file
 #. skip blank and <\d+> line
@@ -493,7 +493,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Extension module for Refer files
 #. Martin Wilck <martin@tropos.de> added support for citation label field.
 #. rewind the file
@@ -525,7 +525,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. completer le texte
 #. completer les champs
 #. This file is part of pybliographer
@@ -547,7 +547,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. TO DO:
 #. Parent for dialogue
 #. List view troubles
@@ -630,7 +630,7 @@ msgstr "Waarde:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. The Index list
 #. The text area
 #. Status bar
@@ -864,7 +864,7 @@ msgstr "Pybliographer thuispagina"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. TO FIX
 #. entry editor for more than 50 chars
 #: Pyblio/GnomeUI/Editor.py:38
@@ -980,7 +980,7 @@ msgstr "Standaard bewerkmodus"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. currently, nothing to display
 #. Display this entry
 #. This file is part of pybliographer
@@ -1002,7 +1002,7 @@ msgstr "Standaard bewerkmodus"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. TO DO:
 #. correctly create entry types
 #: Pyblio/GnomeUI/Fields.py:38
@@ -1083,7 +1083,7 @@ msgstr "Veld"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1103,7 +1103,7 @@ msgstr "Veld"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: Pyblio/GnomeUI/FileSelector.py:40
 msgid "File"
 msgstr "Bestand"
@@ -1139,7 +1139,7 @@ msgstr "Soort bibliografie:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Fill the output format drop-down menu
 #. This file is part of pybliographer
 #.
@@ -1160,7 +1160,7 @@ msgstr "Soort bibliografie:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. TO FIX
 #.
 #. - DnD with the world
@@ -1209,7 +1209,7 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1229,7 +1229,7 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. register several callbacks
 #. FIXME.
 #. history.recently_used (file, 'application/x-bibtex',
@@ -1255,7 +1255,7 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. the tree model contains a string that explains the query,
 #. and a python object representing the actual query.
 #. the view does not display the python column, of course.
@@ -1314,7 +1314,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This dialog is described as a glade XML file
 #. Only the first two rows are visibles, the others are for
 #. internal bookkeeping.
@@ -1359,7 +1359,7 @@ msgstr "[Sleutel waarde]"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This is a class variable that contains the file name to load for
 #. each instance of a subclass.
 #. Set the parent window. The root widget is not necessarily
@@ -1387,7 +1387,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. Perform the first initialisation of Gnome, so that the options passed to the script
 #. are not passed to Gnome
 #. correctly identify the program
@@ -1411,7 +1411,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. --------------------------------------------------
 #. --------------------------------------------------
 #. This file is part of pybliographer
@@ -1433,7 +1433,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1453,7 +1453,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1473,7 +1473,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: Pyblio/LyX.py:39
 #, python-format
 msgid "no input pipe `%s'"
@@ -1509,7 +1509,7 @@ msgstr "geen uitvoerpijp `%s'"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: Pyblio/Open.py:97
 #, python-format
 msgid "method `%s' provides no opener"
@@ -1547,7 +1547,7 @@ msgstr "Bibliografie stijl:"
 
 #: glade/format.glade.h:3
 msgid "Format entries"
-msgstr ""
+msgstr "Ingangen formatteren"
 
 #: glade/format.glade.h:4
 msgid "Output file:\n"
@@ -1586,6 +1586,8 @@ msgid ""
 "Only items \n"
 "ahead of print"
 msgstr ""
+"Alleen items \n"
+"vóór druk"
 
 #: glade/medline.glade.h:10
 msgid ""
@@ -1729,7 +1731,7 @@ msgstr "Geavanceerd zoeken"
 
 #: glade/search-intl.c:19
 msgid "label9"
-msgstr ""
+msgstr "label9"
 
 #: glade/search.glade.h:6
 msgid "Query"
@@ -1763,7 +1765,7 @@ msgstr "Instellen als standaard"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: pybliographer.py:41
 #, python-format
 msgid "This is %s, version %s"
@@ -1830,7 +1832,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. check the arguments
 #. list containing the broken entries
 #. set the strictness for bibtex files
@@ -1860,7 +1862,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: scripts/pybcompact.py:29
 msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
 msgstr "gebruik: pybcompact <latexbestand> <bibtexbestanden...>"
@@ -1922,7 +1924,7 @@ msgstr "kan de volgende ingangen niet vinden: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: scripts/pybconvert.py:28
 msgid "usage: pybconvert <source>..<target> <input> [output]"
 msgstr "gebruik: pybconvert <bron>..<doel> <invoer> [uitvoer]"
@@ -1951,7 +1953,7 @@ msgstr "pybconvert: slecht conversieformaat"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: scripts/pybformat.py:33
 msgid "usage: pybformat [bibtexfiles...]\n"
 msgstr "gebruik: pybformat [bibtexbestanden...]\n"
@@ -1997,7 +1999,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
@@ -2018,7 +2020,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.3 2003/10/30 16:12:37 fredgo Exp $
+#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
 #: scripts/pybtex.py:33
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
 msgstr "gebruik: pybtex <latexbestand> [bibtexbestanden...]"
