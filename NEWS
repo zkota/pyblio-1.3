@@ -10,6 +10,7 @@ New in 1.2.5 - 2004-11-25
        * use of the new Gtk File selector (Tom Parker)
        * many fixes in the Ovid parser (Peter)
        * fixes and improvements in the synthetic fields (Peter)
+       * fixed search of accented words (Frédéric)
 
 
 New in 1.2.4 - 2004-07-18
