@@ -53,15 +53,6 @@ install-data-hook:
 	  $(DESTDIR)$(localedir)/$${f}/LC_MESSAGES/$(PACKAGE).mo ; \
 	done
 
-
-update-potfiles:
-	echo $(top_srcdir)/pybliographer.in > ,,POTFILES
-	find $(top_srcdir)/Pyblio  -name '*.py'    >> ,,POTFILES
-	find $(top_srcdir)/scripts -name '*.py'    >> ,,POTFILES
-	find $(top_srcdir)/glade   -name '*.glade' >> ,,POTFILES
-	sed -e 's/^$(top_srcdir)\///' ,,POTFILES | sort > $(srcdir)/POTFILES.in
-	rm -f ,,POTFILES
-
 check:
 	for f in $(LANGUAGES) ; do \
 	  echo "$$f: "`msgfmt --statistics $$f.po 2>&1` ; \
