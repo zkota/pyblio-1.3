@@ -1,7 +1,7 @@
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2003 Frederic GOBRY
-# Email : gobry@idiap.ch
+# Email : gobry@pybliographer.org
 # 	   
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
-# $Id: Medline.py,v 1.5.2.6 2003/08/06 09:09:52 fredgo Exp $
+# 
 
 # Extension module for Medline files
 

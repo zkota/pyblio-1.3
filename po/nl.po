@@ -17,7 +17,7 @@ msgstr ""
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -45,7 +45,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -81,7 +81,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -203,7 +203,7 @@ msgstr "Woordenboek (%s, %s)"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -223,7 +223,7 @@ msgstr "Woordenboek (%s, %s)"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -266,7 +266,7 @@ msgstr "in %s"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -343,7 +343,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -405,7 +405,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -427,7 +427,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -477,7 +477,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -509,7 +509,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -531,7 +531,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -614,7 +614,7 @@ msgstr "Waarde:"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -848,7 +848,7 @@ msgstr "Pybliographer thuispagina"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -964,7 +964,7 @@ msgstr "Standaard bewerkmodus"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -986,7 +986,7 @@ msgstr "Standaard bewerkmodus"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1067,7 +1067,7 @@ msgstr "Veld"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1087,7 +1087,7 @@ msgstr "Veld"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1123,7 +1123,7 @@ msgstr "Soort bibliografie:"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1144,7 +1144,7 @@ msgstr "Soort bibliografie:"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1193,7 +1193,7 @@ msgstr "Verwijderen..."
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1213,7 +1213,7 @@ msgstr "Verwijderen..."
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1239,7 +1239,7 @@ msgstr "Verwijderen..."
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1298,7 +1298,7 @@ msgstr ""
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1343,7 +1343,7 @@ msgstr "[Sleutel waarde]"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1371,7 +1371,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1395,7 +1395,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1417,7 +1417,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1437,7 +1437,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1457,7 +1457,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1493,7 +1493,7 @@ msgstr "geen uitvoerpijp `%s'"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1747,7 +1747,7 @@ msgstr "Instellen als standaard"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1814,7 +1814,7 @@ msgstr ""
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1844,7 +1844,7 @@ msgstr ""
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1906,7 +1906,7 @@ msgstr "kan de volgende ingangen niet vinden: %s"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1935,7 +1935,7 @@ msgstr "pybconvert: slecht conversieformaat"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -1981,7 +1981,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
@@ -2002,7 +2002,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@idiap.ch
+#. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
 #. modify it under the terms of the GNU General Public License
