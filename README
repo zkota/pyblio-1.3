@@ -39,3 +39,18 @@ You can then run several programs :
 
 For more configuration options, have a look at the output of ./configure --help
 
+* Troubleshooting
+  ---------------
+
+If the configure script reports the following errors:
+
+ ** "error in python modules dependencies:  No module named ..."
+ 
+   This means that a required module is not installed. Unfortunately,
+   depending on your distribution, the actual package to install can
+   be named differently. Check on the help pages of your distribution.
+
+ ** "broken recode version"
+
+   Your recode package does not behave properly.  Consult
+   http://pybliographer.org/help/recode for more information.

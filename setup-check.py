@@ -61,7 +61,7 @@ try:
     
 except ImportError, msg:
 
-    error ('missing dependency: %s' % msg)
+    error ('error in python modules dependencies: %s' % msg)
 
 except AssertionError, msg:
 
@@ -100,7 +100,7 @@ try:
 
 except ImportError, msg:
 
-    error ('missing dependency: %s' % msg)
+    error ('error in python modules dependencies: %s' % msg)
 
     
 except:
