@@ -128,7 +128,8 @@ class SearchDialog (Connector.Publisher, Utils.GladeWindow):
                 'after' :    TextUI.after,
                 }
             
-            search = self._w_expert_text.get_text ()
+            search = self._w_expert_text.get_text ().encode ('latin-1')
+            
             try:
                 exec ('tester = ' + search, user_global)
             except:
@@ -157,7 +158,7 @@ class SearchDialog (Connector.Publisher, Utils.GladeWindow):
 
             if field == ' - any field - ' or field == '':
                 try:
-                    test = Search.AnyTester (match)
+                    test = Search.AnyTester (match.encode ('latin-1'))
                 except re.error, err:
                     error = 1
                     
