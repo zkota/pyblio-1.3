@@ -1,10 +1,15 @@
 <chapter>
   <title>The graphical interface</title>
   
-  <para>The graphical  user interface is  called &pyc;. It  provides a
-    simple  access  to the  most  common  features  of the  underlying
-    engine, &pyb;  and lets you search, sort  and modify bibliographic
-    entries.</para>
+  <para>The graphical user interface is called &pyc;. It provides a
+    simple  access  to the  most  common features  of the  underlying
+    engine, &pyb; and lets you search, sort and modify bibliographic
+    entries. Moreover, direct insertion of references into 
+    <ulink url="http://www.lyx.org/"><citetitle>Lyx</citetitle>
+    </ulink> and <ulink url="http://kile.sourceforge.net/">
+    <citetitle>Kile</citetitle></ulink>, direct queries on Medline, and
+    saving selected references in different formats are also possible.
+  </para>
 
   <sect1>
     <title>Creating a new database</title> 
@@ -15,8 +20,10 @@
 
     <para>To  add   a  new  entry,   you  can  use   the  <menuchoice>
 	<guimenu>Edit</guimenu>       <guimenuitem>Add...</guimenuitem>
-	</menuchoice> menu, or click with the right button in the list
-	window and select <guibutton>Add...</guibutton> </para>
+	</menuchoice> menu, directly the <guibutton>Add</guibutton> 
+        toolbar button or click with the right button in the list window 
+        and select <guibutton>Add...</guibutton>
+    </para>
     
     <para>You will find more information on the main window's usage in
       <xref linkend="gui-navigate">.</para>
@@ -26,11 +33,10 @@
   <sect1>
     <title>Opening a database</title>
     
-    <para>To    open    an    existing    database,    go    in    the
-    <guimenu>File</guimenu> menu, and select
-      <menuchoice>
-      <guimenu>File</guimenu>
-	<guimenuitem>Open</guimenuitem>
+    <para>To    open    an    existing    database, click on the 
+    <guibutton>Open</guibutton> toolbar button or go in the 
+    <guimenu>File</guimenu> menu, and select <menuchoice>
+      <guimenu>File</guimenu> <guimenuitem>Open</guimenuitem>
       </menuchoice>.</para>
     
     <Figure id="figopen">
@@ -39,7 +45,7 @@
     </Figure>
     
     <para>A   file   selection  dialog   will   pop   up  (see   <xref
-      linkend="figopen">) and let  you select a file name  or enter an
+      linkend="figopen">) and let  you select a file or enter an
       URL. The type of the database  can also be selected. In the case
       of a  new database,  it is mandatory  to select a  type, whereas
       while opening an  existing database, the type can  be guessed if
@@ -94,8 +100,9 @@
   <sect1>
     <title>Searching</title>
     
-    <para>&pyc; offers  a quite powerful seraching  mechanism. To open
-      the search dialog, click on <menuchoice> <guimenu>Edit</guimenu>
+    <para>&pyc; offers  a quite powerful serching  mechanism. To open
+      the search dialog, click on the <guibutton>Find</guibutton> toolbar
+      button or on <menuchoice> <guimenu>Edit</guimenu>
       <guimenuitem>Search</guimenuitem> </menuchoice> in the menu.
 
       The  dialog   that  appears  (see   <xref  linkend="figsearch">)
@@ -118,9 +125,9 @@
     </sect2>
     
     <sect2>
-      <title>Advanced searches</title>
+      <title>Expert searches</title>
       
-      <para>An advanced search is an expression that looks like:</para>
+      <para>An expert search is an expression that looks like:</para>
       
       <programlisting>has('author','name') | -has('title','test')</programlisting>
       
@@ -182,6 +189,10 @@
       
       <para>Right-clicking in this tree pops up a contextual menu that
 	allows you to remove unuseful searches.</para>
+
+      <para>To select the full list of database entries again, just
+        click on the <emphasis>Full database</emphasis> item at the top
+        of the search tree.</para>
     </sect2>
     
   </sect1>
@@ -195,25 +206,22 @@
     <guimenu>Edit</guimenu> <guimenuitem>Sort</guimenuitem>
     </menuchoice>). This menu, displayed in <xref linkend="figsort">,
     gives a list of fields which can be used as sort criterions, plus
-    a flag indicating how they are currently used. By clicking on the
-    left column, it is possible to choose how the field will be used:
+    a flag indicating how they are currently used. By clicking twice 
+    on the item, it is possible to choose how the field will be used:
       <itemizedlist>
 	<listitem>
 	  <para>Nothing means the field is not in use.</para>
 	</listitem>
 	<listitem>
-	  <para>A <symbol>&gt;</symbol> symbol means sort in
+	  <para>A <symbol>triangle</symbol>-like symbol means sort in
 	    <emphasis>ascending order</emphasis>.</para>
 	</listitem>
 	<listitem>
-	  <para>A <symbol>&lt;</symbol> symbol means sort in
-	    <emphasis>descending order</emphasis>.</para>
+	  <para>An <symbol>upside down triangle</symbol>-like symbol
+             means sort in <emphasis>descending order</emphasis>.</para>
 	</listitem>
       </itemizedlist>
     </para>
-    <para>By clicking on the <guibutton>Reorder</guibutton> button, it
-    is possible to group the activated fields on the top of the list,
-    for a more convenient access.</para>
     <para>The order in which the sorting is performed depends on the
     order in the list. To modify this order, simply drag and drop an
     item to change its position.</para>
@@ -240,12 +248,11 @@
       indicates if &pyb;  has been able to render  all the information
       given in that  field. For example, a BibTeX  field containing an
       unknown command  name cannot  be correctly represented.  In that
-      case, &pyb; provides a  fake representation (usually the name of
-      the comand), and  indicates it was not able to do  a good job on
-      this field  by setting  a red  ball on its  right, instead  of a
-      green one.</para>
+      case, &pyb; provides a  fake representation, and indicates it was
+      not able to do  a good job on this field  by setting  a red symbol
+      on its right, instead of a green one.</para>
     <warning>
-      <para>If you  edit such an  entry, you can loose  the additional
+      <para>If you edit such an  entry, you can loose  the additional
       information it  contained. To avoid this,  consider using native
       editing (see <xref linkend="gui-native">).</para>
     </warning>
@@ -258,6 +265,14 @@
       requiring  names (like  author  and editor),  use the  following
       format:  type one  name per  line, in  the  <emphasis>last name,
       lineage, first name</emphasis> order.</para>
+    <para>In addition to the standard fields, you can create your 
+     own fields using the <guibutton>Create Field</guibutton> button.
+    </para>
+    <tip>
+      <para>You can customize the mandatory and optional fields for 
+      the different type of entries. See <xref linkend="gui-settings">
+      for more information.</para>
+    </tip>
 
     <para>The  following  keyboard   shortcuts  are  available  during
       edition  (in   addition  to   the  standard  ones   provided  by
@@ -285,7 +300,6 @@
       unselect   all  the  entries,   you  might   need  to   use  the
       <keysym>Control</keysym>    key,   while    clicking    on   the
       entry.</para>
-
     </sect2>
 
     <sect2 id="gui-native">
@@ -338,6 +352,85 @@
       &pyc; does  not handle the full job  of bibliography generation;
       therefore  it is necessary  to use  <command>bibtex</command> as
       described in the LyX documentation.</para>
+    <note>
+    <para>&pyc; can interact with <productname>Kile</productname> 
+     (&gt;= 1.6) practically in the same way, since <productname>Kile
+     </productname> can also read <emphasis>lyx pipe</emphasis>.</para>
+    </note>
+  </sect1>
+
+  <sect1>
+    <title>Saving entries in different formats</title>
+
+    <para>Selected entries can be saved in different formats using  
+    the <menuchoice><guimenu>Cite</guimenu> <guimenuitem>Format
+    </guimenuitem></menuchoice> menu item (<xref linkend="figformat">).
+    </para>
+
+    <Figure id="figformat">
+	<Title>Formatting entries</Title> 
+	<Graphic FileRef="format"></Graphic>
+      </Figure>
+
+    <para>As a result, a formatted output file is generated according 
+    to a bibliographic style, either in HTML, LaTeX, Raw or Text format. 
+    The &pyb; package contains some bibliographic styles, but own styles
+    can also be created easily.</para> 
+  </sect1>
+
+  <sect1>
+    <title>Searching in PubMed</title>
+    
+    <para>With &pyc;, it is possible to perform a Medline search. To 
+    use this option, click on the <menuchoice><guimenu>File</guimenu> 
+    <guimenuitem>Medline query</guimenuitem></menuchoice> menu item. The
+    upcoming window is represented in <xref linkend="figmed">.</para>
+
+    <Figure id="figmed">
+	<Title>Medline query</Title> 
+	<Graphic FileRef="medline"></Graphic>
+      </Figure>
+
+     <para>The keyword, you are looking for, should be written into the 
+     <emphasis>Search PubMed for</emphasis> field. As it can be seen 
+     in <xref linkend="figmed">, a number of options (limitations) can
+     be set, which can help to obtain an optimal search result. The 
+     matched references, resulted in by the query, appear in the main 
+     window as a new database.</para>
+  </sect1>
+
+  <sect1 id="gui-settings">
+    <title>Configuration</title>
+    
+    <para>Under the <menuchoice><guimenu>Settings</guimenu></menuchoice>
+    menu, you can find some options to customize &pyb;.</para>
+
+    <sect2>
+    <title>Entry types and field names configuration</title>
+
+    <Figure id="figfields">
+	<Title>Configuration of fields and entry types</Title> 
+	<Graphic FileRef="fields"></Graphic>
+      </Figure>
+
+    <para>Selecting the <menuchoice><guimenu>Settings</guimenu> 
+    <guimenuitem>Fields</guimenuitem></menuchoice> menu item, it 
+    is possible to add or remove fields, to set their type, and 
+    to define which fields should be associated with a given type of 
+    entry. In addition, the mandatory and optional fields are also can
+    be varied. In <xref linkend="figfields">, as an example, the
+    association of the Article entry type can be seen.</para>
+    </sect2>
+    <sect2>
+    <title>Preferences</title>
+
+    <para>Clicking on the <menuchoice><guimenu>Settings</guimenu> 
+    <guimenuitem>Preferences</guimenuitem></menuchoice> menu item, a 
+    lot of configuration options can be controlled. Such options are, 
+    for instance, settings of the different type of bibliographic 
+    database formats, size of history, defult editing mode and 
+    the default type of a newly created entry.</para>
+    </sect2>
   </sect1>
 </chapter>
 

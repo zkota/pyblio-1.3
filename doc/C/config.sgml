@@ -12,7 +12,7 @@
     
     <para>The      first      file      to      be      parsed      is
       <filename>${prefix}/share/pybliographer/pybrc.py</filename>.  It
-      serves as  a bootstrap  for the general  configration mechanism,
+      serves as  a bootstrap  for the general  configuration mechanism,
       and defines:</para>
     
     <itemizedlist>
