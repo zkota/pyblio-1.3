@@ -1,5 +1,14 @@
 -*- text -*-
 
+New in 1.2.2 - 2004-
+
+        * Updated english documentation in Gnome format (Zoltán)
+	* Additional shortcuts (Albert)
+        * Updated translations
+	* Medline queries return URLs to the paper (John V.)
+	* Misc robustness fixes
+
+
 New in 1.2.1 - 2003-11-18
 
         * Updated translations (fr, it, nl, pt, sr)

@@ -111,6 +111,7 @@ class Index (Connector.Publisher):
             (Mime.SYM_KEY,    0, Mime.KEY),
             (Mime.SYM_ENTRY,  0, Mime.ENTRY),
             (Mime.SYM_STRING, 0, Mime.STRING),
+            (Mime.SYM_TEXT  , 0, Mime.STRING),
             )
  
         accept = (
