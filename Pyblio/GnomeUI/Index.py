@@ -26,6 +26,7 @@
 #  - Copy/Paste with the world
 
 
+
 ''' Main index containing the columned view of the entries '''
 
 from Pyblio import Fields, Config, Connector, Types, Sort
@@ -43,6 +44,12 @@ pickle = cPickle
 del cPickle
 
 _ = gettext.gettext
+
+_safechar = ['_'] * 256
+for c in ascii_letters + digits:
+    _safechar [ord (c)] = c
+
+_safechar = ''.join (_safechar)
 
 
 class Index (Connector.Publisher):
@@ -70,7 +77,11 @@ class Index (Connector.Publisher):
             col.set_resizable (True)
             col.set_clickable (True)
 
-            k = '/apps/pybliographic/columns/%s' % self.fields [i]
+            f = self.fields [i]
+            f = f.translate (_safechar)
+            
+            k = '/apps/pybliographic/columns/%s' % f
+            
             w = Utils.config.get_int (k)
 
             if w:
@@ -466,7 +477,11 @@ class Index (Connector.Publisher):
 
         for i in range (len (self.fields)):
             w = self.list.get_column (i).get_width ()
-            k = '/apps/pybliographic/columns/%s' % self.fields [i]
+
+            f = self.fields [i]
+            f = f.translate (_safechar)
+
+            k = '/apps/pybliographic/columns/%s' % f
             
             Utils.config.set_int (k, w)
         return
