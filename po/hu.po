@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pybliographer-1.2.1\n"
-"POT-Creation-Date: 2004-01-08 13:01+0100\n"
-"PO-Revision-Date: 2004-01-08 10:07+0100\n"
+"Project-Id-Version: pybliographer-1.2.2\n"
+"POT-Creation-Date: 2004-01-14 11:45+0100\n"
+"PO-Revision-Date: 2004-01-12 11:27+0100\n"
 "Last-Translator: Zoltán Kóta <zkota@gwdg.de>\n"
 "Language-Team: hu <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -43,7 +43,7 @@ msgstr "figyelmeztetés: nem tudom importálni %s-t: %s"
 #. are we preregistering an existing key ?
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -79,7 +79,7 @@ msgstr "figyelmeztetés: nem tudom importálni %s-t: %s"
 #. --------------------------------------------------
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -202,7 +202,7 @@ msgstr "Szótár (%s, %s)"
 #. that we don't get infinite loops here...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -222,7 +222,7 @@ msgstr "Szótár (%s, %s)"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -265,7 +265,7 @@ msgstr "%s-ben"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -343,7 +343,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. -*- coding: latin-1 -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -405,7 +405,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -427,7 +427,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -477,7 +477,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. correct the number of dots...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -509,7 +509,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. general case
 #. This file is part of Pybliographer
 #.
-#. Copyright (C) 1998-2003 Peter Schulte-Stracke
+#. Copyright (C) 1998-2004 Peter Schulte-Stracke
 #. Email : Peter.Schulte-Stracke@t-online.de
 #.
 #. This program is free software; you can redistribute it and/or
@@ -533,7 +533,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. error situation
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -555,7 +555,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. completer les champs
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -632,7 +632,7 @@ msgstr "Érték:"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -833,7 +833,10 @@ msgstr "%d bejegyzések törlése ?"
 msgid "Remove entry `%s' ?"
 msgstr "`%s' bejegyzés törlése ?"
 
-#: Pyblio/GnomeUI/Document.py:677 Pyblio/GnomeUI/Document.py:684
+#. Check if we are toggling or changing
+#. We are still filtering according to the same field,
+#. simply toggle the direction
+#: Pyblio/GnomeUI/Document.py:690 Pyblio/GnomeUI/Document.py:697
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -850,7 +853,7 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#: Pyblio/GnomeUI/Document.py:756
+#: Pyblio/GnomeUI/Document.py:769
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -859,25 +862,25 @@ msgstr ""
 "Nem tudom a dokumentációt megjeleníteni:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:764
+#: Pyblio/GnomeUI/Document.py:777
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Ez a program a GNU GPL-nek megfelelő szerzői joggal védett"
 
-#: Pyblio/GnomeUI/Document.py:765
+#: Pyblio/GnomeUI/Document.py:778
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome felület a Pybliographer-hez."
 
-#: Pyblio/GnomeUI/Document.py:774
+#: Pyblio/GnomeUI/Document.py:787
 msgid "Gnome Translation Team"
 msgstr "Gnome fordító csapat"
 
-#: Pyblio/GnomeUI/Document.py:779
+#: Pyblio/GnomeUI/Document.py:792
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer Home Page"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1009,7 +1012,7 @@ msgstr "Standard szerkesztés"
 #. set window size
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1032,7 +1035,7 @@ msgstr "Standard szerkesztés"
 #. Add a button to open the URL
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1104,7 +1107,7 @@ msgstr "<b>%s</b> bejegyzés típushoz hozzárendelt mezők"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1124,7 +1127,7 @@ msgstr "<b>%s</b> bejegyzés típushoz hozzárendelt mezők"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1160,7 +1163,7 @@ msgstr "Bibliográfia típusa:"
 #. construct a nice URL
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1181,7 +1184,7 @@ msgstr "Bibliográfia típusa:"
 #. Fill the output format drop-down menu
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1237,7 +1240,7 @@ msgstr "Töröl..."
 #. what menu items are accessible ?
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1258,7 +1261,7 @@ msgstr "Töröl..."
 #. Fill in the combo boxes
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1282,7 +1285,7 @@ msgstr "Töröl..."
 #. Related string definitions
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1308,7 +1311,7 @@ msgstr "Töröl..."
 #. get the modification date...
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1360,7 +1363,7 @@ msgstr ""
 #. Do not allow removal of the root.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1405,7 +1408,7 @@ msgstr "[Kulcs értéke]"
 #. Store the direction of sorting in each item
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1433,7 +1436,7 @@ msgstr "A következő hibák fordultak elő:\n"
 
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1457,7 +1460,7 @@ msgstr "A következő hibák fordultak elő:\n"
 #. clean up our garbage
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1479,7 +1482,7 @@ msgstr "A következő hibák fordultak elő:\n"
 #. --------------------------------------------------
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1499,7 +1502,7 @@ msgstr "A következő hibák fordultak elő:\n"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1519,7 +1522,7 @@ msgstr "A következő hibák fordultak elő:\n"
 #.
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1555,7 +1558,7 @@ msgstr "nincs `%s' kimeneti pipe"
 #. print self.pout.read ()
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1677,18 +1680,18 @@ msgid "Format entries"
 msgstr "Bejegyzések formázása"
 
 #: glade/format.glade.h:4
-msgid "Output file:\n"
-msgstr "Kimeneti állomány:\n"
+msgid "Output file:"
+msgstr "Kimeneti állomány:"
 
-#: glade/format.glade.h:6
+#: glade/format.glade.h:5
 msgid "Output format:"
 msgstr "Kimenet formátuma:"
 
-#: glade/format.glade.h:7
+#: glade/format.glade.h:6
 msgid "Save Formatted as"
 msgstr "Mentés formázva másként"
 
-#: glade/format.glade.h:8
+#: glade/format.glade.h:7
 msgid "Style Selection"
 msgstr "Stílus választása"
 
@@ -1769,52 +1772,52 @@ msgid "Cite..."
 msgstr "Idéz..."
 
 #: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr "Tartalom"
+
+#: glade/pyblio.glade.h:4
 msgid "Fields..."
 msgstr "Mezők..."
 
-#: glade/pyblio.glade.h:4
+#: glade/pyblio.glade.h:5
 msgid "Forget all changes"
 msgstr "Felejts el minden változást"
 
-#: glade/pyblio.glade.h:5
+#: glade/pyblio.glade.h:6
 msgid "Format..."
 msgstr "Formátum..."
 
-#: glade/pyblio.glade.h:6
+#: glade/pyblio.glade.h:7
 msgid "Medline Query..."
 msgstr "Medline keresés..."
 
-#: glade/pyblio.glade.h:7
+#: glade/pyblio.glade.h:8
 msgid "Merge With..."
 msgstr "Hozzáfűz..."
 
-#: glade/pyblio.glade.h:8
+#: glade/pyblio.glade.h:9
 msgid "Open File"
 msgstr "Állomány megnyitása"
 
-#: glade/pyblio.glade.h:9
+#: glade/pyblio.glade.h:10
 msgid "Previous Documents"
 msgstr "Előző dokumentumok"
 
-#: glade/pyblio.glade.h:10
+#: glade/pyblio.glade.h:11
 msgid "Pybliographer"
 msgstr "Pybliographer"
 
-#: glade/pyblio.glade.h:11
+#: glade/pyblio.glade.h:12
 msgid "S_ort..."
 msgstr "_Rendez..."
 
-#: glade/pyblio.glade.h:12
+#: glade/pyblio.glade.h:13
 msgid "Save File"
 msgstr "Állomány mentése"
 
-#: glade/pyblio.glade.h:13
+#: glade/pyblio.glade.h:14
 msgid "Settings"
 msgstr "Beállítások"
-
-#: glade/pyblio.glade.h:14
-msgid "Summary"
-msgstr "Tartalom"
 
 #: glade/pyblio.glade.h:15
 msgid "_Add..."
@@ -1871,7 +1874,7 @@ msgstr "Legyen ez az alapértelmezés"
 #. ! @python_path@
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1932,7 +1935,7 @@ msgstr ""
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -1962,7 +1965,7 @@ msgstr ""
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2024,7 +2027,7 @@ msgstr "a következő bejegyzések nem találhatók: %s"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2053,7 +2056,7 @@ msgstr "pybconvert: rossz konverzió formátum"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2099,7 +2102,7 @@ msgstr "nem találom a `%s' stílust"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
@@ -2120,7 +2123,7 @@ msgstr "nem találom a `%s' stílust"
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
-#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Copyright (C) 1998-2004 Frederic GOBRY
 #. Email : gobry@pybliographer.org
 #.
 #. This program is free software; you can redistribute it and/or
