@@ -1,0 +1,950 @@
+# PYBLIOGRAPHER.
+# Copyright (C)  2004  Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Li Shaojie <storm-119@163.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2004-05-22 20:36+0200\n"
+"PO-Revision-Date: 2004-05-15 13:04+0800\n"
+"Last-Translator: storm <storm-119@163.com>\n"
+"Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
+
+#: Pyblio/Autoload.py:80
+#, python-format
+msgid "warning: can't import %s: %s"
+msgstr "警告：不能导入 %s：%s"
+
+#: Pyblio/Config.py:53
+#, python-format
+msgid "value of `%s' should be of type %s"
+msgstr "“%s”的值应该是 %s 类型"
+
+#: Pyblio/Config.py:207
+msgid "String"
+msgstr "字符串"
+
+#: Pyblio/Config.py:216
+msgid "Boolean"
+msgstr "布尔"
+
+#: Pyblio/Config.py:235
+msgid "Integer"
+msgstr "整数"
+
+#: Pyblio/Config.py:237
+#, python-format
+msgid "Integer under %d"
+msgstr "%d 以下的整数"
+
+#: Pyblio/Config.py:239
+#, python-format
+msgid "Integer over %d"
+msgstr "%d 以上的整数"
+
+#: Pyblio/Config.py:241
+#, python-format
+msgid "Integer between %d and %d"
+msgstr "在 %d 和 %d 之间的整数"
+
+#: Pyblio/Config.py:253
+#, python-format
+msgid "Element in `%s'"
+msgstr "“%s”中的元素"
+
+#: Pyblio/Config.py:273
+#, python-format
+msgid "Tuple (%s)"
+msgstr "Tuple (%s)"
+
+#: Pyblio/Config.py:294
+#, python-format
+msgid "List (%s)"
+msgstr "列表 (%s)"
+
+#: Pyblio/Config.py:319
+#, python-format
+msgid "Dictionary (%s, %s)"
+msgstr "字典 (%s，%s)"
+
+#: Pyblio/Fields.py:265
+msgid "Illegal year value"
+msgstr "非法的年值"
+
+#: Pyblio/Fields.py:269
+msgid "Illegal month value"
+msgstr "非法的月值"
+
+#: Pyblio/Fields.py:273
+msgid "Illegal day value"
+msgstr "非法的日值"
+
+#: Pyblio/Fields.py:443
+#, python-format
+msgid "in %s"
+msgstr "在 %s"
+
+#: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
+#, python-format
+msgid "key `%s' is malformed"
+msgstr "键“%s”格式错误"
+
+#: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
+#, python-format
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s：%d：键 %s 已定义"
+
+#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"某些更改需要重新启动 Pybliographic 才能生效"
+
+#: Pyblio/GnomeUI/Config.py:431
+msgid "Add"
+msgstr "添加"
+
+#: Pyblio/GnomeUI/Config.py:434
+msgid "Update"
+msgstr "更新"
+
+#: Pyblio/GnomeUI/Config.py:437 Pyblio/GnomeUI/Config.py:549
+msgid "Remove"
+msgstr "删除"
+
+#: Pyblio/GnomeUI/Config.py:546
+msgid "Set"
+msgstr "设置"
+
+#: Pyblio/GnomeUI/Config.py:561
+msgid "Key:"
+msgstr "键："
+
+#: Pyblio/GnomeUI/Config.py:563
+msgid "Value:"
+msgstr "值："
+
+#: Pyblio/GnomeUI/Document.py:127
+msgid "Unnamed bibliographic database"
+msgstr "未命名的书目数据库"
+
+#: Pyblio/GnomeUI/Document.py:218
+#, python-format
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"不能打开文件“%s”进行写入：\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:239
+#, python-format
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"分析“%s”时出错：\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:255
+msgid "New database"
+msgstr "新建数据库"
+
+#: Pyblio/GnomeUI/Document.py:263 Pyblio/GnomeUI/Document.py:267
+msgid "[no entry]"
+msgstr "[没有项]"
+
+#: Pyblio/GnomeUI/Document.py:264
+msgid "[1 entry]"
+msgstr "[1 项]"
+
+#: Pyblio/GnomeUI/Document.py:265
+#, python-format
+msgid "[%d entries]"
+msgstr "[%d 项]"
+
+#: Pyblio/GnomeUI/Document.py:268
+#, python-format
+msgid "[%d/1 entry]"
+msgstr "[%d/1 项]"
+
+#: Pyblio/GnomeUI/Document.py:269
+#, python-format
+msgid "[%d/%d entries]"
+msgstr "[%d/%d 项]"
+
+#: Pyblio/GnomeUI/Document.py:274
+msgid "[modified]"
+msgstr "[已修改]"
+
+#: Pyblio/GnomeUI/Document.py:284
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"数据库已经被修改。\n"
+"放弃修改？"
+
+#. no result.
+#: Pyblio/GnomeUI/Document.py:309
+msgid "Your query returned no result"
+msgstr "您的查询没有返回结果"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:319
+msgid "Merge file"
+msgstr "合并文件"
+
+#: Pyblio/GnomeUI/Document.py:331 Pyblio/GnomeUI/Document.py:385
+msgid "Open error"
+msgstr "打开错误"
+
+#: Pyblio/GnomeUI/Document.py:355
+msgid "Merge status"
+msgstr "合并状态"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:366
+msgid "Open file"
+msgstr "打开文件"
+
+#: Pyblio/GnomeUI/Document.py:414
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"数据库有了外部修改。\n"
+"覆盖修改？"
+
+#: Pyblio/GnomeUI/Document.py:424
+#, python-format
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"不能保存“%s”:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:432
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"保存时发生内部错误\n"
+"请尝试另存为..."
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:446
+msgid "Save As..."
+msgstr "另存为..."
+
+#: Pyblio/GnomeUI/Document.py:452
+#, python-format
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"文件“%s”已经存在。\n"
+"覆盖它吗？"
+
+#: Pyblio/GnomeUI/Document.py:459
+#, python-format
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"打开时：\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:477
+msgid "Reopen error"
+msgstr "重新打开错误"
+
+#: Pyblio/GnomeUI/Document.py:524
+#, python-format
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"名为“%s”的项已经存在。\n"
+"无论如何重命名和添加它？"
+
+#: Pyblio/GnomeUI/Document.py:561
+msgid "Really remove all the entries ?"
+msgstr "真的删除所有项吗？"
+
+#: Pyblio/GnomeUI/Document.py:581
+msgid "Create new entry"
+msgstr "创建新项"
+
+#: Pyblio/GnomeUI/Document.py:595
+#, python-format
+msgid "Really edit %d entries ?"
+msgstr "真的编辑 %d 项"
+
+#: Pyblio/GnomeUI/Document.py:633
+#, python-format
+msgid "Remove all the %d entries ?"
+msgstr "删除所有 %d 项吗？"
+
+#: Pyblio/GnomeUI/Document.py:635
+#, python-format
+msgid "Remove entry `%s' ?"
+msgstr "删除项“%s”吗？"
+
+#: Pyblio/GnomeUI/Document.py:724 Pyblio/GnomeUI/Document.py:733
+#, python-format
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"不能连接到 LyX：\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:805
+#, python-format
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr ""
+"不能显示文档：\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:813
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "此软件版权遵照 GNU GPL "
+
+#: Pyblio/GnomeUI/Document.py:814
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Gnome 到 Pybliographer 系统的接口。"
+
+#: Pyblio/GnomeUI/Document.py:824
+msgid "Gnome Translation Team"
+msgstr "Gnome 翻译小组"
+
+#: Pyblio/GnomeUI/Document.py:829
+msgid "Pybliographer Home Page"
+msgstr "Pybliographer 主页"
+
+#: Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "姓，名"
+
+#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
+#: glade/config1.glade.h:14 glade/fields1.glade.h:19
+msgid "Text"
+msgstr "文本"
+
+#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
+msgid "Error in native string parsing"
+msgstr "本地字符语法分析发生错误"
+
+#: Pyblio/GnomeUI/Editor.py:315
+msgid "Day"
+msgstr "日"
+
+#: Pyblio/GnomeUI/Editor.py:324
+msgid "Month"
+msgstr "月"
+
+#: Pyblio/GnomeUI/Editor.py:333
+msgid "Year"
+msgstr "年"
+
+#: Pyblio/GnomeUI/Editor.py:358
+msgid "Invalid day field in date"
+msgstr "日期中无效的日字段"
+
+#: Pyblio/GnomeUI/Editor.py:366
+msgid "Invalid month field in date"
+msgstr "日期中无效的月字段"
+
+#: Pyblio/GnomeUI/Editor.py:374
+msgid "Invalid year field in date"
+msgstr "日期中无效的年字段"
+
+#. A delete button
+#: Pyblio/GnomeUI/Editor.py:422 Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "删除"
+
+#: Pyblio/GnomeUI/Editor.py:433 Pyblio/GnomeUI/Editor.py:446
+#: Pyblio/GnomeUI/Editor.py:449
+msgid "[ Drop an Entry here ]"
+msgstr "[ 将项拖放到这里 ]"
+
+#: Pyblio/GnomeUI/Editor.py:521 Pyblio/GnomeUI/Fields.py:231
+#: glade/config1.glade.h:8 glade/fields1.glade.h:6
+msgid "Entry type"
+msgstr "输入类型"
+
+#: Pyblio/GnomeUI/Editor.py:523
+msgid "Key"
+msgstr "键"
+
+#: Pyblio/GnomeUI/Editor.py:564
+msgid "Create Field"
+msgstr "创建字段"
+
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:446
+msgid "Mandatory"
+msgstr "必选"
+
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:447
+msgid "Optional"
+msgstr "可选"
+
+#: Pyblio/GnomeUI/Editor.py:619
+msgid "Extra"
+msgstr "额外"
+
+#: Pyblio/GnomeUI/Editor.py:688
+msgid "Invalid key format"
+msgstr "无效的键格式"
+
+#: Pyblio/GnomeUI/Editor.py:696
+#, python-format
+msgid "Key `%s' already exists"
+msgstr "键“%s”已经存在"
+
+#: Pyblio/GnomeUI/Editor.py:712
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "“%s”字段包含一个非 Latin-1 符号"
+
+#: Pyblio/GnomeUI/Editor.py:777
+msgid "Your text contains non Latin-1 symbols"
+msgstr "您的文本中包含有非 Latin-1 符号"
+
+#: Pyblio/GnomeUI/Editor.py:799
+msgid "Edit entry"
+msgstr "编辑项"
+
+#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
+msgid "Native Editing"
+msgstr "本地编辑"
+
+#: Pyblio/GnomeUI/Editor.py:897
+msgid "Standard Editing"
+msgstr "标准编辑"
+
+#: Pyblio/GnomeUI/Fields.py:40
+msgid "Authors"
+msgstr "作者"
+
+#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
+#: glade/fields1.glade.h:21
+msgid "URL"
+msgstr "URL"
+
+#: Pyblio/GnomeUI/Fields.py:43
+msgid "Reference"
+msgstr "参考"
+
+#: Pyblio/GnomeUI/Fields.py:44
+msgid "Date"
+msgstr "日期"
+
+#: Pyblio/GnomeUI/Fields.py:119 glade/config1.glade.h:11
+#: glade/fields1.glade.h:10
+msgid "Name"
+msgstr "名称"
+
+#: Pyblio/GnomeUI/Fields.py:122 glade/config1.glade.h:15
+#: glade/fields1.glade.h:20
+msgid "Type"
+msgstr "类型"
+
+#: Pyblio/GnomeUI/Fields.py:295
+msgid "Available"
+msgstr "可用"
+
+#: Pyblio/GnomeUI/Fields.py:305
+msgid "Associated"
+msgstr "关联"
+
+#: Pyblio/GnomeUI/Fields.py:316
+msgid "Please, select an entry type from previous page."
+msgstr "请从前页选择一个项类型。"
+
+#: Pyblio/GnomeUI/Fields.py:327
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "与<b>%s</b>关联的字段类型"
+
+#: Pyblio/GnomeUI/FileSelector.py:44
+msgid "File"
+msgstr "文件"
+
+#: Pyblio/GnomeUI/FileSelector.py:79
+msgid "Bibliography type:"
+msgstr "书目类型："
+
+#: Pyblio/GnomeUI/Index.py:95
+msgid "Add..."
+msgstr "添加..."
+
+#: Pyblio/GnomeUI/Index.py:97
+msgid "Edit..."
+msgstr "编辑..."
+
+#: Pyblio/GnomeUI/Index.py:99
+msgid "Delete..."
+msgstr "删除..."
+
+#. The root of the search tree is the full database
+#: Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "整个数据库"
+
+#: Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "鉴定时发生内部错误"
+
+#: Pyblio/GnomeUI/Search.py:195
+#, python-format
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"编译 %s 中\n"
+"错误：%s"
+
+#. These are additional search fields
+#: Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[项类型]"
+
+#: Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[键值]"
+
+#: Pyblio/GnomeUI/Utils.py:194
+msgid "The following errors occured:\n"
+msgstr "以下错误发生：\n"
+
+#: Pyblio/GnomeUI/__init__.py:46
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "这是 Pybliographic %s [Python %s, Gtk %s, PyGTK %s] "
+
+#: Pyblio/LyX.py:39
+#, python-format
+msgid "no input pipe `%s'"
+msgstr "没有输入管道“%s”"
+
+#: Pyblio/LyX.py:45
+#, python-format
+msgid "no output pipe `%s'"
+msgstr "没有输出管道“%s”"
+
+#: Pyblio/Open.py:97
+#, python-format
+msgid "method `%s' provides no opener"
+msgstr "方法“%s”未提供开端"
+
+#: Pyblio/Open.py:105 Pyblio/Open.py:151
+#, python-format
+msgid "File `%s' does not exist"
+msgstr "文件“%s”不存在"
+
+#: Pyblio/Open.py:116 Pyblio/Open.py:162
+#, python-format
+msgid "don't know how to open `%s'"
+msgstr "不知道如何打开“%s”"
+
+#: Pyblio/Open.py:143
+#, python-format
+msgid "method `%s' provides no iterator"
+msgstr "方法“%s”没有提供迭代器"
+
+#: Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "丢失“%s”属性"
+
+#: Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
+msgstr "无效打开标记：%s"
+
+#: Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "无效关闭标记：%s"
+
+#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
+#: glade/medline.glade.h:1 glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>项类型</b>"
+
+#: glade/config1.glade.h:3
+msgid "A"
+msgstr "A"
+
+#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+msgid "Association"
+msgstr "关联"
+
+#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+msgid "Datum"
+msgstr "资料"
+
+#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "编辑"
+
+#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "项"
+
+#: glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "字段定义"
+
+#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+msgid "Fields "
+msgstr "字段"
+
+#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+msgid "Name "
+msgstr "名称"
+
+#: glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr "图书书目管理器设置"
+
+#: glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "标准字段"
+
+#: glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr "项类型和字段名称设置"
+
+#: glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr "<b>文章</b>项类型信息"
+
+#: glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+"选择项类型并在下一页指定\n"
+"与它关联(委托和可选)的字段。\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#: glade/format.glade.h:2
+msgid "Bibliography style:"
+msgstr "书目样式："
+
+#: glade/format.glade.h:3
+msgid "Format entries"
+msgstr "格式项"
+
+#: glade/format.glade.h:4
+msgid "Output file:"
+msgstr "输出文件："
+
+#: glade/format.glade.h:5
+msgid "Output format:"
+msgstr "输出格式："
+
+#: glade/format.glade.h:6
+msgid "Save Formatted as"
+msgstr "保存格式为"
+
+#: glade/format.glade.h:7
+msgid "Style Selection"
+msgstr "样式选择"
+
+#: glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr "输入您的 Medline 查询"
+
+#: glade/medline.glade.h:3
+msgid "From:"
+msgstr "来自："
+
+#: glade/medline.glade.h:4
+msgid "Limited to:"
+msgstr "限制为："
+
+#: glade/medline.glade.h:5
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+"结果的最大\n"
+"数目："
+
+#: glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr "Medline 查询"
+
+#: glade/medline.glade.h:8
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+"仅打印在\n"
+"前的项"
+
+#: glade/medline.glade.h:10
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+"仅为有摘要\n"
+"的项"
+
+#: glade/medline.glade.h:12
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+"搜索\n"
+"PubMed:"
+
+#: glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"在结果数目\n"
+"开始列出："
+
+#: glade/medline.glade.h:16
+msgid "To:"
+msgstr "到："
+
+#: glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+"使用格式 YYYY/MM/DD\n"
+"月和日是可选的。"
+
+#: glade/pyblio.glade.h:1
+msgid "Cite"
+msgstr "引用"
+
+#: glade/pyblio.glade.h:2
+msgid "Cite..."
+msgstr "引用..."
+
+#: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr "内容"
+
+#: glade/pyblio.glade.h:4
+msgid "Fields..."
+msgstr "字段..."
+
+#: glade/pyblio.glade.h:5
+msgid "Forget all changes"
+msgstr "忽略所有改版"
+
+#: glade/pyblio.glade.h:6
+msgid "Format..."
+msgstr "格式..."
+
+#: glade/pyblio.glade.h:7
+msgid "Medline Query..."
+msgstr ""
+
+#: glade/pyblio.glade.h:8
+msgid "Merge With..."
+msgstr "合并对象..."
+
+#: glade/pyblio.glade.h:9
+msgid "Open File"
+msgstr "打开文件"
+
+#: glade/pyblio.glade.h:10
+msgid "Previous Documents"
+msgstr "之前文档"
+
+#: glade/pyblio.glade.h:11
+msgid "Pybliographer"
+msgstr "图书目录管理器"
+
+#: glade/pyblio.glade.h:12
+msgid "S_ort..."
+msgstr "排序(_O)..."
+
+#: glade/pyblio.glade.h:13
+msgid "Save File"
+msgstr "保存文件"
+
+#: glade/pyblio.glade.h:14
+msgid "Settings"
+msgstr "设置"
+
+#: glade/pyblio.glade.h:15
+msgid "_Add..."
+msgstr "添加(_A)..."
+
+#: glade/pyblio.glade.h:16
+msgid "_Delete..."
+msgstr "删除(_D)..."
+
+#: glade/pyblio.glade.h:17
+msgid "_Edit..."
+msgstr "编辑(_E)..."
+
+#: glade/pyblio.glade.h:18
+msgid "_New"
+msgstr "新建(_N)"
+
+#: glade/search.glade.h:2
+msgid "Close"
+msgstr "关闭"
+
+#: glade/search.glade.h:3
+msgid "Expert Search"
+msgstr "专业搜索"
+
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "字段"
+
+#: glade/search.glade.h:5
+msgid "Pattern"
+msgstr "模式"
+
+#: glade/search.glade.h:6
+msgid "Query"
+msgstr "查询"
+
+#: glade/search.glade.h:7
+msgid "Search"
+msgstr "搜索"
+
+#: glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "简单搜索"
+
+#: glade/sort.glade.h:1
+msgid "Select sort criterions"
+msgstr "选择排序标准"
+
+#: glade/sort.glade.h:2
+msgid "Set as default"
+msgstr "设为默认"
+
+#: pybliographer.py:45
+#, python-format
+msgid "This is %s, version %s"
+msgstr "这是 %s，版本 %s"
+
+#: pybliographer.py:49 pybliographer.py:56
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "此为自由软件，没有绝对的保证书"
+
+#: pybliographer.py:50
+msgid "For details, type `warranty'."
+msgstr "获得细节，请输入“warranty”。"
+
+#: pybliographer.py:113 pybliographer.py:165
+#, python-format
+msgid "%s: error: can't open file `%s'"
+msgstr "%s：错误：不能打开文件“%s”"
+
+#: pybliographer.py:126
+#, python-format
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "需要帮助时，运行 %s 并且在提示符处键入“help”"
+
+#: pybliographer.py:135
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"有用的命令：\n"
+"\thelp     获得帮助\n"
+"\tquit     退出\n"
+
+#: scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "用法：pybcompact <latexfile> <bibtexfiles...>"
+
+#: scripts/pybcompact.py:33
+#, python-format
+msgid "pybcompact: error: %s\n"
+msgstr "pybcompact：错误：%s\n"
+
+#: scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "没有项"
+
+#: scripts/pybcompact.py:141
+#, python-format
+msgid "can't find the following entries: %s"
+msgstr "找不到以下项：%s"
+
+#: scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "用法：pybconvert <source>..<target> <input> [output]"
+
+#: scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr "pybconvert：错误的转换格式"
+
+#: scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr "用法：pybformat [bibtexfiles...]\n"
+
+#: scripts/pybformat.py:37
+#, python-format
+msgid "pybformat: error: %s\n"
+msgstr "pybformat：错误：%s\n"
+
+#: scripts/pybformat.py:43
+#, python-format
+msgid "pybformat: warning: %s\n"
+msgstr "pybformat：警告：%s\n"
+
+#: scripts/pybformat.py:140 scripts/pybtex.py:85
+#, python-format
+msgid "can't find style `%s'"
+msgstr "找不到样式“%s”"
+
+#: scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "用法：pybtex <latexfile> [bibtexfiles...]"
+
+#: scripts/pybtex.py:37
+#, python-format
+msgid "pybtex: error: %s\n"
+msgstr "pybtex：错误：%s\n"
+
+#. warn the user that some entries were not found
+#: scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "pybtex：警告：以下键未解决"
+
+#. If the LaTeX document declares no style...
+#: scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "没有定义样式"
