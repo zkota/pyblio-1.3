@@ -1,20 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Pybliographic
-Name[de]=Pybliographic
-Name[fi]=Pybliographic
-Name[sr]=Пиблиотекар
-Name[sr@Latn]=Pibliotekar
-Name[sv]=Pybliographic
-Name[hu]=Pybliographic
-Comment=Bibliographic database editor
-Comment[de]=Bibliographischer Datenbank-Editor
-Comment[fi]=Bibliografiatietokannan muokkaustyökalu
-Comment[fr]=Éditeur de bases de données bibliographiques
-Comment[sr]=Уређивач библиографске базе података
-Comment[sr@Latn]=Uređivač bibliografske baze podataka
-Comment[sv]=Redigerinsgprogram för bibliografidatabaser
-Comment[hu]=Bibliográfiai adatbáziskezelő
+Name=Pybliographic Bibliography Manager
+Name[hu]=Pybliographic Bibliográfiakezelő
+GenericName=Bibliography Manager
+GenericName[hu]=Bibliográfiakezelő
+Comment=Manage bibliographic databases
+Comment[hu]=Bibliográfiai adatbázisok kezelése
 Icon=pybliographic.png
 Exec=pybliographic
 Terminal=false

@@ -26,7 +26,7 @@ Requires: pygtk2-libglade >= 2.0.0
 Requires: gnome-python2 >= 2.0.0
 Requires: gnome-python2-gconf >= 2.0.0
 Requires: python-bibtex >= 1.1.93.1
-Requires: recode >= 3.6-9p.rhfdr_core_1
+Requires: recode >= 3.6-11
 
 
 %description

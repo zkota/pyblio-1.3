@@ -1,0 +1,56 @@
+<chapter id="getting-started">
+    <title>Getting started with &app;</title>
+
+    <sect1 id="introduction">
+      <title>What is Pybliographer?</title>
+      <para>Pybliographer  is a  tool for  working  with bibliographic
+	databases. It provides a general framework that can be used to
+	manipulate these databases  with a simple graphical interface,
+	but  that  can  also be  easily  extended  by  the mean  of  a
+	scripting language, to fit a wide range of needs.</para>
+    </sect1>
+
+    <sect1 id="how-to-start">
+       <title>How to start Pybliographer?</title>
+       <para>You can start <application>&app;</application> in the 
+       following ways:</para>
+    <variablelist>
+    	<varlistentry>
+    		<term>Graphical mode</term>
+    		<listitem>
+    		<para>To start <application>&app;</application> in 
+                 graphical mode from a command line, type the following
+                 command, then press <keycap>Return</keycap>:</para>
+    		<para> 
+			<command>pybliographic</command> 
+    		</para> 
+    		<para>For information on the graphical interface, see
+                <xref linkend="graphical-interface" />.</para>
+		</listitem>
+    	</varlistentry>
+        <varlistentry>
+    		<term>Command line mode</term>
+    		<listitem>
+    		<para>You can start <application>&app;</application>
+                also in command line mode by typing the following 
+                command followed by pressing <keycap>Return</keycap>:
+                </para>
+    		<para> 
+			<command>pybliographer</command> 
+    		</para> 
+    		<para>For information on the command line interface, 
+                see <xref linkend="command-line" />.</para>
+		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>From the gnome menu</term>
+    		<listitem>
+    		<para>If the desktop file of the package is correctly
+                installed in your sytem, you can find a launcher under 
+                the gnome menu to start the graphical interface of &app;.
+                </para>
+    		</listitem>
+    	</varlistentry>
+    </variablelist> 
+    </sect1>
+</chapter>

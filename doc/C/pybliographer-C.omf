@@ -3,18 +3,18 @@
 <omf>
   <resource>
     <creator>
-      gobry@puck.ch (Fr&#233;d&#233;ric Gobry)
+      gobry@pybliographer.org (Fr&#233;d&#233;ric Gobry)
     </creator>
     <contributor>
-      kota@szbk.u-szeged.hu (Zolt&#225;n K&#243;ta)
+      z.kota@gmx.net (Zolt&#225;n K&#243;ta)
     </contributor>
     <title>
       Pybliographer Manual
     </title>
     <date>
-      2004-04-23
+      2004-06-21
     </date>
-    <version identifier="2.3" date="2004-04-27" description="Updated for Pybliographer 1.2.4"/>
+    <version identifier="2.3" date="2004-06-21" description="Updated for Pybliographer 1.2.4"/>
     <subject category="GNOME|Applications|Office"/>
     <description>
       User manual for the Pybliographer application.

@@ -1,6 +1,5 @@
-
-<!-- The actual preface tag is in the pyblio.xml file -->
-
+<preface id="book-preface">
+    <title>Preface</title>
       <sect1 id="typography">
         <title>Typographical conventions</title>
 	<para>
@@ -84,3 +83,4 @@
       </para>
 
     </sect1>
+</preface>
