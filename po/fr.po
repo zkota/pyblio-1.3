@@ -1,14 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# French translation of pybliographer.
+# Copyright (C) 2003 pybliographer's COPYRIGHT HOLDER
+# This file is distributed under the same license as the pybliographer package.
+# Frederic Gobry <gobry@pybliographer.org>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pybliographer-1.0.7\n"
+"Project-Id-Version: pybliographer-1.1.93\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-10-30 18:00+0100\n"
-"PO-Revision-Date: 2003-08-05 21:20+0200\n"
-"Last-Translator: Frédéric Gobry <gobry@users.sourceforge.net>\n"
+"PO-Revision-Date: 2003-11-03 21:01+0100\n"
+"Last-Translator: Frédéric Gobry <gobry@pybligrapher.org>\n"
 "Language-Team: fr <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,35 +18,31 @@ msgstr ""
 #: glade/config1.glade.h:1 glade/format.glade.h:1 glade/medline.glade.h:1
 #: glade/search.glade.h:1
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: glade/config1.glade.h:2
-#, fuzzy
 msgid "<b>Entry type</b>"
 msgstr "Type d'entrée"
 
 #: glade/config1.glade.h:3
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #: glade/config1.glade.h:4
 msgid "Association"
-msgstr ""
+msgstr "Association"
 
 #: glade/config1.glade.h:5
-#, fuzzy
 msgid "Datum"
 msgstr "Valeur"
 
 #: glade/config1.glade.h:6
-#, fuzzy
 msgid "Editor"
-msgstr "_Editer"
+msgstr "Editeur"
 
 #: glade/config1.glade.h:7
-#, fuzzy
 msgid "Entries"
-msgstr "_Entrées..."
+msgstr "Entrées"
 
 #. PAGE 2
 #: glade/config1.glade.h:8 Pyblio/GnomeUI/Editor.py:527
@@ -58,9 +55,8 @@ msgid "FIELDS DEFINITION"
 msgstr ""
 
 #: glade/config1.glade.h:10
-#, fuzzy
 msgid "Fields "
-msgstr "Champ"
+msgstr "Champs"
 
 #. content of the dialog  Page 1
 #: glade/config1.glade.h:11 Pyblio/GnomeUI/Fields.py:69
@@ -68,14 +64,12 @@ msgid "Name"
 msgstr "Nom"
 
 #: glade/config1.glade.h:12
-#, fuzzy
 msgid "Name "
 msgstr "Nom"
 
 #: glade/config1.glade.h:13
-#, fuzzy
 msgid "Pybliographer Configuration"
-msgstr "Page principale de Pybliographer"
+msgstr "Configuration de Pybliographer"
 
 #: glade/config1.glade.h:14 Pyblio/GnomeUI/Editor.py:39
 #: Pyblio/GnomeUI/Fields.py:39
@@ -88,11 +82,11 @@ msgstr "Type"
 
 #: glade/config1.glade.h:16 Pyblio/GnomeUI/Fields.py:40
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: glade/config1.glade.h:17
 msgid "standard fields"
-msgstr ""
+msgstr "standard fields"
 
 #: glade/format.glade.h:2
 msgid "Bibliography style:"
@@ -103,9 +97,8 @@ msgid "Format entries"
 msgstr "Formatter les entrées"
 
 #: glade/format.glade.h:4
-#, fuzzy
 msgid "Output file:\n"
-msgstr "Fichier de sortie :"
+msgstr "Fichier de sortie :\n"
 
 #: glade/format.glade.h:6
 msgid "Output format:"
@@ -116,34 +109,30 @@ msgid "Save Formatted as"
 msgstr ""
 
 #: glade/format.glade.h:8
-#, fuzzy
 msgid "Style Selection"
-msgstr "Sens du tri"
+msgstr "Sélection du Style"
 
 #: glade/medline.glade.h:2
-#, fuzzy
 msgid "Enter your Medline Query"
-msgstr ""
-"Entrez le terme\n"
-"à chercher dans Medline"
+msgstr "Entrez votre recherche Medline"
 
 #: glade/medline.glade.h:3
 msgid "From:"
-msgstr ""
+msgstr "De :"
 
 #: glade/medline.glade.h:4
 msgid "Limited to:"
-msgstr ""
+msgstr "Limité à :"
 
 #: glade/medline.glade.h:5
-#, fuzzy
 msgid ""
 "Maximum number\n"
 "of results:"
-msgstr "Nombre maxi. de résultats"
+msgstr ""
+"Nombre maxi. \n"
+"de résultats"
 
 #: glade/medline.glade.h:7
-#, fuzzy
 msgid "Medline Query"
 msgstr "Recherche Medline..."
 
@@ -186,22 +175,18 @@ msgid "Cite"
 msgstr "Citer"
 
 #: glade/pyblio.glade.h:2
-#, fuzzy
 msgid "Cite..."
-msgstr "Citer"
+msgstr "Citer..."
 
 #: glade/pyblio.glade.h:3
-#, fuzzy
 msgid "Entries..."
-msgstr "_Entrées..."
+msgstr "Entrées..."
 
 #: glade/pyblio.glade.h:4
-#, fuzzy
 msgid "Fields..."
 msgstr "_Champs..."
 
 #: glade/pyblio.glade.h:5
-#, fuzzy
 msgid "Format..."
 msgstr "_Formatter..."
 
@@ -210,12 +195,10 @@ msgid "Medline Query..."
 msgstr "Recherche Medline..."
 
 #: glade/pyblio.glade.h:7
-#, fuzzy
 msgid "Merge With..."
 msgstr "_Fusionner avec..."
 
 #: glade/pyblio.glade.h:8
-#, fuzzy
 msgid "Open File"
 msgstr "Ouvrir fichier"
 
@@ -224,21 +207,18 @@ msgid "Previous Documents"
 msgstr "Documents précédents"
 
 #: glade/pyblio.glade.h:10
-#, fuzzy
 msgid "Pybliographer"
-msgstr "Page principale de Pybliographer"
+msgstr "Pybliographer"
 
 #: glade/pyblio.glade.h:11
 msgid "S_ort..."
 msgstr "_Trier..."
 
 #: glade/pyblio.glade.h:12
-#, fuzzy
 msgid "Save File"
 msgstr "Sauver comme"
 
 #: glade/pyblio.glade.h:13
-#, fuzzy
 msgid "Settings"
 msgstr "_Paramètres"
 
@@ -247,7 +227,6 @@ msgid "_Add..."
 msgstr "_Ajouter..."
 
 #: glade/pyblio.glade.h:15
-#, fuzzy
 msgid "_Delete..."
 msgstr "Effacer"
 
@@ -1342,15 +1321,13 @@ msgid "Reference"
 msgstr "Références..."
 
 #: Pyblio/GnomeUI/Fields.py:42
-#, fuzzy
 msgid "Date"
-msgstr "Valeur"
+msgstr "Date"
 
 #. self.dialog.set_parent (parent) ####
 #: Pyblio/GnomeUI/Fields.py:61
-#, fuzzy
 msgid "Entry types and field names configuration"
-msgstr "Configuration des Entrées"
+msgstr "Configuration des Entrées et Champs"
 
 #. PAGE 3
 #: Pyblio/GnomeUI/Fields.py:126
@@ -1468,9 +1445,8 @@ msgid "Edit..."
 msgstr "Éditer..."
 
 #: Pyblio/GnomeUI/Index.py:99
-#, fuzzy
 msgid "Delete..."
-msgstr "Effacer"
+msgstr "Effacer..."
 
 #. some events we want to react to...
 #. DnD configuration
@@ -1708,7 +1684,6 @@ msgstr "[Valeur de la Clé]"
 #. Set the parent window. The root widget is not necessarily
 #. exported as an instance attribute.
 #: Pyblio/GnomeUI/Utils.py:196
-#, fuzzy
 msgid "The following errors occured:\n"
 msgstr ""
 "Les erreurs suivantes se sont produites :\n"

@@ -42,4 +42,6 @@ sys.argv = sys.argv [:2] + sys.argv [3:]
 
 del sys
 
+import gtk.glade
 
+gtk.glade.bindtextdomain ("pybliographer", version.localedir)

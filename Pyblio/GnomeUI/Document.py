@@ -55,7 +55,7 @@ class Document (Connector.Publisher):
 
         gp = os.path.join (version.prefix, 'glade', 'pyblio.glade')
         
-        self.xml = gtk.glade.XML (gp, 'main')
+        self.xml = gtk.glade.XML (gp, 'main', domain = 'pybliographer')
         self.xml.signal_autoconnect (self)
 
         self.w = self.xml.get_widget ('main')
