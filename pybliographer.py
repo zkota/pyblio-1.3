@@ -23,14 +23,12 @@
 version  = "@version@"
 progname = "@package@"
 
-lib_pybdir  = "@libpyb@"
 data_pybdir = "@datapyb@"
 localedir   = "@localedir@"
 
 import sys
 
 sys.path.insert (0, data_pybdir)
-sys.path.insert (0, lib_pybdir)
 sys.path.insert (0, '.')
 
 import locale
