@@ -1,5 +1,16 @@
 -*- text -*-
 
+New in 1.2.4 - 2004-06-22
+
+        * Fixes in the ISI and Ovid parsers (Peter)
+        * Fixed LyX citing on python2.2
+        * Added a new tool: pybtext (Zoltán)
+	* Fixed native editing of a new entry
+	* Improved documentation and translations (Zoltán)
+	* Fixed history in Medline queries
+	* Added support for annotations (Peter)
+
+
 New in 1.2.3 - 2004-03-11
 
 	* Updated translations (Gnome I18n team)
