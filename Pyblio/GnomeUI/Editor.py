@@ -355,24 +355,24 @@ class Date (BaseField):
         if text != '':
             try: day = int (text)
             except ValueError:
-                GnomeErrorDialog (_("Invalid day field in date"),
-                                  self.day.get_toplevel ()).show ()
+                ui.gnome_error_dialog_parented (_("Invalid day field in date"),
+                                                self.day.get_toplevel ())
                 return -1
         
         text = string.strip (self.month.get_chars (0, -1)).encode ('latin-1')
         if text != '':
             try: month = int (text)
             except ValueError, err:
-                GnomeErrorDialog (_("Invalid month field in date"),
-                                  self.day.get_toplevel ()).show ()
+                ui.gnome_error_dialog_parented (_("Invalid month field in date"),
+                                                self.day.get_toplevel ())
                 return -1
         
         text = string.strip (self.year.get_chars (0, -1)).encode ('latin-1')
         if text != '':
             try: year = int (text)
             except ValueError: 
-                GnomeErrorDialog (_("Invalid year field in date"),
-                                  self.day.get_toplevel ()).show ()
+                ui.gnome_error_dialog_parented (_("Invalid year field in date"),
+                                                self.day.get_toplevel ())
                 return -1
         
         if self.initial == (day, month, year): return 0
@@ -384,8 +384,8 @@ class Date (BaseField):
         try:
             entry [self.field] = Fields.Date ((year, month, day))
         except Exceptions.DateError, error:
-            GnomeErrorDialog (str (error),
-                              self.day.get_toplevel ()).show ()
+            ui.gnome_error_dialog_parented (str (error),
+                                            self.day.get_toplevel ())
             return -1
         return 1
 
@@ -685,16 +685,16 @@ class RealEditor (Connector.Publisher):
             modified = True
         else:
             if not key_re.match (key):
-                GnomeErrorDialog (_("Invalid key format"),
-                                  self.w.get_toplevel ())
+                ui.gnome_error_dialog_parented (_("Invalid key format"),
+                                                self.w.get_toplevel ())
                 return None
 
             key = Key.Key (database, key)
 
             if key != self.entry.key:
                 if database.has_key (key):
-                    GnomeErrorDialog (_("Key `%s' already exists") % str (key.key),
-                                      self.w.get_toplevel ())
+                    ui.gnome_error_dialog_parented (_("Key `%s' already exists") % str (key.key),
+                                                    self.w.get_toplevel ())
                     return None
                 
                 self.entry.key = key
@@ -703,7 +703,16 @@ class RealEditor (Connector.Publisher):
         modified = self.type != self.entry.type or modified
         
         for item in self.content:
-            result = item.update (self.entry)
+            try:
+                result = item.update (self.entry)
+                
+            except UnicodeEncodeError:
+                f = Types.get_field (item.field)
+                
+                ui.gnome_error_dialog_parented (_("The `%s' field contains a non Latin-1 symbol") %
+                                                f.name, self.w.get_toplevel ())
+                return None
+            
             if result == -1: return None
             
             modified = result or modified
@@ -731,11 +740,19 @@ class NativeEditor (Connector.Publisher):
             self.original = database.get_native (entry)
         else:
             self.original = ''
-        
-        self.w = gtk.TextView ()
-        self.w.set_editable (True)
 
-        self.buff = self.w.get_buffer ()
+        self.w = gtk.ScrolledWindow ()
+        self.w.set_policy (gtk.POLICY_NEVER,
+                           gtk.POLICY_AUTOMATIC)
+        
+        self.w_txt = gtk.TextView ()
+        self.w_txt.set_editable (True)
+
+        self.w.add (self.w_txt)
+
+        self.w_txt.show ()
+        
+        self.buff = self.w_txt.get_buffer ()
 
         iter = self.buff.get_start_iter ()
         mono = self.buff.create_tag ('body', family = 'Monospace')
@@ -748,8 +765,19 @@ class NativeEditor (Connector.Publisher):
         ''' updates and returns the new entry '''
 
         new  = None
+
         text = self.buff.get_text (self.buff.get_start_iter (),
-                                   self.buff.get_end_iter ()).encode ('latin-1')
+                                   self.buff.get_end_iter ())
+
+        try:
+            text = text.encode ('latin-1')
+            
+        except UnicodeEncodeError:
+            ui.gnome_error_dialog_parented (_("Your text contains non Latin-1 symbols"),
+                                            self.w.get_toplevel ())
+            return None
+        
+
         try:
             new = self.database.create_native (text)
             
