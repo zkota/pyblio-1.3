@@ -422,8 +422,6 @@ class Reference (BaseField):
         
         self.edit.connect ('drag_data_received', self.drag_received)
         
-        self.current = Fields.Reference ([])
-
         box.pack_start (self.edit, True, True)
         h.pack_start (box)
 
@@ -447,14 +445,17 @@ class Reference (BaseField):
 
     def setup (self, entry):
         if entry.has_key (self.field):
-            (self.value, self.loss)  = entry.field_and_loss (self.field)
-            if self.value.list:
-                self.string = string.join (map (lambda x: x.key, self.value.list), ', ')
+            (self.current, self.loss)  = entry.field_and_loss (self.field)
+            
+            if self.current.list:
+                self.string = string.join (map (lambda x: x.key, self.current.list), ', ')
             else:
                 self.string = _("[ Drop an Entry here ]")
         else:
-            (self.value, self.loss) = (None, 0)
+            (self.current, self.loss) = (Fields.Reference ([]), 0)
             self.string = _("[ Drop an Entry here ]")
+
+        self.initial = self.current
         return
     
     def drag_received (self, *arg):
@@ -479,12 +480,12 @@ class Reference (BaseField):
     
 
     def update (self, entry):
-        
+
         if self.current == Fields.Reference ([]):
             del entry [self.field]
             return 1
 
-        if self.current == self.value: return 0
+        if self.current == self.initial: return 0
 
         entry [self.field] = self.current
         return 1
