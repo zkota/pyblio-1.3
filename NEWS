@@ -1,5 +1,18 @@
 -*- text -*-
 
+New in 1.2.3 - 2004-03-11
+
+	* Updated translations (Gnome I18n team)
+	* Improved documentation (Zoltán)
+	* Improved / fixed error messages
+	* Saving the sort order works
+	* Configuration of the text widget to use for editing
+	* Don't quit when the last document is closed
+	* Configurable BibTeX date format
+	* Editing Crossrefs does not loose info anymore
+	* Misc UI improvements
+
+
 New in 1.2.2 - 2004-01-08
 
         * Updated english documentation in Gnome format (Zoltán)
