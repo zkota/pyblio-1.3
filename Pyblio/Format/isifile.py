@@ -176,12 +176,12 @@ class IsifileIterator(Iterator.Iterator):
                     firstpg = lines[key1] [i]
                     lastpg  = lines[key2] [i]                      
                     pages.append(('%s -- %s' % (firstpg, lastpg)))
-                in_table['pages'] = string.join(pages, '; ')
+                in_table['pages'] = Fields.Text (string.join(pages, '; '))
                 del lines[key1]; del lines[key2]
             else: print 'inconsistent BP, EP fields found'
          
         if lines.has_key(key):
-            in_table['size'] = '%s p.' %(lines[key][0])
+            in_table['size'] = Fields.Text ('%s p.' %(lines[key][0]))
             del lines[key]
             
 
@@ -204,7 +204,7 @@ class IsifileIterator(Iterator.Iterator):
        
         if lines.has_key ('SO'):
             uc_title =  ' '.join(lines['SO'])
-            in_table ['journal'] = uc_title
+            in_table ['journal'] = Fields.Text (uc_title)
             if lines.has_key('JI'):
                 uc_title = re.split(r"([- .,/]+)", uc_title)
                 ca_title = re.split(r"[- .,/]+", ' '.join(lines['JI']))
@@ -220,7 +220,7 @@ class IsifileIterator(Iterator.Iterator):
                     else:
                         Title.append(string.lower(word))
                 del lines['JI']
-                in_table['journal'] =  "".join(Title)
+                in_table['journal'] =  Fields.Text ("".join(Title))
             del lines['SO']
 
 
@@ -373,3 +373,11 @@ def iterator (url, check):
 Autoload.register ('format', 'Isifile', {'open': opener,
                                          'write': writer,
                                          'iter': iterator})
+
+
+
+### Local Variables:
+### Mode: python
+### py-master-file : "ut_Isi.py"
+### End:
+

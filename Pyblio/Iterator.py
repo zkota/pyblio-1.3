@@ -22,6 +22,9 @@
 
 class Iterator:
 
+    base = None
+    title = "Some Selection"
+    
     def iterator (self):
         ''' loop method, so that we can for example call a method by
         passing indifferently a database or a database iterator...
@@ -50,8 +53,9 @@ class DBIterator (Iterator):
     ''' This class defines a database iterator '''
     
     def __init__ (self, database):
-        self.keys     = database.keys ()
-        self.database = database
+        self.keys = database.keys ()
+        self.base = database
+	self.database = database
         self.count = 0
         return
 

@@ -36,14 +36,16 @@ class Sort:
     def sort (self, iterator):
         ''' Returns a list of keys sorted according to the current
         sort settings '''
-        
+	
+        self.base = iterator.base
+
         S = []
         extractors = [f.get_extractor() for f in self.fields]
         for e in iterator:
             s = []
             for f in extractors:
                 s.extend (f (e))
-            s.append (e.key)
+	    s.append (e)
             S.append (s)
         S.sort ()
         result = [x [-1] for x in S]

@@ -28,6 +28,7 @@ class SearchSelection (Iterator):
     def __init__ (self, search, iterator):
         self.search = search
         self.iter   = iterator
+	self.base = iterator.base
         return
 
     def __iter__ (self):
@@ -71,15 +72,15 @@ class SortSelection (Iterator):
 
     def __init__ (self, sort, iterator):
         # compute asap
-        self.keys  = sort.sort (iterator)
-        self.data = iterator.database or list(iterator)
+        self.data  = sort.sort (iterator)
+        self.base = iterator.base 
         self.count = 0
         return
 
     def __iter__ (self):
         self.count = 0
-        for i in self.keys:
-            yield self.data[i]
+        for i in self.data:
+            yield i
             self.count += 1
         raise StopIteration
 
@@ -89,10 +90,9 @@ class SortSelection (Iterator):
 
     def next (self):
         try:
-            ret = self.data [self.keys [self.count]]
+            ret = self.data [self.count]
         except IndexError:
             return None
-     
         self.count = self.count + 1
         return ret
     
