@@ -682,8 +682,6 @@ class Document (Connector.Publisher):
         import locale
         enc = locale.getpreferredencoding ()
 
-        print enc
-        
         entries = self.index.selection ()
         if not entries: return
         
