@@ -1225,7 +1225,7 @@ class LT_Widget_1:
             anno_label.set_markup(l)
             vbox.pack_start (anno_label)
             
-            if entry.has_key(key): t = str (entry[key])
+            if entry.has_key(key): t = str (entry[key]).decode ('latin-1')
             else:                  t = ''
 
             l = min (len(t), 150)
@@ -1286,7 +1286,7 @@ class LT_Widget_2:
         key = node['key']
         if not item.has_key(key):
             item[key] = Fields.LongText(_('Enter text here'))
-        self.buff.set_text (str(item[key]), -1)
+        self.buff.set_text (str (item[key]).decode ('latin-1'), -1)
         self.buff.set_modified (False)
         self.page.show_all ()
         if self.hidden:
@@ -1301,7 +1301,7 @@ class LT_Widget_2:
             start, end = self.buff.get_bounds()
             
             key = self.node['key']
-            text = self.buff.get_text (start, end)
+            text = self.buff.get_text (start, end).encode ('latin-1')
             if text.strip():
                 self.entry[key] = Fields.LongText(text)
             else:
@@ -1325,7 +1325,7 @@ class LT_Widget_2:
 
         start, end = self.buff.get_bounds()
         key = self.node['key']
-        self.entry[key].text = self.buff.get_text (start, end)
+        self.entry[key].text = self.buff.get_text (start, end).encode ('latin-1')
         
 
     def enable_buttons (self):
