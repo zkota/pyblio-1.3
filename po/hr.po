@@ -1,11 +1,11 @@
 # Translation of pybliographer to Croatiann
 # Copyright (C) Croatiann team
-# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Nikola Planinac <>,pr pr <delacko@192.168.0.1>,
+# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Nikola Planinac <>,pr pr <delacko@192.168.0.1>,Robert Sedak <robert.sedak@sk.tel.hr>,
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer 0\n"
-"POT-Creation-Date: 2004-02-09 19:09+0100\n"
-"PO-Revision-Date: 2004-02-09 19:09+CET\n"
+"POT-Creation-Date: 2004-03-20 15:02+0100\n"
+"PO-Revision-Date: 2004-03-20 15:02+CET\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
@@ -13,770 +13,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: TransDict server\n"
 
-#: Pyblio/Autoload.py:57
+#: Pyblio/Autoload.py:80
 msgid "warning: can't import %s: %s"
 msgstr "upozorenje: ne mogu da uvesti %s: %s"
 
 #: Pyblio/Config.py:53
 msgid "value of `%s' should be of type %s"
-msgstr "vrijednost za „%s“ treba biti tipa %s"
+msgstr "vrijednost za \"%s\" treba biti tipa %s"
 
-#: Pyblio/Config.py:196
+#: Pyblio/Config.py:207
 msgid "String"
 msgstr "Znakovni niz"
 
-#: Pyblio/Config.py:205
+#: Pyblio/Config.py:216
 msgid "Boolean"
 msgstr "Boolean"
 
-#: Pyblio/Config.py:224
+#: Pyblio/Config.py:235
 msgid "Integer"
 msgstr "Cijeli broj"
 
-#: Pyblio/Config.py:226
+#: Pyblio/Config.py:237
 msgid "Integer under %d"
 msgstr "Cijeli broj ispod %d"
 
-#: Pyblio/Config.py:228
+#: Pyblio/Config.py:239
 msgid "Integer over %d"
 msgstr "Cijeli broj preko %d"
 
-#: Pyblio/Config.py:230
+#: Pyblio/Config.py:241
 msgid "Integer between %d and %d"
 msgstr "Cijeli broj između %d i %d"
 
-#: Pyblio/Config.py:242
+#: Pyblio/Config.py:253
 msgid "Element in `%s'"
-msgstr "Element iz „%s“"
+msgstr "Element iz \"%s\""
 
-#: Pyblio/Config.py:262
+#: Pyblio/Config.py:273
 msgid "Tuple (%s)"
 msgstr "N-torka (%s)"
 
-#: Pyblio/Config.py:283
+#: Pyblio/Config.py:294
 msgid "List (%s)"
 msgstr "Popis (%s)"
 
-#: Pyblio/Config.py:308
+#: Pyblio/Config.py:319
 msgid "Dictionary (%s, %s)"
 msgstr "Rječnik (%s, %s)"
 
-#: Pyblio/Fields.py:269
+#: Pyblio/Fields.py:265
 msgid "Illegal year value"
 msgstr "Neispravna vrijednost godine"
 
-#: Pyblio/Fields.py:273
+#: Pyblio/Fields.py:269
 msgid "Illegal month value"
 msgstr "Neispravna vrijednost mjeseca"
 
-#: Pyblio/Fields.py:277
+#: Pyblio/Fields.py:273
 msgid "Illegal day value"
 msgstr "Neispravna vrijednost dana"
 
-#: Pyblio/Fields.py:460
+#: Pyblio/Fields.py:443
 msgid "in %s"
 msgstr "u %s"
 
-#: Pyblio/LyX.py:39
-msgid "no input pipe `%s'"
-msgstr "nema ulaznog cjevovoda „%s“"
-
-#: Pyblio/LyX.py:45
-msgid "no output pipe `%s'"
-msgstr "nema izlaznog cjevovoda „%s“"
-
-#: Pyblio/Open.py:97
-msgid "method `%s' provides no opener"
-msgstr "metoda „%s“ ne daje otvarač"
-
-#: Pyblio/Open.py:105 Pyblio/Open.py:151
-msgid "File `%s' does not exist"
-msgstr "Datoteka „%s“ ne postoji"
-
-#: Pyblio/Open.py:116 Pyblio/Open.py:162
-msgid "don't know how to open `%s'"
-msgstr "ne znam kako otvoriti „%s“"
-
-#: Pyblio/Open.py:143
-msgid "method `%s' provides no iterator"
-msgstr "metoda „%s“ ne daje iterator"
-
-#: Pyblio/Format/BibTeX.py:351 Pyblio/Format/BibTeX.py:412
+#: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
 msgid "key `%s' is malformed"
-msgstr "ključ „%s“ je neispravan"
+msgstr "ključ \"%s\" je neispravan"
 
-#: Pyblio/Format/BibTeX.py:372 Pyblio/Format/BibTeX.py:395
+#: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: ključ `%s' već definiran"
 
-#: Pyblio/GnomeUI/Editor.py:38
-msgid "Last Name, First Name"
-msgstr "Ime"
-
-#: Pyblio/GnomeUI/Editor.py:39
-msgid "Text"
-msgstr "Tekst"
-
-#: Pyblio/GnomeUI/Editor.py:42
-msgid "Reference"
-msgstr "Referenca"
-
-#: Pyblio/GnomeUI/Editor.py:258
-msgid "Day"
-msgstr "Dan"
-
-#: Pyblio/GnomeUI/Editor.py:267
-msgid "Month"
-msgstr "Mjesec"
-
-#: Pyblio/GnomeUI/Editor.py:276
-msgid "Year"
-msgstr "Godina"
-
-#: Pyblio/GnomeUI/Editor.py:301
-msgid "Invalid day field in date"
-msgstr "Neispravno polje dana u datumu"
-
-#: Pyblio/GnomeUI/Editor.py:309
-msgid "Invalid month field in date"
-msgstr "Neispravno polje mjeseca u datumu"
-
-#: Pyblio/GnomeUI/Editor.py:317
-msgid "Invalid year field in date"
-msgstr "Neispravno polje godine u datumu"
-
-#: Pyblio/GnomeUI/Editor.py:426
-msgid "Entry type"
-msgstr "Vrsta unosa"
-
-#: Pyblio/GnomeUI/Editor.py:428 Pyblio/GnomeUI/Config.py:482
-msgid "Key"
-msgstr "Ključ"
-
-#: Pyblio/GnomeUI/Editor.py:471
-msgid "Create Field"
-msgstr "Stvori polje"
-
-#: Pyblio/GnomeUI/Editor.py:539 Pyblio/GnomeUI/Fields.py:191
-msgid "Mandatory"
-msgstr "Obavezno"
-
-#: Pyblio/GnomeUI/Editor.py:539 Pyblio/GnomeUI/Fields.py:192
-msgid "Optional"
-msgstr "Neobavezno"
-
-#: Pyblio/GnomeUI/Editor.py:539
-msgid "Extra"
-msgstr "Dodatno"
-
-#: Pyblio/GnomeUI/Editor.py:601
-msgid "Invalid key format"
-msgstr "Neispravni oblik ključa"
-
-#: Pyblio/GnomeUI/Editor.py:609
-msgid "Key `%s' already exists"
-msgstr "Ključ „%s“ već postoji"
-
-#: Pyblio/GnomeUI/Editor.py:676
-msgid "Error in native string parsing"
-msgstr "Greška u prirodnom parsiranju niza"
-
-#: Pyblio/GnomeUI/Editor.py:689
-msgid "Edit entry"
-msgstr "Uređivanje zapisa"
-
-#: Pyblio/GnomeUI/Editor.py:703 Pyblio/GnomeUI/Editor.py:744
-msgid "Native Editing"
-msgstr "Prirodno uređivanje"
-
-#: Pyblio/GnomeUI/Editor.py:756
-msgid "Standard Editing"
-msgstr "Obično uređivanje"
-
-#: Pyblio/GnomeUI/FileSelector.py:40 Pyblio/GnomeUI/Document.py:291
-#: Pyblio/GnomeUI/Document.py:308
-msgid "File"
-msgstr "Datoteka"
-
-#: Pyblio/GnomeUI/FileSelector.py:106
-msgid "Bibliography type:"
-msgstr "Vrsta bibliografije:"
-
-#: Pyblio/GnomeUI/Index.py:77
-msgid "Add..."
-msgstr "Dodaj..."
-
-#: Pyblio/GnomeUI/Index.py:78
-msgid "Edit..."
-msgstr "Uredi..."
-
-#: Pyblio/GnomeUI/Index.py:79 Pyblio/GnomeUI/Search.py:178
-msgid "Delete"
-msgstr "Obriši"
-
-#: Pyblio/GnomeUI/Index.py:80
-msgid "Toggle..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Search.py:109
-msgid "Search"
-msgstr "&Traži"
-
-#: Pyblio/GnomeUI/Search.py:133 Pyblio/GnomeUI/Fields.py:225
-msgid "Field"
-msgstr "Polje"
-
-#: Pyblio/GnomeUI/Search.py:134
-msgid "Pattern"
-msgstr "Uzorak"
-
-#: Pyblio/GnomeUI/Search.py:151
-msgid "Simple Search"
-msgstr "Jednostavna pretraga"
-
-#: Pyblio/GnomeUI/Search.py:155
-msgid "Search command:"
-msgstr ""
-
-#: Pyblio/GnomeUI/Search.py:161
-msgid "Expert Search"
-msgstr "Stručna pretraga"
-
-#. initialize the tree with the full database
-#: Pyblio/GnomeUI/Search.py:199
-msgid "Full database"
-msgstr "Cijela baza"
-
-#: Pyblio/GnomeUI/Search.py:241
-msgid "internal error during evaluation"
-msgstr "interna greška pri vrednovanju"
-
-#: Pyblio/GnomeUI/Search.py:290
-msgid ""
-"while compiling %s\n"
-"error: %s"
-msgstr ""
-"pri izgradnji %s\n"
-"greška: %s"
-
-#: Pyblio/GnomeUI/Sort.py:49
-msgid "Select sort criterions"
-msgstr "Odaberite pravila razvrstavanja"
-
-#: Pyblio/GnomeUI/Sort.py:60
-msgid "Sort direction"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:60
-msgid "Sort criterions"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:73
-msgid "[Entry Type]"
-msgstr "[Vrsta unosa]"
-
-#: Pyblio/GnomeUI/Sort.py:74
-msgid "[Key Value]"
-msgstr "[Vrijednost ključa]"
-
-#: Pyblio/GnomeUI/Sort.py:99
-msgid "Reorder"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:100
-msgid "Groups the active fields on the top of the list"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:104
-msgid "Unselect all"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:105
-msgid "Removes all the sort criterions"
-msgstr ""
-
-#: Pyblio/GnomeUI/Sort.py:109
-msgid "Set as default"
-msgstr "Podesi kao uobičajeno"
-
-#: Pyblio/GnomeUI/Sort.py:110
-msgid "Use this sort criterion as the default for new files"
-msgstr ""
-
-#: Pyblio/GnomeUI/Utils.py:164
-msgid ""
-"The following errors occured:\n"
-"\n"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:58
-msgid "_New"
-msgstr "_Novi"
-
-#: Pyblio/GnomeUI/Document.py:60
-msgid "Open _Database..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:62
-msgid "_Merge with..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:63
-msgid "_Import ..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:64
-msgid "Online Query"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:65
-msgid "PubMed/Medline..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:67
-msgid "SPIRES Server..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:69
-msgid "Z39.50 Server..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:71
-msgid "Generic Server..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:78
-msgid "_Previous Documents"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:85
-msgid "About..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:96
-msgid "_Add..."
-msgstr "_Dodaj..."
-
-#: Pyblio/GnomeUI/Document.py:97
-msgid "_Edit..."
-msgstr "_Uredi..."
-
-#: Pyblio/GnomeUI/Document.py:98
-msgid "_Delete"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:101
-msgid "S_ort..."
-msgstr "_Razvrstaj..."
-
-#: Pyblio/GnomeUI/Document.py:105 Pyblio/GnomeUI/Document.py:126
-msgid "_Cite"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:106
-msgid "_Format..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:110
-msgid "_Fields..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:111
-msgid "_Entries..."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:117
-msgid "_Old Style"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:123
-msgid "_File"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:124
-msgid "_Edit"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:125
-msgid "_View"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:127
-msgid "_Settings"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:128
-msgid "_Help"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:132
-msgid "Open"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:133
-msgid "Save"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:135
-msgid "Find"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:136
-msgid "Cite"
-msgstr "Citiraj"
-
-#: Pyblio/GnomeUI/Document.py:138
-msgid "Close"
-msgstr "Zatvori"
-
-#: Pyblio/GnomeUI/Document.py:292 Pyblio/GnomeUI/Document.py:309
-msgid "Previous Documents"
-msgstr "Prethodni dokumenti"
-
-#: Pyblio/GnomeUI/Document.py:334
-msgid ""
-"can't open file `%s' for writing:\n"
-"%s"
-msgstr ""
-"ne mogu otvoriti datoteku „%s“ za pisanje:\n"
-"%s"
-
-#: Pyblio/GnomeUI/Document.py:356
-msgid ""
-"Error while parsing `%s':\n"
-"%s"
-msgstr ""
-"Greška pri obradi „%s“:\n"
-"%s"
-
-#: Pyblio/GnomeUI/Document.py:375
-msgid "New database"
-msgstr "Baza podataka"
-
-#: Pyblio/GnomeUI/Document.py:383 Pyblio/GnomeUI/Document.py:387
-msgid "[no entry]"
-msgstr "[nema unosa]"
-
-#: Pyblio/GnomeUI/Document.py:384
-msgid "[1 entry]"
-msgstr "[1 unos]"
-
-#: Pyblio/GnomeUI/Document.py:385
-msgid "[%d entries]"
-msgstr "[%d unosa]"
-
-#: Pyblio/GnomeUI/Document.py:388
-msgid "[%d/1 entry]"
-msgstr "[%d/1 unos]"
-
-#: Pyblio/GnomeUI/Document.py:389
-msgid "[%d/%d entries]"
-msgstr "[%d/%d unos]"
-
-#: Pyblio/GnomeUI/Document.py:394
-msgid "[modified]"
-msgstr "[izmjenjeno]"
-
-#: Pyblio/GnomeUI/Document.py:404
-msgid ""
-"The database has been modified.\n"
-"Discard changes ?"
-msgstr ""
-"Baza podataka je izmjenjena.\n"
-"Zanemariti izmjene?"
-
-#: Pyblio/GnomeUI/Document.py:528 Pyblio/GnomeUI/Document.py:1043
-msgid "Medline/PubMed Online Search Help"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:561
-msgid "Online PubMed/Medline Query"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:591
-msgid "Search PubMed for: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:593 Pyblio/GnomeUI/Document.py:932
-msgid ""
-"Maximum number\n"
-"of results: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:595 Pyblio/GnomeUI/Document.py:934
-msgid ""
-"Start listing at\n"
-"result number: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:602
-msgid "Limited to:"
-msgstr "Ograničeno na:"
-
-#: Pyblio/GnomeUI/Document.py:736
-msgid "From:"
-msgstr "Od:"
-
-#: Pyblio/GnomeUI/Document.py:739
-msgid "To:"
-msgstr "Za:"
-
-#: Pyblio/GnomeUI/Document.py:746
-msgid "Use the format YYYY/MM/DD; month and day are optional."
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:796
-msgid "No Results Found"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:805
-msgid "Search Error"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:816
-msgid "Z39.50 Server Query Help"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:900
-msgid "Enter Your Query"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:920 Pyblio/GnomeUI/Document.py:1063
-msgid "Query server: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1055
-msgid "SPIRES Query"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1074
-msgid "Author: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1081
-msgid "Title: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1088
-msgid "Citation: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1095
-msgid "Report Number: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1102
-msgid "Affiliation: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1109
-msgid "Collaboration: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1116
-msgid "Keywords: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1123
-msgid "Country: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1130
-msgid "Eprint: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1140
-msgid "Number: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1147
-msgid "Topcite: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1155
-msgid "In RPP?: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1165
-msgid "Journal: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1197
-msgid "vol,pg"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1204
-msgid "Published: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1214
-msgid "Date: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1234
-msgid "Sort by: "
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1253
-msgid "Merge file"
-msgstr "Spoji datoteku"
-
-#: Pyblio/GnomeUI/Document.py:1265 Pyblio/GnomeUI/Document.py:1328
-#: Pyblio/GnomeUI/Document.py:1379
-msgid "Open error"
-msgstr "Greška pri otvaranju"
-
-#: Pyblio/GnomeUI/Document.py:1289
-msgid "Merge status"
-msgstr "Stanje spajanja"
-
-#: Pyblio/GnomeUI/Document.py:1301
-msgid "Open database"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1354
-msgid "Open file"
-msgstr "Otvori datoteku"
-
-#: Pyblio/GnomeUI/Document.py:1420
-msgid ""
-"The database has been externally modified.\n"
-"Overwrite changes ?"
-msgstr ""
-"Baza podataka je izmjenjena izvana.\n"
-"Treba li prebrisati izmjene?"
-
-#: Pyblio/GnomeUI/Document.py:1431
-msgid ""
-"Unable to save `%s':\n"
-"%s"
-msgstr ""
-"Ne mogu spremiti „%s“:\n"
-"%s"
-
-#: Pyblio/GnomeUI/Document.py:1440
-msgid ""
-"An internal error occured during saving\n"
-"Try to Save As..."
-msgstr ""
-"Došlo je do unutrašnje greške pri spremanju\n"
-"Pokušajte spremiti kao..."
-
-#: Pyblio/GnomeUI/Document.py:1455
-msgid "Save As..."
-msgstr "Snimi kao..."
-
-#: Pyblio/GnomeUI/Document.py:1462
-msgid ""
-"The file `%s' already exists.\n"
-"Overwrite it ?"
-msgstr ""
-"Datoteka „%s“ već postoji.\n"
-"Treba li je prebrisati?"
-
-#: Pyblio/GnomeUI/Document.py:1469
-msgid ""
-"During opening:\n"
-"%s"
-msgstr ""
-"Pri otvaranju:\n"
-"%s"
-
-#: Pyblio/GnomeUI/Document.py:1487
-msgid "Reopen error"
-msgstr "Greška pri ponovnom otvaranju"
-
-#: Pyblio/GnomeUI/Document.py:1529
-msgid ""
-"An entry called `%s' already exists.\n"
-"Rename and add it anyway ?"
-msgstr ""
-"Već postoji unos naziva „%s“.\n"
-"Treba li ga ipak preimenovati i dodati?"
-
-#: Pyblio/GnomeUI/Document.py:1566
-msgid "Really remove all the entries ?"
-msgstr "Treba li zaista ukloniti sve unose?"
-
-#: Pyblio/GnomeUI/Document.py:1586
-msgid "Create new entry"
-msgstr "Stvori novi unos"
-
-#: Pyblio/GnomeUI/Document.py:1600
-msgid "Really edit %d entries ?"
-msgstr "Treba li zaista urediti %d unosa?"
-
-#: Pyblio/GnomeUI/Document.py:1641
-msgid "Remove all the %d entries ?"
-msgstr "Ukloniti svih %d unosa?"
-
-#: Pyblio/GnomeUI/Document.py:1643
-msgid "Remove entry `%s' ?"
-msgstr "Ukloniti unos „%s“?"
-
-#: Pyblio/GnomeUI/Document.py:1709 Pyblio/GnomeUI/Document.py:1716
-msgid ""
-"Can't connect to LyX:\n"
-"%s"
-msgstr ""
-"Ne mogu se spojiti na LyX:\n"
-"%s"
-
-#: Pyblio/GnomeUI/Document.py:1764
-msgid ""
-"Please install bug-buddy\n"
-"to use this feature"
-msgstr ""
-
-#: Pyblio/GnomeUI/Document.py:1775
-msgid "This program is copyrighted under the GNU GPL"
-msgstr "Ovaj program je zaštićen autorskim pravima prema GNU GPL licenci"
-
-#: Pyblio/GnomeUI/Document.py:1777
-msgid "Gnome interface to the Pybliographer system."
-msgstr "Gnome sučelje za sustav Pybliographer."
-
-#: Pyblio/GnomeUI/Document.py:1782
-msgid "Pybliographer Home Page"
-msgstr "Internet stranica Pybliographera"
-
-#: Pyblio/GnomeUI/Format.py:37
-msgid "Format entries"
-msgstr "Oblik unosa"
-
-#: Pyblio/GnomeUI/Format.py:51
-msgid "Bibliography style:"
-msgstr "Stil bibliografije:"
-
-#: Pyblio/GnomeUI/Format.py:52
-msgid "Select style"
-msgstr ""
-
-#: Pyblio/GnomeUI/Format.py:58
-msgid "Output format:"
-msgstr "Izlazni format:"
-
-#: Pyblio/GnomeUI/Format.py:75
-msgid "Output File:"
-msgstr ""
-
-#: Pyblio/GnomeUI/Format.py:76
-msgid "Select output file"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:45
-msgid "Choose your preferences"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:93
-msgid ""
-"Item `%s':\n"
-"\n"
-"%s"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:128 Pyblio/GnomeUI/Fields.py:157
-#: Pyblio/GnomeUI/Fields.py:339
+#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -784,79 +93,721 @@ msgstr ""
 "Neke izmjene zahtjevaju ponovno pokretanje\n"
 "Pybliographera kako bi došle do izražaja"
 
-#: Pyblio/GnomeUI/Config.py:249
-msgid "True"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:250
-msgid "False"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:390
+#: Pyblio/GnomeUI/Config.py:431
 msgid "Add"
 msgstr "Dodaj"
 
-#: Pyblio/GnomeUI/Config.py:393
+#: Pyblio/GnomeUI/Config.py:434
 msgid "Update"
 msgstr "Ažuriraj"
 
-#: Pyblio/GnomeUI/Config.py:396 Pyblio/GnomeUI/Config.py:494
-#: Pyblio/GnomeUI/Fields.py:96 Pyblio/GnomeUI/Fields.py:239
+#: Pyblio/GnomeUI/Config.py:437 Pyblio/GnomeUI/Config.py:549
 msgid "Remove"
 msgstr "Ukloni"
 
-#: Pyblio/GnomeUI/Config.py:482
-msgid "Value"
-msgstr ""
-
-#: Pyblio/GnomeUI/Config.py:491 Pyblio/GnomeUI/Fields.py:93
-#: Pyblio/GnomeUI/Fields.py:236
+#: Pyblio/GnomeUI/Config.py:546
 msgid "Set"
 msgstr "Skup"
 
-#: Pyblio/GnomeUI/Config.py:507
+#: Pyblio/GnomeUI/Config.py:561
 msgid "Key:"
 msgstr "Tipka:"
 
-#: Pyblio/GnomeUI/Config.py:509
+#: Pyblio/GnomeUI/Config.py:563
 msgid "Value:"
 msgstr "Vrijednost:"
 
-#: Pyblio/GnomeUI/Fields.py:45
-msgid "Fields configuration"
+#: Pyblio/GnomeUI/Document.py:127
+msgid "Unnamed bibliographic database"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:59
+#: Pyblio/GnomeUI/Document.py:218
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"ne mogu otvoriti datoteku \"%s\" za pisanje:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:239
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"Greška pri obradi \"%s\":\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:255
+msgid "New database"
+msgstr "Baza podataka"
+
+#: Pyblio/GnomeUI/Document.py:263 Pyblio/GnomeUI/Document.py:267
+msgid "[no entry]"
+msgstr "[nema unosa]"
+
+#: Pyblio/GnomeUI/Document.py:264
+msgid "[1 entry]"
+msgstr "[1 unos]"
+
+#: Pyblio/GnomeUI/Document.py:265
+msgid "[%d entries]"
+msgstr "[%d unosa]"
+
+#: Pyblio/GnomeUI/Document.py:268
+msgid "[%d/1 entry]"
+msgstr "[%d/1 unos]"
+
+#: Pyblio/GnomeUI/Document.py:269
+msgid "[%d/%d entries]"
+msgstr "[%d/%d unos]"
+
+#: Pyblio/GnomeUI/Document.py:274
+msgid "[modified]"
+msgstr "[izmjenjeno]"
+
+#: Pyblio/GnomeUI/Document.py:284
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"Baza podataka je izmjenjena.\n"
+"Zanemariti izmjene?"
+
+#. no result.
+#: Pyblio/GnomeUI/Document.py:309
+msgid "Your query returned no result"
+msgstr "Nema podataka za vaš upit"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:319
+msgid "Merge file"
+msgstr "Spoji datoteku"
+
+#: Pyblio/GnomeUI/Document.py:331 Pyblio/GnomeUI/Document.py:385
+msgid "Open error"
+msgstr "Greška pri otvaranju"
+
+#: Pyblio/GnomeUI/Document.py:355
+msgid "Merge status"
+msgstr "Stanje spajanja"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:366
+msgid "Open file"
+msgstr "Otvori datoteku"
+
+#: Pyblio/GnomeUI/Document.py:414
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"Baza podataka je izmjenjena izvana.\n"
+"Treba li prebrisati izmjene?"
+
+#: Pyblio/GnomeUI/Document.py:424
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"Ne mogu spremiti \"%s\":\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:432
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"Došlo je do unutrašnje greške pri spremanju\n"
+"Pokušajte spremiti kao..."
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:446
+msgid "Save As..."
+msgstr "Snimi kao..."
+
+#: Pyblio/GnomeUI/Document.py:452
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"Datoteka \"%s\" već postoji.\n"
+"Treba li je prebrisati?"
+
+#: Pyblio/GnomeUI/Document.py:459
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"Pri otvaranju:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:477
+msgid "Reopen error"
+msgstr "Greška pri ponovnom otvaranju"
+
+#: Pyblio/GnomeUI/Document.py:524
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"Već postoji unos naziva \"%s\".\n"
+"Treba li ga ipak preimenovati i dodati?"
+
+#: Pyblio/GnomeUI/Document.py:561
+msgid "Really remove all the entries ?"
+msgstr "Treba li zaista ukloniti sve unose?"
+
+#: Pyblio/GnomeUI/Document.py:581
+msgid "Create new entry"
+msgstr "Stvori novi unos"
+
+#: Pyblio/GnomeUI/Document.py:595
+msgid "Really edit %d entries ?"
+msgstr "Treba li zaista urediti %d unosa?"
+
+#: Pyblio/GnomeUI/Document.py:633
+msgid "Remove all the %d entries ?"
+msgstr "Ukloniti svih %d unosa?"
+
+#: Pyblio/GnomeUI/Document.py:635
+msgid "Remove entry `%s' ?"
+msgstr "Ukloniti unos \"%s\"?"
+
+#: Pyblio/GnomeUI/Document.py:718 Pyblio/GnomeUI/Document.py:727
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"Ne mogu se spojiti na LyX:\n"
+"%s"
+
+#: Pyblio/GnomeUI/Document.py:799
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:807
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "Ovaj program je zaštićen autorskim pravima prema GNU GPL licenci"
+
+#: Pyblio/GnomeUI/Document.py:808
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Gnome sučelje za sustav Pybliographer."
+
+#: Pyblio/GnomeUI/Document.py:818
+msgid "Gnome Translation Team"
+msgstr "Gnome prevoditeljski tim"
+
+#: Pyblio/GnomeUI/Document.py:823
+msgid "Pybliographer Home Page"
+msgstr "Internet stranica Pybliographera"
+
+#: Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "Ime"
+
+#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
+#: glade/config1.glade.h:14 glade/fields1.glade.h:19
+msgid "Text"
+msgstr "Tekst"
+
+#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
+msgid "Error in native string parsing"
+msgstr "Greška u prirodnom parsiranju niza"
+
+#: Pyblio/GnomeUI/Editor.py:315
+msgid "Day"
+msgstr "Dan"
+
+#: Pyblio/GnomeUI/Editor.py:324
+msgid "Month"
+msgstr "Mjesec"
+
+#: Pyblio/GnomeUI/Editor.py:333
+msgid "Year"
+msgstr "Godina"
+
+#: Pyblio/GnomeUI/Editor.py:358
+msgid "Invalid day field in date"
+msgstr "Neispravno polje dana u datumu"
+
+#: Pyblio/GnomeUI/Editor.py:366
+msgid "Invalid month field in date"
+msgstr "Neispravno polje mjeseca u datumu"
+
+#: Pyblio/GnomeUI/Editor.py:374
+msgid "Invalid year field in date"
+msgstr "Neispravno polje godine u datumu"
+
+#. A delete button
+#: Pyblio/GnomeUI/Editor.py:422 Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Obriši"
+
+#: Pyblio/GnomeUI/Editor.py:433 Pyblio/GnomeUI/Editor.py:446
+#: Pyblio/GnomeUI/Editor.py:449
+msgid "[ Drop an Entry here ]"
+msgstr "[ Ovdje ubacite unos ]"
+
+#: Pyblio/GnomeUI/Editor.py:521 Pyblio/GnomeUI/Fields.py:231
+#: glade/config1.glade.h:8 glade/fields1.glade.h:6
+msgid "Entry type"
+msgstr "Vrsta unosa"
+
+#: Pyblio/GnomeUI/Editor.py:523
+msgid "Key"
+msgstr "Ključ"
+
+#: Pyblio/GnomeUI/Editor.py:564
+msgid "Create Field"
+msgstr "Stvori polje"
+
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:446
+msgid "Mandatory"
+msgstr "Obavezno"
+
+#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:447
+msgid "Optional"
+msgstr "Neobavezno"
+
+#: Pyblio/GnomeUI/Editor.py:619
+msgid "Extra"
+msgstr "Dodatno"
+
+#: Pyblio/GnomeUI/Editor.py:688
+msgid "Invalid key format"
+msgstr "Neispravni oblik ključa"
+
+#: Pyblio/GnomeUI/Editor.py:696
+msgid "Key `%s' already exists"
+msgstr "Ključ \"%s\" već postoji"
+
+#: Pyblio/GnomeUI/Editor.py:712
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:777
+msgid "Your text contains non Latin-1 symbols"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:799
+msgid "Edit entry"
+msgstr "Uređivanje zapisa"
+
+#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
+msgid "Native Editing"
+msgstr "Prirodno uređivanje"
+
+#: Pyblio/GnomeUI/Editor.py:891
+msgid "Standard Editing"
+msgstr "Obično uređivanje"
+
+#: Pyblio/GnomeUI/Fields.py:40
+msgid "Authors"
+msgstr "Autori"
+
+#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
+#: glade/fields1.glade.h:21
+msgid "URL"
+msgstr "URL"
+
+#: Pyblio/GnomeUI/Fields.py:43
+msgid "Reference"
+msgstr "Referenca"
+
+#: Pyblio/GnomeUI/Fields.py:44
+msgid "Date"
+msgstr "Datum"
+
+#: Pyblio/GnomeUI/Fields.py:119 glade/config1.glade.h:11
+#: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Ime"
 
-#: Pyblio/GnomeUI/Fields.py:59
+#: Pyblio/GnomeUI/Fields.py:122 glade/config1.glade.h:15
+#: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Tip"
 
-#: Pyblio/GnomeUI/Fields.py:70
-msgid "Name:"
+#: Pyblio/GnomeUI/Fields.py:295
+msgid "Available"
+msgstr "Dostupno"
+
+#: Pyblio/GnomeUI/Fields.py:305
+msgid "Associated"
+msgstr "U vezi s"
+
+#: Pyblio/GnomeUI/Fields.py:316
+msgid "Please, select an entry type from previous page."
+msgstr "Molim, označite vrstu unosa s prethodne stranice."
+
+#: Pyblio/GnomeUI/Fields.py:327
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Polja vezana s unosom vrste <b>%s</b>"
+
+#: Pyblio/GnomeUI/FileSelector.py:44
+msgid "File"
+msgstr "Datoteka"
+
+#: Pyblio/GnomeUI/FileSelector.py:79
+msgid "Bibliography type:"
+msgstr "Vrsta bibliografije:"
+
+#: Pyblio/GnomeUI/Index.py:95
+msgid "Add..."
+msgstr "Dodaj..."
+
+#: Pyblio/GnomeUI/Index.py:97
+msgid "Edit..."
+msgstr "Uredi..."
+
+#: Pyblio/GnomeUI/Index.py:99
+msgid "Delete..."
+msgstr "Obriši..."
+
+#. The root of the search tree is the full database
+#: Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "Cijela baza"
+
+#: Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "interna greška pri vrednovanju"
+
+#: Pyblio/GnomeUI/Search.py:195
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"pri izgradnji %s\n"
+"greška: %s"
+
+#. These are additional search fields
+#: Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[Vrsta unosa]"
+
+#: Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[Vrijednost ključa]"
+
+#: Pyblio/GnomeUI/Utils.py:194
+msgid "The following errors occured:\n"
+msgstr "Dogodile su se sljedeće greške:\n"
+
+#: Pyblio/GnomeUI/__init__.py:46
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:72
-msgid "Type:"
+#: Pyblio/LyX.py:39
+msgid "no input pipe `%s'"
+msgstr "nema ulaznog cjevovoda \"%s\""
+
+#: Pyblio/LyX.py:45
+msgid "no output pipe `%s'"
+msgstr "nema izlaznog cjevovoda \"%s\""
+
+#: Pyblio/Open.py:97
+msgid "method `%s' provides no opener"
+msgstr "metoda \"%s\" ne daje otvarač"
+
+#: Pyblio/Open.py:105 Pyblio/Open.py:151
+msgid "File `%s' does not exist"
+msgstr "Datoteka \"%s\" ne postoji"
+
+#: Pyblio/Open.py:116 Pyblio/Open.py:162
+msgid "don't know how to open `%s'"
+msgstr "ne znam kako otvoriti \"%s\""
+
+#: Pyblio/Open.py:143
+msgid "method `%s' provides no iterator"
+msgstr "metoda \"%s\" ne daje iterator"
+
+#: Pyblio/Style/Parser.py:261
+msgid "missing '%s' attribute"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:198
-msgid "Entries configuration"
+#: Pyblio/Style/Parser.py:271
+msgid "invalid opening tag: %s"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:209
-msgid "Entry"
+#: Pyblio/Style/Parser.py:281
+msgid "invalid closing tag: %s"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:220
-msgid "Entry Name:"
+#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
+#: glade/medline.glade.h:1 glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>Vrsta unosa</b>"
+
+#: glade/config1.glade.h:3
+msgid "A"
+msgstr "A"
+
+#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+msgid "Association"
+msgstr "U vezi s"
+
+#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+msgid "Datum"
+msgstr "Datum"
+
+#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "Uređivač"
+
+#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "Unosi"
+
+#: glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "DEFINICIJA POLjA"
+
+#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+msgid "Fields "
+msgstr "Polja "
+
+#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+msgid "Name "
+msgstr "Ime "
+
+#: glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr "Pybliographe postavke"
+
+#: glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "uobičajena polja"
+
+#: glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr "Podešavanje vrste unosa i imena polja"
+
+#: glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr "Informacije za vrstu unosa <b>Član</b>"
+
+#: glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+"Označite vrstu unosa i odredite \n"
+"Njegovo polje (obvezno i neobvezno)\n"
+"povezivanja na sljedeću stranicu.\n"
+"\n"
+"\n"
+"\n"
+
+#: glade/format.glade.h:2
+msgid "Bibliography style:"
+msgstr "Stil bibliografije:"
+
+#: glade/format.glade.h:3
+msgid "Format entries"
+msgstr "Oblik unosa"
+
+#: glade/format.glade.h:4
+msgid "Output file:"
 msgstr ""
 
-#: Pyblio/GnomeUI/Fields.py:225
-msgid "Status"
+#: glade/format.glade.h:5
+msgid "Output format:"
+msgstr "Izlazni format:"
+
+#: glade/format.glade.h:6
+msgid "Save Formatted as"
+msgstr "Spremi formatirano kao"
+
+#: glade/format.glade.h:7
+msgid "Style Selection"
+msgstr "Odabir stila"
+
+#: glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr "Unesite vaš Medline upit"
+
+#: glade/medline.glade.h:3
+msgid "From:"
+msgstr "Od:"
+
+#: glade/medline.glade.h:4
+msgid "Limited to:"
+msgstr "Ograničeno na:"
+
+#: glade/medline.glade.h:5
+msgid ""
+"Maximum number\n"
+"of results:"
 msgstr ""
+"Najveći broj\n"
+"rezultata:"
+
+#: glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr "Medline upit"
+
+#: glade/medline.glade.h:8
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+"Samo stavke\n"
+"ispred ispisa"
+
+#: glade/medline.glade.h:10
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+"Samo stavke\n"
+"sa sažecima"
+
+#: glade/medline.glade.h:12
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+"Pretraži \n"
+"PubMed za:"
+
+#: glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"Pokreni ispis kod\n"
+"rezultata broj:"
+
+#: glade/medline.glade.h:16
+msgid "To:"
+msgstr "Za:"
+
+#: glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+"Koristite oblik GGGG/MM/DD\n"
+"Mjesec i dan su nisu obavezni."
+
+#: glade/pyblio.glade.h:1
+msgid "Cite"
+msgstr "Citiraj"
+
+#: glade/pyblio.glade.h:2
+msgid "Cite..."
+msgstr "Citiraj..."
+
+#: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr ""
+
+#: glade/pyblio.glade.h:4
+msgid "Fields..."
+msgstr "Polja..."
+
+#: glade/pyblio.glade.h:5
+msgid "Forget all changes"
+msgstr "Zaboravi sve promjene"
+
+#: glade/pyblio.glade.h:6
+msgid "Format..."
+msgstr "Oblikovanje..."
+
+#: glade/pyblio.glade.h:7
+msgid "Medline Query..."
+msgstr "Medline upit..."
+
+#: glade/pyblio.glade.h:8
+msgid "Merge With..."
+msgstr "Spoji s..."
+
+#: glade/pyblio.glade.h:9
+msgid "Open File"
+msgstr "Otvori datoteku"
+
+#: glade/pyblio.glade.h:10
+msgid "Previous Documents"
+msgstr "Prethodni dokumenti"
+
+#: glade/pyblio.glade.h:11
+msgid "Pybliographer"
+msgstr "Pybliographer"
+
+#: glade/pyblio.glade.h:12
+msgid "S_ort..."
+msgstr "_Razvrstaj..."
+
+#: glade/pyblio.glade.h:13
+msgid "Save File"
+msgstr "Spremi datoteku"
+
+#: glade/pyblio.glade.h:14
+msgid "Settings"
+msgstr "Postavke"
+
+#: glade/pyblio.glade.h:15
+msgid "_Add..."
+msgstr "_Dodaj..."
+
+#: glade/pyblio.glade.h:16
+msgid "_Delete..."
+msgstr "_Obriši..."
+
+#: glade/pyblio.glade.h:17
+msgid "_Edit..."
+msgstr "_Uredi..."
+
+#: glade/pyblio.glade.h:18
+msgid "_New"
+msgstr "_Novi"
+
+#: glade/search.glade.h:2
+msgid "Close"
+msgstr "Zatvori"
+
+#: glade/search.glade.h:3
+msgid "Expert Search"
+msgstr "Stručna pretraga"
+
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Polje"
+
+#: glade/search.glade.h:5
+msgid "Pattern"
+msgstr "Uzorak"
+
+#: glade/search.glade.h:6
+msgid "Query"
+msgstr "Upit"
+
+#: glade/search.glade.h:7
+msgid "Search"
+msgstr "&Traži"
+
+#: glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "Jednostavna pretraga"
+
+#: glade/sort.glade.h:1
+msgid "Select sort criterions"
+msgstr "Odaberite pravila razvrstavanja"
+
+#: glade/sort.glade.h:2
+msgid "Set as default"
+msgstr "Podesi kao uobičajeno"
 
 #: pybliographer.py:45
 msgid "This is %s, version %s"
@@ -868,7 +819,7 @@ msgstr "Ovo je slobodan softver BEZ IKAKVE GARANCIJE."
 
 #: pybliographer.py:50
 msgid "For details, type `warranty'."
-msgstr "Za detalje, unesite „warranty“."
+msgstr "Za detalje, unesite \"warranty\"."
 
 #: pybliographer.py:113 pybliographer.py:165
 #, python-format
@@ -877,7 +828,7 @@ msgstr "%s: greška: ne mogu otvoriti datoteku '%s' "
 
 #: pybliographer.py:126
 msgid "For help, run %s and type `help' at the prompt"
-msgstr "Za pomoć, pokrenite %s i unesite „help“ za upit"
+msgstr "Za pomoć, pokrenite %s i unesite \"help\" za upit"
 
 #: pybliographer.py:135
 msgid ""
@@ -927,7 +878,7 @@ msgstr "pybformat: upozorenje: %s\n"
 
 #: scripts/pybformat.py:140 scripts/pybtex.py:85
 msgid "can't find style `%s'"
-msgstr "ne mogu naći stil „%s“"
+msgstr "ne mogu naći stil \"%s\""
 
 #: scripts/pybtex.py:33
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
