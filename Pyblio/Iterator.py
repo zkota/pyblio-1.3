@@ -1,3 +1,4 @@
+
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -25,8 +26,20 @@ class Iterator:
         ''' loop method, so that we can for example call a method by
         passing indifferently a database or a database iterator...
         '''
-        
         return self
+
+    def __iter__ (self):
+        raise NotImplementedError
+
+    def set_position (self, pos=0):
+        self._position = 0
+
+    def get_position (self):
+        return self._position
+    
+    def first (self):
+        self.set_position (0)
+        return self.next ()
 
     
 class DBIterator (Iterator):
@@ -35,13 +48,21 @@ class DBIterator (Iterator):
     def __init__ (self, database):
         self.keys     = database.keys ()
         self.database = database
+        self.count = 0
         return
+
+    def __iter__ (self):
+        self._position = 0
+        for k in self.keys:
+            yield self.database [k]
+            self._position += 1
 
     def first (self):
         self.count = 0
         return self.next ()
-
+        
     def next (self):
+
         try:
             entry = self.database [self.keys [self.count]]
         except IndexError:
@@ -49,5 +70,4 @@ class DBIterator (Iterator):
         
         self.count = self.count + 1
         return entry
-
     

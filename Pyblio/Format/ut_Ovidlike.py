@@ -120,7 +120,7 @@ from Pyblio.Base import DataBase, Entry
 from Pyblio import Config
 from Pyblio.Key import Key
 from Pyblio.Types import get_entry
-from Pyblio.Format.OvidLike import writer, write_source_field 
+from Pyblio.Format.OvidLike import OvidLike, writer, write_source_field 
 from Pyblio.Fields import Author, AuthorGroup, Date
 
 class WriterCase (unittest.TestCase):
@@ -189,7 +189,7 @@ class WriterCase (unittest.TestCase):
             self.output.truncate(0)
             write_source_field (self.output, e, self.mapping)
             r = self.output.getvalue()
-            self.assertEqual (e['result'], r[2:-1])
+            self.assertEqual (e['result'], r[9:-1])
             
 
 
@@ -342,12 +342,32 @@ class Rexp2Case (unittest.TestCase):
             else:
                 print '**** FEHLER', d
 
+class AuthorCase (unittest.TestCase):
+
+    def test01 (self):
+        aut = ["Marsh D.",
+               "de Planque MRR.", "Kruijtzer JAW."]
+
+        R = OvidLike (None, {}, None)
+        for i in aut:
+            x = R.parse_author (i)
+            print `x`
+
+
+    def test02 (self):
+        aut = """Pali T.  Whyteside G.  Dixon N.  Kee TP.  Ball S.  Harrison MA.  Findlay JBC.
+ Finbow ME.  Marsh D."""
+
+        R = OvidLike (None, {}, None)
+        R.parse_author (aut)
+
 def suite():
     theSuite = unittest.TestSuite()
 
-#    theSuite.addTest(unittest.makeSuite(WriterCase))
-    theSuite.addTest(unittest.makeSuite(RexpCase))
-    theSuite.addTest(unittest.makeSuite(Rexp2Case))
+    #theSuite.addTest(unittest.makeSuite(WriterCase))
+    #theSuite.addTest(unittest.makeSuite(RexpCase))
+    #theSuite.addTest(unittest.makeSuite(Rexp2Case))
+    theSuite.addTest(unittest.makeSuite(AuthorCase))
 
     return theSuite
 

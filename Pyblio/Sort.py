@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -21,7 +22,7 @@
 
 from Pyblio import Types
 
-import string
+import re, string, time
 
 class Sort:
     ''' This class defines the methods used to sort a database '''
@@ -30,48 +31,27 @@ class Sort:
         ''' Create a Sort class with a given set of SortFields '''
         
         self.fields = fields or []
+
         return
 
     def sort (self, iterator):
         ''' Returns a list of keys sorted according to the current
         sort settings '''
         
-        data = {}
-        keys = []
-        ent  = {}
-        
-        # get the data for each field
-        entry = iterator.first ()
-        while entry:
-            item = []
-            for field in self.fields:
-                f = field.get_field (entry)
-                a = field.ascend
-                
-                item.append ((f, a))
-                
-            data [entry.key] = item
-            keys.append (entry.key)
-            ent  [entry.key] = entry
-            
-            entry = iterator.next ()
+        clock = time.clock() ##############
 
-        # sort them
-        def cmp_fcn (a, b, data = data):
-            da = data [a]
-            db = data [b]
-            for i in range (len (da)):
-                a = da [i]
-                b = db [i]
-                c = cmp (a [0], b [0]) * a [1]
-
-                if c: return c
-            return 0
-
-        keys.sort (cmp_fcn)
-        
-        return keys, ent
-
+        S = []
+        extractors = [f.extractor for f in self.fields]
+        for e in iterator:
+            s = []
+            for f in extractors:
+                s.extend (f (e))
+            s.append (e.key)
+            S.append (s)
+        S.sort ()
+        result = [x [-1] for x in S]
+        #print 'Zeit:%.5f s für %d items.'% (time.clock() - clock, len (S)) ###
+        return result
 
     def __repr__ (self):
         return 'Sort (%s)' % str (self.fields)
@@ -82,20 +62,20 @@ class TypeSort:
     def __init__ (self, ascend = 1):
         self.ascend = ascend
         return
-
     
     def get_field (self, entry):
         return entry.type
 
-
     def __repr__ (self):
         return 'TypeSort (%d)' % self.ascend
-
 
     def __cmp__ (self, other):
         if isinstance (other, TypeSort): return 0
         return -1
-    
+
+    def extractor (self, entry):
+        return [str(entry.type).lower()]
+
 
 class KeySort:
 
@@ -103,7 +83,7 @@ class KeySort:
         self.ascend = ascend
         return
 
-    
+
     def get_field (self, entry):
         return entry.key
 
@@ -115,6 +95,11 @@ class KeySort:
     def __cmp__ (self, other):
         if isinstance (other, KeySort): return 0
         return -1
+
+
+    def extractor (self, entry):
+        return [str(entry.key).lower()]
+
     
 
 class FieldSort:
@@ -123,6 +108,7 @@ class FieldSort:
         self.field  = field
         self.ascend = ascend
         return
+
 
     def get_field (self, entry):
         try:
@@ -140,3 +126,39 @@ class FieldSort:
         
         return cmp (string.lower (self.field),
                     string.lower (other.field))
+
+
+    def extractor (self, entry):
+        x = str(entry[self.field]).lower()
+        return [x.rstrip()]
+
+class AuthorEditorSort (FieldSort):
+
+    def extractor (self, entry):
+        x = []
+        ag = entry.get('author', entry.get('editor'))
+        for a in ag:
+            x.append (rakify (a.last, a.first, reverse=not self.ascend))
+        return x
+        
+def rakify (fn, pn, reverse=False):
+
+    s = "%s,%s" %(fn, pn)
+    s = s.lower()
+    Z = []
+    for c in s:
+        if c in 'äöüÄÖÜ':
+            n = 'äöüÄÖÜ'.index (c)
+            Z.append ('%ce' % ('aouAOU' [n]))
+        elif c == 'ß':
+            Z.append ('ss')
+        elif c in '-./':
+            Z.append (' ')
+        else:
+            Z.append (c)
+    S = ''.join (Z)
+    S = re.sub(' +', ' ', S)
+    if reverse:
+        return ''.join([unichr(~ord(c) & 65535) for c in S])
+    else:
+        return S

@@ -63,9 +63,17 @@ class SortSelection (Iterator):
 
     def __init__ (self, sort, iterator):
         # compute asap
-        (self.keys, self.data)  = sort.sort (iterator)
+        self.keys  = sort.sort (iterator)
+        self.data = iterator.database or list(iterator)
         self.count = 0
         return
+
+    def __iter__ (self):
+        self.count = 0
+        for i in self.keys:
+            yield self.data[i]
+            self.count += 1
+        raise StopIteration
 
     def first (self):
         self.count = 0
@@ -76,7 +84,7 @@ class SortSelection (Iterator):
             ret = self.data [self.keys [self.count]]
         except IndexError:
             return None
-        
+     
         self.count = self.count + 1
         return ret
     

@@ -19,11 +19,9 @@
 # 
 # 
 
-from Pyblio import Key, Exceptions
+from Pyblio import Exceptions, Key
 
-import string, types, re, string, recode, urlparse, os, time
-
-import copy, re
+import copy, os, re, recode, string, time, types, urlparse
 
 year_match = re.compile ('(\d\d\d\d)')
 
@@ -99,9 +97,9 @@ class Author:
                         if f == '': f = None
 
                     return f
-                
-                copy = map (clean_entry, copy)
-
+               
+                #copy = map (clean_entry, copy)
+                copy = [clean_entry (x) for x in copy] 
                 self.honorific = copy [0]
                 self.first     = copy [1]
                 self.last      = copy [2]

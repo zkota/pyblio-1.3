@@ -685,6 +685,10 @@ class Document (Connector.Publisher):
 
         elif field == '-type-':
             mode = Sort.TypeSort ()
+        elif field == '-author/editor-':
+            mode = Sort.AuthorEditorSort ('author/editor')
+        elif field in ['author', 'editor']:
+            mode = Sort.AuthorEditorSort(field)
         else:
             mode = Sort.FieldSort (field)
 

@@ -279,6 +279,7 @@ class Index (Connector.Publisher):
 
     def get_item_position (self, item):
         try:
+            
             return self.access.index (item)
         except ValueError:
             return -1
@@ -319,11 +320,10 @@ class Index (Connector.Publisher):
         Utils.set_cursor (self.w, 'clock')
         
         self.model.clear ()
-
-        entry = iterator.first ()
-        while entry:
+        #print `iterator`
+        for entry in iterator:
             row = []
-
+            #print entry
             i = 0
             for f in self.fields:
                 row.append (i)

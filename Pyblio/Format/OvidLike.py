@@ -156,34 +156,13 @@ class OvidLike (Iterator.Iterator):
 
             # parse an author field
             elif type == AuthorField:
-                ag = Fields.AuthorGroup ()
-
-                for names in string.split (dict [key], '  '):
-                    la = string.split (names)
-
-                    last = la [0]
-                    if len (la) > 1:
-                        first = la [1]
-                    else:
-                        first = None
-
-                    auth = Fields.Author ((None, first, last, None))
-                    ag.append (auth)
-
-                    # authors may be separated by just a single space if more
-                    # than one line of authors appears in ovid file
-                    if len (la) > 3:
-                        last = la [-2]
-                        first = la [-1]
-                        auth = Fields.Author ((None, first, last, None))
-                        ag.append (auth)
-
-                entry [name] = ag
+                entry [name] = self.parse_author (dict[key])
                 continue
 
             # parse a source field
             elif type == SourceField:
-                m = self.source_re.match (dict[key].strip())
+                dict_key = ' '.join(dict[key].split('\n'))
+                m = self.source_re.match (dict_key.strip())
                 if m:
                     year, month, day = None, None, None
                     j, v, s, n, p, o, y, d = m.group(
@@ -203,9 +182,14 @@ class OvidLike (Iterator.Iterator):
                             try:
                                 month = long_month [dates[0]]
                             except KeyError:
-                                print 'OVID Warning:',
-                                print '%s is not representable in %s' %(
-                                dates[0], m)
+                                pass
+##                                 import warnings
+##                                 warnings.filterwarnings ('once',
+##                                                          message='date',
+##                                                          module='OvidLike')
+##                                 warnings.warn (
+##                                     'OVID: %s is not representable in date '
+##                                     'field %s' %(dates[0], d), stacklevel=2)
                             if len(dates) > 1:
                                 day = int (dates[1])
 
@@ -227,11 +211,46 @@ class OvidLike (Iterator.Iterator):
                     entry ['date'] = Fields.Date((year, month, day))
                 else:
                     print '>>> Error: Source field  does not parse correctly:'
-                    print dict[key]
+                    print dict_key
                     print entry
                 continue
         
         return entry
+
+    def parse_author (self, text):
+                        
+        ag = Fields.AuthorGroup ()
+        rx = re.compile ('\.(?:$|\s+)')
+        ry = re.compile ('(.)')
+
+        for name in rx.split (text):
+            if not name: continue
+            la = name.split ()
+            
+            if len (la) == 1:
+                last, first = la[0], None
+            else:
+                last = ' '.join(la[:-1])
+                first = la[-1]
+                first = ry.sub (r'\1. ', first)
+                         
+            auth = Fields.Author (copy=(None, first, last, None))
+            ag.append (auth)
+
+        return ag
+    
+##             last = la [0]
+##             if len (la) > 1:
+##                 first = la [1]
+##             else:
+##                 first = None
+##             # authors may be separated by just a single space if more
+##             # than one line of authors appears in ovid file
+##             if len (la) > 3:
+##                 last = la [-2]
+##                 first = la [-1]
+##                 auth = Fields.Author ((None, first, last, None))
+##                 ag.append (auth)
 
 
 def writer (iter, output, mapping):
