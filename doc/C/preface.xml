@@ -79,8 +79,36 @@
         in the <filename>News</filename> and <filename>ChangeLog
         </filename> files supplied with the package. See the source tarball 
         of pybliographer, or the default doc directory of your distribution 
-        (e.g. /usr/share/doc/pybliographer).
+        (e.g. /usr/share/doc/pybliographer). Some of the features include:
       </para>
+      <variablelist>
+          <varlistentry>
+            <term>Annotation support</term>
+            <listitem>
+              <para>
+                Added support for annotations and longtext.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>New tool</term>
+            <listitem>
+              <para>
+                Added a new script: pybtext. It can process text files containing 
+                citations. New styles are also provided.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Bugfixes</term>
+            <listitem>
+              <para>
+                Fixes in the ISI and OVID parsers, fixed LyX citing on python2.2, 
+                fixed native editing of a new entry, fixed history in Medline queries, etc.
+              </para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
 
     </sect1>
 </preface>

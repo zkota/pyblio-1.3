@@ -72,6 +72,7 @@ glade/pyblio.glade
 glade/search.glade
 glade/sort.glade
 pybliographer.py
+pybliographic.desktop.in
 scripts/pybcheck.py
 scripts/pybcompact.py
 scripts/pybconvert.py
