@@ -747,7 +747,8 @@ class NativeEditor (Connector.Publisher):
         
         self.w_txt = gtk.TextView ()
         self.w_txt.set_editable (True)
-
+        self.w_txt.set_wrap_mode (gtk.WRAP_WORD)
+        
         self.w.add (self.w_txt)
 
         self.w_txt.show ()
