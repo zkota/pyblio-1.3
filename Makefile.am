@@ -57,10 +57,13 @@ EXTRA_DIST = 	setup-check.py			\
 		etc/installer.in		\
 		pybliographic.keys.in		\
 		pybliographic.mime		\
-		pybliographic.desktop		\
 		pybliographic.desktop.in	\
 		pybliographic.png		\
 		pybliographic-logo.png
+
+
+dist-hook:
+	intltool-merge -d po pybliographic.desktop.in $(distdir)/pybliographic.desktop
 
 pybliographic.desktop: pybliographic.desktop.in po/*.po
 	intltool-merge -d po pybliographic.desktop.in pybliographic.desktop \
@@ -80,4 +83,10 @@ pybliographic.keys: pybliographic.keys.in Makefile
 	< $(srcdir)/pybliographic.keys.in > pybliographic.keys.tmp \
 	&& mv pybliographic.keys.tmp pybliographic.keys 
 
+install-data-hook:
+	update-desktop-database $(DESTDIR)$(appdir) \
+		|| echo "**** Warning: cannot update mime cache (recommended for Gnome >= 2.8)"
 
+uninstall-hook:
+	update-desktop-database $(appdir) \
+		|| echo "**** Warning: cannot update mime cache (recommended for Gnome >= 2.8)"
