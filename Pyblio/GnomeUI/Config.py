@@ -456,6 +456,8 @@ class ListConfig (BaseConfig):
 
     def add_cb (self, * arg):
         data = self.subw.get ()
+        if not data: return
+        
         self.m.append ((str (data), data))
         self.update (True)
         return
