@@ -112,8 +112,10 @@
 	</listitem>
 	<listitem>
 	  <para><option>--format=... or -f ...</option>: specify an
-	  output format (HTML, LaTeX, Raw, Text). Default is
-	  Text.</para>
+	  output format (HTML, LaTeX, Raw, Text, Textau, Textnum). Default is
+	  Text. (Textau and Textnum are just slightly modified versions of Text. 
+          See <xref linkend="script-scripting-existing-pybtext" /> for more 
+          details.)</para>
 	</listitem>
 	<listitem>
 	  <para><option>--output=...  or -o  ...</option>:  specify an
@@ -153,6 +155,54 @@
       </screen>
     </sect2>
 
+    <sect2 id="script-scripting-existing-pybtext">
+      <title>pybtext</title>
+
+      <abstract>
+	<para>This tool processes a text file containing citations 
+	and appends a bibliography according to a given style.</para>
+      </abstract>
+      
+      <para>The script searches for citations like [key] or [key1,key2...] 
+      in a text file (for example: ...This is a text fragment with  
+      citations [AKM95,MPJ+03] inserted from pybliographer...). First, 
+      according to the keys found in the text file, 
+      it generates a reference list. Using an appropriate style (see below), it 
+      replaces the database keys in the text body with the new keys generated 
+      by the style module, and finally it appends the reference list to the 
+      text resulting a new file.</para>
+
+      <tip>
+      <para>The keys of selected entries can be copied easily from 
+      pybliographer into a text editor or terminal by <emphasis>copy and paste  
+      </emphasis> or <emphasis>drag and drop</emphasis>.</para>
+      </tip>
+
+      <para>The general form of the command is</para>
+      <screen>
+	<prompt>bash$ </prompt><command>pybtext</command> [-o outputfile] [-s style] <filename>textfile</filename> <filename>bibfiles...</filename>
+      </screen>
+
+      <para>This command without the options will use the style called 
+	<emphasis>Abbrev</emphasis> and <filename>textfile.pyb</filename> as 
+        outputfile for processing. <filename>textfile</filename> is the name 
+        of the file to be processed and <filename>bibfiles</filename> is one 
+        or more bibliographic database file.</para>
+
+      <para>There are three different <emphasis>styles</emphasis> which are 
+      designed for pybtext. 
+      Using <emphasis>abbrvbib</emphasis> results in keys as they are defined 
+      in the database. With the style <emphasis>abbrvau</emphasis>, author-year 
+      type keys (e.g. Jackson et al., 2004) can be generated. Using 
+      <emphasis>abbrvnum</emphasis>, the script produces a simple numbered list. 
+      For abbrvau and abbrvnum, the formats Textau and Textnum are used, 
+      respectively. They are just simple modifications of the Text format, 
+      optimized for these styles. Using other styles (Alpha, Abbrev 
+      or apa4e), the text body is not processed, but the reference list is 
+      appended in the form that corresponds to the used style.</para>
+
+    </sect2>
+
   </sect1>
 
   <sect1 id="script-scripting-writing">
@@ -167,8 +217,7 @@
       <title>Some concepts</title>
 
       <para>This section describes some basic classes and ideas that
-      are useful to understand how &pyb; works. More information can
-	be found in <xref linkend="reference" />.</para>
+      are useful to understand how &pyb; works.</para>
 
       <para>In the following, all the  modules that will be refered to
 	belong to  the <symbol>Pyblio</symbol> domain.   So, to access

@@ -1,10 +1,10 @@
 Summary: A framework for working with bibliographic databases.
 Name: pybliographer
-Version: 1.2.3
+Version: 1.2.4
 Release: 1.rhfdr_core_1
 License: GPL
 Group: Applications/Publishing
-Source: http://prdownloads.sourceforge.net/pybliographer-%{version}.tar.gz
+Source: http://dl.sf.net/pybliographer/pybliographer-%{version}.tar.gz
 Url: http://www.pybliographer.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
@@ -26,7 +26,7 @@ Requires: pygtk2-libglade >= 2.0.0
 Requires: gnome-python2 >= 2.0.0
 Requires: gnome-python2-gconf >= 2.0.0
 Requires: python-bibtex >= 1.1.93.1
-Requires: recode >= 3.6
+Requires: recode >= 3.6-9p.rhfdr_core_1
 
 
 %description
@@ -87,5 +87,6 @@ scrollkeeper-update
 %{_datadir}/pybliographer/pybformat.py
 %{_datadir}/pybliographer/pybliographic.py
 %{_datadir}/pybliographer/pybtex.py
+%{_datadir}/pybliographer/pybtext.py
 %config %{_datadir}/pybliographer/pybrc.py
 %ghost %{_datadir}/pybliographer/pybrc.pyc

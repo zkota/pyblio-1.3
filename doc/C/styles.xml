@@ -6,9 +6,8 @@
   header:</para>
 
     <programlisting>
-&lt;?xml version="1.0"?&gt;
-&lt;!DOCTYPE bibstyle PUBLIC "-//Pybliographer//DTD Bibliographic Style Format//EN" ""&gt;
-</programlisting>
+      &lt;?xml version="1.0"?&gt;
+    </programlisting>
     
   <para>The whole description should fit in a &lt;bibstyle&gt; pair of
     tags, whose  content is shortly  described in this section.  It is

@@ -26,10 +26,8 @@ omffile = pybliographer-C.omf
 
 entities = 						\
 	legal.xml authors.xml commandline.xml 		\
-	config.xml database.xml entry.xml gui.xml 	\
-	iterator.xml key.xml preface.xml 		\
-	script.xml selection.xml sort.xml 		\
-	styles.xml tester.xml url.xml
+	config.xml gui.xml preface.xml 			\
+	script.xml styles.xml
 
 include $(top_srcdir)/xmldocs.make
 

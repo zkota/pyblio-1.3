@@ -6,9 +6,9 @@
 
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
-<!ENTITY appversion "1.2.3">
-<!ENTITY manrevision "2.2">
-<!ENTITY date "March 2004">
+<!ENTITY appversion "1.2.4">
+<!ENTITY manrevision "2.3">
+<!ENTITY date "April 2004">
 <!ENTITY app "Pybliographer">
 
 <!ENTITY preface SYSTEM "preface.xml">
@@ -17,16 +17,6 @@
 <!ENTITY script SYSTEM "script.xml"> 
 <!ENTITY config SYSTEM "config.xml"> 
 <!ENTITY styles SYSTEM "styles.xml"> 
-
-<!ENTITY ref-iter   SYSTEM "iterator.xml"> 
-<!ENTITY ref-db     SYSTEM "database.xml"> 
-<!ENTITY ref-sel    SYSTEM "selection.xml"> 
-<!ENTITY ref-key    SYSTEM "key.xml"> 
-<!ENTITY ref-entry  SYSTEM "entry.xml"> 
-<!ENTITY ref-url    SYSTEM "url.xml"> 
-<!ENTITY ref-tester SYSTEM "tester.xml"> 
-<!ENTITY ref-sort   SYSTEM "sort.xml"> 
-
 <!ENTITY authors SYSTEM "authors.xml">
 ]>
 
@@ -82,6 +72,13 @@
       <revision> 
 		<revnumber>&app; Manual V&manrevision;</revnumber> 
 		<date>&date;</date> 
+		<revdescription> 
+	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
+	  	</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>&app; Manual V2.2</revnumber> 
+		<date>March 2004</date>
 		<revdescription> 
 	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
 	  	</revdescription> 
@@ -191,7 +188,6 @@
     </sect1>
   </chapter>
 
-
     &gui;
  
     &command;
@@ -201,47 +197,6 @@
     &config;
   
     &styles;
-
-  <reference id="reference">
-    <title>Class reference</title>
-
-    <partintro>
-      <para>Here, you'll find the list of all the basic classes used
-	in &pyb;. They belong to the <classname>Pyblio</classname>
-	module and hence are usually imported and used by code that
-	looks like:
-<programlisting> 
-from Pyblio import Base, Open, Selection
-
-entry = Base.Entry (...)
-
-</programlisting>
-      </para>
-    </partintro>
-
-    <!-- Base -->
-    &ref-db;
-    &ref-entry;
-
-    <!-- Fields -->
-    &ref-url;
-
-    <!-- Iterator -->
-    &ref-iter;
-
-    <!-- Key -->
-    &ref-key;
-    
-    <!-- Search -->
-    &ref-tester;
-
-    <!-- Selection -->
-    &ref-sel;
-
-    <!-- Sort -->
-    &ref-sort;
-
-  </reference>
 
     &authors;
 

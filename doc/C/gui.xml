@@ -87,7 +87,8 @@
       <keysym>Shift</keysym> key extends  the selection to the clicked
       entry. A  click while pressing  the <keysym>Control</keysym> key
       toggles the entry without altering  the state of the rest of the
-      selection.</para>
+      selection. With copy and paste, or by drag and drop you can copy 
+      one or more selected entries into a new window/database.</para>
 
     <figure id="figmain">
       <title>The main window</title>
@@ -468,7 +469,8 @@
     <para>As a result, a formatted output file is generated according 
     to a bibliographic style, either in HTML, LaTeX, Raw or Text format. 
     The &pyb; package contains some bibliographic styles, but own styles
-    can also be created easily.</para> 
+    can also be created easily. See also 
+    <xref linkend="script-scripting-existing-pybformat" />.</para> 
   </sect1>
 
   <sect1 id="gui-pubmed">
