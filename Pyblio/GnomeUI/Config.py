@@ -39,26 +39,27 @@ _cpt = re.compile ('\s+')
 
 
 
-class ConfigDialog:
+class ConfigDialog (Utils.GladeWindow):
+
+    gladeinfo = {
+        'file': 'config1.glade',
+        'root': 'config1',
+        'name': 'configuration'
+        }
 
     def __init__ (self, parent = None):
 
-
-        gp = os.path.join (version.prefix, 'glade', 'config1.glade')
+        Utils.GladeWindow.__init__ (self, parent, window = 'config1')
         
-        self.xml = gtk.glade.XML (gp, 'config1')
-        self.xml.signal_autoconnect (self)
-
         self.dialog = self.xml.get_widget ('config1')
-        self.dialog_vbox = self.xml.get_widget ('dialog-vbox1')
+
+        content = self.xml.get_widget ('dialog-vbox1')
         self.w = gtk.Notebook ()
-        self.dialog_vbox.pack_start(self.w)
+        content.pack_start (self.w)
 
         tooltips = gtk.Tooltips ()
         tooltips.enable ()
         
-        #self.dialog.set_parent (parent) ####
-        self.dialog.set_title (_("Choose your preferences"))
         self.warning = 0
         self.parent = parent
         
@@ -117,13 +118,20 @@ class ConfigDialog:
                                   fill   = edit.resize)
                 # items should not be spread vertically, however 
             if cw:
-                self.w.append_page (table, gtk.Label (dom))
+                # Put the complete table in a scrolled window
+                scroll = gtk.ScrolledWindow ()
+                scroll.set_policy (gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
+                
+                scroll.add_with_viewport (table)
+                
+                self.w.append_page (scroll, gtk.Label (dom))
                 self.page.append (cw)
 
         self.show()
         return
 
     def on_close1 (self, w):
+        self.size_save ()
         self.dialog.hide_all()
 
     def show (self):

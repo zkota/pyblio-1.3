@@ -83,12 +83,12 @@ class GladeWindow:
                   'name': None
                   }
 
-    def __init__ (self, parent = None):
+    def __init__ (self, parent = None, window = None):
         
         gp = os.path.join (version.prefix, 'glade',
                            self.gladeinfo ['file'])
         
-        self.xml = gtk.glade.XML (gp, domain = "pybliographer")
+        self.xml = gtk.glade.XML (gp, window, domain = "pybliographer")
         self.xml.signal_autoconnect (self)
 
         for w in self.xml.get_widget_prefix ('_w_'):
