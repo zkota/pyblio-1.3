@@ -140,6 +140,8 @@ class MedlineUI (Utils.GladeWindow):
             self._w_to_date.get_text ()
             )
 
+        self._w_keyword.append_history (True, data [0])
+        
         self._w_medline.destroy ()
 
         return data
