@@ -2,6 +2,24 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2004-04-26 09:29:17 GMT	Frederic Gobry <frederic.gobry@smartdata.ch>	patch-100
+
+    Summary:
+      fixed bug #932322
+    Revision:
+      pybliographer--stable--1.2--patch-100
+
+    Now, when clicking on "Native editing" with an entry that has not been inserted in the
+    db so far, an entry is created and inserted, so that the native editor does not start
+    empty.
+    
+    This has the side effect of having a new entry even if the editing is later cancelled.
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/GnomeUI/Editor.py
+
+
 2004-04-19 07:42:56 GMT	Frederic Gobry <frederic.gobry@smartdata.ch>	patch-99
 
     Summary:

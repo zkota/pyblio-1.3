@@ -880,7 +880,13 @@ class Editor (Connector.Publisher):
 
                 # Reject the switch if the data is invalid
                 if cur is None: return
-                
+
+                if not self.database.has_key (cur.key):
+
+                    # We need to insert the entry as it is currently,
+                    # in order to generate a Key
+                    cur = self.database.add (cur)
+                    
                 self.editor.w.destroy ()
                 self.current = cur
 
