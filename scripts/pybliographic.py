@@ -25,6 +25,10 @@ import sys
 from Pyblio.GnomeUI.Pybliographic import Pybliographic
 from Pyblio.Fields import URL
 
+from Pyblio.GnomeUI import ui_version
+
+print ui_version
+
 main = Pybliographic ()
 
 if len (sys.argv) > 2:

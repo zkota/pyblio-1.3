@@ -43,11 +43,10 @@ prg.set_property (gnome.PARAM_APP_DATADIR, version.datadir)
 def _vnum (t):
     return string.join (map (str, t), '.')
 
-print _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
+ui_version = _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
     version.version, _vnum (sys.version_info [:3]),
     _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
     
-
 # clean up our garbage
 sys.argv = sys.argv [:2] + sys.argv [3:]
 
