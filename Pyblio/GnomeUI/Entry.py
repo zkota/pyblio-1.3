@@ -22,7 +22,7 @@
 from gtk import *
 from gnome import ui
 
-import pango, gnome
+import pango, gnome, gobject
 
 import string
 
@@ -101,7 +101,20 @@ class Entry:
             button.show ()
 
             def url_open (w, url):
-                gnome.url_show (url)
+                try:
+                    gnome.url_show (url)
+                    
+                except gobject.GError, msg:
+
+                    d = MessageDialog (None,
+                                       DIALOG_MODAL |
+                                       DIALOG_DESTROY_WITH_PARENT,
+                                       MESSAGE_ERROR,
+                                       BUTTONS_CLOSE,
+                                       _('Cannot open URL:\n%s') % msg)
+                    d.run ()
+                    d.destroy ()
+                    
                 return
                 
             button.connect ('clicked', url_open, str (field))
