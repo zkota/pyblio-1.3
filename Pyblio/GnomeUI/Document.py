@@ -731,26 +731,6 @@ class Document (Connector.Publisher):
         return
 
     
-    def exec_bug_buddy (self, *args):
-        ''' run bug-buddy in background, with the minimal configuration data '''
-        
-        # search the program in the current path
-        exists = 0
-        for d in string.split (os.environ ['PATH'], ':'):
-            if os.path.exists (os.path.join (d, 'bug-buddy')):
-                exists = 1
-                break
-
-        if not exists:
-            self.w.error (_("Please install bug-buddy\nto use this feature"))
-            return
-        
-        command = 'bug-buddy --package=pybliographer --package-ver=%s &' % version.version
-        
-        os.system (command)
-        return
-
-    
     def about (self, *arg):
         
         about = ui.About ('Pybliographic',
