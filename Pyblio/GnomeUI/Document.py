@@ -807,15 +807,15 @@ class Document (Connector.Publisher):
                           version.version,
                           _("This program is copyrighted under the GNU GPL"),
                           _("Gnome interface to the Pybliographer system."),
-                          ['HervÈ DrÈau',
-                           'FrÈdÈric Gobry',
+                          ['Herv√© Dr√©au',
+                           'Fr√©d√©ric Gobry',
                            'Travis Oliphant',
                            'Darrell Rudmann',
                            'Peter Schulte-Stracke',
                            'John Vu'],
                           ['Yuri Bongiorno',
-                           'FrÈdÈric Gobry',
-                           'Zolt·n KÛta'],
+                           'Fr√©d√©ric Gobry',
+                           'Zolt√°n K√≥ta'],
                           _('Gnome Translation Team'))
 
         about.set_transient_for (self.w)
