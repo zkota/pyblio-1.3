@@ -1,6 +1,6 @@
 # English/Canada translation of pybliographer.
 # Copyright (C) 2004 THE pybliographer'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pybliographer package.
+# This file is distributed under the same licence as the pybliographer package.
 # Adam Weinberger <adamw@gnome.org>, 2004.
 # , fuzzy
 # 
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-01 16:08-0400\n"
-"PO-Revision-Date: 2004-05-01 16:10-0400\n"
+"POT-Creation-Date: 2004-06-03 12:04-0700\n"
+"PO-Revision-Date: 2004-06-03 12:04-0700\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: English/Canada <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -436,6 +436,15 @@ msgstr "Native Editing"
 #: Pyblio/GnomeUI/Editor.py:897
 msgid "Standard Editing"
 msgstr "Standard Editing"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"Cannot open URL:\n"
+"%s"
 
 #: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-12 04:28+0100\n"
-"PO-Revision-Date: 2004-03-12 14:50+0100\n"
+"POT-Creation-Date: 2004-06-03 04:33+0200\n"
+"PO-Revision-Date: 2004-06-03 11:46+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -300,7 +300,7 @@ msgstr "Odstranit všech %d položek?"
 msgid "Remove entry `%s' ?"
 msgstr "Odstranit položku `%s'?"
 
-#: Pyblio/GnomeUI/Document.py:718 Pyblio/GnomeUI/Document.py:727
+#: Pyblio/GnomeUI/Document.py:724 Pyblio/GnomeUI/Document.py:733
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -309,7 +309,7 @@ msgstr ""
 "Nemohu se připojit k LyX:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:799
+#: Pyblio/GnomeUI/Document.py:805
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -319,19 +319,19 @@ msgstr ""
 "%s"
 
 # Sheesh.
-#: Pyblio/GnomeUI/Document.py:807
+#: Pyblio/GnomeUI/Document.py:813
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Tento program je chráněn copyrightem a šířen pod podmínkami GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:808
+#: Pyblio/GnomeUI/Document.py:814
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Rozhraní pro Gnome k systému Pybliographer."
 
-#: Pyblio/GnomeUI/Document.py:818
+#: Pyblio/GnomeUI/Document.py:824
 msgid "Gnome Translation Team"
 msgstr "Tým překladatelů Gnome"
 
-#: Pyblio/GnomeUI/Document.py:823
+#: Pyblio/GnomeUI/Document.py:829
 msgid "Pybliographer Home Page"
 msgstr "Domovská stránka Pybliographeru"
 
@@ -434,9 +434,18 @@ msgstr "Upravit položku"
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:891
+#: Pyblio/GnomeUI/Editor.py:897
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"Nemohu otevřít URL:\n"
+"%s"
 
 #: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"

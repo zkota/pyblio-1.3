@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pybliographer-1.2.3\n"
-"POT-Creation-Date: 2004-03-23 09:15+0100\n"
-"PO-Revision-Date: 2004-03-25 08:49+0100\n"
+"Project-Id-Version: pybliographer-1.2.4\n"
+"POT-Creation-Date: 2004-06-03 15:31+0200\n"
+"PO-Revision-Date: 2004-06-03 15:34+0100\n"
 "Last-Translator: Zoltán Kóta <z.kota@gmx.net>\n"
 "Language-Team: hu <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -847,8 +847,8 @@ msgstr "`%s' bejegyzés törlése ?"
 #. Check if we are toggling or changing
 #. We are still filtering according to the same field,
 #. simply toggle the direction
-#: Pyblio/GnomeUI/Document.py:718
-#: Pyblio/GnomeUI/Document.py:727
+#: Pyblio/GnomeUI/Document.py:724
+#: Pyblio/GnomeUI/Document.py:733
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -865,7 +865,7 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#: Pyblio/GnomeUI/Document.py:799
+#: Pyblio/GnomeUI/Document.py:805
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -874,19 +874,19 @@ msgstr ""
 "Nem tudom a dokumentációt megjeleníteni:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:807
+#: Pyblio/GnomeUI/Document.py:813
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Ez a program a GNU GPL-nek megfelelő szerzői joggal védett"
 
-#: Pyblio/GnomeUI/Document.py:808
+#: Pyblio/GnomeUI/Document.py:814
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome felület a Pybliographer-hez."
 
-#: Pyblio/GnomeUI/Document.py:818
+#: Pyblio/GnomeUI/Document.py:824
 msgid "Gnome Translation Team"
 msgstr "Gnome fordító csapat"
 
-#: Pyblio/GnomeUI/Document.py:823
+#: Pyblio/GnomeUI/Document.py:829
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer Home Page"
 
@@ -1035,8 +1035,10 @@ msgid "Native Editing"
 msgstr "Natív szerkesztés"
 
 #. Reject the switch if the data is invalid
+#. We need to insert the entry as it is currently,
+#. in order to generate a Key
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:891
+#: Pyblio/GnomeUI/Editor.py:897
 msgid "Standard Editing"
 msgstr "Standard szerkesztés"
 
@@ -1064,6 +1066,15 @@ msgstr "Standard szerkesztés"
 #. currently, nothing to display
 #. Display this entry
 #. Add a button to open the URL
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"Nem tudom az URL-t megnyitni:\n"
+"%s"
+
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2004 Frederic GOBRY
