@@ -23,9 +23,6 @@
 # Parent for dialogue
 # List view troubles
 
-import pygtk
-pygtk.require("2.0")
-
 import gobject, gtk, gtk.glade
 import gnome.ui 
 

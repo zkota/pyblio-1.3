@@ -42,6 +42,8 @@ try:
     import gnome
     import gtk.glade
 
+    import gconf
+
     import _recode
     import _bibtex
 

@@ -140,22 +140,32 @@ class Document (Connector.Publisher):
 
         sub = self.xml.get_widget ('previous_documents')
         factory = gtk.ItemFactory (gtk.Menu, '<main>', None)
-        
+
+        # This list contains the info needed to create the "Previous Documents" menu.
         menuinfo = []
+
+        # This list contains the names of the menu entries that can be
+        # fetched back by factory.get_widget calls. The two lists
+        # differ as the factory.create_items () function interprets
+        # underscores to mark shortcuts, whereas the get_widget call
+        # does not escape the underscores...
+        names = []
         
         for item in history:
             # Display name in the menu
             filename = string.replace (item [0], '/', '\/')
-            
-            menuinfo.append (('/' + filename, None, self._history_open_cb,
-                              0, None))
+            quoted   = string.replace (filename, '_', '__')
+
+            menuinfo.append (('/' + quoted, None,
+                              self._history_open_cb, 0, None))
+            names.append ('/' + filename)
 
         factory.create_items (menuinfo)
 
         # Bind the actual file info to each menu entry
         i = 0
-        for item in menuinfo:
-            w = factory.get_widget (item [0])
+        for item in names:
+            w = factory.get_widget (item)
             w.set_data ('file', history [i])
             i = i + 1
             
