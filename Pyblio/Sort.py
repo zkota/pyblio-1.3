@@ -37,8 +37,6 @@ class Sort:
         ''' Returns a list of keys sorted according to the current
         sort settings '''
         
-        #clock = time.clock() ##############
-
         S = []
         extractors = [f.get_extractor() for f in self.fields]
 
@@ -50,7 +48,6 @@ class Sort:
             S.append (s)
         S.sort ()
         result = [x [-1] for x in S]
-        #print 'Zeit:%.5f s für %d items.'% (time.clock() - clock, len (S)) ###
         return result
 
     def __repr__ (self):
@@ -62,13 +59,14 @@ class AnySort (object):
         self.ascend = ascend
         return
 
-    def get_extractor (self):
+    def get_extractor (self, extractor=None):
+        extractor = extractor or self.extractor
         if self.ascend < 0:
-            return lambda e: map (lambda S:
-            ''.join([unichr(~ord(c) & 65535) for c in S]),
-                           self.extractor (e))
+            return lambda e: map (
+                lambda S: ''.join([unichr(~ord(c) & 65535) for c in S]),
+                extractor (e))
         else :
-            return self.extractor
+            return extractor
     
 class TypeSort (AnySort):
 
@@ -107,10 +105,19 @@ class FieldSort (AnySort):
         AnySort.__init__ (self, ascend)
 
     def get_extractor (self):
-        if self.field ==  'date':
+        field = self.field
+        if field ==  'date':
             if self.ascend < 0:
                 return lambda x: [- self.date_extractor(x) [0]]
             else: return self.date_extractor
+        elif field == '-author/editor-':
+            return AnySort.get_extractor (
+                self, self.author_editor_extractor)
+        elif field in ['author', 'editor']:
+            return AnySort.get_extractor (
+                self,
+                lambda entry: map (
+                rakify, entry.get(field, [])))
         else:
             return AnySort.get_extractor(self)
         
@@ -132,26 +139,15 @@ class FieldSort (AnySort):
     def extractor (self, entry):
         return   [str(entry[self.field]).rstrip().lower()]
 
+    def author_editor_extractor (self, entry):
+        return map (rakify, entry.get('author', entry.get('editor', [])))
+ 
     def date_extractor (self, entry):
         d = entry.get('date', 0)
         try:
             return [d.asInt()]
         except AttributeError:
             return [0]
-        
-class DateSort (AnySort):
-
-    def extractor (self, entry):
-        d = entry.get('date', 0)
-        return d.asInt()
-    
-
-
-class AuthorEditorSort (FieldSort):
-
-    def extractor (self, entry):
-        return map (rakify, entry.get('author', entry.get('editor', [])))
-    
         
 def rakify (author):
 

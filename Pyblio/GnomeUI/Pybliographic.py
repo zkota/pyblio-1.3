@@ -59,7 +59,6 @@ class Pybliographic:
         doc.Subscribe ('open-document',    self.cb_open_document)
         doc.Subscribe ('close-document',   self.close_document)
         doc.Subscribe ('exit-application', self.exit_application)
-
         doc.update_history (self.opened)
         
         self.documents.append (doc)

@@ -155,7 +155,6 @@ class Document (Connector.Publisher):
 
     def update_history (self, history):
         ''' fill the " Previous Documents " menu with the specified list of documents '''
-
         sub = self.xml.get_widget ('previous_documents')
         factory = gtk.ItemFactory (gtk.Menu, '<main>', None)
 
@@ -173,7 +172,6 @@ class Document (Connector.Publisher):
             # Display name in the menu
             filename = string.replace (item [0], '/', '\/')
             quoted   = string.replace (filename, '_', '__')
-
             menuinfo.append (('/' + quoted, None,
                               self._history_open_cb, 0, None))
             names.append ('/' + filename)
@@ -682,13 +680,8 @@ class Document (Connector.Publisher):
     def sort_by_field (self, field):
         if field == '-key-':
             mode = Sort.KeySort ()
-
         elif field == '-type-':
             mode = Sort.TypeSort ()
-        elif field == '-author/editor-':
-            mode = Sort.AuthorEditorSort ('author/editor')
-        elif field in ['author', 'editor']:
-            mode = Sort.AuthorEditorSort(field)
         else:
             mode = Sort.FieldSort (field)
 

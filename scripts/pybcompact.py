@@ -21,7 +21,7 @@
 # 
 
 import string, os, re, copy, sys
-from Pyblio import Base, Key
+from Pyblio import Base, Config, Fields, Key
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'
@@ -98,6 +98,14 @@ entries = h.keys ()
 if len (entries) == 0:
     error (_("no entry"))
 
+# check for the crossref field
+field_table = Config.get ('base/fields').data
+crossref    = None
+    
+for key in field_table.keys ():
+    if field_table [key].type == Fields.Reference:
+        crossref = key
+        break
 
 # use the bibliographic databases in order of declaration
 # to solve the references
@@ -126,7 +134,17 @@ for bib in bibtex:
         if db.has_key (key):
             
             # yes, add it to the reference
-            r [key] = db [key]
+            v = db [key]
+
+            r [key] = v
+
+            # ...including possible crossrefs
+            if v.has_key (crossref):
+                for ck in v [crossref].list:
+                    ck.base = db.key
+                    
+                    if db.has_key (ck):
+                        r [ck] = db [ck]
 
             # and remove it from the list
             entries.remove (e)

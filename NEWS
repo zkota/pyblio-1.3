@@ -1,5 +1,25 @@
 -*- text -*-
 
+New in 1.2.6 - 2005-01-29
+
+       * Fixed parsing of .aux files in pybcompact script (Peter)
+       * Miscellaneous fixes in the Ovid import, closes 
+         bugs # 1081186,  1078811, 1043582 (Peter)
+       * All the popups can be closed with escape (Frédéric)
+       * Parentheses are now allowed in BibTeX keys, closes 
+         bug # #600394  (Frédéric)
+       * Fixed crossref handling in pybcompact script (Frédéric)
+       * Restored Search as you type (Frédéric)
+       * German translation update (Frank Arnold)
+       * Sort code reworked (partially, Peter)
+       * Iterator code reworked for __iter__ compatibility
+         (partially, Peter)  
+       * Added a check for an (approximately ?) valid bibtex field 
+         name to GnomeUI.Editor, closes bug 744086 (Peter).
+       * Updated translations from CVS (Frédéric)
+       * Added PYBLIOGRAPHER_DATABASE environment variable to
+         specify a default database for pybliographic (Peter)
+
 New in 1.2.5 - 2004-11-25
 
        * translation of the extra scripts  (Zoltán)

@@ -98,8 +98,7 @@ class Author:
 
                     return f
                
-                #copy = map (clean_entry, copy)
-                copy = [clean_entry (x) for x in copy] 
+                copy = map (clean_entry, copy)
                 self.honorific = copy [0]
                 self.first     = copy [1]
                 self.last      = copy [2]

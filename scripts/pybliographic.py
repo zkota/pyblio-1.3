@@ -20,7 +20,7 @@
 # 
 # 
 
-import sys
+import os, sys
 
 from Pyblio.GnomeUI.Pybliographic import Pybliographic
 from Pyblio.Fields import URL
@@ -30,12 +30,16 @@ from Pyblio.GnomeUI import ui_version
 print ui_version
 
 main = Pybliographic ()
+pyblio_path = os.environ.get ('PYBLIOGRAPHER_DATABASE', '')
+
 
 if len (sys.argv) > 2:
     for file in sys.argv [2:]:
         url = URL (file)
         
         main.open_document (str (url))
+elif pyblio_path:
+    main.open_document (str (URL (pyblio_path)))
 else:
     main.new_document ()
 

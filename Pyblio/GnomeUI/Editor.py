@@ -842,8 +842,12 @@ class RealEditor (Connector.Publisher):
     def create_field (self, * arg):
         widget = self.newfield.gtk_entry ()
         text   = string.strip (string.lower (widget.get_text ()))
-        if text == '': return
-
+        if not re.match (r"[a-z][\w_-]*$", text):
+            if not Utils.Callback (
+                "The fieldname '%s' looks invalid.\nReally proceed?" % text,
+                parent=self.w.get_toplevel ()).answer ():
+                return
+                
         # update the current entry
         self.entry = self.update (self.database, copy.deepcopy (self.entry))
 
