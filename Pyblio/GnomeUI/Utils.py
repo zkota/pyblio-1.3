@@ -175,9 +175,10 @@ def error_dialog (title, err, parent = None):
                               gtk.DIALOG_MODAL |
                               gtk.DIALOG_DESTROY_WITH_PARENT,
                               gtk.MESSAGE_ERROR,
-                              gtk.BUTTONS_CLOSE,
-                              title)
+                              message_format = title)
 
+    b = dialog.add_button (gtk.STOCK_OK, gtk.RESPONSE_OK)
+    b.set_property ('has_default', True)
     
     buff = gtk.TextBuffer ()
     title = buff.create_tag ('title', weight = pango.WEIGHT_BOLD)

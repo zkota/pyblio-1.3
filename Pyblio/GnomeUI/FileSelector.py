@@ -21,10 +21,6 @@
 
 import string, os, urlparse
 
-try: _
-except NameError:
-    def _(s): return s
-
 from gnome import ui
 
 import gtk
@@ -50,11 +46,22 @@ class URLFileSelection (FileSelect):
     def __init__(self, title = _("File"),
                  url = True, modal = True, has_auto = True,is_save = False,
                  directory = None):
-        
+
         if has_file_chooser:
-            FileSelect.__init__ (self,buttons=(gtk.STOCK_OK, gtk.RESPONSE_OK, gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT))
+            FileSelect.__init__ (self)
+
+            accelerator = gtk.AccelGroup ()
+            self.add_accel_group (accelerator)
+
+            b = self.add_button (gtk.STOCK_OK, gtk.RESPONSE_OK)
+            b.add_accelerator ('clicked', accelerator, gtk.keysyms.Return, 0, 0)
+
+            b = self.add_button (gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT)
+            b.add_accelerator ('clicked', accelerator, gtk.keysyms.Escape, 0, 0)
+                
         else:
             FileSelect.__init__ (self)
+
         if has_file_chooser and is_save:
             self.set_action(gtk.FILE_CHOOSER_ACTION_SAVE)
 
@@ -109,7 +116,7 @@ class URLFileSelection (FileSelect):
         liste.sort ()
         
         if has_auto:
-            Utils.popup_add (menu, ' - Auto - ', self.menu_select, None)
+            Utils.popup_add (menu, _(' - According to file suffix - '), self.menu_select, None)
             self.ftype = None
         else:
             self.ftype = liste [0]
