@@ -170,7 +170,7 @@ class SortDialog (Connector.Publisher, Utils.GladeWindow):
         return sort
     
 
-    def set_as_default (self, * arg):
+    def _on_set_as_default (self, * arg):
 
         ''' Pickle the current sorting settings to be used as the
         default value '''
