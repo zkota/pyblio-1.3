@@ -106,15 +106,14 @@ class Pybliographic:
     def close_document (self, document):
         ''' close one specified document '''
         
-        if len (self.documents) == 1:
-            self.exit_application (document)
-            return
-        
         if not document.close_document_request ():
             return
         
         document.w.destroy ()
+
         self.documents.remove (document)
+        
+        if not self.documents: self.new_document ()
         return
 
 
