@@ -1,6 +1,6 @@
 #This file is part of Pybliographer
 # 
-# Copyright (C) 1998-2003 Peter Schulte-Stracke
+# Copyright (C) 1998-2004 Peter Schulte-Stracke
 # Email : Peter.Schulte-Stracke@t-online.de
 #          
 # This program is free software; you can redistribute it and/or

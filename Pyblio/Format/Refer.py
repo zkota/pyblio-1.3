@@ -1,6 +1,6 @@
 # This file is part of pybliographer
 #  
-# Copyright (C) 1998-2003 Frederic GOBRY
+# Copyright (C) 1998-2004 Frederic GOBRY
 # Email : gobry@pybliographer.org
 # 	   
 # This program is free software; you can redistribute it and/or

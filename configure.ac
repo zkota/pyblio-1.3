@@ -1,7 +1,7 @@
 dnl -*- m4 -*-
 dnl This file is part of pybliographer
 dnl
-dnl Copyright (C) 1998-2003 Frederic GOBRY
+dnl Copyright (C) 1998-2004 Frederic GOBRY
 dnl Email : gobry@pybliographer.org
 dnl          
 dnl This program is free software; you can redistribute it and/or
