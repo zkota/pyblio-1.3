@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-04 04:20+0200\n"
-"PO-Revision-Date: 2004-06-06 13:25+0200\n"
+"POT-Creation-Date: 2004-06-25 04:37+0200\n"
+"PO-Revision-Date: 2004-06-25 19:25+0200\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,22 +84,22 @@ msgstr "Ongeldige maand-waarde"
 msgid "Illegal day value"
 msgstr "Ongeldige dag-waarde"
 
-#: Pyblio/Fields.py:443
+#: Pyblio/Fields.py:460
 #, python-format
 msgid "in %s"
 msgstr "in %s"
 
-#: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
+#: Pyblio/Format/BibTeX.py:368 Pyblio/Format/BibTeX.py:426
 #, python-format
 msgid "key `%s' is malformed"
 msgstr "sleutel `%s' is onjuist formuleerd"
 
-#: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
+#: Pyblio/Format/BibTeX.py:389 Pyblio/Format/BibTeX.py:410
 #, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 
-#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
+#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:413
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -135,7 +135,7 @@ msgstr "Waarde:"
 msgid "Unnamed bibliographic database"
 msgstr "Naamloze bibliografische gegevensbank"
 
-#: Pyblio/GnomeUI/Document.py:218
+#: Pyblio/GnomeUI/Document.py:216
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -144,7 +144,7 @@ msgstr ""
 "kan bestand `%s' niet openen om te schrijven:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:239
+#: Pyblio/GnomeUI/Document.py:237
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -153,38 +153,38 @@ msgstr ""
 "Fout bij inlezen `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:255
+#: Pyblio/GnomeUI/Document.py:253
 msgid "New database"
 msgstr "Nieuwe gegevensbank"
 
-#: Pyblio/GnomeUI/Document.py:263 Pyblio/GnomeUI/Document.py:267
+#: Pyblio/GnomeUI/Document.py:261 Pyblio/GnomeUI/Document.py:265
 msgid "[no entry]"
 msgstr "[geen ingang]"
 
-#: Pyblio/GnomeUI/Document.py:264
+#: Pyblio/GnomeUI/Document.py:262
 msgid "[1 entry]"
 msgstr "[1 ingang]"
 
-#: Pyblio/GnomeUI/Document.py:265
+#: Pyblio/GnomeUI/Document.py:263
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d ingangen]"
 
-#: Pyblio/GnomeUI/Document.py:268
+#: Pyblio/GnomeUI/Document.py:266
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 ingang]"
 
-#: Pyblio/GnomeUI/Document.py:269
+#: Pyblio/GnomeUI/Document.py:267
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d ingangen]"
 
-#: Pyblio/GnomeUI/Document.py:274
+#: Pyblio/GnomeUI/Document.py:272
 msgid "[modified]"
 msgstr "[gewijzigd]"
 
-#: Pyblio/GnomeUI/Document.py:284
+#: Pyblio/GnomeUI/Document.py:282
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -193,29 +193,29 @@ msgstr ""
 "Veranderingen weggooien?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:309
+#: Pyblio/GnomeUI/Document.py:307
 msgid "Your query returned no result"
 msgstr "Uw zoekopdracht gaf geen resultaat"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:319
+#: Pyblio/GnomeUI/Document.py:317
 msgid "Merge file"
 msgstr "Bestand samenvoegen"
 
-#: Pyblio/GnomeUI/Document.py:331 Pyblio/GnomeUI/Document.py:385
+#: Pyblio/GnomeUI/Document.py:329 Pyblio/GnomeUI/Document.py:383
 msgid "Open error"
 msgstr "Open fout"
 
-#: Pyblio/GnomeUI/Document.py:355
+#: Pyblio/GnomeUI/Document.py:353
 msgid "Merge status"
 msgstr "Status samenvoegen"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:366
+#: Pyblio/GnomeUI/Document.py:364
 msgid "Open file"
 msgstr "Bestand openen"
 
-#: Pyblio/GnomeUI/Document.py:414
+#: Pyblio/GnomeUI/Document.py:412
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -223,7 +223,7 @@ msgstr ""
 "De gegevensbank is extern gewijzigd.\n"
 "Veranderingen overschrijven?"
 
-#: Pyblio/GnomeUI/Document.py:424
+#: Pyblio/GnomeUI/Document.py:422
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -232,7 +232,7 @@ msgstr ""
 "Kan `%s' niet opslaan:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:432
+#: Pyblio/GnomeUI/Document.py:430
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -241,11 +241,11 @@ msgstr ""
 "Probeer Opslaan Als..."
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:446
+#: Pyblio/GnomeUI/Document.py:444
 msgid "Save As..."
 msgstr "Opslaan als..."
 
-#: Pyblio/GnomeUI/Document.py:452
+#: Pyblio/GnomeUI/Document.py:450
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -254,7 +254,7 @@ msgstr ""
 "Het bestand `%s' bestaat al.\n"
 "Dit bestand overschrijven?"
 
-#: Pyblio/GnomeUI/Document.py:459
+#: Pyblio/GnomeUI/Document.py:457
 #, python-format
 msgid ""
 "During opening:\n"
@@ -263,11 +263,11 @@ msgstr ""
 "Bij het openen:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:477
+#: Pyblio/GnomeUI/Document.py:475
 msgid "Reopen error"
 msgstr "Her-open fout"
 
-#: Pyblio/GnomeUI/Document.py:524
+#: Pyblio/GnomeUI/Document.py:522
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -276,30 +276,30 @@ msgstr ""
 "Er bestaat al een ingang genaamd `%s'.\n"
 "Hernoemen en toch toevoegen?"
 
-#: Pyblio/GnomeUI/Document.py:561
+#: Pyblio/GnomeUI/Document.py:559
 msgid "Really remove all the entries ?"
 msgstr "Echt alle ingangen verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:581
+#: Pyblio/GnomeUI/Document.py:579
 msgid "Create new entry"
 msgstr "Nieuwe ingang maken"
 
-#: Pyblio/GnomeUI/Document.py:595
+#: Pyblio/GnomeUI/Document.py:593
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Echt %d ingangen bewerken?"
 
-#: Pyblio/GnomeUI/Document.py:633
+#: Pyblio/GnomeUI/Document.py:631
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Alle %d ingangen verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:635
+#: Pyblio/GnomeUI/Document.py:633
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Ingang `%s' verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:724 Pyblio/GnomeUI/Document.py:733
+#: Pyblio/GnomeUI/Document.py:720 Pyblio/GnomeUI/Document.py:728
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -308,7 +308,7 @@ msgstr ""
 "Kan niet verbinden met LyX:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:805
+#: Pyblio/GnomeUI/Document.py:800
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -317,123 +317,152 @@ msgstr ""
 "Kan documentatie niet weergeven:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:813
+#: Pyblio/GnomeUI/Document.py:808
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dit programma is auteursrechtelijk beschermd onder de GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:814
+#: Pyblio/GnomeUI/Document.py:809
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome gebruikersinterface voor het Pybliographer systeem."
 
-#: Pyblio/GnomeUI/Document.py:824
+#: Pyblio/GnomeUI/Document.py:819
 msgid "Gnome Translation Team"
 msgstr "Elros Cyriatan"
 
-#: Pyblio/GnomeUI/Document.py:829
+#: Pyblio/GnomeUI/Document.py:824
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer thuispagina"
 
-#: Pyblio/GnomeUI/Editor.py:38
+#: Pyblio/GnomeUI/Editor.py:44
 msgid "Last Name, First Name"
 msgstr "Achternaam, Voornaam"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Editor.py:45 Pyblio/GnomeUI/Fields.py:41
 #: glade/config1.glade.h:14 glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Tekst"
 
-#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
+#: Pyblio/GnomeUI/Editor.py:142 Pyblio/GnomeUI/Editor.py:965
 msgid "Error in native string parsing"
 msgstr "Fout bij verwerken tekst in eigen formaat"
 
-#: Pyblio/GnomeUI/Editor.py:315
+#: Pyblio/GnomeUI/Editor.py:321
 msgid "Day"
 msgstr "Dag"
 
-#: Pyblio/GnomeUI/Editor.py:324
+#: Pyblio/GnomeUI/Editor.py:330
 msgid "Month"
 msgstr "Maand"
 
-#: Pyblio/GnomeUI/Editor.py:333
+#: Pyblio/GnomeUI/Editor.py:339
 msgid "Year"
 msgstr "Jaar"
 
-#: Pyblio/GnomeUI/Editor.py:358
+#: Pyblio/GnomeUI/Editor.py:364
 msgid "Invalid day field in date"
 msgstr "Ongeldig dag-veld in datum"
 
-#: Pyblio/GnomeUI/Editor.py:366
+#: Pyblio/GnomeUI/Editor.py:372
 msgid "Invalid month field in date"
 msgstr "Ongeldig maand-veld in datum"
 
-#: Pyblio/GnomeUI/Editor.py:374
+#: Pyblio/GnomeUI/Editor.py:380
 msgid "Invalid year field in date"
 msgstr "Ongeldig jaar-veld in datum"
 
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:422 Pyblio/GnomeUI/Search.py:86
+#: Pyblio/GnomeUI/Editor.py:428 Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: Pyblio/GnomeUI/Editor.py:433 Pyblio/GnomeUI/Editor.py:446
-#: Pyblio/GnomeUI/Editor.py:449
+#: Pyblio/GnomeUI/Editor.py:439 Pyblio/GnomeUI/Editor.py:452
+#: Pyblio/GnomeUI/Editor.py:455
 msgid "[ Drop an Entry here ]"
 msgstr "[ Sleep hier een ingang heen ]"
 
-#: Pyblio/GnomeUI/Editor.py:521 Pyblio/GnomeUI/Fields.py:231
+#: Pyblio/GnomeUI/Editor.py:528 Pyblio/GnomeUI/Fields.py:232
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Soort ingang"
 
-#: Pyblio/GnomeUI/Editor.py:523
+#: Pyblio/GnomeUI/Editor.py:530
 msgid "Key"
 msgstr "Sleutel"
 
-#: Pyblio/GnomeUI/Editor.py:564
+#: Pyblio/GnomeUI/Editor.py:571
 msgid "Create Field"
 msgstr "Veld maken"
 
-#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:446
+#. navigation buttons
+#: Pyblio/GnomeUI/Editor.py:576
+msgid "Back"
+msgstr "Terug"
+
+#: Pyblio/GnomeUI/Editor.py:579
+msgid "Next"
+msgstr "Volgende"
+
+#: Pyblio/GnomeUI/Editor.py:645
+msgid "Delete text first, then you can delete the field."
+msgstr "Verwijder eerst de tekst, dan kunt u daarna dit veld verwijderen."
+
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Fields.py:447
 msgid "Mandatory"
 msgstr "Verplicht"
 
-#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:447
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Fields.py:448
 msgid "Optional"
 msgstr "Optioneel"
 
-#: Pyblio/GnomeUI/Editor.py:619
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Editor.py:1198
+msgid "Notes"
+msgstr "Notities"
+
+#: Pyblio/GnomeUI/Editor.py:688
 msgid "Extra"
 msgstr "Extra"
 
-#: Pyblio/GnomeUI/Editor.py:688
+#: Pyblio/GnomeUI/Editor.py:862
 msgid "Invalid key format"
 msgstr "Ongeldig sleutel formaat"
 
-#: Pyblio/GnomeUI/Editor.py:696
+#: Pyblio/GnomeUI/Editor.py:870
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Sleutel `%s' bestaat al"
 
-#: Pyblio/GnomeUI/Editor.py:712
+#: Pyblio/GnomeUI/Editor.py:887
 #, python-format
 msgid "The `%s' field contains a non Latin-1 symbol"
 msgstr "Het `%s'-veld bevat een niet-Latijn 1 symbool"
 
-#: Pyblio/GnomeUI/Editor.py:777
+#: Pyblio/GnomeUI/Editor.py:957
 msgid "Your text contains non Latin-1 symbols"
 msgstr "Uw tekst bevat niet-Latijn 1 symbolen"
 
-#: Pyblio/GnomeUI/Editor.py:799
+#: Pyblio/GnomeUI/Editor.py:978
 msgid "Edit entry"
 msgstr "Ingang bewerken"
 
-#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
+#: Pyblio/GnomeUI/Editor.py:992 Pyblio/GnomeUI/Editor.py:1063
 msgid "Native Editing"
 msgstr "Bewerken in eigen formaat"
 
-#: Pyblio/GnomeUI/Editor.py:897
+#: Pyblio/GnomeUI/Editor.py:1093
 msgid "Standard Editing"
 msgstr "Standaard bewerkmodus"
+
+#: Pyblio/GnomeUI/Editor.py:1220
+msgid "mandatory"
+msgstr "verplicht"
+
+#: Pyblio/GnomeUI/Editor.py:1285
+msgid "Enter text here"
+msgstr "Typ hier tekst"
+
+#: Pyblio/GnomeUI/Editor.py:1340
+msgid "Name of the new annotation:"
+msgstr "Naam van de nieuwe annotatie:"
 
 #: Pyblio/GnomeUI/Entry.py:114
 #, python-format
@@ -448,42 +477,46 @@ msgstr ""
 msgid "Authors"
 msgstr "Auteurs"
 
-#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
+#: Pyblio/GnomeUI/Fields.py:42
+msgid "Long Text"
+msgstr "Lange tekst"
+
+#: Pyblio/GnomeUI/Fields.py:43 glade/config1.glade.h:16
 #: glade/fields1.glade.h:21
 msgid "URL"
 msgstr "URL"
 
-#: Pyblio/GnomeUI/Fields.py:43
+#: Pyblio/GnomeUI/Fields.py:44
 msgid "Reference"
 msgstr "Verwijzing"
 
-#: Pyblio/GnomeUI/Fields.py:44
+#: Pyblio/GnomeUI/Fields.py:45
 msgid "Date"
 msgstr "Datum"
 
-#: Pyblio/GnomeUI/Fields.py:119 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:120 glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Naam"
 
-#: Pyblio/GnomeUI/Fields.py:122 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:123 glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Type"
 
-#: Pyblio/GnomeUI/Fields.py:295
+#: Pyblio/GnomeUI/Fields.py:296
 msgid "Available"
 msgstr "Beschikbaar"
 
-#: Pyblio/GnomeUI/Fields.py:305
+#: Pyblio/GnomeUI/Fields.py:306
 msgid "Associated"
 msgstr "Geassocieerd"
 
-#: Pyblio/GnomeUI/Fields.py:316
+#: Pyblio/GnomeUI/Fields.py:317
 msgid "Please, select an entry type from previous page."
 msgstr "Selecteer alstublieft een ingangssoort op de vorige pagina."
 
-#: Pyblio/GnomeUI/Fields.py:327
+#: Pyblio/GnomeUI/Fields.py:328
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Velden geassocieerd met <b>%s</b> ingangssoort"
@@ -496,15 +529,15 @@ msgstr "Bestand"
 msgid "Bibliography type:"
 msgstr "Soort bibliografie:"
 
-#: Pyblio/GnomeUI/Index.py:95
+#: Pyblio/GnomeUI/Index.py:106
 msgid "Add..."
 msgstr "Toevoegen..."
 
-#: Pyblio/GnomeUI/Index.py:97
+#: Pyblio/GnomeUI/Index.py:108
 msgid "Edit..."
 msgstr "Bewerken..."
 
-#: Pyblio/GnomeUI/Index.py:99
+#: Pyblio/GnomeUI/Index.py:110
 msgid "Delete..."
 msgstr "Verwijderen..."
 
@@ -535,7 +568,7 @@ msgstr "[Soort ingang]"
 msgid "[Key Value]"
 msgstr "[Sleutel waarde]"
 
-#: Pyblio/GnomeUI/Utils.py:194
+#: Pyblio/GnomeUI/Utils.py:197
 msgid "The following errors occured:\n"
 msgstr "De volgende fouten zijn opgetreden:\n"
 

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-03 04:33+0200\n"
-"PO-Revision-Date: 2004-06-03 11:46+0200\n"
+"POT-Creation-Date: 2004-06-23 21:39+0200\n"
+"PO-Revision-Date: 2004-06-24 14:36+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -85,22 +85,22 @@ msgstr "Neplatná hodnota měsíce"
 msgid "Illegal day value"
 msgstr "Neplatná hodnota dne"
 
-#: Pyblio/Fields.py:443
+#: Pyblio/Fields.py:460
 #, python-format
 msgid "in %s"
 msgstr "v %s"
 
-#: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
+#: Pyblio/Format/BibTeX.py:368 Pyblio/Format/BibTeX.py:426
 #, python-format
 msgid "key `%s' is malformed"
 msgstr "klíč `%s' není ve správném tvaru"
 
-#: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
+#: Pyblio/Format/BibTeX.py:389 Pyblio/Format/BibTeX.py:410
 #, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: klíč `%s' je již definován"
 
-#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
+#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:413
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -136,7 +136,7 @@ msgstr "Hodnota:"
 msgid "Unnamed bibliographic database"
 msgstr "Nepojmenovaná bibliografická databáze"
 
-#: Pyblio/GnomeUI/Document.py:218
+#: Pyblio/GnomeUI/Document.py:216
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -145,7 +145,7 @@ msgstr ""
 "nemohu otevřít soubor `%s' pro zápis:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:239
+#: Pyblio/GnomeUI/Document.py:237
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -154,38 +154,38 @@ msgstr ""
 "Chyba při zpracovávání `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:255
+#: Pyblio/GnomeUI/Document.py:253
 msgid "New database"
 msgstr "Nová databáze"
 
-#: Pyblio/GnomeUI/Document.py:263 Pyblio/GnomeUI/Document.py:267
+#: Pyblio/GnomeUI/Document.py:261 Pyblio/GnomeUI/Document.py:265
 msgid "[no entry]"
 msgstr "[žádná položka]"
 
-#: Pyblio/GnomeUI/Document.py:264
+#: Pyblio/GnomeUI/Document.py:262
 msgid "[1 entry]"
 msgstr "[1 položka]"
 
-#: Pyblio/GnomeUI/Document.py:265
+#: Pyblio/GnomeUI/Document.py:263
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d položek]"
 
-#: Pyblio/GnomeUI/Document.py:268
+#: Pyblio/GnomeUI/Document.py:266
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 položka]"
 
-#: Pyblio/GnomeUI/Document.py:269
+#: Pyblio/GnomeUI/Document.py:267
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d položek]"
 
-#: Pyblio/GnomeUI/Document.py:274
+#: Pyblio/GnomeUI/Document.py:272
 msgid "[modified]"
 msgstr "[změněno]"
 
-#: Pyblio/GnomeUI/Document.py:284
+#: Pyblio/GnomeUI/Document.py:282
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -194,29 +194,29 @@ msgstr ""
 "Zahodit změny?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:309
+#: Pyblio/GnomeUI/Document.py:307
 msgid "Your query returned no result"
 msgstr "Váš dotaz nevrátil žádný výsledek"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:319
+#: Pyblio/GnomeUI/Document.py:317
 msgid "Merge file"
 msgstr "Sloučit soubor"
 
-#: Pyblio/GnomeUI/Document.py:331 Pyblio/GnomeUI/Document.py:385
+#: Pyblio/GnomeUI/Document.py:329 Pyblio/GnomeUI/Document.py:383
 msgid "Open error"
 msgstr "Chyba při otevírání"
 
-#: Pyblio/GnomeUI/Document.py:355
+#: Pyblio/GnomeUI/Document.py:353
 msgid "Merge status"
 msgstr "Stav sloučení"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:366
+#: Pyblio/GnomeUI/Document.py:364
 msgid "Open file"
 msgstr "Otevřít soubor"
 
-#: Pyblio/GnomeUI/Document.py:414
+#: Pyblio/GnomeUI/Document.py:412
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -224,7 +224,7 @@ msgstr ""
 "Databáze byla změněna zvenčí.\n"
 "Přepsat změny?"
 
-#: Pyblio/GnomeUI/Document.py:424
+#: Pyblio/GnomeUI/Document.py:422
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -233,7 +233,7 @@ msgstr ""
 "Nemohu uložit `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:432
+#: Pyblio/GnomeUI/Document.py:430
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -242,11 +242,11 @@ msgstr ""
 "Zkuste Uložit jako..."
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:446
+#: Pyblio/GnomeUI/Document.py:444
 msgid "Save As..."
 msgstr "Uložit jako..."
 
-#: Pyblio/GnomeUI/Document.py:452
+#: Pyblio/GnomeUI/Document.py:450
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -255,7 +255,7 @@ msgstr ""
 "Soubor `%s' již existuje.\n"
 "Přepsat jej?"
 
-#: Pyblio/GnomeUI/Document.py:459
+#: Pyblio/GnomeUI/Document.py:457
 #, python-format
 msgid ""
 "During opening:\n"
@@ -264,11 +264,11 @@ msgstr ""
 "Při otevírání:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:477
+#: Pyblio/GnomeUI/Document.py:475
 msgid "Reopen error"
 msgstr "Chyba při opětovném otevření"
 
-#: Pyblio/GnomeUI/Document.py:524
+#: Pyblio/GnomeUI/Document.py:522
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -277,30 +277,30 @@ msgstr ""
 "Položka nazvaná `%s' již existuje.\n"
 "Přejmenovat ji a přesto přidat?"
 
-#: Pyblio/GnomeUI/Document.py:561
+#: Pyblio/GnomeUI/Document.py:559
 msgid "Really remove all the entries ?"
 msgstr "Opravdu odstranit všechny položky?"
 
-#: Pyblio/GnomeUI/Document.py:581
+#: Pyblio/GnomeUI/Document.py:579
 msgid "Create new entry"
 msgstr "Vytvořit novou položku"
 
-#: Pyblio/GnomeUI/Document.py:595
+#: Pyblio/GnomeUI/Document.py:593
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Opravdu opravit %d položek?"
 
-#: Pyblio/GnomeUI/Document.py:633
+#: Pyblio/GnomeUI/Document.py:631
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Odstranit všech %d položek?"
 
-#: Pyblio/GnomeUI/Document.py:635
+#: Pyblio/GnomeUI/Document.py:633
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Odstranit položku `%s'?"
 
-#: Pyblio/GnomeUI/Document.py:724 Pyblio/GnomeUI/Document.py:733
+#: Pyblio/GnomeUI/Document.py:720 Pyblio/GnomeUI/Document.py:728
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -309,7 +309,7 @@ msgstr ""
 "Nemohu se připojit k LyX:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:805
+#: Pyblio/GnomeUI/Document.py:800
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -319,124 +319,153 @@ msgstr ""
 "%s"
 
 # Sheesh.
-#: Pyblio/GnomeUI/Document.py:813
+#: Pyblio/GnomeUI/Document.py:808
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Tento program je chráněn copyrightem a šířen pod podmínkami GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:814
+#: Pyblio/GnomeUI/Document.py:809
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Rozhraní pro Gnome k systému Pybliographer."
 
-#: Pyblio/GnomeUI/Document.py:824
+#: Pyblio/GnomeUI/Document.py:819
 msgid "Gnome Translation Team"
 msgstr "Tým překladatelů Gnome"
 
-#: Pyblio/GnomeUI/Document.py:829
+#: Pyblio/GnomeUI/Document.py:824
 msgid "Pybliographer Home Page"
 msgstr "Domovská stránka Pybliographeru"
 
-#: Pyblio/GnomeUI/Editor.py:38
+#: Pyblio/GnomeUI/Editor.py:44
 msgid "Last Name, First Name"
 msgstr "Příjmení, křestní jméno"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Editor.py:45 Pyblio/GnomeUI/Fields.py:41
 #: glade/config1.glade.h:14 glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Text"
 
-#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
+#: Pyblio/GnomeUI/Editor.py:142 Pyblio/GnomeUI/Editor.py:965
 msgid "Error in native string parsing"
 msgstr "Chyba ve zpracovávání nativního řetězce"
 
-#: Pyblio/GnomeUI/Editor.py:315
+#: Pyblio/GnomeUI/Editor.py:321
 msgid "Day"
 msgstr "Den"
 
-#: Pyblio/GnomeUI/Editor.py:324
+#: Pyblio/GnomeUI/Editor.py:330
 msgid "Month"
 msgstr "Měsíc"
 
-#: Pyblio/GnomeUI/Editor.py:333
+#: Pyblio/GnomeUI/Editor.py:339
 msgid "Year"
 msgstr "Rok"
 
-#: Pyblio/GnomeUI/Editor.py:358
+#: Pyblio/GnomeUI/Editor.py:364
 msgid "Invalid day field in date"
 msgstr "Neplatné pole dne v datu"
 
-#: Pyblio/GnomeUI/Editor.py:366
+#: Pyblio/GnomeUI/Editor.py:372
 msgid "Invalid month field in date"
 msgstr "Neplatné pole měsíce v datu"
 
-#: Pyblio/GnomeUI/Editor.py:374
+#: Pyblio/GnomeUI/Editor.py:380
 msgid "Invalid year field in date"
 msgstr "Neplatné pole roku v datu"
 
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:422 Pyblio/GnomeUI/Search.py:86
+#: Pyblio/GnomeUI/Editor.py:428 Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Odstranit"
 
-#: Pyblio/GnomeUI/Editor.py:433 Pyblio/GnomeUI/Editor.py:446
-#: Pyblio/GnomeUI/Editor.py:449
+#: Pyblio/GnomeUI/Editor.py:439 Pyblio/GnomeUI/Editor.py:452
+#: Pyblio/GnomeUI/Editor.py:455
 msgid "[ Drop an Entry here ]"
 msgstr "[ Pusťte sem položku ]"
 
-#: Pyblio/GnomeUI/Editor.py:521 Pyblio/GnomeUI/Fields.py:231
+#: Pyblio/GnomeUI/Editor.py:528 Pyblio/GnomeUI/Fields.py:232
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Typ položky"
 
-#: Pyblio/GnomeUI/Editor.py:523
+#: Pyblio/GnomeUI/Editor.py:530
 msgid "Key"
 msgstr "Klíč"
 
-#: Pyblio/GnomeUI/Editor.py:564
+#: Pyblio/GnomeUI/Editor.py:571
 msgid "Create Field"
 msgstr "Vytvořit pole"
 
-#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:446
+#. navigation buttons
+#: Pyblio/GnomeUI/Editor.py:576
+msgid "Back"
+msgstr "Zpět"
+
+#: Pyblio/GnomeUI/Editor.py:579
+msgid "Next"
+msgstr "Vpřed"
+
+#: Pyblio/GnomeUI/Editor.py:645
+msgid "Delete text first, then you can delete the field."
+msgstr "Nejdříve odstraňte text, pak můžete odstranit pole."
+
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Fields.py:447
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: Pyblio/GnomeUI/Editor.py:619 Pyblio/GnomeUI/Fields.py:447
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Fields.py:448
 msgid "Optional"
 msgstr "Nepovinné"
 
-#: Pyblio/GnomeUI/Editor.py:619
+#: Pyblio/GnomeUI/Editor.py:688 Pyblio/GnomeUI/Editor.py:1198
+msgid "Notes"
+msgstr "Poznámky"
+
+#: Pyblio/GnomeUI/Editor.py:688
 msgid "Extra"
 msgstr "Přídavné"
 
-#: Pyblio/GnomeUI/Editor.py:688
+#: Pyblio/GnomeUI/Editor.py:862
 msgid "Invalid key format"
 msgstr "Neplatný formát klíček"
 
-#: Pyblio/GnomeUI/Editor.py:696
+#: Pyblio/GnomeUI/Editor.py:870
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Klíč `%s' již existuje"
 
 # GREAT idea
-#: Pyblio/GnomeUI/Editor.py:712
+#: Pyblio/GnomeUI/Editor.py:887
 #, python-format
 msgid "The `%s' field contains a non Latin-1 symbol"
 msgstr "Pole `%s' obsahuje symbol mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:777
+#: Pyblio/GnomeUI/Editor.py:957
 msgid "Your text contains non Latin-1 symbols"
 msgstr "Váš text obsahuje symboly mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:799
+#: Pyblio/GnomeUI/Editor.py:978
 msgid "Edit entry"
 msgstr "Upravit položku"
 
-#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
+#: Pyblio/GnomeUI/Editor.py:992 Pyblio/GnomeUI/Editor.py:1063
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:897
+#: Pyblio/GnomeUI/Editor.py:1093
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
+
+#: Pyblio/GnomeUI/Editor.py:1220
+msgid "mandatory"
+msgstr "povinné"
+
+#: Pyblio/GnomeUI/Editor.py:1285
+msgid "Enter text here"
+msgstr "Sem zadejte text"
+
+#: Pyblio/GnomeUI/Editor.py:1340
+msgid "Name of the new annotation:"
+msgstr "Název nové poznámky:"
 
 #: Pyblio/GnomeUI/Entry.py:114
 #, python-format
@@ -451,42 +480,46 @@ msgstr ""
 msgid "Authors"
 msgstr "Autoři"
 
-#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
+#: Pyblio/GnomeUI/Fields.py:42
+msgid "Long Text"
+msgstr "Dlouhý text"
+
+#: Pyblio/GnomeUI/Fields.py:43 glade/config1.glade.h:16
 #: glade/fields1.glade.h:21
 msgid "URL"
 msgstr "URL"
 
-#: Pyblio/GnomeUI/Fields.py:43
+#: Pyblio/GnomeUI/Fields.py:44
 msgid "Reference"
 msgstr "Odkaz"
 
-#: Pyblio/GnomeUI/Fields.py:44
+#: Pyblio/GnomeUI/Fields.py:45
 msgid "Date"
 msgstr "Datum"
 
-#: Pyblio/GnomeUI/Fields.py:119 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:120 glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Název"
 
-#: Pyblio/GnomeUI/Fields.py:122 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:123 glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Typ"
 
-#: Pyblio/GnomeUI/Fields.py:295
+#: Pyblio/GnomeUI/Fields.py:296
 msgid "Available"
 msgstr "Dostupné"
 
-#: Pyblio/GnomeUI/Fields.py:305
+#: Pyblio/GnomeUI/Fields.py:306
 msgid "Associated"
 msgstr "Související"
 
-#: Pyblio/GnomeUI/Fields.py:316
+#: Pyblio/GnomeUI/Fields.py:317
 msgid "Please, select an entry type from previous page."
 msgstr "Vyberte prosím typ položky na předchozí straně."
 
-#: Pyblio/GnomeUI/Fields.py:327
+#: Pyblio/GnomeUI/Fields.py:328
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Pole asociovaná s typem pole <b>%s</b>"
@@ -499,15 +532,15 @@ msgstr "Soubor"
 msgid "Bibliography type:"
 msgstr "Typ bibliografie:"
 
-#: Pyblio/GnomeUI/Index.py:95
+#: Pyblio/GnomeUI/Index.py:106
 msgid "Add..."
 msgstr "Přidat..."
 
-#: Pyblio/GnomeUI/Index.py:97
+#: Pyblio/GnomeUI/Index.py:108
 msgid "Edit..."
 msgstr "Upravit..."
 
-#: Pyblio/GnomeUI/Index.py:99
+#: Pyblio/GnomeUI/Index.py:110
 msgid "Delete..."
 msgstr "Odstranit..."
 
@@ -538,7 +571,7 @@ msgstr "[Typ položky]"
 msgid "[Key Value]"
 msgstr "[Hodnota klíče]"
 
-#: Pyblio/GnomeUI/Utils.py:194
+#: Pyblio/GnomeUI/Utils.py:197
 msgid "The following errors occured:\n"
 msgstr "Došlo k následujícím chybám:\n"
 
