@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
-"POT-Creation-Date: 2004-07-13 08:56+0200\n"
-"PO-Revision-Date: 2004-07-13 11:12+0200\n"
+"POT-Creation-Date: 2004-07-16 11:26+0200\n"
+"PO-Revision-Date: 2004-07-16 11:48+0100\n"
 "Last-Translator: Zoltan Kota <z.kota@gmx.net>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -304,15 +304,15 @@ msgstr "%s-ben"
 #. specific fields, like URL
 #. Ouvrir le fichier associe
 #. Incorporer les definitions de l'utilisateur
-#: Pyblio/Format/BibTeX.py:368
-#: Pyblio/Format/BibTeX.py:426
+#: Pyblio/Format/BibTeX.py:369
+#: Pyblio/Format/BibTeX.py:427
 #, python-format
 msgid "key `%s' is malformed"
 msgstr "`%s' kulcs helytelen"
 
 #. Creer la base de cles
-#: Pyblio/Format/BibTeX.py:389
-#: Pyblio/Format/BibTeX.py:410
+#: Pyblio/Format/BibTeX.py:390
+#: Pyblio/Format/BibTeX.py:411
 #, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: `%s' kulcs már definiálva van"
@@ -906,56 +906,60 @@ msgstr "Pybliographer honlapja"
 #. TO FIX
 #. entry editor for more than 50 chars
 #. added: Note taking widget
-#: Pyblio/GnomeUI/Editor.py:44
+#: Pyblio/GnomeUI/Editor.py:45
 msgid "Last Name, First Name"
 msgstr "Vezetéknév, Keresztnév"
 
-#: Pyblio/GnomeUI/Editor.py:45
+#. #  XXX
+#. ------------------------------------------------------------
+#. Buttons
+#: Pyblio/GnomeUI/Editor.py:46
+#: Pyblio/GnomeUI/Editor.py:1291
 #: Pyblio/GnomeUI/Fields.py:41
 #: glade/config1.glade.h:14
 #: glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Szöveg"
 
-#: Pyblio/GnomeUI/Editor.py:142
-#: Pyblio/GnomeUI/Editor.py:967
+#: Pyblio/GnomeUI/Editor.py:143
+#: Pyblio/GnomeUI/Editor.py:974
 msgid "Error in native string parsing"
 msgstr "Hiba a karakterlánc elemzésében"
 
-#: Pyblio/GnomeUI/Editor.py:321
+#: Pyblio/GnomeUI/Editor.py:322
 msgid "Day"
 msgstr "Nap"
 
-#: Pyblio/GnomeUI/Editor.py:330
+#: Pyblio/GnomeUI/Editor.py:331
 msgid "Month"
 msgstr "Hónap"
 
-#: Pyblio/GnomeUI/Editor.py:339
+#: Pyblio/GnomeUI/Editor.py:340
 msgid "Year"
 msgstr "Év"
 
-#: Pyblio/GnomeUI/Editor.py:364
+#: Pyblio/GnomeUI/Editor.py:365
 msgid "Invalid day field in date"
 msgstr "Érvénytelen nap a dátumban"
 
-#: Pyblio/GnomeUI/Editor.py:372
+#: Pyblio/GnomeUI/Editor.py:373
 msgid "Invalid month field in date"
 msgstr "Érvénytelen hónap a dátumban"
 
-#: Pyblio/GnomeUI/Editor.py:380
+#: Pyblio/GnomeUI/Editor.py:381
 msgid "Invalid year field in date"
 msgstr "Érvénytelen év a dátumban"
 
 #. self.edit.set_editable (True)
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:428
+#: Pyblio/GnomeUI/Editor.py:429
 #: Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Törlés"
 
-#: Pyblio/GnomeUI/Editor.py:439
-#: Pyblio/GnomeUI/Editor.py:452
-#: Pyblio/GnomeUI/Editor.py:455
+#: Pyblio/GnomeUI/Editor.py:440
+#: Pyblio/GnomeUI/Editor.py:453
+#: Pyblio/GnomeUI/Editor.py:456
 msgid "[ Drop an Entry here ]"
 msgstr "[ Dobjon ide egy bejegyzést ]"
 
@@ -965,42 +969,38 @@ msgstr "[ Dobjon ide egy bejegyzést ]"
 #. ------------------------------------------------------------
 #. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:528
+#: Pyblio/GnomeUI/Editor.py:529
 #: Pyblio/GnomeUI/Fields.py:232
 #: glade/config1.glade.h:8
 #: glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Bejegyzés típusa"
 
-#: Pyblio/GnomeUI/Editor.py:530
+#: Pyblio/GnomeUI/Editor.py:531
 msgid "Key"
 msgstr "Kulcs"
 
-#: Pyblio/GnomeUI/Editor.py:571
+#: Pyblio/GnomeUI/Editor.py:572
 msgid "Create Field"
 msgstr "Új mező"
 
 #. navigation buttons
-#: Pyblio/GnomeUI/Editor.py:576
+#: Pyblio/GnomeUI/Editor.py:577
 msgid "Back"
 msgstr "Előző"
 
-#: Pyblio/GnomeUI/Editor.py:579
+#: Pyblio/GnomeUI/Editor.py:580
 msgid "Next"
 msgstr "Következő"
 
 #. Notebook
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:645
-msgid "Delete text first, then you can delete the field."
-msgstr "A mező törléséhez először törölje a szöveget."
-
-#: Pyblio/GnomeUI/Editor.py:690
+#: Pyblio/GnomeUI/Editor.py:696
 #: Pyblio/GnomeUI/Fields.py:447
 msgid "Mandatory"
 msgstr "Kötelező"
 
-#: Pyblio/GnomeUI/Editor.py:690
+#: Pyblio/GnomeUI/Editor.py:696
 #: Pyblio/GnomeUI/Fields.py:448
 msgid "Optional"
 msgstr "Opcionális"
@@ -1008,12 +1008,12 @@ msgstr "Opcionális"
 #. set window size
 #. set window size
 #. ####################################################################
-#: Pyblio/GnomeUI/Editor.py:690
-#: Pyblio/GnomeUI/Editor.py:1199
+#: Pyblio/GnomeUI/Editor.py:696
+#: Pyblio/GnomeUI/Editor.py:1206
 msgid "Notes"
 msgstr "Jegyzetek"
 
-#: Pyblio/GnomeUI/Editor.py:690
+#: Pyblio/GnomeUI/Editor.py:696
 msgid "Extra"
 msgstr "Extra"
 
@@ -1021,57 +1021,58 @@ msgstr "Extra"
 #. Longtext stuff
 #. --------------------------------------------------
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:864
+#: Pyblio/GnomeUI/Editor.py:871
 msgid "Invalid key format"
 msgstr "Érvénytelen kulcsformátum"
 
-#: Pyblio/GnomeUI/Editor.py:872
+#: Pyblio/GnomeUI/Editor.py:879
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "`%s' kulcs már létezik"
 
-#: Pyblio/GnomeUI/Editor.py:889
+#: Pyblio/GnomeUI/Editor.py:896
 #, python-format
 msgid "The `%s' field contains a non Latin-1 symbol"
 msgstr "A(z) `%s' mező nem Latin-1 szimbólumot tartalmaz"
 
-#: Pyblio/GnomeUI/Editor.py:959
+#: Pyblio/GnomeUI/Editor.py:966
 msgid "Your text contains non Latin-1 symbols"
 msgstr "A szöveg nem Latin-1 szimbólumokat tartalmaz"
 
-#: Pyblio/GnomeUI/Editor.py:980
+#: Pyblio/GnomeUI/Editor.py:987
 msgid "Edit entry"
 msgstr "Bejegyzés szerkesztése"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:994
-#: Pyblio/GnomeUI/Editor.py:1065
+#: Pyblio/GnomeUI/Editor.py:1001
+#: Pyblio/GnomeUI/Editor.py:1072
 msgid "Native Editing"
 msgstr "Natív szerkesztés"
 
 #. We need to insert the entry as it is currently,
 #. in order to generate a Key
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:1094
+#: Pyblio/GnomeUI/Editor.py:1101
 msgid "Standard Editing"
 msgstr "Szabványos szerkesztés"
 
 #. list_remove (self.editor.fields, self.keys)
 #. self.enable_buttons()
-#: Pyblio/GnomeUI/Editor.py:1221
+#: Pyblio/GnomeUI/Editor.py:1228
 msgid "mandatory"
 msgstr "kötelező"
 
-#. #  XXX
-#. ------------------------------------------------------------
-#. Buttons
-#: Pyblio/GnomeUI/Editor.py:1286
+#: Pyblio/GnomeUI/Editor.py:1294
 msgid "Enter text here"
 msgstr "Ide írja a szöveget"
 
 #. self.disable_buttons()
 #. position)
-#: Pyblio/GnomeUI/Editor.py:1341
+#: Pyblio/GnomeUI/Editor.py:1346
+msgid "New Annotation Name"
+msgstr "Új kommentár"
+
+#: Pyblio/GnomeUI/Editor.py:1352
 msgid "Name of the new annotation:"
 msgstr "Az új kommentár neve:"
 
@@ -2617,7 +2618,7 @@ msgstr "nincs stílus definiálva"
 #.
 #. This script processes a text file with citations and creates a
 #. reference list according to the given style.
-#. Created by Zoltán Kóta. March, 2004.
+#. Created by ZoltÃ¡n KÃ³ta. March, 2004.
 #: scripts/pybtext.py:40
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
 msgstr "használat: pybtext [-o kimeneti fájl] [-s stílus] <szövegfájl> <bibliográfia fájlok...>"
