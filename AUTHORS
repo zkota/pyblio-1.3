@@ -1,0 +1,19 @@
+- Herve Dreau <hdreau@cybercable.fr>
+	* internationalization
+	* UI goodies
+	
+- Frederic Gobry <frederic.gobry@epfl.ch>
+	* core application
+	* Gnome interface
+	
+- Travis Oliphant <Oliphant.Travis@mayo.edu>
+	* original Ovid parser
+
+- Darrell Rudmann <rudmann1@home.com>
+	* APA 4th edition style.
+
+- Peter Schulte-Stracke <Peter.Schulte-Stracke@t-online.de>
+	* ISIFile format parser
+
+-  John Vu <jvu001@umaryland.edu> 
+	* Medline database parser

@@ -1,0 +1,206 @@
+<chapter>
+  <title>Il linguaggio di scripting</title>
+
+<para>&pyb; &egrave infatti un semplice set di classi e funzioni scritte                                                                
+in python e fornisce un accesso semplice e omogeneo a database                                                                   
+bibliografici. Perci&ograve, &egrave possibile scrivere script in python che                                                                  
+fanno uso di queste funzioni specializzate. L'interfaccia grafica,                                                                
+&pyc;, &egrave essa stessa un semplice script al di sopra di &pyb;.</para>                                                              
+                                                                                                                                  
+<para>Per eseguire uno script scritto per &pyb;, digita semplicemente </para>                                                     
+
+  <screen>
+    <prompt>></> <command>pybliographer</> <filename>mioscript.py</>
+  </screen>
+
+<para>Alternativamente puoi usare i tuoi script con                                                                               
+<programlisting>                                                                                                                  
+#!/percorso/a/pybliographer                                                                                                       
+                                                                                                                                  
+...il resto del tuo script...                                                                                                     
+</programlisting>                                                                                                                 
+e rendilo eseguibile.                                                                                                             
+</para>                                                                                                                           
+                                                                                                                                  
+<sect1>                                                                                                                           
+    <title>Script esistenti</title>                                                                                                 
+                                                                                                                                    
+    <para>Alcuni script sono forniti con pybliographer, sia come esempio                                                            
+    sia come strumenti utili. Sono abbastanza corti e dovrebbero essere leggibili                                                   
+    con una conoscenza basilare di <productname>python</productname>.</para>                                                        
+	
+    <sect2>
+      <title>pybcheck</title>
+            
+      <abstract>
+	<para>Questo strumento prende una lista di file o directory e controlla                                                 
+	se sono validi (sintassi, nessuna voce con la stessa chiave,...)</para>
+      </abstract>
+
+      <para>&Egrave possibile utilizzare il suo output direttamente nel buffer di
+    compilazione di Emacs, al fine di saltare direttamente agli errori incontrati.
+    Per fare ci&ograve, digita <keysym>M-x compile</keysym>, poi il comando                                                             
+    <command>pybcheck <filename>tuofile</filename></command> e usa il bottone 
+    centrale del mouse per saltare nel file difettoso.</para>
+    </sect2>
+
+    <sect2>
+      <title>pybcompact</title>
+      
+      <abstract>
+	<para>Questo strumento estrae le citazioni fatte in un documento                                                          
+	LaTeX e genera un file BibTeX che le contiene.</para>
+      </abstract>
+      
+      <para>Di solito, uno immagazzina le sue bibliografie in uno o pi&ugrave
+    grandi file BibTeX e lascia che <command>bibtex</command> estragga le                                                        
+    voci usate in un documento LaTeX. Ma qualche volta &egrave conveniente                                                              
+    creare un pacchetto autocontenuto (per esempio per condividerlo nella forma                                                   
+    nativa con qualcun altro o per metterlo da parte), con un file BibTeX                                                        
+    minimo contenente esattamente le voci usate in LaTeX. Questo strumento                                                        
+    fa esattamente questo: legge un file LaTeX <filename>.aux</filename>                                                          
+    ed estrae da uno specifico database BibTeX le voci corrispondenti.</para>
+    </sect2>
+
+    <sect2>
+      <title>pybconvert</title>
+      
+      <abstract>
+	<para>Questo strumento effettua conversioni da un formato bibliografico                                                   
+	a un altro.</para>
+      </abstract>
+
+      <para>La sintassi generale &egrave abbastanza semplice. Per convertire da Refer                                                     
+    a BibTeX per esempio, digita appena: </para>
+
+      <screen>
+	<prompt>&gt; </><command>pybconvert</> refer..bibtex <filename>toto.refer</> <filename>toto.bib</>
+      </screen>
+    </sect2>
+
+    <sect2>
+      <title>pybformat</title>
+
+      <abstract>
+	<para>Questo script genera una bibliografia conforme a uno stile                                                          
+    bibliografico e la restituisce in uno specifico formato (per esempio                                                         
+    HTML, LaTeX,...) come dovrebbe apparire in un documento.</para>
+      </abstract>
+      
+      <para>La forma generale del comando &egrave</para>
+      <screen>
+	<prompt>&gt; </><command>pybformat</> [opzioni] <filename>database...</>
+      </screen>
+
+    <para>Questo comando user&agrave un formato chiamato                                                                                
+    <emphasis>alpha</emphasis>    per creare una bibliografia  in                                                                 
+    <emphasis>LaTeX</emphasis>.  Numerose opzioni sono disponibili per                                                            
+    creare questi documenti:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para><option>--style=... o -s ...</option>: specifica uno
+	    stile bibliografico. Pu&ograve essere un percorso completo verso un
+	    file XML esistente o il nome sar&agrave cercato nei posti standard.
+	    Alpha &egrave il predefinito.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--format=... o -f ...</option>: specifica un formato
+	  di output (come HTML, LaTeX,...). Text &egrave il predefinito.</para>
+	</listitem>
+	<listitem>
+        <para><option>--output=... o -o ...</option>:    specifica il nome del                                                    
+          file di output. STDOUT  &egrave il predefinito.</para>                                                                            
+        </listitem>                                                                                                                 
+        <listitem>                                                                                                                  
+         <para><option>--header=... o -H ...</option>: definisce un file che sar&agrave
+          anteposto al file di output.</para>                                                                                       
+        </listitem>                                                                                                                 
+        <listitem>                                                                                                                  
+         <para><option>--footer=... o -F ...</option>: definisce un file che sar&agrave
+         accodato al file di output.</para>                                                                                        
+        </listitem>                                                                                                                 
+        <listitem>                                                                                                                  
+	<para><option>--list=output o -l output</option>: elenca i formati di                                                     
+        output disponibili.</para>
+	 </listitem>  
+    </itemizedlist>
+
+    </sect2>
+  </sect1>
+
+  <sect1>
+  <title>Scrivere i propri script</title>                                                                                         
+                                                                                                                                    
+    <para>Per iniziare a scrivere i tuoi script puoi leggere quello che segue
+    e dare un'occhiata agli script esistenti. Provare ad adattarli alle
+    tue esigenze personali pu&ograve essere un buon modo per verificare quello
+    che hai letto.</para>
+
+    <sect2>
+      <title>Alcuni concetti</title>
+
+      <para>Questa sezione descrive alcune classi e idee basilari che sono
+      utili per capire come funziona &pyb; . Maggiori informazioni possono
+	essere trovate in <xref linkend="reference">.</para> 
+
+    <para>Nel paragrafo seguente,  tutti i moduli a cui ci si riferir&agrave apparterranno                                                          
+    al dominio <symbol>Pyblio</symbol>. Perci&ograve,  per accedere ai membri                                                             
+    del modulo <symbol>Open</symbol>, dovrai scrivere all'inizio del tuo                                                            
+    script qualcosa come</para>                                                                                                     
+                                                                                                                                        
+        <programlisting>from Pyblio import Open</programlisting>                                                                        
+	                                                                                                                                  
+	  <para>Il modulo <symbol>Base</symbol> contiene alcune delle pi&ugrave basilari
+	classi usate nell'applicazione:</para>
+
+      <itemizedlist>
+	<listitem>
+	<para><symbol>Base.Entry</symbol>    rappresenta una specifica                                                              
+	voce bibliografica con tutti i suoi campi. Si comporta come una tabella                                                    
+	hash che restituisce il contenuto di un campo dato il suo nome</para>
+	</listitem>
+	<listitem>
+	<para><symbol>Base.DataBase</symbol> &egrave la classe dalla quale eredita                                                       
+	ogni tipo di database. Si comporta come una tabella hash che restituisce                                                    
+	una Base.Entry data una Base.Key</para>  
+	</listitem>
+      </itemizedlist>
+      
+      <para><symbol>Key.Key</symbol> &egrave l'oggetto che identifica unicamente                                                      
+	una voce.  Quest'oggetto deve essere unico nell'intera                                                                     
+	applicazione ed &egrave composto da una parte del database e da una parte                                                        
+	della voce.</para>
+
+      <para>Un <symbol>Iteratore</symbol> &egrave un oggetto che fornisce
+	un modo per accedere a una sequenza di oggetti in ordine.  Questi iteratori
+	sono usati in  &pyb; in modo esteso perch&egrave nascondono il meccanismo
+	di accesso sottostante e forniscono lo stesso accesso ad ogni
+	database. Sono anche perfettamente adatti per implementare un
+	filtraggio trasparente e per l'ordinamento delle voci: la classe
+	<symbol>Selection.Selection</symbol>  per esempio prende un iteratore
+	(su un database per esempio) e ne restituisce uno nuovo che iterer&agrave
+	solamente su un sottoinsieme di voci, in accordo a un criterio di
+	ricerca.</para>
+
+    </sect2>
+
+  </sect1>
+</chapter>
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,1404 @@
+2003-10-10  Frederic Gobry  <gobry@puck.ch>
+
+	* Pyblio/GnomeUI/Index.py: fixed external drag and drop, copy/paste.
+
+2003-10-10  Frederic Gobry  <frederic.gobry@smartdata.ch>
+
+	* po/Makefile.am, glade/Makefile.am: separate the messages.pot
+	generation in two, specialized by file type.
+
+2003-10-04  Danilo Segan  <dsegan@gmx.net>
+
+	* pybliographic.desktop: Added Serbian (sr, sr@Latn) translation.
+
+2003-09-16  Frederic Gobry  <gobry@pybliographer.org>
+
+	* Pyblio/GnomeUI/Medline.py, glade/medline.glade: ported the
+	medline query dialog
+
+2003-09-11  Peter Schulte-Stracke  <Peter.Schulte-Stracke@t-online.de>
+
+	* Pyblio/GnomeUI/Config.py (ConfigDialog.changed,
+	BaseConfig.update): uses set_and_save, simplified
+
+	* Pyblio/Config.py (_changes, set_and_save): added, for use with
+	instant apply and termination routine 
+
+2003-09-07  Peter Schulte-Stracke  <Peter.Schulte-Stracke@t-online.de>
+
+	* Pyblio/GnomeUI/Document.py (Document.set_preferences): delayed
+	loading 
+
+	* Pyblio/GnomeUI/Config.py (ConfigDialog.changed): this routine
+	now commits the changes to the update list
+	(BaseConfig.update): update routine allows to force an update and
+	uses new parent pointer to serve subwidgets
+	(ElementConfig): uses option menu, Boolean a checkBox
+	(ConfigDialog.__init__): make data element point to Main class
+	instead of notebook, Help string made into label, uses instant
+	apply throughout
+
+	* Pyblio/Config.py (save_changes): Termination routine added
+
+2003-09-03  Frederic Gobry  <gobry@pybliographer.org>
+
+	* intl/, po/: removed C code, as everything will be performed in
+	Python.
+
+	* configure.ac: cleaned up the unnecessary checks
+	
+2003-08-14  Frederic Gobry  <gobry@pybliographer.org>
+
+	* Pyblio/GnomeUI/Search.py, glade/search.glade: both simple and
+	expert search now work.
+
+2003-08-13  Peter Schulte-Stracke  <Peter.Schulte-Stracke@t-online.de>
+
+	* Pyblio/GnomeUI/Config.py (ConfigDialog.__init__): Now we are
+	using a bold label instead of a frame (Gnome2)
+
+2003-08-06  Frederic Gobry  <gobry@users.sourceforge.net>
+
+	* configure.ac: now, the build system uses autoconf 2.50 and
+	automake 1.7.
+
+2003-08-05  Frederic Gobry  <gobry@users.sourceforge.net>
+
+	* Pyblio/GnomeUI/Editor.py: allow window shrinking
+
+	* Pyblio/GnomeUI/Index.py: fixed the contextual popup menu and the
+	size of the columns.
+
+	* Pyblio/GnomeUI/Document.py: fixed the About window and Previous
+	documents menu.
+
+2003-08-04  Peter Schulte-Stracke  <Peter.Schulte-Stracke@t-online.de>
+
+	* Pyblio/GnomeUI/Config.py (BaseConfig.changed): commented out the
+	call to self.prop.changed (originally this was a Property Box)
+	(passim) Changes for gtk-2
+
+2003-08-01  Peter Schulte-Stracke  <Peter.Schulte-Stracke@t-online.de>
+
+	* configure.in (LIBS): checking for GdkImlib deleted, as it is no
+	longer used with Gtk2
+
+2002-01-29  Stanislav Visnovsky  <visnovsky@nenya.ms.mff.cuni.cz>
+
+	* configure.in: Added "sk" to ALL_LINGUAS.
+
+2002-01-20  Frederic Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/Formats/isifile.py: move the %% extra fields to the end
+	of the entry, so that they don't interfer too much.
+
+2002-01-13  Frederic Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/GnomeUI/Editor.py: put the scrollbars inside the
+	notebook, so that their title stay visible.
+
+2002-01-06  Frederic Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/Format: do not put spaces between initials
+
+2001-12-07  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/GnomeUI: implemented an incremental search.
+
+2001-12-05  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/GnomeUI: added a "Add" button in the toolbar, and added a
+	default sort method for the entries. This default can be set from
+	the "Sort" popup.
+
+	* Pyblio/Format/Medline.py: fixed problem with authors without
+	first names (like "et al.").
+
+2001-11-28  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/GnomeUI: added Medline Query interface
+	* Pyblio/Format/Medline.py: consider first names as set of
+	initials
+	* Pyblio/Utils.py: flatify key names so that they contain no
+	accents.
+	* Pyblio/Format/isfile.py: committed fixes from	Peter
+	Schulte-Stracke
+	* Pyblio/Style/apa4e.py: added style APA 4th edition from Darrell
+	Rudmann.
+	
+	
+2001-10-24  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/GnomeUI/Editor.py: added . as a valid character for a
+	field key.
+	* bibtex/accents.c: code flqq and frqq (sorry, ldots is not a
+	latin1 character)
+	* Pyblio/GnomeUI/Index.py: possibility to copy/paste entry keys
+	instead of content.
+
+2001-10-17  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/Fields.py: remove white space around URLs
+	
+2001-06-29  Karl Eichwalder  <ke@suse.de>
+
+	* compiled/Setup.in: Don't try to link non-pic objects in shared
+	lib.  From Andreas Schwab.
+	* compiled/Makefile.pre.in (Setup): Ditto.
+
+2001-06-26  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/Format/BibTeX.py: fixed order of referenced/referencing entries
+
+2001-06-25  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* Pyblio/Format: added isifile from Peter Schulte-Stracke
+	* bibtex/reverse.c: better analyze of author output
+	* Pyblio/Base.py: update files by creating a temporary buffer
+	* Pyblio/GnomeUI/Entry.py: use of GtkHTML when available
+
+2001-03-28  FrÈdÈric Gobry  <frederic.gobry@smartdata.ch>
+
+	* configure.in: handled the case where no DISPLAY is available
+	during configuration (this breaks importing gtk)
+
+2001-01-15  Fatih Demir	<kabalak@gmx.net>
+
+	* configure.in: Added tr to ALL_LINGUAS and
+		resorted it.
+
+2001-01-09  Gobry Frederic  <frederic.gobry@epfl.ch>
+
+	* Pyblio/GnomeUI/Search.py: fixed broken "Search" button
+	
+2000-11-31  Pauli Virtanen  <pauli.virtanen@saunalahti.fi>
+
+	* configure.in: Added fi to ALL_LINGUAS.
+	* pybliographer.desktop: Added Finnish translation
+
+2000-11-30  Gobry Frederic  <frederic.gobry@epfl.ch>
+
+	* bibtex/accents.c: completed latin1 set
+	* bibtex/author.c: parsing of "template" authors, like {, and ,}
+
+2000-11-30  Martin Norb‰ck  <d95mback@dtek.chalmers.se>
+
+	* pybliographer.desktop: Added Swedish translation
+
+2000-11-21  Gobry Frederic  <frederic.gobry@epfl.ch>
+
+	* Pyblio/Format/OvidLike.py: fixed keyword separators
+
+	* tests: fixed medline to bibtex conversion test
+
+2000-11-13  Gobry Frederic  <frederic.gobry@epfl.ch>
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Pybliographer.py:
+	added warning to avoid overwriting of an externally modified document.
+
+2000-11-09  Gobry Frederic  <frederic.gobry@epfl.ch>
+
+	* bibtex/reverse.c: the reverse saga continues... fixed a bug
+	introdiced by the previous fix...
+
+	* Pyblio/Format/OvidLike.py: improved source parsing (for missing
+	volume).
+
+2000-10-30  Gobry Frederic  <gobry@lithpc18.epfl.ch>
+
+	* bibtex/authors.c: fixed parsing of comma separated author field,
+	having a lowercase part in their name...
+
+2000-10-17  Gobry Frederic  <gobry@lithpc18.epfl.ch>
+
+	* configure.in, Makefile.am, macros/python.m4: improved the
+	testing of the python interpreter version.
+
+2000-10-09  Fred  <fred@lepriv1.epfl.ch>
+
+	* pybliographer.py, pybrc.py, Pyblio/Base.py, Pyblio/Utils.py:
+	modularized key generation function
+
+	* bibtex/reverse.c, bibtex/accents.c: solved problem with LaTeX
+	command in reversed titles.
+
+2000-10-03  Gobry Frederic  <gobry@lithpc18.epfl.ch>
+
+	* configure.in, extras, tests, scripts: added path access to the
+	extras/ subdir, and installation of missing files for the
+	text-only version. Fixed configuration with python 1.6.
+
+2000-09-25  Gobry Frederic  <gobry@lithpc18.epfl.ch>
+
+	* Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Document.py: use of the
+	virtual fields -key- and -type- in the index list.
+
+	* Pyblio/Style/Generic.py: fixed numeric_keys.
+
+	* Pyblio/GnomeUI/Search.py: add the search term to the history
+	when the user clicked on search (and didn't use Enter to validate
+	its choice).
+	
+2000-09-20  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/GnomeUI/DOcument.py, Pyblio/Style/Generic.py: fixed
+	numeric key and format entries in the same order as they are displayed.
+
+2000-08-28  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Added no to ALL_LINGUAS.
+	
+2000-08-03  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Search.py: make typed
+	words history in GnomeEntry permanent.
+
+	* bibtex/accents.c: added some missing special characters.
+
+2000-07-27  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/GnomeUI/__init__.py: explicitely import gtk with modified
+	sys.argv, so that script options are not seen by gtk_init
+
+	* Pyblio/GnomeUI/Fields.py: added "restart now" dialog when
+	editing Fields/Entries.
+
+2000-07-24  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/GnomeUI: added scrollbar around notebook in edition
+	window, save column width in index, update default type when
+	changing entry description
+
+	* Pyblio/Format/Refer.py: merged patch from Martin Wilck
+	<martin@tropos.de> to support label saving/loading from Refer
+	databases.
+
+2000-07-18  Fred  <fred@lithpc10.epfl.ch>
+
+	* bibtex/accents.c, bibtex/bibparse.y: parsing of ﬂ and of
+	@comment in strict mode
+
+	* Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Document.py: select an
+	entry after an edition operation
+
+2000-06-13  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/GnomeUI/FileSelection.py: Removed fileops for file
+	selector
+
+	* Pyblio/GnomeUI/Document.py: added error box when opening an
+	invalid XML file for formatting. Fixed bug when cancelling close
+	action with window manager button.
+
+	* Pyblio/Style/Generic.py: removed final dot for author list
+
+	* Styles/Alpha.xml, Style/Abbrev.xml: corrected typos
+
+	* Pyblio/GnomeUI/Editor.py: save modifications when adding a new
+	field.
+
+2000-06-07  Fred  <fred@lithpc10.epfl.ch>
+
+	* bibtex/biblex.l: handling of CRLF
+
+2000-05-29  Fred  <fred@icppriv7.epfl.ch>
+
+	* scripts/pybconvert, tests/convert: fixed conversion script and
+	added a test so that the problem does not occur anymore...
+
+	* Pyblio/Format/BibTeX.py: fixed bug occuring when bibtex file is empty.
+
+2000-05-11  Fred  <fred@lithpc10.epfl.ch>
+
+	* Pyblio/Format/BibTeX.py: save entries with crossrefs _after_ the
+	ones being crossrefered
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Index.py: correct
+	transfer of Keys with no attached database
+
+2000-04-18  Fred  <fred@pium.home.org>
+
+	* bibtex/reverse.c, Pyblio/GnomeUI/Editor.py:
+	improved handling of authors
+
+	* configure.in, bibtex/Makefile.am, compiled/Setup.in:
+	fixed compilation with i18n
+
+2000-04-17  Fred  <fred@pium.home.org>
+
+	* Pyblio/ConfDir/BibTeX.py:
+	splitted bibtex config in 2 files
+
+	* Pyblio/GnomeUI/Config.py:
+	improved GUI for fixed-length config items
+
+2000-04-14  Fred  <fred@pium.home.org>
+
+	* bibtex/bibtex.c:
+	Numeric keys are valid entry keys now.
+
+	* Pyblio/Base.py, Pyblio/GnomeUI/Document.py:
+	Save the documents in the same order as they are sorted.
+
+	* po/hu.po, configure.in:
+	added hungarian po file
+
+	* bibtex/reverse.c, Pyblio/Format/BibTeX.c, compiled/bibtexmodule.c:
+	configuration for the use of braces / automatic capitalization
+
+2000-04-12  fredgo  <fred@pium.home.org>
+
+	* Pyblio/Format/BibTeX.py, bibtex/bibtex.c, compiled/bibtexmodule.c:
+	Improved parser flexibility for files exported by endnote
+
+	* po/Makefile.in.in:
+	conditional use of xpot to create the pot file.
+
+	* Pyblio/GnomeUI/Document.py:
+	added Shortcuts to the menu entries
+
+2000-04-07  fredgo  <fredgo@pium.home.org>
+
+	* NEWS: update for 0.9.9
+
+	* configure.in, pybliographer.py, tests/format.html, tests/format.latex, tests/format.py, tests/format.raw, tests/format.text:
+	updates for 0.9.9
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Fields.py, Pyblio/GnomeUI/Format.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/GnomeUI/Utils.py:
+	Use of the real GnomeDialog
+
+	* po/de.po, po/fr.po, po/it.po, po/pybliographer.pot:
+	update for 0.9.9
+
+2000-04-06  fredgo  <fredgo@pium.home.org>
+
+	* bibtex/reverse.c:
+	better upper/lower case handling in reverse
+
+	* po/de.po: added german translation
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/Base.py:
+	setting an entry in a database now ensure that the key is bound to that
+	database
+
+	* Pyblio/GnomeUI/Index.py: adjusted fields
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Search.py:
+	cosmetic fixes
+
+2000-04-04  fredgo  <fredgo@pium.home.org>
+
+	* ChangeLog, NEWS:
+	updated
+
+	* Styles/Abbrev.xml, Styles/Alpha.xml:
+	Editors are now in First, Last order
+
+	* Pyblio/Format/BibTeX.py:
+	fixed a bug in the replication code
+
+	* Pyblio/Style/Generic.py:
+	Added First Name, Last Name author generation
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Fields.py, Pyblio/GnomeUI/Format.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/GnomeUI/Utils.py:
+	- make use of TmpGnomeDialog
+	- added directional sorting
+
+	* Pyblio/Sort.py:
+	Sorting can now work ascending or descending
+
+	* scripts/pybformat.py:
+	Made the style name suffix insensitive
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	updated translations
+
+	* pybliographic-logo.png:
+	Smaller version of the splash screen
+
+2000-04-04  fredgo  <fredgo@pium.home.org>
+
+	* Styles/Abbrev.xml, Styles/Alpha.xml:
+	Editors are now in First, Last order
+
+	* Pyblio/Format/BibTeX.py:
+	fixed a bug in the replication code
+
+	* Pyblio/Style/Generic.py:
+	Added First Name, Last Name author generation
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Fields.py, Pyblio/GnomeUI/Format.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/GnomeUI/Utils.py:
+	- make use of TmpGnomeDialog
+	- added directional sorting
+
+	* Pyblio/Sort.py:
+	Sorting can now work ascending or descending
+
+	* scripts/pybformat.py:
+	Made the style name suffix insensitive
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	updated translations
+
+	* pybliographic-logo.png:
+	Smaller version of the splash screen
+
+2000-03-30  fredgo  <fredgo@pium.home.org>
+
+	* pybliographic.desktop:
+	translated desktop file in french
+
+	* po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	added the new files's translations
+
+	* Pyblio/ConfDir/GnomeUI.py:
+	Now provide the widget not to the Field instance, but to the class
+
+	* Pyblio/Types.py:
+	made Descriptions comparable
+
+	* Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Fields.py, Pyblio/GnomeUI/FieldsInfo.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Sort.py, Pyblio/GnomeUI/Utils.py:
+	added dialogs to customize the bibliography structure
+
+2000-03-29  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/ConfDir/Makefile.am: Added Gnome.py
+
+	* AUTHORS, INSTALL, README, TODO:
+	updates
+
+	* pybliographer.py, tests/pybformat:
+	Fixed problem with additional options
+
+	* Pyblio/Format/Ovid.py:
+	Now, Ovid default type is given as an Object, not a name
+
+	* Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/GnomeUI/Utils.py:
+	Cosmetics + Fixups for Config
+
+	* Pyblio/Config.py, Pyblio/Types.py:
+	Nicer string generation for Config objects
+
+	* Pyblio/ConfDir/Base.py, Pyblio/ConfDir/BibTeX.py, Pyblio/ConfDir/Medline.py, Pyblio/ConfDir/Ovid.py:
+	Typing of user-accessible options
+
+	* Pyblio/ConfDir/Gnome.py, Pyblio/ConfDir/GnomeUI.py:
+	Splitted gnome config in 2, so that the user defined part does not force
+	importation of gtk/gnome at each launch
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	smoothing before 0.9.8
+
+2000-03-28  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Format.py, Pyblio/ConfDir/Base.py, Pyblio/ConfDir/BibTeX.py, Pyblio/ConfDir/DocBook.py, Pyblio/ConfDir/GnomeUI.py, Pyblio/ConfDir/Makefile.am, Pyblio/Config.py, Pyblio/Types.py:
+	Operational configuration mechanism
+
+	* pybrc.py: added loading of saved config
+
+2000-03-24  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/GnomeUI/Makefile.am: added Config.py
+
+	* Pyblio/GnomeUI/Config.py:
+	embryo of edition window
+
+	* configure.in: fix for distcheck build
+
+	* doc/C/config.sgml, doc/C/pyblio.sgml, doc/C/script.sgml, doc/C/styles.sgml:
+	updated doc
+
+	* po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	updated fr.po
+
+	* scripts/pybtex.py:
+	save bbl file in the current directory
+
+	* tests/Makefile.am, tests/compact, tests/pybformat, tests/pybtex, tests/testing.sh:
+	corrected problems during make distcheck
+
+	* Pyblio/GnomeUI/Utils.py, Pyblio/ConfDir/Base.py, Pyblio/Config.py, Pyblio/GnomeUI/Document.py:
+	Embryo of Configuration system...
+
+	* doc/C/format.png, doc/C/search.png, doc/C/sort.png:
+	updated screenshots
+
+	* po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	updated catalog
+
+	* scripts/pybcompact.py, scripts/pybconvert.py, scripts/pybformat.py, scripts/pybtex.py:
+	fixed all the scripts (error messages,...)
+
+	* Pyblio/Output/latexutils.py:
+	updated to work with the new scripts
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py:
+	better error messages
+
+	* tests/Makefile.am, tests/bibtex.bib, tests/bibtex.text, tests/compact, tests/compact.aux, tests/compact.bib, tests/document.aux, tests/document.bbl.ref, tests/document.tex, tests/format, tests/pybformat, tests/pybtex:
+	added tests for the different scripts
+
+2000-03-23  fredgo  <fredgo@pium.home.org>
+
+	* pybliographer.spec:
+	added spec file for RPM packages
+
+	* Pyblio/GnomeUI/Editor.py:
+	possibility to native edit a brand new entry
+
+	* doc/C/Makefile.am, doc/C/config.sgml, doc/C/database.sgml, doc/C/edit.png, doc/C/gui.sgml, doc/C/main.png, doc/C/pyblio.sgml, doc/C/selection.sgml, doc/it/Makefile.am:
+	Updated with the new features
+
+	* scripts/pybliographic.py:
+	version is now imported from a module
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	added messages for formatting
+
+	* Styles/Abbrev.xml, Styles/Alpha.xml:
+	cleaned the XML files
+
+	* tests/Makefile.am, tests/format.html, tests/format.latex, tests/format.py, tests/format.raw, tests/format.text, tests/import-export, tests/test-pybcheck:
+	added tests for formatting capabilities
+
+	* Pyblio/Style/Utils.py, Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/FileSelector.py, Pyblio/GnomeUI/Format.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/Makefile.am, Pyblio/version.py.in:
+	added version.py.in
+
+	* ChangeLog, Makefile.am, configure.in, pybliographer.py, pybrc.py:
+	Moved version, prefix,... into Pyblio.version
+
+2000-03-22  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Style/Makefile.am, Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Sort.py, Pyblio/ConfDir/Makefile.am, Pyblio/Format/docbook.py, Pyblio/Fields.py, Pyblio/Sort.py:
+	* Use of GnomeDialog
+	* Sorting is now implemented
+
+2000-03-21  fredgo  <fredgo@pium.home.org>
+
+	* Styles/Abbrev.xml, Styles/Alpha.xml, Styles/Makefile.am, Styles/bibstyle.dtd:
+	First version of the XML style files
+
+	* Pyblio/Base.py:
+	removed get_native/set_native on the default base class
+
+	* Pyblio/ConfDir/Style.py: unuseful file
+
+	* Pyblio/Format/BibTeX.py:
+	improved robustness on dates
+
+	* Pyblio/ConfDir/Ovid.py: pudate -> date
+
+	* Pyblio/GnomeUI/Editor.py:
+	deal with missing set_native method
+
+	* Pyblio/GnomeUI/Search.py:
+	restored advanced search
+
+	* Pyblio/Output/text.py: Fixed formatting
+
+	* Pyblio/Style/Generic.py, Pyblio/Style/Parser.py, Pyblio/Style/Utils.py, Pyblio/Style/alpha.py, Pyblio/Style/custom.py:
+	New style mechanism based on XML description files
+
+2000-03-15  fredgo  <fredgo@pium.home.org>
+
+	* po/fr.po, po/it.po:
+	fixes for 0.9.7.1
+
+	* po/POTFILES.in: removed docbook
+
+	* po/fr.po, po/it.po, po/pybliographer.pot, Pyblio/Format/BibTeX.py, Pyblio/GnomeUI/Document.py, Pyblio/Base.py, configure.in:
+	date bug fix + po pb fix
+
+2000-03-15  fredgo  <fredgo@pium.home.org>
+
+	* po/fr.po, po/it.po:
+	fixes for 0.9.7.1
+
+	* po/POTFILES.in: removed docbook
+
+	* po/fr.po, po/it.po, po/pybliographer.pot, Pyblio/Format/BibTeX.py, Pyblio/GnomeUI/Document.py, Pyblio/Base.py, configure.in:
+	date bug fix + po pb fix
+
+2000-03-14  fredgo  <fredgo@pium.home.org>
+
+	* doc/it/Makefile.am, po/fr.po, po/it.po, po/pybliographer.pot, tests/Makefile.am, tests/import-export, tests/test-pybcheck, Pyblio/GnomeUI/Sort.py:
+	made tests work in a distcheck
+
+	* Pyblio/ConfDir/Medline.py:
+	added Medline config
+
+	* po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot, Pyblio/ConfDir/Makefile.am, Pyblio/Format/Makefile.am, Pyblio/GnomeUI/Makefile.am, NEWS, Pyblio/Makefile.am:
+	updated makefiles
+
+	* Pyblio/Format/BibTeX.py, Pyblio/GnomeUI/Editor.py:
+	added @ magic escape
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	updated po file
+
+	* Pyblio/ConfDir/GnomeUI.py, Pyblio/LyX.py, Pyblio/Sort.py:
+	bug fixes
+
+	* Pyblio/Open.py:
+	added method to get iterators from urls
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Medline.py, Pyblio/Format/Ovid.py, Pyblio/Format/Refer.py:
+	iterator method takes check parameter
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Search.py:
+	- added Search
+	- added LyX
+
+2000-03-13  fredgo  <fredgo@pium.home.org>
+
+	* tests/import-export.py, scripts/pybcheck.py, scripts/pybliographic.py:
+	shifted argv
+
+	* bibtex/reverse.c:
+	fixed bug in lowercase handling
+
+	* Pyblio/Format/Refer.py: updated
+
+	* Pyblio/Format/BibTeX.py:
+	fixed problems with date handling
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/FieldsInfo.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Mime.py, Pyblio/GnomeUI/Utils.py:
+	edition in now basically ok.
+
+	* Pyblio/ConfDir/Base.py, Pyblio/ConfDir/BibTeX.py, Pyblio/ConfDir/GnomeUI.py, Pyblio/ConfDir/Refer.py:
+	moved configuration from pybrc.py to here
+
+	* Pyblio/Exceptions.py, Pyblio/Fields.py, Pyblio/Types.py, Pyblio/Utils.py:
+	loads of cleanups
+
+	* Pyblio/Config.py:
+	configuration now loads on demand only
+
+	* pybrc.py:
+	moved parts of configuration to ConfDir
+
+	* pybliographer.py:
+	keep script name as argv [0]
+
+2000-03-06  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py:
+	editor embryo
+
+	* Pyblio/Format/BibTeX.py:
+	use of create_native instead of set_native
+
+2000-03-03  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Base.py:
+	changed behavior of set_native
+
+	* Pyblio/Types.py:
+	fixed deepcopy of Type class
+
+2000-03-01  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Format/BibTeX.py:
+	improved reference handling
+
+	* Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/FileSelector.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Utils.py, Pyblio/GnomeUI/Document.py:
+	added support for drag'n' drop and copy/paste of entries
+
+	* Pyblio/Utils.py: Fixed bug in key generation
+
+2000-02-25  fredgo  <fredgo@pium.home.org>
+
+	* pybrc.py: removed .id fields
+
+	* scripts/pybliographic.py:
+	now, opening of files given on the command line
+
+	* Pyblio/Fields.py, Pyblio/Sort.py:
+	fixed a bug in the algorithm for date sorting
+
+	* Pyblio/Exceptions.py:
+	- added file error exception
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Sort.py:
+	- added support for file history
+
+	* Pyblio/Open.py: - indent = 4
+	- adde Exception for missing file in bibopen
+
+2000-02-24  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Base.py, Pyblio/Key.py:
+	- improved Key handling and generation
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Pybliographic.py:
+	- added deletion
+	- added entry DnD
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Refer.py:
+	removed .id fields
+
+	* Pyblio/Types.py: removed ugly .id fields
+
+	* Pyblio/Fields.py:
+	Removed ugly .id fields in the field classes
+
+	* Pyblio/Style/alpha.py, Pyblio/Style/custom.py, Pyblio/Style/Makefile.am:
+	copyright update
+
+	* Pyblio/Output/LaTeX.py, Pyblio/Output/Makefile.am, Pyblio/Output/html.py, Pyblio/Output/latexutils.py, Pyblio/Output/raw.py, Pyblio/Output/text.py:
+	copyright update ;-)
+
+	* Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Pybliographic.py:
+	- updated changes in Types & Fields
+	- corrected window configuration handling
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Refer.py:
+	updated the changes in Types and Fields
+
+	* Pyblio/Base.py, Pyblio/Exceptions.py, Pyblio/Fields.py, Pyblio/Open.py, Pyblio/Types.py:
+	cleaned some badly designed classes
+
+	* doc/C/database.sgml, doc/C/entry.sgml, doc/C/iterator.sgml, doc/C/key.sgml, doc/C/pyblio.sgml, doc/C/selection.sgml, doc/C/sort.sgml, doc/C/tester.sgml, doc/C/url.sgml:
+	added many classes to the reference doc
+
+	* scripts/pybcheck.py: updated
+
+	* tests/Makefile.am, tests/broken.bib, tests/import-export, tests/refer.refer, tests/test-pybcheck:
+	added test for pybcheck
+
+	* Makefile.am: added tests dir
+
+	* configure.in: added tests directory
+
+	* pybrc.py: updated config
+
+	* scripts/pybliographic.py:
+	updated to the new graphical components
+
+	* Pyblio/ConfDir/Base.py, Pyblio/ConfDir/BibTeX.py, Pyblio/ConfDir/Ovid.py, Pyblio/ConfDir/Refer.py:
+	updated configuration parameters
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Medline.py, Pyblio/Format/Ovid.py, Pyblio/Format/Refer.py:
+	updated properties
+
+	* Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Document.py, Pyblio/GnomeUI/Editor.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/FieldsInfo.py, Pyblio/GnomeUI/FileSelector.py, Pyblio/GnomeUI/Index.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Utils.py:
+	new structure for the interface
+
+	* po/POTFILES.in, po/cat-id-tbl.c, po/fr.po, po/it.po, po/pybliographer.pot:
+	Changed some file names...
+
+2000-02-23  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Format/BibTeX.py:
+	forgot to add a parser in unpickled entries
+
+	* bibtex/reverse.c:
+	now, author fields also go through recode, so that accented names are
+	correctly fixed.
+
+	* compiled/bibtexmodule.c:
+	- added copy_field ()
+	- added open_string (), to provide a parser for native entries
+
+	* Pyblio/Style/Utils.py:
+	in a author group, the first author always must appear in <last name>,
+	<first name> order
+
+	* Pyblio/Base.py, Pyblio/Exceptions.py, Pyblio/Fields.py, Pyblio/Iterator.py, Pyblio/Key.py, Pyblio/Open.py, Pyblio/Search.py, Pyblio/Selection.py:
+	- reformatting with 4 spaces
+	- no copy in Database.__getitem__
+
+	* Pyblio/TextUI.py:
+	- use of iterators for more () and ls ()
+
+	* Pyblio/Format/Makefile.am, Pyblio/Format/OvidLike.py, Pyblio/Format/RefDB.py, Pyblio/Format/docbook.py:
+	minor fixes
+
+	* Pyblio/Format/BibTeX.py:
+	- cleaned and improved the format with iterators
+	- added pickling and deepcopy support
+
+	* Pyblio/Format/Refer.py:
+	Fixed multi-space problem between words
+
+2000-02-16  fredgo  <fredgo@pium.home.org>
+
+	* doc/C/Makefile.am, doc/C/config.sgml, doc/C/database.sgml, doc/C/entry.sgml, doc/C/gui.sgml, doc/C/iterator.sgml, doc/C/key.sgml, doc/C/pyblio.sgml, doc/C/script.sgml, doc/C/selection.sgml, doc/C/template.sgml, doc/C/url.sgml:
+	started to describe the core classes
+
+	* tests/Makefile.am, tests/bibtex.bib, tests/import-export, tests/import-export.py, tests/medline.med, tests/ovid.ovid, tests/refer.refer, tests/testing.sh:
+	added test set for all the major formats
+
+	* Pyblio/Format/Ovid.py:
+	Iterator method takes only the URL as parameter
+
+	* Pyblio/Format/Medline.py: added write method
+
+	* Pyblio/Format/Refer.py:
+	- updated to iterators
+	- added write method
+
+2000-02-15  fredgo  <fredgo@pium.home.org>
+
+	* Pyblio/Format/Medline.py:
+	updated Medline to use Iterators
+
+	* Pyblio/Utils.py:
+	New file containing generic useful functions (key generation, column
+	formatting,...)
+
+	* Pyblio/Format/Ovid.py, Pyblio/Format/OvidLike.py:
+	- splitted Ovid parser in two files : a generic Ovid-Like parser + the
+	  specific implementation
+	- cleaned up the code
+
+	* Pyblio/Format/BibTeX.py:
+	Updated to match the new core
+
+2000-02-10  fredgo  <fredgo@pium.home.org>
+
+	* bibtex/bibtex.h: Cleanups
+
+	* bibtex/reverse.c:
+	Handle lower cases at the beginning of a sentence
+
+	* Pyblio/Autoload.py, Pyblio/Base.py, Pyblio/Config.py, Pyblio/Connector.py, Pyblio/Fields.py, Pyblio/Formatter.py, Pyblio/Help.py, Pyblio/Iterator.py, Pyblio/Key.py, Pyblio/LyX.py, Pyblio/Makefile.am, Pyblio/Open.py, Pyblio/Search.py, Pyblio/Selection.py, Pyblio/Sort.py, Pyblio/TextUI.py, Pyblio/Types.py, Pyblio/recode.py:
+	Cleaned base API :
+
+		- no more Reference DB
+		- massive use of Iterators
+		- sorting and searching is now a separate mechanism from database
+
+1999-12-30  cgabriel  <cgabriel@pium.home.org>
+
+	* ChangeLog: *** empty log message ***
+
+	* doc/it/edit.png, doc/it/gui.sgml, doc/it/main.png, doc/it/open.png, doc/it/pyblio.sgml, doc/it/script.sgml, doc/it/search.png, doc/it/topic.dat:
+	Added italian translation from Yuri Bongiorno <yurix@tiscalinet.it>
+
+
+1999-12-30  Christopher R. Gabriel  <cgabriel@linux.it>
+
+	* doc/it/: added italian translation from Yuri Bongiorno 
+	<yurix@tiscalinet.it>
+
+1999-11-22  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/struct.c: Small improvement that produces a speedup of 10x ;-)
+
+1999-11-18  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* pybliographer.py, pybrc.py, autogen.sh, configure.in, Makefile.am, AUTHORS:
+	Added i18n + doc generation
+
+	* doc/pyblio.sgml, doc/search.png, doc/gui.sgml, doc/main.png, doc/open.png, doc/edit.png, doc/Makefile.am:
+	Updated doc + added png picts
+
+	* doc/C/Makefile.am, doc/C/topic.dat: Added support for Gnome doc
+
+	* Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Utils.py, Pyblio/GnomeUI/FieldsInfo.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Entry.py:
+	Internationalization + use of '' for non i18n comments
+
+	* Pyblio/Format/Medline.py, Pyblio/Format/Makefile.am:
+	Added Medline support
+
+	* Pyblio/Makefile.am, Pyblio/TextUI.py, Pyblio/Base.py, Pyblio/LyX.py:
+	Small bug fixes -> entry.name
+
+	* po/cat-id-tbl.c, po/fr.po, po/POTFILES.in: Mise ‡ jour...
+
+1999-11-16  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* all: Added i18n & patchs
+
+1999-11-09  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Output/LaTeX.py, Pyblio/Format/BibTeX.py, Pyblio/Format/Refer.py:
+	Removed .name from Entry
+
+	* Pyblio/Fields.py, Pyblio/Formatter.py, Pyblio/Base.py:
+	- Removed .name in the Entry -> only key
+	- improved behavior of Reference ()
+
+	* Pyblio/TextUI.py, Pyblio/Search.py: Added date tester
+
+1999-09-30  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* 
+	Updated doc
+
+1999-09-28  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Style/Utils.py:
+	Fixed problems with 0 author groups + bad dates
+
+	* configure.in: Jumped to 0.9.4
+
+	* compiled/recodemodule.c, bibtex/struct.c, Pyblio/Style/Utils.py, Pyblio/Format/BibTeX.py, Pyblio/Open.py:
+	Fixed stupid bug
+
+1999-09-27  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexmodule.c, scripts/pybformat.py, bibtex/struct.c, bibtex/bibtex.h, Pyblio/Style/alpha.py, Pyblio/Style/custom.py, Pyblio/Style/Makefile.am, Pyblio/Style/Utils.py, Pyblio/Output/html.py, Pyblio/Output/LaTeX.py, Pyblio/Output/Makefile.am, Pyblio/Output/raw.py, Pyblio/Output/text.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Utils.py, Pyblio/Format/BibTeX.py, Pyblio/ConfDir/Makefile.am, Pyblio/ConfDir/Style.py, Pyblio/Base.py, Pyblio/Fields.py, Pyblio/Formatter.py, Pyblio/recode.py, pybrc.py:
+	Release 0.9.3
+
+1999-09-24  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Output/latexutils.py, Pyblio/Output/LaTeX.py:
+	support for LaTeX output
+
+	* doc/pyblio.sgml, doc/script.sgml:
+	updated doc -> crossref handling + shortcuts
+
+	* pybrc.py, configure.in, Makefile.am: updated scripts
+
+	* scripts/Makefile.am, scripts/pybcompact.py: updates
+
+	* scripts/pybformat.py, scripts/pybtex.py:
+	updated latex parsing + embryo of output suport
+
+	* Pyblio/Output/html.py, Pyblio/Output/Makefile.am:
+	- format improvement
+
+	* Pyblio/Format/docbook.py, Pyblio/Format/Refer.py, Pyblio/Format/RefDB.py, Pyblio/Format/Ovid.py, Pyblio/Format/BibTeX.py:
+	- updates of the autoload mechanism
+
+	* Pyblio/Open.py, Pyblio/Makefile.am, Pyblio/Formatter.py, Pyblio/Fields.py, Pyblio/Autoload.py:
+	- updates of the autoload mechanism
+	- small bug fixes (lineage handling, case problems...)
+
+	* Pyblio/Style/alpha.py, Pyblio/Style/Makefile.am:
+	First draft of the first style...
+
+	* Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Database.py:
+	- fixed native edition
+	- fixed crossref behavior
+	- now, search window is updated when a new database is loaded
+
+	* compiled/bibtexmodule.c: - small updates
+
+	* bibtex/testparser.c, bibtex/reverse.c, bibtex/struct.c, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/author.c, bibtex/bibparse.y, bibtex/accents.c:
+	- added tilda support
+	- fixed handling of lineage
+	- fixed case dependance of keys
+
+1999-09-15  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/Utils.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py:
+	- Added support for type and key search
+	- bug fixes (test against None fields)
+
+	* Pyblio/ConfDir/GnomeUI.py: Added support for thread conf
+
+	* Pyblio/Types.py, Pyblio/Search.py, Pyblio/TextUI.py:
+	Added support for key and type searches
+
+	* configure.in, README:
+	Added recode-exec-prefix + advices in case of pb with threads
+
+	* bibtex/bibtex.c, bibtex/bibparse.y: Added support for @comment fields
+
+1999-09-02  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* scripts/pybliographic.py, doc/gui.sgml, compiled/recodemodule.c, compiled/Setup.in, Pyblio/Output/docbook.py, Pyblio/Output/html.py, Pyblio/Output/Makefile.am, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Utils.py, Pyblio/Format/docbook.py, Pyblio/Format/Makefile.am, Pyblio/Format/Refer.py, Pyblio/Format/BibTeX.py, Pyblio/ConfDir/GnomeUI.py, Pyblio/ConfDir/Refer.py, Pyblio/Autoload.py, Pyblio/Base.py, Pyblio/Fields.py, Pyblio/Open.py, Pyblio/recode.py, configure.in, pybrc.py, NEWS:
+	Updated
+
+1999-08-31  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* po/cat-id-tbl.c, po/ChangeLog, po/fr.po, po/Makefile.in.in, po/POTFILES.in:
+	ajout de l'intl
+
+	* intl/explodename.c, intl/finddomain.c, intl/gettext.c, intl/gettext.h, intl/gettextP.h, intl/hash-string.h, intl/intl-compat.c, intl/l10nflist.c, intl/libgettext.h, intl/libintl.h, intl/loadinfo.h, intl/loadmsgcat.c, intl/localealias.c, intl/po2tbl.sed.in, intl/textdomain.c, intl/xopen-msg.sed, intl/bindtextdom.c, intl/cat-compat.c, intl/ChangeLog, intl/dcgettext.c, intl/dgettext.c, intl/Makefile.in, intl/TAGS, intl/VERSION:
+	ajout de lÌntl
+
+	* etc/installer.in: ajout de locale
+
+	* compiled/bibtexmodule.c, compiled/recodemodule.c, compiled/Setup.in, bibtex/accents.c, bibtex/author.c, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/entry.c, bibtex/field.c, bibtex/reverse.c, bibtex/source.c, bibtex/stringutils.c, bibtex/struct.c:
+	utilisation de config.h pour pas emm... intl
+
+	* Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/Base.py:
+	ajout du tri sur les cles
+
+	* pybliographic.desktop, ABOUT-NLS, acconfig.h, configure.in, Makefile.am, pybliographer.py, README:
+	Pre-support for NLS
+
+	* Pyblio/GnomeUI/Search.py:
+	Fixed Delete bug (removing in a for loop the items we loop over...)
+
+	* Pyblio/Format/BibTeX.py: Updated string syntax
+
+1999-08-27  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* scripts/pybcompact.py, scripts/pybliographic.py, scripts/pybcheck.py:
+	added comments
+
+	* compiled/bibtexmodule.c, compiled/Makefile.pre.in: strictness support
+
+	* Pyblio/GnomeUI/Pybliographic.py:
+	added listing of previously opened files
+
+	* Pyblio/Format/BibTeX.py, Pyblio/ConfDir/Makefile.am, Pyblio/ConfDir/BibTeX.py, Pyblio/Config.py, Pyblio/Open.py, Pyblio/Base.py:
+	Configuration for Bibtex strictness
+
+	* configure.in, TODO: update for new version
+
+	* bibtex/testparser.c, bibtex/bibtex.h, bibtex/source.c, bibtex/bibparse.y, bibtex/author.c:
+	- Fixed author bug (when entries look like "and and")
+	- added strictness configuration for comma parsing.
+
+1999-08-26  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Base.py: Pass properties when searching in Reference
+
+	* Pyblio/GnomeUI/Pybliographic.py, Pyblio/Base.py:
+	Last minute fix -> new_entry on a ref
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Makefile.am, Pyblio/Format/Refer.py, Pyblio/ConfDir/Makefile.am, Pyblio/ConfDir/Refer.py:
+	Config in refer + install the file !
+
+	* pybrc.py, NEWS, TODO: Updated version
+
+	* scripts/pybcheck.py, scripts/pybcompact.py: Ajout de commentaires
+
+	* doc/script.sgml, README, NEWS: Update
+
+	* scripts/pybliographic.py, scripts/pybscript.in, scripts/Makefile.am, scripts/pybcompact.py:
+	Added new script
+
+	* Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/Format/BibTeX.py, pybliographic.desktop, configure.in, Makefile.am:
+	Simple bug fixes
+
+1999-08-25  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* doc/gui.sgml: Updated for crossrefs
+
+	* doc/script.sgml, scripts/pybliographic.py, doc/gui.sgml, doc/pyblio.sgml, compiled/recodemodule.c, compiled/bibtexmodule.c, compiled/Setup.in, Pyblio/GnomeUI/Utils.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Database.py, Pyblio/Format/Ovid.py, Pyblio/Format/RefDB.py, Pyblio/Format/Refer.py, Pyblio/ConfDir/Base.py, Pyblio/Format/BibTeX.py, Pyblio/Fields.py, Pyblio/Open.py, Pyblio/Base.py, pybconvert.py, pybliographer.py, pybrc.py, pybconvert.in, configure.in:
+	- improved edition (crossrefs support + new entry addition)
+	- bug fixes (can save when editing sorted entries, ...)
+
+1999-08-18  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/Pybliographic.py, Pyblio/Open.py, NEWS:
+	OubliÈ le "new"
+
+	* scripts/pybconvert.py, scripts/pybscript.in: -isolated the script
+
+	* compiled/bibtexmodule.c, compiled/Setup.in, bibtex/source.c, bibtex/reverse.c:
+	- bug fixes (test NULL)
+	- make a real type for bibtex data
+
+	* Pyblio/GnomeUI/Utils.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/FieldsInfo.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Database.py:
+	Editing capabilities
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Format/Ovid.py, Pyblio/Format/RefDB.py, Pyblio/Format/Refer.py, Pyblio/Fields.py, Pyblio/Open.py, Pyblio/Base.py:
+	Now keys don't contain databases
+
+	* configure.in, pybrc.py: Update
+
+1999-08-16  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/Pybliographic.py, pybconvert.in, pybconvert.py:
+	back sync
+
+	* Pyblio/GnomeUI/FieldsInfo.py: added fieldsinfo
+
+	* acconfig.h: added acconfig.h
+
+	* scripts/pybscript.in, scripts/pybconvert.py, scripts/pybliographic.py, scripts/pybcheck.py, compiled/recodemodule.c, scripts/Makefile.am, bibtex/reverse.c, compiled/bibtexmodule.c, compiled/Setup.in, bibtex/bibparse.y, bibtex/bibtex.h, bibtex/Makefile.am, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Entry.py, Pyblio/Format/RefDB.py, Pyblio/Format/Refer.py, Pyblio/Format/Ovid.py, Pyblio/Format/Makefile.am, Pyblio/ConfDir/Makefile.am, Pyblio/Format/BibTeX.py, Pyblio/ConfDir/Base.py, Pyblio/ConfDir/GnomeUI.py, Pyblio/Makefile.am, Pyblio/Types.py, Pyblio/Config.py, Pyblio/Base.py, pybrc.py, pybliographic.py, pybliographic.in, pybcheck.py, pybliographer.py, pybcheck.in, configure.in, Makefile.am, AUTHORS:
+	sync after home modifs
+
+1999-08-13  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Format/BibTeX.py, Pyblio/GnomeUI/Search.py, Pyblio/Open.py, pybliographer.py:
+	sync
+
+1999-08-10  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/reverse.c: reverse interpretation of a field structure
+
+	* Pyblio/Output/Makefile.am: Added makefile
+
+	* Pyblio/Format/__init__.pyc: ...oups
+
+	* Pyblio/Format/__init__.pyc, Pyblio/Format/Makefile.am: Added makefile
+
+	* compiled/recodemodule.c, compiled/Setup.in, Pyblio/GnomeUI/Search.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/Search.py, pybliographer.py, pybrc.py, Makefile.am:
+	pre-epfl
+
+1999-08-09  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/Search.py: Module to search
+
+1999-08-06  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Database.py, Pyblio/Format/BibTeX.py, Pyblio/Search.py, Pyblio/TextUI.py, Pyblio/Types.py, Pyblio/Base.py, Pyblio/Fields.py, Pyblio/Makefile.am, Pyblio/Open.py, Pyblio/Autoload.py:
+	Minor reorganisation (types, search function...)
+
+1999-08-05  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexmodule.c: empty fields are NULL/Py_None, not ""
+
+	* bibtex/author.c: empty fields are NULL, not ""
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Fields.py:
+	Cache mechanism with control
+
+	* configure.in: Version 0.6 is on the way
+
+1999-08-04  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibtex.c, bibtex/bibtex.h, bibtex/field.c, bibtex/source.c, bibtex/testparser.c, compiled/bibtexmodule.c, compiled/Setup.in, Pyblio/Fields.py, Pyblio/Format/BibTeX.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/TextUI.py, Pyblio/Base.py, configure.in, Makefile.am, pybrc.py, TODO:
+	Edition is supported for BibTeX
+
+	* compiled/bibtexparser.c, compiled/recodemodule.c, compiled/bibtexmodule.c, compiled/Setup.in:
+	Use of BibtexSource
+
+	* bibtex/parsername.h, bibtex/source.c, bibtex/stringutils.c, bibtex/struct.c, bibtex/testparser.c, bibtex/accents.c, bibtex/author.c, bibtex/biblex.l, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/entry.c, bibtex/field.c, bibtex/Makefile.am, bibtex/TODO:
+	- prefixed functions from lex/yacc
+	- use of source -> file/string parsing
+
+1999-07-30  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/Makefile.pre.in, Pyblio/Formatter.py, Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/TextUI.py, Makefile.am, pybrc.py, README:
+	Bug fixes pour la version 0.5
+
+	* compiled/Makefile.pre.in, compiled/Setup.in:
+	compilation hors des sources
+
+	* bibtex/bibparse.y, bibtex/bibtex.c:
+	amelioration de la gestion des erreurs
+
+	* Pyblio/Style/__init__.py, Pyblio/Style/Makefile.am, Pyblio/Output/html.py, Pyblio/Output/docbook.py:
+	debut
+
+	* Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Entry.py, Pyblio/Format/__init__.py, Pyblio/Format/BibTeX.py, Pyblio/Formatter.py, Pyblio/Makefile.am, Pyblio/Open.py, Pyblio/TextUI.py, Pyblio/Fields.py, Pyblio/Autoload.py, Pyblio/Base.py:
+	utilisation des Keys plus gros debugage
+
+	* pybliographic.in, pybliographic.py, pybrc.py, pybcheck.in, pybcheck.py, pybliographer.py, installer.in, configure.in, TODO, Makefile.am:
+	nettoyage des scripts
+
+1999-07-22  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* etc/installer.in: deplacement
+
+	* Pyblio/Output/html.py, compiled/recodemodule.c, Pyblio/Output/docbook.py, compiled/bibtexparser.c, compiled/Setup.in, bibtex/bibtex.c, compiled/Makefile.pre.in, Pyblio/GnomeUI/__init__.py, Pyblio/GnomeUI/Database.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Config.py, Pyblio/Format/RefDB.py, Pyblio/Makefile.am, Pyblio/Open.py, Pyblio/Formatter.py, Pyblio/Format/BibTeX.py, Pyblio/Base.py, pybliographic.py, pybrc.py, pybliographer.py, TODO:
+	...avant reorganisation...
+
+1999-07-20  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibtex.h, bibtex/field.c, bibtex/struct.c, bibtex/bibtex.c, bibtex/bibparse.y:
+	- meilleur rÈcupÈration en cas de , manquante
+	- remise ‡ FALSE de bibtex_parser_is_content pour pouvoir reparser un fichier
+
+1999-07-19  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/GnomeUI/__init__.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Makefile.am, Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Database.py, Pyblio/Open.py, Pyblio/TextUI.py, Pyblio/Format/BibTeX.py, Pyblio/Makefile.am, Pyblio/Base.py, pybrc.py, pybliographer.py, pybliographic.py, configure.in:
+	Rennomage des bibliotheques
+
+	* bibtex/bibtex.h, bibtex/entry.c, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/biblex.l:
+	amÈlioration du parser (gestion du preamble)
+
+1999-07-16  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* pybliographic.py: standalone pybliographic
+
+	* pybrc.py, pybliographer.py, configure.in, installer.in, Makefile.am:
+	maj avant transfert
+
+	* Pyblio/Output/__init__.py, Pyblio/Output/docbook.py: marchouille
+
+	* compiled/bibtexparser.c, compiled/Setup.in: Added loss
+
+	* bibtex/field.c, bibtex/struct.c, bibtex/testparser.c, bibtex/bibtex.h, bibtex/author.c, bibtex/biblex.l, bibtex/accents.c:
+	Bonne gestion des champs
+
+	* Pyblio/Help.py, Pyblio/Open.py, Pyblio/TextUI.py, Pyblio/Fields.py, Pyblio/Base.py, Pyblio/Makefile.am, Pyblio/Format/BibTeX.py:
+	uniformisation
+
+	* Pyblio/GnomeUI/Makefile.am: new mf
+
+	* Pyblio/GnomeUI/__init__.py, Pyblio/GnomeUI/Config.py, Pyblio/GnomeUI/Entry.py, Pyblio/GnomeUI/Pybliographic.py, Pyblio/GnomeUI/Database.py:
+	Division de l'interface
+
+1999-05-31  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/field.c, bibtex/struct.c, bibtex/testparser.c, bibtex/bibtex.h, bibtex/bibparse.y, bibtex/biblex.l, bibtex/accents.c, bibtex/author.c, bibtex/Makefile.am:
+	Parsing dos not comply with "" and {} yet...
+
+1999-05-27  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/Setup.in, bibtex/logging.h, bibtex/debugging.h, bibtex/author.c, bibtex/Makefile.am, Pyblio/TextUI.py, Pyblio/Base.py, Pyblio/Help.py, Pyblio/Open.py, Pyblio/__init__.py, Pyblio/Makefile.am, Pyblio/Format/BibTeX.py, pybrc.py, pybliographer.py, __init__.py, configure.in, Makefile.am:
+	Before introduction of home made modifications
+
+1999-05-12  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexparser.c, bibtex/accents.c, bibtex/bibtex.c, __init__.py, Pyblio/Base.py, Pyblio/Fields.py, Pyblio/Format/BibTeX.py, Pyblio/Open.py, Pyblio/TextUI.py, pybrc.py:
+	Basic usability
+
+1999-05-10  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexparser.c, Pyblio/Base.py, Pyblio/Fields.py, Pyblio/Format/BibTeX.py, TODO:
+	...toward new parser compliance
+
+	* bibtex/testparser.c, bibtex/parsername.h, bibtex/stringutils.c, bibtex/struct.c, bibtex/entry.c, bibtex/field.c, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/biblex.l, bibtex/bibparse.y, bibtex/accents.c, bibtex/Makefile.am:
+	Parsing plus correct des entrÈes o˘ un {} est inclus dans un mot...
+
+	* bibtex/TODO: ...to remind me of what's missing !
+
+1999-05-04  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/testparser.c, bibtex/bibtex.h, bibtex/field.c, bibtex/struct.c, bibtex/accents.c, bibtex/bibparse.y, bibtex/Makefile.am:
+	Fixed :
+	 - some memory leaks
+	 - capitalization for titles and authors
+
+1999-05-03  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/testparser.c, bibtex/bibtex.h, bibtex/entry.c, bibtex/field.c, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/Makefile.am:
+	Avant de passer aux tableaux
+
+	* bibtex/bibtex.c, bibtex/field.c, bibtex/struct.c, bibtex/bibparse.y:
+	Bug fixes before list->array
+
+1999-04-30  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/accents.c, bibtex/biblex.l, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/field.c, bibtex/Makefile.am, bibtex/struct.c, bibtex/testparser.c:
+	Parser ok sauf les majuscules
+
+1999-04-21  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/biblex.l, bibtex/bibparse.y, bibtex/bibtex.h, bibtex/field.c, bibtex/parsername.h, bibtex/struct.c, bibtex/testparser.c, bibtex/Makefile.am:
+	Analalyse des auteurs au format nom, prÈnom...
+
+1999-04-13  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/field.c, bibtex/struct.c, bibtex/testparser.c, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/entry.c, bibtex/bibparse.y, bibtex/accents.c, bibtex/Makefile.am:
+	Creation de Fields pour chaque entrÈe
+	manque encore la dÈcomposition des auteurs
+
+1999-04-07  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/struct.c, bibtex/testparser.c, bibtex/stringutils.c, bibtex/bibtex.h, bibtex/bibtex.c, bibtex/bibparse.y, bibtex/biblex.l, bibtex/Makefile.am:
+	Nouvelle methode de parsage complete...
+
+1999-03-29  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibtex.c, bibtex/bibtex.h, bibtex/stringutils.c, bibtex/bibparse.y, bibtex/Makefile.am:
+	apres le week-end...
+
+1999-03-25  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* wstring/wstremul.py, wstring/wstring.py, wstring/iso8859.py, wstring/Makefile.am, wstring/README, compiled/wstrop.c, wstring/AUTHOR, compiled/intl.c, compiled/Makefile.pre.in, compiled/Setup.in, bibtex/stringutils.c, bibtex/testparser.c, bibtex/bibtex.h, bibtex/bibtex.c, bibtex/biblex.l, bibtex/bibparse.y, bibtex/Makefile.am, Pyblio/Open.py, pybliographer.py, Pyblio/Format/BibTeX.py, Pyblio/Help.py, Pyblio/Fields.py, configure.in, Makefile.am, Pyblio/Base.py:
+	Commit avant week-end...
+
+1999-03-09  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/Makefile.pre.in: Added dependancy on the static library
+
+1999-03-02  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibparse.y:
+	Pour un champ redÅÈfini, indiquer le nom du champ, pas son contenu !
+
+1998-12-02  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexparser.c, Pyblio/Output/docbook.py, bibtex/bibtex.h, bibtex/bibparse.y, bibtex/bibtex.c, Pyblio/Open.py, pybrc.py, Pyblio/Base.py, Pyblio/Format/BibTeX.py, pybliographer.py, configure.in, Pyblio/TextUI.py, TODO, Makefile.am:
+	Avant le traitement des auteurs
+
+1998-11-24  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Format/BibTeX.py:
+	GÈrer la rÈcursivitÈ dans les foreach (pour Èviter les boucles infinies)
+
+1998-11-11  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* compiled/bibtexparser.c, compiled/Setup.in, bibtex/bibtexparser.c, compiled/Makefile.pre.in, bibtex/Makefile.am, Pyblio/Help.py, configure.in, Makefile.am:
+	Utilisation du systËme Python de configuration des modules
+
+1998-11-09  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/Makefile.am: * installation de bibtex.h
+
+	* Pyblio/Format/BibTeX.py, Pyblio/Open.py, pybliographer.py, configure.in, Pyblio/Base.py, Makefile.am, NEWS, Pyblio/TextUI.py, TODO, AUTHORS, ChangeLog, INSTALL:
+	* Completer les fichiers ‡ distribuer
+	* Ajout de pybopen qui dÈcharge basics
+
+1998-10-29  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Base.py, Pyblio/Format/BibTeX.py, pybliographer.py, configure.in, Pyblio/TextUI.py, TODO, INSTALL, README:
+	Ajustements sur la gestion des " et {} + un peu de doc + function comment
+
+	* bibtex/biblex.l: Suppression des espaces non souhaitÈs
+
+1998-10-28  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibtexparser.c, bibtex/stringutils.c, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/biblex.l, bibtex/bibparse.y, bibtex/Makefile.am, pybliographer.py, Pyblio/Format/BibTeX.py, Pyblio/Help.py, configure.in, installer.in, Pyblio/Base.py, Makefile.am, Pyblio/TextUI.py:
+	Rajout des copyrights : version 0.1 ok !
+
+	* bibtex/Makefile.am: Simplification
+
+	* pybrc.py, pybliograph.in, pybliographer.py, Pyblio/Base.py, Pyblio/Format/BibTeX.py, Pyblio/Help.py, configure.in, Pyblio/TextUI.py, TODO, Makefile.am:
+	Utilisation generalisÈe de Reference + Doc sommaire
+
+1998-10-27  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* Pyblio/Base.py, pybliograph.in, configure.in, installer.in, Pyblio/TextUI.py, INSTALL, Makefile.am, README, TODO, COPYING:
+	Package complet et qui fonctionne...
+
+	* bibtex/bibparse.y, bibtex/Makefile.am:
+	Gestion des chiffres seuls + package ok
+
+	* bibtex/bibtex.c, bibtex/Makefile.am, pybliograph.in, pybrc.py, Pyblio/Format/BibTeX.py, Pyblio/Help.py, pybliograph, Makefile.am, Pyblio/Base.py, Pyblio/TextUI.py:
+	Preparation pour distrib
+
+1998-10-26  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* pybrc.py, Pyblio/Base.py, Pyblio/Format/BibTeX.py, Pyblio/TextUI.py, pybliograph:
+	Fonctionnalites supplementaire :
+	 - modification & edition
+	 - sortie plus jolie
+
+	* bibtex/bibtexparser.c, bibtex/stringutils.c, bibtex/bibparse.y, bibtex/bibtex.c, bibtex/bibtex.h, bibtex/Makefile.am:
+	Correction de qqs memory leaks dans la gestion des listes et des references
+	Python
+
+1998-10-23  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/bibtexparser.c, bibtex/bibtex.c:
+	Fonctions pour la bibliotheque
+
+	* bibtex/biblex.l, bibtex/bibparse.y, bibtex/bibtex.h, bibtex/Makefile.am:
+	Version fonctionnelle
+
+	* bibtex.py, configure.in, Makefile.am, Pyblio/Base.py, Pyblio/Format/BibTeX.py, Pyblio/TextUI.py, pybliograph, pybrc.py:
+	Version fonctionnelle avec bibtex
+
+1998-10-16  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/biblex.l: Suppression des \n superflus
+
+	* bibtex/stringutils.c, bibtex/bibtex.h, bibtex/bibparse.y, bibtex/biblex.l:
+	Parser avec @string
+
+	* bibtex/stringutils.c, bibtex/bibtex.h, bibtex/bibparse.y, bibtex/biblex.l, bibtex/Makefile.am:
+	Parsing relativement correct
+
+	* bibtex/stringutils.c, bibtex/bibtex.h, bibtex/bibparse.y, bibtex/biblex.l, bibtex/Makefile.am:
+	Version beta 1 ! Avant incorporation
+
+1998-10-15  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex/biblex.l, bibtex/bibparse.y, bibtex/bibtex.h, bibtex/Makefile.am, bibtex/stringutils.c:
+	Premiere version...
+
+1998-10-13  Frederic Gobry, EPFL DI-LITH  <gobry@lithsun15.nisplus.lith.di.epfl.ch>
+
+	* bibtex.py, Pyblio/Help.py, pybliograph, pybrc.py:
+	Le nouveau et grandiose pybliograph, version 0.0
+
+	* bibtex.py, Pyblio/Help.py, pybliograph, pybrc.py: New file.
+
+	* Pyblio/Base.py: Le nouveau et grandiose pybliograph, version 0.0
+
+	* Pyblio/Base.py: New file.
+

@@ -1,0 +1,1204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Kemal YILMAZ <kyilmaz@uekae.tubitak.gov.tr>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Oct  9 22:20:02 2003\n"
+"PO-Revision-Date: 2001-01-06 13:00+0200\n"
+"Last-Translator: Kemal YILMAZ <kyilmaz@uekae.tubitak.gov.tr>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: ../Pyblio/Autoload.py:57
+msgid "warning: can't import %s: %s"
+msgstr "uyarý : getirilemiyor %s: %s"
+
+#: ../Pyblio/Config.py:53
+msgid "value of `%s' should be of type %s"
+msgstr "'%s' deðeri %s tipinde olmalýdýr"
+
+#: ../Pyblio/Config.py:204
+msgid "String"
+msgstr "String"
+
+#: ../Pyblio/Config.py:213
+msgid "Boolean"
+msgstr "Boolean"
+
+#: ../Pyblio/Config.py:232
+msgid "Integer"
+msgstr "Integer"
+
+#: ../Pyblio/Config.py:234
+msgid "Integer under %d"
+msgstr "%d altinda Integer"
+
+#: ../Pyblio/Config.py:236
+msgid "Integer over %d"
+msgstr "%d üstünde Integer"
+
+#: ../Pyblio/Config.py:238
+msgid "Integer between %d and %d"
+msgstr "%d ile %d arasýnda Integer"
+
+#: ../Pyblio/Config.py:250
+msgid "Element in `%s'"
+msgstr "'%s' içinde eleman"
+
+#: ../Pyblio/Config.py:270
+msgid "Tuple (%s)"
+msgstr "Tuple (%s)"
+
+#: ../Pyblio/Config.py:291
+msgid "List (%s)"
+msgstr "(%s)'i listele"
+
+#: ../Pyblio/Config.py:316
+msgid "Dictionary (%s, %s)"
+msgstr "Sözlük (%s, %s)"
+
+#: ../Pyblio/Fields.py:265
+msgid "Illegal year value"
+msgstr "Geçersiz yýl deðeri"
+
+#: ../Pyblio/Fields.py:269
+msgid "Illegal month value"
+msgstr "Geçersiz ay deðeri"
+
+#: ../Pyblio/Fields.py:273
+msgid "Illegal day value"
+msgstr "Geçersiz gün deðeri"
+
+#: ../Pyblio/Fields.py:443
+msgid "in %s"
+msgstr "%s içinde"
+
+#: ../Pyblio/Format/BibTeX.py:346 ../Pyblio/Format/BibTeX.py:404
+msgid "key `%s' is malformed"
+msgstr "`%s' anahtarý hatalý düzenlenmis"
+
+#: ../Pyblio/Format/BibTeX.py:367 ../Pyblio/Format/BibTeX.py:388
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d: `%s' anahtarý zaten tanýmlý"
+
+#: ../Pyblio/GnomeUI/Config.py:64
+msgid "Choose your preferences"
+msgstr "Tercihlerinizi seçiniz"
+
+#: ../Pyblio/GnomeUI/Config.py:145 ../Pyblio/GnomeUI/Fields.py:291
+#: ../Pyblio/GnomeUI/Fields.py:473
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"Bazý deðiþikliler  doðru çalýþabilmesi\n"
+"Pybliographic programýnýn yeniden baþlamasýný gerektirmektedir"
+
+#: ../Pyblio/GnomeUI/Config.py:425
+msgid "Add"
+msgstr "Ekle"
+
+#: ../Pyblio/GnomeUI/Config.py:428
+msgid "Update"
+msgstr "Güncelle"
+
+#: ../Pyblio/GnomeUI/Config.py:431 ../Pyblio/GnomeUI/Config.py:535
+#: ../Pyblio/GnomeUI/Fields.py:373
+msgid "Remove"
+msgstr "Kaldýr"
+
+#: ../Pyblio/GnomeUI/Config.py:532 ../Pyblio/GnomeUI/Fields.py:370
+msgid "Set"
+msgstr "Ata"
+
+#: ../Pyblio/GnomeUI/Config.py:547
+msgid "Key:"
+msgstr "Anahtar:"
+
+#: ../Pyblio/GnomeUI/Config.py:549
+msgid "Value:"
+msgstr "Deðer:"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"`%s' dosyasini yazmak için açamadi:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:215
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"`%s' yorumlanýrken hata oluþtu:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:234
+msgid "New database"
+msgstr "Yeni veritabaný"
+
+#: ../Pyblio/GnomeUI/Document.py:242 ../Pyblio/GnomeUI/Document.py:246
+msgid "[no entry]"
+msgstr "[giriþ yok]"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+msgid "[1 entry]"
+msgstr "[1 giriþ]"
+
+#: ../Pyblio/GnomeUI/Document.py:244
+msgid "[%d entries]"
+msgstr "[%d giriþ]"
+
+#: ../Pyblio/GnomeUI/Document.py:247
+msgid "[%d/1 entry]"
+msgstr "[%d/1 giriþ]"
+
+#: ../Pyblio/GnomeUI/Document.py:248
+msgid "[%d/%d entries]"
+msgstr "[%d/%d giriþ]"
+
+#: ../Pyblio/GnomeUI/Document.py:253
+msgid "[modified]"
+msgstr "[deðiþtirildi]"
+
+#: ../Pyblio/GnomeUI/Document.py:263
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"Veritabani degistirildi.\n"
+"Deðiþiklikleri atmak istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:293
+msgid "Merge file"
+msgstr "Dosyayý birleþtir"
+
+#: ../Pyblio/GnomeUI/Document.py:305 ../Pyblio/GnomeUI/Document.py:359
+msgid "Open error"
+msgstr "Açýk hata"
+
+#: ../Pyblio/GnomeUI/Document.py:329
+msgid "Merge status"
+msgstr "Durumu birleþtir"
+
+#: ../Pyblio/GnomeUI/Document.py:340
+msgid "Open file"
+msgstr "Açýk dosya"
+
+#: ../Pyblio/GnomeUI/Document.py:386
+#, fuzzy
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"Veritabani degistirildi.\n"
+"Deðiþiklikleri atmak istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:396
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"`%s' kaydedilemiyor:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:404
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"Kaydetme sýrasýnda bir iç hata oluþtu\n"
+"Farklý Kaydetmeyi Dene..."
+
+#: ../Pyblio/GnomeUI/Document.py:418
+msgid "Save As..."
+msgstr "Farklý Kaydet..."
+
+#: ../Pyblio/GnomeUI/Document.py:424
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"`%s' dosyasi zaten var.\n"
+"Üzerine yazmak istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:431
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"Açýlma sýrasýnda:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:449
+msgid "Reopen error"
+msgstr "Yeniden açma hatasý"
+
+#: ../Pyblio/GnomeUI/Document.py:490
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"`%s' giriþi zaten var.\n"
+"Yeniden adlandýrýp eklemek istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:527
+msgid "Really remove all the entries ?"
+msgstr "Bütün giriþleri kaldýrmak istediðinizden emin misiniz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:547
+msgid "Create new entry"
+msgstr "Yeni giriþ yarat"
+
+#: ../Pyblio/GnomeUI/Document.py:561
+msgid "Really edit %d entries ?"
+msgstr "%d giriþi düzenlemek istediðinizden emin misiniz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:599
+msgid "Remove all the %d entries ?"
+msgstr "%d giriþi kaldýrmak istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:601
+msgid "Remove entry `%s' ?"
+msgstr "`%s' giriþini kaldýrmak istiyor musunuz ?"
+
+#: ../Pyblio/GnomeUI/Document.py:665 ../Pyblio/GnomeUI/Document.py:672
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"LyX'e baðlanýlamýyor:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:749
+msgid ""
+"Please install bug-buddy\n"
+"to use this feature"
+msgstr ""
+"Bu arayüzü kullanabilmek için\n"
+"bug-buddy'i yükleyin"
+
+#: ../Pyblio/GnomeUI/Document.py:762
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "Bu program GNU GPL telif haklarýna sahiptir"
+
+#: ../Pyblio/GnomeUI/Document.py:763
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Pybiographer sistemine Gnome arayüzü"
+
+#: ../Pyblio/GnomeUI/Document.py:772
+msgid "Gnome Translation Team"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:777
+msgid "Pybliographer Home Page"
+msgstr "Pybliographer Internet Adresi"
+
+#: ../Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "Soyadý, Adý"
+
+#: ../Pyblio/GnomeUI/Editor.py:39 ../Pyblio/GnomeUI/Fields.py:39
+msgid "Text"
+msgstr "Yazý"
+
+#: ../Pyblio/GnomeUI/Editor.py:322
+msgid "Day"
+msgstr "Gün"
+
+#: ../Pyblio/GnomeUI/Editor.py:331
+msgid "Month"
+msgstr "Ay"
+
+#: ../Pyblio/GnomeUI/Editor.py:340
+msgid "Year"
+msgstr "Yil"
+
+#: ../Pyblio/GnomeUI/Editor.py:365
+msgid "Invalid day field in date"
+msgstr "Tarihteki gün alaný geçersiz"
+
+#: ../Pyblio/GnomeUI/Editor.py:373
+msgid "Invalid month field in date"
+msgstr "Tarihteki ay alaný geçersiz"
+
+#: ../Pyblio/GnomeUI/Editor.py:381
+msgid "Invalid year field in date"
+msgstr "Tarihteki yil alaný geçersiz"
+
+#: ../Pyblio/GnomeUI/Editor.py:431 ../Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Sil"
+
+#: ../Pyblio/GnomeUI/Editor.py:442 ../Pyblio/GnomeUI/Editor.py:454
+#: ../Pyblio/GnomeUI/Editor.py:457
+msgid "[ Drop an Entry here ]"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:527 ../Pyblio/GnomeUI/Fields.py:106
+msgid "Entry type"
+msgstr "Giriþ tipi"
+
+#: ../Pyblio/GnomeUI/Editor.py:529
+msgid "Key"
+msgstr "Anahtar"
+
+#: ../Pyblio/GnomeUI/Editor.py:570
+msgid "Create Field"
+msgstr "Alan yarat"
+
+#: ../Pyblio/GnomeUI/Editor.py:625
+msgid "Extra"
+msgstr "Ekstra"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:325
+msgid "Mandatory"
+msgstr "Zorunlu"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:326
+msgid "Optional"
+msgstr "Opsiyonel"
+
+#: ../Pyblio/GnomeUI/Editor.py:694
+msgid "Invalid key format"
+msgstr "Geçersiz anahtar biçimi"
+
+#: ../Pyblio/GnomeUI/Editor.py:702
+msgid "Key `%s' already exists"
+msgstr "`%s' anahtari zaten var"
+
+#: ../Pyblio/GnomeUI/Editor.py:763
+msgid "Error in native string parsing"
+msgstr "Doðal kelime yorumlama hatasý"
+
+#: ../Pyblio/GnomeUI/Editor.py:776
+msgid "Edit entry"
+msgstr "Giriþ düzenle"
+
+#: ../Pyblio/GnomeUI/Editor.py:790 ../Pyblio/GnomeUI/Editor.py:846
+msgid "Native Editing"
+msgstr "Doðal Düzenleme"
+
+#: ../Pyblio/GnomeUI/Editor.py:868
+msgid "Standard Editing"
+msgstr "Standart Düzenleme"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+#, fuzzy
+msgid "Authors"
+msgstr "Yazar"
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+msgid "URL"
+msgstr "URL"
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+msgid "Reference"
+msgstr "Referans"
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+msgid "Date"
+msgstr "Tarih"
+
+#: ../Pyblio/GnomeUI/Fields.py:61
+#, fuzzy
+msgid "Entry types and field names configuration"
+msgstr "Giriþ ayarlarý"
+
+#: ../Pyblio/GnomeUI/Fields.py:69
+msgid "Name"
+msgstr "Ad"
+
+#: ../Pyblio/GnomeUI/Fields.py:72
+msgid "Type"
+msgstr "Tip"
+
+#: ../Pyblio/GnomeUI/Fields.py:126
+msgid "Available"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:135
+msgid "Associated"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+msgid "Entries configuration"
+msgstr "Giriþ ayarlarý"
+
+#: ../Pyblio/GnomeUI/Fields.py:343
+msgid "Entry"
+msgstr "Giriþ"
+
+#: ../Pyblio/GnomeUI/Fields.py:354
+msgid "Entry Name:"
+msgstr "Giriþ Adý:"
+
+#: ../Pyblio/GnomeUI/Fields.py:359 ../glade/search-intl.c:11
+msgid "Field"
+msgstr "Alan"
+
+#: ../Pyblio/GnomeUI/Fields.py:359
+msgid "Status"
+msgstr "Durum"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:40
+msgid "File"
+msgstr "Dosya"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:75
+msgid "Bibliography type:"
+msgstr "Bibliografya Tipi"
+
+#: ../Pyblio/GnomeUI/Index.py:94
+msgid "Add..."
+msgstr "Ekle..."
+
+#: ../Pyblio/GnomeUI/Index.py:96
+msgid "Edit..."
+msgstr "Düzenle..."
+
+#: ../Pyblio/GnomeUI/Index.py:98
+#, fuzzy
+msgid "Delete..."
+msgstr "Sil"
+
+#: ../Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "Bütün veritabaný"
+
+#: ../Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "Geliþtirme sýrasýnda iç hata oluþtu"
+
+#: ../Pyblio/GnomeUI/Search.py:195
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"%s 'in derlenmesi sýrasýnda\n"
+"hata: %s"
+
+#: ../Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[Giriþ Tipi]"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[Giriþ Deðeri]"
+
+#: ../Pyblio/GnomeUI/Utils.py:196
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr ""
+"Aþaðýdaki hatalar oluþtu:\n"
+"\n"
+
+#: ../Pyblio/LyX.py:39
+msgid "no input pipe `%s'"
+msgstr "giriþ yok `%s'"
+
+#: ../Pyblio/LyX.py:45
+msgid "no output pipe `%s'"
+msgstr "çýkýþ yok `%s'"
+
+#: ../Pyblio/Open.py:97
+msgid "method `%s' provides no opener"
+msgstr "`%s' metodu açmamayi destekler"
+
+#: ../Pyblio/Open.py:105 ../Pyblio/Open.py:151
+msgid "File `%s' does not exist"
+msgstr "`%s' dosyasý yok"
+
+#: ../Pyblio/Open.py:116 ../Pyblio/Open.py:162
+msgid "don't know how to open `%s'"
+msgstr "`%s' dosyasýnýn nasýl açýlacaðý bilinmiyor"
+
+#: ../Pyblio/Open.py:143
+msgid "method `%s' provides no iterator"
+msgstr "`%s' metodu iterasyonu desteklemiyor"
+
+#: ../pybliographer.py:40
+msgid "This is %s, version %s"
+msgstr "%s, sürüm %s"
+
+#: ../pybliographer.py:44 ../pybliographer.py:51
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "Bu bedava yazýlýmýn KESÝNLÝKLE GARANTÝSÝ YOKTUR."
+
+#: ../pybliographer.py:45
+msgid "For details, type `warranty'."
+msgstr "Detaylý bilgi için, `warranty' yazýnýz"
+
+#: ../pybliographer.py:108 ../pybliographer.py:160
+msgid "%s: error: can't open file `%s'"
+msgstr "%s: hata: dosya `%s' açilamiyor"
+
+#: ../pybliographer.py:121
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "Yardým için, %s 'i çalýþtýrýn ve `help' yazýn"
+
+#: ../pybliographer.py:130
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"Kullanýþlý komutlar:\n"
+"\thelp    biraz yardým almak için\n"
+"\tquit    çýkmak için\n"
+
+#: ../scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "kullaným: pybcompact <latexdosyasý> <bibtexdosyalarý...>"
+
+#: ../scripts/pybcompact.py:33
+msgid "pybcompact: error: %s\n"
+msgstr "pybcompact: hata: %s\n"
+
+#: ../scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "giriþ yok"
+
+#: ../scripts/pybcompact.py:141
+msgid "can't find the following entries: %s"
+msgstr "yandaki giriþ bulunamadý: %s"
+
+#: ../scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "kullaným: pybconvert <kaynak>..<hedef> <girdi> [çýktý]"
+
+#: ../scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr "pybconvert: kötü çevirme biçimi"
+
+#: ../scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr "kullaným: pybformat [bibtexdosyalarý...]\n"
+
+#: ../scripts/pybformat.py:37
+msgid "pybformat: error: %s\n"
+msgstr "pybformat: hata: %s\n"
+
+#: ../scripts/pybformat.py:43
+msgid "pybformat: warning: %s\n"
+msgstr "pybformat: uyarý: %s\n"
+
+#: ../scripts/pybformat.py:140 ../scripts/pybtex.py:85
+msgid "can't find style `%s'"
+msgstr "stil `%s' bulunamadý"
+
+#: ../scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "kullaným: pybtex <latexdosyasý> [bibtexdosyalarý...]"
+
+#: ../scripts/pybtex.py:37
+msgid "pybtex: error: %s\n"
+msgstr "pybtex: hata: %s\n"
+
+#: ../scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "pybtex: uyarý: aþaðýdaki anahtarlar çözümlenemedi"
+
+#: ../scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "stil belirtilmemiþ"
+
+#: ../glade/format-intl.c:8
+msgid "Format entries"
+msgstr "Giriþleri biçimlendir"
+
+#: ../glade/format-intl.c:9
+msgid "Bibliography style:"
+msgstr "Bibliografya stili:"
+
+#: ../glade/format-intl.c:10
+msgid "Output format:"
+msgstr "Çýktý biçimi:"
+
+#: ../glade/format-intl.c:11
+#, fuzzy
+msgid "Output file:\n"
+msgstr "Çýktý Dosyasi:"
+
+#: ../glade/format-intl.c:13 ../glade/format-intl.c:14
+#: ../glade/medline-intl.c:12 ../glade/medline-intl.c:17
+#: ../glade/medline-intl.c:22 ../glade/medline-intl.c:23
+#: ../glade/medline-intl.c:24 ../glade/medline-intl.c:25
+#: ../glade/medline-intl.c:26 ../glade/medline-intl.c:27
+#: ../glade/medline-intl.c:28 ../glade/medline-intl.c:29
+#: ../glade/medline-intl.c:31 ../glade/medline-intl.c:33
+#: ../glade/search-intl.c:13 ../glade/search-intl.c:14
+#: ../glade/search-intl.c:17
+msgid "*"
+msgstr ""
+
+#: ../glade/medline-intl.c:8
+msgid "Medline Query"
+msgstr ""
+
+#: ../glade/medline-intl.c:9
+msgid "Enter your Medline Query"
+msgstr ""
+
+#: ../glade/medline-intl.c:10
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+
+#: ../glade/medline-intl.c:13
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+
+#: ../glade/medline-intl.c:15
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+
+#: ../glade/medline-intl.c:18
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+
+#: ../glade/medline-intl.c:20
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+
+#: ../glade/medline-intl.c:30
+#, fuzzy
+msgid "From:"
+msgstr "Kimden"
+
+#: ../glade/medline-intl.c:32
+msgid "To:"
+msgstr ""
+
+#: ../glade/medline-intl.c:34
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+
+#: ../glade/medline-intl.c:36
+msgid "Limited to:"
+msgstr ""
+
+#: ../glade/pyblio-intl.c:8
+#, fuzzy
+msgid "Pybliographer"
+msgstr "Pybliographer Internet Adresi"
+
+#: ../glade/pyblio-intl.c:9
+msgid "_New"
+msgstr "_Yeni"
+
+#: ../glade/pyblio-intl.c:10
+#, fuzzy
+msgid "Merge With..."
+msgstr "Ý_le Birleþtir..."
+
+#: ../glade/pyblio-intl.c:11
+msgid "Medline Query..."
+msgstr ""
+
+#: ../glade/pyblio-intl.c:12
+msgid "Previous Documents"
+msgstr "Önceki Dökümanlar"
+
+#: ../glade/pyblio-intl.c:13
+msgid "_Add..."
+msgstr "_Ekle..."
+
+#: ../glade/pyblio-intl.c:14
+msgid "_Edit..."
+msgstr "_Düzenle..."
+
+#: ../glade/pyblio-intl.c:15
+#, fuzzy
+msgid "_Delete..."
+msgstr "Sil"
+
+#: ../glade/pyblio-intl.c:16
+msgid "S_ort..."
+msgstr "S_irala..."
+
+#: ../glade/pyblio-intl.c:17 ../glade/pyblio-intl.c:25
+msgid "Cite"
+msgstr "Alýntý"
+
+#: ../glade/pyblio-intl.c:18
+#, fuzzy
+msgid "Cite..."
+msgstr "Alýntý"
+
+#: ../glade/pyblio-intl.c:19
+#, fuzzy
+msgid "Format..."
+msgstr "_Biçimle..."
+
+#: ../glade/pyblio-intl.c:20
+#, fuzzy
+msgid "Settings"
+msgstr "A_yarlar"
+
+#: ../glade/pyblio-intl.c:21
+#, fuzzy
+msgid "Fields..."
+msgstr "A_lanlar..."
+
+#: ../glade/pyblio-intl.c:22
+#, fuzzy
+msgid "Entries..."
+msgstr "_Giriþler..."
+
+#: ../glade/pyblio-intl.c:23
+#, fuzzy
+msgid "Open File"
+msgstr "Açýk dosya"
+
+#: ../glade/pyblio-intl.c:24
+#, fuzzy
+msgid "Save File"
+msgstr "Dosya"
+
+#: ../glade/search-intl.c:8 ../glade/search-intl.c:9
+msgid "Search"
+msgstr "Araþtýr"
+
+#: ../glade/search-intl.c:10
+msgid "Close"
+msgstr "Kapat"
+
+#: ../glade/search-intl.c:12
+msgid "Pattern"
+msgstr "Aranacak"
+
+#: ../glade/search-intl.c:15
+msgid "Simple Search"
+msgstr "Basit Araþtýrma"
+
+#: ../glade/search-intl.c:16
+msgid "Query"
+msgstr ""
+
+#: ../glade/search-intl.c:18
+msgid "Expert Search"
+msgstr "Uzman Araþtýrma"
+
+#: ../glade/sort-intl.c:8
+msgid "Select sort criterions"
+msgstr "Sýralama kriterlerini seç"
+
+#: ../glade/sort-intl.c:9
+msgid "Set as default"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Search Command:"
+#~ msgstr "Araþtýr Komutu:"
+
+#~ msgid "BibTeX"
+#~ msgstr "BibTex"
+
+#~ msgid "BibTeX parser configuration"
+#~ msgstr "BibTex yorumlayýcý ayarlarý"
+
+#~ msgid "Strict Parsing"
+#~ msgstr "Kesin Yorumlayýcý"
+
+#~ msgid "Turn warnings into errors"
+#~ msgstr "Uyarýlarý hatalara dönüþtürür"
+
+#~ msgid "Macros"
+#~ msgstr "Makrolar"
+
+#~ msgid "BibTeX @String{} macros"
+#~ msgstr "BibTex @String() makrolarý"
+
+#~ msgid "Date Fields"
+#~ msgstr "Gün Alanlarý"
+
+#~ msgid "Links from `real' date field to the two bibtex"
+#~ msgstr "Gerçek zaman alanýndan iki bibtex'e baðlantýlar"
+
+#~ msgid "))"
+#~ msgstr "))"
+
+#~ msgid "Month values"
+#~ msgstr "Ay deðerleri"
+
+#~ msgid " A hash table linking month names to their"
+#~ msgstr "Ay isimlerini kendilerine baðlayan bir özet tablosu"
+
+#~ msgid "Base"
+#~ msgstr "Temel"
+
+#~ msgid "Elementary configuration"
+#~ msgstr "Baþlangýç ayarlarý"
+
+#~ msgid "Advertise"
+#~ msgstr "Reklam"
+
+#~ msgid "Specify wether or not the program should add a message"
+#~ msgstr "Programýn bir mesaj ekleyip eklememesi gerektiðini belirle"
+
+#~ msgid "),"
+#~ msgstr "),"
+
+#~ msgid "Fields"
+#~ msgstr "Alanlar"
+
+#~ msgid "Existing fields"
+#~ msgstr "Varolan alanlar"
+
+#~ msgid "Entries"
+#~ msgstr "Giriþler"
+
+#~ msgid "Existing entries"
+#~ msgstr "Varolan giriþler"
+
+#~ msgid "Default Type"
+#~ msgstr "Hazýr olan tipler"
+
+#~ msgid "Default type for a newly created entry"
+#~ msgstr "Yeni yaratýlan giriþ için hazýr olan tip"
+
+#~ msgid "LyX Path"
+#~ msgstr "LyX yolu"
+
+#~ msgid "Path to the LyX server"
+#~ msgstr "Lyx sunucuya yol"
+
+#~ msgid "Path"
+#~ msgstr "Yol"
+
+#~ msgid "Cross Reference"
+#~ msgstr "Çapraz Referans"
+
+#~ msgid "Description"
+#~ msgstr "Tanýmlama"
+
+#~ msgid "Address 1"
+#~ msgstr "Adres 1"
+
+#~ msgid "Address 2"
+#~ msgstr "Adres 2"
+
+#~ msgid "Title"
+#~ msgstr "Baþlýk"
+
+#~ msgid "Specific Title"
+#~ msgstr "Özel Baþlýk"
+
+#~ msgid "Journal"
+#~ msgstr "Sürekli Yayýn"
+
+#~ msgid "Special"
+#~ msgstr "Özel"
+
+#~ msgid "Book Title"
+#~ msgstr "Kitap Baþlýðý"
+
+#~ msgid "Subject"
+#~ msgstr "Konu"
+
+#~ msgid "Ownership"
+#~ msgstr "Sahibi"
+
+#~ msgid "Series"
+#~ msgstr "Seriler"
+
+#~ msgid "Editor"
+#~ msgstr "Editör"
+
+#~ msgid "Edition"
+#~ msgstr "Baský"
+
+#~ msgid "Volume"
+#~ msgstr "Cilt"
+
+#~ msgid "Number"
+#~ msgstr "Numara"
+
+#~ msgid "Chapter"
+#~ msgstr "Bölüm"
+
+#~ msgid "Pages"
+#~ msgstr "Sayfalar"
+
+#~ msgid "School"
+#~ msgstr "Okul"
+
+#~ msgid "Organization"
+#~ msgstr "Organizasyon"
+
+#~ msgid "Location"
+#~ msgstr "Yer"
+
+#~ msgid "Dates"
+#~ msgstr "Günler"
+
+#~ msgid "Institution"
+#~ msgstr "Kurum"
+
+#~ msgid "Publisher"
+#~ msgstr "Yayýnlayan"
+
+#~ msgid "Address"
+#~ msgstr "Adres"
+
+#~ msgid "Format"
+#~ msgstr "Biçim"
+
+#~ msgid "# Series"
+#~ msgstr "Seri No"
+
+#~ msgid "Conference Place"
+#~ msgstr "Konferans Yeri"
+
+#~ msgid "Cote"
+#~ msgstr "Alýntý"
+
+#~ msgid "IEEECN"
+#~ msgstr "IEEECN"
+
+#~ msgid "LoCN"
+#~ msgstr "LoCN"
+
+#~ msgid "ISBN"
+#~ msgstr "ISBN"
+
+#~ msgid "ISSN"
+#~ msgstr "ISSN"
+
+#~ msgid "Note"
+#~ msgstr "Not"
+
+#~ msgid "Language"
+#~ msgstr "Dil"
+
+#~ msgid "How Published"
+#~ msgstr "Nasýl Yayýnlandý"
+
+#~ msgid "To Appear"
+#~ msgstr "Görünecek"
+
+#~ msgid "Received"
+#~ msgstr "Alýndý"
+
+#~ msgid "Owner"
+#~ msgstr "Sahibi"
+
+#~ msgid "Keywords"
+#~ msgstr "Anahtar Kelimeler"
+
+#~ msgid "Abstract"
+#~ msgstr "Özet"
+
+#~ msgid "Remarks"
+#~ msgstr "Uyarýlar"
+
+#~ msgid "Article"
+#~ msgstr "Makale"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Book"
+#~ msgstr "Kitap"
+
+#~ msgid "Booklet"
+#~ msgstr "Kitapçik"
+
+#~ msgid "In Book"
+#~ msgstr "Kitapta"
+
+#~ msgid "In Collection"
+#~ msgstr "Seride"
+
+#~ msgid "In Proceedings"
+#~ msgstr "Üzerine Çalýþýlýlanlar"
+
+#~ msgid "Manual"
+#~ msgstr "El kitabý"
+
+#~ msgid "Masters Thesis"
+#~ msgstr "Yüksek Lisans Tezi"
+
+#~ msgid "Miscellanous"
+#~ msgstr "Çeþitli"
+
+#~ msgid "PhD Thesis"
+#~ msgstr "Doktora Tezi"
+
+#~ msgid "Proceedings"
+#~ msgstr "Üzerine Çalýþýlýlanlar"
+
+#~ msgid "Technical Report"
+#~ msgstr "Teknik Raporlar"
+
+#~ msgid "Unpublished"
+#~ msgstr "Yayýnlanmamýþ"
+
+#~ msgid "Default type"
+#~ msgstr "Hazýr olan tip"
+
+#~ msgid "Default type for an Ovid entry"
+#~ msgstr "Ovid giriþi için hazýr olan tip"
+
+#~ msgid "Mapping"
+#~ msgstr "Karþýlaþtýrmak"
+
+#~ msgid "A mapping between the Ovid field name and the"
+#~ msgstr "Ovid alaný ismi ile birlikte karþýlaþtýrma"
+
+#~ msgid "Field names correspondances"
+#~ msgstr "Alan adlarýnýn karþýlýklarý"
+
+#~ msgid "Gnome"
+#~ msgstr "Gnome"
+
+#~ msgid "Gnome interface configuration"
+#~ msgstr "Gnome arayüz ayarlarý"
+
+#~ msgid "Columns"
+#~ msgstr "Sütünlar"
+
+#~ msgid "Fields displayed on the main screen of the interface"
+#~ msgstr "Arayüzün ana ekranýnda görünecek alanlar"
+
+#~ msgid "Tooltips"
+#~ msgstr "Araç ipuçlarý"
+
+#~ msgid "Enable tooltips ?"
+#~ msgstr "Ýpuçlarýný kullanmak istiyor musunuz?"
+
+#~ msgid "Native Edit"
+#~ msgstr "Doðal Düzeltme"
+
+#~ msgid "Edit the entries in their native format by default ?"
+#~ msgstr "Giriþleri doðal biçimlerinde düzeltmek istiyor musunuz ?"
+
+#~ msgid "Use native edit by default ?"
+#~ msgstr "Doðal biçimlendirmeyi hazýr olarak kullanmak istiyor musunuz?"
+
+#~ msgid "Searchable"
+#~ msgstr "Araþtýrýlabilir"
+
+#~ msgid "Searchable fields"
+#~ msgstr "Araþtýrýlabilir Alanlar"
+
+#~ msgid "History Size"
+#~ msgstr "Geçmiþin Büyüklüðü"
+
+#~ msgid "Size of the history file"
+#~ msgstr "Geçmiþ dosyasýnýn büyüklüðü"
+
+#~ msgid "Number of items"
+#~ msgstr "Eleman sayýsý"
+
+#~ msgid "Medline Mapping"
+#~ msgstr "Medline Karþýlaþtýrma"
+
+#~ msgid "Medline field names correspondances"
+#~ msgstr "Medline alan adlarýnýn karþýlýklarý"
+
+#~ msgid "Sort direction"
+#~ msgstr "Sýralams yönü"
+
+#~ msgid "Sort criterions"
+#~ msgstr "Sýralama kriterleri"
+
+#~ msgid "Reorder"
+#~ msgstr "Yeniden Sýrala"
+
+#~ msgid "Groups the active fields on the top of the list"
+#~ msgstr "Aktif alanlar listenin baþýnda olan guruplar"
+
+#~ msgid "Unselect all"
+#~ msgstr "Hiçbirisini seçme"
+
+#~ msgid "Removes all the sort criterions"
+#~ msgstr "Bütün sýralama kriterlerini kaldýr"
+
+#~ msgid "Internal Error"
+#~ msgstr "Ýç Hata"
+
+#~ msgid "_Previous Documents"
+#~ msgstr "Ö_nceki Dökümanlar"
+
+#~ msgid "About..."
+#~ msgstr "Hakkýnda..."
+
+#~ msgid "Submit a Bug Report"
+#~ msgstr "Hata Raporu Gönder"
+
+#~ msgid "_Delete"
+#~ msgstr "_Sil"
+
+#~ msgid "_Cite"
+#~ msgstr "_Alýntý"
+
+#~ msgid "_File"
+#~ msgstr "_Dosya"
+
+#~ msgid "_Edit"
+#~ msgstr "Dü_zenle..."
+
+#~ msgid "_Help"
+#~ msgstr "Ya_rdým"
+
+#~ msgid "Open"
+#~ msgstr "Aç"
+
+#~ msgid "Save"
+#~ msgstr "Kaydet"
+
+#~ msgid "Find"
+#~ msgstr "Bul"
+
+#~ msgid "Select style"
+#~ msgstr "Stili seç"
+
+#~ msgid "Select output file"
+#~ msgstr "Çýktý dosyasýný seç"
+
+#~ msgid ""
+#~ "Item `%s':\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Parça `%s'\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "True"
+#~ msgstr "Doðru"
+
+#~ msgid "False"
+#~ msgstr "Yanlýþ"
+
+#~ msgid "Value"
+#~ msgstr "Deðer"
+
+#~ msgid "Fields configuration"
+#~ msgstr "Alan ayarlarý"
+
+#~ msgid "Name:"
+#~ msgstr "Ad:"
+
+#~ msgid "Type:"
+#~ msgstr "Tip:"

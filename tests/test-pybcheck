@@ -1,0 +1,15 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+run ../pybliographer -q ${srcdir}/../scripts/pybcheck.py ${srcdir}/bibtex.bib > /dev/null 2>&1
+
+../pybliographer -q ${srcdir}/../scripts/pybcheck.py ${srcdir}/broken.bib  > /dev/null 2>&1
+if test $? = 0 ; then
+	echo "should have failed !"
+	exit 1
+fi
+
+tst_stop

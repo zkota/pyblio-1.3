@@ -1,0 +1,927 @@
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-33-98.ps.gz
+%A Schraudolph, Nicol N.
+%T Accelerated Gradient Descent by Factor-Centering Decomposition
+%R IDSIA-33-98
+%D May 20, 1998
+%K neural networks, slope centering
+%X Gradient factor centering is a new methodology for decomposing neural 
+networks into biased and centered subnets which are then trained in 
+parallel. The decomposition can be applied to any pattern-dependent 
+factor in the network's gradient, and is designed such that the subnets are 
+more amenable to optimization by gradient descent than the original 
+network: biased subnets because of their simplified architecture, centered 
+subnets due to a modified gradient that improves conditioning.   
+The architectural and algorithmic modifications mandated by this approach 
+include both familiar and novel elements, often in prescribed combinations. 
+The framework suggests for instance that shortcut connections - a 
+well-known architectural feature - should work best in conjunction with 
+slope centering, a new technique described herein. Our benchmark 
+experiments bear out this prediction, and show that factor-centering 
+decomposition can speed up learning significantly without adversely 
+affecting the trained network's generalization ability.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-32-98.ps.gz
+%A Schraudolph, Nicol N.
+%T Slope Centering: Making Shortcut Weights Effective
+%R IDSIA-32-98
+%D May 09, 1998
+%K neural networks, accelerated gradient descent, factor-centering decomposition
+%X Shortcut connections are a popular architectural feature of multi-layer 
+perceptrons. It is generally assumed that by implementing a linear 
+sub-mapping, shortcuts assist the learning process in the remainder of 
+the network. Here we find that this is not always the case: shortcut weights 
+may also act as distractors that slow down convergence and can lead to 
+inferior solutions.   
+This problem can be addressed with slope centering, a particular form of 
+gradient factor centering. By removing the linear component of the error 
+signal at a hidden node, slope centering effectively decouples that node 
+from the shortcuts that bypass it. This eliminates the possibility of 
+destructive interference from shortcut weights, and thus ensures that the 
+benefits of shortcut connections are fully realized.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-19-97.ps.gz
+%A Schraudolph, Nicol N.
+%T Centering Neural Network Gradient Factors
+%R IDSIA-19-97
+%D April 19, 1997
+%K accelerated gradient descent, factor-centering decomposition
+%X It has long been known that neural networks can learn faster when their 
+input and hidden unit activity is centered about zero; recently we have 
+extended this approach to also encompass the centering of error signals 
+(Schraudolph & Sejnowski, 1996). Here we generalize this notion to all 
+factors involved in the network's gradient, leading us to propose centering 
+the slope of hidden unit activation functions as well. Slope centering 
+removes the linear component of backpropagated error; this improves 
+credit assignment in networks with shortcut connections. Benchmark 
+results show that this can speed up learning significantly without adversely 
+affecting the trained network's generalization ability.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-38-98.ps.gz
+%A Rizzoli, Andrea E.
+%A  Davis, J. Richard
+%A  Abel, David J.
+%T Model and data integration and re-use in environmental decision support systems
+%R IDSIA-38-98
+%D May 20, 1998
+%K Model management, model integration and re-use, environmental decision support systems
+%X This paper presents a software architecture for the management of 
+environmental models. The Systems Theory representation of models is 
+embedded in an object-oriented approach that emphasises the separation 
+of models from data, thereby promoting model and data  integration and 
+re-use. The concepts presented here correspond to the requirements of 
+a Model Management System (MMS). It is finally shown how a Decision 
+Support System can use this approach to implement the MMS in order to 
+facilitate problem definition (via the domain base) and problem 
+solution (via the model base).
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-41-98.ps.gz
+%A Gambardella, Luca M.
+%A  Rizzoli, Andrea E.
+%A  Zaffalon, Marco
+%T Simulation and planning of an intermodal container terminal
+%R IDSIA-41-98
+%D May 21, 1998
+%K simulation, intermodal transport, scheduling, optimisation
+%X A decision support system for the management of an intermodal container  
+terminal is presented. Among the problems to be solved, there are the spatial  
+allocation of containers on the terminal yard, the allocation of resources and  
+the scheduling of operations in order to maximise a performance function based  
+on some economic indicators. These problems are solved using techniques from  
+optimisation, like job-shop scheduling, genetic algorithms or mixed-integer  
+linear programming. At the terminal, the same problems are usually solved by 
+the terminal manager, only using his/her experience. The manager can trust  
+computer generated solutions only by validating them by means of a simulation  
+model of the terminal. Thus, the simulation tool also becomes a means to  
+introduce new approaches into traditional settings. 
+In the present paper we focus on the resource allocation problem.  
+We describe our modules for the optimisation of the allocation process and for  
+the simulation of the terminal. The former is based on integer linear program- 
+ming; the latter is a discrete event simulation tool, based on the process- 
+oriented paradigm. The simulator provides a test bed for checking the validity  
+and the robustness of the policy computed by the optimisation module. The case  
+study of the Contship La Spezia Container Terminal, located in the  
+Mediterranean Sea in Italy, is examined.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-42-97.ps.gz
+%A Schmidhuber, Juergen
+%A  Zhao, Jieyu
+%A  Schraudolph, Nicol N.
+%T Reinforcement Learning with Self-Modifying Policies
+%R IDSIA-42-97
+%D July 22, 1997
+%K self-modification, success-story algorithm, lifelong learning, partially observable en
+vironments
+%X A learner's modifiable components are called its policy. An algorithm that  
+modifies the policy is a learning algorithm. If the learning algorithm has  
+modifiable components represented as part of the policy, then we speak of  
+a self-modifying policy (SMP). SMPs can modify the way they modify  
+themselves etc. They are of interest in situations where the initial learning  
+algorithm itself can be improved by experience - this is what we call  
+``learning to learn''. How can we force some (stochastic) SMP to trigger  
+better and better self-modifications? The success-story algorithm (SSA)  
+addresses this question in a lifelong reinforcement learning context. During  
+the learner's life-time, SSA is occasionally called at times computed  
+according to SMP itself. SSA uses backtracking to undo those  
+SMP-generated SMP-modifications that have not been empirically  
+observed to trigger lifelong reward accelerations (measured up until the  
+current SSA call - this evaluates the long-term effects of  
+SMP-modifications setting the stage for later SMP-modifications).  
+SMP-modifications that survive SSA represent a lifelong success history.  
+Until the next SSA call, they build the basis for additional  
+SMP-modifications. Solely by self-modifications our SMP/SSA-based  
+learners solve a complex task in a partially observable environment (POE)  
+whose state space is far bigger than most reported in the POE literature.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-95-96.ps.gz
+%A Wiering, Marco
+%A  Schmidhuber, Juergen
+%T HQ-Learning: Discovering Markovian Subgoals for Non-Markovian Reinforcement Learning
+%R IDSIA-95-96
+%D October 09, 1996
+%K reinforcement learning, hierarchical Q-learning, POMDPs, non-Markovian
+ interfaces, subgoal learning
+%X To solve partially observable Markov decision problems, 
+we introduce HQ-learning, a hierarchical extension of Q-learning. 
+HQ-learning is based on an ordered sequence of subagents, each 
+learning to identify and solve a Markovian subtask of the total 
+task. Each agent learns (1) an appropriate subgoal (though there 
+is no intermediate, external reinforcement for "good" subgoals), 
+and (2) a Markovian policy, given a particular subgoal. Our 
+experiments demonstrate: (a) The system can easily solve tasks 
+standard Q-learning cannot solve at all. (b) It can solve partially 
+observable mazes with more states than those used in most previous 
+POMDP work. (c) It can quickly solve complex tasks that require 
+manipulation of the environment to free a blocked path to the goal.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-11-98.ps.gz
+%A Salustowicz, Rafal
+%A  Schmidhuber, Juergen
+%T Learning to Predict Through Probabilistic Incremental Program Evolution and Automatic 
+Task Decomposition
+%R IDSIA-11-98
+%D May 10, 1998
+%K Probabilistic Incremental Program Evolution, PIPE, Long Short-Term Memory, LSTM, recur
+rent neural networks, filtering, stochastic program search, time-series prediction
+%X Analog gradient-based recurrent neural nets can learn complex prediction  
+tasks. Most, however, tend to fail in case of long minimal time lags  
+between relevant training events. On the other hand, discrete methods  
+such as search in a space of event-memorizing programs are not necessarily  
+affected at all by long time lags: we show that discrete ``Probabilistic  
+Incremental Program Evolution'' (PIPE) can solve several long time  
+lag tasks that have been successfully solved by only one analog method  
+(``Long Short-Term Memory'' -- LSTM).  In fact, sometimes PIPE even  
+outperforms LSTM.  Existing discrete methods, however, cannot easily deal  
+with problems whose solutions exhibit comparatively high algorithmic  
+complexity.  We overcome this drawback by introducing filtering, a novel,   
+general, data-driven divide-and-conquer technique for automatic task   
+decomposition that is not limited to a particular learning method.  
+We compare PIPE plus filtering to various analog recurrent net methods.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-08-98.ps.gz
+%A Salustowicz, Rafal
+%A  Schmidhuber, Juergen
+%T H-PIPE: Facilitating Hierarchical Program Evolution through Skip Nodes
+%R IDSIA-08-98
+%D August 17, 1998
+%K Probabilistic Incremental Program Evolution, Structured Programs, Hierarchical Program
+s, Introns, Non-Coding Segments
+%X To evolve structured programs we introduce H-PIPE, a hierarchical  
+extension of Probabilistic Incremental Program Evolution (PIPE).  
+Structure is induced by "hierarchical instructions" (HIs) limited  
+to top-level, structuring program parts. "Skip nodes" (SNs)  
+inspired by biology's introns (non-coding segments) allow for  
+switching program parts on and off. In our experiments H-PIPE 
+outperforms PIPE, and SNs facilitate synthesis of certain structured 
+programs but not unstructured ones. We conclude that introns can  
+be particularly useful in the presence of structural bias.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-29-97.ps.gz
+%A Salustowicz, Rafal
+%A  Wiering, Marco
+%A  Schmidhuber, Juergen
+%T Learning Team Strategies With Multiple Policy-Sharing Agents: A Soccer Case Study
+%R IDSIA-29-97
+%D January 29, 1997
+%K Multiagent Reinforcement Learning, Soccer, TD-Q Learning, Probabilistic Incremental Pr
+ogram Evolution
+%X We use simulated soccer to study multiagent learning.  Each team's   
+players (agents) share action set and policy but may behave differently   
+due to position-dependent inputs.  All agents making up a team are   
+rewarded or punished collectively in case of goals.  We conduct   
+simulations with varying team sizes, and compare two learning   
+algorithms: TD-Q learning with linear neural networks (TD-Q) and   
+Probabilistic Incremental Program Evolution (PIPE).  TD-Q is based on   
+evaluation functions (EFs) mapping input/action pairs to expected   
+reward, while PIPE searches policy space directly. PIPE uses adaptive   
+``probabilistic prototype trees'' to synthesize programs that calculate   
+action probabilities from current inputs.  Our results show that TD-Q   
+encounters several difficulties in learning appropriate shared EFs.   
+PIPE, however, does not depend on EFs and can find good policies faster   
+and more reliably.  This suggests that in multiagent learning scenarios   
+direct search through policy space can offer advantages over EF-based   
+approaches.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-07-98.ps.gz
+%A Schraudolph, Nicol N.
+%T A Fast, Compact Approximation of the Exponential Function
+%R IDSIA-07-98
+%D March 10, 1998
+%K IEEE-754 floating-point
+%X Neural network simulations often spend a large proportion of their time  
+computing exponential functions. Since the exponentiation routines of  
+typical math libraries are rather slow, their replacement with a fast  
+approximation can greatly reduce the overall computation time. This  
+paper describes how exponentiation can be approximated by manipulating  
+the components of a standard (IEEE-754) floating-point representation.  
+This models the exponential function as well as a lookup table with  
+linear interpolation, but is significantly faster and more compact.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-19-96.ps.gz
+%A Schmidhuber, Juergen
+%A  Hochreiter, Sepp
+%T Guessing can Outperform Many Long Time Lag Algorithms
+%R IDSIA-19-96
+%D May 6, 1996
+%K recurrent neural networks
+%X Numerous recent papers focus 
+on standard recurrent nets' inability 
+to deal with long time lags between 
+relevant signals. Some propose rather sophisticated, 
+alternative methods. 
+We show: many problems used to test 
+previous algorithms can be solved more 
+quickly by random weight guessing.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-69-96.ps.gz
+%A Schmidhuber, Juergen
+%A  Zhao, Jieyu
+%A  Wiering, Marco
+%T Simple Principles of Metalearning
+%R IDSIA-69-96
+%D June 27, 1996
+%K Metalearning, inductive bias, success-story algorithm
+%X The goal of metalearning is to generate useful shifts of inductive bias  
+by adapting the current learning strategy in a ``useful'' way. Our learner  
+leads a single life during which actions are continually executed according  
+to the system's internal state and current {\em policy} (a modifiable,  
+probabilistic algorithm mapping environmental inputs and internal states to  
+outputs and new internal states).  An action is considered a learning algorithm  
+if it can modify the policy.  Effects of learning processes on later  
+learning processes are measured using reward/time ratios.  Occasional  
+backtracking enforces success histories of still valid policy  
+modifications corresponding to histories of lifelong reward accelerations.  
+The principle allows for plugging in a wide variety of learning algorithms.  
+In particular, it allows for embedding the learner's policy modification  
+strategy within the policy itself (self-reference). To demonstrate the  
+principle's feasibility in cases where conventional reinforcement  
+learning fails,  we test it in complex, non-Markovian, changing environments  
+(``POMDPs'').  One of the tasks involves more than $10^{13}$ states, two  
+learners that both cooperate and compete, and strongly delayed reinforcement  
+signals (initially separated by more than 300,000 time steps).
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-59-95.ps.gz
+%A Schmidhuber, Juergen
+%T Environment-Independent Reinforcement Acceleration
+%R IDSIA-59-95
+%D May 29, 1995
+%X  
+A reinforcement learning system with limited computational 
+resources interacts with an unrestricted, unknown environment. 
+Its goal is to maximize cumulative reward, to be obtained 
+throughout its limited, unknown lifetime. System policy is an 
+arbitrary  modifiable algorithm mapping environmental inputs 
+and internal states to outputs and new internal states. The problem 
+is: in realistic, unknown environments, each policy modification 
+process (PMP) occurring during system life may have unpredictable 
+influence on environmental states, rewards and PMPs at any later 
+time. Existing reinforcement learning algorithms cannot properly 
+deal with this. Neither can naive exhaustive search among all 
+policy candidates --- not even in case of very small search spaces. 
+In fact, a reasonable way of measuring 
+performance improvements in such general (but typical) situations 
+is missing. I define such a measure based on the novel 
+``reinforcement acceleration criterion'' (RAC). At a given time, 
+RAC is satisfied if the beginning of each completed PMP that 
+computed a currently valid policy modification has been followed 
+by long-term acceleration of average reinforcement intake 
+(the computation time for later PMPs is taken into account). 
+I present a method called 
+``environment-independent reinforcement acceleration'' (EIRA) 
+which is guaranteed to achieve RAC.  EIRA does neither care whether 
+the system's policy allows for changing itself, nor whether there 
+are multiple, interacting learning systems. Consequences are: 
+(1) a sound theoretical framework for ``meta-learning'' 
+(because the success of a PMP recursively depends on the success of 
+all later PMPs, for which it is setting the stage). (2) A sound 
+theoretical framework for multi-agent learning. The principles have 
+been implemented (1) in a single system using an assembler-like 
+programming language to modify its own policy, and (2) a system 
+consisting of multiple agents, where each agent is in fact 
+just a connection in a fully recurrent reinforcement learning neural 
+net. A by-product of this research is a general reinforcement 
+learning algorithm for such nets.  Preliminary experiments 
+illustrate the theory.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-35-97.ps.gz
+%A Schmidhuber, Juergen
+%T What's interesting?
+%R IDSIA-35-97
+%D July 14, 1997
+%K surprise, exploration, interestingness, creativity, curiosity
+%X Interestingness depends on the observer's current knowledge and 
+computational abilities.  Things are boring if either too much or too 
+little is known about them --- if they appear either trivial or random. 
+Interesting are unexpected regularities that seem easy to figure out. I 
+attempt to implement these ideas in a ``curious'', ``creative'' explorer 
+with two co-evolving ``brains''. It executes a lifelong sequence 
+of instructions whose modifiable probabilities are conditioned on both 
+brains --- both must {\em agree} on each instruction.  There are special 
+instructions for comparing computational results. The brains can predict 
+outcomes of such comparisons. If their opinions differ, then the winner 
+will get rewarded, the loser punished.  Hence each brain wants to lure the 
+other into agreeing upon instruction subsequences involving comparisons 
+that surprise it.  The surprised brain adapts.  In turn, the other loses 
+a source of reward --- an incentive to shift the focus of interest. 
+Both brains deal with the complex credit assignment problem using the 
+recent Incremental Self-Improvement paradigm.  Extensive simulations 
+include an example where curiosity helps to speed up external reward.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-50-98.ps.gz
+%A Schmidhuber, Juergen
+%A  Zhao, Jieyu
+%T Direct Policy Search and Uncertain Policy Evaluation
+%R IDSIA-50-98
+%D August 31, 1998
+%K uncertainty, stochastic policy, direct search in policy space
+%X Reinforcement learning based on direct search in policy space requires 
+few assumptions about the environment.   Hence it is applicable in 
+certain situations where most traditional reinforcement learning 
+algorithms are not, especially in partially observable, 
+deterministic worlds.  In realistic settings, 
+however, reliable policy evaluations are complicated by numerous sources 
+of uncertainty,  such as stochasticity in policy and environment.  Given 
+a limited life-time, how much time should a direct policy searcher spend 
+on policy 
+evaluations to obtain reliable statistics?  Our efficient approach based 
+on the  success-story algorithm (SSA) is radical in the sense that 
+it never stops evaluating any previous policy modification except those 
+it undoes for lack of empirical evidence that they have contributed to 
+lifelong reward accelerations. While previous experimental research has 
+already demonstrated SSA's applicability to large-scale partially observable 
+environments, a study of why it performs well has been lacking. 
+Here we identify for the first time SSA's  fundamental 
+advantages over traditional 
+direct policy search (such as stochastic hill-climbing) 
+on problems involving several sources of stochasticity and 
+uncertainty.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-28-98.ps.gz
+%A Schmidhuber, Juergen
+%T Facial beauty and fractal geometry
+%R IDSIA-28-98
+%D June 17, 1998
+%K facial attractiveness, beauty, fractal geometry
+%X What is it that makes a face beautiful? Average faces obtained   
+by photographic (1-4) or digital (5) blending are judged   
+attractive (1-5) but not optimally attractive (6,7)  - digital   
+exaggerations of deviations from average face blends can lead   
+to higher attractiveness ratings(7).  My novel approach to   
+face design, however, does not involve blending at all.  Instead, the   
+image of a female face with high ratings is composed from   
+a fractal geometry based on rotated squares and powers of 2.   
+The corresponding geometric rules are more specific than those   
+previously used by artists such as Leonardo and D\"{u}rer.   
+They yield   
+a short algorithmic description of all facial characteristics, many of   
+which  are compactly encodable with the help of simple feature detectors   
+similar to those observed in mammalian brains.  This suggests   
+that a face's beauty correlates with simplicity relative to the   
+subjective observer's way of encoding it.
+
+%A Zaffalon, M.
+%T A Credal Approach to Naive Classification
+%R IDSIA-02-99
+%D January 28, 1999
+%X Convex sets of probability distributions are also called credal sets. They generalize 
+probability theory with special regard to the relaxation of the precision requirement abo
+ut the probability values. Classification, i.e., assigning class labels to instances desc
+ribed by a set of attributes, is a typical domain of application of Bayesian methods, whe
+re the naive Bayesian classifier is considered among the best tools. This paper explores 
+the classification model, called naive credal classifier, obtained when the naive Bayesia
+n classifier is extended to credal sets. A fast classification algorithm is derived. A da
+ta-driven construction of the classifier is proposed and discussed. The latter takes the 
+variability of the probability estimates into account, thus making classification more re
+liable.
+
+%A Fagiuoli, E.
+%A  Zaffalon, M.
+%T Decisions under Uncertainty with Credal Influence Diagrams
+%R IDSIA-51-98
+%D December 21, 1998
+%X Credal sets are sets of probability distributions. They represent a general way for de
+aling with uncertain domains. Convex credal sets have been investigated in relationship w
+ith Bayesian networks. Such research efforts have highlighted the advantages of the model
+ and its difficulties, related to theoretical foundations and to computational complexity
+ problems: to date, no general non-exponential algorithm is known. Few work has been deve
+loped for sets of distributions in the field of decisions, in particular when the domain 
+is structured with an influence diagram. The aim of this paper is twofold. First, to prop
+ose a formal framework for the definition of the model of credal influence diagram (CID) 
+and for the subsequent analysis. Secondly, to develop the issues that are specific for so
+lving a CID, which rely on the field of decisions under partial knowledge of the distribu
+tion. Such an insight leads to the definition of a general exact solution algorithm based
+ on the extreme probabilities approach. Its characteristics are widely discussed with spe
+cial emphasis on the relationship between the solution procedure and the decision maker's
+ subjective attitude to the risk. It is shown that depending on the latter, the solution 
+can be made simpler. A numerical example is presented.
+
+%A Taillard, E. D.
+%T FANT: Fast ant system
+%R IDSIA-46-98
+%D October 15, 1998
+%K Meta-heuristic, ant system, quadratic assignment, BiQAP, p-median.
+%X This paper presents a new point of view of ant systems that is more  
+general than previous ones, identifying artificial ants with  
+processes that cooperate through a shared memory and a Queen  
+process that co-ordinates the Ant processes. Then, we present  
+FANT, a new meta-heuristic based on ant systems. The technique  
+is very simple to implement while incorporating a number of search  
+strategies such as intensification, diversification and learning  
+mechanisms. FANT is used to solve various hard assignment problems  
+and shown to be very competitive with other implementations using  
+various meta-heuristics.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-09-98.ps.gz
+%A Schraudolph, Nicol N.
+%T Online Local Gain Adaptation for Multi-Layer Perceptrons
+%R IDSIA-09-98
+%D March 27, 1998
+%K stochastic gradient descent, learning rate, step size
+%X We introduce a new method for adapting the step size of each individual   
+weight in a multi-layer perceptron trained by stochastic gradient descent.   
+Our technique derives from the K1 algorithm for linear systems (Sutton,   
+1992), which in turn is based on a diagonalized Kalman Filter. We expand   
+upon Sutton's work in two regards: K1 is a) extended to nonlinear systems,   
+and b) made more efficient by linearizing an exponentiation operation. The   
+resulting ELK1 (extended, linearized K1) algorithm is computationally little   
+more expensive than alternative proposals (Zimmermann, 1994; Almeida   
+et al., 1997, 1998), and does not require an arbitrary smoothing parameter.   
+On a first benchmark problem ELK1 clearly outperforms these alternatives,   
+as well as stochastic gradient descent with momentum, even when the   
+number of floating-point operations required per weight update is taken   
+into account. Unlike the method of Almeida et al., ELK1 does not require   
+statistical independence between successive training patterns, and   
+handles large initial learning rates well.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-19-98.ps.gz
+%A Taillard, E. D.
+%A  Gambardella, L.-M.
+%A  Gendreau, M.
+%A  Potvin,  J.-Y.
+%T Adaptive Memory Programming: A  Unified View of Meta-Heuristics
+%R IDSIA-19-98
+%D June 10, 1998
+%K Adaptive memory programming, meta-heuristics, combinatorial optimization
+%X The paper analyses recent developments of a number of memory-based  
+metaheuristics such as taboo search, scatter search, genetic  
+algorithms and ant colonies. Its shows that the implementations of  
+these general solving methods are more and more similar. So, a  
+unified presentation is proposed under the name of Adaptive Memory   
+Programming (AMP). A number of methods recently developed for the   
+quadratic assignment, vehicle routing  and graph colouring problems   
+are reviewed and presented under the adaptive memory programming   
+point of view. AMP presents a number of interesting aspects such as   
+a high parallelization potential and theability of dealing with real   
+and dynamic applications.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-96-96.ps.gz
+%A Taillard, E. D.
+%T Heuristic Methods for Large Centroid Clustering Problems
+%R IDSIA-96-96
+%D October 10, 1996
+%K Clustering, location-allocation, p-median, sum-of-squares clustering, multi-source Web
+er problem
+%X This article presents new heuristic methods for solving a class of    
+hard centroid clustering problems including the p-median, the    
+sum-of-squares clustering and the multi-source Weber problems.    
+Centroid clustering is to partition a set of entities into a given    
+number of subsets and to find the location of a centre for each    
+subset in such a way that a dissimilarity measure between the    
+entities and the centres is minimized. The first method proposed    
+is a candidate list search that produces good solutions in a    
+short amount of time if the number of centres in the problem    
+is not too large. The second method is a general local optimization    
+approach that finds very good solutions. The third method is designed    
+for problems with a large number of centres ; it decomposes the    
+problem into subproblems that are solved independently. Numerical    
+results show that these methods are efficient --dozens of best    
+solutions known to problem instances of the literature have been    
+improved-- and fast, handling problem instances with more than    
+85000 entities and 15000 centres --much larger than those solved    
+in the literature. The expected complexity of these new procedures    
+is discussed and shown to be comparable to that of an existing    
+method which is known to be very fast.   
+(Old title: Heuristic Methods for Large Multi-source Weber Problems)
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-22-97.ps.gz
+%A Taillard, E. D.
+%A  Gambardella, L.
+%T An ant approach for structured quadratic assignment problems
+%R IDSIA-22-97
+%D January 22, 1997
+%K Quadratic assignment problem, ant system, adaptive memory programming
+%X The paper presents a new heuristic method for the quadratic  
+assignment problem. This method is based on an artificial ant  
+system, hybridized with a fast local search. The method is easy  
+to implement and numerical results show that it is fast and  
+efficient for structured problem instances
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-87-97.ps.gz
+%A  Gambardella, L.-M.
+%A Taillard, É. D.
+%T Adaptive memories for the Quadratic Assignment Problems
+%R IDSIA-87-97
+%D September 10, 1997
+%K Quadratic Assignment, Adaptive Memory Programming, Ant System, Genetic Algorithm
+%X The paper proposes, compares and analyses different memory-  
+based meta-heuristics for the quadratic assignment problem   
+(QAP). Two of these methods (FANT and GDH) are new while two   
+others (HAS-QAP and GTSH) are among the best for structured   
+QAP instances. These methods are based on ant systems and   
+genetic algorithms and they are presented under a unified   
+general scheme, called adaptive memory programming (AMP).   
+However, they use different types of memory and different   
+improving procedures. Two new memoryless methods (VNS-QAP   
+and RVNS-QAP) based on variable neighbourhood search are   
+also proposed and compared with adaptive memory procedures.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-33-97.ps.gz
+%A Brimberg, J.
+%A Hansen, P.
+%A Mladenovic, N.
+%A  Taillard, E.D.
+%T Improvements and Comparison of Heuristics for solving the Multisource Weber Problem
+%R IDSIA-33-97
+%D September 04, 1997
+%K Clustering, multi-source Weber
+%X The multisource Weber problem is to locate simultaneously p  
+facilities in the Euclidean plane in order to minimize the  
+total transportation cost for satisfying the demand of n fixed  
+users, each supplied from its closest facility. Many heuristics  
+have been proposed for this problem, as well as a few exact  
+algorithms. Heuristics are needed to solve quickly large problems  
+and to provide good initial solutions for exact algorithms. 
+We compare various heuristics, i.e., alternative location- 
+allocation, projection, Tabu search, p-Median plus Weber,  
+Genetic Search and several versions of Variable Neighbourhood  
+Search. It appears that most traditional and some recent  
+heuristics give pour results when the number of facilities 
+to locate is large and that Variable Neighbourhood Search  
+gives consistently best results on average, in moderate computing  
+time.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-79-97.ps.gz
+%A Taillard, E.D.
+%A Gambardella, L.
+%A Gendreau, M.
+%A Potvin, J.-Y.
+%T Programmation à mémoire adaptative
+%R IDSIA-79-97
+%D September 05, 1997
+%K Meta-heuristics, evolutionary algorithms, taboo search, genetic algorithms, scatter se
+arch, quadratic assignment, vehicle routeing
+%X Cet article analyse les d?éveloppements r?écents de plusieurs  
+m?éta-heuristiques à m?émoire et montre que les mani?ères d'implanter  
+l'une ou l'autre de ces m?éthodes gé?n?rales d'optimisation ont  
+tendance à se rapprocher. Une pr?ésentation unifié?e de ces m?éthodes  
+est propos?ée sous le nom de programmation à^ mé?moire adaptative.  
+Ce séch?ma de r?ésolution peut se parall?liser de fa?çon naturelle.  
+Finalement, un certain nombre de m?éthodes ré?cemment d?évelopp?ées  
+pour la ré?solution de problè?mes d'affectation quadratique et  
+d'?élaboration de tourné?es de vé?hicules sont pass?ées en revue  
+et pré?senté?es sous l'angle de la programmation ^à m?émoire  
+adaptative. 
+Abstract : This article analyses recent developments of a  
+number of meta-heuristics with memory and shows that these general  
+solving methods are implemented in a more and more similar way. A  
+unified presentation of these methods is proposed under the name  
+of adaptive memory programming. This solving scheme can be  
+conveniently parallelised. Finally, a number of recently proposed  
+methods for quadratic assignment and vehicle routeing problems are  
+reviewed and presented under an adaptive memory programming point  
+of view.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-52-98.ps.gz
+%A Taillard, E.D.
+%T La programmation à mémoire adaptative et les algorithmes pseudo-gloutons: nouvelles pe
+rspectives pour les méta-heuristiques
+%R IDSIA-52-98
+%D July 10, 1998
+%K Programmation à mémoire adaptative, Méta-heuristiques, Parallélisation
+%X La première partie de ce dossier analyse les développements récents  
+de plusieurs méta-heuristiques à mémoire et montre que les manières  
+d'implanter l'une ou l'autre de ces méthodes générales  
+d'optimisation ont tendance à se rapprocher. Une présentation  
+unifiée de ces méthodes est proposée sous le nom de programmation  
+à mémoire adaptative. Un certain nombre de méthodes récemment  
+développées pour la résolution de problèmes d'affectation  
+quadratique et d'élaboration de tournées de véhicules sont passées  
+en revue et présentées sous l'angle de la programmation à mémoire  
+adaptative. 
+Une seconde partie est consacrée à un des mécanismes fondamentaux  
+de la programmation à mémoire adaptative, à savoir une procédure de  
+recherche locale. Dans certains cas, une méthode d'optimisation  
+gloutonne s'arrêtant au premier optimum local relativement à un  
+voisinage simple convient, mais il est parfois nécessaire  
+d'utiliser une procédure plus élaborée. On peut penser à implanter  
+une méthode évoluée, comme par exemple une recherche avec tabous,  
+mais il n'est parfois pas nécessaire d'aller jusque là : Dans bien  
+des cas en effet, l'usage d'un second voisinage ou d'une fonction- 
+objectif alternative permet d'améliorer suffisamment un algorithme  
+glouton ; on parlera alors de méthode pseudo-gloutonne. 
+Finalement, on montre comment un programme à mémoire adaptative ou  
+une recherche pseudo-gloutonne peuvent se paralléliser de façon  
+naturelle et efficace.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-03-99.ps.gz
+%A Cummins, Fred
+%A  Gers, Felix
+%A  Schmidhuber, Juergen
+%T Automatic discrimination among languages based on prosody  alone
+%R IDSIA-03-99
+%D February 03, 1999
+%K Language Identification, Prosody, Long Short-Term Memory
+%X The development of methods for the automatic identification of 
+languages is motivated both by speech-based applications intended for 
+use in a multi-lingual environment, and by theoretical questions of 
+cross-linguistic variation and similarity.  We evaluate the potential 
+utility of two prosodic variables, F$_{0}$ and amplitude envelope 
+modulation, in a pairwise language discrimination task. 
+Discrimination is done using a novel neural network which can 
+successfully attend to temporal information at a range of timescales. 
+Both variables are found to be useful in discriminating among 
+languages, and confusion patterns, in general, reflect traditional 
+intonational and rhythmic language classes.  The methods employed 
+allow empirical determination of prosodic similarity across languages.
+
+%A Zaffalon, M.
+%T Credal Networks Classification
+%R IDSIA-04-99
+%D February 18, 1999
+%K Bayesian networks, credal networks, machine learning, classification, imprecise probab
+ility
+%X The present paper proposes a general framework for classification based on discrete Ba
+yesian networks and imprecise probabilities. This is equivalent to do classification with
+ a Bayesian network where the conditional distributions of the nodes belong to (convex) s
+ets of distributions. It is shown that the formal properties of credal networks, i.e., Ba
+yesian networks extended to convex sets, permit a direct application to classification. T
+he related exact classification algorithm is provided; its complexity is shown to be line
+ar to the number of nodes. The result is such that every classification problem based on 
+Bayesian nets can effectively be treated more generally by (possibly) inserting imprecisi
+on in the probabilities. Credal network classifiers offer benefits in terms of flexibilit
+y for expressing subjective knowledge and of reliability of the classification with regar
+d to the frequentist construction of the classifier. Furthermore, they allow the robustne
+ss of the classification to be verified depending on imprecision in the probability estim
+ates.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-05-99.ps.gz
+%A Taillard, E. D.
+%T Ant Systems
+%R IDSIA-05-99
+%D February 23, 1999
+%K Meta-heuristics, Adaptive Memory Programming, Ant Systems
+%X This article describes Ant Systems, a meta-heuristic based on an  
+ant foraging  metaphor. The presentation of Ant Systems has been  
+somewhat generalized by adding a ``Queen" process in charge of 
+co-ordinating classical ``Ant" processes, so that recent Ant Systems  
+can be naturally included while remaining close to the metaphor.  
+To illustrate how Ant Systems are practically implemented, a number  
+of applications to the quadratic assignment problem are reviewed.
+
+%A Gambardella, L.M.
+%A  Zaffalon, M.
+%T Optimization of Resources in an Intermodal Terminal
+%R IDSIA-20-98
+%D April 20, 1998
+%X ITRA (Intermodal Terminal Resource Allocation) is a software developed for the resourc
+e allocation problem that is part of the IDSIA project n. CTI 3128.1.   
+ITRA is a framework that enables the user to search for good approximate solutions to the
+ allocation problem of the intermodal terminal. This is achieved in three steps. First, b
+y turning the description of the terminal during the considered period into an algebraic 
+formulation that models the problem with integer linear programming. Second, by solving t
+he problem with a mixed integer linear programming (MILP) solver that reads the algebraic
+ formulation and that realizes a tree search based on the simplex method and the branch &
+ bound. Third, by turning the algebraic solution into a description of the terminal activ
+ity during the period that can easily be read by the user.   
+This document provides a detailed description of ITRA and of the allocation problem.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-40-98.ps.gz
+%A Fagiuoli, E.
+%A  Zaffalon, M.
+%T A Note about Redundancy in Influence Diagrams
+%R IDSIA-40-98
+%D June 1, 1998
+%K Influence diagrams, Bayesian networks, optimal policy, redundancy
+%X Influence Diagrams (IDs) are formal tools for modelling decision processes and for com
+puting optimal strategies under risk. Like Bayesian networks, influence diagrams exploit 
+the sparsity of the dependency relationships among the random variables in order to reduc
+e computational complexity. In this note, we initially observe that an influence diagram 
+can have some arcs that are not necessary for a complete description of the model. We sho
+w that while it may not be easy to detect such arcs, it is important, since a redundant g
+raphical structure can exponentially increase the computational time of a solution proced
+ure. Then we define a graphical criterion that is shown to allow the identification and r
+emoval of the redundant parts of an ID. This technical result is significant because it p
+recisely defines what is relevant to know at the time of a decision. Furthermore, it allo
+ws a redundant influence diagram to be transformed into another ID, that can be used to c
+ompute the optimal policy in an equivalent but more efficient way.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-11-97.ps.gz
+%A Gambardella, L.M.
+%A  Dorigo, M.
+%T HAS-SOP: Hybrid Ant System for the Sequential Ordering Problem
+%R IDSIA-11-97
+%D September 01, 1997
+%K Sequential Ordering Problems, Ant System Optimization,
+%X We present HAS-SOP, a new approach to solving sequential ordering problems. HAS-SOP co
+mbines the ant colony algorithm, a population-based metaheuristic, with a new local optim
+izer, an extension of a TSP heuristic which directly handles multiple constraints without
+ increasing computational complexity. We compare different implementations of HAS-SOP and
+ present a new data structure that improves system performance. Experimental results on a
+ set of twenty-three test problems taken from the TSPLIB show that HAS-SOP outperforms ex
+isting methods both in terms of solution quality and computation time.  Moreover, HAS-SOP
+ improves most of the best known results for the considered problems.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-07-99.ps.gz
+%A Cummins, Fred
+%A  Gers, Felix
+%A  Schmidhuber, Juergen
+%T Comparing Prosody Across Many Languages
+%R IDSIA-07-99
+%D March 03, 1999
+%K Prosody, LSTM, language discrimination
+%X An empirical metric is developed to measure similarity or distance   
+between the prosodic systems of diverse languages.  Two physical   
+variables which carry prosodic information, F0 and amplitude   
+envelope modulation, are used as inputs in a pairwise language   
+discrimination task.  A novel neural network model is trained to   
+discriminate among pairs of languages drawn from a set of ten   
+languages in a telephone speech database.  Network performance is used   
+to obtain a distance metric for each pair, allowing overall similarity   
+relationships within the 10 language set to be identified.  Results   
+are presented for F0 alone, in which Mandarin and Japanese are found   
+to be clearly distinguished from all other languages in the database,   
+and French is found to be clearly distinguishable, even from related   
+Indo-European languages.  Using amplitude envelope modulation alone, a   
+cluster of languages usually described as syllable-timed is   
+identified.  Vietnamese and Farsi are found to be rhythmically   
+distinct from languages conventionally described as stress-, syllable-   
+or mora-timed.  When both variables are provided to the networks, the   
+results provide an empirical measure of prosodic distance among the   
+languages.
+
+%A Zaffalon, M.
+%A  Gambardella, L.-M.
+%A Taillard, E.D.
+%T A Network Design Approach to the Allocation of Resources in an Intermodal Terminal
+%R IDSIA-08-99
+%D March 08, 1999
+%K Modelization, Network design, Resource Allocation, Transportation
+%X The process of allocating resources (RA) for the management of an intermodal 
+container terminal is considered. In a terminal, the resources are machines 
+and manpower, and the goal is to move the scheduled amount of containers. 
+The resources are the major expense at the terminal and hence operations 
+research methodologies can have a relevant impact on terminal profit. The 
+main concern of this paper is the proposal of a model for the port RA 
+problem. In particular, the terminal is represented as a transportation 
+network whose arc capacities must properly be dimensioned to sustain the 
+container traffic. In operations research terminology, the problem is known 
+as network design. It is shown that real instances of the problem 
+from the La Spezia Container Terminal (LSCT) database are well solved by 
+using a commercial mixed-integer linear programming solver (MILP). The 
+approach is widely discussed, some characteristics are analyzed, like the 
+NP-completeness, and some extensions are considered. The proposed model 
+appears also easy to adapt to other terminals to provide effective answers 
+in the direction of supporting the terminal management.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-06-99.ps.gz
+%A Gambardella, L.M.
+%A  Taillard, E.
+%A  Agazzi, G.
+%T MACS-VRPTW: A Multiple Ant Colony System for Vehicle Routing Problems with Time Window
+s
+%R IDSIA-06-99
+%D March 01, 1999
+%K vehicles routing, ant colony optimization
+%X MACS-VRPTW, an Ant Colony Optimization based approach useful to solve vehicle routing 
+problems with time windows is presented. MACS-VRPTW is organized with a hierarchy of arti
+ficial ant colonies designed to successively optimize a multiple objective function: the 
+first colony minimizes the number of vehicles while the second colony minimizes the trave
+led distances. Cooperation between colonies is performed by exchanging information throug
+h pheromone updating. We show that MACS-VRPTW is competitive with the best known existing
+ methods both in terms of solution quality and computation time. Moreover, MACS-VRPTW imp
+roves some of the best solutions known for a number of problem instances in the literatur
+e.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-01-99.ps.gz
+%A Gers, F. A.
+%A  Schmidhuber, J.
+%A  Cummins, F.
+%T Learning to Forget: Continual Prediction with LSTM
+%R IDSIA-01-99
+%D January 26, 1999
+%K LSTM , RNN
+%X Long Short-Term Memory (LSTM, Hochreiter & Schmidhuber, 1997) can    
+solve numerous tasks not solvable by previous learning algorithms for    
+recurrent neural networks (RNNs). We identify    
+a weakness of LSTM networks processing continual input streams that    
+are not a priori segmented into subsequences with explicitly    
+marked ends at which the network's internal state could be reset.    
+Without resets, the state may grow    
+indefinitely and eventually cause the network to break down.  Our remedy is    
+a novel, adaptive ``forget gate'' that enables an LSTM cell to learn to    
+reset itself at appropriate times, thus releasing internal resources.    
+We review illustrative benchmark problems on which standard LSTM     
+outperforms other RNN algorithms. All algorithms (including LSTM) fail     
+to solve continual versions of these problems. LSTM with forget     
+gates, however, easily solves them in an elegant way.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-09-99.ps.gz
+%A Schraudolph, Nicol N.
+%T Local Gain Adaptation in Stochastic Gradient Descent
+%R IDSIA-09-99
+%D March 08, 1999
+%K neural networks, online learning, gradient step size adaptation, local learning rates,
+ accelerated gradient descent
+%X Gain adaptation algorithms for neural networks typically adjust learning 
+rates by monitoring the correlation between successive gradients.  Here 
+we discuss the limitations of this approach, and develop an alternative  
+by extending Sutton's work on linear systems to the general, nonlinear case. 
+The resulting online algorithms are computationally little more  
+expensive than other acceleration techniques, do not assume statistical  
+independence between successive training patterns, and do not require  
+an arbitrary smoothing parameter.  In our benchmark experiments, they  
+consistently outperform other acceleration methods, and show remarkable  
+robustness when faced with non-i.i.d. sampling of the input space.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-77-97.ps.gz
+%A Schraudolph, Nicol N.
+%A  Eldracher, Martin
+%A  Schmidhuber, Juergen
+%T Processing Images by Semi-Linear Predictability Minimization
+%R IDSIA-77-97
+%D August 31, 1997
+%K neural networks, unsupervised learning, self-organization, visual feature detectors, c
+o-evolution
+%X In the predictability minimization approach, input   
+patterns are fed into a system consisting of adaptive, initially unstructured   
+feature detectors. There are also adaptive predictors constantly trying to   
+predict current feature detector outputs from other feature detector   
+outputs. Simultaneously, however, the feature detectors try to become as   
+unpredictable as possible, resulting in a co-evolution of predictors and   
+feature detectors.     
+This report describes the implementation of a visual processing system   
+trained by semi-linear predictability minimization, and presents many   
+experiments that examine its response to artificial and real-world images.   
+In particular, we observe that under a wide variety of conditions,   
+predictability minimization results in the development of well-known visual   
+feature detectors.
+
+%U ftp://ftp.idsia.ch/pub/techrep/IDSIA-10-99.ps.gz
+%A Zaffalon, M.
+%T An Efficient Test of Credal Dominance for the Naive Credal Classifier Defined with Int
+erval Probabilities
+%R IDSIA-10-99
+%D July 14, 1999
+%K Classification, Credal Sets, Bayesian Networks, Imprecise Probabilities
+%X The naive Bayesian classifier is an effective tool for classification. Recent work has
+ proposed its extention to the treatment of convex sets of probability distributions. The
+ new model can control the variability of the model probabilities, gaining in terms of re
+liability and flexibility. The classification is obtained through tests of so-called cred
+al dominance. Previous work has provided the procedure for testing credal dominance for g
+eneral polytopes of distributions, which is based on the solution of linear programs. In 
+this note, the subset of polytopes generated by probability intervals is considered. A sp
+ecific procedure is provided, for which the linear program can be solved in constant time
+. The interval case is the proper choice when the classifier is induced from data; theref
+ore the result seems a significant step towards easy and fast implementations of credal c
+lassification.
+
+%A Zaffalon, M.
+%T Exact Credal Treatment of Missing Data, with an Application to Classification
+%R IDSIA-11-99
+%D August 01, 1999
+%K Missing data, Censored Data, Imprecise Probabilities, Credal Sets, Classification, Lin
+ear Programs
+%X This paper proposes an exact, no-assumptions approach to dealing with incomplete datas
+ets, based on the theory of imprecise probabilities. In this framework, an incomplete set
+ of data is equivalent to a finite collection of complete datasets. Any of the latter gen
+erates a joint distribution. In this paper, the tools to contemporary treat all the possi
+ble joint distributions compatible with an incomplete set of data are given. In particula
+r, a linear description of the set of distributions is formulated, and is shown that the 
+computation of bounds on common quantities is both possible and effective, by means of li
+near programs. Specific algorithms are also developed and their linear complexity to the 
+number of observations is proved. The general results obtained are applied to the specifi
+c case of allowing missing data to be treated in the classification context. The resultin
+g tool, based on the naive credal classifier, deals with missing data exactly, together w
+ith the imprecision due to the finite sample size. Furthermore, it has low computational 
+complexity, such that relevant significance for data mining is achieved.
+
+

@@ -1,0 +1,152 @@
+<chapter>
+  <title>Creare nuovi stili</title>
+  
+  <para>&Egrave possibile descrivere il proprio stile bibliografico scrivendo
+  un semplice file XML. Il file XML dovrebbe avere l'header seguente:</para>
+
+    <programlisting>
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE bibstyle PUBLIC "-//Pybliographer//DTD Bibliographic Style Format//EN" ""&gt;
+</programlisting>
+    
+  <para>L'intera descrizione dovrebbe essere in un paio di tag &lt;bibstyle&gt; 
+    , il cui contenuto &egrave brevemente descritto in questa sezione. Si
+    suggerisce agli utenti interessati di guardare il DTD corrispondente,
+    che descrive la sintassi permessa nei dettagli.  Questo DTD pu&ograve
+    essere trovato nella stessa directory dei file di stile predefinito.</para>
+
+  <sect1>
+    <title>Formattazione globale</title>
+    
+    <para>Il file di stile XML descrive come i differenti campi di dati
+      sono organizzati allo scopo di creare uno stile bibliografico. Per
+      esempio, si pu&ograve specificare che un articolo inizia con il titolo
+      dell'articolo in grassetto,  seguito dai nomi degli autori,  ecc.</para>
+    
+    <para>Attualmente, il formato XML non pu&ograve descrivere informazioni
+      di basso livello, tipo come il nome di un autore deve essere visualizzato.
+      Questo &egrave fatto puntando a un set di funzioni di python, 
+      raggruppate in un modulo. Consideriamo il seguente esempio:</para>
+    
+    <programlisting>
+  &lt;module name="generic">
+    &lt;define field="author">full_authors&lt;/define>
+    &lt;define field="editor">first_last_full_authors&lt;/define>
+    &lt;define field="date">european_date&lt;/define>
+    &lt;define method="keys">string_keys&lt;/define>
+  &lt;/module>
+</programlisting>
+
+    <para>In questo esempio richiediamo che i campi 
+    <emphasis>author</emphasis> devono essere formattati dalla funzione
+    <function>full_authors()</function>, che si trova nel modulo
+    <filename>generic</filename>.</para>
+
+    <para>Un tale modulo deve essere dichiarato nel file
+    <filename>pybrc.py</filename>, da una linea come questa:
+
+<programlisting>Autoload.preregister ('style','Generic','Pyblio.Style.Generic')</programlisting>
+</para>
+
+    <para>La precisa definizione delle funzioni di formattazione &egrave
+    spiegata meglio guardando per esempio il codice di
+    <filename>Generic.py</filename>.</para>
+
+    </sect1>
+
+    <sect1>
+      <title>Definizione bibliografica</title>
+      
+      <para>Una volta che le definizioni di formattazione di base sono state specificate,
+      &egrave possibile  descrivere  l'aspetto delle attuali bibliografie
+      con i tag seguenti:</para>
+
+    <itemizedlist>
+      <listitem>
+	<para>	&lt;style name="<varname>nomestile</varname>"&gt;</para>
+
+	<para>Questo tag specifica l'attuale stile di visualizzazione, tra
+	<emphasis>bold, italic, slanted, emph</emphasis>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;inentry name="<varname>nomevoce</varname>"&gt;</para>
+
+	<para>Questo tag racchiude un blocco che deve apparire solo in voci di
+	tipo <varname>nomevoce</varname>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;notinentry name="<varname>nomevoce</varname>"&gt;</para>
+
+	<para>Questo tag racchiude un blocco che deve apparire solo in voci che
+	<emphasis>non</emphasis> sono di tipo
+	<varname>nometipo</varname>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;infield name="<varname>nomecampo</varname>"&gt;</para>
+
+	<para>Questo tag racchiude un blocco che appare solo quando
+	il campo specificato <varname>nomecampo</varname> esiste nella voce
+	attuale.</para>
+      </listitem>
+
+      <listitem>
+
+	<para>&lt;notinfield name="<varname>nomecampo</varname>"></para>
+
+	<para>Questo tag racchiude un blocco che appare solo quando il campo
+	specificato <varname>nomecampo</varname>  <emphasis>non</emphasis> 
+	esiste nella voce attuale.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;content <optional>name="<varname>nomecampo</varname>"</optional>/&gt;</para>
+
+	<para>Questo tag vuoto &egrave rimpiazzato dal contenuto dell'attuale
+	campo (quando &egrave posto in un blocco &lt;infield> ) o dal contenuto
+	del campo specificato come attributo.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;separator&gt;</para>
+
+	<para>Il contenuto di questo tag non valuta niente quando
+	non &egrave emesso nessun testo. &Egrave un modo conveniente di aggiungere un delimitatore
+	dopo una serie di campi senza preoccuparsi del caso speciale quando
+	i campi non sono definiti.</para>
+      </listitem>
+
+    </itemizedlist>
+
+    <para>I file di stile esistenti sono una buona fonte di esempi.</para>
+    </sect1>
+
+  <sect1>
+    <title>Il futuro del formato</title>
+
+    <para>In futuro, questo rudimentale formato sar&agrave rimpiazzato molto
+    probabilmente da un meccanismo basato su XSL, che dovrebbe racchiudere sia
+    la definizione di XML che i moduli di python, fornendo cos&igrave
+    file di stile analizzabili da qualsiasi parser XSL.</para>
+  </sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,356 @@
+<1>
+Authors
+  Muller S.  Garda P.  Muller JD.  Cansi Y.
+Title
+  Seismic events discrimination by neuro-fuzzy merging of
+  signal and catalogue features
+Source
+  Physics & Chemistry of the Earth Part A-Solid Earth & Geodesy. 24(3):201-206,
+  1999.
+Abstract
+  This article presents an original method for the classification of low
+  magnitude seismic events recorded in France by a network of
+  seismometers. Three types of events are discriminated: earthquakes, mining
+  blasts and rock bursts. This method is based on a merging of catalogue
+  measurements and possibly incomplete measurements deduced from several
+  seismic signals related to the event. The merging is
+  performed by a multi-layer neural network. A fuzzy coding is
+  applied to the input characteristics of the neural network.
+  It allows the network to integrate data imperfections during the learning
+  phase. Then, it is possible to process efficiently incomplete data. The
+  results are obtained on a database composed of all the 1,402
+  seismic events recorded between August 23(rd) 1993 and May
+  30(th) 1994. They show that the fuzzy coding and the merging of catalogue
+  features and signal features extracted from several seismometers for each
+  event increase the performance of correct classification to more than 90%
+  even when the database contains missing values. The confusion rate between
+  earthquakes and mining blasts is simultaneously reduced. (C) 1999 Elsevier
+  Science Ltd. All rights reserved. [References: 16]
+
+<2>
+Authors
+  Morozova EA.  Morozov IB.  Smithson SB.  Solodilov LN.
+Title
+  Heterogeneity of the uppermost mantle beneath Russian Eurasia from the
+  ultra-long-range profile QUARTZ
+Source
+  Journal of Geophysical Research-Solid Earth. 104(B9):20329-20348, 1999 Sep
+  10.
+Abstract
+  The 3850-km long Deep Seismic Sounding profile QUARTZ
+  crosses six major geologic provinces in Eurasia and is sourced by 3 nuclear
+  and 48 chemical explosions. We present the first interpretation of the entire
+  data set, using two dimensional (2-D) ray tracing and inversion, resolution
+  analysis, and 1-D amplitude modeling. Our interpretation shows a 42-km-thick,
+  high-velocity crust under the Baltic Shield, a 29-km-thick crust and
+  high-velocity upper mantle under the Mezenskaya depression, 52-km-thick crust
+  with high-velocity lower crust and uppermost mantle under the Urals, and
+  40-km-thick crust under the West Siberian basin deepening to 45 km under the
+  Altay-Sayan fold belt. High-velocity (8.4 km/s) uppermost mantle is found
+  under the Mezenskaya depression and under the east flank of the Urals. One
+  almost continuous upper mantle boundary occurs at 65- to 80-km depth, and
+  another with an approximately 40-km-thick LVZ occurs at 120- to 140-km depth.
+  The shallow upper mantle blocks and the two extensive interfaces indicate
+  strong upper mantle heterogeneity. Resolution analysis based on direct
+  multivariate model perturbations, artificial neural network
+  and principal component analysis, indicate the depth uncertainty of the
+  410-km discontinuity within +/-6 km, and also its trade-off with dip and
+  velocities above and below the discontinuity. Decreased near-critical
+  amplitudes of reflections from the 410-km and 660-km discontinuities indicate
+  that these boundaries are most likely represented by gradient zones about
+  15-20 km thick. Lithosphere thins, asthenospheric velocity decreases, and the
+  410-km discontinuity dips to the SE approaching the Himalayan orogenic belt.
+  [References: 71]
+
+<3>
+Authors
+  Grimm RE.  Lynn HB.  Bates CR.  Phillips DR.  Simons KM.  Beckham WE.
+Title
+  Detection and analysis of naturally fractured gas reservoirs: Multiazimuth
+  seismic surveys in the Wind River basin, Wyoming
+Source
+  Geophysics. 64(4):1277-1292, 1999 Jul-Aug.
+Abstract
+  Multiazimuth binning of 3-D P-wave reflection data is a relatively simple but
+  robust way of characterizing the spatial distribution of gas-producing
+  natural fractures. In our survey, data were divided into two volumes by ray
+  azimuth (approximately perpendicular and parallel (+/-45 degrees) to the
+  dominant fracture strike) and separately processed. Azimuthal differences or
+  ratios of attributes provided a rough measure of anisotropy. Improved imaging
+  was also attained in the more coherent fracture-parallel volume. A
+  neural network using azimuthally dependent velocity,
+  reflectivity, and frequency attributes identified commercial gas wells with
+  greater than 85% success. Furthermore, we were able to interpret the physical
+  mechanisms of most of these correlations and so better generalize the
+  approach. The apparent velocity anisotropy was compared to that derived from
+  other P- and S-wave methods in an inset three-component survey. Prestack
+  determination of the azimuthal moveout ellipse will best quantify velocity
+  anisotropy, but simple two- or four-azimuth poststack analysis can adequately
+  identify regions of high fracture density and gas yield. [References: 40]
+
+<4>
+Authors
+  Leonard G.  Villagran M.  Joswig M.  Bartal Y.  Rabinowitz N.  Saya A.
+Title
+  Seismic source classification in Israel by signal imaging
+  and rule-based coincidence evaluation
+Source
+  Bulletin of the Seismological Society of America. 89(4):960-969, 1999 Aug.
+Abstract
+  We tested the applicability of the sonogram detector and a rule-based
+  evaluation for seismic source classification and
+  identification in Israel. Source identification is based on the
+  transformation of full seismograms to images and the correlation between a
+  new image and known images from different seismic sources.
+  These methods were initially developed to monitor the induced
+  seismicity of northwest Germany by the BUG small array. Two
+  new elements were introduced in this study: (a) the adaptation of the array
+  technique to the identification of seismic sources using a
+  local network and (b) the recognition of source regions with natural
+  seismicity. The tested data include 41 local earthquakes and
+  explosions in the time period September 1997 to December 1997. Automated
+  processing yielded 95% success in correctly identifying the individual
+  sources with no misclassification. One event was not classified. Path and
+  distance effects did not influence the classification capability. The method
+  could be useful for seismic verification under the
+  Comprehensive Test Ban Treaty. [References: 20]
+
+<5>
+Authors
+  Elie F.  Hayakawa M.  Parrot M.  Pincon JL.  Lefeuvre F.
+Title
+  Neural network system for the analysis of transient
+  phenomena on board the DEMETER micro-satellite
+Source
+  IEICE Transactions on Fundamentals of Electronics Communications & Computer
+  Sciences. E82A(8):1575-1581, 1999 Aug.
+Abstract
+  In 2001, the DEMETER micro-satellite will be launched to perform Detection of
+  Electro-Magnetic Emissions Transmitted from Earthquake Regions. Its main
+  scientific objective is related to the investigation of the ionospheric
+  perturbations due to the seismic and volcanic activity. A
+  system allowing an onboard identification and characterization of spatially
+  and temporally coherent structures associated with the measurement of one or
+  several electromagnetic wave field components is used. It is based on
+  neural networks. The choice and training of the
+  neural network are done on the ground from available
+  waveforms. The parameters of the neural network system are
+  then transmit ted to the satellite. This reconfiguration process can be
+  repeated whenever necessary during the space mission. Details about the
+  functioning and coding optimization for DSP implementation is presented. The
+  first function of this system which will be per formed on the satellite
+  DEMETER is the real-time identification and characterization of whistler
+  phenomena. An application to the analysis of such phenomena observed in data
+  from the AUREOL-3 satellite is exposed. [References: 14]
+
+<6>
+Authors
+  de Stefano A.  Sabia D.  Sabia L.
+Title
+  Probabilistic neural networks for seismic
+  damage mechanisms prediction
+Source
+  Earthquake Engineering & Structural Dynamics. 28(8):807-821, 1999 Aug.
+Abstract
+  The procedure commonly employed to assess the seismic
+  vulnerability of buildings uses simplified qualitative and quantitative
+  observations obtained from the measured data entered into report forms. In
+  Italy, the data sheets adopted by the National Defence Group against
+  Earthquakes (Gruppo Nazionale per la Difesa dal Terremoti-GNDT) play a
+  unifying and reference role. This paper proposes a method for the processing
+  of the data contained in such report forms which is based on probabilistic
+  neural networks producing a Bayesian classification. The
+  final goal is to exploit the fundamental learning and generalization
+  capabilities of neural networks to obtain an estimate of the
+  vulnerability of structural systems. In particular, the aim is to be able to
+  predict the damage mechanisms which may be triggered in the macro-elements of
+  public worship buildings. Copyright (C) 1999 John Wiley & Sons Ltd.
+  [References: 13]
+
+<7>
+Authors
+  Nath SK.  Chakraborty S.  Singh SK.  Ganguly N.
+Title
+  Velocity inversion in cross-hole seismic tomography by
+  counter-propagation neural network, genetic algorithm and
+  evolutionary programming techniques
+Source
+  Geophysical Journal International. 138(1):108-124, 1999 Jul.
+Abstract
+  The disadvantages of conventional seismic tomographic ray
+  tracing and inversion by calculus-based techniques include the assumption of
+  a single ray path for each source-receiver pair, the non-inclusion of head
+  waves, long computation times, and the difficulty in finding ray paths in a
+  complicated velocity distribution. ii ray-tracing algorithm is therefore
+  developed using the reciprocity principle and dynamic programming approach.
+  This robust forward calculation routine is subsequently used for the
+  cross-hole seismic velocity inversion.
+ 
+  Seismic transmission tomography can be considered to be a
+  function approximation problem; that is, of mapping the traveltime vector to
+  the velocity vector. This falls under the purview of pattern classification
+  problems, so we propose a forward-only counter-propagation
+  neural network (CPNN technique for the tomographic imaging
+  of the subsurface. The limitation of neural networks,
+  however, lies in the requirement of exhaustive training for its use in
+  routine interpretation.
+ 
+  Since finding the optimal solution, sometimes from poor initial models, is
+  the ultimate goal, global optimization and search techniques such as
+  simulated evolution are also implemented in the cross-well traveltime
+  tomography. Genetic algorithms (GA), evolution strategies and evolutionary
+  programming (EP) are the main avenues of research in simulated evolution.
+  Part of this investigation therefore deals with GA and EP schemes for
+  tomographic applications. In the present work on simulated evolution, a new
+  genetic operator called 'region-growing mutation' is introduced to speed up
+  the search process.
+ 
+  The potential of the forward-only CPNN, GA and EP methods is demonstrated in
+  three synthetic examples. Velocity tomograms of the first model present
+  plausible images of a diagonally orientated velocity contrast bounding two
+  constant-velocity areas by both the CPNN and GA schemes, but the EP scheme
+  could not image the model completely. In the second case, while GA and EP
+  schemes generated an accurate velocity distribution of a faulted layer in a
+  homogeneous background, the CPNN scheme overestimated the vertical
+  displacement of the fault. One can easily identify five voids in a coal seam
+  from the GA-constructed tomogram of the third synthetic model, but the CPNN
+  and EP schemes could not replicate the model. The performances of these
+  methods are subsequently tested in a real field setting at Dhandadih
+  Colliery, Raniganj Coalfields, West Bengal, India. First arrival traveltime
+  inversion by these algorithms from 225 seismic traces
+  revealed a P-wave velocity distribution from 1.0 to 2.5 km s(-1). A
+  low-velocity zone (1.0 km s(-1)), the position of a suspected gallery in the
+  Jambad Top coal seam, could be successfully delineated by CPNN, GA and EP
+  schemes. [References: 33]
+
+<8>
+Authors
+  Patane D.  Ferrari F.
+Title
+  ASDP: a PC-based program using a multi-algorithm approach for automatic
+  detection and location of local earthquakes
+Source
+  Physics of the Earth & Planetary Interiors. 113(1-4 Special Issue SI):57-74,
+  1999 Jun.
+Abstract
+  A few automated data acquisition and processing systems operate on
+  mainframes, some are run on UNIX-based workstations and others on personal
+  computer, equipped with either DOS or UNIX-derived operating systems. Several
+  large and complex software packages for automatic and interactive analysis of
+  seismic data have been developed in recent years mainly for
+  UNIX-based systems, and some of these programs use a variety of artificial
+  intelligence techniques. Hen, the first operational version of a new software
+  package, named PC-Seism, for analyzing seismic data from a
+  local network is presented. This package, composed of three separate modules,
+  provides an example of a new generation of visual object-oriented programs
+  for interactive and automatic seismic data processing run on
+  a personal computer. In particular, we discuss the automatic procedures
+  implemented in the ASDP (Automatic Seismic Data Processing)
+  module. A multi-algorithm approach to the on-line detection and location of
+  local earthquakes is adopted in ASDP, and its operative mode is similar to
+  that used in more complex systems, where the algorithms run on different
+  processors and parallel computations are generally performed. Since highly
+  complex computation routines may still be prohibitive for current PC when the
+  number of analyzing traces becomes large, we have opted for simplicity and
+  have planned three main routines (working in cascade mode) and a
+  multi-station analysis (MSA) procedure in ASDP, to recognize phase picking,
+  declare and locate earthquakes. Basically, signal detection on a
+  single-component trace is obtained by a short-term average to long-term
+  average ratio (STA/LTA) taken along a characteristic function (CF) envelope
+  generated from the seismogram. To confirm and identify earthquake phase
+  arrivals and to discard noise disturbances, two other sections of analysis
+  are applied on short signal windows after the declared triggers. A spectral
+  analysis is applied as detector of earthquake phase arrivals. Furthermore,
+  for three-component data, the application of a polarization filter is used to
+  identify P- and S-phases, Therefore in order to optimize the efficiency of a
+  seismic monitoring system, the software is provided with
+  full detection capability and makes use of a high degree of automation, aimed
+  at minimizing the analyst's workload. PC-Seism and, in particular, the ASDP
+  module are under constant review. In fact, the modular structure of the
+  program will allow us to develop it with new and improved capabilities.
+  Future developments improvements in ASDP will concern the application of
+  other detection algorithms and routines to recognize secondary phases in
+  regional and teleseismic earthquakes. (C) 1999 Elsevier
+  Science B.V. All rights reserved. [References: 47]
+
+<9>
+Authors
+  Zadeh MA.  Nassery P.
+Title
+  Application of quadratic neural networks to
+  seismic signal classification
+Source
+  Physics of the Earth & Planetary Interiors. 113(1-4 Special Issue
+  SI):103-110, 1999 Jun.
+Abstract
+  This paper solves the seismic signal classification problem
+  using the quadratic neural networks with closed-boundary
+  discriminating surfaces. In this study, we have demonstrated the quadratic
+  neural network (QNN) potential capabilities in application
+  to the seismic signal classification problems and show that
+  the efficiency achieved here, is much better to what obtained with
+  conventional multilayer neural networks. Firstly, we have
+  performed some pre-processing on the long period recordings to cancel out the
+  instrumental and attenuation side effects. Secondly, we have extracted the
+  ARMA filter coefficients of the windowed P-wave phase through some matrix
+  manipulations using the conventional Prony ARMA modeling scheme. The derived
+  coefficients are then applied to QNN for training and classification. The
+  results have shown that a quadratic neuron is likely to have a performance
+  similar to that of a multilayer perceptron when the target is to discriminate
+  distribution of points in clusters within the input space. (C) 1999 Elsevier
+  Science B.V. All rights reserved. [References: 9]
+
+<10>
+Authors
+  Fedorenko YV.  Husebye ES.  Ruud BO.
+Title
+  Explosion site recognition; neural net discriminator using
+  single three-component stations
+Source
+  Physics of the Earth & Planetary Interiors. 113(1-4 Special Issue
+  SI):131-142, 1999 Jun.
+Abstract
+  In monitoring of local seismicity, the occurrence of many
+  chemical explosions poses sever practical problems of two kinds: (i) such
+  recordings add significantly to the analyst workload and (ii) in extreme
+  cases, pollute the seismicity data base to the extent of
+  rendering it useless for serious scientific studies. In some countries, the
+  local seismicity is equivalent to felt earthquakes but the
+  problem remains since both earthquakes and explosions are and will be
+  recorded by local stations. These events will therefore enter the network
+  data center processing system, and thus, be subjected to further analysis.
+  Source classification schemes are not always well suited for this kind of
+  needed analysis at local distance ranges (not easily transportable). Besides,
+  epicenter determinations may be less accurate in cases of few station
+  reportings. The common denominator for failures is the modest usages of the
+  information potential contained in seismic recordings being
+  represented by a few time/amplitude parameters for the Pn- and Lg-phases. On
+  the other hand, seismic waveform similarities for closely
+  spaced earthquakes and explosions in particular are well established
+  observationally. In this study period, we explore the possibility of using
+  single station three-component (3C) covariance matrix traces from a priori
+  known explosion sites (learning) for automatically recognizing subsequent
+  explosions from the same site. To ensure adequate sampling, we used the nine
+  different complex covariance time domain elements in combination with a suit
+  of 12 bandpass filters equivalent to 108 observation pieces for a single
+  event recording. We used a neural net scheme for teaching
+  the computer to recognize new explosion recordings from a specific site
+  through scanning of hundreds of detector segmented waveform files. No
+  epicenter information was used in this analysis. The output was a single
+  number between Zero and Four (log-scale) with an acceptance threshold
+  (repeated explosion) of 1.2-analyst friendly usage. Actual tests were
+  performed on two explosion sites of western Norway for which ground truth
+  information was available. The 100% correct decisions were obtained between
+  'site explosions' and hundreds of non-site events. A brute force test on the
+  relative merits of the 12 frequency bands used gave that the 2-4 Hz and 8-12
+  Hz spectral parts were most informative. Experiment tied to two quarry sites
+  for which ground truth information was lacking gave less sharp separation of
+  site and non-site events. Since covariance elements comprise P- and
+  S-waveform jointly, good spatial sampling is ensured even for single site 3C
+  stations; beyond 10 km from the epicenter the scores were in the non-site
+  category, The above approach to event discrimination is very flexible as we
+  may combine several 3C stations with even z-component stations and besides,
+  no analyst action in My way will be needed. (C) 1999 Elsevier Science B.V.
+  All rights reserved. [References: 31]
+
+

@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!DOCTYPE bibstyle PUBLIC "-//Pybliographer//DTD Bibliographic Style Format//EN" "">
+<!-- A simple modification of Alpha.xml -->
+<!-- This Style by Darrell Rudmann (rudmann@uiuc.edu) -->
+<!-- Creates APA (4th ed.) styled bibliography for most common sources -->
+<!-- See apa4e.txt for more information -->
+
+<!-- Issues: 1) Puts a period after titles ending in punctuation, e.g. "?" -->
+<!-- 2) Missing tab at beginning of citations -->
+<!-- 3) If citing a full edited text, order of author name is incorrect -->
+<!-- 4) Uses emphasis ("emph") instead of underlining, but see apa4e.txt -->
+
+<!-- Must add "Autoload.preregister ('style', 'apa4e', 'Pblio.Style.apa4e')" -->
+<!--  to pybrc.py before use. -->
+
+<bibstyle>
+  
+  <module name="apa4e">
+    <define field="author">last_first_initials_authors</define>
+    <define field="editor">first_last_initials_authors</define>
+    <define field="date">european_date</define>
+    <define method="keys">string_keys</define>
+  </module>
+
+<!-- Start with the author, editor if no author, then Date -->
+<!-- **Points out editor-as-author problem (an effective cludge) -->
+<infield name="author"><content/></infield>
+<notinfield name="author">
+<infield name="editor"><content/> **FIX ORDER** <singular>(Ed.)</singular><plural>(Eds.)</plural></infield>
+</notinfield>
+<separator>.</separator>
+<infield name="date">(<content/>). </infield>
+
+<!-- PROCEEDINGS -->
+<!-- Excludes editions -->
+<inentry name="proceedings">
+<content name="title"/><separator>.</separator>
+
+<infield name="editor">
+In <content/> <singular>(Ed.)</singular><plural>(Eds.)</plural>, </infield>
+<infield name="booktitle">
+<style name="emph"><content name="booktitle"/></style></infield>
+
+<infield name="edition"> (<content/>.
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+
+<notinfield name="edition">
+<infield name="pages"> (<singular>p.</singular><plural>pp.</plural> <content/>).</infield>
+</notinfield>
+
+<infield name="address"> <content/>:</infield>
+<infield name="publisher"> <content/></infield>
+</inentry>
+
+<!-- ARTICLE -->
+<inentry name="article">
+<content name="title"/><separator>.</separator>
+<style name="emph">
+<infield name="journal"><content/></infield>
+<infield name="volume">, <content/></infield></style>
+<infield name="number">(<content/>),</infield>
+<notinfield name="number"><style name="emph">,</style></notinfield>
+<infield name="pages"> <content/></infield>
+</inentry>
+
+<!-- BOOK -->
+<!-- Use InCollection for irregularly published series -->
+<!-- **Unfortunately, puts a period after titles that end in a "?" -->
+<inentry name="book">
+
+<style name="emph"><content name="title"/></style>
+
+<infield name="edition"> (<content/> ed.
+<infield name="volume">, Vol. <content/></infield>
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+
+<notinfield name="edition">
+<infield name="volume"> (Vol. <content/>
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+</notinfield>
+
+<notinfield name="edition"><notinfield name="volume">
+<infield name="pages"> (<singular>p.</singular><plural>pp.</plural> <content/>).</infield>
+</notinfield></notinfield>
+
+<notinfield name="edition"><notinfield name="volume"><notinfield name="pages">
+<style name="emph">.</style>
+</notinfield></notinfield></notinfield>
+
+<infield name="address"> <content/>:</infield>
+<infield name="publisher"> <content/></infield>
+</inentry>
+
+<!-- INBOOK (same as BOOK) -->
+<inentry name="inbook">
+<style name="emph"><content name="title"/></style>
+
+<infield name="edition"> (<content/> ed.
+<infield name="volume">, <content/></infield>
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+
+<notinfield name="edition">
+<infield name="volume"> (<content/>
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+</notinfield>
+
+<notinfield name="edition"><notinfield name="volume">
+<infield name="pages"> (<singular>p.</singular><plural>pp.</plural> <content/>).</infield>
+</notinfield></notinfield>
+
+<notinfield name="edition"><notinfield name="volume"><notinfield name="pages">
+<style name="emph">.</style>
+</notinfield></notinfield></notinfield>
+
+<infield name="address"> <content/>:</infield>
+<infield name="publisher"> <content/></infield>
+</inentry>
+
+<!-- INCOLLECTION -->
+<!-- Volumes are part of title in edited works -->
+<inentry name="incollection">
+<content name="title"/><separator>.</separator>
+
+<infield name="editor">
+In <content/> <singular>(Ed.)</singular><plural>(Eds.)</plural>, </infield>
+
+<notinfield name="series">
+<style name="emph"><content name="booktitle"/></style>
+</notinfield>
+
+<infield name="series"><style name="emph"><content/>: <infield name="volume">Vol. <content/>. </infield><content name="booktitle"/></style></infield>
+
+<infield name="edition"> (<content/> ed.
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+
+<notinfield name="edition">
+<infield name="pages"> (<singular>p.</singular><plural>pp.</plural> <content/>).</infield>
+</notinfield>
+
+<infield name="address"> <content/>:</infield>
+<infield name="publisher"> <content/></infield>
+</inentry>
+
+<!-- INPROCEEDINGS -->
+<!-- Same as InCollection entry; Vol. is part of title -->
+<inentry name="inproceedings">
+<content name="title"/><separator>.</separator>
+
+<infield name="editor">
+In <content/> <singular>(Ed.)</singular><plural>(Eds.)</plural>, </infield>
+<infield name="booktitle">
+<style name="emph"><content name="booktitle"/></style></infield>
+
+<infield name="edition"> (<content/>.
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+
+<notinfield name="edition">
+<infield name="pages"> (<singular>p.</singular><plural>pp.</plural> <content/>).</infield>
+</notinfield>
+
+<infield name="address"> <content/>:</infield>
+<infield name="publisher"> <content/></infield>
+</inentry>
+
+<!-- PhDThesis; Vol, #, pages, special -->
+<inentry name="phdthesis">
+<content name="title"/>. <style name="emph">Dissertation Abstracts International, <content name="volume"/>,</style><infield name="number"><content/>,</infield>
+<content name="publisher"/>
+</inentry>
+
+<!-- TechReport uses Institution field, handles pages, but not editors -->
+<inentry name="techreport">
+<style name="emph"><content name="title"/></style>
+<infield name="number"> (<content/>
+<infield name="pages">, <singular>p.</singular><plural>pp.</plural> <content/></infield>).</infield>
+<notinfield name="number"><style name="emph">.</style></notinfield>
+<infield name="address"> <content/>:</infield>
+<infield name="institution"> <content/></infield>
+</inentry>
+
+<!-- Miscellaneous -->
+<inentry name="misc">
+<content name="title"/>
+</inentry>
+
+<!-- Unpublished -->
+<inentry name="unpublished">
+<infield name="subject">[<content/>].</infield>
+ <notinfield name="subject">
+ <style name="emph"><content name="title"/>.</style>
+ </notinfield>
+<content name="special"/>
+<infield name="school">, <content/></infield>
+</inentry>
+
+<!-- Everybody gets a final period. -->
+<separator>.</separator>
+
+</bibstyle>

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+run ../pybliographer -q ${srcdir}/import-export.py medline ${srcdir}/medline.med tmp.med
+run ../pybliographer -q ${srcdir}/import-export.py medline tmp.med tmp2.med
+run diff  tmp.med tmp2.med
+run rm -f tmp.med tmp2.med
+
+run ../pybliographer -q ${srcdir}/import-export.py refer ${srcdir}/refer.refer tmp.refer
+run ../pybliographer -q ${srcdir}/import-export.py refer tmp.refer tmp2.refer
+run diff  tmp.refer tmp2.refer
+run rm -f tmp.refer tmp2.refer
+
+run ../pybliographer -q ${srcdir}/import-export.py bibtex ${srcdir}/bibtex.bib tmp.bib
+run ../pybliographer -q ${srcdir}/import-export.py bibtex tmp.bib tmp2.bib
+run diff  tmp.bib tmp2.bib
+run rm -f tmp.bib tmp2.bib
+
+run ../pybliographer -q ${srcdir}/import-export.py ovid ${srcdir}/ovid.ovid tmp.ovid
+run ../pybliographer -q ${srcdir}/import-export.py ovid tmp.ovid tmp2.ovid
+run diff  tmp.ovid tmp2.ovid
+run rm -f tmp.ovid tmp2.ovid
+
+tst_stop
+

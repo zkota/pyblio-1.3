@@ -1,0 +1,41 @@
+-*- text -*-
+=================================================================
+
+Pybliographer provides a framework for working with bibliographic
+databases.
+
+For more information, please consult the documentation at:
+
+	http://pybliographer.org/
+
+=================================================================
+
+
+* Requirements
+  ------------
+
+Before installing pybliographer, please install:
+
+       
+  - GNU Recode (v. 3.5)
+  - python-bibtex (also available from http://pybliographer.org/)
+  - Gnome 2.x and gnome-python 2.x
+
+
+* Installation 
+  ------------
+
+Basically, it should be a matter of:
+
+	./configure && make
+	su
+	make install
+
+You can then run several programs :
+
+  - pybliographic : the graphical interface
+  - pybliographer : the text-based interface and scripting language
+  - pybcheck, pybconvert, pybformat, ... : several useful tools
+
+For more configuration options, have a look at the output of ./configure --help
+

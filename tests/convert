@@ -1,0 +1,19 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/../scripts/pybconvert.py"
+
+for file in medline pubmed ; do
+
+  run ${com} medline..bibtex ${srcdir}/$file.med > tmp.bib
+  run ../pybliographer -q ${srcdir}/reorder.py tmp.bib tmp-2.bib
+  run diff tmp-2.bib ${srcdir}/$file.bib
+  run rm -f tmp.bib tmp-2.bib
+
+done
+
+tst_stop
+

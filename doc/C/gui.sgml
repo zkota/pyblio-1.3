@@ -1,0 +1,360 @@
+<chapter>
+  <title>The graphical interface</title>
+  
+  <para>The graphical  user interface is  called &pyc;. It  provides a
+    simple  access  to the  most  common  features  of the  underlying
+    engine, &pyb;  and lets you search, sort  and modify bibliographic
+    entries.</para>
+
+  <sect1>
+    <title>Creating a new database</title> 
+
+    <para>When &pyc; is opened, you  can immediately begin to create a
+    new database.  The type of  this database will be  determined when
+    you will save it the first time.</para>
+
+    <para>To  add   a  new  entry,   you  can  use   the  <menuchoice>
+	<guimenu>Edit</guimenu>       <guimenuitem>Add...</guimenuitem>
+	</menuchoice> menu, or click with the right button in the list
+	window and select <guibutton>Add...</guibutton> </para>
+    
+    <para>You will find more information on the main window's usage in
+      <xref linkend="gui-navigate">.</para>
+
+  </sect1>
+
+  <sect1>
+    <title>Opening a database</title>
+    
+    <para>To    open    an    existing    database,    go    in    the
+    <guimenu>File</guimenu> menu, and select
+      <menuchoice>
+      <guimenu>File</guimenu>
+	<guimenuitem>Open</guimenuitem>
+      </menuchoice>.</para>
+    
+    <Figure id="figopen">
+      <Title>Opening a database </Title> 
+      <Graphic FileRef="open"></Graphic>
+    </Figure>
+    
+    <para>A   file   selection  dialog   will   pop   up  (see   <xref
+      linkend="figopen">) and let  you select a file name  or enter an
+      URL. The type of the database  can also be selected. In the case
+      of a  new database,  it is mandatory  to select a  type, whereas
+      while opening an  existing database, the type can  be guessed if
+      you select <guibutton>- Auto -</guibutton>.</para>
+    
+  </sect1>
+  
+  <sect1 id="gui-navigate">
+    <title>Navigating in the entries</title>
+    
+    <para>Once you have opened a  database, or started to create a new
+      one, the  main window (see <xref  linkend="figmain">) displays a
+      list of all  the entries on the top part of  it.  Clicking on an
+      entry displays its full content on the lower part of the window.
+      It is  also possible to  use the arrow  keys to navigate  in the
+      upper list.</para>
+    
+    <para>Clicking     on    an     entry    while     pressing    the
+      <keysym>Shift</keysym> key extends  the selection to the clicked
+      entry. A  click while pressing  the <keysym>Control</keysym> key
+      toggles the entry without altering  the state of the rest of the
+      selection.</para>
+
+    <Figure id="figmain">
+      <Title>The main window</Title> 
+      <Graphic FileRef="main"></Graphic>
+    </Figure>
+    
+    <para>Clicking the right button of the mouse in the list opens a
+      contextual menu. With this menu you can:</para>
+    
+    <itemizedlist>
+      <listitem>
+	<para>add a new entry</para>
+      </listitem>
+      <listitem>
+	<para>edit the currently selected items</para>
+      </listitem>
+      <listitem>
+	<para>delete the currently selected items</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>Note that some  of these menu options can  be disabled for a
+      given database or entry,  provided that the corresponding action
+      can't be  performed.</para>
+    
+    <para>By clicking  on the column  titles of the list,  you'll sort
+      the entries according to the corresponding field.</para>
+  </sect1>
+  
+  <sect1>
+    <title>Searching</title>
+    
+    <para>&pyc; offers  a quite powerful seraching  mechanism. To open
+      the search dialog, click on <menuchoice> <guimenu>Edit</guimenu>
+      <guimenuitem>Search</guimenuitem> </menuchoice> in the menu.
+
+      The  dialog   that  appears  (see   <xref  linkend="figsearch">)
+      displays a search form at the top.</para>
+    
+    <Figure id="figsearch">
+      <Title>The Search dialog</Title> 
+      <Graphic FileRef="search"></Graphic>
+    </Figure>
+    
+    <sect2>
+      <title>Simple searches</title>
+      
+      <para>With a simple  search, you can select the  field that will
+	be searched  and you  can specify a  regular expression  to be
+	matched.  <guibutton>- any  field -</guibutton> means that all
+	the  existing fields will  be searched.  This is  usually more
+	time-consuming.</para>
+
+    </sect2>
+    
+    <sect2>
+      <title>Advanced searches</title>
+      
+      <para>An advanced search is an expression that looks like:</para>
+      
+      <programlisting>has('author','name') | -has('title','test')</programlisting>
+      
+      <para> Such  an expression means:  select the entries  where the
+	field            <emphasis>author</emphasis>           matches
+	<emphasis>name</emphasis>,   or   (symbol  <symbol>|</symbol>)
+	where     the     field    <emphasis>title</emphasis>     does
+	<emphasis>not</emphasis> match <emphasis>test</emphasis>.  The
+	boolean          <symbol>and</symbol>         is         noted
+	<symbol>&</symbol>.</para>
+      
+      <para>There  are  other  commands  available for  this  type  of
+	search:</para>
+      
+      <itemizedlist>
+	<listitem>
+	  <para><command>has_key(<varname>keyname</varname>)</command>
+	    searches on a key name.</para>
+	</listitem>
+	<listitem>
+	  <para><command>has_type(<varname>typename</varname>)</command>
+	    searches for entries of a given type name.</para>
+	</listitem>
+	<listitem>
+	  <para><command>any_has(<varname>value</varname>)</command>
+	    searches  for the  given value  in  all the  fields of  an
+	    entry.</para>
+	</listitem>
+	<listitem>
+	  <para><command>before(<varname>field</varname>,
+	      <varname>year</varname>,        <varname>month</varname>,
+	      <varname>day</varname>)</command>  searches  for entries
+	      where  the  specified  date  field  is  older  than  the
+	      specified date.</para>
+	</listitem>
+	<listitem>
+	  <para><command>after(<varname>field</varname>,
+	      <varname>year</varname>,        <varname>month</varname>,
+	      <varname>day</varname>)</command>searches   for  entries
+	      where  the  specified date  field  is  younger than  the
+	      specified date.</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    
+    <sect2>
+      <title>Hierarchical searches</title>
+      
+      <para>After a  search, only the selected items  are displayed in
+	the main window.  It makes it convenient to  select a specific
+	author, and then browse its publications for example.</para>
+      
+      <para> In addition, the results  of all the searches are kept in
+	the  tree located  below  the search  form.  Therefore, a  new
+	search can  be a refinement of  a previous one.  If you select
+	the tree  item corresponding for  example to all  the articles
+	written  by a certain  Nostradamus, you'll  be able  to select
+	only those whose title contains the word eclipse.</para>
+      
+      <para>Right-clicking in this tree pops up a contextual menu that
+	allows you to remove unuseful searches.</para>
+    </sect2>
+    
+  </sect1>
+
+  <sect1>
+    <title>Sorting</title>
+
+    <para>Clicking on the title of each column in the main index
+    provides some rudimentary way of sorting a database. A much
+    powerful method is to open the sort dialog (in <menuchoice>
+    <guimenu>Edit</guimenu> <guimenuitem>Sort</guimenuitem>
+    </menuchoice>). This menu, displayed in <xref linkend="figsort">,
+    gives a list of fields which can be used as sort criterions, plus
+    a flag indicating how they are currently used. By clicking on the
+    left column, it is possible to choose how the field will be used:
+      <itemizedlist>
+	<listitem>
+	  <para>Nothing means the field is not in use.</para>
+	</listitem>
+	<listitem>
+	  <para>A <symbol>&gt;</symbol> symbol means sort in
+	    <emphasis>ascending order</emphasis>.</para>
+	</listitem>
+	<listitem>
+	  <para>A <symbol>&lt;</symbol> symbol means sort in
+	    <emphasis>descending order</emphasis>.</para>
+	</listitem>
+      </itemizedlist>
+    </para>
+    <para>By clicking on the <guibutton>Reorder</guibutton> button, it
+    is possible to group the activated fields on the top of the list,
+    for a more convenient access.</para>
+    <para>The order in which the sorting is performed depends on the
+    order in the list. To modify this order, simply drag and drop an
+    item to change its position.</para>
+
+      <Figure id="figsort">
+	<Title>The Sort dialog</Title> 
+	<Graphic FileRef="sort"></Graphic>
+      </Figure>
+  </sect1>
+
+  <sect1 id="gui-edit">
+    <title>Editing</title>
+
+    <sect2>
+      <title>Basic editing</title>
+      
+      <Figure id="figedit">
+	<Title>The Edition window</Title> 
+	<Graphic FileRef="edit"></Graphic>
+      </Figure>
+      
+      <para>The    edition    window    is    represented    in    <xref
+      linkend="figedit">.  On  the  right  of  each  field,  a  symbol
+      indicates if &pyb;  has been able to render  all the information
+      given in that  field. For example, a BibTeX  field containing an
+      unknown command  name cannot  be correctly represented.  In that
+      case, &pyb; provides a  fake representation (usually the name of
+      the comand), and  indicates it was not able to do  a good job on
+      this field  by setting  a red  ball on its  right, instead  of a
+      green one.</para>
+    <warning>
+      <para>If you  edit such an  entry, you can loose  the additional
+      information it  contained. To avoid this,  consider using native
+      editing (see <xref linkend="gui-native">).</para>
+    </warning>
+
+    <para>To  edit the  entries, simply  type the  corresponding text,
+      without  any   consideration  for  the   database  format  being
+      used. For example, with <productname>BibTeX</productname>, don't
+      add  any <symbol>{</symbol> or  special characters  to influence
+      the result,  as they will be  quoted by the  system.  For fields
+      requiring  names (like  author  and editor),  use the  following
+      format:  type one  name per  line, in  the  <emphasis>last name,
+      lineage, first name</emphasis> order.</para>
+
+    <para>The  following  keyboard   shortcuts  are  available  during
+      edition  (in   addition  to   the  standard  ones   provided  by
+      Gtk):</para>
+    <itemizedlist>
+      <listitem>
+	<para><keysym>Ctrl-TAB</keysym> to jump to the next field</para>
+      </listitem>
+	<listitem>
+	<para><keysym>Shift-TAB</keysym> to jump to the previous
+	  field</para>
+      </listitem>
+      <listitem>
+	<para><keysym>Ctrl-Enter</keysym> to accept the modifications</para>
+      </listitem>
+      <listitem>
+	<para><keysym>Escape</keysym> to cancel the edition</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>To specify a crossreference  to another entry, just drag the
+      entry       from      the       main      list       to      the
+      <guilabel>Crossreference</guilabel>   field.     To   remove   a
+      crossreference,  drag  an  empty  selection on  the  field.   To
+      unselect   all  the  entries,   you  might   need  to   use  the
+      <keysym>Control</keysym>    key,   while    clicking    on   the
+      entry.</para>
+
+    </sect2>
+
+    <sect2 id="gui-native">
+      <title>Native editing</title>
+
+      <para>For databases  like BibTeX that provide  a specific syntax
+	(called <emphasis>native</emphasis> syntax), it is possible to
+	directly edit the entry in  this format. Just click the button
+	called <guibutton>Native Editing</guibutton>  at the bottom of
+	the window and  type the entry in its  native form.
+      </para>
+      
+      <para>It is also possible to  type native commands in the normal
+	editing window. For example, if  you want to use special LaTeX
+	commands like  <command>\textbf</command> in a  title, you can
+	type them  directly in the  Title field by preceding  the text
+	with    a   <symbol>@</symbol>    symbol    (as   the    first
+	character). After that symbol, you  have to use all the BibTeX
+	conventions (braces, backslashes,...), as none of them will be
+	escaped or modified by &pyb;.</para>
+
+    </sect2>
+    
+  </sect1>
+
+  <sect1>
+    <title>Using &pyc; with <productname>LyX</productname></title>
+    
+    <para>It  is possible  to directly  use &pyb;  in order  to insert
+      bibliographic references  into LyX. To  do so, one first  has to
+      start the LyX  <emphasis>server</emphasis>. In the configuration
+      file  <filename>~/.lyx/lyxrc</filename>, add the  following line
+      before starting LyX:</para>
+
+    <programlisting>
+      \serverpipe "~/.lyx/lyxpipe"
+    </programlisting>
+
+    <para>Then,  in &pyc;,  it is  possible to  select one  or several
+      entries and insert their references into a running LyX simply by
+      clicking  the <guibutton>Cite</guibutton>  button,  or selecting
+      the
+      <menuchoice><guimenu>Cite</guimenu>
+	<guimenuitem>Cite</guimenuitem>
+      </menuchoice>
+      menu item.</para>
+
+    <para>For the moment,  it is the user's job  to ensure that he/she
+      inserts entries corresponding to the actual database being used.
+      &pyc; does  not handle the full job  of bibliography generation;
+      therefore  it is necessary  to use  <command>bibtex</command> as
+      described in the LyX documentation.</para>
+  </sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,1055 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer-1.0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Oct  9 22:20:02 2003\n"
+"PO-Revision-Date: 2003-08-05 21:20+0200\n"
+"Last-Translator: Frédéric Gobry <gobry@users.sourceforge.net>\n"
+"Language-Team: fr <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../Pyblio/Autoload.py:57
+msgid "warning: can't import %s: %s"
+msgstr "attention: impossible d'importer %s : %s"
+
+#: ../Pyblio/Config.py:53
+msgid "value of `%s' should be of type %s"
+msgstr "La valeur de `%s' devrait être de type %s"
+
+#: ../Pyblio/Config.py:204
+msgid "String"
+msgstr "Chaîne"
+
+#: ../Pyblio/Config.py:213
+msgid "Boolean"
+msgstr "Booléen"
+
+#: ../Pyblio/Config.py:232
+msgid "Integer"
+msgstr "Entier"
+
+#: ../Pyblio/Config.py:234
+msgid "Integer under %d"
+msgstr "Entier plus petit que %d"
+
+#: ../Pyblio/Config.py:236
+msgid "Integer over %d"
+msgstr "Entier plus grand que %d"
+
+#: ../Pyblio/Config.py:238
+msgid "Integer between %d and %d"
+msgstr "Entier entre %d et %d"
+
+#: ../Pyblio/Config.py:250
+msgid "Element in `%s'"
+msgstr "Élément dans `%s'"
+
+#: ../Pyblio/Config.py:270
+msgid "Tuple (%s)"
+msgstr "Séquence (%s)"
+
+#: ../Pyblio/Config.py:291
+msgid "List (%s)"
+msgstr "Liste (%s)"
+
+#: ../Pyblio/Config.py:316
+msgid "Dictionary (%s, %s)"
+msgstr "Dictionnaire (%s, %s)"
+
+#: ../Pyblio/Fields.py:265
+msgid "Illegal year value"
+msgstr "Mauvaise valeur d'année"
+
+#: ../Pyblio/Fields.py:269
+msgid "Illegal month value"
+msgstr "Mauvaise valeur de mois"
+
+#: ../Pyblio/Fields.py:273
+msgid "Illegal day value"
+msgstr "Mauvaise valeur de jour"
+
+#: ../Pyblio/Fields.py:443
+msgid "in %s"
+msgstr "dans %s"
+
+#: ../Pyblio/Format/BibTeX.py:346 ../Pyblio/Format/BibTeX.py:404
+msgid "key `%s' is malformed"
+msgstr "la clé `%s' est mal formée"
+
+#: ../Pyblio/Format/BibTeX.py:367 ../Pyblio/Format/BibTeX.py:388
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d: La clé `%s' existe déjà"
+
+#: ../Pyblio/GnomeUI/Config.py:64
+msgid "Choose your preferences"
+msgstr "Choisissez vos préférences"
+
+#: ../Pyblio/GnomeUI/Config.py:145 ../Pyblio/GnomeUI/Fields.py:291
+#: ../Pyblio/GnomeUI/Fields.py:473
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"Certains changements nécessite de redémarrer Pybliographic\n"
+"pour être correctement pris en compte"
+
+#: ../Pyblio/GnomeUI/Config.py:425
+msgid "Add"
+msgstr "Ajouter"
+
+#: ../Pyblio/GnomeUI/Config.py:428
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: ../Pyblio/GnomeUI/Config.py:431 ../Pyblio/GnomeUI/Config.py:535
+#: ../Pyblio/GnomeUI/Fields.py:373
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ../Pyblio/GnomeUI/Config.py:532 ../Pyblio/GnomeUI/Fields.py:370
+msgid "Set"
+msgstr "Appliquer"
+
+#: ../Pyblio/GnomeUI/Config.py:547
+msgid "Key:"
+msgstr "Clé :"
+
+#: ../Pyblio/GnomeUI/Config.py:549
+msgid "Value:"
+msgstr "Valeur :"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"Impossible d'ouvrir `%s' en écriture :\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:215
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"Erreur pendant la lecture de `%s':\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:234
+msgid "New database"
+msgstr "Nouvelle base de données"
+
+#: ../Pyblio/GnomeUI/Document.py:242 ../Pyblio/GnomeUI/Document.py:246
+msgid "[no entry]"
+msgstr "[pas d'entrée]"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+msgid "[1 entry]"
+msgstr "[1 entrée]"
+
+#: ../Pyblio/GnomeUI/Document.py:244
+msgid "[%d entries]"
+msgstr "[%d entrées]"
+
+#: ../Pyblio/GnomeUI/Document.py:247
+msgid "[%d/1 entry]"
+msgstr "[%d/1 entrée]"
+
+#: ../Pyblio/GnomeUI/Document.py:248
+msgid "[%d/%d entries]"
+msgstr "[%d/%d entrées]"
+
+#: ../Pyblio/GnomeUI/Document.py:253
+msgid "[modified]"
+msgstr "[modifiée]"
+
+#: ../Pyblio/GnomeUI/Document.py:263
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"Cette base de données a été changée.\n"
+"Abandonner les changements ?"
+
+#: ../Pyblio/GnomeUI/Document.py:293
+msgid "Merge file"
+msgstr "Fusionner le fichier"
+
+#: ../Pyblio/GnomeUI/Document.py:305 ../Pyblio/GnomeUI/Document.py:359
+msgid "Open error"
+msgstr "Erreur à l'ouverture"
+
+#: ../Pyblio/GnomeUI/Document.py:329
+msgid "Merge status"
+msgstr "Résultat de la fusion"
+
+#: ../Pyblio/GnomeUI/Document.py:340
+msgid "Open file"
+msgstr "Ouvrir fichier"
+
+#: ../Pyblio/GnomeUI/Document.py:386
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"Cette base de données a été changée en dehors du programme.\n"
+"Écraser les changements ?"
+
+#: ../Pyblio/GnomeUI/Document.py:396
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"Impossible de sauver `%s' :\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:404
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"Une erreur interne s'est produite\n"
+"Essayez d'Enregistrer Sous..."
+
+#: ../Pyblio/GnomeUI/Document.py:418
+msgid "Save As..."
+msgstr "Enregistrer Sous..."
+
+#: ../Pyblio/GnomeUI/Document.py:424
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"Le fichier `%s' existe.\n"
+"Faut-il l'écraser ?"
+
+#: ../Pyblio/GnomeUI/Document.py:431
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"Lors de l'ouverture :\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:449
+msgid "Reopen error"
+msgstr "Erreur à la réouverture"
+
+#: ../Pyblio/GnomeUI/Document.py:490
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"Une entrée appelée `%s' existe déjà.\n"
+"Renommer et ajouter quand même ?"
+
+#: ../Pyblio/GnomeUI/Document.py:527
+msgid "Really remove all the entries ?"
+msgstr "Voulez-vous supprimer toutes les entrées ?"
+
+#: ../Pyblio/GnomeUI/Document.py:547
+msgid "Create new entry"
+msgstr "Créer une nouvelle entrée"
+
+#: ../Pyblio/GnomeUI/Document.py:561
+msgid "Really edit %d entries ?"
+msgstr "Voulez-vous éditer %d entrées ?"
+
+#: ../Pyblio/GnomeUI/Document.py:599
+msgid "Remove all the %d entries ?"
+msgstr "Supprimer toutes les %d entrées ?"
+
+#: ../Pyblio/GnomeUI/Document.py:601
+msgid "Remove entry `%s' ?"
+msgstr "Voulez-vous supprimer l'entrée `%s' ?"
+
+#: ../Pyblio/GnomeUI/Document.py:665 ../Pyblio/GnomeUI/Document.py:672
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"Impossible de se connecter à LyX :\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:749
+msgid ""
+"Please install bug-buddy\n"
+"to use this feature"
+msgstr ""
+"Veuillez installer `bug-buddy'\n"
+"pour utiliser cette fonction"
+
+#: ../Pyblio/GnomeUI/Document.py:762
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "Ce programme est placé sous la licence GNU GPL"
+
+#: ../Pyblio/GnomeUI/Document.py:763
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Une interface graphique pour Pybliographer"
+
+#: ../Pyblio/GnomeUI/Document.py:772
+msgid "Gnome Translation Team"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:777
+msgid "Pybliographer Home Page"
+msgstr "Page principale de Pybliographer"
+
+#: ../Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "Nom de famille, Prénom"
+
+#: ../Pyblio/GnomeUI/Editor.py:39 ../Pyblio/GnomeUI/Fields.py:39
+msgid "Text"
+msgstr "Texte"
+
+#: ../Pyblio/GnomeUI/Editor.py:322
+msgid "Day"
+msgstr "Jour"
+
+#: ../Pyblio/GnomeUI/Editor.py:331
+msgid "Month"
+msgstr "Mois"
+
+#: ../Pyblio/GnomeUI/Editor.py:340
+msgid "Year"
+msgstr "Année"
+
+#: ../Pyblio/GnomeUI/Editor.py:365
+msgid "Invalid day field in date"
+msgstr "Le champ du jour est incorrect"
+
+#: ../Pyblio/GnomeUI/Editor.py:373
+msgid "Invalid month field in date"
+msgstr "Le champ du mois est incorrect"
+
+#: ../Pyblio/GnomeUI/Editor.py:381
+msgid "Invalid year field in date"
+msgstr "Le champ de l'année est incorrect"
+
+#: ../Pyblio/GnomeUI/Editor.py:431 ../Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Effacer"
+
+#: ../Pyblio/GnomeUI/Editor.py:442 ../Pyblio/GnomeUI/Editor.py:454
+#: ../Pyblio/GnomeUI/Editor.py:457
+msgid "[ Drop an Entry here ]"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:527 ../Pyblio/GnomeUI/Fields.py:106
+msgid "Entry type"
+msgstr "Type d'entrée"
+
+#: ../Pyblio/GnomeUI/Editor.py:529
+msgid "Key"
+msgstr "Clé"
+
+#: ../Pyblio/GnomeUI/Editor.py:570
+msgid "Create Field"
+msgstr "Créer le champ"
+
+#: ../Pyblio/GnomeUI/Editor.py:625
+msgid "Extra"
+msgstr "Supplément"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:325
+msgid "Mandatory"
+msgstr "Obligatoire"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:326
+msgid "Optional"
+msgstr "Facultatif"
+
+#: ../Pyblio/GnomeUI/Editor.py:694
+msgid "Invalid key format"
+msgstr "Format de clé incorrecte"
+
+#: ../Pyblio/GnomeUI/Editor.py:702
+msgid "Key `%s' already exists"
+msgstr "La clé `%s' existe déjà"
+
+#: ../Pyblio/GnomeUI/Editor.py:763
+msgid "Error in native string parsing"
+msgstr "Erreur lors de l'analyse du texte natif"
+
+#: ../Pyblio/GnomeUI/Editor.py:776
+msgid "Edit entry"
+msgstr "Édition d'une entrée"
+
+#: ../Pyblio/GnomeUI/Editor.py:790 ../Pyblio/GnomeUI/Editor.py:846
+msgid "Native Editing"
+msgstr "Édition native"
+
+#: ../Pyblio/GnomeUI/Editor.py:868
+msgid "Standard Editing"
+msgstr "Édition standard"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+msgid "Authors"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+msgid "URL"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+msgid "Reference"
+msgstr "Références..."
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+#, fuzzy
+msgid "Date"
+msgstr "Valeur"
+
+#: ../Pyblio/GnomeUI/Fields.py:61
+#, fuzzy
+msgid "Entry types and field names configuration"
+msgstr "Configuration des Entrées"
+
+#: ../Pyblio/GnomeUI/Fields.py:69
+msgid "Name"
+msgstr "Nom"
+
+#: ../Pyblio/GnomeUI/Fields.py:72
+msgid "Type"
+msgstr "Type"
+
+#: ../Pyblio/GnomeUI/Fields.py:126
+msgid "Available"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:135
+msgid "Associated"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+msgid "Entries configuration"
+msgstr "Configuration des Entrées"
+
+#: ../Pyblio/GnomeUI/Fields.py:343
+msgid "Entry"
+msgstr "Entrée"
+
+#: ../Pyblio/GnomeUI/Fields.py:354
+msgid "Entry Name:"
+msgstr "Nom de l'entrée :"
+
+#: ../Pyblio/GnomeUI/Fields.py:359 ../glade/search-intl.c:11
+msgid "Field"
+msgstr "Champ"
+
+#: ../Pyblio/GnomeUI/Fields.py:359
+msgid "Status"
+msgstr "État"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:40
+msgid "File"
+msgstr "Fichier"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:75
+msgid "Bibliography type:"
+msgstr "Type de bibliographie :"
+
+#: ../Pyblio/GnomeUI/Index.py:94
+msgid "Add..."
+msgstr "Ajouter..."
+
+#: ../Pyblio/GnomeUI/Index.py:96
+msgid "Edit..."
+msgstr "Éditer..."
+
+#: ../Pyblio/GnomeUI/Index.py:98
+#, fuzzy
+msgid "Delete..."
+msgstr "Effacer"
+
+#: ../Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "Base de donnée complète"
+
+#: ../Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "Erreur interne durant l'évaluation"
+
+#: ../Pyblio/GnomeUI/Search.py:195
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"Pendant la compilation de `%s'\n"
+"erreur : %s"
+
+#: ../Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[Type d'entrée]"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[Valeur de la Clé]"
+
+#: ../Pyblio/GnomeUI/Utils.py:196
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr ""
+"Les erreurs suivantes se sont produites :\n"
+"\n"
+
+#: ../Pyblio/LyX.py:39
+msgid "no input pipe `%s'"
+msgstr "pas de pipe d'entrée `%s'"
+
+#: ../Pyblio/LyX.py:45
+msgid "no output pipe `%s'"
+msgstr "pas de pipe de sortie `%s'"
+
+#: ../Pyblio/Open.py:97
+msgid "method `%s' provides no opener"
+msgstr "pas de fonction d'ouverture dans `%s'"
+
+#: ../Pyblio/Open.py:105 ../Pyblio/Open.py:151
+msgid "File `%s' does not exist"
+msgstr "Le fichier `%s' n'existe pas"
+
+#: ../Pyblio/Open.py:116 ../Pyblio/Open.py:162
+msgid "don't know how to open `%s'"
+msgstr "je ne sais pas comment ouvrir `%s'"
+
+#: ../Pyblio/Open.py:143
+msgid "method `%s' provides no iterator"
+msgstr "pas d'itérateur dans la méthode `%s'"
+
+#: ../pybliographer.py:40
+msgid "This is %s, version %s"
+msgstr "Bienvenue dans %s, version %s"
+
+#: ../pybliographer.py:44 ../pybliographer.py:51
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "Ceci est un logiciel libre, sans AUCUNE GARANTIE"
+
+#: ../pybliographer.py:45
+msgid "For details, type `warranty'."
+msgstr "Pour plus de détails, tapez `warranty'."
+
+#: ../pybliographer.py:108 ../pybliographer.py:160
+msgid "%s: error: can't open file `%s'"
+msgstr "%s: erreur : impossible d'ouvrir le fichier `%s'"
+
+#: ../pybliographer.py:121
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "Pour de l'aide, tapez %s puis le mot `help' à l'invite"
+
+#: ../pybliographer.py:130
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"Commandes utiles :\n"
+"\thelp\tpour obtenir de l'aide\n"
+"\tquit\tpour quitter le programme\n"
+
+#: ../scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "usage : pybcompact <fichier latex> <fichiers bibtex...>"
+
+#: ../scripts/pybcompact.py:33
+msgid "pybcompact: error: %s\n"
+msgstr "pybcompact : erreur: %s\n"
+
+#: ../scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "pas d'entrée"
+
+#: ../scripts/pybcompact.py:141
+msgid "can't find the following entries: %s"
+msgstr "impossible de trouver les entrées suivantes : %s"
+
+#: ../scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "usage : pybconvert <source>..<cible> <entrée> [<sortie>]"
+
+#: ../scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr "pybconvert : mauvaise spécification de format"
+
+#: ../scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr "usage : pybformat [fichiers bibtex...]\n"
+
+#: ../scripts/pybformat.py:37
+msgid "pybformat: error: %s\n"
+msgstr "pybformat : erreur: %s\n"
+
+#: ../scripts/pybformat.py:43
+msgid "pybformat: warning: %s\n"
+msgstr "pybformat : attention: %s\n"
+
+#: ../scripts/pybformat.py:140 ../scripts/pybtex.py:85
+msgid "can't find style `%s'"
+msgstr "Impossible de trouver le style `%s'"
+
+#: ../scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "usage : pybtex <fichier latex> [fichiers bibtex...]"
+
+#: ../scripts/pybtex.py:37
+msgid "pybtex: error: %s\n"
+msgstr "pybtex : erreur: %s\n"
+
+#: ../scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "pybtex : attention : les clés suivantes n'ont pas été trouvées"
+
+#: ../scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "pas de style défini"
+
+#: ../glade/format-intl.c:8
+msgid "Format entries"
+msgstr "Formatter les entrées"
+
+#: ../glade/format-intl.c:9
+msgid "Bibliography style:"
+msgstr "Type de bibliographie :"
+
+#: ../glade/format-intl.c:10
+msgid "Output format:"
+msgstr "Format de sortie :"
+
+#: ../glade/format-intl.c:11
+#, fuzzy
+msgid "Output file:\n"
+msgstr "Fichier de sortie :"
+
+#: ../glade/format-intl.c:13 ../glade/format-intl.c:14
+#: ../glade/medline-intl.c:12 ../glade/medline-intl.c:17
+#: ../glade/medline-intl.c:22 ../glade/medline-intl.c:23
+#: ../glade/medline-intl.c:24 ../glade/medline-intl.c:25
+#: ../glade/medline-intl.c:26 ../glade/medline-intl.c:27
+#: ../glade/medline-intl.c:28 ../glade/medline-intl.c:29
+#: ../glade/medline-intl.c:31 ../glade/medline-intl.c:33
+#: ../glade/search-intl.c:13 ../glade/search-intl.c:14
+#: ../glade/search-intl.c:17
+msgid "*"
+msgstr ""
+
+#: ../glade/medline-intl.c:8
+#, fuzzy
+msgid "Medline Query"
+msgstr "Recherche Medline..."
+
+#: ../glade/medline-intl.c:9
+#, fuzzy
+msgid "Enter your Medline Query"
+msgstr ""
+"Entrez le terme\n"
+"à chercher dans Medline"
+
+#: ../glade/medline-intl.c:10
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+
+#: ../glade/medline-intl.c:13
+#, fuzzy
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr "Nombre maxi. de résultats"
+
+#: ../glade/medline-intl.c:15
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+
+#: ../glade/medline-intl.c:18
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+
+#: ../glade/medline-intl.c:20
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+
+#: ../glade/medline-intl.c:30
+msgid "From:"
+msgstr ""
+
+#: ../glade/medline-intl.c:32
+msgid "To:"
+msgstr ""
+
+#: ../glade/medline-intl.c:34
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+
+#: ../glade/medline-intl.c:36
+msgid "Limited to:"
+msgstr ""
+
+#: ../glade/pyblio-intl.c:8
+#, fuzzy
+msgid "Pybliographer"
+msgstr "Page principale de Pybliographer"
+
+#: ../glade/pyblio-intl.c:9
+msgid "_New"
+msgstr "_Nouveau..."
+
+#: ../glade/pyblio-intl.c:10
+#, fuzzy
+msgid "Merge With..."
+msgstr "_Fusionner avec..."
+
+#: ../glade/pyblio-intl.c:11
+msgid "Medline Query..."
+msgstr "Recherche Medline..."
+
+#: ../glade/pyblio-intl.c:12
+msgid "Previous Documents"
+msgstr "Documents précédents"
+
+#: ../glade/pyblio-intl.c:13
+msgid "_Add..."
+msgstr "_Ajouter..."
+
+#: ../glade/pyblio-intl.c:14
+msgid "_Edit..."
+msgstr "_Editer..."
+
+#: ../glade/pyblio-intl.c:15
+#, fuzzy
+msgid "_Delete..."
+msgstr "Effacer"
+
+#: ../glade/pyblio-intl.c:16
+msgid "S_ort..."
+msgstr "_Trier..."
+
+#: ../glade/pyblio-intl.c:17 ../glade/pyblio-intl.c:25
+msgid "Cite"
+msgstr "Citer"
+
+#: ../glade/pyblio-intl.c:18
+#, fuzzy
+msgid "Cite..."
+msgstr "Citer"
+
+#: ../glade/pyblio-intl.c:19
+#, fuzzy
+msgid "Format..."
+msgstr "_Formatter..."
+
+#: ../glade/pyblio-intl.c:20
+#, fuzzy
+msgid "Settings"
+msgstr "_Paramètres"
+
+#: ../glade/pyblio-intl.c:21
+#, fuzzy
+msgid "Fields..."
+msgstr "_Champs..."
+
+#: ../glade/pyblio-intl.c:22
+#, fuzzy
+msgid "Entries..."
+msgstr "_Entrées..."
+
+#: ../glade/pyblio-intl.c:23
+#, fuzzy
+msgid "Open File"
+msgstr "Ouvrir fichier"
+
+#: ../glade/pyblio-intl.c:24
+#, fuzzy
+msgid "Save File"
+msgstr "Sauver comme"
+
+#: ../glade/search-intl.c:8 ../glade/search-intl.c:9
+msgid "Search"
+msgstr "Chercher"
+
+#: ../glade/search-intl.c:10
+msgid "Close"
+msgstr "Fermer"
+
+#: ../glade/search-intl.c:12
+msgid "Pattern"
+msgstr "Valeur"
+
+#: ../glade/search-intl.c:15
+msgid "Simple Search"
+msgstr "Recherche simple"
+
+#: ../glade/search-intl.c:16
+msgid "Query"
+msgstr ""
+
+#: ../glade/search-intl.c:18
+msgid "Expert Search"
+msgstr "Recherche avancée"
+
+#: ../glade/sort-intl.c:8
+msgid "Select sort criterions"
+msgstr "Choisir les critères de tri"
+
+#: ../glade/sort-intl.c:9
+msgid "Set as default"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Search Command:"
+#~ msgstr "Commande de recherche :"
+
+#~ msgid "Sort direction"
+#~ msgstr "Sens du tri"
+
+#~ msgid "Sort criterions"
+#~ msgstr "Critères de tri"
+
+#~ msgid "Reorder"
+#~ msgstr "Reclasser"
+
+#~ msgid "Groups the active fields on the top of the list"
+#~ msgstr "Regroupe les champs actifs en haut de la list"
+
+#~ msgid "Unselect all"
+#~ msgstr "Tout déselectionner"
+
+#~ msgid "Removes all the sort criterions"
+#~ msgstr "Supprime tous les critères de tri"
+
+#~ msgid "_Previous Documents"
+#~ msgstr "_Documents précédents"
+
+#~ msgid "About..."
+#~ msgstr "À propos..."
+
+#~ msgid "Submit a Bug Report"
+#~ msgstr "Envoyer un rapport de Bug"
+
+#~ msgid "_Delete"
+#~ msgstr "E_ffacer"
+
+#~ msgid "_Cite"
+#~ msgstr "_Citer"
+
+#~ msgid "_File"
+#~ msgstr "_Fichier"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editer"
+
+#~ msgid "_Help"
+#~ msgstr "_Aide"
+
+#~ msgid "Open"
+#~ msgstr "Ouvrir"
+
+#~ msgid "Save"
+#~ msgstr "Sauver"
+
+#~ msgid "Find"
+#~ msgstr "Trouver"
+
+#~ msgid "Search string"
+#~ msgstr "Terme cherché"
+
+#~ msgid "Select style"
+#~ msgstr "Choix du style"
+
+#~ msgid "Select output file"
+#~ msgstr "Choisir le fichier de sortie"
+
+#~ msgid ""
+#~ "Item `%s':\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Élément `%s' :\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "True"
+#~ msgstr "Vrai"
+
+#~ msgid "False"
+#~ msgstr "Faux"
+
+#~ msgid "Value"
+#~ msgstr "Valeur"
+
+#~ msgid "Fields configuration"
+#~ msgstr "Configuration des Champs"
+
+#~ msgid "Name:"
+#~ msgstr "Nom :"
+
+#~ msgid "Type:"
+#~ msgstr "Type :"
+
+#~ msgid "In use"
+#~ msgstr "Utilisé"
+
+#~ msgid "Yes"
+#~ msgstr "Oui"
+
+#~ msgid "New text"
+#~ msgstr "Nouveau texte"
+
+#~ msgid "an Instance of `%s'"
+#~ msgstr "un Instance de `%s'"
+
+#~ msgid "Error"
+#~ msgstr "Erreur"
+
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "Formatting Style:"
+#~ msgstr "Style de format:"
+
+#~ msgid "entry has no key `%s'"
+#~ msgstr "L'entrée n'a pas de clé `%s'"
+
+#~ msgid "error: field `%s' appears more than once in the definition of `%s'"
+#~ msgstr ""
+#~ "erreur : le champ `%s' apparait plusieurs fois dans la définition de `%s'"
+
+#~ msgid "database `%s' is unknown in this Reference"
+#~ msgstr "la base de données `%s' est inconnue dans cette Reference"
+
+#~ msgid "can't update a database of type Reference ()"
+#~ msgstr "impossible de mettre à jour une base de données de type Reference"
+
+#~ msgid "in entry %s: nested crossrefs"
+#~ msgstr "dans l'entrée `%s' : références croisées imbriquées"
+
+#~ msgid "Edit the field in its Native format"
+#~ msgstr "Éditer le champ dans son format natif"
+
+#~ msgid "Drag an Entry to define a Cross-Reference"
+#~ msgstr "Déplacer une Entrée ici pour définir une référence croisée"
+
+#~ msgid "Remove the current Cross-Reference"
+#~ msgstr "Supprimer la référence croisée"
+
+#~ msgid "Add Extra Field"
+#~ msgstr "Ajouter un champ supplémentaire"
+
+#~ msgid "Cross-Reference `%s' is unexistent in the database"
+#~ msgstr "La référence croisée `%s' n'existe pas dans cette base"
+
+#~ msgid "Invalid identifier `%s'"
+#~ msgstr "L'identificateur `%s' est incorrect"
+
+#~ msgid "Identifier `%s' already exists"
+#~ msgstr "L'identificateur `%s' existe déjà"
+
+#~ msgid "Quit"
+#~ msgstr "Quitter"
+
+#~ msgid "Copy"
+#~ msgstr "Copier"
+
+#~ msgid "Cut"
+#~ msgstr "Couper"
+
+#~ msgid "New..."
+#~ msgstr "Nouveau..."
+
+#~ msgid "Search..."
+#~ msgstr "Chercher"
+
+#~ msgid "Sort by Key"
+#~ msgstr "Trier par Clé"
+
+#~ msgid "Sort by Type"
+#~ msgstr "Trier par Type"
+
+#~ msgid "Cite in LyX"
+#~ msgstr "Citer dans LyX"
+
+#~ msgid "Configure"
+#~ msgstr "Configurer"
+
+#~ msgid "Exit"
+#~ msgstr "Quitter"
+
+#~ msgid "Welcome to Pybliographic"
+#~ msgstr "Bienvenue dans Pybliographic"
+
+#~ msgid "Modified database `%s' [%s, %s]"
+#~ msgstr "Base de données modifiée `%s' [%s, %s]"
+
+#~ msgid "Database `%s' [%s, %s]"
+#~ msgstr "Base de données `%s' [%s, %s]"
+
+#~ msgid "Database is modified.\n"
+#~ msgstr "Base de données modifiée\n"
+
+#~ msgid "Discard changes ?"
+#~ msgstr "Oublier les modifications ?"
+
+#~ msgid "Quit without saving ?"
+#~ msgstr "Quitter sans sauver ?"
+
+#~ msgid ""
+#~ "Can't save file:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Impossible de sauver le fichier:\n"
+#~ "%s"
+
+#~ msgid "Not yet implemented..."
+#~ msgstr "Pas encore implémenté..."
+
+#~ msgid ""
+#~ "Please, create a new database first.\n"
+#~ "Use File/New for example"
+#~ msgstr ""
+#~ "Veuillez créer une nouvelle base avant tout.\n"
+#~ "Utilisez le menu Fichier/Nouveau pour cela"
+
+#~ msgid "editing is disabled in this database"
+#~ msgstr "L'édition n'est pas autorisée dans cette base"
+
+#~ msgid ""
+#~ "Submit a bug report\n"
+#~ " using bug-buddy"
+#~ msgstr ""
+#~ "Envoyer un rapport de Bug\n"
+#~ "en utilisant `bug-buddy'"
+
+#~ msgid "Please open a database first"
+#~ msgstr "Veuillez ouvrir une base de données"
+
+#~ msgid "Bibliography"
+#~ msgstr "Bibliographie"
+
+#~ msgid "Ready to search !"
+#~ msgstr "Prêt à chercher !"
+
+#~ msgid "found %d matches"
+#~ msgstr "%d entrées trouvées"
+
+#~ msgid "%d matches in this node"
+#~ msgstr "%d entrées dans ce noeud"
+
+#~ msgid "edition is disabled in this database"
+#~ msgstr "L'édition n'est pas autorisée dans cette base"
+
+#~ msgid "Cross-Reference `%s' is unexistant in the database"
+#~ msgstr "La référence croisée `%s' n'existe pas dans cette base"

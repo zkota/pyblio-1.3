@@ -1,0 +1,74 @@
+<chapter>
+  <title>Personalizzazione</title>
+  
+  <para>La configurazione del sistema &egrave pesantemente basata su un sistema di moduli di
+    pyton. I file di configurazione sono standard script di  &pyb; (cio&egrave 
+    funzioni e classi extra scritti in python che fanno uso di &pyb; ),
+    la cui caratteristica speciale &egrave di essere automaticamente analizzati
+    all'avvio o quando ce n'&egrave bisogno.</para>
+  
+  <sect1>
+    <title>File coinvolti</title>
+    
+    <para>Il primo file a essere analizzato &egrave
+      <filename>${prefix}/share/pybliographer/pybrc.py</filename>.  Serve
+      come bootstrap  per il meccanismo generale di configurazione e
+      definisce:</para>
+    
+    <itemizedlist>
+      <listitem>
+	<para>i formati di input e output disponibili</para>
+      </listitem>
+      
+      <listitem>
+	<para>dove trovare le directory di configurazione.</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>Una directory di configurazione tiene una  lista di file  che sono
+    analizzati quando ce n'&egrave bisogno.  Per esempio, se un metodo richiede
+    dati di configurazione per il modulo di bibtex, sar&agrave importato
+    il file corrispondente in questa directory.</para>
+
+    <para> Questo meccanismo permette pi&ugrave flessibilit&agrave per aggiungere nuovi formati:
+      il nuovo formato pu&ograve essere installato con una configurazione predefinita
+      senza fare confusione con il file di configurazione globale. In aggiunta,
+      il programma importa solo quello di cui ha bisogno, diminuendo il tempo
+      di avvio.</para>
+    
+    <para>In fine, se l'utente fornisce un file chiamato
+    <filename>.pybrc.py</filename> nella sua home directory, allora questo
+      file &egrave analizzato. Naturalmente si pu&ograve anche definire una
+      directory di configurazione privata e sovrascrivere quello che &egrave
+      stato definito prima.</para>
+  </sect1>
+  
+  <sect1>
+    <title>Il modulo <classname>Config</classname></title>
+    
+    <para>Tutti i dati che possono essere configurati dovrebbero
+    essere maneggiati dal modulo chiamato <classname>Config</classname>.  
+    Esso fornisce un'interfaccia standard per impostare e ottenere la
+    configurazione degli oggetti.</para>
+    
+  </sect1>
+  
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,59 @@
+<refentry id="class-url">
+  <refnamediv>
+    <refname>Fields.URL</refname>
+    <refpurpose>Tiene un URL e d&agrave accesso ai suoi componenti</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Fields.URL</classname>:
+    <link linkend="mem-url-url"><varname>self.url</varname></link>
+
+    def <link linkend="meth-url-init">__init__</link> (self, url):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title> 
+
+    <para>URL immagazzina in modo omogeneo i nomi dei file e gli oggetti generici,
+    cos&igrave che possono averne l'accesso dai medesimi metodi. Un oggetto URL
+    &egrave hashabile e pu&ograve essere usato come la chiave di un dizionario.</para>
+  </refsect1>
+
+  <refsect1>
+    <title>Membri</title>
+    <refsect2 id="mem-url-url">
+      <title>self.url</title>
+      <para>Tiene la tupla che descrive l'URL.</para>
+    </refsect2>
+  </refsect1>
+
+  <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-url-init">
+      <title>__init__ (self, url)</title>
+      <para>Crea un'instanza di un URL dalla descrizione della sua stringa. Nel caso
+      di un file viene eseguita l'espansione della directory dell'utente.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

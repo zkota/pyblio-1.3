@@ -1,0 +1,124 @@
+<refentry id="class-entry">
+  <refnamediv>
+    <refname>Base.Entry</refname>
+    <refpurpose>Holds all the fields describing a bibliographic entry</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Base.Entry</classname>:
+    <link linkend="mem-entry-id"><varname>self.id</varname></link>
+    <link linkend="mem-entry-key"><varname>self.key</varname></link>
+    <link linkend="mem-entry-type"><varname>self.type</varname></link>
+
+    def <link linkend="meth-entry-init">__init__</link>    (self, key = None, type = None, dict = None):
+    def <link linkend="meth-entry-keys">keys</link>        (self):
+    def <link linkend="meth-entry-has-key">has_key</link>     (self, key):
+    def <link linkend="meth-entry-field-and-loss">field_and_loss</link> (self, key):
+    def <link linkend="meth-entry-getitem">__getitem__</link> (self, key):
+    def <link linkend="meth-entry-setitem">__setitem__</link> (self, name, value):
+    def <link linkend="meth-entry-delitem">__delitem__</link> (self, name):
+    def <link linkend="meth-entry-add">__add__</link>     (self, other):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Usage</title> <para>An Entry holds all the fields that
+    describe a bibliographic item. It basically behaves like a
+    dictionnary, whose values are instances of Fields.</para> 
+
+    <para>An entry can be pickled and unpickled to be transferred
+    between application windows (copy/paste or drag and drop for
+    example).</para>
+  </refsect1>
+
+  <refsect1>
+    <title>Members</title>
+
+    <refsect2 id="mem-entry-id">
+      <title>self.id</title>
+      <para>String representation of the Entry specific class.</para>
+    </refsect2>
+
+    <refsect2 id="mem-entry-key">
+      <title>self.key</title>
+      <para>An instance of <link linkend="class-key">Key</link>, which
+      is the key by which the entry can be retrieved from its database.</para>
+    </refsect2>
+
+    <refsect2 id="mem-entry-type">
+      <title>self.type</title>
+      <para>An instance of EntryDescription, that holds type
+      information for all the fields of the entry.</para>
+    </refsect2>
+  </refsect1>
+
+  <refsect1>
+    <title>Methods</title>
+    
+    <refsect2 id="meth-entry-init">
+      <title>__init__ (self, key = None, type = None, dict = None)</title>
+      <para>Creates a new entry and initializes some of its fields.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-keys">
+      <title>keys (self)</title>
+      <para>Returns a list of the available fields</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-has-key">
+      <title>has_key (self, key)</title>
+      <para>Indicates if the entry holds the given field</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-field-and-loss">
+      <title>field_and_loss (self, fieldname)</title>
+      <para>Returns a 2-uplet (string, bool), where the first element
+      is the field, and the seconf a flag indicating if it has been
+      converted with no loss</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-getitem">
+      <title>__getitem__ (self, fieldname)</title>
+      <programlisting>
+field = entry [fieldname]
+</programlisting>
+      <para>Returns a field given its name</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-setitem">
+      <title>__setitem__ (self, fieldname, field)</title>
+      <para>Sets a field.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-delitem">
+      <title>__delitem__ (self, key)</title>
+      <para>Removes a field.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-add">
+      <title>__add__ (self, entry)</title>
+      <para>Merges two entries together, taking only the missing
+      fields from the second entry.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

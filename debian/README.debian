@@ -1,0 +1,14 @@
+pybliographer for Debian
+----------------------
+
+ Pybliographer is a tool for working with bibliographic databases. It
+ provides a general framework that can be used to manipulate these
+ databases with a simple graphical interface, but that can also be easily
+ extended by the mean of a scripting language, to fit a wide range of
+ needs. It offers interaction with LyX for insertion of bibliographic data.
+
+For more information, please consult the documentation at:
+
+	http://www.gnome.org/pybliographer
+
+Paul Seelig <pseelig@debian.org>, Sun,  9 Apr 2000 21:40:49 +0200

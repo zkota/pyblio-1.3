@@ -1,0 +1,351 @@
+  <chapter>  
+      <title>L'interfaccia grafica</title>
+      
+    <para>L'iterfaccia grafica utente &egrave chiamata &pyc;. Fornisce un semplice
+    accesso alle pi&ugrave importanti e comuni caratteristiche del motore sottostante,
+    &pyb;   e ti permette la ricerca, l'ordinamento e la modifica di voci
+    bibliografiche.</para>
+
+  <sect1>
+    <title>La creazione di un nuovo database</title> 
+
+    <para>Quando &pyc; &egrave avviato, puoi immediatamente iniziare a creare
+    un nuovo database.  Il tipo di database sar&agrave  determinato
+    quando lo salverai la prima volta.</para>
+
+    <para>Per aggiungere una nuova voce, puoi usare il menu <menuchoice>
+	<guimenu>Modifica</guimenu>       <guimenuitem>Aggiunge...</guimenuitem>
+	</menuchoice> o clicca col pulsante destro nella finestra della lista
+	e seleziona <guibutton>Aggiunge...</guibutton> </para>
+    
+    <para>Puoi trovare maggiori informazioni circa l'uso della finestra principale ne
+      <xref linkend="gui-navigate">.</para>
+
+  </sect1>
+
+  <sect1>
+    <title>L'apertura di un database</title>
+    
+    <para>Per aprire un database esistente, vai nel menu
+    <guimenu>File</guimenu> e seleziona
+      <menuchoice>
+      <guimenu>File</guimenu>
+	<guimenuitem>Apri</guimenuitem>
+      </menuchoice>.</para>
+    
+    <Figure id="figopen">
+      <Title>L'apertura di un database</Title> 
+      <Graphic FileRef="open"></Graphic>
+    </Figure>
+    
+    <para>Apparir&agrave una finestra di dialogo per la selezione del file (vedi <xref linkend="figopen">)
+    e ti lascer&agrave selezionare un nome di file o inserire un URL. Pu&ograve anche essere
+    selezionato il tipo di database. Nel caso di un nuovo database, &egrave obbligatorio
+    selezionare un tipo, dal momento che durante l'apertura di un database
+    esistente, il tipo pu&ograve essere indovinato se selezioni <guibutton>- Auto
+    -</guibutton>.</para>
+    
+  </sect1>
+  
+  <sect1 id="gui-navigate">
+  <title>Navigare nelle voci</title>
+  
+        <para>Dopo aver aperto un database o averne creato uno nuovo, la finestra principale (vedi
+	<xref linkend="figmain">)  mostra una lista di tutte le voci nella parte
+	pi&ugrave alta della finestra.  Il cliccare su una voce mostra l'intero contenuto
+	nella parte pi&ugrave bassa della finestra.  &Egrave anche possibile usare le frecce
+	per navigare nella lista superiore.</para>
+    
+    <para>Cliccando su una voce mentre &egrave premuto il tasto
+      <keysym>Shift</keysym>, la selezione si espande fino alla voce cliccata.
+      Un click mentre &egrave premuto il tasto <keysym>Control</keysym> seleziona
+      la voce senza alterare lo stato del resto della selezione.</para>
+
+    <Figure id="figmain">
+      <Title>La finestra principale</Title> 
+      <Graphic FileRef="main"></Graphic>
+    </Figure>
+    
+    <para>Cliccando col tasto destro del mouse nella lista si apre un menu
+      contestuale. Con questo menu tu puoi:</para>
+    
+    <itemizedlist>
+      <listitem>
+	<para>aggiungere una nuova voce</para>
+      </listitem>
+      <listitem>
+	<para>modificare le voci attualmente selezionate</para>
+      </listitem>
+      <listitem>
+	<para>eliminare le voci attualmente selezionate</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>Notate che alcune opzioni di questi menu possono essere disabilitate
+      per un dato database o una data voce, significa che l'azione corrispondente
+      non pu&ograve essere compiuta.</para>
+    
+    <para>Cliccando sui titoli di colonna della lista, ordinerai le voci
+      in accordo al campo corrispondente.</para>
+  </sect1>
+  
+<sect1>
+  <title>Ricerca</title>
+	  
+<para>&pyc; offre un meccanismo di ricerca abbastanza potente. Per aprire
+la finestra di dialogo di ricerca, clicca su <menuchoice>
+<guimenu>Modifica</guimenu><guimenuitem>Ricerca</guimenuitem>
+</menuchoice> nel menu.
+					      
+La finestra di dialogo che appare (vedi <xref linkend="figsearch">) mostra
+in alto un modulo di ricerca.</para>
+					  
+<Figure id="figsearch">
+<Title>La finestra di dialogo Ricerca</Title>
+<Graphic FileRef="search"></Graphic>
+</Figure>
+  
+<sect2>
+<title>Ricerche semplici</title>
+											    
+      <para>Con la ricerca semplice, puoi selezionare il campo che sar&agrave
+          cercato e puoi specificare un'espressione regolare da eguagliare.
+	 <guibutton>- any  field -</guibutton> significa che tutti i campi
+	 esistenti saranno cercati.  Questo generalmente richiede pi&ugrave
+	 tempo.</para>
+
+    </sect2>
+    
+    <sect2>
+      <title>Ricerche avanzate</title>
+      
+      <para>Una ricerca avanzata &egrave un'espressione che assomiglia a:</para>
+      
+      <programlisting>has('author','nome') | -has('title','testo')</programlisting>
+      
+<para> Una tale espressione significa: seleziona le voci dove il
+    campo <emphasis>author</emphasis> eguaglia
+    <emphasis>nome</emphasis>,  o  (simbolo <symbol>|</symbol>)  dove
+    il campo <emphasis>title</emphasis> <emphasis>non</emphasis>
+    eguaglia <emphasis>testo</emphasis>.  Il booleano <symbol>and</symbol> &egrave
+    <symbol>&</symbol>.</para>
+	     
+    <para>Ci sono altri comandi disponibili per questo tipo di
+    ricerca:</para>
+      
+      <itemizedlist>
+	<listitem>
+	  <para><command>has_key(<varname>nomechiave</varname>)</command>
+	    ricerca solo un nome chiave.</para>
+	</listitem>
+	<listitem>
+	  <para><command>has_type(<varname>tipo</varname>)</command>
+	    ricerca le voci di un dato tipo.</para>
+	</listitem>
+	<listitem>
+	  <para><command>any_has(<varname>valore</varname>)</command>
+	    ricerca un dato valore in tutti i campi di una voce.</para>
+	</listitem>
+	<listitem>
+	  <para><command>before(<varname>field</varname>,
+	      <varname>anno</varname>,        <varname>mese</varname>,
+	      <varname>giorno</varname>)</command>  ricerca le voci dove
+              il campo della data &egrave anteriore a una data
+              specificata.</para>
+	</listitem>
+	<listitem>
+	  <para><command>after(<varname>field</varname>,
+	      <varname>anno</varname>,        <varname>mese</varname>,
+	      <varname>giorno</varname>)</command>ricerca le voci dove
+              il campo della data &egrave posteriore a una data
+              specificata.</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    
+    <sect2>
+      <title>Ricerche gerarchiche</title>
+      
+<para>Dopo una ricerca solo le voci selezionate sono mostrate nella
+finestra principale. Diventa conveniente selezionare uno specifico autore
+e poi scorrere, per esempio, le sue pubblicazioni.</para>
+		
+<para> In aggiunta, i risultati di tutte le ricerche sono tenute
+in un albero che si trova sotto il modulo di ricerca. Quindi, una nuova
+ricerca pu&ograve essere il raffinamento di una precedente. Se selezioni la voce albero
+corrispondente per esempio a tutti gli articoli scritti da un certo
+Nostradamus, sarai in grado di selezionare solo quelle in cui il titolo
+contiene la parola eclisse.</para>
+					    
+<para>Cliccando col tasto destro in questo albero appare un menu
+contestuale che ti permette di rimuovere le inutili ricerche.</para>
+							 
+    </sect2>
+    
+  </sect1>
+
+  <sect1>
+    <title>L'ordinamento</title>
+
+    <para>Cliccando sul titolo di ciascuna colonna nell'indice principale si avr&agrave
+    un modo elementare di ordinare un database. Un metodo molto pi&ugrave
+    potente &egrave di aprire la finestra di dialogo di ordinamento (in <menuchoice>
+    <guimenu>Modifica</guimenu> <guimenuitem>Ordina</guimenuitem>
+    </menuchoice>). Questo menu, mostrato in <xref linkend="figsort">, d&agrave
+    una lista di campi che possono essere usati come criteri di ordinamento, pi&ugrave
+    un flag che indica come sono attualmente usati. Cliccando sulla colonna sinistra,
+    &egrave possibile scegliere come il campo sar&agrave usato:
+      <itemizedlist>
+	<listitem>
+	  <para>Niente significa che il campo non &egrave in uso.</para>
+	</listitem>
+	<listitem>
+	  <para>Un <symbol>&gt;</symbol> significa che l'ordinamento &egrave
+	    <emphasis>ascendente</emphasis>.</para>
+	</listitem>
+	<listitem>
+	  <para>Un <symbol>&lt;</symbol> significa che l'ordinamento &egrave
+	    <emphasis>discendente</emphasis>.</para>
+	</listitem>
+      </itemizedlist>
+    </para>
+    <para>Cliccando sul bottone <guibutton>Riordina</guibutton>, &egrave possibile
+    raggruppare i campi attivati in cima alla lista, per un accesso pi&ugrave
+    conveniente.</para>
+    <para>L'ordine in cui l'ordinamento &egrave eseguito dipende dall'ordine
+    nella lista. Per modificare quest'ordine, semplicemente fai drag and drop su un
+    oggetto per cambiare la sua posizione.</para>
+
+      <Figure id="figsort">
+	<Title>La finestra di ordinamento</Title> 
+	<Graphic FileRef="sort"></Graphic>
+      </Figure>
+  </sect1>
+
+  <sect1 id="gui-edit">
+    <title>La modifica</title>
+
+    <sect2>
+      <title>Editing standard</title>
+      
+      <Figure id="figedit">
+	<Title>La finestra di modifica</Title> 
+	<Graphic FileRef="edit"></Graphic>
+      </Figure>
+      
+      <para>La finestra di modifica &egrave rappresentata    in    <xref
+      linkend="figedit">.  Sulla destra di ciascun campo,  un simbolo indica
+      se &pyb;  &egrave stato in grado di restituire  tutta l'informazione data
+      in quel campo. Per esempio, un campo BibTeX  contenente un comando
+      sconosciuto non pu&ograve essere rappresentato correttamente.  In quel
+      caso, &pyb; fornisce una rappresentazione falsa (di solito il nome del
+      comando) e  indica che non &egrave in grado di fare un buon lavoro in questo
+      campo impostando una palla rossa sulla sua destra, invece di una verde.</para>
+    <warning>
+      <para>Se modifichi una tale voce, puoi perdere le informazioni addizionali
+      in essa contenute. Per evitare questo,  considera l'uso dell'editing 
+      nativo(vedi <xref linkend="gui-native">).</para>
+    </warning>
+
+    <para>Per modificare le voci,  semplicemente  digita il testo corrispondente, senza
+    considerare il formato usato per il database. Per esempio, con
+    <productname>BibTeX</productname>, non aggiungere nessun <symbol>{</symbol>
+    o  carattere speciale per influenzare il risultato, cos&igrave saranno citate
+    dal sistema.  Per i campi che richiedono nomi (come autore ed
+    editore), usa il seguente formato: digita un nome per linea, nell'ordine
+    <emphasis>cognome, lignaggio, nome</emphasis>.</para>
+	    
+    <para>Le seguenti scorciatoie della tastiera sono disponibili durante
+      la modifica (in aggiunta a quelle standard fornite da Gtk):</para>
+    <itemizedlist>
+      <listitem>
+	<para><keysym>Ctrl-TAB</keysym> per saltare al campo successivo</para>
+      </listitem>
+	<listitem>
+	<para><keysym>Shift-TAB</keysym> per saltare al campo precedente</para>
+      </listitem>
+      <listitem>
+	<para><keysym>Ctrl-Enter</keysym> per accettare le modifiche</para>
+      </listitem>
+      <listitem>
+	<para><keysym>Escape</keysym> per abbandonare la modifica</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Per specificare un riferimento incrociato a un'altra voce,
+      solleva appena la voce dalla lista principale al campo
+        <guilabel>Riferimento incrociato</guilabel>. Per rimuovere un riferimento incrociato,
+	  solleva sul campo una selezione vuota.
+    Per deselezionare tutte le voci, potresti usare il tasto
+      <keysym>Control</keysym>  mentre clicchi su una voce.</para>
+
+    </sect2>
+
+    <sect2 id="gui-native">
+      <title>Editing nativo</title>
+
+      <para>Per i database come BibTeX che forniscono una specifica sintassi
+        (chiamata sintassi <emphasis>nativa</emphasis>), &egrave possibile
+	modificare direttamente una voce nel suo formato. Clicca appena il bottone
+	chiamato <guibutton>Editing nativo</guibutton> in fondo alla finestra
+	e digita la voce nel suo formato nativo.
+      </para>
+      
+      <para>&Egrave anche possibile digitare i comandi nativi nella normale
+	finestra di modifica. Per esempio, se vuoi usare i comandi speciali
+	di LaTeX come <command>\textbf</command> in un titolo, puoi digitarli
+	direttamente nel campo Title precedendo il testo com il simbolo
+	<symbol>@</symbol> (come primo carattere). Dopo questo simbolo, 
+	devi usare tutte le convenzioni di BibTeX (graffe, backslash,...), 
+	e nessuna di loro sar&agrave modificata da &pyb;.</para>
+
+    </sect2>
+    
+  </sect1>
+
+  <sect1>
+  <title>Usare &pyc; con <productname>LyX</productname></title>
+      
+<para>&Egrave possibile usare direttamente &pyb; per inserire riferimenti
+bibliografici dentro LyX. Per far ci&ograve, bisogna prima avviare
+LyX <emphasis>server</emphasis>. Nel file di configurazione
+<filename>~/.lyx/lyxrc</filename>, aggiungi la linea seguente prima
+di avviare LyX:</para>
+				    
+<programlisting>
+\serverpipe "~/.lyx/lyxpipe"
+</programlisting>
+					  
+    <para>Poi,  in &pyc;,  &egrave possibile selezionare una o pi&ugrave
+      voci e inserire i loro riferimenti dentro un Lyx in esecuzione 
+      semplicemente cliccando  il bottone <guibutton>Cita</guibutton> o selezionando
+      il menu
+      <menuchoice><guimenu>Cita</guimenu>
+	<guimenuitem>Cita</guimenuitem>
+      </menuchoice>.</para>
+
+      <para>Per il momento, &egrave compito dell'utente assicurarsi che
+    inserisca le voci corrispondenti al database attualmente usato.
+    &pyc;  non tratta l'intero lavoro di generazione bibliografica,
+    cos&igrave che &egrave necessario usare  <command>bibtex</command> come
+    descritto nella documentazione di LyX.</para>
+  </sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

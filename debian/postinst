@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo ""
+echo "Byte-compiling python files..."
+echo ""
+/usr/bin/python -c "import compileall ; compileall.compile_dir ('"/usr/share/pybliographer"');"
+echo ""
+echo "Done!"
+echo ""
+

@@ -1,0 +1,905 @@
+# pybliographer sk.po
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Zdenko Podobný <zdpo@mailbox.sk>, 2002.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Oct  9 22:20:02 2003\n"
+"PO-Revision-Date: 2002-02-07 16:24+0100\n"
+"Last-Translator: Zdenko Podobný <zdpo@mailbox.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+
+#: ../Pyblio/Autoload.py:57
+msgid "warning: can't import %s: %s"
+msgstr "varovanie: nemô¾em importova» %s: %s"
+
+#: ../Pyblio/Config.py:53
+msgid "value of `%s' should be of type %s"
+msgstr "hodnota `%s' by mala ma» typ %s"
+
+#: ../Pyblio/Config.py:204
+msgid "String"
+msgstr "Re»azec"
+
+#: ../Pyblio/Config.py:213
+msgid "Boolean"
+msgstr "Logická hodnota"
+
+#: ../Pyblio/Config.py:232
+msgid "Integer"
+msgstr "Celé èíslo"
+
+#: ../Pyblio/Config.py:234
+msgid "Integer under %d"
+msgstr "Celé èíslo pod %d"
+
+#: ../Pyblio/Config.py:236
+msgid "Integer over %d"
+msgstr "Celé èíslo nad %d"
+
+#: ../Pyblio/Config.py:238
+msgid "Integer between %d and %d"
+msgstr "Celé èíslo od %d po %d"
+
+#: ../Pyblio/Config.py:250
+msgid "Element in `%s'"
+msgstr "Element v `%s'"
+
+#: ../Pyblio/Config.py:270
+msgid "Tuple (%s)"
+msgstr "Doprovod (%s)"
+
+#: ../Pyblio/Config.py:291
+msgid "List (%s)"
+msgstr "Zoznam (%s)"
+
+#: ../Pyblio/Config.py:316
+msgid "Dictionary (%s, %s)"
+msgstr "Slovník  (%s, %s)"
+
+#: ../Pyblio/Fields.py:265
+msgid "Illegal year value"
+msgstr "Neplatný hodnota pre rok"
+
+#: ../Pyblio/Fields.py:269
+msgid "Illegal month value"
+msgstr "Neplatný hodnota pre mesiac"
+
+#: ../Pyblio/Fields.py:273
+msgid "Illegal day value"
+msgstr "Neplatný hodnota pre deò"
+
+#: ../Pyblio/Fields.py:443
+msgid "in %s"
+msgstr "v %s"
+
+#: ../Pyblio/Format/BibTeX.py:346 ../Pyblio/Format/BibTeX.py:404
+msgid "key `%s' is malformed"
+msgstr "kµúè `%s' je znetvorený"
+
+#: ../Pyblio/Format/BibTeX.py:367 ../Pyblio/Format/BibTeX.py:388
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d: kµúè `%s' je u¾ definovaný"
+
+#: ../Pyblio/GnomeUI/Config.py:64
+msgid "Choose your preferences"
+msgstr "Zvoµte si svoje nastavenia"
+
+#: ../Pyblio/GnomeUI/Config.py:145 ../Pyblio/GnomeUI/Fields.py:291
+#: ../Pyblio/GnomeUI/Fields.py:473
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"Niektoré zmeny si vy¾adujú znovuspustenie Pybliographicu,\n"
+"aby mohli by» správne pou¾ité"
+
+#: ../Pyblio/GnomeUI/Config.py:425
+msgid "Add"
+msgstr "Prida»"
+
+#: ../Pyblio/GnomeUI/Config.py:428
+msgid "Update"
+msgstr "Aktualizácia"
+
+#: ../Pyblio/GnomeUI/Config.py:431 ../Pyblio/GnomeUI/Config.py:535
+#: ../Pyblio/GnomeUI/Fields.py:373
+msgid "Remove"
+msgstr "Odstráni»"
+
+#: ../Pyblio/GnomeUI/Config.py:532 ../Pyblio/GnomeUI/Fields.py:370
+msgid "Set"
+msgstr "Nastavi»"
+
+#: ../Pyblio/GnomeUI/Config.py:547
+msgid "Key:"
+msgstr "Klávesa:"
+
+#: ../Pyblio/GnomeUI/Config.py:549
+msgid "Value:"
+msgstr "Hodnota:"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"nie je mo¾né otvori» súbor `%s' pre zápis:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:215
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"Chyba poèas analyzovania `%s':\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:234
+msgid "New database"
+msgstr "Nová databáza"
+
+#: ../Pyblio/GnomeUI/Document.py:242 ../Pyblio/GnomeUI/Document.py:246
+msgid "[no entry]"
+msgstr "[bez polo¾ky]"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+msgid "[1 entry]"
+msgstr "[1 polo¾ka]"
+
+#: ../Pyblio/GnomeUI/Document.py:244
+msgid "[%d entries]"
+msgstr "[%d polo¾iek]"
+
+#: ../Pyblio/GnomeUI/Document.py:247
+msgid "[%d/1 entry]"
+msgstr "[%d/1 polo¾ky]"
+
+#: ../Pyblio/GnomeUI/Document.py:248
+msgid "[%d/%d entries]"
+msgstr "[ %d/%d polo¾iek]"
+
+#: ../Pyblio/GnomeUI/Document.py:253
+msgid "[modified]"
+msgstr "[zmenený]"
+
+#: ../Pyblio/GnomeUI/Document.py:263
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"Databáza bola zmenená.\n"
+"Odmietnu» zmeny?"
+
+#: ../Pyblio/GnomeUI/Document.py:293
+msgid "Merge file"
+msgstr "Zlúèi» súbor"
+
+#: ../Pyblio/GnomeUI/Document.py:305 ../Pyblio/GnomeUI/Document.py:359
+msgid "Open error"
+msgstr "Chyba pri otváraní"
+
+#: ../Pyblio/GnomeUI/Document.py:329
+msgid "Merge status"
+msgstr "Stav zluèovania"
+
+#: ../Pyblio/GnomeUI/Document.py:340
+msgid "Open file"
+msgstr "Otvori» súbor"
+
+#: ../Pyblio/GnomeUI/Document.py:386
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"Databáza bola externe zmenená.\n"
+"Prepísa» zmeny?"
+
+#: ../Pyblio/GnomeUI/Document.py:396
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"Nie je mo¾né ulo¾i» `%s':\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:404
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"Vyskytla sa interná chyba poèas ukladania\n"
+"Skúste Ulo¾i» ako..."
+
+#: ../Pyblio/GnomeUI/Document.py:418
+msgid "Save As..."
+msgstr "Ulo¾i» ako..."
+
+#: ../Pyblio/GnomeUI/Document.py:424
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"Súbor `%s' u¾ existuje.\n"
+"Prepísa» ho?"
+
+#: ../Pyblio/GnomeUI/Document.py:431
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"Poèas otvárania:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:449
+msgid "Reopen error"
+msgstr "Chyba pri opätovnom otváraní"
+
+#: ../Pyblio/GnomeUI/Document.py:490
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"Polo¾ka, nazvaná ako `%s', u¾ existuje\n"
+"Premenova» ju, alebo aj napriek tomu ju prida»?"
+
+#: ../Pyblio/GnomeUI/Document.py:527
+msgid "Really remove all the entries ?"
+msgstr "Skutoène odstráni» v¹etky polo¾ky ?"
+
+#: ../Pyblio/GnomeUI/Document.py:547
+msgid "Create new entry"
+msgstr "Vytvori» novú polo¾ku"
+
+#: ../Pyblio/GnomeUI/Document.py:561
+msgid "Really edit %d entries ?"
+msgstr "Skutoène upravi» %d polo¾iek?"
+
+#: ../Pyblio/GnomeUI/Document.py:599
+msgid "Remove all the %d entries ?"
+msgstr "Odstráni» v¹etky %d polo¾ky?"
+
+#: ../Pyblio/GnomeUI/Document.py:601
+msgid "Remove entry `%s' ?"
+msgstr "Odstráni» polo¾ku `%s'?"
+
+#: ../Pyblio/GnomeUI/Document.py:665 ../Pyblio/GnomeUI/Document.py:672
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"Nie je mo¾né sa pripoji» k LyXu: \n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:749
+msgid ""
+"Please install bug-buddy\n"
+"to use this feature"
+msgstr ""
+"Nain¹talujte si prosím bug-buddy,\n"
+"ak chcete pou¾íva» túto vlastnos»"
+
+#: ../Pyblio/GnomeUI/Document.py:762
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "Tento program je autorsky chránený cez GNU GPL"
+
+#: ../Pyblio/GnomeUI/Document.py:763
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Gnome rozhranie pre systém Pybliographer."
+
+#: ../Pyblio/GnomeUI/Document.py:772
+msgid "Gnome Translation Team"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:777
+msgid "Pybliographer Home Page"
+msgstr "Domovská stránka Pybliographera"
+
+#: ../Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "Priezvisko, Meno"
+
+#: ../Pyblio/GnomeUI/Editor.py:39 ../Pyblio/GnomeUI/Fields.py:39
+msgid "Text"
+msgstr "Text"
+
+#: ../Pyblio/GnomeUI/Editor.py:322
+msgid "Day"
+msgstr "Deò"
+
+#: ../Pyblio/GnomeUI/Editor.py:331
+msgid "Month"
+msgstr "Mesiac"
+
+#: ../Pyblio/GnomeUI/Editor.py:340
+msgid "Year"
+msgstr "Rok"
+
+#: ../Pyblio/GnomeUI/Editor.py:365
+msgid "Invalid day field in date"
+msgstr "Neplatné pole deò v dátume"
+
+#: ../Pyblio/GnomeUI/Editor.py:373
+msgid "Invalid month field in date"
+msgstr "Neplatné pole mesiac v dátume"
+
+#: ../Pyblio/GnomeUI/Editor.py:381
+msgid "Invalid year field in date"
+msgstr "Neplatné pole rok v dátume"
+
+#: ../Pyblio/GnomeUI/Editor.py:431 ../Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Zmaza»"
+
+#: ../Pyblio/GnomeUI/Editor.py:442 ../Pyblio/GnomeUI/Editor.py:454
+#: ../Pyblio/GnomeUI/Editor.py:457
+msgid "[ Drop an Entry here ]"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:527 ../Pyblio/GnomeUI/Fields.py:106
+msgid "Entry type"
+msgstr "Typ polo¾ky"
+
+#: ../Pyblio/GnomeUI/Editor.py:529
+msgid "Key"
+msgstr "Klávesa"
+
+#: ../Pyblio/GnomeUI/Editor.py:570
+msgid "Create Field"
+msgstr "Vytvori» pole"
+
+#: ../Pyblio/GnomeUI/Editor.py:625
+msgid "Extra"
+msgstr "Extra"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:325
+msgid "Mandatory"
+msgstr "Povinné"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:326
+msgid "Optional"
+msgstr "Nepovinné"
+
+#: ../Pyblio/GnomeUI/Editor.py:694
+msgid "Invalid key format"
+msgstr "Neplatné formát kµúèa"
+
+#: ../Pyblio/GnomeUI/Editor.py:702
+msgid "Key `%s' already exists"
+msgstr "Kµúè `%s' u¾ existuje"
+
+#: ../Pyblio/GnomeUI/Editor.py:763
+msgid "Error in native string parsing"
+msgstr "Chyba pri analýze pôvodného re»azca"
+
+#: ../Pyblio/GnomeUI/Editor.py:776
+msgid "Edit entry"
+msgstr "Upravi» polo¾ku"
+
+#: ../Pyblio/GnomeUI/Editor.py:790 ../Pyblio/GnomeUI/Editor.py:846
+msgid "Native Editing"
+msgstr "Pôvodné úpravy"
+
+#: ../Pyblio/GnomeUI/Editor.py:868
+msgid "Standard Editing"
+msgstr "©tandardné úpravy"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+msgid "Authors"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+msgid "URL"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+msgid "Reference"
+msgstr "Referencia"
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+#, fuzzy
+msgid "Date"
+msgstr "Aktualizácia"
+
+#: ../Pyblio/GnomeUI/Fields.py:61
+#, fuzzy
+msgid "Entry types and field names configuration"
+msgstr "Konfigurácia polo¾iek"
+
+#: ../Pyblio/GnomeUI/Fields.py:69
+msgid "Name"
+msgstr "Meno"
+
+#: ../Pyblio/GnomeUI/Fields.py:72
+msgid "Type"
+msgstr "Typ"
+
+#: ../Pyblio/GnomeUI/Fields.py:126
+msgid "Available"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:135
+msgid "Associated"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+msgid "Entries configuration"
+msgstr "Konfigurácia polo¾iek"
+
+#: ../Pyblio/GnomeUI/Fields.py:343
+msgid "Entry"
+msgstr "Polo¾ka"
+
+#: ../Pyblio/GnomeUI/Fields.py:354
+msgid "Entry Name:"
+msgstr "Názov polo¾ky:"
+
+#: ../Pyblio/GnomeUI/Fields.py:359 ../glade/search-intl.c:11
+msgid "Field"
+msgstr "Pole"
+
+#: ../Pyblio/GnomeUI/Fields.py:359
+msgid "Status"
+msgstr "Stav"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:40
+msgid "File"
+msgstr "Súbor"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:75
+msgid "Bibliography type:"
+msgstr "Typ bibliografie:"
+
+#: ../Pyblio/GnomeUI/Index.py:94
+msgid "Add..."
+msgstr "Prida»..."
+
+#: ../Pyblio/GnomeUI/Index.py:96
+msgid "Edit..."
+msgstr "Upravi»..."
+
+#: ../Pyblio/GnomeUI/Index.py:98
+#, fuzzy
+msgid "Delete..."
+msgstr "Zmaza»"
+
+#: ../Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "Úplná databáza"
+
+#: ../Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "interná chyba poèas vyhodnocovania"
+
+#: ../Pyblio/GnomeUI/Search.py:195
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"poèas prekladu %s\n"
+"chyba: %s"
+
+#: ../Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[Typ polo¾ky]"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[Kµúèová hodnota]"
+
+#: ../Pyblio/GnomeUI/Utils.py:196
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr ""
+"Vyskytla sa nasledujúca chyba:\n"
+"\n"
+
+#: ../Pyblio/LyX.py:39
+msgid "no input pipe `%s'"
+msgstr "¾iadna rúra na vstupe `%s'"
+
+#: ../Pyblio/LyX.py:45
+msgid "no output pipe `%s'"
+msgstr "¾iadna rúra na výstupe `%s'"
+
+#: ../Pyblio/Open.py:97
+msgid "method `%s' provides no opener"
+msgstr "metóda `%s' neposkytuje niè na otváranie"
+
+#: ../Pyblio/Open.py:105 ../Pyblio/Open.py:151
+msgid "File `%s' does not exist"
+msgstr "Súbor `%s' neexistuje"
+
+#: ../Pyblio/Open.py:116 ../Pyblio/Open.py:162
+msgid "don't know how to open `%s'"
+msgstr "neviem ako otvori» `%s'"
+
+#: ../Pyblio/Open.py:143
+msgid "method `%s' provides no iterator"
+msgstr "metóda `%s' neposkytuje iterátor"
+
+#: ../pybliographer.py:40
+msgid "This is %s, version %s"
+msgstr "Toto je %s, verzia %s"
+
+#: ../pybliographer.py:44 ../pybliographer.py:51
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "Toto je slobodný softvér bez AKEJKO¥VEK GARANCIE."
+
+#: ../pybliographer.py:45
+msgid "For details, type `warranty'."
+msgstr "Detaily sa zobrazia po napísaní `warranty'."
+
+#: ../pybliographer.py:108 ../pybliographer.py:160
+msgid "%s: error: can't open file `%s'"
+msgstr "%s: chyba: nie je mo¾né otvori» súbor `%s'"
+
+#: ../pybliographer.py:121
+msgid "For help, run %s and type `help' at the prompt"
+msgstr ""
+"Ak potrebujete pomoc, spustite %s a napí¹te `help'  do príkazového riadku"
+
+#: ../pybliographer.py:130
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"U¾itoèné príkazy:\n"
+"\thelp     poskytne nejakú pomoc\n"
+"\tquit     ukonèenie programu\n"
+
+#: ../scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "pou¾itie: pybcompact <latexsúbor> <bibtexsúbory...>"
+
+#: ../scripts/pybcompact.py:33
+msgid "pybcompact: error: %s\n"
+msgstr "pybcompact: chyba: %s\n"
+
+#: ../scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "bez polo¾ky"
+
+#: ../scripts/pybcompact.py:141
+msgid "can't find the following entries: %s"
+msgstr "nasledujú polo¾ky nie je mo¾né nájs»: %s"
+
+#: ../scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "pou¾itie: pybconvert <zdroj>..<cieµ> <vstup> [výstup]"
+
+#: ../scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr "pybconvert: zlý konverzný formát"
+
+#: ../scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr "pou¾itie: pybformat [bibtexsúbory...]\n"
+
+#: ../scripts/pybformat.py:37
+msgid "pybformat: error: %s\n"
+msgstr "pybformat: chyba: %s\n"
+
+#: ../scripts/pybformat.py:43
+msgid "pybformat: warning: %s\n"
+msgstr "pybformat: varovanie: %s\n"
+
+#: ../scripts/pybformat.py:140 ../scripts/pybtex.py:85
+msgid "can't find style `%s'"
+msgstr "¹týl `%s' sa nedá nájs»"
+
+#: ../scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "pou¾itie: pybtex <latexsúbor> [bibtexsúbory...]"
+
+#: ../scripts/pybtex.py:37
+msgid "pybtex: error: %s\n"
+msgstr "pybtex: chyba: %s\n"
+
+#: ../scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "pybtex: varovanie: nasledujúce kµúèe neboli vyrie¹ené"
+
+#: ../scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "¾iadny ¹týl nie je definovaný"
+
+#: ../glade/format-intl.c:8
+msgid "Format entries"
+msgstr "Formát polo¾iek"
+
+#: ../glade/format-intl.c:9
+msgid "Bibliography style:"
+msgstr "©týl bibliografie:"
+
+#: ../glade/format-intl.c:10
+msgid "Output format:"
+msgstr "Výstupný formát:"
+
+#: ../glade/format-intl.c:11
+#, fuzzy
+msgid "Output file:\n"
+msgstr "Výstup do súboru:"
+
+#: ../glade/format-intl.c:13 ../glade/format-intl.c:14
+#: ../glade/medline-intl.c:12 ../glade/medline-intl.c:17
+#: ../glade/medline-intl.c:22 ../glade/medline-intl.c:23
+#: ../glade/medline-intl.c:24 ../glade/medline-intl.c:25
+#: ../glade/medline-intl.c:26 ../glade/medline-intl.c:27
+#: ../glade/medline-intl.c:28 ../glade/medline-intl.c:29
+#: ../glade/medline-intl.c:31 ../glade/medline-intl.c:33
+#: ../glade/search-intl.c:13 ../glade/search-intl.c:14
+#: ../glade/search-intl.c:17
+msgid "*"
+msgstr ""
+
+#: ../glade/medline-intl.c:8
+#, fuzzy
+msgid "Medline Query"
+msgstr "Medline otázka..."
+
+#: ../glade/medline-intl.c:9
+#, fuzzy
+msgid "Enter your Medline Query"
+msgstr "Vlo¾te svoju Medline otázku"
+
+#: ../glade/medline-intl.c:10
+#, fuzzy
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr "Hµada» "
+
+#: ../glade/medline-intl.c:13
+#, fuzzy
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+"Maximálny poèet\n"
+"výsledkov:"
+
+#: ../glade/medline-intl.c:15
+#, fuzzy
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"Zaèa» zoznam\n"
+"pri výsledku èíslo:"
+
+#: ../glade/medline-intl.c:18
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+
+#: ../glade/medline-intl.c:20
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+
+#: ../glade/medline-intl.c:30
+msgid "From:"
+msgstr "Od:"
+
+#: ../glade/medline-intl.c:32
+msgid "To:"
+msgstr "Komu:"
+
+#: ../glade/medline-intl.c:34
+#, fuzzy
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr "Pou¾i» formát RRRR/MM/DD; mesiac a deò nie sú povinné."
+
+#: ../glade/medline-intl.c:36
+msgid "Limited to:"
+msgstr "Obmedzi» do:"
+
+#: ../glade/pyblio-intl.c:8
+#, fuzzy
+msgid "Pybliographer"
+msgstr "Domovská stránka Pybliographera"
+
+#: ../glade/pyblio-intl.c:9
+msgid "_New"
+msgstr "_Nový"
+
+#: ../glade/pyblio-intl.c:10
+#, fuzzy
+msgid "Merge With..."
+msgstr "_Zlúèi» s..."
+
+#: ../glade/pyblio-intl.c:11
+msgid "Medline Query..."
+msgstr "Medline otázka..."
+
+#: ../glade/pyblio-intl.c:12
+msgid "Previous Documents"
+msgstr "Predchádzajúce dokumenty"
+
+#: ../glade/pyblio-intl.c:13
+msgid "_Add..."
+msgstr "_Prida»..."
+
+#: ../glade/pyblio-intl.c:14
+msgid "_Edit..."
+msgstr "_Upravi»..."
+
+#: ../glade/pyblio-intl.c:15
+#, fuzzy
+msgid "_Delete..."
+msgstr "Zmaza»"
+
+#: ../glade/pyblio-intl.c:16
+msgid "S_ort..."
+msgstr "_Triedenie..."
+
+#: ../glade/pyblio-intl.c:17 ../glade/pyblio-intl.c:25
+msgid "Cite"
+msgstr "Citova»"
+
+#: ../glade/pyblio-intl.c:18
+#, fuzzy
+msgid "Cite..."
+msgstr "Citova»"
+
+#: ../glade/pyblio-intl.c:19
+#, fuzzy
+msgid "Format..."
+msgstr "_Formát..."
+
+#: ../glade/pyblio-intl.c:20
+#, fuzzy
+msgid "Settings"
+msgstr "Nas_tavenie"
+
+#: ../glade/pyblio-intl.c:21
+#, fuzzy
+msgid "Fields..."
+msgstr "_Polia..."
+
+#: ../glade/pyblio-intl.c:22
+#, fuzzy
+msgid "Entries..."
+msgstr "_Polo¾ky..."
+
+#: ../glade/pyblio-intl.c:23
+#, fuzzy
+msgid "Open File"
+msgstr "Otvori» súbor"
+
+#: ../glade/pyblio-intl.c:24
+#, fuzzy
+msgid "Save File"
+msgstr "Súbor"
+
+#: ../glade/search-intl.c:8 ../glade/search-intl.c:9
+msgid "Search"
+msgstr "Hµada»"
+
+#: ../glade/search-intl.c:10
+msgid "Close"
+msgstr "Zavrie»"
+
+#: ../glade/search-intl.c:12
+msgid "Pattern"
+msgstr "Vzorka"
+
+#: ../glade/search-intl.c:15
+msgid "Simple Search"
+msgstr "Jednoduché hµadanie"
+
+#: ../glade/search-intl.c:16
+msgid "Query"
+msgstr ""
+
+#: ../glade/search-intl.c:18
+msgid "Expert Search"
+msgstr "Expertné hµadanie"
+
+#: ../glade/sort-intl.c:8
+msgid "Select sort criterions"
+msgstr "Zvoµte kritériá pre triedenie"
+
+#: ../glade/sort-intl.c:9
+msgid "Set as default"
+msgstr "Nastavi» ako ¹tandardné"
+
+#, fuzzy
+#~ msgid "Search Command:"
+#~ msgstr "Príkaz pre hµadanie:"
+
+#~ msgid "Sort direction"
+#~ msgstr "Smer triedenia"
+
+#~ msgid "Sort criterions"
+#~ msgstr "Kritériá triedenia"
+
+#~ msgid "Reorder"
+#~ msgstr "Preusporiadanie"
+
+#~ msgid "Groups the active fields on the top of the list"
+#~ msgstr "Skupiny aktívnych polí na vrchole zoznamu"
+
+#~ msgid "Unselect all"
+#~ msgstr "V¹etko odznaèi»"
+
+#~ msgid "Removes all the sort criterions"
+#~ msgstr "Odstráni v¹etky kritériá triedenia"
+
+#~ msgid "Use this sort criterion as the default for new files"
+#~ msgstr "Pou¾i» ¹tandard poèas"
+
+#~ msgid "_Previous Documents"
+#~ msgstr "_Predchádzajúce dokumenty"
+
+#~ msgid "About..."
+#~ msgstr "O programe..."
+
+#~ msgid "_Delete"
+#~ msgstr "O_dstráni»"
+
+#~ msgid "_Cite"
+#~ msgstr "_Citova»"
+
+#~ msgid "_File"
+#~ msgstr "_Súbor"
+
+#~ msgid "_Edit"
+#~ msgstr "_Upravi»"
+
+#~ msgid "_Help"
+#~ msgstr "_Pomocník"
+
+#~ msgid "Open"
+#~ msgstr "Otvori»"
+
+#~ msgid "Save"
+#~ msgstr "Ulo¾i»"
+
+#~ msgid "Find"
+#~ msgstr "Nájs»"
+
+#~ msgid "Select style"
+#~ msgstr "Zvoµte ¹týl"
+
+#~ msgid "Select output file"
+#~ msgstr "Vyberte výstupný súbor"
+
+#~ msgid ""
+#~ "Item `%s':\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Polo¾ka `%s':\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "True"
+#~ msgstr "Pravda"
+
+#~ msgid "False"
+#~ msgstr "Nepravda"
+
+#~ msgid "Value"
+#~ msgstr "Hodnota"
+
+#~ msgid "Fields configuration"
+#~ msgstr "Konfigurácia polí"
+
+#~ msgid "Name:"
+#~ msgstr "Názov:"
+
+#~ msgid "Type:"
+#~ msgstr "Typ:"

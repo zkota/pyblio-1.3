@@ -1,0 +1,154 @@
+<chapter>
+  <title>Creating new Styles</title>
+  
+  <para>It is possible to describe your own bibliography style, by
+  writing a simple XML file. The XML file should have the following
+  header:</para>
+
+    <programlisting>
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE bibstyle PUBLIC "-//Pybliographer//DTD Bibliographic Style Format//EN" ""&gt;
+</programlisting>
+    
+  <para>The whole description should fit in a &lt;bibstyle&gt; pair of
+    tags, whose  content is shortly  described in this section.  It is
+    suggested that the interested users look at the corresponding DTD,
+    which describes  the allowed  syntax in details.  This DTD  can be
+    found in the same directory as the default style files.</para>
+
+  <sect1>
+    <title>Global formatting</title>
+    
+    <para>The XML style file describes how the different data fields
+      are  organized in  order to  create a  bibliographic  style. For
+      example, it can specify that  an article starts with the article
+      title  in bold,  followed  by  the authors  names,  etc.</para>
+    
+    <para>In its current incarnation, the XML format can however not
+      describe lower-level informations, like how an author's name
+      should be output. This is done by pointing to a set of python
+      functions, grouped in a module. Let's consider the following
+      example:</para>
+    
+    <programlisting>
+  &lt;module name="generic">
+    &lt;define field="author">full_authors&lt;/define>
+    &lt;define field="editor">first_last_full_authors&lt;/define>
+    &lt;define field="date">european_date&lt;/define>
+    &lt;define method="keys">string_keys&lt;/define>
+  &lt;/module>
+</programlisting>
+
+    <para>In this example, we require that the
+    <emphasis>author</emphasis> fields should be formatted by the
+    <function>full_authors()</function> function, located in the
+    <filename>generic</filename> module.</para>
+
+    <para>Such a module has to be declared in the
+    <filename>pybrc.py</filename> file, by a line like:
+
+<programlisting>Autoload.preregister ('style','Generic','Pyblio.Style.Generic')</programlisting>
+</para>
+
+    <para>The precise definition of the formatting functions is better
+    explained      by      looking       at      the      code      of
+    <filename>Generic.py</filename> for example.</para>
+
+    </sect1>
+
+    <sect1>
+      <title>Bibliography definition</title>
+      
+      <para>Once the basic formatting definitions have been specified,
+      it   is  possible  to   describe  the   aspect  of   the  actual
+      bibliographies with following tags:</para>
+
+    <itemizedlist>
+      <listitem>
+	<para>	&lt;style name="<varname>stylename</varname>"&gt;</para>
+
+	<para>This tag specifies the current display style, among
+	<emphasis>bold, italic, slanted, emph</emphasis>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;inentry name="<varname>entryname</varname>"&gt;</para>
+
+	<para>This tag encloses a block that is only to appear in
+	entries of type <varname>entryname</varname>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;notinentry name="<varname>entryname</varname>"&gt;</para>
+
+	<para>This tag encloses a block that is only to appear in
+	entries that are <emphasis>not</emphasis> of type
+	<varname>entryname</varname>.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;infield name="<varname>fieldname</varname>"&gt;</para>
+
+	<para>This tag encloses a block that only appears when the
+	specified <varname>fieldname</varname> field exists in the
+	current entry.</para>
+      </listitem>
+
+      <listitem>
+
+	<para>&lt;notinfield name="<varname>fieldname</varname>"></para>
+
+	<para>This  tag encloses a  block that  only appears  when the
+	specified  <varname>fieldname</varname>  field  <emphasis>does
+	not</emphasis> exist in the current entry.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;content <optional>name="<varname>fieldname</varname>"</optional>/&gt;</para>
+
+	<para>This empty tag is replaced by the content of the current
+	field (when placed in a &lt;infield> block) or the content of
+	the field specified as attribute.</para>
+      </listitem>
+
+      <listitem>
+	<para>	&lt;separator&gt;</para>
+
+	<para>This tag's content evaluates to nothing when no text has
+	been issued so far. It is a convenient way to add a delimiter
+	after a series of fields without being worried of the special
+	case when the fields are not defined.</para>
+      </listitem>
+
+    </itemizedlist>
+
+    <para>The existing style files are a good source of examples.</para>
+    </sect1>
+
+  <sect1>
+    <title>Future of the format</title>
+
+    <para>In the future, this rudimentary format will most likely be
+    replaced with an XSL-based mechanism, which should encompass both
+    the XML definition and the python modules, thus providing
+    standalone style files, parsable by any XSL parser.</para>
+  </sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

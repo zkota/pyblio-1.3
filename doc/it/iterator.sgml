@@ -1,0 +1,94 @@
+<refentry id="class-iterator">
+  <refnamediv>
+    <refname>Iterator.Iterator</refname> 
+    <refpurpose>Uniforma l'accesso al loop sul contenuto dell'oggetto.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+
+    <programlisting>
+class <classname>Iterator.Iterator</classname>:
+	def <link linkend="meth-iterator-first">first (self):</link> 
+		return <returnvalue>item</returnvalue>
+	def <link linkend="meth-iterator-next">next  (self):</link> 
+		return <returnvalue>item</returnvalue>
+	def <link linkend="meth-iterator-iterator">iterator (self):</link> 
+		return <returnvalue>self</returnvalue>
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title>  
+
+    <para>Questa classe fornisce un accesso uniforme al loop  sul contenuto
+      dell'oggetto in un modo sequenziale. &Egrave specialmente usata per un
+      loop su tutte le voci in  un database  (vedi il metodo <link
+      linkend="class-database">iteratore</link>  nella classe  <link
+      linkend="class-database">DataBase</link>),   o  su tutte le voci che
+      corrispondono a un dato criterio    (vedi la classe   <link
+      linkend="class-selection">Selection</link>).</para>
+
+    <para><symbol>None</symbol> viene restituito per indicare la fine della
+      sequenza.</para>
+
+  </refsect1>
+
+  <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-iterator-first">
+      <title>first ()</title>
+      <programlisting>
+item = iterator.first ()
+</programlisting>
+
+      <para>Questo metodo restituisce il primo oggetto della sequenza. Il tipo
+	di oggetto dipende da come  Iterator   &egrave stato instanziato.</para>
+    </refsect2>
+
+    <refsect2 id="meth-iterator-next">
+      <title>next ()</title>
+      <programlisting>
+item = iterator.next ()
+</programlisting>
+
+      <para>Restituisce l'oggetto successivo nella sequenza. Il loop  deve
+	essere stato iniziato con  <link
+	linkend="meth-iterator-first">first()</link>.</para>
+      
+      <para><symbol>None</symbol> viene restituito per indicare la fine della
+	sequenza.</para>
+    </refsect2>
+
+    <refsect2 id="meth-iterator-iterator">
+      <title>iterator ()</title>
+      <programlisting>
+iter = iterator.iterator ()
+</programlisting>
+
+      <para>Questo metodo restituisce se stesso. &Egrave utile per creare
+      metodi che possono accettare indifferentemente un    <link
+      linkend="class-database">DataBase</link>   o  un   Iterator  come
+      argomento,   entrambi forniranno una funzione <function>iterator
+      ()</function>.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

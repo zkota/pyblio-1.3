@@ -1,0 +1,124 @@
+<refentry id="class-entry">
+  <refnamediv>
+    <refname>Base.Entry</refname>
+    <refpurpose>Tiene tutti i campi che descrivono una voce bibliografica</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Base.Entry</classname>:
+    <link linkend="mem-entry-id"><varname>self.id</varname></link>
+    <link linkend="mem-entry-key"><varname>self.key</varname></link>
+    <link linkend="mem-entry-type"><varname>self.type</varname></link>
+
+    def <link linkend="meth-entry-init">__init__</link>    (self, key = None, type = None, dict = None):
+    def <link linkend="meth-entry-keys">keys</link>        (self):
+    def <link linkend="meth-entry-has-key">has_key</link>     (self, key):
+    def <link linkend="meth-entry-field-and-loss">field_and_loss</link> (self, key):
+    def <link linkend="meth-entry-getitem">__getitem__</link> (self, key):
+    def <link linkend="meth-entry-setitem">__setitem__</link> (self, name, value):
+    def <link linkend="meth-entry-delitem">__delitem__</link> (self, name):
+    def <link linkend="meth-entry-add">__add__</link>     (self, other):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title> <para>Una voce tiene tutti i campi che descrivono
+    un oggetto bibliografico. Fondamentalmente si comporta come un 
+    dizionario, i cui valori sono le istanze dei campi.</para> 
+
+    <para>Una voce pu&ograve essere  pickled e unpickled per essere trasferita
+    tra le finestre dell'applicazione (copia/incolla o drag and drop per 
+    esempio).</para>
+  </refsect1>
+
+  <refsect1>
+    <title>Membri</title>
+
+    <refsect2 id="mem-entry-id">
+      <title>self.id</title>
+      <para>Stringa rappresentante di una classe specifica di una voce.</para>
+    </refsect2>
+
+    <refsect2 id="mem-entry-key">
+      <title>self.key</title>
+      <para>Un'istanza di <link linkend="class-key">Key</link>, che &egrave
+      la chiave da cui la voce pu&ograve essere recuperata dal suo database.</para>
+    </refsect2>
+
+    <refsect2 id="mem-entry-type">
+      <title>self.type</title>
+      <para>Un'istanza di EntryDescription, che tiene il tipo di informazione
+      per tutti i campi della voce.</para>
+    </refsect2>
+  </refsect1>
+
+  <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-entry-init">
+      <title>__init__ (self, key = None, type = None, dict = None)</title>
+      <para>Crea una nuova voce e inizializza alcuni dei suoi campi.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-keys">
+      <title>keys (self)</title>
+      <para>Restituisce una lista di campi disponibili</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-has-key">
+      <title>has_key (self, key)</title>
+      <para>Indica se una voce tiene il campo dato</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-field-and-loss">
+      <title>field_and_loss (self, fieldname)</title>
+      <para>Restituisce una 2-uplet (string, bool), dove il primo elemento
+      &egrave un campo e il secondo una flag che indica se &egrave stato
+      convertito senza perdita</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-getitem">
+      <title>__getitem__ (self, fieldname)</title>
+      <programlisting>
+field = entry [fieldname]
+</programlisting>
+      <para>Restituisce un campo dato il suo nome</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-setitem">
+      <title>__setitem__ (self, fieldname, field)</title>
+      <para>Imposta un campo.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-delitem">
+      <title>__delitem__ (self, key)</title>
+      <para>Rimuove un campo.</para>
+    </refsect2>
+
+    <refsect2 id="meth-entry-add">
+      <title>__add__ (self, entry)</title>
+      <para>Unisce due voci insieme, prendendo solo i campi mancanti
+      dalla seconda voce.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,73 @@
+# This file is part of pybliographer
+# 
+# Copyright (C) 1998-2003 Frederic GOBRY
+# Email : gobry@idiap.ch
+# 	   
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2 
+# of the License, or (at your option) any later version.
+#   
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details. 
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+# 
+# $Id: Makefile.am,v 1.6.2.8 2003/10/10 08:56:26 fredgo Exp $
+
+pybdir  = $(datadir)/$(PACKAGE)
+appdir  = $(datadir)/gnome/apps/Applications
+
+SUBDIRS = 	Pyblio 		\
+		glade		\
+		.		\
+		scripts		\
+		tests		\
+		Styles		\
+		po		\
+		doc
+
+
+appicondir = $(datadir)/pixmaps
+appicon_DATA = pybliographic.png 
+
+pixmapsdir = $(datadir)/pixmaps
+pixmaps_DATA = pybliographic-logo.png
+
+
+Mimedir = $(datadir)/mime-info
+Mime_DATA = pybliographic.keys pybliographic.mime
+
+app_DATA = pybliographic.desktop
+
+bin_SCRIPTS = pybliographer
+
+EXTRA_DIST = 	setup-check.py			\
+		pybrc.py 			\
+	 	pybliographer.py 		\
+		etc/installer.in		\
+		pybliographic.keys.in		\
+		pybliographic.mime		\
+		pybliographic.desktop		\
+		pybliographic.png		\
+		pybliographic-logo.png
+
+pybliographer: $(top_srcdir)/pybliographer.py etc/installer
+	$(SHELL) etc/installer < $(top_srcdir)/pybliographer.py > pybliographer
+	chmod 755 pybliographer
+
+install-data-local:
+	mv -f $(DESTDIR)$(pybdir)/pybrc.py $(DESTDIR)$(pybdir)/pybrc.old || true
+	$(INSTALL_DATA) $(srcdir)/pybrc.py $(DESTDIR)$(pybdir)
+	$(Python) -c "import compileall ; compileall.compile_dir ('"$(DESTDIR)$(pybdir)"');"
+
+pybliographic.keys: pybliographic.keys.in Makefile
+	sed -e 's^\@icondir\@^$(appicondir)^g' \
+	< $(srcdir)/pybliographic.keys.in > pybliographic.keys.tmp \
+	&& mv pybliographic.keys.tmp pybliographic.keys 
+
+

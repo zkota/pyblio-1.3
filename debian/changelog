@@ -1,0 +1,15 @@
+pybliographer (0.9.10-0.1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Paul Seelig <pseelig@debian.org>  Tue,  18 Apr 2000 14:26:09 +0200
+
+pybliographer (0.9.9-0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Paul Seelig <pseelig@debian.org>  Sun,  9 Apr 2000 21:40:49 +0200
+
+Local variables:
+mode: debian-changelog
+End:

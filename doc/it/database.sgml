@@ -1,0 +1,195 @@
+<refentry id="class-database">
+  <refnamediv>
+    <refname>Base.DataBase</refname>
+    <refpurpose>Rappresenta un database bibliografico</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Base.DataBase</classname>:
+    <link linkend="mem-database-key"><varname>self.key</varname></link>
+    <link linkend="mem-database-id"><varname>self.id</varname></link>
+
+    def <link linkend="meth-database-init">__init__</link>     (self, url):
+    def <link linkend="meth-database-has-property">has_property</link> (self, prop):
+    def <link linkend="meth-database-new-entry">new_entry</link>    (self, type):
+    def <link linkend="meth-database-add">add</link>          (self, entry):
+    def <link linkend="meth-database-keys">keys</link>         (self):
+    	    return <returnvalue>list (Keys)</returnvalue>
+    def <link linkend="meth-database-has-key">has_key</link>      (self, key):
+    	    return <returnvalue>boolean</returnvalue>
+    def <link linkend="meth-database-getitem">__getitem__</link>  (self, key):
+    def <link linkend="meth-database-setitem">__setitem__</link>  (self, key, value):
+    def <link linkend="meth-database-get-native">get_native</link>   (self, key):
+    def <link linkend="meth-database-set-native">set_native</link>   (self, value):
+    def <link linkend="meth-database-delitem">__delitem__</link>  (self, key):
+    def <link linkend="meth-database-len">__len__</link>      (self):
+    	    return <returnvalue>integer</returnvalue>
+    def <link linkend="meth-database-iterator">iterator</link>     (self):
+    	    return <returnvalue>Iterator ()</returnvalue>
+    def <link linkend="meth-database-update">update</link>       (self):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title>  
+
+    <para>Questo classe fornisce l'accesso a un database bibliografico completo.
+    Fondamentalmente si comporta come un dizionario: data la <link
+    linkend="class-key">chiave</link>  di una       <link
+    linkend="class-entry">voce</link>, questo oggetto restituisce la
+    voce.</para>
+    <warning>
+      <para>Il database  <emphasis>non</emphasis> assicura  che modificando
+      la voce restituita, si modifichi il database. Non assicura neanche
+      l'opposto. Cos&igrave, per fare i cambiamenti, imposta esplicitamente
+      la voce modificata nel database. E per evitare le modifiche non
+      volute, copia esplicitamente una voce che deve essere modificata.</para>
+    </warning>
+    </refsect1>
+
+    <refsect1>
+      <title>Membri</title>
+      <refsect2 id="mem-database-key">
+	<title>self.key</title>
+	<para>Tiene l'<link linkend="class-url">URL</link>
+	che identifica il database.</para>
+      </refsect2>
+
+      <refsect2 id="mem-database-id">
+	<title>self.id</title>
+	<para>Tiene il tipo di database, come una stringa.</para>
+      </refsect2>
+    </refsect1>
+    
+    <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-database-init">
+      <title>__init__ (self, url)</title>
+
+      <para>Il database &egrave construito dall'oggetto <link
+      linkend="class-url">URL</link>. Di solito, l'invocazione del
+      costruttore non &egrave fatta direttamente dall'utente ma piuttosto
+      attraverso una funzione di pi&ugrave alto livello come bibopen.</para>
+      
+    </refsect2>
+
+    <refsect2 id="meth-database-has-property">
+      <title></title>
+      <para></para>
+    </refsect2>
+
+    <refsect2 id="meth-database-new-entry">
+      <title>new_entry (self, type)</title>
+
+      <para>Questo metodo restituisce una nuova voce che &egrave nativa per
+      l'attuale database. (&Egrave sempre possibile usare invece una generica
+      Base.Entry , ma quella restituita qui pu&ograve annullare le conversioni
+      interne)</para>
+
+    </refsect2>
+
+    <refsect2 id="meth-database-add">
+      <title>add (self, entry)</title>
+
+      <para>Questo metodo inserisce una nuova voce nel database. Se la voce
+      non ha ancora una chiave, ne viene generata una.</para>
+
+    </refsect2>
+
+    <refsect2 id="meth-database-keys">
+      <title>keys (self)</title>
+
+      <para>Restituisce una lista di chiavi.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-has-key">
+      <title>has_key (self, key)</title>
+
+      <para>Restituisce vero se il database ha la chiave specificata.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-getitem">
+      <title>__getitem__ (self, key)</title>
+      <programlisting>
+entry = database [key]
+</programlisting>
+
+      <para>Restituisce una voce in accordo alla sua chiave, come un dizionario.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-setitem">
+      <title>__setitem__ (self, key, entry)</title>
+      <programlisting>
+database [key] = entry
+</programlisting>
+
+      <para>Memorizza una voce sotto una data chiave in un database.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-get-native">
+      <title>get_native (self, key)</title>
+
+      <para>Restituisce una rappresentazione testuale di una voce nel
+      formato nativo</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-set-native">
+      <title>set_native (self, value)</title>
+
+      <para>Analizza una voce nel suo formato nativo e la memorizza
+      nel database.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-delitem">
+      <title>__delitem__ (self, key)</title>
+      <programlisting>
+del database [key]
+</programlisting>
+
+      <para>Rimuove la voce corrispondente alla chiave.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-len">
+      <title>__len__ (self)</title>
+      <programlisting>
+l = len (database)
+</programlisting>
+
+      <para>Restituisce il numero di voci memorizzate nel database.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-iterator">
+      <title>iterator (self)</title>
+      <para>Restituisce un iteratore che far&agrave un loop su tutte le voci
+      del database. Si dovrebbe preferire questo metodo a un esplicito
+      loop su database.keys (), pu&ograve eventualmente accedere alle voci
+      in un modo pi&ugrave efficente.</para>
+    </refsect2>
+
+    <refsect2 id="meth-database-update">
+      <title>update (self)</title>
+      <para>Aggiorna l'URL cos&igrave che rifletta il database attuale.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

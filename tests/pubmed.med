@@ -1,0 +1,443 @@
+UI  - 21454690
+PMID- 11570098
+DA  - 20010925
+IS  - 0196-3716
+VI  - 23
+DP  - 2001
+TI  - Evolution of transport proteins.
+PG  - 1-10
+AD  - Department of Biology, University of California at San Diego, La Jolla, CA
+      92093-0116, USA.
+AU  - Saier MH Jr
+LA  - eng
+ID  - 2R01 AI14176/AI/NIAID
+ID  - 9RO1 GM55434/GM/NIGMS
+PT  - Journal Article
+CY  - United States
+TA  - Genet Eng (N Y)
+JC  - AT6
+JID - 7907340
+SB  - IM
+EDAT- 2001/09/26 10:00
+MHDA- 2001/09/26 10:00
+PST - ppublish
+SO  - Genet Eng (N Y) 2001;23:1-10.
+
+
+
+
+UI  - 21568828
+PMID- 11711174
+DA  - 20011116
+IS  - 0167-7799
+VI  - 19
+IP  - 12
+DP  - 2001 Dec
+TI  - Small-molecule metabolism: an enzyme mosaic.
+PG  - 482-6
+AB  - Escherichia coli has been a popular organism for studying metabolic
+      pathways. In an attempt to find out more about how these pathways are
+      constructed, the enzymes were analysed by defining their protein domains.
+      Structural assignments and sequence comparisons were used to show that 213
+      domain families constitute approximately 90% of the enzymes in the
+      small-molecule metabolic pathways. Catalytic or cofactor-binding
+      properties between family members are often conserved, while recognition
+      of the main substrate with change in catalytic mechanism is only observed
+      in a few cases of consecutive enzymes in a pathway. Recruitment of domains
+      across pathways is very common, but there is little regularity in the
+      pattern of domains in metabolic pathways. This is analogous to a mosaic in
+      which a stone of a certain colour is selected to fill a position in the
+      picture.
+AD  - Dept of Biochemistry and Molecular Biology, University College London,
+      Darwin Building, Gower Street, WC1E 6BT, London, UK
+AU  - Teichmann SA
+AU  - Rison SC
+AU  - Thornton JM
+AU  - Riley M
+AU  - Gough J
+AU  - Chothia C
+LA  - eng
+PT  - Journal Article
+CY  - England
+TA  - Trends Biotechnol
+JC  - ALJ
+JID - 8310903
+SB  - IM
+EDAT- 2001/11/17 10:00
+MHDA- 2001/11/17 10:00
+AID - S0167779901018133 [pii]
+PST - ppublish
+SO  - Trends Biotechnol 2001 Dec;19(12):482-6.
+
+
+
+
+UI  - 21410060
+PMID- 11518524
+DA  - 20010823
+DCOM- 20011004
+IS  - 0022-2836
+VI  - 311
+IP  - 4
+DP  - 2001 Aug 24
+TI  - The evolution and structural anatomy of the small molecule metabolic
+      pathways in Escherichia coli.
+PG  - 693-708
+AB  - The 106 small molecule metabolic (SMM) pathways in Escherichia coli are
+      formed by the protein products of 581 genes. We can define 722 domains,
+      nearly all of which are homologous to proteins of known structure, that
+      form all or part of 510 of these proteins. This information allows us to
+      answer general questions on the structural anatomy of the SMM pathway
+      proteins and to trace family relationships and recruitment events within
+      and across pathways. Half the gene products contain a single domain and
+      half are formed by combinations of between two and six domains. The 722
+      domains belong to one of 213 families that have between one and 51
+      members. Family members usually conserve their catalytic or cofactor
+      binding properties; substrate recognition is rarely conserved. Of the 213
+      families, members of only a quarter occur in isolation, i.e. they form
+      single-domain proteins. Most members of the other families combine with
+      domains from just one or two other families and a few more versatile
+      families can combine with several different partners.Excluding isoenzymes,
+      more than twice as many homologues are distributed across pathways as
+      within pathways. However, serial recruitment, with two consecutive enzymes
+      both being recruited to another pathway, is rare and recruitment of three
+      consecutive enzymes is not observed. Only eight of the 106 pathways have a
+      high number of homologues. Homology between consecutive pairs of enzymes
+      with conservation of the main substrate-binding site but change in
+      catalytic mechanism (which would support a simple model of retrograde
+      pathway evolution) occurs only six times in the whole set of enzymes. Most
+      of the domains that form SMM pathways have homologues in non-SMM pathways.
+      Taken together, these results imply a pervasive "mosaic" model for the
+      formation of protein repertoires and pathways.
+CI  - Copyright 2001 Academic Press.
+AD  - Department of Biochemistry and Molecular Biology, University College
+      London, Darwin Building, Gower Street, London, WC1E 6BT, UK.
+      sat@mrc-lmb.cam.ac.uk
+AU  - Teichmann SA
+AU  - Rison SC
+AU  - Thornton JM
+AU  - Riley M
+AU  - Gough J
+AU  - Chothia C
+LA  - eng
+PT  - Journal Article
+CY  - England
+TA  - J Mol Biol
+JC  - J6V
+JID - 2985088R
+RN  - 0 (Bacterial Proteins)
+RN  - 0 (Nucleotides)
+RN  - 0 (Phosphatidic Acids)
+RN  - 0 (Polysaccharides)
+RN  - 0 (Proteome)
+RN  - 0 (Purines)
+RN  - 0 (Pyrimidines)
+RN  - 7006-35-1 (Histidine)
+RN  - 9005-79-2 (Glycogen)
+RN  - 9012-87-7 (colanic acid)
+SB  - IM
+MH  - Bacterial Proteins/*chemistry/*metabolism
+MH  - Binding Sites
+MH  - Conserved Sequence
+MH  - Escherichia coli/*chemistry/*metabolism
+MH  - *Evolution, Molecular
+MH  - Genes, Duplicate
+MH  - Gluconeogenesis
+MH  - Glycogen/metabolism
+MH  - Histidine/biosynthesis
+MH  - Markov Chains
+MH  - Multigene Family
+MH  - Nucleotides/metabolism
+MH  - Phosphatidic Acids/biosynthesis
+MH  - Polysaccharides/biosynthesis
+MH  - Protein Structure, Tertiary
+MH  - Proteome
+MH  - Purines/biosynthesis
+MH  - Pyrimidines/biosynthesis
+MH  - Sequence Homology, Amino Acid
+MH  - Support, Non-U.S. Gov't
+MH  - Support, U.S. Gov't, P.H.S.
+EDAT- 2001/08/24 10:00
+MHDA- 2001/10/05 10:01
+AID - 10.1006/jmbi.2001.4912 [doi]
+AID - jmbi.2001.4912 [pii]
+PST - ppublish
+SO  - J Mol Biol 2001 Aug 24;311(4):693-708.
+
+
+
+
+UI  - 21357591
+PMID- 11465065
+DA  - 20010723
+DCOM- 20010906
+IS  - 1467-5463
+VI  - 2
+IP  - 1
+DP  - 2001 Mar
+TI  - From molecular activities and processes to biological function.
+PG  - 81-93
+AB  - This paper describes how biological function can be represented in terms
+      of molecular activities and processes. It presents several key features of
+      a data model that is based on a conceptual description of the network of
+      interactions between molecular entities within the cell and between cells.
+      This model is implemented in the aMAZE database that presently deals with
+      information on metabolic pathways, gene regulation, sub- or supracellular
+      locations, and transport. It is shown that this model constitutes a useful
+      generalisation of data representations currently implemented in metabolic
+      pathway databases, and that it can furthermore include multiple schemes
+      for categorising and classifying molecular entities, activities, processes
+      and localisations. In particular, we highlight the flexibility offered by
+      our system in representing multiple molecular activities and their
+      control, in viewing biological function at different levels of resolution
+      and in updating this view as our knowledge evolves.
+AD  - Free University of Brussels, Belgium.
+AU  - van Helden J
+AU  - Naim A
+AU  - Lemer C
+AU  - Mancuso R
+AU  - Eldridge M
+AU  - Wodak SJ
+LA  - eng
+PT  - Journal Article
+CY  - England
+TA  - Brief Bioinform
+JC  - D3P
+JID - 100912837
+SB  - IM
+MH  - Animal
+MH  - Classification
+MH  - Computational Biology
+MH  - *Databases, Factual
+MH  - Human
+MH  - Metabolism
+MH  - Models, Biological
+MH  - *Molecular Biology
+MH  - Support, Non-U.S. Gov't
+EDAT- 2001/07/24 10:00
+MHDA- 2001/09/08 10:01
+PST - ppublish
+SO  - Brief Bioinform 2001 Mar;2(1):81-93.
+
+
+
+
+UI  - 21489460
+PMID- 11603855
+DA  - 20011017
+DCOM- 20011101
+IS  - 0168-1605
+VI  - 69
+IP  - 3
+DP  - 2001 Sep 28
+TI  - Traditional Maori food preparation methods and food safety.
+PG  - 183-90
+AB  - Descriptions were obtained from Maori elders knowledgeable in traditional
+      methods for the processing of Tiroi (mussels and Puha), Kina (sea
+      urchins), Kanga Kopiro (fermented maize) and Titi (muttonbird).
+      Information for a number of variations of each method was transformed into
+      process flow charts, and these charts were analysed using a HACCP-based
+      approach. Two of the processes (Kanga Kopiro and Titi) were found to be
+      likely to produce safe foods as Kanga Kopiro undergoes an acid
+      fermentation and Titi preparation involves significant cooking steps.
+      However, the information regarding Tiroi and Kina processing did not
+      supply the necessary data to identify definitely whether fermentations
+      were involved, and if they were, what kind they may be. New Zealand has
+      only experienced one outbreak of botulism, and this was associated with
+      the consumption of Tiroi. It is, therefore, desirable to identify the
+      processes occurring in these foods where the nature of these processes is
+      not understood in order to facilitate their safe future production.
+AD  - Food Safety Programme, ESR Ltd, Imam, Christchurch, New Zealand
+AU  - Whyte R
+AU  - Hudson JA
+AU  - Hasell S
+AU  - Gray M
+AU  - O'Reilly R
+LA  - eng
+PT  - Journal Article
+PT  - Review
+PT  - Review, Tutorial
+CY  - Netherlands
+TA  - Int J Food Microbiol
+JC  - AVJ
+JID - 8412849
+SB  - IM
+MH  - Aborigines
+MH  - Consumer Product Safety
+MH  - Corn/microbiology
+MH  - Decision Trees
+MH  - Food Handling/*methods
+MH  - Food Microbiology
+MH  - Food Poisoning/*prevention & control
+MH  - Human
+MH  - Meat/microbiology
+MH  - New Zealand
+MH  - Safety
+MH  - Seafood/microbiology
+MH  - Support, Non-U.S. Gov't
+RF  - 11
+EDAT- 2001/10/18 10:00
+MHDA- 2001/11/03 10:01
+PST - ppublish
+SO  - Int J Food Microbiol 2001 Sep 28;69(3):183-90.
+
+
+
+
+UI  - 98295987
+PMID- 9634230
+DA  - 19980702
+DCOM- 19980702
+LR  - 20010323
+IS  - 0028-0836
+VI  - 393
+IP  - 6685
+DP  - 1998 Jun 11
+TI  - Deciphering the biology of Mycobacterium tuberculosis from the complete
+      genome sequence.
+PG  - 537-44
+AB  - Countless millions of people have died from tuberculosis, a chronic
+      infectious disease caused by the tubercle bacillus. The complete genome
+      sequence of the best-characterized strain of Mycobacterium tuberculosis,
+      H37Rv, has been determined and analysed in order to improve our
+      understanding of the biology of this slow-growing pathogen and to help the
+      conception of new prophylactic and therapeutic interventions. The genome
+      comprises 4,411,529 base pairs, contains around 4,000 genes, and has a
+      very high guanine + cytosine content that is reflected in the blased
+      amino-acid content of the proteins. M. tuberculosis differs radically from
+      other bacteria in that a very large portion of its coding capacity is
+      devoted to the production of enzymes involved in lipogenesis and
+      lipolysis, and to two new families of glycine-rich proteins with a
+      repetitive structure that may represent a source of antigenic variation.
+AD  - Sanger Centre, Wellcome Trust Genome Campus, Hinxton, UK.
+      stcole@pasteur.fr
+AU  - Cole ST
+AU  - Brosch R
+AU  - Parkhill J
+AU  - Garnier T
+AU  - Churcher C
+AU  - Harris D
+AU  - Gordon SV
+AU  - Eiglmeier K
+AU  - Gas S
+AU  - Barry CE 3rd
+AU  - Tekaia F
+AU  - Badcock K
+AU  - Basham D
+AU  - Brown D
+AU  - Chillingworth T
+AU  - Connor R
+AU  - Davies R
+AU  - Devlin K
+AU  - Feltwell T
+AU  - Gentles S
+AU  - Hamlin N
+AU  - Holroyd S
+AU  - Hornsby T
+AU  - Jagels K
+AU  - Barrell BG
+AU  - et al.
+LA  - eng
+SI  - GENBANK/AL008687
+SI  - GENBANK/AL008883
+SI  - GENBANK/AL008967
+SI  - GENBANK/AL009198
+SI  - GENBANK/AL010186
+SI  - GENBANK/AL021006
+SI  - GENBANK/AL021070
+SI  - GENBANK/AL021184
+SI  - GENBANK/AL021185
+SI  - GENBANK/AL021186
+SI  - GENBANK/AL021246
+SI  - GENBANK/AL021287
+SI  - GENBANK/AL021309
+SI  - GENBANK/AL021426
+SI  - GENBANK/AL021427
+SI  - GENBANK/AL021428
+SI  - GENBANK/AL021646
+SI  - GENBANK/AL021840
+SI  - GENBANK/AL021841
+SI  - GENBANK/AL021897
+SI  - GENBANK/AL021899
+SI  - GENBANK/AL021922
+SI  - GENBANK/AL021924
+SI  - GENBANK/AL021925
+SI  - GENBANK/AL021926
+SI  - GENBANK/AL021927
+SI  - GENBANK/AL021928
+SI  - GENBANK/AL021929
+SI  - GENBANK/AL021930
+SI  - GENBANK/AL021931
+PT  - Journal Article
+CY  - ENGLAND
+TA  - Nature
+JC  - NSC
+JID - 0410462
+RN  - 0 (Lipids)
+SB  - IM
+CIN - Nature. 1998 Jun 11;393(6685):515-6
+EIN - Nature 1998 Nov 12;396(6707):190
+MH  - Chromosome Mapping
+MH  - Chromosomes, Bacterial
+MH  - Drug Resistance, Microbial
+MH  - *Genome, Bacterial
+MH  - Human
+MH  - Lipids/metabolism
+MH  - Molecular Sequence Data
+MH  - Mycobacterium tuberculosis/*genetics/immunology/metabolism/pathogenicity
+MH  - Sequence Analysis, DNA
+MH  - Support, Non-U.S. Gov't
+MH  - Tuberculosis/microbiology
+EDAT- 1998/06/20 02:18
+MHDA- 2001/03/23 10:01
+AID - 10.1038/31159 [doi]
+PST - ppublish
+SO  - Nature 1998 Jun 11;393(6685):537-44.
+
+
+
+
+UI  - 21466807
+PMID- 11583110
+DA  - 20011003
+DCOM- 20011025
+IS  - 0014-5793
+VI  - 502
+IP  - 3
+DP  - 2001 Aug 3
+TI  - Evolution of tuf genes: ancient duplication, differential loss and gene
+      conversion.
+PG  - 113-6
+AB  - The tuf gene of eubacteria, encoding the EF-tu elongation factor, was
+      duplicated early in the evolution of the taxon. Phylogenetic and genomic
+      location analysis of 20 complete eubacterial genomes suggests that this
+      ancient duplication has been differentially lost and maintained in
+      eubacteria.
+AD  - EMBL, Heidelberg, Germany. bork@embl-heidelberg.de
+AU  - Lathe WC 3rd
+AU  - Bork P
+LA  - eng
+PT  - Journal Article
+CY  - Netherlands
+TA  - FEBS Lett
+JC  - EUH
+JID - 0155157
+RN  - EC 3.6.1.- (Peptide Elongation Factor Tu)
+SB  - IM
+MH  - Chromosome Deletion
+MH  - Escherichia coli/*genetics
+MH  - Eubacterium/*genetics
+MH  - Evolution, Molecular
+MH  - *Gene Conversion
+MH  - *Gene Duplication
+MH  - Genes, Bacterial
+MH  - Peptide Elongation Factor Tu/*genetics
+MH  - Phylogeny
+EDAT- 2001/10/05 10:00
+MHDA- 2001/10/26 10:01
+PST - ppublish
+SO  - FEBS Lett 2001 Aug 3;502(3):113-6.
+
+
+
+

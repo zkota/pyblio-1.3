@@ -1,0 +1,71 @@
+<!-- Test DTD -->
+
+<!ENTITY % acontent 
+	"(style|inentry|notinentry|infield|notinfield|singular|plural|content|separator|#PCDATA)">
+
+<!ELEMENT bibstyle (module+, (%acontent;)+) >
+
+<!ELEMENT module (define+)>
+
+<!ATTLIST module
+	name	CDATA	#REQUIRED
+>
+
+<!ELEMENT define (#PCDATA)>
+
+<!ATTLIST define
+	field 	CDATA	#IMPLIED
+	method	CDATA	#IMPLIED
+>
+
+<!ELEMENT inentry ((%acontent;)+)>
+
+<!ATTLIST inentry
+	name 	CDATA	#REQUIRED
+>
+
+<!ELEMENT style ((%acontent;)+)>
+
+<!ATTLIST style
+	name 	CDATA	#REQUIRED
+>
+
+<!ELEMENT notinentry ((%acontent;)+)>
+
+<!ATTLIST notinentry
+	name 	CDATA	#REQUIRED
+>
+
+<!ELEMENT infield ((%acontent;)+)>
+
+<!ATTLIST infield
+	name 	CDATA	#REQUIRED
+>
+
+<!ELEMENT notinfield ((%acontent;)+)>
+
+<!ATTLIST notinfield
+	name 	CDATA	#REQUIRED
+>
+
+<!ELEMENT plural ((%acontent;)+)>
+
+<!ATTLIST plural
+	name 	CDATA	#IMPLIED
+>
+
+<!ELEMENT singular ((%acontent;)+)>
+
+<!ATTLIST singular
+	name 	CDATA	#IMPLIED
+>
+
+<!ELEMENT content ((%acontent;)+)>
+
+<!ATTLIST content
+	name 	CDATA	#IMPLIED
+>
+
+<!ELEMENT separator (#PCDATA) >
+
+	

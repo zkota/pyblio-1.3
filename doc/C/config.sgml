@@ -1,0 +1,74 @@
+<chapter>
+  <title>Customization</title>
+  
+  <para>The configuration  system is heavily based  on python's module
+    system. The  configuration files are standard  &pyb; scripts (that
+    is, python code making use  of &pyb; extra classes and functions),
+    whose  single special  feature is  to be  automatically  parsed at
+    startup or when needed.</para>
+  
+  <sect1>
+    <title>Files involved</title>
+    
+    <para>The      first      file      to      be      parsed      is
+      <filename>${prefix}/share/pybliographer/pybrc.py</filename>.  It
+      serves as  a bootstrap  for the general  configration mechanism,
+      and defines:</para>
+    
+    <itemizedlist>
+      <listitem>
+	<para>the available input and output formats</para>
+      </listitem>
+      
+      <listitem>
+	<para>where to find the configuration directories.</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>A configuration  directory holds a  list of files  which are
+    parsed  when  needed.  For  example,  if a  method  requires  some
+    configuration  data for  the  bibtex module,  it  will import  the
+    corresponding file in this directory.</para>
+
+    <para> This mechanism allows  more flexibility to add new formats:
+      the  new format can  be installed  with a  default configuration
+      without messing with the global configuration file. In addition,
+      the program imports only  what is needed, decreasing its startup
+      time.</para>
+    
+    <para>Finally,    if   the   user    provides   a    file   called
+      <filename>.pybrc.py</filename> in its  home directory, this file
+      is  then  parsed.  Of  course  it  can  also  define  a  private
+      configuration  directory,  and override  what  has been  defined
+      before.</para>
+  </sect1>
+  
+  <sect1>
+    <title>The <classname>Config</classname> module</title>
+    
+    <para>All the data that can be configured should be handled by the
+      so-called  <classname>Config</classname> module.  It  provides a
+      standard  interface   to  set/get  and   document  configuration
+      items.</para>
+    
+  </sect1>
+  
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

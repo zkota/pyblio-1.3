@@ -1,0 +1,16 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/format.py ${srcdir}/medline.med"
+
+for type in text raw html latex ; do
+    run ${com} ${srcdir}/../Styles/Alpha.xml ${type} > tmp.fmt
+    run diff tmp.fmt ${srcdir}/format.${type}
+    run rm -f tmp.fmt
+done
+
+tst_stop
+

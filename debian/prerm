@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Silently removing python files which had been 
+# byte-compiled at installation
+rm -f `find /usr/share/pybliographer -name "*.pyc"`
+

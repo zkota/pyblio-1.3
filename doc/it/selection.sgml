@@ -1,0 +1,89 @@
+<refentry id="class-selection">
+  <refnamediv>
+    <refname>Selection.Selection</refname>
+    <refpurpose>Definisce le restrizioni a un iteratore</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Selection.Selection</classname>:
+    <link linkend="mem-selection-search"><varname>self.search</varname></link>
+    <link linkend="mem-selection-sort"><varname>self.sort</varname></link>
+
+    def <link linkend="meth-selection-init">__init__</link> (self, search = None, sort = None):
+    def <link linkend="meth-selection-iterator">iterator</link> (self, iterator):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title>
+    <para>Questa classe pu&ograve tenere i criteri di ricerca e ordinamento e
+    fornire un iteratore che segue queste restrizioni.</para>
+
+  </refsect1>
+
+  <refsect1>
+    <title>Membri</title>
+
+    <refsect2 id="mem-selection-search">
+      <title>self.search</title>
+      <para>L'attuale oggetto <link linkend="class-tester">Tester</link>
+      .</para>
+      <warning>
+	<para>Cambiando questo attributo non cambier&agrave il comportamento
+	degli iteratori che sono stati restituiti precedentemente dall'iteratore <link
+	linkend="meth-selection-iterator"></link>.</para>
+      </warning>
+    </refsect2>
+
+    <refsect2 id="mem-selection-sort">
+      <title>self.sort</title>
+      <para>L'attuale oggetto <link linkend="class-sort">Sort</link>.</para>
+      <warning>
+	<para>Cambiando questo attributo non cambier&agrave il comportamento
+	degli iteratori che sono stati restituiti precedentemente dall'iteratore <link
+	linkend="meth-selection-iterator"></link>.</para>
+      </warning>
+    </refsect2>
+    
+  </refsect1>
+
+  <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-selection-init">
+      <title>__init__ (self, search, sort)</title>
+      <programlisting>
+selection = Selection (search = una_ricerca, sort = un_ordinamento)
+</programlisting>
+      <para>Crea un nuovo filtro di selezione.</para>
+    </refsect2>
+
+    <refsect2 id="meth-selection-iterator">
+      <title>iterator (self, iterator)</title> 
+
+      <para>Restituisce un nuovo iteratore che far&agrave un loop sugli elementi
+      dell'iteratore  passato come argomento,  ma in accordo all'attuale
+      filtro.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

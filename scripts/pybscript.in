@@ -1,0 +1,34 @@
+#!/bin/sh
+# -*- sh -*-
+
+prefix="@datapyb@"
+
+if test -x "./pybliographer" ; then
+    pyblio="./pybliographer"
+    # eventually add the extras directory
+    PYTHONPATH="$PYTHONPATH:extras"
+    export PYTHONPATH
+else
+    pyblio="@bin_dir@/pybliographer"
+fi
+
+invocation=$0
+script="${invocation}.py"
+
+if test -r ${script} ; then
+    exec ${pyblio} --quiet ${script} $*
+    echo "${progname}:error: can't execute the real script"
+    exit 1
+fi
+
+progname=`basename ${invocation}`
+script="${prefix}/${progname}.py"
+
+if test -r ${script} ; then
+    exec ${pyblio} --quiet ${script} $*
+    echo "${progname}:error: can't execute the real script"
+    exit 1
+fi
+
+echo "${progname}:error: can't locate the real script"
+exit 1

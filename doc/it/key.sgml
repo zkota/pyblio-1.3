@@ -1,0 +1,66 @@
+<refentry id="class-key">
+  <refnamediv>
+    <refname>Key.Key</refname>
+    
+    <refpurpose>definisce un oggetto hashabile che identifica univocamente
+    una voce bibliografica.</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <programlisting>
+class <classname>Key.Key</classname>:
+    <link linkend="mem-key-key"><varname>self.key</varname></link>
+    <link linkend="mem-key-base"><varname>self.base</varname></link>
+
+    def <link linkend="meth-key-init">__init__</link> (self, database, key):
+</programlisting>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Utilizzo</title>
+    <para></para>
+  </refsect1>
+
+  <refsect1>
+    <title>Membri</title>
+
+    <refsect2 id="mem-key-key">
+      <title>self.key</title>
+      <para>Tiene il riferimento della voce dentro il suo database</para>
+    </refsect2>
+
+    <refsect2 id="mem-key-base">
+      <title>self.base</title>
+      <para>Tiene il riferimento della voce del database.</para>
+    </refsect2>
+  </refsect1>
+
+  <refsect1>
+    <title>Metodi</title>
+    
+    <refsect2 id="meth-key-init">
+      <title>__init__ (self, database, key)</title>
+      <para>Crea una nuova chiave che tiene il database specificato e le chiavi
+      della voce.</para>
+    </refsect2>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:nil
+sgml-parent-document:("pyblio.sgml" "reference" "refentry")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

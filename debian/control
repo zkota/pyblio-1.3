@@ -1,0 +1,15 @@
+Source: pybliographer
+Section: text
+Priority: optional
+Maintainer: Paul Seelig <pseelig@debian.org>
+Standards-Version: 3.1.1
+
+Package: pybliographer
+Architecture: any
+Depends: ${shlibs:Depends}, python-gnome (>= 1.0.52)
+Description: Framework for working with bibliographic databases
+ Pybliographer is a tool for working with bibliographic databases. It
+ provides a general framework that can be used to manipulate these
+ databases with a simple graphical interface, but that can also be easily
+ extended by the mean of a scripting language, to fit a wide range of
+ needs.

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/../scripts/pybformat.py --"
+
+run ${com} -o tmp.text ${srcdir}/bibtex.bib > /dev/null
+run diff  tmp.text ${srcdir}/bibtex.text
+run rm -f tmp.text
+
+tst_stop
+

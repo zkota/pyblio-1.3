@@ -1,0 +1,2 @@
+?package(pybliographic):needs=X11 section=Apps/Text\
+  title="pybliographic" command="/usr/bin/pybliographic"

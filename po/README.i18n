@@ -1,0 +1,11 @@
+---------------
+Translator info
+---------------
+
+First, thank you ;-)
+
+I've setup this directory by hand, as the project is in pure python
+and does not include the usual gettext tools. Please let me know if
+something is not usable or should be improved.
+
+Frédéric Gobry <gobry@pybliographer.org>

@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Pybliographic
+Name[de]=Pybliographic
+Name[fi]=Pybliographic
+Name[sr]=Пиблиотекар
+Name[sr@Latn]=Pibliotekar
+Name[sv]=Pybliographic
+Name[hu]=Pybliographic
+Comment=Bibliographic database editor
+Comment[de]=Bibliographischer Datenbank-Editor
+Comment[fi]=Bibliografiatietokannan muokkaustyökalu
+Comment[fr]=Éditeur de bases de données bibliographiques
+Comment[sr]=Уређивач библиографске базе података
+Comment[sr@Latn]=Uređivač bibliografske baze podataka
+Comment[sv]=Redigerinsgprogram för bibliografidatabaser
+Comment[hu]=Bibliográfiai adatbáziskezelõ
+Icon=pybliographic.png
+Exec=pybliographic
+Terminal=0
+Type=Application

@@ -1,0 +1,215 @@
+<chapter>
+  <title>The scripting language</title>
+
+  <para>&pyb; is in fact a simple set of classes and functions written
+    in python, and  that provides with a simple  and homogenous access
+    to  bibliographic databases.  Therefore, it  is possible  to write
+    python scripts  that make use of these  specialized functions. The
+    graphical interface,  &pyc;, is itself  a simple script on  top of
+    &pyb;.</para>
+
+  <para>To execute a script written for &pyb;, simply run </para>
+
+  <screen>
+    <prompt>></> <command>pybliographer</> <filename>myscript.py</>
+  </screen>
+
+  <para>You can alternatively start your script by 
+    <programlisting>
+      #!/path/to/pybliographer
+
+      ...rest of your script...
+    </programlisting>
+    and make it executable.
+  </para>
+
+  <sect1>
+    <title>Existing scripts</title>
+
+    <para>Some  scripts  are  provided  with  pybliographer,  both  as
+      example and as useful tools.  They are quite short and should be
+      readable         with        basical         knowledge        of
+      <productname>python</productname>.</para>
+
+    <sect2>
+      <title>pybcheck</title>
+      
+      
+      <abstract>
+	<para>This tool takes a list  of files or directory, and check
+	if  they   are  valid  (syntax,  no  entries   with  the  same
+	key,...)</para>
+      </abstract>
+
+      <para>It  is possible  to use  its output  directly in  an emacs
+	compile buffer,  in order to jump directly  to the encountered
+	errors. To do so,  type <keysym>M-x compile</keysym>, then the
+	command                                       <command>pybcheck
+	<filename>yourfiles</filename></command>,  and use  the middle
+	button of the mouse to jump into the faulty file.</para>
+    </sect2>
+
+    <sect2>
+      <title>pybcompact</title>
+      
+      <abstract>
+	<para>This  tool  extracts  the  citations  made  in  a  LaTeX
+	document    and   generates    a   BibTeX    file   containing
+	them.</para>
+      </abstract>
+      
+      <para>Usually, one  stores its bibliographies in  one or several
+	large BibTeX files, and lets <command>bibtex</command> extract
+	the  entries used  in a  LaTeX  document. But  it is  sometime
+	convenient to create a  self-contained package (for example to
+	share it in  native form with somebody else,  or to store it),
+	with a  minimalistic BibTeX  file holding exactly  the entries
+	used in LaTeX.  This tool does exactly that:  it reads a LaTeX
+	<filename>.aux</filename> file, and extract from the specified
+	BibTeX databases the corresponding entries.</para>
+    </sect2>
+
+    <sect2>
+      <title>pybconvert</title>
+      
+      <abstract>
+	<para>This  tool  converts from  one  bibliographic format  to
+	another.</para>
+      </abstract>
+
+      <para>The general syntax is pretty simple. To convert from Refer
+	to BibTeX for example, just run: </para>
+
+      <screen>
+	<prompt>&gt; </><command>pybconvert</> refer..bibtex <filename>toto.refer</> <filename>toto.bib</>
+      </screen>
+    </sect2>
+
+    <sect2>
+      <title>pybformat</title>
+
+      <abstract>
+	<para>This  script generates a  bibliography according  to a
+	bibliographic style, and outputs it in a specific format (like
+	HTML, LaTeX,...) as it should appear in a document.</para>
+      </abstract>
+      
+      <para>The general form of the command is</para>
+      <screen>
+	<prompt>&gt; </><command>pybformat</> [options] <filename>database...</>
+      </screen>
+
+      <para>This    command    will     use    the    format    called
+	<emphasis>alpha</emphasis>   to  create   a   bibliography  in
+	<emphasis>LaTeX</emphasis>.  Several  options are available to
+	create these documents:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para><option>--style=... or -s ...</option>: specify a
+	    bibliography style. This can be a full path to an existing
+	    XML file, or a name which will be searched in the standard
+	    places. Default is Alpha.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--format=... or -f ...</option>: specify an
+	  output format (like HTML, LaTeX,...). Default is
+	  Text.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--output=...  or -o  ...</option>:  specify an
+	    output filename. STDOUT is the default.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--header=...  or  -H  ...</option>: defines  a
+	    file that will be prepended to the output file.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--footer=...  or  -F  ...</option>: defines  a
+	    file that will be appended to the output file.</para>
+	</listitem>
+	<listitem>
+	  <para><option>--list=output or -l output</option>: lists the
+	    available output formats</para>
+	</listitem>
+      </itemizedlist>
+
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>Writing your own scripts</title>
+
+    <para>To start writing your own script, you can read what follows,
+    and then have a look at the existing scripts. Trying to adapt them
+    to fit your  personal needs can be a good way  of testing what you
+    read.</para>
+
+    <sect2>
+      <title>Some concepts</title>
+
+      <para>This section describes some basic classes and ideas that
+      are useful to understand how &pyb; works. More information can
+	be found in <xref linkend="reference">.</para> 
+
+      <para>In the following, all the  modules that will be refered to
+	belong to  the <symbol>Pyblio</symbol> domain.   So, to access
+	the members  of the <symbol>Open</symbol>  module, you'll have
+	to write at the beginning of your script something like</para>
+
+      <programlisting>from Pyblio import Open</programlisting>
+      
+      <para>The <symbol>Base</symbol>  module contains some  of the most
+	basical classes used in the application:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para><symbol>Base.Entry</symbol>    represents   a   specific
+	    bibliographic entry, with all  its fields. It behaves like a
+	    hash table  which returns the  content of a field  given its
+	    name</para>
+	</listitem>
+	<listitem>
+	  <para><symbol>Base.DataBase</symbol>  is the class  from which
+	    every database  type inherits. It behaves like  a hash table
+	  that returns a Base.Entry given a Base.Key</para>
+	</listitem>
+      </itemizedlist>
+      
+      <para><symbol>Key.Key</symbol>  is the  object  that uniquely
+	identifies an  entry.  This object  must be unique  over the
+	whole application, and is composed of a database part and an
+	entry part.</para>
+
+      <para>An <symbol>Iterator</symbol> is  an object that provides a
+	way to  access a sequence  of items in order.  These iterators
+	are  used   extensively  in  &pyb;,  because   they  hide  the
+	underlying access  mechanism, and  provide the same  access on
+	any database. They are  also perfectly suited for implementing
+	transparent   filtering   and    sorting   of   entries:   the
+	<symbol>Selection.Selection</symbol>  class for  example takes
+	an iterator (on  a database for example) and  return a new one
+	which will only iterate on  a subset of the entries, according
+	to a search criterion.</para>
+
+    </sect2>
+
+  </sect1>
+</chapter>
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:("pyblio.sgml" "book" "chapter")
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

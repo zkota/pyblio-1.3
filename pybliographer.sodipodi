@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg548"
+   sodipodi:version="0.32"
+   width="210mm"
+   height="297mm"
+   sodipodi:docname="pybliographer.sodipodi"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs550" />
+  <sodipodi:namedview
+     id="base" />
+  <rect
+     style="font-size:12;fill:#478080;fill-rule:evenodd;stroke-width:1pt;fill-opacity:1;"
+     id="rect554"
+     width="289.469094"
+     height="100.423029"
+     x="39.859418"
+     y="431.396847"
+     transform="matrix(0.984777,-0.173822,-2.061842e-3,0.999998,0.000000,0.000000)" />
+  <text
+     style="fill:black;stroke:none;font-family:helvetica;font-style:normal;font-weight:normal;font-size:12px;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+     x="5.15303125"
+     y="112.701700"
+     id="text551"
+     transform="scale(8.061267,4.093814)">
+    <tspan
+       id="tspan552">
+pybliographer</tspan>
+  </text>
+</svg>

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. ${srcdir}/testing.sh
+
+tst_start
+
+com="../pybliographer -q ${srcdir}/../scripts/pybcompact.py"
+
+run ${com} ${srcdir}/compact ${srcdir}/bibtex.bib > tmp.bib
+run diff tmp.bib ${srcdir}/compact.bib
+run rm -f tmp.bib
+
+tst_stop
+

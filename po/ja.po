@@ -1,0 +1,1198 @@
+# pybliographer
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Yukihiro Nakai <nakai@gnome.gr.jp>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer CVS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Oct  9 22:20:02 2003\n"
+"PO-Revision-Date: 2000-10-15 03:43+0900\n"
+"Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
+"Language-Team: Japanese <translation@gnome.gr.jp>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=euc-jp\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../Pyblio/Autoload.py:57
+msgid "warning: can't import %s: %s"
+msgstr "注意: %sをインポートできません: %s"
+
+#: ../Pyblio/Config.py:53
+msgid "value of `%s' should be of type %s"
+msgstr "`%s'の値はタイプ%sでなければなりません"
+
+#: ../Pyblio/Config.py:204
+msgid "String"
+msgstr "文字"
+
+#: ../Pyblio/Config.py:213
+msgid "Boolean"
+msgstr "真偽値"
+
+#: ../Pyblio/Config.py:232
+msgid "Integer"
+msgstr "整数"
+
+#: ../Pyblio/Config.py:234
+msgid "Integer under %d"
+msgstr "%d未満の整数"
+
+#: ../Pyblio/Config.py:236
+msgid "Integer over %d"
+msgstr "%dを越える整数"
+
+#: ../Pyblio/Config.py:238
+msgid "Integer between %d and %d"
+msgstr "%dと%dの間の整数"
+
+#: ../Pyblio/Config.py:250
+msgid "Element in `%s'"
+msgstr "`%s'の要素"
+
+#: ../Pyblio/Config.py:270
+msgid "Tuple (%s)"
+msgstr "タプル (%s)"
+
+#: ../Pyblio/Config.py:291
+msgid "List (%s)"
+msgstr "リスト (%s)"
+
+#: ../Pyblio/Config.py:316
+msgid "Dictionary (%s, %s)"
+msgstr "辞書 (%s, %s)"
+
+#: ../Pyblio/Fields.py:265
+msgid "Illegal year value"
+msgstr "不正な年号の値"
+
+#: ../Pyblio/Fields.py:269
+msgid "Illegal month value"
+msgstr "不正な月の値"
+
+#: ../Pyblio/Fields.py:273
+msgid "Illegal day value"
+msgstr "不正な日付の値"
+
+#: ../Pyblio/Fields.py:443
+msgid "in %s"
+msgstr "%sの中で"
+
+#: ../Pyblio/Format/BibTeX.py:346 ../Pyblio/Format/BibTeX.py:404
+msgid "key `%s' is malformed"
+msgstr "キー `%s'は不正です"
+
+#: ../Pyblio/Format/BibTeX.py:367 ../Pyblio/Format/BibTeX.py:388
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d: キー`%s'はすでに定義されています"
+
+#: ../Pyblio/GnomeUI/Config.py:64
+msgid "Choose your preferences"
+msgstr "設定の選択"
+
+#: ../Pyblio/GnomeUI/Config.py:145 ../Pyblio/GnomeUI/Fields.py:291
+#: ../Pyblio/GnomeUI/Fields.py:473
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"いくつかの変更は、正しく反映するためには\n"
+"Pybliographicを再起動する必要があります"
+
+#: ../Pyblio/GnomeUI/Config.py:425
+msgid "Add"
+msgstr "追加"
+
+#: ../Pyblio/GnomeUI/Config.py:428
+msgid "Update"
+msgstr "更新"
+
+#: ../Pyblio/GnomeUI/Config.py:431 ../Pyblio/GnomeUI/Config.py:535
+#: ../Pyblio/GnomeUI/Fields.py:373
+msgid "Remove"
+msgstr "削除"
+
+#: ../Pyblio/GnomeUI/Config.py:532 ../Pyblio/GnomeUI/Fields.py:370
+msgid "Set"
+msgstr "設定"
+
+#: ../Pyblio/GnomeUI/Config.py:547
+msgid "Key:"
+msgstr "キー:"
+
+#: ../Pyblio/GnomeUI/Config.py:549
+msgid "Value:"
+msgstr "値:"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"ファイル`%s'を書き込んでいます:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:215
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"`%s'のパースでエラーが発生しました:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:234
+msgid "New database"
+msgstr "新規データベース"
+
+#: ../Pyblio/GnomeUI/Document.py:242 ../Pyblio/GnomeUI/Document.py:246
+msgid "[no entry]"
+msgstr "[エントリなし]"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+msgid "[1 entry]"
+msgstr "[1エントリ]"
+
+#: ../Pyblio/GnomeUI/Document.py:244
+msgid "[%d entries]"
+msgstr "[%dエントリ]"
+
+#: ../Pyblio/GnomeUI/Document.py:247
+msgid "[%d/1 entry]"
+msgstr "[%d/1エントリ]"
+
+#: ../Pyblio/GnomeUI/Document.py:248
+msgid "[%d/%d entries]"
+msgstr "[%d/%dエントリ]"
+
+#: ../Pyblio/GnomeUI/Document.py:253
+msgid "[modified]"
+msgstr "[変更されました]"
+
+#: ../Pyblio/GnomeUI/Document.py:263
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr ""
+"データベースは変更されました。\n"
+"変更を破棄しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:293
+msgid "Merge file"
+msgstr "ファイルの結合"
+
+#: ../Pyblio/GnomeUI/Document.py:305 ../Pyblio/GnomeUI/Document.py:359
+msgid "Open error"
+msgstr "開くときのエラー"
+
+#: ../Pyblio/GnomeUI/Document.py:329
+msgid "Merge status"
+msgstr "結合状態"
+
+#: ../Pyblio/GnomeUI/Document.py:340
+msgid "Open file"
+msgstr "ファイルを開く"
+
+#: ../Pyblio/GnomeUI/Document.py:386
+#, fuzzy
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"データベースは変更されました。\n"
+"変更を破棄しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:396
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"`%s'を開けません:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:404
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"保存するときに内部エラーが発生しました\n"
+"別名で保存してください..."
+
+#: ../Pyblio/GnomeUI/Document.py:418
+msgid "Save As..."
+msgstr "別名で保存..."
+
+#: ../Pyblio/GnomeUI/Document.py:424
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"`%s'はすでに存在します。\n"
+"上書きしますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:431
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"開いているときに:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:449
+msgid "Reopen error"
+msgstr "再オープンエラー"
+
+#: ../Pyblio/GnomeUI/Document.py:490
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"`%s'というエントリがすでに存在します。\n"
+"名前を変更してとにかく追加しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:527
+msgid "Really remove all the entries ?"
+msgstr "本当にすべてのエントリを削除しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:547
+msgid "Create new entry"
+msgstr "新規エントリの作成"
+
+#: ../Pyblio/GnomeUI/Document.py:561
+msgid "Really edit %d entries ?"
+msgstr "本当に%dエントリを編集しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:599
+msgid "Remove all the %d entries ?"
+msgstr "%dエントリをすべて削除しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:601
+msgid "Remove entry `%s' ?"
+msgstr "エントリ`%s'を削除しますか?"
+
+#: ../Pyblio/GnomeUI/Document.py:665 ../Pyblio/GnomeUI/Document.py:672
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+"LyXに接続できません:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:749
+msgid ""
+"Please install bug-buddy\n"
+"to use this feature"
+msgstr ""
+"この機能を使うにはbug-buddyを\n"
+"インストールしてください"
+
+#: ../Pyblio/GnomeUI/Document.py:762
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "このプログラムはGNU GPLのもとに著作権があります"
+
+#: ../Pyblio/GnomeUI/Document.py:763
+msgid "Gnome interface to the Pybliographer system."
+msgstr "PybliobrapherシステムのGNOMEインターフェースです。"
+
+#: ../Pyblio/GnomeUI/Document.py:772
+msgid "Gnome Translation Team"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:777
+msgid "Pybliographer Home Page"
+msgstr "Pybliographerホームページ"
+
+#: ../Pyblio/GnomeUI/Editor.py:38
+msgid "Last Name, First Name"
+msgstr "名前、名字"
+
+#: ../Pyblio/GnomeUI/Editor.py:39 ../Pyblio/GnomeUI/Fields.py:39
+msgid "Text"
+msgstr "テキスト"
+
+#: ../Pyblio/GnomeUI/Editor.py:322
+msgid "Day"
+msgstr "日"
+
+#: ../Pyblio/GnomeUI/Editor.py:331
+msgid "Month"
+msgstr "月"
+
+#: ../Pyblio/GnomeUI/Editor.py:340
+msgid "Year"
+msgstr "年"
+
+#: ../Pyblio/GnomeUI/Editor.py:365
+msgid "Invalid day field in date"
+msgstr "日付の日フィールドが不適切です"
+
+#: ../Pyblio/GnomeUI/Editor.py:373
+msgid "Invalid month field in date"
+msgstr "日付の月フィールドが不適切です"
+
+#: ../Pyblio/GnomeUI/Editor.py:381
+msgid "Invalid year field in date"
+msgstr "日付の年フィールドが不適切です"
+
+#: ../Pyblio/GnomeUI/Editor.py:431 ../Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "削除"
+
+#: ../Pyblio/GnomeUI/Editor.py:442 ../Pyblio/GnomeUI/Editor.py:454
+#: ../Pyblio/GnomeUI/Editor.py:457
+msgid "[ Drop an Entry here ]"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:527 ../Pyblio/GnomeUI/Fields.py:106
+msgid "Entry type"
+msgstr "エントリタイプ"
+
+#: ../Pyblio/GnomeUI/Editor.py:529
+msgid "Key"
+msgstr "キー"
+
+#: ../Pyblio/GnomeUI/Editor.py:570
+msgid "Create Field"
+msgstr "フィールドの作成"
+
+#: ../Pyblio/GnomeUI/Editor.py:625
+msgid "Extra"
+msgstr "おまけ"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:325
+msgid "Mandatory"
+msgstr "必須"
+
+#: ../Pyblio/GnomeUI/Editor.py:625 ../Pyblio/GnomeUI/Fields.py:326
+msgid "Optional"
+msgstr "オプション"
+
+#: ../Pyblio/GnomeUI/Editor.py:694
+msgid "Invalid key format"
+msgstr "不適切なキーのフォーマット"
+
+#: ../Pyblio/GnomeUI/Editor.py:702
+msgid "Key `%s' already exists"
+msgstr "キー`%s'はすでに存在します"
+
+#: ../Pyblio/GnomeUI/Editor.py:763
+msgid "Error in native string parsing"
+msgstr "ネイティブ文字のパースでエラー"
+
+#: ../Pyblio/GnomeUI/Editor.py:776
+msgid "Edit entry"
+msgstr "エントリの編集"
+
+#: ../Pyblio/GnomeUI/Editor.py:790 ../Pyblio/GnomeUI/Editor.py:846
+msgid "Native Editing"
+msgstr "ネイティブ編集"
+
+#: ../Pyblio/GnomeUI/Editor.py:868
+msgid "Standard Editing"
+msgstr "標準編集"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+#, fuzzy
+msgid "Authors"
+msgstr "著者"
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+msgid "URL"
+msgstr "URL"
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+msgid "Reference"
+msgstr "参照"
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+msgid "Date"
+msgstr "日付"
+
+#: ../Pyblio/GnomeUI/Fields.py:61
+#, fuzzy
+msgid "Entry types and field names configuration"
+msgstr "エントリ設定"
+
+#: ../Pyblio/GnomeUI/Fields.py:69
+msgid "Name"
+msgstr "名前"
+
+#: ../Pyblio/GnomeUI/Fields.py:72
+msgid "Type"
+msgstr "タイプ"
+
+#: ../Pyblio/GnomeUI/Fields.py:126
+msgid "Available"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:135
+msgid "Associated"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+msgid "Entries configuration"
+msgstr "エントリ設定"
+
+#: ../Pyblio/GnomeUI/Fields.py:343
+msgid "Entry"
+msgstr "エントリ"
+
+#: ../Pyblio/GnomeUI/Fields.py:354
+msgid "Entry Name:"
+msgstr "エントリ名:"
+
+#: ../Pyblio/GnomeUI/Fields.py:359 ../glade/search-intl.c:11
+msgid "Field"
+msgstr "フィールド"
+
+#: ../Pyblio/GnomeUI/Fields.py:359
+msgid "Status"
+msgstr "状態"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:40
+msgid "File"
+msgstr "ファイル"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:75
+msgid "Bibliography type:"
+msgstr "文献タイプ"
+
+#: ../Pyblio/GnomeUI/Index.py:94
+msgid "Add..."
+msgstr "追加..."
+
+#: ../Pyblio/GnomeUI/Index.py:96
+msgid "Edit..."
+msgstr "編集..."
+
+#: ../Pyblio/GnomeUI/Index.py:98
+#, fuzzy
+msgid "Delete..."
+msgstr "削除"
+
+#: ../Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "全データベース"
+
+#: ../Pyblio/GnomeUI/Search.py:141
+msgid "internal error during evaluation"
+msgstr "評価の途中の内部エラー"
+
+#: ../Pyblio/GnomeUI/Search.py:195
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"%sをコンパイルしているときに\n"
+"エラー: %s"
+
+#: ../Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[エントリ タイプ]"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[キー 値]"
+
+#: ../Pyblio/GnomeUI/Utils.py:196
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr ""
+"次のエラーが発生しました:\n"
+"\n"
+
+#: ../Pyblio/LyX.py:39
+msgid "no input pipe `%s'"
+msgstr "パイプ`%s'に入力がありません"
+
+#: ../Pyblio/LyX.py:45
+msgid "no output pipe `%s'"
+msgstr "パイプ`%s'に入力がありません"
+
+#: ../Pyblio/Open.py:97
+msgid "method `%s' provides no opener"
+msgstr "メソッド`%s'にはオープナーがありません"
+
+#: ../Pyblio/Open.py:105 ../Pyblio/Open.py:151
+msgid "File `%s' does not exist"
+msgstr "ファイル`%s'は存在しません"
+
+#: ../Pyblio/Open.py:116 ../Pyblio/Open.py:162
+msgid "don't know how to open `%s'"
+msgstr "`%s'をどうやって開くのか分かりません"
+
+#: ../Pyblio/Open.py:143
+msgid "method `%s' provides no iterator"
+msgstr "メソッド`%s'にはイテレータがありません"
+
+#: ../pybliographer.py:40
+msgid "This is %s, version %s"
+msgstr "これは%sで、バージョンは%sです"
+
+#: ../pybliographer.py:44 ../pybliographer.py:51
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "これはまったく保証のないフリーソフトウェアです。"
+
+#: ../pybliographer.py:45
+msgid "For details, type `warranty'."
+msgstr "詳しくは、`warranty'と入力して下さい。"
+
+#: ../pybliographer.py:108 ../pybliographer.py:160
+msgid "%s: error: can't open file `%s'"
+msgstr "%s: エラー: ファイル`%s'を開けません"
+
+#: ../pybliographer.py:121
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "ヘルプを見るには、%sを実行してプロンプトで`help'と入力してください"
+
+#: ../pybliographer.py:130
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"使用可能なコマンド:\n"
+"\thelp     でヘルプをいくらか見れます\n"
+"\tquit     で終了します\n"
+
+#: ../scripts/pybcompact.py:29
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "使い方: pybcompact <latexファイル> <bibtexファイル...>"
+
+#: ../scripts/pybcompact.py:33
+msgid "pybcompact: error: %s\n"
+msgstr "pybcompact: エラー: %s\n"
+
+#: ../scripts/pybcompact.py:96
+msgid "no entry"
+msgstr "エントリなし"
+
+#: ../scripts/pybcompact.py:141
+msgid "can't find the following entries: %s"
+msgstr "次のエントリを検索できません: %s"
+
+#: ../scripts/pybconvert.py:28
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "使い方: pybconvert <ソース>..<ターゲット> <入力> [出力]"
+
+#: ../scripts/pybconvert.py:37
+msgid "pybconvert: bad conversion format"
+msgstr "pybconvert: 変換フォーマットが間違っています"
+
+#: ../scripts/pybformat.py:33
+msgid "usage: pybformat [bibtexfiles...]\n"
+msgstr "使い方: pybformat [bibtexファイル...]\n"
+
+#: ../scripts/pybformat.py:37
+msgid "pybformat: error: %s\n"
+msgstr "pybformat: エラー: %s\n"
+
+#: ../scripts/pybformat.py:43
+msgid "pybformat: warning: %s\n"
+msgstr "pybformat: 注意: %s\n"
+
+#: ../scripts/pybformat.py:140 ../scripts/pybtex.py:85
+msgid "can't find style `%s'"
+msgstr "スタイル`%s'を検索できません"
+
+#: ../scripts/pybtex.py:33
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "使い方: pybtex <latexファイル> [bibtexファイル...]"
+
+#: ../scripts/pybtex.py:37
+msgid "pybtex: error: %s\n"
+msgstr "pybtex: エラー: %s\n"
+
+#: ../scripts/pybtex.py:58
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "pybtex: 注意: 次のキーは解決されていません"
+
+#: ../scripts/pybtex.py:63
+msgid "no style defined"
+msgstr "スタイルが定義されていません"
+
+#: ../glade/format-intl.c:8
+msgid "Format entries"
+msgstr "エントリのフォーマット"
+
+#: ../glade/format-intl.c:9
+msgid "Bibliography style:"
+msgstr "目録スタイル:"
+
+#: ../glade/format-intl.c:10
+msgid "Output format:"
+msgstr "出力フォーマット:"
+
+#: ../glade/format-intl.c:11
+#, fuzzy
+msgid "Output file:\n"
+msgstr "出力ファイル:"
+
+#: ../glade/format-intl.c:13 ../glade/format-intl.c:14
+#: ../glade/medline-intl.c:12 ../glade/medline-intl.c:17
+#: ../glade/medline-intl.c:22 ../glade/medline-intl.c:23
+#: ../glade/medline-intl.c:24 ../glade/medline-intl.c:25
+#: ../glade/medline-intl.c:26 ../glade/medline-intl.c:27
+#: ../glade/medline-intl.c:28 ../glade/medline-intl.c:29
+#: ../glade/medline-intl.c:31 ../glade/medline-intl.c:33
+#: ../glade/search-intl.c:13 ../glade/search-intl.c:14
+#: ../glade/search-intl.c:17
+msgid "*"
+msgstr ""
+
+#: ../glade/medline-intl.c:8
+msgid "Medline Query"
+msgstr ""
+
+#: ../glade/medline-intl.c:9
+msgid "Enter your Medline Query"
+msgstr ""
+
+#: ../glade/medline-intl.c:10
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+
+#: ../glade/medline-intl.c:13
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+
+#: ../glade/medline-intl.c:15
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+
+#: ../glade/medline-intl.c:18
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+
+#: ../glade/medline-intl.c:20
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+
+#: ../glade/medline-intl.c:30
+#, fuzzy
+msgid "From:"
+msgstr "元"
+
+#: ../glade/medline-intl.c:32
+msgid "To:"
+msgstr ""
+
+#: ../glade/medline-intl.c:34
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+
+#: ../glade/medline-intl.c:36
+msgid "Limited to:"
+msgstr ""
+
+#: ../glade/pyblio-intl.c:8
+#, fuzzy
+msgid "Pybliographer"
+msgstr "Pybliographerホームページ"
+
+#: ../glade/pyblio-intl.c:9
+msgid "_New"
+msgstr "新規(_N)"
+
+#: ../glade/pyblio-intl.c:10
+#, fuzzy
+msgid "Merge With..."
+msgstr "結合(_M)..."
+
+#: ../glade/pyblio-intl.c:11
+msgid "Medline Query..."
+msgstr ""
+
+#: ../glade/pyblio-intl.c:12
+msgid "Previous Documents"
+msgstr "前のどきゅめんと"
+
+#: ../glade/pyblio-intl.c:13
+msgid "_Add..."
+msgstr "追加(_A)..."
+
+#: ../glade/pyblio-intl.c:14
+msgid "_Edit..."
+msgstr "編集(_E)..."
+
+#: ../glade/pyblio-intl.c:15
+#, fuzzy
+msgid "_Delete..."
+msgstr "削除"
+
+#: ../glade/pyblio-intl.c:16
+msgid "S_ort..."
+msgstr "ソート(_O)..."
+
+#: ../glade/pyblio-intl.c:17 ../glade/pyblio-intl.c:25
+msgid "Cite"
+msgstr "引用"
+
+#: ../glade/pyblio-intl.c:18
+#, fuzzy
+msgid "Cite..."
+msgstr "引用"
+
+#: ../glade/pyblio-intl.c:19
+#, fuzzy
+msgid "Format..."
+msgstr "フォーマット(_F)..."
+
+#: ../glade/pyblio-intl.c:20
+#, fuzzy
+msgid "Settings"
+msgstr "設定(_S)"
+
+#: ../glade/pyblio-intl.c:21
+#, fuzzy
+msgid "Fields..."
+msgstr "フィールド(_F)..."
+
+#: ../glade/pyblio-intl.c:22
+#, fuzzy
+msgid "Entries..."
+msgstr "エントリ(_E)..."
+
+#: ../glade/pyblio-intl.c:23
+#, fuzzy
+msgid "Open File"
+msgstr "ファイルを開く"
+
+#: ../glade/pyblio-intl.c:24
+#, fuzzy
+msgid "Save File"
+msgstr "ファイル"
+
+#: ../glade/search-intl.c:8 ../glade/search-intl.c:9
+msgid "Search"
+msgstr "検索"
+
+#: ../glade/search-intl.c:10
+msgid "Close"
+msgstr "閉じる"
+
+#: ../glade/search-intl.c:12
+msgid "Pattern"
+msgstr "パターン"
+
+#: ../glade/search-intl.c:15
+msgid "Simple Search"
+msgstr "簡単検索"
+
+#: ../glade/search-intl.c:16
+msgid "Query"
+msgstr ""
+
+#: ../glade/search-intl.c:18
+msgid "Expert Search"
+msgstr "上級検索"
+
+#: ../glade/sort-intl.c:8
+msgid "Select sort criterions"
+msgstr "ソート基準の選択"
+
+#: ../glade/sort-intl.c:9
+msgid "Set as default"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Search Command:"
+#~ msgstr "検索コマンド:"
+
+#~ msgid "Sort direction"
+#~ msgstr "ソートの方向"
+
+#~ msgid "Sort criterions"
+#~ msgstr "ソート基準"
+
+#~ msgid "Reorder"
+#~ msgstr "再ソート"
+
+#~ msgid "Groups the active fields on the top of the list"
+#~ msgstr "リストの先頭にあるアクティブなフィールドをグループ化"
+
+#~ msgid "Unselect all"
+#~ msgstr "すべて選択解除"
+
+#~ msgid "Removes all the sort criterions"
+#~ msgstr "すべてのソート基準を削除"
+
+#~ msgid "_Previous Documents"
+#~ msgstr "前のドキュメント(_P)"
+
+#~ msgid "About..."
+#~ msgstr "情報..."
+
+#~ msgid "Submit a Bug Report"
+#~ msgstr "バグレポートの提出"
+
+#~ msgid "_Delete"
+#~ msgstr "削除(_D)"
+
+#~ msgid "_Cite"
+#~ msgstr "引用(_C)"
+
+#~ msgid "_File"
+#~ msgstr "ファイル(_F)"
+
+#~ msgid "_Edit"
+#~ msgstr "編集(_E)"
+
+#~ msgid "_Help"
+#~ msgstr "ヘルプ(_H)"
+
+#~ msgid "Open"
+#~ msgstr "開く"
+
+#~ msgid "Save"
+#~ msgstr "保存"
+
+#~ msgid "Find"
+#~ msgstr "検索"
+
+#~ msgid "Select style"
+#~ msgstr "スタイルの選択"
+
+#~ msgid "Select output file"
+#~ msgstr "出力ファイルの選択"
+
+#~ msgid ""
+#~ "Item `%s':\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "アイテム`%s':\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "True"
+#~ msgstr "真"
+
+#~ msgid "False"
+#~ msgstr "偽"
+
+#~ msgid "Value"
+#~ msgstr "値"
+
+#~ msgid "Fields configuration"
+#~ msgstr "フィールド設定"
+
+#~ msgid "Name:"
+#~ msgstr "名前:"
+
+#~ msgid "Type:"
+#~ msgstr "タイプ:"
+
+#~ msgid "BibTeX"
+#~ msgstr "BibTeX"
+
+#~ msgid "BibTeX parser configuration"
+#~ msgstr "BibTeXパーサ設定"
+
+#~ msgid "Strict Parsing"
+#~ msgstr "厳密なパース"
+
+#~ msgid "Turn warnings into errors"
+#~ msgstr "警告もエラーにする"
+
+#~ msgid "Macros"
+#~ msgstr "マクロ"
+
+#~ msgid "BibTeX @String{} macros"
+#~ msgstr "BibTeX @String{} マクロ"
+
+#~ msgid "Date Fields"
+#~ msgstr "データフィールド"
+
+#~ msgid "Links from `real' date field to the two bibtex"
+#~ msgstr "`実際の'日付フィールドから2つのbibtexへのリンク"
+
+#~ msgid "Month values"
+#~ msgstr "月の値"
+
+#~ msgid " A hash table linking month names to their"
+#~ msgstr " ハッシュテーブルからのリンクが月名から"
+
+#~ msgid "Base"
+#~ msgstr "ベース"
+
+#~ msgid "Elementary configuration"
+#~ msgstr "要素の設定"
+
+#~ msgid "Advertise"
+#~ msgstr "広告"
+
+#~ msgid "Specify wether or not the program should add a message"
+#~ msgstr "プログラムがメッセージを追加するかどうかを指定してください"
+
+#~ msgid "Fields"
+#~ msgstr "フィールド"
+
+#~ msgid "Existing fields"
+#~ msgstr "存在するフィールド"
+
+#~ msgid "Entries"
+#~ msgstr "エントリ"
+
+#~ msgid "Existing entries"
+#~ msgstr "存在するエントリ"
+
+#~ msgid "Default Type"
+#~ msgstr "デフォルトタイプ"
+
+#~ msgid "Default type for a newly created entry"
+#~ msgstr "新規に作成されたエントリのデフォルトタイプ"
+
+#~ msgid "LyX Path"
+#~ msgstr "LyX パス"
+
+#~ msgid "Path to the LyX server"
+#~ msgstr "LyXサーバへのパス"
+
+#~ msgid "Path"
+#~ msgstr "パス"
+
+#~ msgid "Cross Reference"
+#~ msgstr "クロスリファレンス"
+
+#~ msgid "Description"
+#~ msgstr "説明"
+
+#~ msgid "Address 1"
+#~ msgstr "アドレス 1"
+
+#~ msgid "Address 2"
+#~ msgstr "アドレス 2"
+
+#~ msgid "Title"
+#~ msgstr "タイトル"
+
+#~ msgid "Specific Title"
+#~ msgstr "特定できるタイトル"
+
+#~ msgid "Journal"
+#~ msgstr "ジャーナル"
+
+#~ msgid "Special"
+#~ msgstr "特別"
+
+#~ msgid "Book Title"
+#~ msgstr "本のタイトル"
+
+#~ msgid "Subject"
+#~ msgstr "題名"
+
+#~ msgid "Ownership"
+#~ msgstr "所有者"
+
+#~ msgid "Series"
+#~ msgstr "シリーズ"
+
+#~ msgid "Editor"
+#~ msgstr "編集"
+
+#~ msgid "Edition"
+#~ msgstr "版"
+
+#~ msgid "Volume"
+#~ msgstr "巻"
+
+#~ msgid "Number"
+#~ msgstr "番号"
+
+#~ msgid "Chapter"
+#~ msgstr "章"
+
+#~ msgid "Pages"
+#~ msgstr "ページ"
+
+#~ msgid "School"
+#~ msgstr "学校"
+
+#~ msgid "Organization"
+#~ msgstr "所属"
+
+#~ msgid "Location"
+#~ msgstr "場所"
+
+#~ msgid "Dates"
+#~ msgstr "日付"
+
+#~ msgid "Institution"
+#~ msgstr "学会"
+
+#~ msgid "Publisher"
+#~ msgstr "発行人"
+
+#~ msgid "Address"
+#~ msgstr "アドレス"
+
+#~ msgid "Format"
+#~ msgstr "フォーマット"
+
+#~ msgid "# Series"
+#~ msgstr "# シリーズ"
+
+#~ msgid "Conference Place"
+#~ msgstr "会議の場所"
+
+#~ msgid "Cote"
+#~ msgstr "コート"
+
+#~ msgid "IEEECN"
+#~ msgstr "IEEECN"
+
+#~ msgid "LoCN"
+#~ msgstr "LoCN"
+
+#~ msgid "ISBN"
+#~ msgstr "ISBN"
+
+#~ msgid "ISSN"
+#~ msgstr "ISSN"
+
+#~ msgid "Note"
+#~ msgstr "注意"
+
+#~ msgid "Language"
+#~ msgstr "言語"
+
+#~ msgid "How Published"
+#~ msgstr "発行の経緯"
+
+#~ msgid "To Appear"
+#~ msgstr "出版"
+
+#~ msgid "Received"
+#~ msgstr "受取"
+
+#~ msgid "Owner"
+#~ msgstr "所有者"
+
+#~ msgid "Keywords"
+#~ msgstr "キーワード"
+
+#~ msgid "Abstract"
+#~ msgstr "概要"
+
+#~ msgid "Remarks"
+#~ msgstr "リマーク"
+
+#~ msgid "Article"
+#~ msgstr "記事"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Book"
+#~ msgstr "本"
+
+#~ msgid "Booklet"
+#~ msgstr "本棚"
+
+#~ msgid "In Book"
+#~ msgstr "本の中"
+
+#~ msgid "In Collection"
+#~ msgstr "コレクションの中"
+
+#~ msgid "In Proceedings"
+#~ msgstr "議事録の中"
+
+#~ msgid "Manual"
+#~ msgstr "マニュアル"
+
+#~ msgid "Masters Thesis"
+#~ msgstr "修士論文"
+
+#~ msgid "Miscellanous"
+#~ msgstr "その他"
+
+#~ msgid "PhD Thesis"
+#~ msgstr "PhD論文"
+
+#~ msgid "Proceedings"
+#~ msgstr "議事録"
+
+#~ msgid "Technical Report"
+#~ msgstr "テクニカルレポート"
+
+#~ msgid "Unpublished"
+#~ msgstr "未発行"
+
+#~ msgid "Default type"
+#~ msgstr "デフォルトタイプ"
+
+#~ msgid "Default type for an Ovid entry"
+#~ msgstr "Ovidエントリのデフォルトタイプ"
+
+#~ msgid "Mapping"
+#~ msgstr "マッピング"
+
+#~ msgid "A mapping between the Ovid field name and the"
+#~ msgstr "Ovidフィールド名とのマッピング"
+
+#~ msgid "Field names correspondances"
+#~ msgstr "フィールド名の対応"
+
+#~ msgid "Gnome"
+#~ msgstr "Gnome"
+
+#~ msgid "Gnome interface configuration"
+#~ msgstr "Gnomeインターフェース設定"
+
+#~ msgid "Columns"
+#~ msgstr "カラム"
+
+#~ msgid "Fields displayed on the main screen of the interface"
+#~ msgstr "インターフェースのメインスクリーンに表示されるフィールド"
+
+#~ msgid "Tooltips"
+#~ msgstr "ツールチップ"
+
+#~ msgid "Enable tooltips ?"
+#~ msgstr "ツールチップを有効にしますか?"
+
+#~ msgid "Native Edit"
+#~ msgstr "ネイティブ編集"
+
+#~ msgid "Edit the entries in their native format by default ?"
+#~ msgstr "デフォルトではエントリをネイティブなフォーマットで編集しますか?"
+
+#~ msgid "Use native edit by default ?"
+#~ msgstr "デフォルトでネイティブ編集を使用しますか?"
+
+#~ msgid "Searchable"
+#~ msgstr "検索可能"
+
+#~ msgid "Searchable fields"
+#~ msgstr "検索可能フィールド"
+
+#~ msgid "History Size"
+#~ msgstr "履歴サイズ"
+
+#~ msgid "Size of the history file"
+#~ msgstr "履歴ファイルのサイズ"
+
+#~ msgid "Number of items"
+#~ msgstr "アイテムの数"
+
+#~ msgid "Medline Mapping"
+#~ msgstr "Medlineマッピング"
+
+#~ msgid "Medline field names correspondances"
+#~ msgstr "Medlineフィールド名の対応"
+
+#~ msgid "Internal Error"
+#~ msgstr "内部エラー"
