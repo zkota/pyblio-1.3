@@ -259,11 +259,17 @@ def medline_query (keyword,maxcount,displaystart,field,abstract,epubahead,pubtyp
     uids = string.replace (str(uids),']','') # get rid of close bracket in the string
     uids = string.replace (str(uids),' ','') # get rid of all the spaces in the string
 
+    if uids.strip () == '': return None
+    
     params = urllib.urlencode ({
         'db'     : 'pubmed',
         'report' : 'medline',
         'mode'   : 'text'
         })
 
-    return "%s?%s&id=%s" % (fetch_url, params, str(uids))
+    url = "%s?%s&id=%s" % (fetch_url, params, str(uids))
+
+    file, data = urllib.urlretrieve (url)
+    
+    return file
 

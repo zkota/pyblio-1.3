@@ -279,6 +279,11 @@ class Document (Connector.Publisher):
         
         url = apply (Query.medline_query, data)
 
+        if url is None:
+            # no result.
+            self.w.error (_("Your query returned no result"))
+            return
+        
         self.open_document (url, 'medline', no_name = True)
         return
 
