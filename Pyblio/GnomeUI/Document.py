@@ -446,7 +446,7 @@ class Document (Connector.Publisher):
     def save_document_as (self, * arg):
         # get a new file name
         (url, how) = FileSelector.URLFileSelection (_("Save As..."),
-                                                    url = False, has_auto = False).run ()
+                                                    url = False, has_auto = False, is_save = True).run ()
         
         if url is None: return
 

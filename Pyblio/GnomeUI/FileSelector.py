@@ -33,22 +33,34 @@ from Pyblio import Open, Types, Base, Fields, Config, Autoload
 
 from Pyblio.GnomeUI import Utils
 
+if gtk.__dict__.has_key('FileChooserDialog'):
+	has_file_chooser = True
+	FileSelect = gtk.FileChooserDialog
+else:
+	has_file_chooser = False
+	FileSelect = gtk.FileSelection
 
 
-class URLFileSelection (gtk.FileSelection):
+class URLFileSelection (FileSelect):
     ''' Extended file selection dialog, with an URL field and a type
     selector. '''
 
     defaultdir = None
     
     def __init__(self, title = _("File"),
-                 url = True, modal = True, has_auto = True,
+                 url = True, modal = True, has_auto = True,is_save = False,
                  directory = None):
         
-        gtk.FileSelection.__init__ (self)
+        if has_file_chooser:
+            FileSelect.__init__ (self,buttons=(gtk.STOCK_OK, gtk.RESPONSE_OK, gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT))
+        else:
+            FileSelect.__init__ (self)
+        if has_file_chooser and is_save:
+            self.set_action(gtk.FILE_CHOOSER_ACTION_SAVE)
 
         self.set_title (title)
-        self.hide_fileop_buttons ()
+        if not has_file_chooser:
+            self.hide_fileop_buttons ()
         
         if directory:
             self.set_filename (directory)
@@ -60,7 +72,10 @@ class URLFileSelection (gtk.FileSelection):
         self.ret = None
         self.url = None
         
-        vbox = self.main_vbox
+        if not has_file_chooser:
+            vbox = self.main_vbox
+        else:
+            vbox = self.vbox
         
         # url handler
         if url:
@@ -81,7 +96,10 @@ class URLFileSelection (gtk.FileSelection):
 
         self.menu = gtk.OptionMenu ()
         hbox.pack_start (self.menu)
-        vbox.pack_start (hbox, expand = False, fill = False)
+        if not has_file_chooser:
+           vbox.pack_start (hbox, expand = False, fill = False)
+        else:
+           self.set_extra_widget(hbox)
 
         # menu content
         menu = gtk.Menu ()
