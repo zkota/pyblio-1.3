@@ -252,7 +252,9 @@
     </para>
     <para>The order in which the sorting is performed depends on the
     order in the list. To modify this order, simply drag and drop an
-    item to change its position.</para>
+    item to change its position. To make this sort order default, it 
+    can be saved by clicking on the <guibutton>Set as default</guibutton> 
+    button.</para>
 
     <figure id="figsort">
       <title>The Sort dialog</title>
