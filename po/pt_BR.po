@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer.v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-28 12:54-0400\n"
-"PO-Revision-Date: 2004-07-28 01:18-0300\n"
+"POT-Creation-Date: 2004-08-28 20:13+0200\n"
+"PO-Revision-Date: 2004-09-02 12:43-0300\n"
 "Last-Translator: Afonso Celso Medina <medina@maua.br>\n"
 "Language-Team: Portuguese/Brazil <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: Pyblio/Autoload.py:78
 #, python-format
@@ -103,7 +103,7 @@ msgstr "a chave`%s' está mal construída"
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: a chave`%s' já foi definida"
 
-#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:411
+#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -390,7 +390,7 @@ msgstr "Excluir"
 msgid "[ Drop an Entry here ]"
 msgstr "[ Ponha uma Entrada aqui ]"
 
-#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:230
+#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Tipo de entrada"
@@ -412,11 +412,11 @@ msgstr "Voltar"
 msgid "Next"
 msgstr "Próximo"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:445
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:451
 msgid "Mandatory"
 msgstr "Obrigatório"
 
-#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:690 Pyblio/GnomeUI/Fields.py:452
 msgid "Optional"
 msgstr "Opcional"
 
@@ -506,29 +506,29 @@ msgstr "Referência"
 msgid "Date"
 msgstr "Data"
 
-#: Pyblio/GnomeUI/Fields.py:118 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Nome"
 
-#: Pyblio/GnomeUI/Fields.py:121 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Tipo"
 
-#: Pyblio/GnomeUI/Fields.py:294
+#: Pyblio/GnomeUI/Fields.py:300
 msgid "Available"
 msgstr "Disponível"
 
-#: Pyblio/GnomeUI/Fields.py:304
+#: Pyblio/GnomeUI/Fields.py:310
 msgid "Associated"
 msgstr "Associado"
 
-#: Pyblio/GnomeUI/Fields.py:315
+#: Pyblio/GnomeUI/Fields.py:321
 msgid "Please, select an entry type from previous page."
 msgstr "Por favor, selecione uma entrada na página anterior."
 
-#: Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Fields.py:332
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Campos associados com entradas do tipo <b>%s</b>"
@@ -913,32 +913,32 @@ msgstr "Selecionar critérios de ordenação"
 msgid "Set as default"
 msgstr "Definir como padrão"
 
-#: pybliographer.py:45
+#: pybliographer.py:43
 #, python-format
 msgid "This is %s, version %s"
 msgstr "Esta é %s, versão %s"
 
 # .././pybliographer.py:42 :49
-#: pybliographer.py:49 pybliographer.py:56
+#: pybliographer.py:47 pybliographer.py:54
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
 msgstr "Este é um software livre com ABSOLUTAMENTE NENHUMA GARANTIA."
 
-#: pybliographer.py:50
+#: pybliographer.py:48
 msgid "For details, type `warranty'."
 msgstr "Para detalhes, digite `warranty'."
 
 # .././pybliographer.py:110 :158
-#: pybliographer.py:113 pybliographer.py:165
+#: pybliographer.py:111 pybliographer.py:163
 #, python-format
 msgid "%s: error: can't open file `%s'"
 msgstr "%s: erro: não é possível abrir o arquivo `%s'"
 
-#: pybliographer.py:126
+#: pybliographer.py:124
 #, python-format
 msgid "For help, run %s and type `help' at the prompt"
 msgstr "Para ajuda, execute %s e digite `help' no prompt"
 
-#: pybliographer.py:135
+#: pybliographer.py:133
 msgid ""
 "Useful commands:\n"
 "\thelp     to get some help\n"
@@ -980,11 +980,11 @@ msgstr "uso: pybcompact <arquivolatex> <arquivosbibtex...>"
 msgid "pybcompact: error: %s\n"
 msgstr "pybcompact: erro: %s\n"
 
-#: scripts/pybcompact.py:98
+#: scripts/pybcompact.py:97
 msgid "no entry"
 msgstr "nenhuma entrada"
 
-#: scripts/pybcompact.py:143 scripts/pybtext.py:240
+#: scripts/pybcompact.py:142 scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "não é possível encontrar as seguintes entradas: %s"
@@ -999,73 +999,93 @@ msgstr "pybconvert: erro: formato de conversão ruim"
 
 #: scripts/pybformat.py:34
 msgid ""
-"usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
-"footer] <database...>"
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
 msgstr ""
-"utilização: pybformat [-o arqsaída] [-s estilo] [-f formato] [-H cabeçalho] "
-"[-F footer] <bancodedados...>"
+"uso: pybformat [opções] <banco de dados...>\n"
+"\n"
+"    opções:\n"
+"      -o arquivo, --output=arquivo\t\tespecifique o nome do arquivo de saída\n"
+"      -s estilo, --style=estilo\t\tespecifique um estilo bibliográfico\n"
+"      -f formato, --format=formato\t\tespecifique um formato de saídaa\n"
+"      -H cabeçalho, --header=header\tdefine um arquivo de cabeçalho\n"
+"      -F rodapé, --footer=rodapé\tdefine um arquivo de rodapé\n"
+"      -l 'output', --list='output'\trelaciona os formatos de saída disponíveis\n"
+"      -h, --help\t\t\tmostra esta mensagem de ajuda\n"
+"      -v, --version\t\t\tmostra esta mensagem de ajuda\n"
+"    "
 
-#: scripts/pybformat.py:38
+#: scripts/pybformat.py:49
 #, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: erro: %s\n"
 
-#: scripts/pybformat.py:44
+#: scripts/pybformat.py:55
 #, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: atenção: %s\n"
 
-#: scripts/pybformat.py:79 scripts/pybtext.py:252 scripts/pybtext.py:278
+#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
 #: scripts/pybtext.py:321
 #, python-format
 msgid "can't open `%s': %s"
 msgstr "impossível abrir o arquivo `%s': %s"
 
-#: scripts/pybformat.py:86
+#: scripts/pybformat.py:97
 #, python-format
 msgid "unknown list `%s'"
 msgstr "lista desconhecida `%s'"
 
-#: scripts/pybformat.py:89
+#: scripts/pybformat.py:100
 #, python-format
 msgid "pybformat: available values for `%s':"
 msgstr "pybformat: valores disponíveis para `%s':"
 
-#: scripts/pybformat.py:93
+#: scripts/pybformat.py:104
 #, python-format
 msgid "empty value list `%s'"
 msgstr "lista de valores vazia `%s'"
 
-#: scripts/pybformat.py:121
+#: scripts/pybformat.py:132
 msgid "too few arguments"
 msgstr "poucos argumentos"
 
-#: scripts/pybformat.py:128 scripts/pybtext.py:117
+#: scripts/pybformat.py:139 scripts/pybtext.py:117
 #, python-format
 msgid "unknown output format `%s'"
 msgstr "formato de saída desconhecido `%s'"
 
-#: scripts/pybformat.py:141 scripts/pybtex.py:86 scripts/pybtext.py:94
+#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
 #, python-format
 msgid "can't find style `%s'"
 msgstr "não é possível encontraro estilo `%s'"
 
-#: scripts/pybformat.py:144
+#: scripts/pybformat.py:155
 #, python-format
 msgid "pybformat: using style `%s', format `%s'\n"
 msgstr "pybformat: utilizando o estilo `%s', formato `%s'\n"
 
-#: scripts/pybformat.py:159
+#: scripts/pybformat.py:170
 #, python-format
 msgid "can't open header `%s': %s"
 msgstr "impossível abrir o cabeçalho `%s': %s"
 
-#: scripts/pybformat.py:168
+#: scripts/pybformat.py:178
 #, python-format
 msgid "can't open database: %s"
 msgstr "impossível abrir o banco de dados: %s"
 
-#: scripts/pybformat.py:184
+#: scripts/pybformat.py:193
 #, python-format
 msgid "can't open footer `%s': %s"
 msgstr "impossível abrir a nota de rodapé `%s': %s"
@@ -1091,7 +1111,7 @@ msgstr "nenhum estilo definido"
 
 #: scripts/pybtext.py:41
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
-msgstr "utilização: pybtext [-o arqsaída] [-s estilo] <arqtexto> <arqbib...>"
+msgstr "uso: pybtext [-o arqsaída] [-s estilo] <arqtexto> <arqbib...>"
 
 #: scripts/pybtext.py:45
 #, python-format
@@ -1135,6 +1155,13 @@ msgstr "impossível remover `%s'"
 #: scripts/pybtext.py:344
 msgid "Done"
 msgstr "Concluído"
+
+#~ msgid ""
+#~ "usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F "
+#~ "footer] <database...>"
+#~ msgstr ""
+#~ "utilização: pybformat [-o arqsaída] [-s estilo] [-f formato] [-H "
+#~ "cabeçalho] [-F footer] <bancodedados...>"
 
 #~ msgid "usage: pybformat [bibtexfiles...]\n"
 #~ msgstr "uso: pybformat [arquivosbibtex...]\n"
