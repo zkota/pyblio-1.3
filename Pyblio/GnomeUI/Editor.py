@@ -25,8 +25,9 @@
 
 try: _
 except NameError:
-    def _(str)\
-       : return str
+    import gettext
+    _ = gettext.gettext
+
 
 import gettext, re, string
 from gnome import ui
@@ -641,11 +642,16 @@ class RealEditor (Connector.Publisher):
             node = self.lt_nodes [self.lt_current]
             key = node['key']
             if self.entry.has_key(key) and self.entry[key]:
-                ui.gnome_error_dialog_parented (
-                    _('Delete text first, then you can delete the field.'),
-                    self.w.get_toplevel ())
-            else:
-                self.lt_delete (self.lt_current)
+                dialog = gtk.MessageDialog(
+                    self.w.get_toplevel(), gtk.DIALOG_DESTROY_WITH_PARENT,
+                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK_CANCEL,
+                    "Text will be lost if you click OK.")
+                rc = dialog.run()
+                dialog.destroy()
+                
+                if rc == gtk.RESPONSE_CANCEL:
+                    return
+            self.lt_delete (self.lt_current)
 
     def set_buttons (self, pos):
         """sets the button's sensitivity according to

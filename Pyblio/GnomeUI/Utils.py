@@ -33,8 +33,8 @@ from Pyblio import Config, version
 import gconf
 try : _
 except NameError:
-    def _ (s)\
-        :  return s
+    import gettext
+    _ = gettext.gettext
 
 class Callback:
 
