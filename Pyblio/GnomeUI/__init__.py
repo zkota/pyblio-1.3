@@ -22,7 +22,9 @@
 # Perform the first initialisation of Gnome, so that the options passed to the script
 # are not passed to Gnome
 
-import sys
+from gettext import gettext as _
+
+import sys, string
 
 sys.argv = sys.argv [:2] + ['--'] + sys.argv [2:]
 
@@ -30,13 +32,21 @@ sys.argv = sys.argv [:2] + ['--'] + sys.argv [2:]
 import pygtk
 pygtk.require ('2.0')
 
-import gnome
+import gnome, gtk
 import gnome.ui
 
 from Pyblio import version
 
 prg = gnome.init ('pybliographer', version.version)
 prg.set_property (gnome.PARAM_APP_DATADIR, version.datadir)
+
+def _vnum (t):
+    return string.join (map (str, t), '.')
+
+print _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
+    version.version, _vnum (sys.version_info [:3]),
+    _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
+    
 
 # clean up our garbage
 sys.argv = sys.argv [:2] + sys.argv [3:]
