@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.2.3\n"
-"POT-Creation-Date: 2004-02-24 08:24+0100\n"
-"PO-Revision-Date: 2004-02-24 08:32+0100\n"
+"POT-Creation-Date: 2004-03-01 09:43+0100\n"
+"PO-Revision-Date: 2004-03-01 09:46+0100\n"
 "Last-Translator: Zoltán Kóta <z.kota@gmx.net>\n"
 "Language-Team: hu <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -922,40 +922,45 @@ msgstr "Vezetéknév, Keresztnév"
 msgid "Text"
 msgstr "Szöveg"
 
-#: Pyblio/GnomeUI/Editor.py:322
+#: Pyblio/GnomeUI/Editor.py:136
+#: Pyblio/GnomeUI/Editor.py:757
+msgid "Error in native string parsing"
+msgstr "Hiba a sztringelemzésben"
+
+#: Pyblio/GnomeUI/Editor.py:315
 msgid "Day"
 msgstr "Nap"
 
-#: Pyblio/GnomeUI/Editor.py:331
+#: Pyblio/GnomeUI/Editor.py:324
 msgid "Month"
 msgstr "Hónap"
 
-#: Pyblio/GnomeUI/Editor.py:340
+#: Pyblio/GnomeUI/Editor.py:333
 msgid "Year"
 msgstr "Év"
 
-#: Pyblio/GnomeUI/Editor.py:365
+#: Pyblio/GnomeUI/Editor.py:358
 msgid "Invalid day field in date"
 msgstr "Érvénytelen nap a dátumban"
 
-#: Pyblio/GnomeUI/Editor.py:373
+#: Pyblio/GnomeUI/Editor.py:366
 msgid "Invalid month field in date"
 msgstr "Érvénytelen hónap a dátumban"
 
-#: Pyblio/GnomeUI/Editor.py:381
+#: Pyblio/GnomeUI/Editor.py:374
 msgid "Invalid year field in date"
 msgstr "Érvénytelen év a dátumban"
 
 #. self.edit.set_editable (True)
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:429
+#: Pyblio/GnomeUI/Editor.py:422
 #: Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Töröl"
 
-#: Pyblio/GnomeUI/Editor.py:440
-#: Pyblio/GnomeUI/Editor.py:453
-#: Pyblio/GnomeUI/Editor.py:456
+#: Pyblio/GnomeUI/Editor.py:433
+#: Pyblio/GnomeUI/Editor.py:446
+#: Pyblio/GnomeUI/Editor.py:449
 msgid "[ Drop an Entry here ]"
 msgstr "[ Dobj egy bejegyzést ide ]"
 
@@ -965,18 +970,18 @@ msgstr "[ Dobj egy bejegyzést ide ]"
 #. ------------------------------------------------------------
 #. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:528
+#: Pyblio/GnomeUI/Editor.py:521
 #: Pyblio/GnomeUI/Fields.py:231
 #: glade/config1.glade.h:8
 #: glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Bejegyzés típusa"
 
-#: Pyblio/GnomeUI/Editor.py:530
+#: Pyblio/GnomeUI/Editor.py:523
 msgid "Key"
 msgstr "Kulcs"
 
-#: Pyblio/GnomeUI/Editor.py:571
+#: Pyblio/GnomeUI/Editor.py:564
 msgid "Create Field"
 msgstr "Új mező"
 
@@ -985,47 +990,43 @@ msgstr "Új mező"
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:626
+#: Pyblio/GnomeUI/Editor.py:619
 #: Pyblio/GnomeUI/Fields.py:446
 msgid "Mandatory"
 msgstr "Kötelező"
 
-#: Pyblio/GnomeUI/Editor.py:626
+#: Pyblio/GnomeUI/Editor.py:619
 #: Pyblio/GnomeUI/Fields.py:447
 msgid "Optional"
 msgstr "Opcionális"
 
-#: Pyblio/GnomeUI/Editor.py:626
+#: Pyblio/GnomeUI/Editor.py:619
 msgid "Extra"
 msgstr "Extra"
 
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:695
+#: Pyblio/GnomeUI/Editor.py:688
 msgid "Invalid key format"
 msgstr "Érvénytelen kulcs formátum"
 
-#: Pyblio/GnomeUI/Editor.py:703
+#: Pyblio/GnomeUI/Editor.py:696
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Kulcs `%s' már létezik"
 
-#: Pyblio/GnomeUI/Editor.py:764
-msgid "Error in native string parsing"
-msgstr "Hiba a sztringelemzésben"
-
-#: Pyblio/GnomeUI/Editor.py:777
+#: Pyblio/GnomeUI/Editor.py:770
 msgid "Edit entry"
 msgstr "Bejegyzés módosítása"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:791
-#: Pyblio/GnomeUI/Editor.py:847
+#: Pyblio/GnomeUI/Editor.py:784
+#: Pyblio/GnomeUI/Editor.py:840
 msgid "Native Editing"
 msgstr "Natív szerkesztés"
 
 #. Reject the switch if the data is invalid
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:869
+#: Pyblio/GnomeUI/Editor.py:862
 msgid "Standard Editing"
 msgstr "Standard szerkesztés"
 
@@ -1480,6 +1481,11 @@ msgstr "A következő hibák fordultak elő:\n"
 #. Perform the first initialisation of Gnome, so that the options passed to the script
 #. are not passed to Gnome
 #. correctly identify the program
+#: Pyblio/GnomeUI/__init__.py:46
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "Ez a Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+
 #. clean up our garbage
 #. This file is part of pybliographer
 #.
