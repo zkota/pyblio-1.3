@@ -64,6 +64,8 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
         path = os.path.join (version.pybdir, 'Styles')
         
         self._w_style_entry.set_default_path (path)
+        self._w_style.set_text (path)
+        
         self._w_format.show ()
         return
 
@@ -71,7 +73,7 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
     def _menu_select (self, menu, item):
         self.menu_item = item
         return
-    
+
 
     def _on_validate (self, * arg):
 

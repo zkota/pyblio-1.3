@@ -81,7 +81,6 @@ AC_CONFIG_FILES(
 	Pyblio/Style/Makefile
 	doc/Makefile
 	doc/C/Makefile
-	doc/it/Makefile
 	Styles/Makefile
 )
 
