@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 21:53+0200\n"
-"PO-Revision-Date: 2004-07-02 08:42+0200\n"
+"POT-Creation-Date: 2004-07-04 05:42+0200\n"
+"PO-Revision-Date: 2004-07-04 17:04+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -958,7 +958,7 @@ msgstr "fpybcompact: chyba: %s\n"
 msgid "no entry"
 msgstr "žádná položka"
 
-#: scripts/pybcompact.py:141
+#: scripts/pybcompact.py:141 scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "nemohu najít následující položky: %s"
@@ -985,7 +985,7 @@ msgstr "pybformat: chyba: %s\n"
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: varování: %s\n"
 
-#: scripts/pybformat.py:140 scripts/pybtex.py:85
+#: scripts/pybformat.py:140 scripts/pybtex.py:85 scripts/pybtext.py:93
 #, python-format
 msgid "can't find style `%s'"
 msgstr "nemohu najít styl `%s'"
@@ -1008,6 +1008,24 @@ msgstr "pybtex: varování: následující klíče nebyly nalezeny"
 #: scripts/pybtex.py:63
 msgid "no style defined"
 msgstr "nedefinován styl"
+
+#: scripts/pybtext.py:40
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
+msgstr "použití: pybtext [-o výstupnísoubor] [-s styl] <soubortextu> <souborybib...>"
+
+#: scripts/pybtext.py:44
+#, python-format
+msgid "pybtext: error: %s\n"
+msgstr "pybtext: chyba: %s\n"
+
+#: scripts/pybtext.py:49
+#, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "pybtext: varování: %s\n"
+
+#: scripts/pybtext.py:177
+msgid "no citation found"
+msgstr "citace nenalezena"
 
 #~ msgid "Summary"
 #~ msgstr "Souhrn"

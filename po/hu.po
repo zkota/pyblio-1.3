@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.2.4\n"
-"POT-Creation-Date: 2004-06-30 15:08+0200\n"
-"PO-Revision-Date: 2004-06-30 15:28+0100\n"
+"POT-Creation-Date: 2004-07-05 11:31+0200\n"
+"PO-Revision-Date: 2004-07-05 11:39+0100\n"
 "Last-Translator: Zoltán Kóta <z.kota@gmx.net>\n"
 "Language-Team: hu <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -2444,6 +2444,7 @@ msgstr "nincs bejegyzés"
 #. is it finished ?
 #. check if we were able to solve all the citations
 #: scripts/pybcompact.py:141
+#: scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "a következő bejegyzések nem találhatók: %s"
@@ -2517,6 +2518,7 @@ msgstr "pybformat: figyelmeztetés: %s\n"
 #. get the specified style and the output
 #: scripts/pybformat.py:140
 #: scripts/pybtex.py:85
+#: scripts/pybtext.py:93
 #, python-format
 msgid "can't find style `%s'"
 msgstr "nem találom a `%s' stílust"
@@ -2589,4 +2591,57 @@ msgstr "pybtex: figyelmeztetés: a következő kulcsok nem lettek feldolgozva"
 #: scripts/pybtex.py:63
 msgid "no style defined"
 msgstr "nincs stílus definiálva"
+
+#. open the .bbl file
+#. -*- coding: UTF-8 -*-
+#. -*- python -*-
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. This script processes a text file with citations and creates a
+#. reference list according to the given style.
+#. Created by ZoltÃ¡n KÃ³ta. March, 2004.
+#: scripts/pybtext.py:40
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
+msgstr "használat: pybtext [-o kimeneti állomány] [-s stílus] <szöveges állomány> <bibliográfia állományok...>"
+
+#: scripts/pybtext.py:44
+#, python-format
+msgid "pybtext: error: %s\n"
+msgstr "pybtext: hiba: %s\n"
+
+#: scripts/pybtext.py:49
+#, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "pybtext: figyelmeztetés: %s\n"
+
+#. adjust parameters to the chosen style
+#. get the specified output
+#. regular expression to match in the text file
+#. this function extracts the citation keys from the text file
+#. parse the whole file
+#. we match new citations
+#. splitting multiple citations
+#. getting citation keys
+#. is there something to do ?
+#: scripts/pybtext.py:177
+msgid "no citation found"
+msgstr "nem találtam hivatkozást"
 
