@@ -339,8 +339,15 @@ class Date:
     def match (self, regex):
         ''' '''
         return regex.search (str (self))
-        
 
+    def asInt (self):
+        v = self.year * 10000
+        if self.month:
+            v += self.month * 100
+        if self.day:
+            v += self.day
+        return v
+    
 class Text:
     ''' This class holds all the other fields (not an Author or a Date) '''
 

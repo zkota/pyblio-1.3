@@ -21,7 +21,7 @@
 # 
 
 import string, os, re, copy, sys
-from Pyblio import Base, Key, Config, Fields
+from Pyblio import Base, Key
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'
@@ -71,7 +71,9 @@ def list_entries (file):
         # we match a new citation
         match = citation_re.search (line)
         if match:
-            citations.append (match.group (1))
+            # sometimes there are muptiple keys here
+            citation_key = match.group (1).split(',')
+            citations.extend (citation_key)
             continue
 
         # we have to enter an additional .aux file
@@ -95,16 +97,6 @@ entries = h.keys ()
 # is there something to do ?
 if len (entries) == 0:
     error (_("no entry"))
-
-
-# check for the crossref field
-field_table = Config.get ('base/fields').data
-crossref    = None
-    
-for key in field_table.keys ():
-    if field_table [key].type == Fields.Reference:
-        crossref = key
-        break
 
 
 # use the bibliographic databases in order of declaration
@@ -132,18 +124,9 @@ for bib in bibtex:
 
         # does the database provide the key ?
         if db.has_key (key):
+            
             # yes, add it to the reference
-            v = db [key]
-
-            r [key] = v
-
-            # ...including possible crossrefs
-            if v.has_key (crossref):
-                for ck in v [crossref].list:
-                    ck.base = db.key
-                    
-                    if db.has_key (ck):
-                        r [ck] = db [ck]
+            r [key] = db [key]
 
             # and remove it from the list
             entries.remove (e)

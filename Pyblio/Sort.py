@@ -20,7 +20,7 @@
 # 
 # 
 
-from Pyblio import Types
+from Pyblio import Fields, Types
 
 import re, string, time
 
@@ -29,19 +29,19 @@ class Sort:
     
     def __init__ (self, fields = None):
         ''' Create a Sort class with a given set of SortFields '''
-        
+       
         self.fields = fields or []
-
         return
 
     def sort (self, iterator):
         ''' Returns a list of keys sorted according to the current
         sort settings '''
         
-        clock = time.clock() ##############
+        #clock = time.clock() ##############
 
         S = []
-        extractors = [f.extractor for f in self.fields]
+        extractors = [f.get_extractor() for f in self.fields]
+
         for e in iterator:
             s = []
             for f in extractors:
@@ -56,13 +56,22 @@ class Sort:
     def __repr__ (self):
         return 'Sort (%s)' % str (self.fields)
 
+class AnySort (object):
     
-class TypeSort:
-
     def __init__ (self, ascend = 1):
         self.ascend = ascend
         return
+
+    def get_extractor (self):
+        if self.ascend < 0:
+            return lambda e: map (lambda S:
+            ''.join([unichr(~ord(c) & 65535) for c in S]),
+                           self.extractor (e))
+        else :
+            return self.extractor
     
+class TypeSort (AnySort):
+
     def get_field (self, entry):
         return entry.type
 
@@ -76,50 +85,43 @@ class TypeSort:
     def extractor (self, entry):
         return [str(entry.type).lower()]
 
-
-class KeySort:
-
-    def __init__ (self, ascend = 1):
-        self.ascend = ascend
-        return
-
+class KeySort (AnySort):
 
     def get_field (self, entry):
         return entry.key
 
-
     def __repr__ (self):
         return 'KeySort (%d)' % self.ascend
-
 
     def __cmp__ (self, other):
         if isinstance (other, KeySort): return 0
         return -1
 
-
     def extractor (self, entry):
         return [str(entry.key).lower()]
 
-    
-
-class FieldSort:
+class FieldSort (AnySort):
     
     def __init__ (self, field, ascend = 1):
         self.field  = field
-        self.ascend = ascend
-        return
+        AnySort.__init__ (self, ascend)
 
-
+    def get_extractor (self):
+        if self.field ==  'date':
+            if self.ascend < 0:
+                return lambda x: [- self.date_extractor(x) [0]]
+            else: return self.date_extractor
+        else:
+            return AnySort.get_extractor(self)
+        
     def get_field (self, entry):
         try:
             return entry [self.field]
         except KeyError:
             return Types.get_field (self.field).type ('')
-        
 
     def __repr__ (self):
         return 'FieldSort (%s, %d)' % (`self.field`, self.ascend)
-
 
     def __cmp__ (self, other):
         if not hasattr (other, 'field'): return -1
@@ -127,23 +129,34 @@ class FieldSort:
         return cmp (string.lower (self.field),
                     string.lower (other.field))
 
+    def extractor (self, entry):
+        return   [str(entry[self.field]).rstrip().lower()]
+
+    def date_extractor (self, entry):
+        d = entry.get('date', 0)
+        try:
+            return [d.asInt()]
+        except AttributeError:
+            return [0]
+        
+class DateSort (AnySort):
 
     def extractor (self, entry):
-        x = str(entry[self.field]).lower()
-        return [x.rstrip()]
+        d = entry.get('date', 0)
+        return d.asInt()
+    
+
 
 class AuthorEditorSort (FieldSort):
 
     def extractor (self, entry):
-        x = []
-        ag = entry.get('author', entry.get('editor'))
-        for a in ag:
-            x.append (rakify (a.last, a.first, reverse=not self.ascend))
-        return x
+        return map (rakify, entry.get('author', entry.get('editor', [])))
+    
         
-def rakify (fn, pn, reverse=False):
+def rakify (author):
 
-    s = "%s,%s" %(fn, pn)
+    
+    s = "%s,%s" %(author.last,author.first)
     s = s.lower()
     Z = []
     for c in s:
@@ -158,7 +171,4 @@ def rakify (fn, pn, reverse=False):
             Z.append (c)
     S = ''.join (Z)
     S = re.sub(' +', ' ', S)
-    if reverse:
-        return ''.join([unichr(~ord(c) & 65535) for c in S])
-    else:
-        return S
+    return S
