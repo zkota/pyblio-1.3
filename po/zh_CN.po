@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2004-05-22 20:36+0200\n"
-"PO-Revision-Date: 2004-05-15 13:04+0800\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-22 21:35+0200\n"
+"PO-Revision-Date: 2004-06-23 16:50+0800\n"
 "Last-Translator: storm <storm-119@163.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #: Pyblio/Autoload.py:80
 #, python-format
@@ -103,8 +103,7 @@ msgstr "%s：%d：键 %s 已定义"
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
-msgstr ""
-"某些更改需要重新启动 Pybliographic 才能生效"
+msgstr "某些更改需要重新启动 Pybliographic 才能生效"
 
 #: Pyblio/GnomeUI/Config.py:431
 msgid "Add"
@@ -433,6 +432,15 @@ msgstr "本地编辑"
 #: Pyblio/GnomeUI/Editor.py:897
 msgid "Standard Editing"
 msgstr "标准编辑"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"不能打开 URL：\n"
+"%s"
 
 #: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
@@ -770,7 +778,7 @@ msgstr "格式..."
 
 #: glade/pyblio.glade.h:7
 msgid "Medline Query..."
-msgstr ""
+msgstr "麦德林查询..."
 
 #: glade/pyblio.glade.h:8
 msgid "Merge With..."

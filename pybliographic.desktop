@@ -1,10 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Pybliographic Bibliography Manager
+Name[cs]=Správce bibliografie Pybliographic
 Name[hu]=Pybliographic Bibliográfiakezelő
 GenericName=Bibliography Manager
+GenericName[cs]=Správce bibliografie
 GenericName[hu]=Bibliográfiakezelő
 Comment=Manage bibliographic databases
+Comment[cs]=Spravovat bibliografické databáze
 Comment[hu]=Bibliográfiai adatbázisok kezelése
 Icon=pybliographic.png
 Exec=pybliographic
