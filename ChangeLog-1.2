@@ -2,6 +2,22 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2004-03-15 09:18:54 GMT	Frederic Gobry <gobry@pybliographer.org>	patch-91
+
+    Summary:
+      support C locale
+    Revision:
+      pybliographer--stable--1.2--patch-91
+
+    When pybliographer was started with a C locale, the
+    locale.getlocale () call did not return a proper encoding, which caused
+    some errors while formatting the output text.
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/Autoload.py pybliographer.py
+
+
 2004-03-11 08:12:52 GMT	Frederic Gobry <gobry@pybliographer.org>	patch-90
 
     Summary:

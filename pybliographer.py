@@ -39,7 +39,7 @@ locale.setlocale (locale.LC_ALL, '')
 import gettext
 gettext.install (progname, localedir, unicode = True)
 
-charset = locale.getlocale () [1]
+charset = locale.getlocale () [1] or 'ascii'
 
 def print_version ():
 	print (_("This is %s, version %s") % (progname, version)).encode (charset)
