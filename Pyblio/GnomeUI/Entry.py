@@ -22,7 +22,7 @@
 from gtk import *
 from gnome import ui
 
-import pango
+import pango, gnome
 
 import string
 
@@ -85,6 +85,29 @@ class Entry:
                                     self.tag ['title'])
 
         dico = entry.keys ()
+
+
+        def maybe_insert_button (field):
+            """ Create a button that opens the URL if the field is of type URL """
+            
+            if not isinstance (field, Fields.URL): return
+            
+            # Add a button to open the URL
+            self.buff.insert (iter, ' ')
+
+            anchor = self.buff.create_child_anchor (iter)
+            
+            button = Button ('...')
+            button.show ()
+
+            def url_open (w, url):
+                gnome.url_show (url)
+                return
+                
+            button.connect ('clicked', url_open, str (field))
+            
+            self.text.add_child_at_anchor (button, anchor)
+            return
         
         for f in entry.type.fields:
             
@@ -93,7 +116,7 @@ class Entry:
             if entry.has_key (field):
 
                 n = f.name + ': '
-                t = str (entry [field]).decode ('latin-1') + '\n'
+                t = str (entry [field]).decode ('latin-1')
                 
                 si = iter.get_offset ()
 
@@ -110,6 +133,10 @@ class Entry:
                 self.buff.apply_tag (self.tag ['field'],
                                      si, mi)
 
+                maybe_insert_button (entry [field])
+                
+                self.buff.insert (iter, '\n')
+                
                 dico.remove (field)
 
 
@@ -119,7 +146,7 @@ class Entry:
         
         for f in dico:
             n = f + ': '
-            t = str (entry [f]).decode ('latin-1') + '\n'
+            t = str (entry [f]).decode ('latin-1')
             
             si = iter.get_offset ()
             
@@ -136,6 +163,9 @@ class Entry:
             self.buff.apply_tag (self.tag ['field'],
                                  si, mi)
 
+            maybe_insert_button (entry [f])
+            
+            self.buff.insert (iter, '\n')
 
         return
 
