@@ -7,19 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-13 05:29+0100\n"
-"PO-Revision-Date: 2003-11-28 19:59+0100\n"
+"POT-Creation-Date: 2004-01-15 05:07+0100\n"
+"PO-Revision-Date: 2004-01-16 22:41+0100\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: Pyblio/Autoload.py:80
+#, python-format
 msgid "warning: can't import %s: %s"
 msgstr "waarschuwing: kan %s niet importeren: %s"
 
 #: Pyblio/Config.py:53
+#, python-format
 msgid "value of `%s' should be of type %s"
 msgstr "waarde van `%s' moet zijn van soort %s"
 
@@ -36,30 +38,37 @@ msgid "Integer"
 msgstr "Integer"
 
 #: Pyblio/Config.py:237
+#, python-format
 msgid "Integer under %d"
 msgstr "Integer onder %d"
 
 #: Pyblio/Config.py:239
+#, python-format
 msgid "Integer over %d"
 msgstr "Integer boven %d"
 
 #: Pyblio/Config.py:241
+#, python-format
 msgid "Integer between %d and %d"
 msgstr "Integer tussen %d en %d"
 
 #: Pyblio/Config.py:253
+#, python-format
 msgid "Element in `%s'"
 msgstr "Element in `%s'"
 
 #: Pyblio/Config.py:273
+#, python-format
 msgid "Tuple (%s)"
 msgstr "Resultaat paar (%s)"
 
 #: Pyblio/Config.py:294
+#, python-format
 msgid "List (%s)"
 msgstr "Lijst (%s)"
 
 #: Pyblio/Config.py:319
+#, python-format
 msgid "Dictionary (%s, %s)"
 msgstr "Woordenboek (%s, %s)"
 
@@ -76,14 +85,17 @@ msgid "Illegal day value"
 msgstr "Ongeldige dag-waarde"
 
 #: Pyblio/Fields.py:443
+#, python-format
 msgid "in %s"
 msgstr "in %s"
 
 #: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
+#, python-format
 msgid "key `%s' is malformed"
 msgstr "sleutel `%s' is onjuist formuleerd"
 
 #: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
+#, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 
@@ -120,6 +132,7 @@ msgid "Value:"
 msgstr "Waarde:"
 
 #: Pyblio/GnomeUI/Document.py:204
+#, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
 "%s"
@@ -128,6 +141,7 @@ msgstr ""
 "%s"
 
 #: Pyblio/GnomeUI/Document.py:225
+#, python-format
 msgid ""
 "Error while parsing `%s':\n"
 "%s"
@@ -148,14 +162,17 @@ msgid "[1 entry]"
 msgstr "[1 ingang]"
 
 #: Pyblio/GnomeUI/Document.py:251
+#, python-format
 msgid "[%d entries]"
 msgstr "[%d ingangen]"
 
 #: Pyblio/GnomeUI/Document.py:254
+#, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 ingang]"
 
 #: Pyblio/GnomeUI/Document.py:255
+#, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d ingangen]"
 
@@ -203,6 +220,7 @@ msgstr ""
 "Veranderingen overschrijven?"
 
 #: Pyblio/GnomeUI/Document.py:408
+#, python-format
 msgid ""
 "Unable to save `%s':\n"
 "%s"
@@ -224,6 +242,7 @@ msgid "Save As..."
 msgstr "Opslaan als..."
 
 #: Pyblio/GnomeUI/Document.py:436
+#, python-format
 msgid ""
 "The file `%s' already exists.\n"
 "Overwrite it ?"
@@ -232,6 +251,7 @@ msgstr ""
 "Dit bestand overschrijven?"
 
 #: Pyblio/GnomeUI/Document.py:443
+#, python-format
 msgid ""
 "During opening:\n"
 "%s"
@@ -244,6 +264,7 @@ msgid "Reopen error"
 msgstr "Her-open fout"
 
 #: Pyblio/GnomeUI/Document.py:502
+#, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
 "Rename and add it anyway ?"
@@ -260,18 +281,22 @@ msgid "Create new entry"
 msgstr "Nieuwe ingang maken"
 
 #: Pyblio/GnomeUI/Document.py:573
+#, python-format
 msgid "Really edit %d entries ?"
 msgstr "Echt %d ingangen bewerken?"
 
 #: Pyblio/GnomeUI/Document.py:611
+#, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Alle %d ingangen verwijderen?"
 
 #: Pyblio/GnomeUI/Document.py:613
+#, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Ingang `%s' verwijderen?"
 
 #: Pyblio/GnomeUI/Document.py:690 Pyblio/GnomeUI/Document.py:697
+#, python-format
 msgid ""
 "Can't connect to LyX:\n"
 "%s"
@@ -280,10 +305,13 @@ msgstr ""
 "%s"
 
 #: Pyblio/GnomeUI/Document.py:769
+#, python-format
 msgid ""
 "Can't display documentation:\n"
 "%s"
 msgstr ""
+"Kan documentatie niet weergeven:\n"
+"%s"
 
 #: Pyblio/GnomeUI/Document.py:777
 msgid "This program is copyrighted under the GNU GPL"
@@ -374,6 +402,7 @@ msgid "Invalid key format"
 msgstr "Ongeldig sleutel formaat"
 
 #: Pyblio/GnomeUI/Editor.py:702
+#, python-format
 msgid "Key `%s' already exists"
 msgstr "Sleutel `%s' bestaat al"
 
@@ -433,6 +462,7 @@ msgid "Please, select an entry type from previous page."
 msgstr "Selecteer alstublieft een ingangssoort op de vorige pagina."
 
 #: Pyblio/GnomeUI/Fields.py:327
+#, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Velden geassocieerd met <b>%s</b> ingangssoort"
 
@@ -466,6 +496,7 @@ msgid "internal error during evaluation"
 msgstr "Interne fout tijdens evaluatie"
 
 #: Pyblio/GnomeUI/Search.py:195
+#, python-format
 msgid ""
 "while compiling %s\n"
 "error: %s"
@@ -487,26 +518,32 @@ msgid "The following errors occured:\n"
 msgstr "De volgende fouten zijn opgetreden:\n"
 
 #: Pyblio/LyX.py:39
+#, python-format
 msgid "no input pipe `%s'"
 msgstr "geen invoerpijp `%s'"
 
 #: Pyblio/LyX.py:45
+#, python-format
 msgid "no output pipe `%s'"
 msgstr "geen uitvoerpijp `%s'"
 
 #: Pyblio/Open.py:97
+#, python-format
 msgid "method `%s' provides no opener"
 msgstr "methode `%s' biedt geen opener aan"
 
 #: Pyblio/Open.py:105 Pyblio/Open.py:151
+#, python-format
 msgid "File `%s' does not exist"
 msgstr "Bestand `%s' bestaat niet"
 
 #: Pyblio/Open.py:116 Pyblio/Open.py:162
+#, python-format
 msgid "don't know how to open `%s'"
 msgstr "weet niet hoe `%s' kan worden geopend"
 
 #: Pyblio/Open.py:143
+#, python-format
 msgid "method `%s' provides no iterator"
 msgstr "methode `%s' biedt geen iterator aan"
 
@@ -592,9 +629,8 @@ msgid "Format entries"
 msgstr "Ingangen formatteren"
 
 #: glade/format.glade.h:4
-#, fuzzy
 msgid "Output file:"
-msgstr "Uitvoerbestand:\n"
+msgstr "Uitvoerbestand:"
 
 #: glade/format.glade.h:5
 msgid "Output format:"
@@ -785,6 +821,7 @@ msgid "Set as default"
 msgstr "Instellen als standaard"
 
 #: pybliographer.py:45
+#, python-format
 msgid "This is %s, version %s"
 msgstr "Dit is %s, versie %s"
 
@@ -797,10 +834,12 @@ msgid "For details, type `warranty'."
 msgstr "Typ voor details `warranty'."
 
 #: pybliographer.py:113 pybliographer.py:165
+#, python-format
 msgid "%s: error: can't open file `%s'"
 msgstr "%s: fout: kan bestand `%s' niet openen"
 
 #: pybliographer.py:126
+#, python-format
 msgid "For help, run %s and type `help' at the prompt"
 msgstr "Voer voor hulp %s uit en typ `help' bij de opdrachtregel"
 
@@ -819,6 +858,7 @@ msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
 msgstr "gebruik: pybcompact <latexbestand> <bibtexbestanden...>"
 
 #: scripts/pybcompact.py:33
+#, python-format
 msgid "pybcompact: error: %s\n"
 msgstr "pybcompact: fout: %s\n"
 
@@ -827,6 +867,7 @@ msgid "no entry"
 msgstr "geen ingang"
 
 #: scripts/pybcompact.py:141
+#, python-format
 msgid "can't find the following entries: %s"
 msgstr "kan de volgende ingangen niet vinden: %s"
 
@@ -843,14 +884,17 @@ msgid "usage: pybformat [bibtexfiles...]\n"
 msgstr "gebruik: pybformat [bibtexbestanden...]\n"
 
 #: scripts/pybformat.py:37
+#, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: fout: %s\n"
 
 #: scripts/pybformat.py:43
+#, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: waarschuwing: %s\n"
 
 #: scripts/pybformat.py:140 scripts/pybtex.py:85
+#, python-format
 msgid "can't find style `%s'"
 msgstr "kan stijl `%s' niet vinden"
 
@@ -859,6 +903,7 @@ msgid "usage: pybtex <latexfile> [bibtexfiles...]"
 msgstr "gebruik: pybtex <latexbestand> [bibtexbestanden...]"
 
 #: scripts/pybtex.py:37
+#, python-format
 msgid "pybtex: error: %s\n"
 msgstr "pybtex: fout: %s\n"
 
