@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.2.3\n"
-"POT-Creation-Date: 2004-03-01 09:43+0100\n"
-"PO-Revision-Date: 2004-03-01 09:46+0100\n"
+"POT-Creation-Date: 2004-03-23 09:15+0100\n"
+"PO-Revision-Date: 2004-03-25 08:49+0100\n"
 "Last-Translator: Zoltán Kóta <z.kota@gmx.net>\n"
 "Language-Team: hu <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -533,6 +533,7 @@ msgstr "%s:%d: kulcs `%s' már definiálva van"
 #. A text is either a string or a list:
 #. what does that mean ??
 #. error situation
+#. journal titles come in various forms
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2004 Frederic GOBRY
@@ -923,7 +924,7 @@ msgid "Text"
 msgstr "Szöveg"
 
 #: Pyblio/GnomeUI/Editor.py:136
-#: Pyblio/GnomeUI/Editor.py:757
+#: Pyblio/GnomeUI/Editor.py:786
 msgid "Error in native string parsing"
 msgstr "Hiba a sztringelemzésben"
 
@@ -1014,19 +1015,28 @@ msgstr "Érvénytelen kulcs formátum"
 msgid "Key `%s' already exists"
 msgstr "Kulcs `%s' már létezik"
 
-#: Pyblio/GnomeUI/Editor.py:770
+#: Pyblio/GnomeUI/Editor.py:712
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "A `%s' mező nem Latin-1 szimbólumot tartalmaz"
+
+#: Pyblio/GnomeUI/Editor.py:777
+msgid "Your text contains non Latin-1 symbols"
+msgstr "A szöveg nem Latin-1 szimbólumokat tartalmaz"
+
+#: Pyblio/GnomeUI/Editor.py:799
 msgid "Edit entry"
 msgstr "Bejegyzés módosítása"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:784
-#: Pyblio/GnomeUI/Editor.py:840
+#: Pyblio/GnomeUI/Editor.py:813
+#: Pyblio/GnomeUI/Editor.py:869
 msgid "Native Editing"
 msgstr "Natív szerkesztés"
 
 #. Reject the switch if the data is invalid
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:862
+#: Pyblio/GnomeUI/Editor.py:891
 msgid "Standard Editing"
 msgstr "Standard szerkesztés"
 
@@ -1454,7 +1464,7 @@ msgstr "[Kulcs értéke]"
 #. each instance of a subclass.
 #. Set the parent window. The root widget is not necessarily
 #. exported as an instance attribute.
-#: Pyblio/GnomeUI/Utils.py:196
+#: Pyblio/GnomeUI/Utils.py:194
 msgid "The following errors occured:\n"
 msgstr "A következő hibák fordultak elő:\n"
 
@@ -1628,6 +1638,319 @@ msgstr "Nem tudom hogy nyissam meg `%s'-t"
 #, python-format
 msgid "method `%s' provides no iterator"
 msgstr "`%s' módszer nem biztosít iterátort"
+
+#. default output
+#. Consider the reference as an URL
+#. Consider we handle a local file
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. compute length
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. regular expression to match in the .aux file
+#. we have to create a Reference database to hold the entries contained in the
+#. current database.
+#. is there something to do ?
+#. use the bibliographic databases in order of declaration
+#. to solve the references
+#. open the database
+#. as we are modifying the list of entries in this loop, we make a copy
+#. of it in order to avoir strange behaviors
+#. loop over the expected entries
+#. create a key in the current database
+#. does the database provide the key ?
+#. yes, add it to the reference
+#. and remove it from the list
+#. is it finished ?
+#. return the reference on all the entries, plus the missing ones
+#. parse the whole file
+#. we match a new citation
+#. we have to enter an additional .aux file
+#. create the list of entries
+#. ensure citation keys unicity
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. add [] plus one space
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. The time module is added for querying date ranges of publications
+#. searchterm is user inputted text, modified by limits if applied
+#. minus 1 because the count starts at 0 and not at 1
+#. two different search options given, depending on whether the user provides a relative entrez date
+#. searchterm is user inputted text, modified by limits
+#. note all the parameters needed to perform the query
+#. Search with field limits
+#. Below is added to keyword if user wants items with abstracts only
+#. Below is added to keyword if user wants items that are listed on pubmed ahead of print
+#. Below are publication type limits to add to keyword
+#. Below are language limits to add to keyword if chosen
+#. Below are subset limits to add to keyword if chosen
+#. X -  AIDS/HIV journals, non-Index Medicus
+#. E -  bioethics journals, non-Index Medicus
+#. B -  biotechnology journals (assigned 1990 - 1998), non-Index Medicus
+#. C -  communication disorders journals (assigned 1977 - 1997), non-Index Medicus
+#. K -  consumer health journals, non-Index Medicus
+#. AIM - Abridged Index Medicus A list of core clinical journals created 20 years ago
+#. D  -  dentistry journals
+#. H -  health administration journals, non-Index Medicus
+#. T -  health technology assessment journals, non-Index Medicus
+#. Q -  history of medicine journals, non-Index Medicus
+#. IM -  Index Medicus journals
+#. S -  National Aeronautics and Space Administration (NASA) journals, non-Index Medicus
+#. N  -  nursing journals
+#. R -  reproduction journals (assigned 1972 - 1979), non-Index Medicus
+#. Age range will be added to keyword if desired
+#. Human or animal studies limit will be added to keyword if desired
+#. Studies done on either females or males will be a limit of keyword
+#. Past Entrez date range will be added to keyword; the number is the relative number of days prior to today
+#. if date limits are provided, then the following will be added to keyword
+#. I will only allow this if the relative entrez date is not specified above, hence the elif command
+#. This is where I used the time function, gmtime() to get the current global mean time
+#. Below is the actual call to the URL (PubMed's cgi): first to gain the pubmed UIDs
+#. and then to get the entries that is passed to pyblio to open
+#. get the pubmed UIDs and dump into uids variable
+#. get rid of open bracket in string
+#. get rid of close bracket in the string
+#. get rid of all the spaces in the string
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. ----- Boolean tests -----
+#. Negative test
+#. Negative test
+#. Negative test
+#. Negative test
+#. if any of the fields matches, the whole matches
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. compute asap
+#. no filtering ? then pass through
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. get the data for each field
+#. sort them
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. avoid a dot at the end of the author list
+#. rename the old entry
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2004 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. each hash value contains a 2-uplet (opener, closer)
+#: Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "hiányzó '%s' attributum"
+
+#: Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
+msgstr "hibás nyitó tag: %s"
+
+#: Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "hibás záró tag: %s"
 
 #: glade/config1.glade.h:1
 #: glade/fields1.glade.h:1
