@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
-"POT-Creation-Date: 2003-10-07 20:41+0200\n"
-"PO-Revision-Date: 2003-10-31 21:35+0100\n"
+"POT-Creation-Date: 2003-11-07 04:23+0100\n"
+"PO-Revision-Date: 2003-11-07 11:20+0100\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,9 +33,9 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. ok, load the module
-#: Pyblio/Autoload.py:57
+#: Pyblio/Autoload.py:76
 #, python-format
 msgid "warning: can't import %s: %s"
 msgstr "waarschuwing: kan %s niet importeren: %s"
@@ -61,7 +61,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Prendre ses propres entrees
 #. et ajouter celles qu'on n'a pas
 #. call a key generator
@@ -97,7 +97,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. type definition
 #. callback definition
 #: Pyblio/Config.py:53
@@ -219,7 +219,7 @@ msgstr "Woordenboek (%s, %s)"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -239,7 +239,7 @@ msgstr "Woordenboek (%s, %s)"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. manually split the author into subfields.
 #. strict parsing, the whole block is the last name
 #. lazy parsing, last name is after lowercase or is last word
@@ -282,7 +282,7 @@ msgstr "in %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Extension module for BibTeX files
 #. this database is shared between all the unpickled entries
 #. Check for date fields
@@ -359,7 +359,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Extension module for Medline files
 #. rewind the file
 #. Skip whitespace
@@ -421,7 +421,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This file is part of pybliographer
 #.
 #. Original author of Ovid reader: Travis Oliphant <Oliphant.Travis@mayo.edu>
@@ -443,7 +443,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. create list from month dict
 #. rewind the file
 #. skip blank and <\d+> line
@@ -493,7 +493,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Extension module for Refer files
 #. Martin Wilck <martin@tropos.de> added support for citation label field.
 #. rewind the file
@@ -506,6 +506,30 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. lost their content
 #. one field per author
 #. general case
+#. This file is part of Pybliographer
+#.
+#. Copyright (C) 1998-2003 Peter Schulte-Stracke
+#. Email : Peter.Schulte-Stracke@t-online.de
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
+#. set by
+#. A text is either a string or a list:
+#. what does that mean ??
+#. error situation
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -525,7 +549,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. completer le texte
 #. completer les champs
 #. This file is part of pybliographer
@@ -547,7 +571,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. TO DO:
 #. Parent for dialogue
 #. List view troubles
@@ -559,8 +583,7 @@ msgstr "Kies uw voorkeuren"
 #. Create the edition widget...
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
-#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:291
-#: Pyblio/GnomeUI/Fields.py:473
+#: Pyblio/GnomeUI/Config.py:145 Pyblio/GnomeUI/Fields.py:374
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -571,34 +594,35 @@ msgstr ""
 #. print 'CHANGED:', self.key
 #. print 'UPDATE:', self.key, self.get(), force
 #. default?
+#. Python 2.2 considers True as an Int, and 2.3 as a
+#. Boolean... So we cast it to an int for compatibility
 #. print 'SET TUPLE:', value, item
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:425
+#: Pyblio/GnomeUI/Config.py:427
 msgid "Add"
 msgstr "Toevoegen"
 
-#: Pyblio/GnomeUI/Config.py:428
+#: Pyblio/GnomeUI/Config.py:430
 msgid "Update"
 msgstr "Bijwerken"
 
-#: Pyblio/GnomeUI/Config.py:431 Pyblio/GnomeUI/Config.py:535
-#: Pyblio/GnomeUI/Fields.py:373
+#: Pyblio/GnomeUI/Config.py:433 Pyblio/GnomeUI/Config.py:537
 msgid "Remove"
 msgstr "Verwijderen"
 
 #. Bottom
 #. m.row.changed(row)
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
-#: Pyblio/GnomeUI/Config.py:532 Pyblio/GnomeUI/Fields.py:370
+#: Pyblio/GnomeUI/Config.py:534
 msgid "Set"
 msgstr "Instellen"
 
 #. Bottom
-#: Pyblio/GnomeUI/Config.py:547
+#: Pyblio/GnomeUI/Config.py:549
 msgid "Key:"
 msgstr "Sleutel:"
 
-#: Pyblio/GnomeUI/Config.py:549
+#: Pyblio/GnomeUI/Config.py:551
 msgid "Value:"
 msgstr "Waarde:"
 
@@ -630,7 +654,7 @@ msgstr "Waarde:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. The Index list
 #. The text area
 #. Status bar
@@ -641,7 +665,7 @@ msgstr "Waarde:"
 #. remove !
 #. Display name in the menu
 #. Bind the actual file info to each menu entry
-#: Pyblio/GnomeUI/Document.py:194
+#: Pyblio/GnomeUI/Document.py:193
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -650,7 +674,7 @@ msgstr ""
 "kan bestand `%s' niet openen om te schrijven:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:215
+#: Pyblio/GnomeUI/Document.py:214
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -659,38 +683,38 @@ msgstr ""
 "Fout bij inlezen `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:234
+#: Pyblio/GnomeUI/Document.py:230
 msgid "New database"
 msgstr "Nieuwe gegevensbank"
 
-#: Pyblio/GnomeUI/Document.py:242 Pyblio/GnomeUI/Document.py:246
+#: Pyblio/GnomeUI/Document.py:238 Pyblio/GnomeUI/Document.py:242
 msgid "[no entry]"
 msgstr "[geen ingang]"
 
-#: Pyblio/GnomeUI/Document.py:243
+#: Pyblio/GnomeUI/Document.py:239
 msgid "[1 entry]"
 msgstr "[1 ingang]"
 
-#: Pyblio/GnomeUI/Document.py:244
+#: Pyblio/GnomeUI/Document.py:240
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d ingangen]"
 
-#: Pyblio/GnomeUI/Document.py:247
+#: Pyblio/GnomeUI/Document.py:243
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 ingang]"
 
-#: Pyblio/GnomeUI/Document.py:248
+#: Pyblio/GnomeUI/Document.py:244
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d ingangen]"
 
-#: Pyblio/GnomeUI/Document.py:253
+#: Pyblio/GnomeUI/Document.py:249
 msgid "[modified]"
 msgstr "[gewijzigd]"
 
-#: Pyblio/GnomeUI/Document.py:263
+#: Pyblio/GnomeUI/Document.py:259
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -699,26 +723,26 @@ msgstr ""
 "Veranderingen weggooien?"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:293
+#: Pyblio/GnomeUI/Document.py:289
 msgid "Merge file"
 msgstr "Bestand samenvoegen"
 
-#: Pyblio/GnomeUI/Document.py:305 Pyblio/GnomeUI/Document.py:359
+#: Pyblio/GnomeUI/Document.py:301 Pyblio/GnomeUI/Document.py:355
 msgid "Open error"
 msgstr "Open fout"
 
 #. loop over the entries
-#: Pyblio/GnomeUI/Document.py:329
+#: Pyblio/GnomeUI/Document.py:325
 msgid "Merge status"
 msgstr "Status samenvoegen"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:340
+#: Pyblio/GnomeUI/Document.py:336
 msgid "Open file"
 msgstr "Bestand openen"
 
 #. eventually warn interested objects
-#: Pyblio/GnomeUI/Document.py:386
+#: Pyblio/GnomeUI/Document.py:382
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -726,7 +750,7 @@ msgstr ""
 "De gegevensbank is extern gewijzigd.\n"
 "Veranderingen overschrijven?"
 
-#: Pyblio/GnomeUI/Document.py:396
+#: Pyblio/GnomeUI/Document.py:392
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -735,7 +759,7 @@ msgstr ""
 "Kan `%s' niet opslaan:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:404
+#: Pyblio/GnomeUI/Document.py:400
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -745,11 +769,11 @@ msgstr ""
 
 #. get the current modification date
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:418
+#: Pyblio/GnomeUI/Document.py:414
 msgid "Save As..."
 msgstr "Opslaan als..."
 
-#: Pyblio/GnomeUI/Document.py:424
+#: Pyblio/GnomeUI/Document.py:420
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -758,7 +782,7 @@ msgstr ""
 "Het bestand `%s' bestaat al.\n"
 "Dit bestand overschrijven?"
 
-#: Pyblio/GnomeUI/Document.py:431
+#: Pyblio/GnomeUI/Document.py:427
 #, python-format
 msgid ""
 "During opening:\n"
@@ -767,11 +791,11 @@ msgstr ""
 "Bij het openen:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:449
+#: Pyblio/GnomeUI/Document.py:445
 msgid "Reopen error"
 msgstr "Her-open fout"
 
-#: Pyblio/GnomeUI/Document.py:490
+#: Pyblio/GnomeUI/Document.py:486
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -780,30 +804,30 @@ msgstr ""
 "Er bestaat al een ingang genaamd `%s'.\n"
 "Hernoemen en toch toevoegen?"
 
-#: Pyblio/GnomeUI/Document.py:527
+#: Pyblio/GnomeUI/Document.py:523
 msgid "Really remove all the entries ?"
 msgstr "Echt alle ingangen verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:547
+#: Pyblio/GnomeUI/Document.py:543
 msgid "Create new entry"
 msgstr "Nieuwe ingang maken"
 
-#: Pyblio/GnomeUI/Document.py:561
+#: Pyblio/GnomeUI/Document.py:557
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Echt %d ingangen bewerken?"
 
-#: Pyblio/GnomeUI/Document.py:599
+#: Pyblio/GnomeUI/Document.py:595
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Alle %d ingangen verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:601
+#: Pyblio/GnomeUI/Document.py:597
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Ingang `%s' verwijderen?"
 
-#: Pyblio/GnomeUI/Document.py:665 Pyblio/GnomeUI/Document.py:672
+#: Pyblio/GnomeUI/Document.py:661 Pyblio/GnomeUI/Document.py:668
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -820,28 +844,19 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#. search the program in the current path
-#: Pyblio/GnomeUI/Document.py:749
-msgid ""
-"Please install bug-buddy\n"
-"to use this feature"
-msgstr ""
-"Installeer alstublieft bug-buddy om van\n"
-"deze mogelijkheid gebruik te maken"
-
-#: Pyblio/GnomeUI/Document.py:762
+#: Pyblio/GnomeUI/Document.py:738
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dit programma is auteursrechtelijk beschermd onder de GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:763
+#: Pyblio/GnomeUI/Document.py:739
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome gebruikersinterface voor het Pybliographer systeem."
 
-#: Pyblio/GnomeUI/Document.py:772
+#: Pyblio/GnomeUI/Document.py:748
 msgid "Gnome Translation Team"
 msgstr "Elros Cyriatan"
 
-#: Pyblio/GnomeUI/Document.py:777
+#: Pyblio/GnomeUI/Document.py:753
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer thuispagina"
 
@@ -864,14 +879,15 @@ msgstr "Pybliographer thuispagina"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. TO FIX
 #. entry editor for more than 50 chars
 #: Pyblio/GnomeUI/Editor.py:38
 msgid "Last Name, First Name"
 msgstr "Achternaam, Voornaam"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:39
+#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
+#: glade/config1.glade.h:14
 msgid "Text"
 msgstr "Tekst"
 
@@ -899,16 +915,32 @@ msgstr "Ongeldig maand-veld in datum"
 msgid "Invalid year field in date"
 msgstr "Ongeldig jaar-veld in datum"
 
+#. self.edit.set_editable (True)
+#. A delete button
+#: Pyblio/GnomeUI/Editor.py:431 Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: Pyblio/GnomeUI/Editor.py:442 Pyblio/GnomeUI/Editor.py:454
+#: Pyblio/GnomeUI/Editor.py:457
+msgid "[ Drop an Entry here ]"
+msgstr "[ Sleep hier een ingang heen ]"
+
+#. Config save?
+#. print 'SELF:FM[P][2]:', self.fm[p] [2]
+#. ------------------------------------------------------------
+#. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:491 Pyblio/GnomeUI/Fields.py:106
+#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:207
+#: glade/config1.glade.h:8
 msgid "Entry type"
 msgstr "Soort ingang"
 
-#: Pyblio/GnomeUI/Editor.py:493
+#: Pyblio/GnomeUI/Editor.py:529
 msgid "Key"
 msgstr "Sleutel"
 
-#: Pyblio/GnomeUI/Editor.py:534
+#: Pyblio/GnomeUI/Editor.py:570
 msgid "Create Field"
 msgstr "Veld maken"
 
@@ -917,46 +949,46 @@ msgstr "Veld maken"
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:589 Pyblio/GnomeUI/Fields.py:325
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:408
 msgid "Mandatory"
 msgstr "Verplicht"
 
-#: Pyblio/GnomeUI/Editor.py:589 Pyblio/GnomeUI/Fields.py:326
+#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:409
 msgid "Optional"
 msgstr "Optioneel"
 
-#: Pyblio/GnomeUI/Editor.py:589
+#: Pyblio/GnomeUI/Editor.py:625
 msgid "Extra"
 msgstr "Extra"
 
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:658
+#: Pyblio/GnomeUI/Editor.py:694
 msgid "Invalid key format"
 msgstr "Ongeldig sleutel formaat"
 
-#: Pyblio/GnomeUI/Editor.py:666
+#: Pyblio/GnomeUI/Editor.py:702
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Sleutel `%s' bestaat al"
 
-#: Pyblio/GnomeUI/Editor.py:727
+#: Pyblio/GnomeUI/Editor.py:763
 #, fuzzy
 msgid "Error in native string parsing"
 msgstr "Fout in verwerken eigen-taal tekst"
 
-#: Pyblio/GnomeUI/Editor.py:740
+#: Pyblio/GnomeUI/Editor.py:776
 msgid "Edit entry"
 msgstr "Ingang bewerken"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:754 Pyblio/GnomeUI/Editor.py:810
+#: Pyblio/GnomeUI/Editor.py:790 Pyblio/GnomeUI/Editor.py:846
 #, fuzzy
 msgid "Native Editing"
 msgstr "Taal-eigen bewerken"
 
 #. Reject the switch if the data is invalid
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:832
+#: Pyblio/GnomeUI/Editor.py:868
 msgid "Standard Editing"
 msgstr "Standaard bewerkmodus"
 
@@ -980,9 +1012,10 @@ msgstr "Standaard bewerkmodus"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. currently, nothing to display
 #. Display this entry
+#. Add a button to open the URL
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1002,67 +1035,55 @@ msgstr "Standaard bewerkmodus"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. TO DO:
-#. correctly create entry types
-#: Pyblio/GnomeUI/Fields.py:38
+#. adapt menu item for this dialog
+#. cleaning up
+#: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
 msgstr "Auteurs"
 
-#: Pyblio/GnomeUI/Fields.py:40
+#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
 msgid "URL"
 msgstr "URL"
 
-#: Pyblio/GnomeUI/Fields.py:41
+#: Pyblio/GnomeUI/Fields.py:43
 msgid "Reference"
 msgstr "Verwijzing"
 
-#: Pyblio/GnomeUI/Fields.py:42
+#: Pyblio/GnomeUI/Fields.py:44
 msgid "Date"
 msgstr "Datum"
 
 #. self.dialog.set_parent (parent) ####
-#: Pyblio/GnomeUI/Fields.py:61
+#: Pyblio/GnomeUI/Fields.py:63
 msgid "Entry types and field names configuration"
 msgstr "Ingang soorten en veldnamen configuratie"
 
-#. content of the dialog  Page 1
-#: Pyblio/GnomeUI/Fields.py:69
+#. ------------------------------------------------------------
+#. Page 1
+#: Pyblio/GnomeUI/Fields.py:102 glade/config1.glade.h:11
 msgid "Name"
 msgstr "Naam"
 
-#: Pyblio/GnomeUI/Fields.py:72
+#: Pyblio/GnomeUI/Fields.py:105 glade/config1.glade.h:15
 msgid "Type"
 msgstr "Soort"
 
-#. PAGE 3
-#: Pyblio/GnomeUI/Fields.py:126
+#. ------------------------------------------------------------
+#. Page 3
+#: Pyblio/GnomeUI/Fields.py:263
 msgid "Available"
 msgstr "Beschikbaar"
 
-#: Pyblio/GnomeUI/Fields.py:135
+#: Pyblio/GnomeUI/Fields.py:273
 msgid "Associated"
 msgstr "Geassocieerd"
 
-#: Pyblio/GnomeUI/Fields.py:332
-msgid "Entries configuration"
-msgstr "Ingangen configuratie"
-
-#: Pyblio/GnomeUI/Fields.py:343
-msgid "Entry"
-msgstr "Ingang"
-
-#: Pyblio/GnomeUI/Fields.py:354
-msgid "Entry Name:"
-msgstr "Naam ingang:"
-
-#: Pyblio/GnomeUI/Fields.py:359
-msgid "Status"
-msgstr "Status"
-
-#: Pyblio/GnomeUI/Fields.py:359 glade/search-intl.c:13 glade/search.glade.h:4
-msgid "Field"
-msgstr "Veld"
+#: Pyblio/GnomeUI/Fields.py:293
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Velden geassocieerd met <b>%s</b> ingangssoort"
 
 #. This file is part of pybliographer
 #.
@@ -1083,7 +1104,7 @@ msgstr "Veld"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1103,14 +1124,14 @@ msgstr "Veld"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
-#: Pyblio/GnomeUI/FileSelector.py:40
+#.
+#: Pyblio/GnomeUI/FileSelector.py:44
 msgid "File"
 msgstr "Bestand"
 
 #. url handler
 #. type selector
-#: Pyblio/GnomeUI/FileSelector.py:75
+#: Pyblio/GnomeUI/FileSelector.py:79
 msgid "Bibliography type:"
 msgstr "Soort bibliografie:"
 
@@ -1139,7 +1160,7 @@ msgstr "Soort bibliografie:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Fill the output format drop-down menu
 #. This file is part of pybliographer
 #.
@@ -1160,27 +1181,34 @@ msgstr "Soort bibliografie:"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. TO FIX
 #.
 #. - DnD with the world
 #. - Copy/Paste with the world
 #. contextual popup menu
-#: Pyblio/GnomeUI/Index.py:94
+#: Pyblio/GnomeUI/Index.py:95
 msgid "Add..."
 msgstr "Toevoegen..."
 
-#: Pyblio/GnomeUI/Index.py:96
+#: Pyblio/GnomeUI/Index.py:97
 msgid "Edit..."
 msgstr "Bewerken..."
 
-#: Pyblio/GnomeUI/Index.py:98
+#: Pyblio/GnomeUI/Index.py:99
 msgid "Delete..."
 msgstr "Verwijderen..."
 
 #. some events we want to react to...
 #. DnD configuration
 #. Copy/Paste configuration
+#. We handle three selections: one specific to the application,
+#. the clipboard, and the primary. Therefore, we should be able
+#. to paste into every kind of editor/application.
+#. if we want the keys, return the keys !
+#. else, return the full entries
+#. Advertise the fact that we hold the selection
+#. Request the selection as a full entry
 #. if we want the keys, return the keys !
 #. else, return the full entries
 #. must return a set of keys
@@ -1209,7 +1237,8 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
+#. Fill in the combo boxes
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1229,7 +1258,31 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
+#. Manipulate data as strings
+#. Manipulate pickled keys
+#. Manipulate pickled entries
+#. Related string definitions
+#. This file is part of pybliographer
+#.
+#. Copyright (C) 1998-2003 Frederic GOBRY
+#. Email : gobry@pybliographer.org
+#.
+#. This program is free software; you can redistribute it and/or
+#. modify it under the terms of the GNU General Public License
+#. as published by the Free Software Foundation; either version 2
+#. of the License, or (at your option) any later version.
+#.
+#. This program is distributed in the hope that it will be useful,
+#. but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. GNU General Public License for more details.
+#.
+#. You should have received a copy of the GNU General Public License
+#. along with this program; if not, write to the Free Software
+#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#.
+#.
 #. register several callbacks
 #. FIXME.
 #. history.recently_used (file, 'application/x-bibtex',
@@ -1255,7 +1308,7 @@ msgstr "Verwijderen..."
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. the tree model contains a string that explains the query,
 #. and a python object representing the actual query.
 #. the view does not display the python column, of course.
@@ -1263,13 +1316,6 @@ msgstr "Verwijderen..."
 #: Pyblio/GnomeUI/Search.py:71
 msgid "Full database"
 msgstr "Volledige gegevensbank"
-
-#. Monitor the selected items
-#. fill the combo containing the available fields
-#. connect a menu to the right button
-#: Pyblio/GnomeUI/Search.py:86
-msgid "Delete"
-msgstr "Verwijderen"
 
 #. We are set up.
 #. Expert search
@@ -1314,7 +1360,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This dialog is described as a glade XML file
 #. Only the first two rows are visibles, the others are for
 #. internal bookkeeping.
@@ -1359,7 +1405,7 @@ msgstr "[Sleutel waarde]"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This is a class variable that contains the file name to load for
 #. each instance of a subclass.
 #. Set the parent window. The root widget is not necessarily
@@ -1387,7 +1433,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. Perform the first initialisation of Gnome, so that the options passed to the script
 #. are not passed to Gnome
 #. correctly identify the program
@@ -1411,7 +1457,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. --------------------------------------------------
 #. --------------------------------------------------
 #. This file is part of pybliographer
@@ -1433,7 +1479,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1453,7 +1499,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -1473,7 +1519,7 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: Pyblio/LyX.py:39
 #, python-format
 msgid "no input pipe `%s'"
@@ -1509,7 +1555,7 @@ msgstr "geen uitvoerpijp `%s'"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: Pyblio/Open.py:97
 #, python-format
 msgid "method `%s' provides no opener"
@@ -1532,14 +1578,55 @@ msgstr "weet niet hoe `%s' kan worden geopend"
 msgid "method `%s' provides no iterator"
 msgstr "methode `%s' biedt geen iterator aan"
 
-#: glade/config1.glade.h:1
+#: glade/config1.glade.h:1 glade/format.glade.h:1 glade/medline.glade.h:1
+#: glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>Soort ingang</b>"
+
+#: glade/config1.glade.h:3
+msgid "A"
+msgstr "EEN"
+
+#: glade/config1.glade.h:4
+msgid "Association"
+msgstr "Associatie"
+
+#: glade/config1.glade.h:5
+#, fuzzy
+msgid "Datum"
+msgstr "Datum"
+
+#: glade/config1.glade.h:6
+msgid "Editor"
+msgstr "Bewerker"
+
+#: glade/config1.glade.h:7
+msgid "Entries"
+msgstr "Ingangen"
+
+#: glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "VELDDEFINITIE"
+
+#: glade/config1.glade.h:10
+msgid "Fields "
+msgstr "Velden"
+
+#: glade/config1.glade.h:12
+msgid "Name "
+msgstr "Naam"
+
+#: glade/config1.glade.h:13
 msgid "Pybliographer Configuration"
 msgstr "Pybliographer configuratie"
 
-#: glade/format.glade.h:1 glade/medline.glade.h:1 glade/search-intl.c:11
-#: glade/search-intl.c:12 glade/search-intl.c:17 glade/search.glade.h:1
-msgid "*"
-msgstr "*"
+#: glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "standaard velden"
 
 #: glade/format.glade.h:2
 msgid "Bibliography style:"
@@ -1556,6 +1643,14 @@ msgstr "Uitvoerbestand:\n"
 #: glade/format.glade.h:6
 msgid "Output format:"
 msgstr "Uitvoerformaat:"
+
+#: glade/format.glade.h:7
+msgid "Save Formatted as"
+msgstr "Opgemaakt opslaan als"
+
+#: glade/format.glade.h:8
+msgid "Style Selection"
+msgstr "Stijl selectie"
 
 #: glade/medline.glade.h:2
 msgid "Enter your Medline Query"
@@ -1625,117 +1720,101 @@ msgstr ""
 "Gebruik het formaat JJJJ/MM/DD\n"
 "Maand en dag zijn optioneel."
 
-#.
-#. * Chaînes de caractères à traduire générées par
-#. * Glade. Ajouter ce fichier au fichier POTFILE.in
-#. * de votre projet. NE PAS compiler ce fichier
-#. * avec le reste de votre application.
-#.
-#: glade/pyblio-intl.c:8 glade/pyblio.glade.h:10
-msgid "Pybliographer"
-msgstr "Pybliographer"
-
-#: glade/pyblio-intl.c:9 glade/pyblio.glade.h:17
-msgid "_New"
-msgstr "_Nieuw"
-
-#: glade/pyblio-intl.c:10 glade/pyblio.glade.h:7
-msgid "Merge With..."
-msgstr "Samenvoegen met..."
-
-#: glade/pyblio-intl.c:11 glade/pyblio.glade.h:6
-msgid "Medline Query..."
-msgstr "Medline verzoek..."
-
-#: glade/pyblio-intl.c:12 glade/pyblio.glade.h:9
-msgid "Previous Documents"
-msgstr "Vorige documenten"
-
-#: glade/pyblio-intl.c:13 glade/pyblio.glade.h:14
-msgid "_Add..."
-msgstr "_Toevoegen..."
-
-#: glade/pyblio-intl.c:14 glade/pyblio.glade.h:16
-msgid "_Edit..."
-msgstr "Be_werken..."
-
-#: glade/pyblio-intl.c:15 glade/pyblio.glade.h:15
-msgid "_Delete..."
-msgstr "_Verwijderen..."
-
-#: glade/pyblio-intl.c:16 glade/pyblio.glade.h:11
-msgid "S_ort..."
-msgstr "_Sorteren..."
-
-#: glade/pyblio-intl.c:17 glade/pyblio-intl.c:25 glade/pyblio.glade.h:1
+#: glade/pyblio.glade.h:1
 msgid "Cite"
 msgstr "Citeren"
 
-#: glade/pyblio-intl.c:18 glade/pyblio.glade.h:2
+#: glade/pyblio.glade.h:2
 msgid "Cite..."
 msgstr "Citeren..."
 
-#: glade/pyblio-intl.c:19 glade/pyblio.glade.h:5
-msgid "Format..."
-msgstr "Formaat..."
-
-#: glade/pyblio-intl.c:20 glade/pyblio.glade.h:13
-msgid "Settings"
-msgstr "Instellingen"
-
-#: glade/pyblio-intl.c:21 glade/pyblio.glade.h:4
-msgid "Fields..."
-msgstr "Velden..."
-
-#: glade/pyblio-intl.c:22 glade/pyblio.glade.h:3
+#: glade/pyblio.glade.h:3
 msgid "Entries..."
 msgstr "Ingangen..."
 
-#: glade/pyblio-intl.c:23 glade/pyblio.glade.h:8
+#: glade/pyblio.glade.h:4
+msgid "Fields..."
+msgstr "Velden..."
+
+#: glade/pyblio.glade.h:5
+msgid "Format..."
+msgstr "Formaat..."
+
+#: glade/pyblio.glade.h:6
+msgid "Medline Query..."
+msgstr "Medline verzoek..."
+
+#: glade/pyblio.glade.h:7
+msgid "Merge With..."
+msgstr "Samenvoegen met..."
+
+#: glade/pyblio.glade.h:8
 msgid "Open File"
 msgstr "Bestand openen"
 
-#: glade/pyblio-intl.c:24 glade/pyblio.glade.h:12
+#: glade/pyblio.glade.h:9
+msgid "Previous Documents"
+msgstr "Vorige documenten"
+
+#: glade/pyblio.glade.h:10
+msgid "Pybliographer"
+msgstr "Pybliographer"
+
+#: glade/pyblio.glade.h:11
+msgid "S_ort..."
+msgstr "_Sorteren..."
+
+#: glade/pyblio.glade.h:12
 msgid "Save File"
 msgstr "Bestand opslaan"
 
-#.
-#. * Chaînes de caractères à traduire générées par
-#. * Glade. Ajouter ce fichier au fichier POTFILE.in
-#. * de votre projet. NE PAS compiler ce fichier
-#. * avec le reste de votre application.
-#.
-#: glade/search-intl.c:8 glade/search-intl.c:9 glade/search.glade.h:7
-msgid "Search"
-msgstr "Zoeken"
+#: glade/pyblio.glade.h:13
+msgid "Settings"
+msgstr "Instellingen"
 
-#: glade/search-intl.c:10 glade/search.glade.h:2
+#: glade/pyblio.glade.h:14
+msgid "_Add..."
+msgstr "_Toevoegen..."
+
+#: glade/pyblio.glade.h:15
+msgid "_Delete..."
+msgstr "_Verwijderen..."
+
+#: glade/pyblio.glade.h:16
+msgid "_Edit..."
+msgstr "Be_werken..."
+
+#: glade/pyblio.glade.h:17
+msgid "_New"
+msgstr "_Nieuw"
+
+#: glade/search.glade.h:2
 msgid "Close"
 msgstr "Sluiten"
 
-#: glade/search-intl.c:14 glade/search.glade.h:5
-msgid "Pattern"
-msgstr "Patroon"
-
-#: glade/search-intl.c:15 glade/search.glade.h:8
-msgid "Simple Search"
-msgstr "Eenvoudig zoeken"
-
-#: glade/search-intl.c:16
-msgid "Search Command:"
-msgstr "Zoekopdracht:"
-
-#: glade/search-intl.c:18 glade/search.glade.h:3
+#: glade/search.glade.h:3
 msgid "Expert Search"
 msgstr "Geavanceerd zoeken"
 
-#: glade/search-intl.c:19
-msgid "label9"
-msgstr "label9"
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Veld"
+
+#: glade/search.glade.h:5
+msgid "Pattern"
+msgstr "Patroon"
 
 #: glade/search.glade.h:6
 msgid "Query"
 msgstr "Verzoek"
+
+#: glade/search.glade.h:7
+msgid "Search"
+msgstr "Zoeken"
+
+#: glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "Eenvoudig zoeken"
 
 #: glade/sort.glade.h:1
 msgid "Select sort criterions"
@@ -1765,35 +1844,35 @@ msgstr "Instellen als standaard"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
-#: pybliographer.py:41
+#.
+#: pybliographer.py:40
 #, python-format
 msgid "This is %s, version %s"
 msgstr "Dit is %s, versie %s"
 
-#: pybliographer.py:45 pybliographer.py:52
+#: pybliographer.py:44 pybliographer.py:51
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
 msgstr "Dit is vrije software met ABSOLUUT GEEN GARANTIE."
 
-#: pybliographer.py:46
+#: pybliographer.py:45
 msgid "For details, type `warranty'."
 msgstr "Typ voor details `warranty'."
 
 #. ---------- Lire les fichiers de conf
 #. Fichiers standards
 #. Fichiers passes en argument au programme
-#: pybliographer.py:109 pybliographer.py:161
+#: pybliographer.py:108 pybliographer.py:160
 #, python-format
 msgid "%s: error: can't open file `%s'"
 msgstr "%s: fout: kan bestand `%s' niet openen"
 
-#: pybliographer.py:122
+#: pybliographer.py:121
 #, python-format
 msgid "For help, run %s and type `help' at the prompt"
 msgstr "Voer voor hulp %s uit en typ `help' bij de opdrachtregel"
 
 #. ---------- Initialisation
-#: pybliographer.py:131
+#: pybliographer.py:130
 msgid ""
 "Useful commands:\n"
 "\thelp     to get some help\n"
@@ -1806,12 +1885,6 @@ msgstr ""
 #. Quand on a tout lu, le programme est fini !
 #. ---------- Initialisations du parser
 #. save history
-#. Site configuration
-#. ==================================================
-#. define autoloaded formats
-#. define styles and outputs
-#. define key formats
-#. Parse the configuration directory
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
@@ -1832,7 +1905,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. check the arguments
 #. list containing the broken entries
 #. set the strictness for bibtex files
@@ -1862,7 +1935,7 @@ msgstr ""
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: scripts/pybcompact.py:29
 msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
 msgstr "gebruik: pybcompact <latexbestand> <bibtexbestanden...>"
@@ -1924,7 +1997,7 @@ msgstr "kan de volgende ingangen niet vinden: %s"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: scripts/pybconvert.py:28
 msgid "usage: pybconvert <source>..<target> <input> [output]"
 msgstr "gebruik: pybconvert <bron>..<doel> <invoer> [uitvoer]"
@@ -1953,7 +2026,7 @@ msgstr "pybconvert: slecht conversieformaat"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: scripts/pybformat.py:33
 msgid "usage: pybformat [bibtexfiles...]\n"
 msgstr "gebruik: pybformat [bibtexbestanden...]\n"
@@ -1999,7 +2072,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #. -*- python -*-
 #. This file is part of pybliographer
 #.
@@ -2020,7 +2093,7 @@ msgstr "kan stijl `%s' niet vinden"
 #. along with this program; if not, write to the Free Software
 #. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #.
-#. $Id: nl.po,v 1.1.2.4 2003/11/01 00:51:18 adrighem Exp $
+#.
 #: scripts/pybtex.py:33
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
 msgstr "gebruik: pybtex <latexbestand> [bibtexbestanden...]"
