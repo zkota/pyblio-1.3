@@ -23,7 +23,10 @@
 
 from Pyblio import Open, Autoload
 
-import xmllib, string, htmlentitydefs, re
+from xml import sax
+from xml.sax.saxutils import escape, quoteattr
+
+import string, re
 
 _map = string.maketrans ('\t', ' ')
 _cpt = re.compile ('\s+')
@@ -193,41 +196,12 @@ class Module:
 
 
     
-class XMLBib (xmllib.XMLParser):
+class XMLBib (sax.handler.ContentHandler):
 
+    
     def __init__ (self, url):
-        xmllib.XMLParser.__init__ (self)
 
         # each hash value contains a 2-uplet (opener, closer)
-        self.elements = {
-            'bibstyle'    : (self.open_bibstyle, self.close_bibstyle),
-            'infield'     : (self.open_infield, self.generic_close),
-            'notinfield'  : (self.open_notinfield, self.generic_close),
-            'inentry'     : (self.open_inentry, self.generic_close),
-            'notinentry'  : (self.open_notinentry, self.generic_close),
-            'content'     : (self.open_content, self.generic_close),
-            'style'       : (self.open_style, self.generic_close),
-            'separator'   : (self.open_separator, self.generic_close),
-            'define'      : (self.open_config, self.generic_close),
-            'module'      : (self.open_module, self.close_module),
-            'singular'    : (self.open_singular, self.generic_close),
-            'plural'      : (self.open_plural, self.generic_close),
-            }
-
-        self.attributes = {
-            'infield'    : { 'name' : None },
-            'notinfield' : { 'name' : None },
-            'inentry'    : { 'name' : None },
-            'notinentry' : { 'name' : None },
-            'style'      : { 'name' : None },
-            'content'    : { 'name' : None },
-            'module'     : { 'name' : None },
-            'singular'   : { 'name' : None },
-            'plural'     : { 'name' : None },
-            'define'     : { 'method' : None,
-                             'field'  : None },
-            'separator'  : {},
-            }
         
         self.format = None
         self.top    = []
@@ -237,14 +211,15 @@ class XMLBib (xmllib.XMLParser):
         self.methods = {}
         
         fh = open (Open.url_to_local (url))
-        while 1:
-            line = fh.readline ()
-            if line == '': break
-            self.feed (line)
-        self.close ()
-        fh.close ()
-        return
 
+        parser = sax.make_parser ()
+        parser.setFeature (sax.handler.feature_validation, False)
+        parser.setContentHandler (self)
+        
+        parser.parse (fh)
+        fh.close ()
+        
+        return
 
     def configure (self):
         fmeth = {}
@@ -270,14 +245,54 @@ class XMLBib (xmllib.XMLParser):
 
         self.format.meth = fmeth
         return
-            
-    def handle_data (self, data):
+
+    def setDocumentLocator (self, locator):
+        self.locator = locator
+        return
+
+    def _error (self, msg):
+        raise sax.SAXParseException (msg, None, self.locator)
+
+
+    def _attr (self, attr, attrs):
+        try:
+            val = attrs [attr]
+        except KeyError:
+            self._error (_("missing '%s' attribute") % attr)
+
+        return val
+
+    def startElement (self, name, attrs):
+
+        try:
+            meth = self.elements [name]
+
+        except KeyError:
+            self._error (_("invalid opening tag: %s") % name)
+
+        meth [0] (self, attrs)
+        return
+
+    def endElement (self, name):
+        try:
+            meth = self.elements [name]
+
+        except KeyError:
+            self._error (_("invalid closing tag: %s") % name)
+
+        meth [1] (self)
+        return
+
+    def characters (self, data):
         if len (self.data) == 0:
             return
+
+        data = data.encode ('utf-8')
 
         if self.data [-1]: self.data [-1] (data)
         return
 
+    # --------------------------------------------------
 
     def open_bibstyle (self, att):
         self.top.append (BibStyle ())
@@ -463,3 +478,32 @@ class XMLBib (xmllib.XMLParser):
         return
     
     
+    elements = {
+        'bibstyle'    : (open_bibstyle, close_bibstyle),
+        'infield'     : (open_infield,  generic_close),
+        'notinfield'  : (open_notinfield, generic_close),
+        'inentry'     : (open_inentry, generic_close),
+        'notinentry'  : (open_notinentry, generic_close),
+        'content'     : (open_content, generic_close),
+        'style'       : (open_style, generic_close),
+        'separator'   : (open_separator, generic_close),
+        'define'      : (open_config, generic_close),
+        'module'      : (open_module, close_module),
+        'singular'    : (open_singular, generic_close),
+        'plural'      : (open_plural, generic_close),
+        }
+
+    attributes = {
+        'infield'    : { 'name' : None },
+        'notinfield' : { 'name' : None },
+        'inentry'    : { 'name' : None },
+        'notinentry' : { 'name' : None },
+        'style'      : { 'name' : None },
+        'content'    : { 'name' : None },
+        'module'     : { 'name' : None },
+        'singular'   : { 'name' : None },
+        'plural'     : { 'name' : None },
+        'define'     : { 'method' : None,
+                         'field'  : None },
+        'separator'  : {},
+        }
