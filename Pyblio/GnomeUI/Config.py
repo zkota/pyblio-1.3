@@ -20,7 +20,6 @@
 # 
 
 # TO DO:
-# Parent for dialogue
 # List view troubles
 
 import gobject, gtk, gtk.glade
@@ -439,7 +438,9 @@ class ListConfig (BaseConfig):
         bbox.pack_start (button)
         button.connect ('clicked', self.remove_cb)
 
-        self.w.connect ('focus-out-event', self.update)
+        self.m.connect ('row-changed', self._on_reordering)
+        self.w.connect ('hide', self._on_leave)
+        
         h.pack_end (bbox, False)
         self.w.pack_start (h, True)
 
@@ -450,10 +451,7 @@ class ListConfig (BaseConfig):
                            fill   = self.subw.resize)
         if self.key:
             data = Config.get (self.key).data
-            i = 0
-            for item in data:
-                self.m.append ((str (item), item))
-                i = i + 1
+            self.set (data)
            
         self.w.show_all ()
         return
@@ -476,14 +474,13 @@ class ListConfig (BaseConfig):
         data = self.subw.get ()
         m, row  = self.s.get_selected()
         m[row] = (str(data), data)
-        #m.row.changed(row)
-        self.update (True)
-        pass
+        return
 
     def select_cb (self, *args):
         m, row = self.s.get_selected()
-        data = m.get_value(row, 1)
-        self.subw.set (data)
+        if row:
+            data = m.get_value(row, 1)
+            self.subw.set (data)
         return
 
     def set (self, data):
@@ -499,7 +496,17 @@ class ListConfig (BaseConfig):
             data = i[1]
             ret.append (data)
         return ret
-    
+
+    def _on_reordering (self, m, p, i):
+        if self.frozen: return
+
+        self.changed ()
+        return
+
+    def _on_leave (self, * args):
+        self.update ()
+        return
+        
     
 class DictConfig (BaseConfig):
 
