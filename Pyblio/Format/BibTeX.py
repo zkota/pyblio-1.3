@@ -171,6 +171,7 @@ class Entry (Base.Entry):
 
     
     def __setitem__ (self, key, value):
+
 	# First, set the cache for free
 	self.__text [key] = (value, 0)
 

@@ -1224,9 +1224,10 @@ class LT_Widget_1:
                 l = "<b>%s</b>" %(key)
             anno_label.set_markup(l)
             vbox.pack_start (anno_label)
-            if not entry.has_key(key):
-                entry[key] = Fields.LongText('')
-            t = str (entry[key])
+            
+            if entry.has_key(key): t = str (entry[key])
+            else:                  t = ''
+
             l = min (len(t), 150)
             text_label = gtk.Label(t[0:l])
             text_label.set_line_wrap (True)
@@ -1281,7 +1282,7 @@ class LT_Widget_2:
     def display (self, node, item):
         self.node = node
         self.entry = item
-        self.label.set_text (node.get('name', 'Text'))
+        self.label.set_text (node.get('name', _('Text')))
         key = node['key']
         if not item.has_key(key):
             item[key] = Fields.LongText(_('Enter text here'))
@@ -1296,8 +1297,9 @@ class LT_Widget_2:
         self.notebook.set_current_page (self.position)
 
     def update (self):
-        if self.buff.get_modified ():
+        if self.node and self.buff.get_modified ():
             start, end = self.buff.get_bounds()
+            
             key = self.node['key']
             text = self.buff.get_text (start, end)
             if text.strip():
@@ -1305,7 +1307,6 @@ class LT_Widget_2:
             else:
                 del self.entry [key]
             self.node.setdefault ('modified', True)
-            
         
     def hide (self):
         if self.hidden:
@@ -1336,7 +1337,7 @@ class  LT_Dialog_1     :
 
     def __init__ (self, parent=None):
         self.dialog = gtk.Dialog(
-            "New Annotation Name", parent, 0,
+            _('New Annotation Name'), parent, 0,
             (gtk.STOCK_OK, gtk.RESPONSE_ACCEPT,
              gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT))
         self.dialog.vbox.set_border_width (24)
