@@ -702,8 +702,14 @@ class Document (Connector.Publisher):
     def lyx_cite (self, * arg):
 
         import locale
-        enc = locale.getpreferredencoding ()
 
+        try:
+            enc = locale.getpreferredencoding ()
+
+        except AttributeError:
+            enc = locale.getdefaultlocale()[1]
+
+        
         entries = self.index.selection ()
         if not entries: return
         
