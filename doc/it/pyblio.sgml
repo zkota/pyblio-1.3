@@ -31,7 +31,7 @@
       per manipolare questi database con una semplice interfaccia grafica, ma                                                       
       pu&ograve anche essere facilmente esteso con un linguaggio di scripting                                                             
       per adattarsi a una vasta gamma di necessit&agrave . (Per segnalare errori di
-      traduzione scrivi a Yuri Bongiorno &lt yurix@tiscalinet.it &gt)</para>
+      traduzione scrivere a Yuri Bongiorno &lt yurixATtiscali.it &gt)</para>
     </abstract>
   </bookinfo>
   
@@ -48,7 +48,7 @@
     <title>Class reference</title>
 
     <partintro>
-      <para>Qui troverai la lista di tutte le classi basilari usate in
+      <para>Qui si trova l'elenco di tutte le classi basilari usate in
 	&pyb;. Appartengono al modulo <classname>Pyblio</classname>
 	e da qui sono importate e usate con un codice che assomiglia a:
 	<programlisting> 

@@ -1,25 +1,25 @@
 <chapter>
   <title>Il linguaggio di scripting</title>
 
-<para>&pyb; &egrave infatti un semplice set di classi e funzioni scritte                                                                
+<para>&pyb; &egrave  un semplice insieme di classi e funzioni scritte                                                                
 in python e fornisce un accesso semplice e omogeneo a database                                                                   
 bibliografici. Perci&ograve, &egrave possibile scrivere script in python che                                                                  
 fanno uso di queste funzioni specializzate. L'interfaccia grafica,                                                                
 &pyc;, &egrave essa stessa un semplice script al di sopra di &pyb;.</para>                                                              
                                                                                                                                   
-<para>Per eseguire uno script scritto per &pyb;, digita semplicemente </para>                                                     
+<para>Per eseguire uno script scritto per &pyb;, basta digitare </para>                                                     
 
   <screen>
     <prompt>></> <command>pybliographer</> <filename>mioscript.py</>
   </screen>
 
-<para>Alternativamente puoi usare i tuoi script con                                                                               
+<para>In alternativa, &egrave possibile usare gli script con                                                                               
 <programlisting>                                                                                                                  
 #!/percorso/a/pybliographer                                                                                                       
                                                                                                                                   
-...il resto del tuo script...                                                                                                     
+...il resto dello script...                                                                                                     
 </programlisting>                                                                                                                 
-e rendilo eseguibile.                                                                                                             
+e renderlo eseguibile.                                                                                                             
 </para>                                                                                                                           
                                                                                                                                   
 <sect1>                                                                                                                           
@@ -39,8 +39,8 @@ e rendilo eseguibile.
 
       <para>&Egrave possibile utilizzare il suo output direttamente nel buffer di
     compilazione di Emacs, al fine di saltare direttamente agli errori incontrati.
-    Per fare ci&ograve, digita <keysym>M-x compile</keysym>, poi il comando                                                             
-    <command>pybcheck <filename>tuofile</filename></command> e usa il bottone 
+    Per fare ci&ograve, digitare <keysym>M-x compile</keysym>, poi il comando                                                             
+    <command>pybcheck <filename>tuofile</filename></command> e usare il tasto 
     centrale del mouse per saltare nel file difettoso.</para>
     </sect2>
 
@@ -71,7 +71,7 @@ e rendilo eseguibile.
       </abstract>
 
       <para>La sintassi generale &egrave abbastanza semplice. Per convertire da Refer                                                     
-    a BibTeX per esempio, digita appena: </para>
+    a BibTeX per esempio, basta digitare: </para>
 
       <screen>
 	<prompt>&gt; </><command>pybconvert</> refer..bibtex <filename>toto.refer</> <filename>toto.bib</>
@@ -92,7 +92,7 @@ e rendilo eseguibile.
 	<prompt>&gt; </><command>pybformat</> [opzioni] <filename>database...</>
       </screen>
 
-    <para>Questo comando user&agrave un formato chiamato                                                                                
+    <para>Questo comando usa un formato chiamato                                                                                
     <emphasis>alpha</emphasis>    per creare una bibliografia  in                                                                 
     <emphasis>LaTeX</emphasis>.  Numerose opzioni sono disponibili per                                                            
     creare questi documenti:</para>
@@ -101,7 +101,7 @@ e rendilo eseguibile.
 	<listitem>
 	  <para><option>--style=... o -s ...</option>: specifica uno
 	    stile bibliografico. Pu&ograve essere un percorso completo verso un
-	    file XML esistente o il nome sar&agrave cercato nei posti standard.
+	    file XML esistente o il nome viene cercato nei posti standard.
 	    Alpha &egrave il predefinito.</para>
 	</listitem>
 	<listitem>
@@ -113,12 +113,12 @@ e rendilo eseguibile.
           file di output. STDOUT  &egrave il predefinito.</para>                                                                            
         </listitem>                                                                                                                 
         <listitem>                                                                                                                  
-         <para><option>--header=... o -H ...</option>: definisce un file che sar&agrave
-          anteposto al file di output.</para>                                                                                       
+         <para><option>--header=... o -H ...</option>: definisce un file da
+          anteporre al file di output.</para>                                                                                       
         </listitem>                                                                                                                 
         <listitem>                                                                                                                  
-         <para><option>--footer=... o -F ...</option>: definisce un file che sar&agrave
-         accodato al file di output.</para>                                                                                        
+         <para><option>--footer=... o -F ...</option>: definisce un file da
+         accodare al file di output.</para>                                                                                        
         </listitem>                                                                                                                 
         <listitem>                                                                                                                  
 	<para><option>--list=output o -l output</option>: elenca i formati di                                                     
@@ -132,10 +132,10 @@ e rendilo eseguibile.
   <sect1>
   <title>Scrivere i propri script</title>                                                                                         
                                                                                                                                     
-    <para>Per iniziare a scrivere i tuoi script puoi leggere quello che segue
+    <para>Prima di iniziare a scrivere i propri script, leggere quello che segue
     e dare un'occhiata agli script esistenti. Provare ad adattarli alle
-    tue esigenze personali pu&ograve essere un buon modo per verificare quello
-    che hai letto.</para>
+    proprie esigenze personali pu&ograve essere un buon modo per verificare quello
+    che si ha letto.</para>
 
     <sect2>
       <title>Alcuni concetti</title>
@@ -144,9 +144,9 @@ e rendilo eseguibile.
       utili per capire come funziona &pyb; . Maggiori informazioni possono
 	essere trovate in <xref linkend="reference">.</para> 
 
-    <para>Nel paragrafo seguente,  tutti i moduli a cui ci si riferir&agrave apparterranno                                                          
-    al dominio <symbol>Pyblio</symbol>. Perci&ograve,  per accedere ai membri                                                             
-    del modulo <symbol>Open</symbol>, dovrai scrivere all'inizio del tuo                                                            
+    <para>Nel paragrafo seguente,  tutti i moduli a cui ci si riferisce appartengono
+    al dominio <symbol>Pyblio</symbol>. Perci&ograve,  per accedere ai membri 
+    del modulo <symbol>Open</symbol>, scrivere all'inizio del proprio
     script qualcosa come</para>                                                                                                     
                                                                                                                                         
         <programlisting>from Pyblio import Open</programlisting>                                                                        
@@ -174,7 +174,7 @@ e rendilo eseguibile.
 
       <para>Un <symbol>Iteratore</symbol> &egrave un oggetto che fornisce
 	un modo per accedere a una sequenza di oggetti in ordine.  Questi iteratori
-	sono usati in  &pyb; in modo esteso perch&egrave nascondono il meccanismo
+	sono usati in  &pyb; in modo esteso perch&eacute nascondono il meccanismo
 	di accesso sottostante e forniscono lo stesso accesso ad ogni
 	database. Sono anche perfettamente adatti per implementare un
 	filtraggio trasparente e per l'ordinamento delle voci: la classe

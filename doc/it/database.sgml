@@ -34,7 +34,7 @@ class <classname>Base.DataBase</classname>:
   <refsect1>
     <title>Utilizzo</title>  
 
-    <para>Questo classe fornisce l'accesso a un database bibliografico completo.
+    <para>Questa classe fornisce l'accesso a un database bibliografico completo.
     Fondamentalmente si comporta come un dizionario: data la <link
     linkend="class-key">chiave</link>  di una       <link
     linkend="class-entry">voce</link>, questo oggetto restituisce la
@@ -68,7 +68,7 @@ class <classname>Base.DataBase</classname>:
     <refsect2 id="meth-database-init">
       <title>__init__ (self, url)</title>
 
-      <para>Il database &egrave construito dall'oggetto <link
+      <para>Il database &egrave formato dall'oggetto <link
       linkend="class-url">URL</link>. Di solito, l'invocazione del
       costruttore non &egrave fatta direttamente dall'utente ma piuttosto
       attraverso una funzione di pi&ugrave alto livello come bibopen.</para>

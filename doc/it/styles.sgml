@@ -2,7 +2,7 @@
   <title>Creare nuovi stili</title>
   
   <para>&Egrave possibile descrivere il proprio stile bibliografico scrivendo
-  un semplice file XML. Il file XML dovrebbe avere l'header seguente:</para>
+  un semplice file XML. Il file XML dovrebbe avere l'intestazione seguente:</para>
 
     <programlisting>
 &lt;?xml version="1.0"?&gt;

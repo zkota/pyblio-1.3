@@ -2,8 +2,8 @@
   <title>Personalizzazione</title>
   
   <para>La configurazione del sistema &egrave pesantemente basata su un sistema di moduli di
-    pyton. I file di configurazione sono standard script di  &pyb; (cio&egrave 
-    funzioni e classi extra scritti in python che fanno uso di &pyb; ),
+    python. I file di configurazione sono standard script di  &pyb; (cio&egrave 
+    funzioni e classi extra scritti in python che fanno uso di &pyb;),
     la cui caratteristica speciale &egrave di essere automaticamente analizzati
     all'avvio o quando ce n'&egrave bisogno.</para>
   
@@ -36,9 +36,9 @@
       il programma importa solo quello di cui ha bisogno, diminuendo il tempo
       di avvio.</para>
     
-    <para>In fine, se l'utente fornisce un file chiamato
+    <para>Infine, se l'utente fornisce un file chiamato
     <filename>.pybrc.py</filename> nella sua home directory, allora questo
-      file &egrave analizzato. Naturalmente si pu&ograve anche definire una
+      file viene analizzato. Naturalmente si pu&ograve anche definire una
       directory di configurazione privata e sovrascrivere quello che &egrave
       stato definito prima.</para>
   </sect1>

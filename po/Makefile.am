@@ -18,24 +18,26 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
 
-LANGUAGES = 					\
-	az 					\
-	cs 					\
-	da 					\
-	de 					\
-	fi 					\
-	fr 					\
-	hu 					\
-	it 					\
-	ja 					\
-	no 					\
-	pt_BR 					\
-	ru 					\
-	sk 					\
-	sr@Latn 				\
-	sr 					\
-	sv 					\
-	tr 					\
+LANGUAGES = 		\
+	az 		\
+	cs 		\
+	da 		\
+	de 		\
+	fi 		\
+	fr 		\
+	hu 		\
+	it 		\
+	ja 		\
+	nl		\
+	no 		\
+	pt_BR 		\
+	pt		\
+	ru 		\
+	sk 		\
+	sr@Latn 	\
+	sr 		\
+	sv 		\
+	tr 		\
 	uk
 
 EXTRA_DIST = $(LANGUAGES:%=%.po)
@@ -57,6 +59,14 @@ install-data-hook:
 	done
 
 check:
+	@rm -f ,,intl-1.tmp
+	@for l in $(LANGUAGES) ; do \
+	  echo $${l}.po >> ,,intl-1.tmp ; \
+	done
+	@cat ,,intl-1.tmp | sort > ,,intl-1 && rm -f ,,intl-1.tmp
+	@find $(srcdir) -name '*.po' -exec basename {} \; | sort > ,,intl-2
+	diff ,,intl-1 ,,intl-2
+	@rm -f ,,intl-1 ,,intl-2
 	for f in $(LANGUAGES) ; do \
 	  echo "$$f: "`msgfmt --statistics $$f.po 2>&1` ; \
 	done
