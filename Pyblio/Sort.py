@@ -91,7 +91,7 @@ class TypeSort:
 
 
     def __repr__ (self):
-        return 'TypeSort ()'
+        return 'TypeSort (%d)' % self.ascend
 
 
     def __cmp__ (self, other):
@@ -111,7 +111,7 @@ class KeySort:
 
 
     def __repr__ (self):
-        return 'KeySort ()'
+        return 'KeySort (%d)' % self.ascend
 
 
     def __cmp__ (self, other):
@@ -134,7 +134,7 @@ class FieldSort:
         
 
     def __repr__ (self):
-        return 'FieldSort (%s)' % `self.field`
+        return 'FieldSort (%s, %d)' % (`self.field`, self.ascend)
 
 
     def __cmp__ (self, other):

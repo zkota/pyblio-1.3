@@ -654,10 +654,23 @@ class Document (Connector.Publisher):
     def sort_by_field (self, field):
         if field == '-key-':
             mode = Sort.KeySort ()
+
         elif field == '-type-':
             mode = Sort.TypeSort ()
+
         else:
             mode = Sort.FieldSort (field)
+
+        # Check if we are toggling or changing
+        cur = self.selection.sort
+        
+        if cur and len (cur.fields) == 1:
+            cur = cur.fields [0]
+
+            # We are still filtering according to the same field,
+            # simply toggle the direction
+            if cur == mode:
+                mode.ascend = - cur.ascend
             
         self.selection.sort = Sort.Sort ([mode])
         self.redisplay_index ()
