@@ -29,6 +29,8 @@ import gnome
 import gtk
 import gtk.glade
 
+from gtk import gdk
+
 from Pyblio.GnomeUI import Index, Entry, Utils, FileSelector, Editor
 from Pyblio.GnomeUI import Search, Format
 from Pyblio.GnomeUI.Sort import SortDialog
@@ -60,6 +62,8 @@ class Document (Connector.Publisher):
 
         self.w = self.xml.get_widget ('main')
         self.paned = self.xml.get_widget ('main_pane')
+
+        self.w.add_events (gdk.KEY_PRESS_MASK)
         
         self.w_save_btn = self.xml.get_widget ('_w_save_btn')
         self.w_save_mnu = self.xml.get_widget ('_w_save_mnu')
@@ -744,13 +748,14 @@ class Document (Connector.Publisher):
 
 
     def key_pressed (self, app, event):
+
         # filter out special keys
         if (event.string < 'a' or event.string > 'z') and \
-           (event.string < '0' or event.string > '9'): return 1
+           (event.string < '0' or event.string > '9'): return False
 
         if self.selection.sort is None:
             app.flash ("Select a column to search in first.")
-            return 1
+            return False
         
         if event.string in printable:
             # the user searches the first entry in its ordering that starts with this letter
@@ -773,7 +778,7 @@ class Document (Connector.Publisher):
             else:
                 app.flash ("Cannot find '%s...'" % self.incremental_search)
                 
-        return 1
+        return False
 
 
     def update_configuration (self):

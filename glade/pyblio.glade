@@ -19,6 +19,7 @@
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="enable_layout_config">True</property>
   <signal name="delete_event" handler="close_or_exit" last_modification_time="Thu, 19 Feb 2004 20:39:16 GMT"/>
+  <signal name="key_press_event" handler="key_pressed" last_modification_time="Wed, 01 Dec 2004 19:53:14 GMT"/>
 
   <child internal-child="dock">
     <widget class="BonoboDock" id="bonobodock1">
