@@ -60,7 +60,7 @@ fields = [ 'CrossRef', 'Key', 'Author', 'Address_1', 'Address_2',
            'Date', 'NoSeries', 'ConfPlace', 'Cote', 'IEEECN', 'Annotate',
            'Quote', 'LoCN', 'ISBN', 'ISSN', 'Note', 'Language', 'HowPublished',
            'To_Appear', 'From', 'Received', 'Owner', 'Keywords', 'Abstract',
-           'Remarks', 'URL' ]
+           'Remarks', 'URL', 'Beigabevermerk' ]
 
 entries = {
     'Article' : (('author', 'title', 'journal', 'date'),
@@ -81,7 +81,7 @@ entries = {
     
     'InCollection' : (('author', 'title', 'booktitle', 'publisher', 'date', ),
                       ('editor', 'volume', 'number', 'series', 'type',
-                      'chapter', 'pages', 'address', 'edition',)),
+                      'chapter', 'pages', 'address', 'edition', 'note',)),
     
     'InProceedings' : (('author', 'title', 'booktitle', 'date',),
                        ('editor', 'volume', 'number', 'series',
@@ -136,6 +136,7 @@ desc ['annotate'].type     = Fields.LongText
 desc ['note'].type         = Fields.LongText
 desc ['quote'].type        = Fields.LongText
 desc ['remarks'].type      = Fields.LongText
+#desc ['beigabevermerk'].type      = Fields.LongText
 
 
 Config.set ('base/fields', desc)

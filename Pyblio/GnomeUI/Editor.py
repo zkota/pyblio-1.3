@@ -27,6 +27,8 @@ import re, string
 from gnome import ui
 import gtk
 
+from gettext import gettext as _
+
 import copy, re
 
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
@@ -640,6 +642,7 @@ class RealEditor (Connector.Publisher):
                     self.w.get_toplevel(), gtk.DIALOG_DESTROY_WITH_PARENT,
                     gtk.MESSAGE_WARNING, gtk.BUTTONS_OK_CANCEL,
                     "Text will be lost if you click OK.")
+                dialog.set_transient_for (self.dialogue.w)
                 rc = dialog.run()
                 dialog.destroy()
                 

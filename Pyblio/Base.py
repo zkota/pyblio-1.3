@@ -76,6 +76,12 @@ class Entry:
 
 	return self.field_and_loss (key) [0]
 
+    def get (self, key, default=None):
+        if self.has_key (key):
+            return self [key]
+        else :
+            return default
+
 
     def __setitem__ (self, name, value):
 	self.dict [name] = value
@@ -116,7 +122,11 @@ class Entry:
 	tp = self.type.name
 	fields = self.type.fields
 
-	text = '%s [%s]\n' % (tp, self.key.key)
+        try:
+            text = '%s [%s]\n' % (tp, self.key.key)
+        except AttributeError:
+            text  = '%s [no key]\n' %(tp)
+            
 	text = text + ('-' * 70) + '\n'
 
 	dico = self.keys ()

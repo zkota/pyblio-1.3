@@ -23,6 +23,7 @@
 
 ''' This module defines a Document class '''
 
+from gettext import gettext as _
 from gnome import ui
 
 import gnome
@@ -785,7 +786,7 @@ class Document (Connector.Publisher):
         Utils.config.set_int ('/apps/pybliographic/ui/width',  alloc [2])
         Utils.config.set_int ('/apps/pybliographic/ui/height', alloc [3])
 
-        # 2.- Proportion betzeen list and text
+        # 2.- Proportion between list and text
         height = self.paned.get_position ()
         Utils.config.set_int ('/apps/pybliographic/ui/paned', height)
 

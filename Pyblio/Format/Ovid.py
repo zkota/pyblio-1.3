@@ -73,8 +73,8 @@ def iterator (url, check):
     return  OvidLike.OvidLike (
         file,
         Config.get ('ovid/mapping').data,
-        Config.get ('ovid/deftype').data,
-        Config.get ('ovid/sourceregexp').data)
+        Config.get ('ovid/deftype').data
+        )
 
 
 def writer (iter, output):

@@ -47,7 +47,8 @@ PYTHON = \
 	__init__.py 	\
 	Query.py	\
 	pybtextvar.py	\
-	recode.py
+	recode.py       \
+	userformat.py
 
 SUBDIRS = GnomeUI Output Format ConfDir Style
 

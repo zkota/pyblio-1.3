@@ -154,7 +154,7 @@ class Author:
 
         total = []
 
-        if self.first is None: return None
+        if self.first is None: return ''
         
         for atom in string.split (self.first, ' '):
             list = []

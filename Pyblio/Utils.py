@@ -18,12 +18,35 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
 # 
-
+import re
 from string import *
 
 from Pyblio import Key, Autoload, recode
 
 _flat = recode.recode ('latin1..flat')
+
+def compress_page_range (pages, separator='-'):
+    """Returns a page range with common prefix
+    elided from the second number. Resulte is string
+    firstpage(separator)(lastpage), except if separator
+    is None, then a sequence is returned."""
+
+    p = re.sub (' *--? *', '-', pages)
+    s = p.split('-')
+    if len(s) > 1:
+        l, r = s
+        if len(l) == len(r):
+            i = 0
+            while r [i] == l[i]:
+                i += 1
+            r = r[i:]
+    else:
+        l, r = s[0], ''
+    if separator:
+        return "%s%s%s" %(l, separator, r)
+    else:
+        return l, r
+
 
 def format (string, width, first, next):
     ''' Format a string on a given width '''

@@ -139,6 +139,6 @@ class Pybliographic:
             doc.w.destroy ()
             self.documents.remove (doc)
 
-        mainquit ()
+        main_quit ()
         return
     

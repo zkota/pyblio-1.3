@@ -11,23 +11,23 @@ Config.define ('ovid/deftype', """ Default type for an Ovid entry """,
 Config.set ('ovid/deftype',
             Config.get ('base/entries').data ['article'])
 
-Config.define ('ovid/sourceregexp',
-               """A regexp used to parse the source and abbreviated
-               source input fields. This is a raw and verbose Python
-               regular expression""",
-               Config.String())
+## Config.define ('ovid/sourceregexp',
+##                """A regexp used to parse the source and abbreviated
+##                source input fields. This is a raw and verbose Python
+##                regular expression""",
+##                Config.String())
 
-Config.set ('ovid/sourceregexp',
-    r"""
-    (?P<journal>.*)\.\ +
-    (?P<volume>\d+)
-    (?:\((?P<number>.*)\))?
-    (?::(?P<pages>.*?(?:-+.*?)?)
-    (?:;\ *(?P<other>.*))?)
-    (?:,\ *(?P<year>\d\d\d\d))\ *
-    (?P<month>.*)
-    \.\Z
-    """)
+## Config.set ('ovid/sourceregexp',
+##     r"""
+##     (?P<journal>.*)\.\ +
+##     (?P<volume>\d+)
+##     (?:\((?P<number>.*)\))?
+##     (?::(?P<pages>.*?(?:-+.*?)?)
+##     (?:;\ *(?P<other>.*))?)
+##     (?:,\ *(?P<year>\d\d\d\d))\ *
+##     (?P<month>.*)
+##     \.\Z
+##     """)
 
 Config.define ('ovid/mapping', 
                """ A mapping between the Ovid field name and
@@ -40,52 +40,53 @@ name>, <entry type>)""", Config.Dict (Config.String(),
 
 
 Config.set ('ovid/mapping', {
-    'abbreviated source'
+    'Abbreviated Source'
                     : ('abbrevsrc',   SimpleField),
-    'abstract'      : ('abstract',    SimpleField),
-    'accession number'
+    'Abstract'      : ('abstract',    SimpleField),
+    'Accession Number'
                     : ('accession',   SimpleField),
-    'author'        : ('author',      AuthorField),
-    'author keywords'
-                    : ('keywords',    KeywordField),
-    'authors'       : ('author',      AuthorField),
-    'cas registry/ec number' 
+    'Author'        : ('author',      AuthorField),
+    'Author Keywords'
+                    : ('author-keywords',
+                       KeywordField),
+    'Authors'       : ('author',      AuthorField),
+    'CAS Registry/EC Number' 
                     : ('casec',       SimpleField),
-    'cc categories' : ('cccat',       SimpleField),
-    'classification codes'
+    'CC Categories' : ('cccat',       SimpleField),
+    'Classification Codes'
                     : ('classificationCodes',
                                       SimpleField),
-    'country of publication'
+    'Country of Publication'
                     : ('country',     SimpleField),
-    'document delivery'
+    'Document Delivery'
                     : ('docdeliv',    SimpleField),
-    'entry date'    : ('sourceid4',   SimpleField),
-    'institution'   : ('institution', SimpleField),
-    'issn'          : ('issn',        SimpleField),
-    'journal subset': ('nlmsubset',   SimpleField),
-    'key phrase identifiers'
-                    : ('keywords',    SimpleField),
-    'keywords+'     : ('keywords',    KeywordField),
-    'keywords plus' : ('keywords',    KeywordField),
-    'language'      : ('language',    SimpleField),
-    'mesh subject headings'
-                    : ('mesh',        SimpleField),
-    'nlm journal code'
+    'Entry Date'    : ('sourceid4',   SimpleField),
+    'Institution'   : ('institution', SimpleField),
+    'ISSN'          : ('issn',        SimpleField),
+    'Journal Subset': ('nlmsubset',   SimpleField),
+    'Key Phrase Identifiers'
+                    : ('keyphrase',   SimpleField),
+    'Keywords+'     : ('keywords',    KeywordField),
+    'KeyWords Plus' : ('keywordsplus',    KeywordField),
+    'Language'      : ('language',    SimpleField),
+    'Mesh Subject Headings'
+                    : ('mesh',        KeywordField),
+    'NLM Journal Code'
                     : ('nlmjournal',  SimpleField),
-    'publication notes'
+    'Publication Notes'
                     : ('note',        SimpleField),
-    'publication type'
-                    : ('type',        SimpleField),
-    'record owner'  : ('sourceid1',   SimpleField),
-    'revision date' : ('sourceid3',   SimpleField),
-    'source'        : ('journal',     SourceField),
-    'subject headings'
+    'Publication Type'
+                    : ('profile',     SimpleField),
+    'Record Owner'  : ('sourceid1',   SimpleField),
+    'Revision Date' : ('sourceid3',   SimpleField),
+    'Source'        : ('journal',     SourceField),
+    'Subject Headings'
                     : ('subjectHdgs', SimpleField),
-    'subset'        : ('subset',      SimpleField), 
-    'title'         : ('title',       SimpleField),
-    'treatment'     : ('treatment',   SimpleField),
-    'unique identifier'
+    'Subset'        : ('subset',      SimpleField), 
+    'Title'         : ('title',       SimpleField),
+    'Treatment'     : ('treatment',   SimpleField),
+    'Unique Identifier'
                     : ('sourceid0',   SimpleField),
-    'update date'   : ('sourceid2',   SimpleField), 
+    'Update Date'   : ('sourceid2',   SimpleField), 
     })
 

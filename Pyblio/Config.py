@@ -71,14 +71,16 @@ class Storage:
 
 
     def eventually_resolve (self, key):
+
         if self.items.has_key (key): return
         domain = string.split (key, '/') [0]
-        
+
         if self.sources.has_key (domain):
             file = self.sources [domain]
             del self.sources [domain]
 
             execfile (file, globals (), globals ())
+
         return
 
 
@@ -115,6 +117,7 @@ class Storage:
 
 
     def __getitem__ (self, key):
+
         self.eventually_resolve (key)
         return self.items [key]
         
@@ -148,7 +151,9 @@ def set (key, value):
     try:
         ConfigItems [key].set (value)
     except KeyError:
-        sys.stderr.write ("pybliographer: warning: configuration key `%s' is undefined\n" % key)
+        sys.stderr.write (
+            "pybliographer: warning: configuration key `%s' is undefined\n"
+            % key)
     return
 
 _changes = {}

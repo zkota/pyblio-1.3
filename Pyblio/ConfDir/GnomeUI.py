@@ -64,7 +64,9 @@ for f, w in (('author', 150),
              ('editor', 150),
              ('title',  200),
              ('booktitle', 200),
-             ('date', 50)):
+             ('date', 50),
+             ('-author/editor-', 150),
+             ('-author/title-', 250)):
     
     if not h.has_key (f): continue
 

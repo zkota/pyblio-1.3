@@ -23,7 +23,7 @@
 # are not passed to Gnome
 
 import sys, string
-
+from gettext import gettext as _
 files    = sys.argv [2:]
 sys.argv = sys.argv [:2] + ['--'] + files
 

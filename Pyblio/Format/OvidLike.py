@@ -33,7 +33,6 @@ SourceField  = 2
 KeywordField = 3
 
 separator_re = re.compile (r'<\d+>$')
-#source_re    = re.compile (r'(\w+)?\(([^\)]+)\):(\d+-\d+)')
 
 compact_dot  = re.compile (r'\.(\s*\.)+')
 
@@ -51,13 +50,32 @@ for key in long_month.keys ():
     month_name [long_month [key] - 1] = key
 
 
-class OvidLike (Iterator.Iterator):
 
-    def __init__ (self, file, mapping, deftype, sourceregexp):
+def make_anti_mapping (mapping):
+    m = {}
+    for i, j in mapping.items():
+        m[j[0]] = (i, j[1])
+    return m
+
+class OvidLike (Iterator.Iterator):
+    source_rx  = r"""(?P<journal>.*?)\.\ +
+        (?P<volume>\w+)?
+        (?P<inseries>(\ PG\.\ +))?
+        (?:\((?P<number>.*)\))?
+        (?::?(?P<pages>.*?(?:-+.*?)?)
+        (?:;\ *(?P<other>.*))?)
+        (?:[,\.]\ *(?P<year>\d\d\d\d))\ *
+        (?P<month>.*)
+        \.\s*\Z"""
+
+    source_re = re.compile  (source_rx, flags=re.VERBOSE)
+
+    def __init__ (self, file, mapping, deftype):
         self.file    = file
         self.deftype = deftype
-        self.mapping = mapping
-        self.source_re = re.compile(sourceregexp, flags= re.VERBOSE)
+        self.mapping = {}
+        for i, j in mapping.iteritems():
+            self.mapping[i.lower()] = j
         return
 
     def first (self):
@@ -82,20 +100,17 @@ class OvidLike (Iterator.Iterator):
         dict = {}
         
         # read entry till next blank line
-        text  = ''
+        text  = []
         field = ''
         while 1:
             line = self.file.readline ()
             if line == '': break
-
             line = string.rstrip (line)
 
-            if line == '': continue
-            
             # starting with a blank ?
-            if line [0] == ' ':
+            if line == '' or   line [0] == ' ':
                 # ...then we continue the current text
-                text = text + ' ' + string.lstrip (line)
+                text.append (string.lstrip (line))
                 continue
 
             # new entry ?
@@ -104,25 +119,25 @@ class OvidLike (Iterator.Iterator):
             # else, this is a new field
             if field:
                 # save the previous one if needed
-                dict [field] = text
-                text = ''
+                dict [field] = '\n'.join(text)
+                text = []
 
             # store the name of this new field
             field = string.lower (line)
 
         # don't waste the last field content
         if field:
-            dict [field] = text
+            dict [field] = '\n'.join(text)
 
         # did we parse a field ?
         if len (dict) == 0: return None
-        
+
         # create the entry content
         entry = Base.Entry (type = self.deftype)
 
         for key in dict.keys ():
             if not self.mapping.has_key (key):
-                print "warning: unused key `%s'" % key
+                #print "warning: unused key `%s'" % key
                 continue
 
             (name, type) = self.mapping [key]
@@ -131,18 +146,16 @@ class OvidLike (Iterator.Iterator):
             # parse a simple text field
             if type == SimpleField:
                 entry [name] = text_type (string.strip (dict [key]))
-                continue
 
-            if type == KeywordField:
+            elif type == KeywordField:
                 text = string.strip (dict [key])
                 if entry.has_key (name):
-                    text = str (entry [name]) + '  ' + text
+                    text = str (entry [name]) + '\n  ' + text
                     
                 entry [name] = text_type (text)
-                continue
 
             # parse an author field
-            if type == AuthorField:
+            elif type == AuthorField:
                 ag = Fields.AuthorGroup ()
 
                 for names in string.split (dict [key], '  '):
@@ -169,19 +182,32 @@ class OvidLike (Iterator.Iterator):
                 continue
 
             # parse a source field
-            if type == SourceField:
-
-                m = self.source_re.match (dict[key])
-
+            elif type == SourceField:
+                m = self.source_re.match (dict[key].strip())
                 if m:
                     year, month, day = None, None, None
+                    j, v, s, n, p, o, y, d = m.group(
+                        'journal', 'volume', 'inseries', 'number',
+                        'pages', 'other', 'year', 'month')
 
-                    j, v, n, p, o, y, m = m.group(
-                        'journal', 'volume', 'number', 'pages',
-                        'other', 'year', 'month')
+                    if s:                ### article in a monograph series
+                        entry['booktitle'] = Fields.Text (j)
+                        if d:
+                            entry['beigabevermerk'] = Fields.LongText (d)
+                        entry.type = Types.get_entry('incollection')
 
-                    if j:
-                        entry [name] = Fields.Text (j)
+                    elif j:
+                        entry ['journal'] = Fields.Text (j)
+                        if d and not d.isspace():
+                            dates = d.split ()                    
+                            try:
+                                month = long_month [dates[0]]
+                            except KeyError:
+                                print 'OVID Warning:',
+                                print '%s is not representable in %s' %(
+                                dates[0], m)
+                            if len(dates) > 1:
+                                day = int (dates[1])
 
                     if v:
                         entry ['volume'] = Fields.Text (v)
@@ -198,21 +224,12 @@ class OvidLike (Iterator.Iterator):
                     if y:
                         year = int(y)
 
-                    if m and not m.isspace():
-                        dates = m.split ()                    
-                        try:
-                            month = long_month [dates[0]]
-                        except KeyError:
-                            print 'OVID Warning: %s is not representable in %s' %(
-                                dates[0], m)
-                        if len(dates) > 1:
-                            day = int (dates[1])
-                            
                     entry ['date'] = Fields.Date((year, month, day))
-                
+                else:
+                    print '>>> Error: Source field  does not parse correctly:'
+                    print dict[key]
+                    print entry
                 continue
-
-            raise TypeError, "unknown field type `%d'" % type
         
         return entry
 
@@ -221,78 +238,139 @@ def writer (iter, output, mapping):
 
     counter = 1
     entry   = iter.first ()
-
+    m = make_anti_mapping (mapping)
     while entry:
-        output.write ('<%d>\n' % counter)
+        write_entry (output, entry, counter, m)
         counter = counter + 1
-
-        for key in mapping.keys ():
-            (name, type) = mapping [key]
-            key = string.capwords (key)
-
-            if type == SimpleField:
-                if not entry.has_key (name): continue
-                output.write (key + '\n')
-
-                output.write (Utils.format (str (entry [name]),
-                                            75, 2, 2) + '\n')
-                continue
-
-            if type == AuthorField:
-                if not entry.has_key (name): continue
-                output.write (key + '\n')
-
-                auths = map (lambda auth: '%s %s' % (auth.last or '', auth.first or ''),
-                             entry [name])
-
-                output.write ('  ' + string.join (auths, '  ') + '\n')
-                continue
-
-            if type == SourceField:
-                # do we have one of those fields ?
-                if not (entry.has_key (name [0]) or
-                        entry.has_key (name [1]) or
-                        entry.has_key (name [2]) or
-                        entry.has_key (name [3]) or
-                        entry.has_key (name [4])): continue
-                output.write (key + '\n')
-
-                text = ''
-                if entry.has_key (name [0]):
-                    # put the title
-                    text = text + str (entry [name [0]]) + '. '
-
-                has_source = 0
-                vals = ['', '', '']
-                for i in range (0, 3):
-                    if entry.has_key (name [i + 1]):
-                        has_source = 1
-                        vals [i] = str (entry [name [i + 1]])
-
-                if has_source:
-                    text = text + '%s(%s):%s' % tuple (vals)
-
-                if entry.has_key (name [4]):
-                    if has_source:
-                        text = text + ', '
-
-                    date = entry [name [4]]
-                    text = text + str (date.year)
-                    if date.month:
-                        text = text + ' ' + month_name [date.month - 1]
-                    if date.day:
-                        text = text + ' ' + str (date.day)
-
-                # final dot.
-                if text: text = text + '.'
-
-                # correct the number of dots...
-                text = compact_dot.sub ('.', text)
-                
-                output.write (Utils.format (text,
-                                            75, 2, 2) + '\n')
-                
         entry = iter.next ()
         if entry: output.write ('\n')
 
-    return
+def write_entry (output, entry, counter, mapping):
+    output.write ('<%d>\n' % counter)
+
+    keys = entry.keys()
+
+    write_source_field (output, entry, keys)
+     
+    for key in keys:
+        (name, typ) = mapping.get(key, (None, None))
+        if name == None or typ == SourceField: continue
+
+        output.write (name)
+        output.write('\n')
+        
+        if typ == SimpleField:
+            write_simple_field (output, entry[key])
+
+        elif typ == AuthorField:
+            write_author_field (output, entry[key])
+
+        elif typ == SourceField: print 'sourcefield: %s' %(entry[key])
+#             write_source_field (output, entry, keys)
+
+        elif typ == KeywordField:
+            if key == 'mesh':
+                offset = 4
+            else:
+                offset = 2
+            write_simple_field (output, entry[key], offset)
+
+    
+def write_simple_field (output, value, offset=2):
+    off = offset * ' '
+    lines = str(value).split('\n')
+    for l in lines:
+        output.write(off)
+        output.write (l)
+        output.write ('\n')
+
+
+def write_keyword_field (output, value):
+    lines = str(value).split('\n')
+    for line in lines:
+        output.write('    ')
+        output.write(line)
+        output.write('\n')
+
+
+def write_author_field (output, value):
+    auths = [ '%s %s' % (auth.last or '', auth.first or '')
+              for auth in value]
+    output.write ('  ')
+    output.write ('  '.join (auths))
+    output.write ('\n')
+
+
+def write_source_field (output, entry, keys):
+    t = []
+
+    output.write('Source\n')
+    
+    if entry.type == Types.get_entry(
+        'incollection') or entry.has_key ('booktitle'):
+        t = [str(entry.get ('booktitle')).strip()]
+        
+        if entry.has_key ('volume'):
+            t.append (".  %s " % (entry ['volume']))
+        if entry.has_key ('number'):
+            t.append ("(%s)" %  (entry ['number']))
+
+        if entry.has_key ('pages'):
+            p = str (entry ['pages'])
+            #p = Utils.compress_page_range (p)
+            t.append ("PG. %s." %(p))
+
+        if entry.has_key('date'):
+            date  = entry['date']
+            t.append (" %s" % (date.year))
+        if entry.has_key ('beigabeevermerk'):
+            t.append (str(entry.get('beigabevermerk')))
+    else: 
+
+        t.append ("%s. " %(entry ['journal']))
+
+        if entry.has_key ('volume'):
+            t.append ("%s" % (entry ['volume']))
+
+        if entry.has_key ('number'):
+            t.append ("(%s)" %  (entry ['number']))
+
+        if entry.has_key ('pages'):
+            p = str (entry ['pages'])
+            #p = Utils.compress_page_range (p)
+            t.append (":%s" %(p))
+
+        if entry.has_key ('other-note'):
+            t.append ("; %s" %(entry ['other-note']))
+
+        if entry.has_key('date'):
+            date  = entry['date']
+
+            t.append (", %s" % (date.year))
+
+            if date.month:
+                t.append (" %s" % (month_name [date.month - 1]))
+            if date.day:
+                t.append (" %s" %(date.day))
+        
+
+    # final dot.
+    t.append (".")
+    text = ''.join (t)
+
+    # correct the number of dots...
+    #text = compact_dot.sub ('.', text)
+    output.write('  ')
+    output.write (text)
+    output.write ('\n')
+
+
+
+
+
+
+### Local Variables:
+### Mode: python
+### py-master-file : "ut_Ovidlike.py"
+### End:
+

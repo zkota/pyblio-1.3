@@ -293,7 +293,7 @@ def writer (iter, output_stream, preamble=None, postamble = None):
             authors = []
             for author in entry['author']:
                 initials = author.initials()
-                initials = re.sub('\. *','',initials)
+                initials = re.sub('\. *','', initials)
                 authors.append( '%s, %s' % (author.last, initials))
             del remaining ['author']    
             output_write('AU', authors)    

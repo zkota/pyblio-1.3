@@ -30,7 +30,7 @@
 
 ''' Main index containing the columned view of the entries '''
 
-from Pyblio import Fields, Config, Connector, Types, Sort
+from Pyblio import Fields, Config, Connector, Types, Sort, userformat
 
 from gnome import ui
 import gtk, gobject
@@ -334,6 +334,12 @@ class Index (Connector.Publisher):
                     
                 elif f == '-type-':
                     row.append (str (entry.type.name))
+                    
+                elif f == '-author/editor-':
+                    row.append (userformat.author_editor_format (entry))
+
+                elif f == '-author/title-':
+                    row.append (userformat.author_title_format (entry))
                     
                 elif entry.has_key (f):
                     
