@@ -53,29 +53,14 @@ install-data-hook:
 	  $(DESTDIR)$(localedir)/$${f}/LC_MESSAGES/$(PACKAGE).mo ; \
 	done
 
-EXTRA_PY = 						\
-	$(top_srcdir)/pybliographer.py			\
-	$(top_srcdir)/scripts/pybcheck.py 		\
-	$(top_srcdir)/scripts/pybcompact.py 		\
-	$(top_srcdir)/scripts/pybconvert.py 		\
-	$(top_srcdir)/scripts/pybformat.py 		\
-	$(top_srcdir)/scripts/pybliographic.py 		\
-	$(top_srcdir)/scripts/pybtex.py
 
-
-update:
-	find $(top_srcdir)/Pyblio -name '*.py' -print | \
-		xargs pygettext -d py $(EXTRA_PY)
-	$(MAKE) -C ../glade messages.pot
-	msgcat py.pot ../glade/messages.pot -o $(PACKAGE).pot
-	for f in $(LANGUAGES) ; do \
-	  mv $$f.po $$f.old.po ; \
-	  if msgmerge $$f.old.po $(PACKAGE).pot -o $$f.po ; then \
-	    rm -f $$f.old.po ; else \
-	    echo "msgmerge for $$f failed" ; \
-	    rm -f $$f.po ; mv $$f.old.po $$f.po ; \
-	  fi ; \
-	done
+update-potfiles:
+	echo $(top_srcdir)/pybliographer.in > ,,POTFILES
+	find $(top_srcdir)/Pyblio  -name '*.py'    >> ,,POTFILES
+	find $(top_srcdir)/scripts -name '*.py'    >> ,,POTFILES
+	find $(top_srcdir)/glade   -name '*.glade' >> ,,POTFILES
+	sed -e 's/^$(top_srcdir)\///' ,,POTFILES | sort > $(srcdir)/POTFILES.in
+	rm -f ,,POTFILES
 
 check:
 	for f in $(LANGUAGES) ; do \
