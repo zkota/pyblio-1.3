@@ -24,6 +24,7 @@ LANGUAGES = 		\
 	da 		\
 	de 		\
 	el		\
+	es		\
 	fi 		\
 	fr 		\
 	hu 		\
