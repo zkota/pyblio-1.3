@@ -783,7 +783,8 @@ class Document (Connector.Publisher):
                            'Peter Schulte-Stracke',
                            'John Vu'],
                           ['Yuri Bongiorno',
-                           'Frédéric Gobry'],
+                           'Frédéric Gobry',
+                           'Zoltán Kóta'],
                           _('Gnome Translation Team'))
 
         about.set_transient_for (self.w)

@@ -77,7 +77,7 @@ if os.path.exists (style + '.xml'):
 else:
 
     from Pyblio import version
-    full = os.path.join (version.prefix, 'Styles', style)
+    full = os.path.join (version.pybdir, 'Styles', style)
     full = full + '.xml'
     if os.path.exists (full): url = Fields.URL (full)
 
