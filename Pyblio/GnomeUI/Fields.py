@@ -48,7 +48,7 @@ class FieldsDialog:
 
     def __init__ (self, parent = None):
 
-        gp = os.path.join (version.prefix, 'glade', 'config1.glade')
+        gp = os.path.join (version.prefix, 'glade', 'fields1.glade')
         
         self.xml = gtk.glade.XML (gp, 'fields1')
         self.xml.signal_autoconnect (self)
@@ -92,6 +92,24 @@ class FieldsDialog:
     def on_help (self, *args):
         print 'ON HELP:', args
 
+    def check (self):
+        if len(self.fields) != len(self.fm):
+            print 'ERROR LEN OF FIELDS (%d) /= LEN OF FM (%)' %(
+                len(self.fields), len(self.fm))
+            import traceback
+            traceback.print_tb()
+            k = self.fields.keys()
+            l = []
+            for i in self.fm:
+                j = i[2]
+                l.append(j)
+                try: k.remove(j)
+                except KeyError:
+                    print 'fieldname %s (%s) not in Keys' %(
+                        j, i[0])
+            if k:
+                print 'keys %s unused' %(k)
+    
     #------------------------------------------------------------
     # Page 1
 
@@ -126,18 +144,20 @@ class FieldsDialog:
             Utils.popup_add (menu, _typename [item], self.select_menu, item)
         self.menu1.set_history (0)
         self.current_menu = self.menu_items [0]
+        self.check()
 
     def page1_add (self, *args):
         t = self.menu_items[0]
         description = Types.FieldDescription('')
         iter = self.fm.append((
-            'new field', _typename[t], '_nNEW FIELD_',
+            'new field', _typename[t], '_new field_',
             description))
         if iter:
             s_iter = self.sfm.convert_child_iter_to_iter(None, iter)
             s_path = self.sfm.get_path(s_iter)
             self.fields1.scroll_to_cell(s_path)
             self.s1.select_iter(s_iter)
+            self.check()
             # Config save?
             
     def page1_rm (self, *args):
@@ -149,6 +169,7 @@ class FieldsDialog:
             except KeyError: pass
             self.fm.remove(p)
             Config.set_and_save('base/fields', self.fields)
+            self.check()
 
     def list_1_select (self, sel):
         m, iter = sel.get_selected()
@@ -167,12 +188,15 @@ class FieldsDialog:
         m, iter = sel.get_selected()
         if iter:
             p = self.sfm.convert_iter_to_child_iter(None, iter)
+            oldname = self.fm[p][2]
             newname = self.name1.get_text()
-            try: del self.fields [self.fm[p][2]]
+            try: del self.fields [oldname]
             except KeyError: pass
-            self.fm[p] [3].name = newname
             self.fm[p] [0] = newname
+            self.fm[p] [2] = newname.lower()
+            self.fm[p] [3].name = newname
             self.fields [newname.lower()] = self.fm[p][3]
+            self.check()
             self.change_fields()
 
     def on_type1_changed (self, *args):
@@ -181,11 +205,12 @@ class FieldsDialog:
         m, iter = sel.get_selected()
         if iter:
             p = self.sfm.convert_iter_to_child_iter(None, iter)
-            print 'TYP!', args, x, sel, m, iter
+            #print 'TYP!', args, x, sel, m, iter
             self.fm[p] [1] = _typename[x]
             self.fm[p] [3].type = x
             self.change_fields()
-            
+            self.check()
+
 
     #------------------------------------------------------------
     # Page 2
@@ -209,6 +234,7 @@ class FieldsDialog:
         self.name2 = self.xml.get_widget('name2')
         self.s2 = self.entries2.get_selection()
         self.s2.connect('changed', self.elist_select)
+        self.check()
 
     def page2_add (self, *args):
         description = Types.EntryDescription('NEW')
@@ -219,16 +245,20 @@ class FieldsDialog:
             self.entries2.scroll_to_cell(s_path)
             self.s2.select_iter(s_iter)
             self.entries [self.em[iter][2]] = self.em[iter][1]
+            self.check()
 
     def page2_rm (self, *args):
+        self.check()
         m, iter = self.s2.get_selected()
         if iter:
             p = self.sem.convert_iter_to_child_iter(None, iter)
             del self.entries [self.em[p] [2]]
             self.em.remove(p)
             Config.set_and_save('base/entries', self.entries)
+            self.check()
 
-    def elist_select (self, sel): self.list_2_select(sel)
+    def elist_select (self, sel):
+        self.list_2_select(sel)
 
     def list_2_select (self, sel):
         m, iter = sel.get_selected()
@@ -236,6 +266,7 @@ class FieldsDialog:
             p = self.sem.convert_iter_to_child_iter(None, iter)
             self.name2.set_text (self.em[p] [0])
             self.page3_setup (self.em[p] [1])
+        self.check()
 
     def on_name2_changed (self, *args):
         sel = self.entries2.get_selection()
@@ -244,13 +275,15 @@ class FieldsDialog:
             p = self.sem.convert_iter_to_child_iter(None, iter)
             newname = self.name2.get_text()
             try: del self.entries [self.em[p][2]]
-            except KeyError: pass
+            except KeyError: print 'Keyerror', self.em[
+                p] [2], self.entries.keys()
             self.em[p][1].name = newname
             self.em[p][0] = newname
             self.em[p][2] = newname.lower()
             self.entries[newname.lower()] = self.em[p][1]
             Config.set_and_save ('base/entries', self.entries)
-
+        self.check()
+        #print self.entries.keys()
 
     #------------------------------------------------------------
     # Page 3
@@ -280,7 +313,9 @@ class FieldsDialog:
         self.ssm.set_sort_column_id(0, gtk.SORT_ASCENDING)
         self.flist3b.set_model(self.ssm)
         self.s3b = self.flist3b.get_selection()
-
+        self.label3.set_markup (
+            _('Please, select an entry type from previous page.' ))
+        self.check()
 
     def page3_setup (self, item):
         self.sm.clear()
@@ -292,6 +327,7 @@ class FieldsDialog:
         self.label3.set_markup (
             _('Fields associated with <b>%s</b> entry type' %(
             item.name)))
+        self.check()
 
     def page3_add (self, *args):
         m, iter = self.s3a.get_selected()
@@ -301,6 +337,7 @@ class FieldsDialog:
             self.current_entry.optional.append(field)
             self.sm.append ((field.name, False, field.name, field))
             Config.set_and_save('base/entries', self.entries)
+        self.check()
 
     def page3_rm (self, *args):
         m, iter = self.s3b.get_selected()
@@ -313,6 +350,7 @@ class FieldsDialog:
                 self.current_entry.optional.remove(field)
             del self.sm [p]
             Config.set_and_save('base/entries', self.entries)
+        self.check()
 
     def toggle_mandatory (self, rend, path):
         p = self.ssm.convert_path_to_child_path(path)
@@ -326,8 +364,9 @@ class FieldsDialog:
         else:
             self.current_entry.optional.remove(field)
             self.current_entry.mandatory.append(field)
-        self.entries [self.current_entry.name] = self.current_entry
+        self.entries [self.current_entry.name.lower()] = self.current_entry
         Config.set_and_save ('base/entries', self.entries)
+        self.check()
 
     def select_menu (self, w, data):
         self.current_menu = data

@@ -158,10 +158,13 @@ _changes = {}
 
 def set_and_save  (key, value):
     set (key, value)
-    print 'SET AND SAVE:', key, value
+    #print 'SET AND SAVE:', key, value
     global _changes
     _changes [key] = value
     
+def forget_changes ():
+    global _changes
+    _changes = {}
 
 def get (key):
     return ConfigItems [key]

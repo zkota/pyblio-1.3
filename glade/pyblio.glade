@@ -63,7 +63,7 @@
 			  <signal name="activate" handler="merge_database" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image13">
+			    <widget class="GtkImage" id="image28">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-convert</property>
 			      <property name="icon_size">1</property>
@@ -196,7 +196,7 @@
 			  <signal name="activate" handler="add_entry" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image14">
+			    <widget class="GtkImage" id="image29">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-add</property>
 			      <property name="icon_size">1</property>
@@ -226,7 +226,7 @@
 			  <signal name="activate" handler="delete_entry" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image15">
+			    <widget class="GtkImage" id="image30">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-remove</property>
 			      <property name="icon_size">1</property>
@@ -261,7 +261,7 @@
 			  <signal name="activate" handler="sort_entries" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image16">
+			    <widget class="GtkImage" id="image31">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-sort-ascending</property>
 			      <property name="icon_size">1</property>
@@ -295,7 +295,7 @@
 			  <signal name="activate" handler="lyx_cite" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image17">
+			    <widget class="GtkImage" id="image32">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-jump-to</property>
 			      <property name="icon_size">1</property>
@@ -316,7 +316,7 @@
 			  <signal name="activate" handler="format_entries" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
 
 			  <child internal-child="image">
-			    <widget class="GtkImage" id="image18">
+			    <widget class="GtkImage" id="image33">
 			      <property name="visible">True</property>
 			      <property name="stock">gtk-execute</property>
 			      <property name="icon_size">1</property>
@@ -353,11 +353,10 @@
 		      </child>
 
 		      <child>
-			<widget class="GtkMenuItem" id="entries1">
+			<widget class="GtkImageMenuItem" id="preferences2...">
 			  <property name="visible">True</property>
-			  <property name="label" translatable="yes">Entries...</property>
-			  <property name="use_underline">True</property>
-			  <signal name="activate" handler="set_entries" last_modification_time="Mon, 09 Jun 2003 19:02:17 GMT"/>
+			  <property name="stock_item">GNOMEUIINFO_MENU_PREFERENCES_ITEM</property>
+			  <signal name="activate" handler="set_preferences" last_modification_time="Mon, 09 Jun 2003 19:02:17 GMT"/>
 			</widget>
 		      </child>
 
@@ -368,10 +367,11 @@
 		      </child>
 
 		      <child>
-			<widget class="GtkImageMenuItem" id="preferences2">
+			<widget class="GtkMenuItem" id="forget_all_changes1">
 			  <property name="visible">True</property>
-			  <property name="stock_item">GNOMEUIINFO_MENU_PREFERENCES_ITEM</property>
-			  <signal name="activate" handler="set_preferences" last_modification_time="Mon, 09 Jun 2003 19:02:17 GMT"/>
+			  <property name="label" translatable="yes">Forget all changes</property>
+			  <property name="use_underline">True</property>
+			  <signal name="activate" handler="forget_changes_cb" last_modification_time="Wed, 12 Nov 2003 14:32:19 GMT"/>
 			</widget>
 		      </child>
 		    </widget>
