@@ -9,3 +9,4 @@ Terminal=false
 Type=Application
 Categories=GNOME;Application;Office;
 StartupNotify=true
+MimeType=text/x-bibtex;
