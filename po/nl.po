@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-04 15:30+0100\n"
-"PO-Revision-Date: 2004-03-04 21:05+0100\n"
+"POT-Creation-Date: 2004-03-12 04:28+0100\n"
+"PO-Revision-Date: 2004-03-12 11:26+0100\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -342,7 +342,7 @@ msgstr "Achternaam, Voornaam"
 msgid "Text"
 msgstr "Tekst"
 
-#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:757
+#: Pyblio/GnomeUI/Editor.py:136 Pyblio/GnomeUI/Editor.py:786
 msgid "Error in native string parsing"
 msgstr "Fout bij verwerken tekst in eigen formaat"
 
@@ -414,15 +414,24 @@ msgstr "Ongeldig sleutel formaat"
 msgid "Key `%s' already exists"
 msgstr "Sleutel `%s' bestaat al"
 
-#: Pyblio/GnomeUI/Editor.py:770
+#: Pyblio/GnomeUI/Editor.py:712
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "Het `%s'-veld bevat een niet-Latijn 1 symbool"
+
+#: Pyblio/GnomeUI/Editor.py:777
+msgid "Your text contains non Latin-1 symbols"
+msgstr "Uw tekst bevat niet-Latijn 1 symbolen"
+
+#: Pyblio/GnomeUI/Editor.py:799
 msgid "Edit entry"
 msgstr "Ingang bewerken"
 
-#: Pyblio/GnomeUI/Editor.py:784 Pyblio/GnomeUI/Editor.py:840
+#: Pyblio/GnomeUI/Editor.py:813 Pyblio/GnomeUI/Editor.py:869
 msgid "Native Editing"
 msgstr "Bewerken in eigen formaat"
 
-#: Pyblio/GnomeUI/Editor.py:862
+#: Pyblio/GnomeUI/Editor.py:891
 msgid "Standard Editing"
 msgstr "Standaard bewerkmodus"
 
@@ -517,7 +526,7 @@ msgstr "[Soort ingang]"
 msgid "[Key Value]"
 msgstr "[Sleutel waarde]"
 
-#: Pyblio/GnomeUI/Utils.py:196
+#: Pyblio/GnomeUI/Utils.py:194
 msgid "The following errors occured:\n"
 msgstr "De volgende fouten zijn opgetreden:\n"
 
@@ -555,6 +564,21 @@ msgstr "weet niet hoe `%s' kan worden geopend"
 #, python-format
 msgid "method `%s' provides no iterator"
 msgstr "methode `%s' biedt geen iterator aan"
+
+#: Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "ontbrekend '%s'-kenmerk"
+
+#: Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
+msgstr "ongeldige openende tag: %s"
+
+#: Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "ongeldige sluitende tag: %s"
 
 #: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
 #: glade/medline.glade.h:1 glade/search.glade.h:1
