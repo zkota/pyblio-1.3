@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
-# $Id: Makefile.am,v 1.7.2.4 2003/09/18 13:23:38 fredgo Exp $
+# $Id: Makefile.am,v 1.7.2.5 2003/10/30 16:12:35 fredgo Exp $
 
 SGML = 	gui.sgml pyblio.sgml script.sgml config.sgml \
 	iterator.sgml database.sgml selection.sgml key.sgml entry.sgml \

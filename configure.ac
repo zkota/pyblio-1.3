@@ -18,7 +18,7 @@ dnl You should have received a copy of the GNU General Public License
 dnl along with this program; if not, write to the Free Software 
 dnl Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 dnl
-dnl $Id: configure.ac,v 1.1.2.7 2003/10/08 10:35:30 adrighem Exp $
+dnl $Id: configure.ac,v 1.1.2.8 2003/10/30 16:12:19 fredgo Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script.
 
