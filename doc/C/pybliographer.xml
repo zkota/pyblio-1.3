@@ -6,9 +6,9 @@
 
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
-<!ENTITY appversion "1.2.5">
-<!ENTITY manrevision "2.4">
-<!ENTITY date "November 2004">
+<!ENTITY appversion "1.2.6">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "February 2005">
 <!ENTITY app "Pybliographer">
 
 <!ENTITY preface SYSTEM "preface.xml">
@@ -26,11 +26,11 @@
     <title>&app; Manual V&manrevision;</title>
   <bookinfo>
     <copyright> 
-      <year>2003, 2004</year> 
+      <year>2003-2005</year>
       <holder>Zolt&#225;n K&#243;ta</holder> 
     </copyright> 
     <copyright> 
-      <year>1999-2004</year> 
+      <year>1999-2005</year>
       <holder>Fr&#233;d&#233;ric Gobry</holder> 
     </copyright>
 <!-- translators: uncomment this:
@@ -73,6 +73,13 @@
       <revision> 
 		<revnumber>&app; Manual V&manrevision;</revnumber> 
 		<date>&date;</date> 
+		<revdescription> 
+	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
+	  	</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>&app; Manual V2.4</revnumber> 
+		<date>November 2004</date>
 		<revdescription> 
 	  		<para role="author">Zolt&#225;n K&#243;ta, Fr&#233;d&#233;ric Gobry</para>
 	  	</revdescription> 

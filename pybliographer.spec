@@ -1,10 +1,10 @@
 Summary: A framework for working with bibliographic databases.
 Name: pybliographer
-Version: 1.2.5
-Release: 1.rhfdr_core_1
+Version: 1.2.6
+Release: 1.rhfdr_core_2
 License: GPL
 Group: Applications/Publishing
-Source: http://dl.sf.net/pybliographer/pybliographer-1.2.5.tar.gz
+Source: http://dl.sf.net/pybliographer/pybliographer-1.2.6.tar.gz
 Url: http://www.pybliographer.org/
 Packager: Zoltan Kota <z.kota at gmx.net>
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot

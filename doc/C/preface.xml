@@ -83,39 +83,86 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>i18n fixes</term>
+            <term>pybcompact</term>
             <listitem>
               <para>
-                Fixed some translation issues in scripts and gui.
+                Crossref handling and parsing of .aux files in pybcompact script are fixed.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>New mime system</term>
+            <term>Popups</term>
             <listitem>
               <para>
-                Added support for the new mime system in Gnome 2.8.
+                All the popups can be closed with escape.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>New file selector</term>
+            <term>BibTeX keys</term>
             <listitem>
               <para>
-                Use of the new Gtk File selector (if it is available).
+                Parentheses are now allowed in BibTeX keys.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Other bugfixes and improvements</term>
+            <term>Ovid</term>
             <listitem>
               <para>
-                Fixes and improvements in the synthetic fields and in the Ovid parser, 
-		fixed arguments handling in pybliographic, fixed bugs #1024414, #1024412, etc.
+                Miscellaneous fixes in the Ovid import.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Search</term>
+            <listitem>
+              <para>
+                Restored Search as you type.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Default database</term>
+            <listitem>
+              <para>
+                Added PYBLIOGRAPHER_DATABASE environment variable to specify a default 
+                database for pybliographic.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>BibTeX field name check</term>
+            <listitem>
+              <para>
+                Added a check for an (approximately ?) valid bibtex field name to GnomeUI.Editor.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Sort and Iterator</term>
+            <listitem>
+              <para>
+                Sort and Iterator codes are reworked.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Translation</term>
+            <listitem>
+              <para>
+                Updated translations.
               </para>
             </listitem>
           </varlistentry>
         </variablelist>
+
+      <para>
+  	<note id="note-1.2.6.1">
+          <title>Note for 1.2.6.1</title>
+	  <para>pybliographer-1.2.6.1 is a quick bugfix release for version 1.2.6.</para>
+        </note>   
+      </para>
 
     </sect1>
 </preface>

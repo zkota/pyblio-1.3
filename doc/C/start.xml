@@ -51,6 +51,18 @@
                 </para>
     		</listitem>
     	</varlistentry>
-    </variablelist> 
+    </variablelist>
+    <para>It is possible to set the PYBLIOGRAPHER_DATABASE environment variable to an 
+    admissible bibliography file in order to open it always on startup, if no files are
+    specified on the command line. Example:</para>
+    <screen>
+    <prompt>bash$ </prompt><userinput>export PYBLIOGRAPHER_DATABASE=my/database.bib</userinput>
+    <prompt>bash$ </prompt><userinput>pybliographic</userinput>
+    </screen>
+    <para>It is equivalent to</para>
+    <screen>
+    <prompt>bash$ </prompt><userinput>pybliographic my/database.bib</userinput>
+    </screen>
+
     </sect1>
 </chapter>
