@@ -480,11 +480,11 @@ class Reference (BaseField):
 
     def update (self, entry):
 
+        if self.current == self.initial: return 0
+
         if self.current == Fields.Reference ([]):
             del entry [self.field]
             return 1
-
-        if self.current == self.initial: return 0
 
         entry [self.field] = self.current
         return 1
