@@ -651,13 +651,15 @@ class RealEditor (Connector.Publisher):
         """sets the button's sensitivity according to
         current page."""
         
-        
+       
         if (self.lt_listvw and self.current_page == self.lt_listvw.page) \
-            or (self.lt_detail and self.current_page == self.lt_detail.page) \
-            and len(self.lt_nodes) > 1:
-            self.forward_b.set_sensitive (True)
-            self.backward_b.set_sensitive (True)
+            or (self.lt_detail and self.current_page == self.lt_detail.page):
+            self.dialogue.new_b.set_sensitive (True)
+            if len(self.lt_nodes) > 1:
+                self.forward_b.set_sensitive (True)
+                self.backward_b.set_sensitive (True)
         else:
+            self.dialogue.new_b.set_sensitive (False)
             self.forward_b.set_sensitive (False)
             self.backward_b.set_sensitive (False)
 
@@ -1073,14 +1075,13 @@ class Editor (Connector.Publisher):
             if self.editor:
                 cur = self.editor.update (self.database, self.current)
 
-            self.page.hide_all()     # Reject the swJulyitch if the data is invalid
-            if cur is None: return
+                if cur is None: return
 
-            if not self.database.has_key (cur.key):
+                if not self.database.has_key (cur.key):
 
-                # We need to insert the entry as it is currently,
-                # in order to generate a Key
-                cur = self.database.add (cur)
+                    # We need to insert the entry as it is currently,
+                    # in order to generate a Key
+                    cur = self.database.add (cur)
                 
                 self.editor.w.destroy ()
                 self.current = cur
@@ -1205,7 +1206,7 @@ class LT_Widget_1:
         self.notebook.insert_page (self.page, self.label, position)
         #list_remove (self.editor.fields, self.keys) 
 
-        self.enable_buttons()
+        #self.enable_buttons()
 
     def display_list (self, entry, nodes):
         content = gtk.VBox()
@@ -1352,6 +1353,7 @@ class  LT_Dialog_1     :
         self.options.grab_focus()
         self.options.connect ('changed', self.changed)
         self.dialog.set_default_response(gtk.RESPONSE_ACCEPT)
+        self.value = self.fields[0]
 
     def changed (self, *args):
         val = self.options.get_history()
