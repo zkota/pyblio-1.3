@@ -1,5 +1,5 @@
 # Serbian translation of pybliographer
-# Courtesy of Prevod.org team (http://www.prevod.org/) -- 2003.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004.
 #
 # This file is distributed under the same license as the pybliographer package.
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-10 03:59+0100\n"
-"PO-Revision-Date: 2004-01-10 04:00+0100\n"
+"POT-Creation-Date: 2004-02-22 09:00+0100\n"
+"PO-Revision-Date: 2004-02-22 09:00+0100\n"
 "Last-Translator: Данило Шеган <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <serbiangnome-lista@nongnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -661,6 +661,10 @@ msgstr "Вредност:"
 #. set paned size
 #. application variables
 #. set the default sort method
+#: Pyblio/GnomeUI/Document.py:127
+msgid "Unnamed bibliographic database"
+msgstr "Неименована база библиографских података"
+
 #. remove !
 #. This list contains the info needed to create the "Previous Documents" menu.
 #. This list contains the names of the menu entries that can be
@@ -670,7 +674,7 @@ msgstr "Вредност:"
 #. does not escape the underscores...
 #. Display name in the menu
 #. Bind the actual file info to each menu entry
-#: Pyblio/GnomeUI/Document.py:204
+#: Pyblio/GnomeUI/Document.py:218
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -679,7 +683,7 @@ msgstr ""
 "не могу да отворим датотеку „%s“ ради уписа:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:225
+#: Pyblio/GnomeUI/Document.py:239
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -688,42 +692,42 @@ msgstr ""
 "Грешка при обради „%s“:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:241
+#: Pyblio/GnomeUI/Document.py:255
 msgid "New database"
 msgstr "Нова база"
 
-#: Pyblio/GnomeUI/Document.py:249 Pyblio/GnomeUI/Document.py:253
+#: Pyblio/GnomeUI/Document.py:263 Pyblio/GnomeUI/Document.py:267
 msgid "[no entry]"
 msgstr "[нема уноса]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:250
+#: Pyblio/GnomeUI/Document.py:264
 msgid "[1 entry]"
 msgstr "[1 унос]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:251
+#: Pyblio/GnomeUI/Document.py:265
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d уноса]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:254
+#: Pyblio/GnomeUI/Document.py:268
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 унос]"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:255
+#: Pyblio/GnomeUI/Document.py:269
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d унос]"
 
-#: Pyblio/GnomeUI/Document.py:260
+#: Pyblio/GnomeUI/Document.py:274
 msgid "[modified]"
 msgstr "[измењен]"
 
-#: Pyblio/GnomeUI/Document.py:270
+#: Pyblio/GnomeUI/Document.py:284
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -732,31 +736,31 @@ msgstr ""
 "Занемарити измене?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:295
+#: Pyblio/GnomeUI/Document.py:309
 msgid "Your query returned no result"
 msgstr "Ваш упит није вратио резултат"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:305
+#: Pyblio/GnomeUI/Document.py:319
 msgid "Merge file"
 msgstr "Споји датотеку"
 
-#: Pyblio/GnomeUI/Document.py:317 Pyblio/GnomeUI/Document.py:371
+#: Pyblio/GnomeUI/Document.py:331 Pyblio/GnomeUI/Document.py:385
 msgid "Open error"
 msgstr "Грешка при отварању"
 
 #. loop over the entries
-#: Pyblio/GnomeUI/Document.py:341
+#: Pyblio/GnomeUI/Document.py:355
 msgid "Merge status"
 msgstr "Стање спајања"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:352
+#: Pyblio/GnomeUI/Document.py:366
 msgid "Open file"
 msgstr "Отвори датотеку"
 
 #. eventually warn interested objects
-#: Pyblio/GnomeUI/Document.py:398
+#: Pyblio/GnomeUI/Document.py:414
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -764,7 +768,7 @@ msgstr ""
 "База података је измењена споља.\n"
 "Преснимити измене?"
 
-#: Pyblio/GnomeUI/Document.py:408
+#: Pyblio/GnomeUI/Document.py:424
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -773,7 +777,7 @@ msgstr ""
 "Не могу да сачувам „%s“:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:416
+#: Pyblio/GnomeUI/Document.py:432
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -783,11 +787,11 @@ msgstr ""
 
 #. get the current modification date
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:430
+#: Pyblio/GnomeUI/Document.py:446
 msgid "Save As..."
 msgstr "Сачувај као..."
 
-#: Pyblio/GnomeUI/Document.py:436
+#: Pyblio/GnomeUI/Document.py:452
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -796,7 +800,7 @@ msgstr ""
 "Датотека „%s“ већ постоји.\n"
 "Преснимити је?"
 
-#: Pyblio/GnomeUI/Document.py:443
+#: Pyblio/GnomeUI/Document.py:459
 #, python-format
 msgid ""
 "During opening:\n"
@@ -805,11 +809,11 @@ msgstr ""
 "При отварању:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:461
+#: Pyblio/GnomeUI/Document.py:477
 msgid "Reopen error"
 msgstr "Грешка при поновном отварању"
 
-#: Pyblio/GnomeUI/Document.py:502
+#: Pyblio/GnomeUI/Document.py:524
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -818,27 +822,27 @@ msgstr ""
 "Већ постоји унос са називом „%s“.\n"
 "Да га преименује и дода у сваком случају?"
 
-#: Pyblio/GnomeUI/Document.py:539
+#: Pyblio/GnomeUI/Document.py:561
 msgid "Really remove all the entries ?"
 msgstr "Да заиста уклони све уносе?"
 
-#: Pyblio/GnomeUI/Document.py:559
+#: Pyblio/GnomeUI/Document.py:581
 msgid "Create new entry"
 msgstr "Додај нови унос"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:573
+#: Pyblio/GnomeUI/Document.py:595
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Да заиста уредим %d уноса?"
 
 # bug: plural-forms
-#: Pyblio/GnomeUI/Document.py:611
+#: Pyblio/GnomeUI/Document.py:633
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Да уклоним свих %d уноса?"
 
-#: Pyblio/GnomeUI/Document.py:613
+#: Pyblio/GnomeUI/Document.py:635
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Да уклоним унос „%s“?"
@@ -846,7 +850,7 @@ msgstr "Да уклоним унос „%s“?"
 #. Check if we are toggling or changing
 #. We are still filtering according to the same field,
 #. simply toggle the direction
-#: Pyblio/GnomeUI/Document.py:690 Pyblio/GnomeUI/Document.py:697
+#: Pyblio/GnomeUI/Document.py:718 Pyblio/GnomeUI/Document.py:727
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -863,7 +867,7 @@ msgstr ""
 #. 1.- Window size
 #. 2.- Proportion betzeen list and text
 #. updates the index's config
-#: Pyblio/GnomeUI/Document.py:769
+#: Pyblio/GnomeUI/Document.py:799
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -872,19 +876,19 @@ msgstr ""
 "Не могу да прикажем документацију:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:777
+#: Pyblio/GnomeUI/Document.py:807
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Овај програм је заштићен ауторским правима према Гнуовој ОЈЛ (GPL)"
 
-#: Pyblio/GnomeUI/Document.py:778
+#: Pyblio/GnomeUI/Document.py:808
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Гномово сучеље за систем Пиблиотекара."
 
-#: Pyblio/GnomeUI/Document.py:787
+#: Pyblio/GnomeUI/Document.py:818
 msgid "Gnome Translation Team"
 msgstr "Гномов преводилачки тим"
 
-#: Pyblio/GnomeUI/Document.py:792
+#: Pyblio/GnomeUI/Document.py:823
 msgid "Pybliographer Home Page"
 msgstr "Домаћа страница Пиблиотекара"
 
@@ -945,12 +949,12 @@ msgstr "Неисправно поље године у датуму"
 
 #. self.edit.set_editable (True)
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:431 Pyblio/GnomeUI/Search.py:86
+#: Pyblio/GnomeUI/Editor.py:429 Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Обриши"
 
-#: Pyblio/GnomeUI/Editor.py:442 Pyblio/GnomeUI/Editor.py:454
-#: Pyblio/GnomeUI/Editor.py:457
+#: Pyblio/GnomeUI/Editor.py:440 Pyblio/GnomeUI/Editor.py:453
+#: Pyblio/GnomeUI/Editor.py:456
 msgid "[ Drop an Entry here ]"
 msgstr "[ Овде убаците унос ]"
 
@@ -960,16 +964,16 @@ msgstr "[ Овде убаците унос ]"
 #. ------------------------------------------------------------
 #. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:231
+#: Pyblio/GnomeUI/Editor.py:528 Pyblio/GnomeUI/Fields.py:231
 #: glade/config1.glade.h:8 glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Врста уноса"
 
-#: Pyblio/GnomeUI/Editor.py:529
+#: Pyblio/GnomeUI/Editor.py:530
 msgid "Key"
 msgstr "Кључ"
 
-#: Pyblio/GnomeUI/Editor.py:570
+#: Pyblio/GnomeUI/Editor.py:571
 msgid "Create Field"
 msgstr "Образуј поље"
 
@@ -978,44 +982,44 @@ msgstr "Образуј поље"
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:626 Pyblio/GnomeUI/Fields.py:446
 msgid "Mandatory"
 msgstr "Обавезно"
 
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:447
+#: Pyblio/GnomeUI/Editor.py:626 Pyblio/GnomeUI/Fields.py:447
 msgid "Optional"
 msgstr "Необавезно"
 
-#: Pyblio/GnomeUI/Editor.py:625
+#: Pyblio/GnomeUI/Editor.py:626
 msgid "Extra"
 msgstr "Допунско"
 
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:694
+#: Pyblio/GnomeUI/Editor.py:695
 msgid "Invalid key format"
 msgstr "Неисправни облик кључа"
 
-#: Pyblio/GnomeUI/Editor.py:702
+#: Pyblio/GnomeUI/Editor.py:703
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Кључ „%s“ већ постоји"
 
-#: Pyblio/GnomeUI/Editor.py:763
+#: Pyblio/GnomeUI/Editor.py:764
 msgid "Error in native string parsing"
 msgstr "Грешка у природној обради ниске"
 
-#: Pyblio/GnomeUI/Editor.py:776
+#: Pyblio/GnomeUI/Editor.py:777
 msgid "Edit entry"
 msgstr "Уредите унос"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:790 Pyblio/GnomeUI/Editor.py:846
+#: Pyblio/GnomeUI/Editor.py:791 Pyblio/GnomeUI/Editor.py:847
 msgid "Native Editing"
 msgstr "Природно уређивање"
 
 #. Reject the switch if the data is invalid
 #. native edition
-#: Pyblio/GnomeUI/Editor.py:868
+#: Pyblio/GnomeUI/Editor.py:869
 msgid "Standard Editing"
 msgstr "Обично уређивање"
 
