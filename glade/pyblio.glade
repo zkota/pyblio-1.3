@@ -82,6 +82,7 @@
 			  <property name="label" translatable="yes">Medline Query...</property>
 			  <property name="use_underline">True</property>
 			  <signal name="activate" handler="query_database" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
+                          <accelerator key="m" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 			</widget>
 		      </child>
 
