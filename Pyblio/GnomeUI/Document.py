@@ -100,7 +100,6 @@ class Document (Connector.Publisher):
         self.data      = database
         self.selection = Selection.Selection ()
         self.search_dg = None
-        self.format_dg = None
         self.sort_dg   = None
         self.lyx       = None
         self.changed   = 0
@@ -217,11 +216,8 @@ class Document (Connector.Publisher):
 
 
     def format_entries (self, * arg):
-        if self.format_dg is None:
-            self.format_dg = Format.FormatDialog (self.w)
-            self.format_dg.Subscribe ('format-query', self.format_query)
-            
-        self.format_dg.show ()
+        format_dg = Format.FormatDialog (self.w)
+        format_dg.Subscribe ('format-query', self.format_query)
         return
 
     

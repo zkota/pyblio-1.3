@@ -56,42 +56,39 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
         outlist.sort ()
         
         for avail in outlist:
-            Utils.popup_add (menu, avail, self.menu_select, avail)
+            Utils.popup_add (menu, avail, self._menu_select, avail)
 
         self._w_menu.set_history (0)
         self.menu_item = outlist [0]
-        
-        self._w_style_entry.set_default_path (
-            os.path.join (version.prefix, 'Styles'))
 
+        path = os.path.join (version.prefix, 'Styles')
+        
+        self._w_style_entry.set_default_path (path)
+        self._w_format.show ()
         return
 
 
-    def menu_select (self, menu, item):
+    def _menu_select (self, menu, item):
         self.menu_item = item
         return
     
 
-    def show (self):
-        self._w_format.show ()
-        return
-    
+    def _on_validate (self, * arg):
 
-    def on_validate (self, * arg):
         style  = self._w_style_entry.get_full_path (False)
         output = self._w_output_entry.get_full_path (False)
         
         format = Autoload.get_by_name ('output', self.menu_item).data
 
         if style is None or output is None: return
-        self.issue ('format-query', style, format, output)
-        
-        self.size_save ()
         self._w_format.destroy ()
+
+        self.issue ('format-query', style, format, output)
         return
     
 
-    def on_cancel (self, * arg):
+    def _on_close (self, * arg):
+
         self.size_save ()
         self._w_format.destroy ()
         return
