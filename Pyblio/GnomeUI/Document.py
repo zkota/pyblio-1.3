@@ -794,7 +794,7 @@ class Document (Connector.Publisher):
         import gobject
 
         try:
-            gnome.help_display ('pybliographer', '')
+            gnome.help_display ('pybliographer', 'getting-started')
             
         except gobject.GError, msg:
             self.w.error (_("Can't display documentation:\n%s") % msg)
