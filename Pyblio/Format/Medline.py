@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2003 Frederic GOBRY
@@ -29,6 +30,8 @@ header = re.compile ('^(\w\w[\w ][\w ])- (.*)$')
 contin = re.compile ('^      (.*)$')
 
 one_to_one = Config.get ('medline/mapping').data
+
+medurl = 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id='
 
 
 class MedlineIterator (Iterator.Iterator):
@@ -90,6 +93,11 @@ class MedlineIterator (Iterator.Iterator):
         # create the entry with the actual fields
         norm = {}
         type = Types.get_entry ('article')
+
+        if table.has_key ('PMID'):
+            norm ['url'] = Fields.URL (medurl + table ['PMID'] [0])
+            norm ['medline-pmid'] = Fields.Text (table ['PMID'] [0])
+            del table ['PMID']
     
         if table.has_key ('UI'):
             norm [one_to_one ['UI']] = Fields.Text (table ['UI'] [0])

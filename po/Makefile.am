@@ -23,6 +23,7 @@ LANGUAGES = 		\
 	cs 		\
 	da 		\
 	de 		\
+	el		\
 	fi 		\
 	fr 		\
 	hu 		\
