@@ -57,9 +57,10 @@ fields = [ 'CrossRef', 'Key', 'Author', 'Address_1', 'Address_2',
            'Subject', 'Ownership', 'Series', 'Editor', 'Edition', 'Volume',
            'Number', 'Chapter', 'Pages', 'School', 'Organization', 'Location',
            'Dates', 'Institution', 'Publisher', 'Address', 'Format',
-           'Date', 'NoSeries', 'ConfPlace', 'Cote', 'IEEECN',
-           'LoCN', 'ISBN', 'ISSN', 'Note', 'Language', 'HowPublished', 'To_Appear',
-           'From', 'Received', 'Owner', 'Keywords', 'Abstract', 'Remarks', 'URL' ]
+           'Date', 'NoSeries', 'ConfPlace', 'Cote', 'IEEECN', 'Annotate',
+           'Quote', 'LoCN', 'ISBN', 'ISSN', 'Note', 'Language', 'HowPublished',
+           'To_Appear', 'From', 'Received', 'Owner', 'Keywords', 'Abstract',
+           'Remarks', 'URL' ]
 
 entries = {
     'Article' : (('author', 'title', 'journal', 'date'),
@@ -129,6 +130,13 @@ desc ['editor'].type   = Fields.AuthorGroup
 desc ['date'].type     = Fields.Date
 desc ['crossref'].type = Fields.Reference
 desc ['url'].type      = Fields.URL
+
+desc ['abstract'].type     = Fields.LongText
+desc ['annotate'].type     = Fields.LongText
+desc ['note'].type         = Fields.LongText
+desc ['quote'].type        = Fields.LongText
+desc ['remarks'].type      = Fields.LongText
+
 
 Config.set ('base/fields', desc)
 

@@ -110,7 +110,6 @@ class Pybliographic:
             return
         
         document.w.destroy ()
-
         self.documents.remove (document)
         
         if not self.documents:

@@ -62,7 +62,7 @@ all: $(MO)
 install-data-hook: all
 	for f in $(LANGUAGES) ; \
 	  do $(mkinstalldirs) $(DESTDIR)$(localedir)/$${f}/LC_MESSAGES ; \
-	  $(install_sh_DATA) $${f}.mo \
+	  $(INSTALL_DATA) $${f}.mo \
 	  $(DESTDIR)$(localedir)/$${f}/LC_MESSAGES/$(PACKAGE).mo ; \
 	done
 

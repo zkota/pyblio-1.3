@@ -12,11 +12,10 @@ def _text_get ():
 
     v = Config.get ('base/fields').data
 
-    fields = filter (lambda x: x.type is Fields.Text, v.values ())
-    fields = map (lambda x: x.name.lower (), fields)
-
+    fields = [ x.name.lower() for x in v.values() if
+               x.type is Fields.Text or x.type is Fields.LongText ]
     fields.sort ()
-    
+
     return fields
 
 def _on_multiline_select (item, multi, user):
@@ -78,5 +77,5 @@ multi = {}
 
 if h.has_key ('abstract'): multi ['abstract'] = 1
 
-Config.set ('gnomeui/multiline', multi)
+Config.set ('gnomeui/multiline', multi) 
 

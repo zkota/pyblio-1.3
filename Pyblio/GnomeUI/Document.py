@@ -143,10 +143,8 @@ class Document (Connector.Publisher):
         Fields.run (self.w)
         return
     
-    # remove !
-    def set_entries (self, * arg):
-        from Pyblio.GnomeUI import Fields
-        Fields.run (self.w)
+    def forget_changes_cb (self, * arg):
+        Config.forget_changes()
         return
     
 
@@ -679,7 +677,6 @@ class Document (Connector.Publisher):
 
         elif field == '-type-':
             mode = Sort.TypeSort ()
-
         else:
             mode = Sort.FieldSort (field)
 
@@ -718,7 +715,6 @@ class Document (Connector.Publisher):
 
             try:
                 self.lyx = LyX.LyXClient ()
-
             except IOError, msg:
                 msg = msg [1].decode (enc)
                 self.w.error (_("Can't connect to LyX:\n%s") % msg)
@@ -727,7 +723,6 @@ class Document (Connector.Publisher):
         keys = string.join (map (lambda x: x.key.key, entries), ', ')
         try:
             self.lyx ('citation-insert', keys)
-
         except IOError, msg:
             msg = msg [1].decode (enc)
             self.w.error (_("Can't connect to LyX:\n%s") % msg)
@@ -812,15 +807,15 @@ class Document (Connector.Publisher):
                           version.version,
                           _("This program is copyrighted under the GNU GPL"),
                           _("Gnome interface to the Pybliographer system."),
-                          ['Herv√© Dr√©au',
-                           'Fr√©d√©ric Gobry',
+                          ['HervÈ DrÈau',
+                           'FrÈdÈric Gobry',
                            'Travis Oliphant',
                            'Darrell Rudmann',
                            'Peter Schulte-Stracke',
                            'John Vu'],
                           ['Yuri Bongiorno',
-                           'Fr√©d√©ric Gobry',
-                           'Zolt√°n K√≥ta'],
+                           'FrÈdÈric Gobry',
+                           'Zolt·n KÛta'],
                           _('Gnome Translation Team'))
 
         about.set_transient_for (self.w)

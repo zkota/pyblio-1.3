@@ -36,8 +36,6 @@ from Pyblio.Utils import format
 _map = string.maketrans ('\t\n', '  ')
 _cpt = re.compile ('\s+')
 
-
-
 class ConfigDialog (Utils.GladeWindow):
 
     gladeinfo = {
@@ -49,11 +47,12 @@ class ConfigDialog (Utils.GladeWindow):
     def __init__ (self, parent = None):
 
         Utils.GladeWindow.__init__ (self, parent, window = 'config1')
-        
-        self.dialog = self.xml.get_widget ('config1')
 
+        self.dialog = self.xml.get_widget ('config1')
         content = self.xml.get_widget ('dialog-vbox1')
+
         self.w = gtk.Notebook ()
+
         content.pack_start (self.w)
 
         tooltips = gtk.Tooltips ()
@@ -130,6 +129,7 @@ class ConfigDialog (Utils.GladeWindow):
         return
 
     def on_close1 (self, w):
+
         self.size_save ()
         self.dialog.hide_all()
 

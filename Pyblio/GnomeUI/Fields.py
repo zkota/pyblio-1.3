@@ -39,6 +39,7 @@ from Pyblio.GnomeUI import Utils
 _typename = {
     Fields.AuthorGroup : _('Authors'),
     Fields.Text        : _('Text'),
+    Fields.LongText    : _('Long Text'),
     Fields.URL         : _('URL'),
     Fields.Reference   : _('Reference'),
     Fields.Date        : _('Date')

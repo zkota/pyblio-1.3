@@ -1,7 +1,7 @@
 #This file is part of Pybliographer
 # 
 # Copyright (C) 1998-2004 Peter Schulte-Stracke
-# Email : Peter.Schulte-Stracke@t-online.de
+# Email : mail@schulte-stracke.de
 #          
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -226,13 +226,10 @@ class IsifileIterator(Iterator.Iterator):
 
 
         for key in lines.keys():
-
-            if key_map.has_key(key):
-                in_table [key_map [key][0]] =  Fields.Text (
-                    string.join (lines[key], key_map[key][1]))
-            else:
-                in_table ['isifile-' + string.lower(key)] = Fields.Text (
-                    string.join (lines[key], " ; "))
+            mapped_key, joiner = key_map.get(
+                key, ('isifile-%s' %(key.lower()), ' ; '))
+            text_type = Types.get_field (mapped_key).type
+            in_table [mapped_key] = text_type (joiner.join(lines[key]))
 
         return Base.Entry ( None, type, in_table)
 

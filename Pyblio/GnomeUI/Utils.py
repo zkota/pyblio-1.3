@@ -31,7 +31,10 @@ from gnome import ui
 from Pyblio import Config, version
 
 import gconf
-
+try : _
+except NameError:
+    def _ (s)\
+        :  return s
 
 class Callback:
 

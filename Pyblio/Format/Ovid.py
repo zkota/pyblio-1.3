@@ -69,11 +69,12 @@ def iterator (url, check):
     if check and url.url [2] [-5:] != '.ovid': return
 
     file = open (Open.url_to_local (url))
-    
-    type = Config.get ('ovid/deftype').data
-    
-    return  OvidLike.OvidLike (file, Config.get ('ovid/mapping').data,
-                               type)
+
+    return  OvidLike.OvidLike (
+        file,
+        Config.get ('ovid/mapping').data,
+        Config.get ('ovid/deftype').data,
+        Config.get ('ovid/sourceregexp').data)
 
 
 def writer (iter, output):

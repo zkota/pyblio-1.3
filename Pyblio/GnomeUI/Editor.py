@@ -21,16 +21,22 @@
 
 # TO FIX
 #   entry editor for more than 50 chars
+# added: Note taking widget
 
-import string, re
+try: _
+except NameError:
+    def _(str)\
+       : return str
+
+import gettext, re, string
 from gnome import ui
 import gtk
 
 import copy, re
 
-from Pyblio import Fields, Config, Base, Types, Connector, Exceptions, Key
+from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
 
-from Pyblio.GnomeUI import FieldsInfo, Utils, Mime
+from Pyblio.GnomeUI import FieldsInfo, Mime, Utils
 
 key_re = re.compile ("^[\w:_+-.]+$")
 
@@ -40,6 +46,7 @@ _newcontent = {
     Fields.URL         : 'http://',
     Fields.Date        : '2000',
     Fields.Reference   : [],
+    Fields.LongText    : '',
     }
 
 
@@ -57,7 +64,6 @@ class BaseField (Connector.Publisher):
         self.field = field
 
         self.setup (entry)
-
         self.edit = None
         expand = self.create_widget (h)
         
@@ -505,9 +511,10 @@ class URL (BaseField):
 class RealEditor (Connector.Publisher):
     ''' Edits in standard form '''
 
-    def __init__ (self, database, entry):
+    def __init__ (self, database, entry, dialogue):
         self.entry    = entry
         self.database = database
+        self.dialogue = dialogue
         self.type     = entry.type
         self.fields   = entry.keys ()
 
@@ -564,21 +571,28 @@ class RealEditor (Connector.Publisher):
         b = gtk.Button (_("Create Field"))
         b.connect ('clicked', self.create_field)
         self.newfield_area.pack_start (b)
+
+        # navigation buttons
+        self.backward_b = gtk.Button(_('Back'))
+        self.backward_b.connect ('clicked', self.back_cb)
+        self.newfield_area.pack_start (self.backward_b)
+        self.forward_b = gtk.Button(_('Next'))
+        self.forward_b.connect ('clicked', self.next_cb)
+        self.newfield_area.pack_start (self.forward_b)
+        
+        self.w.pack_start (self.newfield_area, False, False)       
+
         self.newfield_area.show_all ()
         
-        self.w.pack_start (self.newfield_area, False, False)
-        
         # Notebook
-        # scroll = gtk.ScrolledWindow ()
-        # scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
         self.notebook = gtk.Notebook ()
         self.notebook.show ()
-
-        #scroll.add_with_viewport (self.notebook)
+        self.notebook.connect ('switch-page', self.switch_page_cb)
         
         self.w.pack_start (self.notebook)
         self.w.show_all ()
-        
+
+        self.lt_init (self.entry, self.fields)
         self.notebook_init = False
         self.update_notebook ()
         return
@@ -600,68 +614,227 @@ class RealEditor (Connector.Publisher):
         return
 
 
-    def apply_cb (self, * arg):
+    def apply_cb (self, * args):
         self.issue ('apply')
         return
         
-    def next_cb (self, * arg):
-        self.issue ('next')
-        return
+    def back_cb  (self, *args):
+        if self.current_page == self.lt_detail.page:
+            self.lt_prev ()
+        else:
+            self.issue('back')
 
-    
+    def next_cb (self, * args):
+        if self.current_page == self.lt_detail.page:
+            self.lt_next ()
+        else: 
+            self.issue ('next')
+            return
+
+    def add_cb (self, *args):
+        if (self.lt_listvw and self.current_page == self.lt_listvw.page) or \
+           (self.lt_detail and self.current_page == self.lt_detail.page): 
+            self.lt_new()
+        
+    def del_cb (self, *args):
+        if self.lt_detail and self.current_page == self.lt_detail.page:
+            node = self.lt_nodes [self.lt_current]
+            key = node['key']
+            if self.entry.has_key(key) and self.entry[key]:
+                ui.gnome_error_dialog_parented (
+                    _('Delete text first, then you can delete the field.'),
+                    self.w.get_toplevel ())
+            else:
+                self.lt_delete (self.lt_current)
+
+    def set_buttons (self, pos):
+        """sets the button's sensitivity according to
+        current page."""
+        
+        
+        if (self.lt_listvw and self.current_page == self.lt_listvw.page) \
+            or (self.lt_detail and self.current_page == self.lt_detail.page) \
+            and len(self.lt_nodes) > 1:
+            self.forward_b.set_sensitive (True)
+            self.backward_b.set_sensitive (True)
+        else:
+            self.forward_b.set_sensitive (False)
+            self.backward_b.set_sensitive (False)
+
+        if self.lt_detail and self.current_page == self.lt_detail.page:
+            self.dialogue.del_b.set_sensitive (True)
+        else:
+            self.dialogue.del_b.set_sensitive (False)
+
+   
+    def switch_page_cb (self, nb, dummy, pos):
+        assert self.notebook == nb
+        page = self.notebook.get_nth_page(pos)
+        self.current_page = page
+        self.set_buttons(pos)
+        if self.lt_listvw and self.current_page == self.lt_listvw.page:
+            self.lt_listvw.display_list (self.entry, self.lt_nodes)
+
+
     def update_notebook (self):
+
         if self.notebook_init:
-            for i in range (0, 3):
-                self.notebook.remove_page (0)
+            self.notebook.foreach(
+                lambda x: self.notebook.remove_page(0))
         
         self.notebook_init = True
-
-        names  = (_("Mandatory"), _("Optional"), _("Extra"))
-        fields = map (string.lower, self.entry.keys ())
+        self.current_page = None
         
+        names  = (_("Mandatory"), _("Optional"), _("Notes"), _("Extra"))
+
+        self.fields = map (string.lower, self.entry.keys ())
+
         self.content = []
-        for i in range (0, 3):
+
+        for i in range (len(names)):
             label   = gtk.Label (names [i])
+            if   i == 0:
+                table = [x.name.lower() for x
+                         in self.entry.type.mandatory
+                         if x.type != Fields.LongText]
+                self.add_type1_widget (label, table, i)
+                list_remove (self.fields, table)
 
-            if   i == 0: table = map (lambda x: x.name, self.entry.type.mandatory)
-            elif i == 1: table = map (lambda x: x.name, self.entry.type.optional)
-            else:        table = copy.copy (fields)
-
-            if len (table) == 0: continue
-
-            scroll = gtk.ScrolledWindow ()
-            scroll.set_policy (gtk.POLICY_AUTOMATIC,
-                               gtk.POLICY_AUTOMATIC)
-
-            content = gtk.Table (1, len (table))
-            
-            scroll.add_with_viewport (content)
-
-            j = 0
-            for field in table:
-                lcfield = string.lower (field)
-
-                try: fields.remove (lcfield)
-                except ValueError: pass
-
-                widget = FieldsInfo.widget (lcfield) (self.entry, field, content, j)
-                self.content.append (widget)
-
-                widget.Subscribe ('apply', self.apply_cb)
-                widget.Subscribe ('next', self.next_cb)
+            elif i == 1:
+                table = [x.name.lower() for x
+                         in self.entry.type.optional
+                         if x.type != Fields.LongText]
+                self.add_type1_widget (label, table, i)
+                list_remove (self.fields, table)
                 
-                j = j + 1
+            elif i == 2:
+                self.lt_nodes = self.lt_node_list (
+                    self.entry, self.fields)
+                self.lt_listvw = LT_Widget_1 (
+                    self, i, self.dialogue)
+                self.lt_detail = LT_Widget_2 (
+                    self.notebook, i, self.dialogue)
+                list_remove  (self.fields,
+                      [x['key'] for x in self.lt_nodes])
+            else:
+                table = [x for x in self.fields if
+                         Types.get_field(x).type != Fields.LongText]
+                self.add_type1_widget (label, table, i)
 
-            label.show ()
-            content.show ()
-            scroll.show ()
-            
-            self.notebook.insert_page (scroll, label, i)
-            
         self.notebook.show ()
         return
 
+    def add_type1_widget (self, label, table, pos):
+        
+        if len (table) == 0: return
+        scroll = gtk.ScrolledWindow ()
+        scroll.set_policy (gtk.POLICY_AUTOMATIC,
+                           gtk.POLICY_AUTOMATIC)
+        content = gtk.Table (1, len (table))
+        scroll.add_with_viewport (content)
 
+        j = 0
+        for field in table:
+
+            widget = FieldsInfo.widget (field) (self.entry, field, content, j)
+            self.content.append (widget)
+            
+            widget.Subscribe ('apply', self.apply_cb)
+            widget.Subscribe ('next', self.next_cb)
+                
+            j = j + 1
+
+        label.show ()
+        content.show ()
+        scroll.show ()
+            
+        self.notebook.insert_page (scroll, label, pos)
+
+    #--------------------------------------------------
+    # Longtext stuff
+
+    def lt_init (self, item, fields):
+
+        self.lt_current = None
+        self.lt_listvw = None 
+        self.lt_detail = None
+
+    def lt_update (self):
+        self.lt_detail.update()
+        modified = False
+        for i in self.lt_nodes:
+            modified |= i.get('modified', False)
+        return modified
+        
+    def lt_prev (self):
+        self.lt_display (self.lt_current - 1)
+
+    def lt_next (self):
+        self.lt_display (self.lt_current + 1) 
+
+    def lt_display (self, pos):
+        if self.lt_nodes:
+            pos %= len(self.lt_nodes)
+            self.lt_current = pos
+            self.set_buttons (pos)
+            self.lt_detail.display (self.lt_nodes[pos], self.entry)
+        else:
+            self.lt_current = None
+            self.lt_detail.hide()
+
+    def lt_new (self):
+        d = LT_Dialog_1(parent = self.w.get_toplevel ())
+        newname = d.run()
+        if not newname:
+            return
+        new = {'key': newname.lower(), 'name': newname, 'mandatory': False}
+        pos = len (self.lt_nodes)
+        self.lt_nodes.append (new)
+        assert self.lt_nodes[pos] == new
+        self.set_buttons(len (self.lt_nodes) -1)
+        self.entry[new['key']] = Fields.LongText('')
+        self.lt_listvw.display_list (self.entry, self.lt_nodes)
+        self.lt_display (pos)
+        
+    def lt_delete (self, pos):
+        node = self.lt_nodes[pos]
+        key = node ['key']
+        del self.entry [key]
+        self.lt_nodes.pop (pos)
+        self.lt_listvw.display_list (self.entry, self.lt_nodes)
+        self.lt_display (pos)
+        try: self.fields.remove(key)
+        except ValueError: pass
+        
+    def lt_node_list (self, item, fields):
+
+        """Return a list of longtexts (annotations) associated
+        with item """  
+        fields = fields[:]
+        nodes = []
+        self.lt_list_add1 (item, nodes,
+                          item.type.mandatory, {'mandatory': True})
+        self.lt_list_add1 (item, nodes,
+                          item.type.optional, {'mandatory': False})
+        remaining = list_remove (fields, [ x['key'] for x in nodes])
+        self.lt_list_add1 (
+            item, nodes, [Types.get_field(x) for x in remaining],
+            {'mandatory': False})
+        return nodes
+
+    def lt_list_add1 (self, item, nodes, fields, iv):
+        """Accumulates """
+        list2 = fields[:]
+        for i in list2:
+            if i.type == Fields.LongText:
+                value = iv.copy()
+                value['key'] =  i.name.lower()
+                value['name'] = i.name
+                value['type'] = i
+                nodes.append (value)
+
+    #--------------------------------------------------
+    
     def create_field (self, * arg):
         widget = self.newfield.gtk_entry ()
         text   = string.strip (string.lower (widget.get_text ()))
@@ -685,17 +858,18 @@ class RealEditor (Connector.Publisher):
             modified = True
         else:
             if not key_re.match (key):
-                ui.gnome_error_dialog_parented (_("Invalid key format"),
-                                                self.w.get_toplevel ())
+                ui.gnome_error_dialog_parented (
+                    _("Invalid key format"), self.w.get_toplevel ())
                 return None
 
             key = Key.Key (database, key)
 
             if key != self.entry.key:
                 if database.has_key (key):
-                    ui.gnome_error_dialog_parented (_("Key `%s' already exists") % str (key.key),
-                                                    self.w.get_toplevel ())
-                    return None
+                     ui.gnome_error_dialog_parented (
+                         _("Key `%s' already exists") % str (key.key),
+                         self.w.get_toplevel ())
+                     return None
                 
                 self.entry.key = key
                 modified = True
@@ -709,13 +883,16 @@ class RealEditor (Connector.Publisher):
             except UnicodeError:
                 f = Types.get_field (item.field)
                 
-                ui.gnome_error_dialog_parented (_("The `%s' field contains a non Latin-1 symbol") %
-                                                f.name, self.w.get_toplevel ())
+                ui.gnome_error_dialog_parented (
+                    _("The `%s' field contains a non Latin-1 symbol") %
+                    f.name, self.w.get_toplevel ())
                 return None
             
             if result == -1: return None
             
             modified = result or modified
+
+        modified |= self.lt_update()
 
         if not modified:
             fields = self.entry.keys ()
@@ -723,7 +900,8 @@ class RealEditor (Connector.Publisher):
 
             if fields != self.fields: modified = 1
         
-        if modified: return self.entry
+        if modified:
+            return self.entry
         
         return entry
     
@@ -758,7 +936,8 @@ class NativeEditor (Connector.Publisher):
         iter = self.buff.get_start_iter ()
         mono = self.buff.create_tag ('body', family = 'Monospace')
 
-        self.buff.insert_with_tags (iter, self.original.decode ('latin-1'), mono)
+        self.buff.insert_with_tags (
+            iter, self.original.decode ('latin-1'), mono)
         return
 
 
@@ -767,24 +946,23 @@ class NativeEditor (Connector.Publisher):
 
         new  = None
 
-        text = self.buff.get_text (self.buff.get_start_iter (),
-                                   self.buff.get_end_iter ())
-
+        text = self.buff.get_text (
+            self.buff.get_start_iter (),
+            self.buff.get_end_iter ())
         try:
             text = text.encode ('latin-1')
-            
+
         except UnicodeError:
-            ui.gnome_error_dialog_parented (_("Your text contains non Latin-1 symbols"),
-                                            self.w.get_toplevel ())
+            ui.gnome_error_dialog_parented (
+                _("Your text contains non Latin-1 symbols"),
+                self.w.get_toplevel ())
             return None
-        
 
         try:
             new = self.database.create_native (text)
-            
         except Exceptions.ParserError, msg:
-            Utils.error_dialog (_("Error in native string parsing"),
-                                str (msg))
+            Utils.error_dialog (
+                _("Error in native string parsing"), str (msg))
         return new
 
     
@@ -796,7 +974,8 @@ class Editor (Connector.Publisher):
         self.w.set_resizable (True)
         
         if title: self.w.set_title (title)
-        else:     self.w.set_title (_("Edit entry") + ' [%s]' % str (entry.key) )
+        else:     self.w.set_title (
+            _("Edit entry") + ' [%s]' % str (entry.key) )
         
         self.w.connect ('delete_event', self.close_dialog)
 
@@ -815,17 +994,30 @@ class Editor (Connector.Publisher):
             self.native_b.show ()
         
         self.close_b = gtk.Button (stock = gtk.STOCK_CANCEL)
-        self.close_b.connect ('clicked', self.close_dialog)
+        self.close_bid = self.close_b.connect (
+            'clicked', self.close_dialog)
         self.close_b.show ()
 
         # Use Escape to abort, Ctrl-Return to accept
         accelerator = gtk.AccelGroup ()
         self.w.add_accel_group (accelerator)
 
-        self.close_b.add_accelerator ('clicked', accelerator,
-                                      gtk.keysyms.Escape, 0, 0)
-        self.apply_b.add_accelerator ('clicked', accelerator,
-                                      gtk.keysyms.Return, gtk.gdk.CONTROL_MASK, 0)
+        self.close_b.add_accelerator (
+            'clicked', accelerator, gtk.keysyms.Escape, 0, 0)
+        self.apply_b.add_accelerator (
+            'clicked', accelerator, gtk.keysyms.Return,
+            gtk.gdk.CONTROL_MASK, 0)
+
+
+        # for use with annotations
+        self.del_b = gtk.Button(stock = gtk.STOCK_DELETE)
+        self.del_b.connect ('clicked', self.del_cb, None)
+        self.del_b.set_sensitive(False)
+        self.w.action_area.add (self.del_b)
+        self.new_b = gtk.Button (stock = gtk.STOCK_NEW)
+        self.new_b.connect ('clicked', self.add_cb, None)
+        self.new_b.set_sensitive(False)
+        self.w.action_area.add (self.new_b)
 
         self.w.action_area.add (self.apply_b)
         if self.has_native: self.w.action_area.add (self.native_b)
@@ -838,13 +1030,14 @@ class Editor (Connector.Publisher):
         # this is the working copy of the entry
         self.current     = copy.deepcopy (entry)
         
-        # put the negated value, so that we can call toggle to switch and create
-        self.native_mode = not (self.has_native and
-                                Config.get ('gnome/native-as-default').data)
+        # put the negated value, so that we can call
+        # toggle to switch and create
+        self.native_mode = not (self.has_native and Config.get (
+            'gnome/native-as-default').data)
 
         self.toggle_native ()
         
-        self.w.show ()
+        self.w.show_all ()
         return
 
 
@@ -866,27 +1059,29 @@ class Editor (Connector.Publisher):
             self.native_mode = False
             
             if self.has_native:
-                self.native_b.get_children () [0].set_text (_("Native Editing"))
+                self.native_b.get_children () [0].set_text (
+                    _("Native Editing"))
 
+            self.editor = RealEditor (self.database, self.current, self)
             
-            self.editor = RealEditor (self.database, self.current)
-            
-            ui_width  = Utils.config.get_int ('/apps/pybliographic/editor/width')  or -1
-            ui_height = Utils.config.get_int ('/apps/pybliographic/editor/height') or -1
+            ui_width  = Utils.config.get_int (
+                '/apps/pybliographic/editor/width')  or -1
+            ui_height = Utils.config.get_int (
+                '/apps/pybliographic/editor/height') or -1
 
         else:
             if self.editor:
                 cur = self.editor.update (self.database, self.current)
 
-                # Reject the switch if the data is invalid
-                if cur is None: return
+            self.page.hide_all()     # Reject the swJulyitch if the data is invalid
+            if cur is None: return
 
-                if not self.database.has_key (cur.key):
+            if not self.database.has_key (cur.key):
 
-                    # We need to insert the entry as it is currently,
-                    # in order to generate a Key
-                    cur = self.database.add (cur)
-                    
+                # We need to insert the entry as it is currently,
+                # in order to generate a Key
+                cur = self.database.add (cur)
+                
                 self.editor.w.destroy ()
                 self.current = cur
 
@@ -894,12 +1089,15 @@ class Editor (Connector.Publisher):
             self.native_mode = True
 
             if self.has_native:
-                self.native_b.get_children () [0].set_text (_("Standard Editing"))
+                self.native_b.get_children () [0].set_text (
+                    _("Standard Editing"))
             
             self.editor = NativeEditor (self.database, self.current)
 
-            ui_width  = Utils.config.get_int ('/apps/pybliographic/native/width')  or -1
-            ui_height = Utils.config.get_int ('/apps/pybliographic/native/height') or -1
+            ui_width  = Utils.config.get_int (
+                '/apps/pybliographic/native/width')  or -1
+            ui_height = Utils.config.get_int (
+                '/apps/pybliographic/native/height') or -1
 
 
         self.editor.Subscribe ('apply', self.apply_changes)
@@ -915,16 +1113,32 @@ class Editor (Connector.Publisher):
         self.editor.w.show ()
         return
 
+    def apply_changes (self, * arg):
+        
+        new = self.editor.update (self.database, self.current)
+        if new:
+            self.close_dialog ()
+            if new is not self.entry:
+                self.issue ('commit-edition', self.entry, new)
+        return
+    
+
+        # set window size
+        if ui_width != -1 and ui_height != -1:        
+            self.w.set_default_size (ui_width, ui_height)
+            self.w.resize (ui_width, ui_height)
+        
+        self.editor.w.show ()
+        return
+
+    
+
     
     def next_item (self, * arg):
         if self.native_mode: return
         
         n = self.editor.notebook
         box = n.get_nth_page (n.get_current_page ())
-        
-        box.focus (DIR_DOWN)
-        pass
-
 
     def save_size (self):
         if not self.editor: return
@@ -943,12 +1157,222 @@ class Editor (Connector.Publisher):
         self.w.destroy ()
         return
 
+    def add_cb (self, button, data):
+        """Called when the add button is pressed"""
 
-    def apply_changes (self, * arg):
-        new = self.editor.update (self.database, self.current)
-        if new:
-            self.close_dialog ()
-            if new is not self.entry:
-                self.issue ('commit-edition', self.entry, new)
-        return
+        if self.editor:
+            self.editor.add_cb (button, data)
+
+    def del_cb (self, button, data):
+        """Called when the delete button is pressed"""
+
+        if self.editor:
+            self.editor.del_cb (button, data)
+
+
+    def update_buttons (self, **argh):
+        old = self.lt_callbacks
+        self.callbacks.update(argh)  
+
+        return old
+
+    def set_buttons (self, **argh):
+        self.callbacks = argh
+        
+
     
+    
+        
+#####################################################################
+
+class LT_Widget_1:
+
+    def __init__ (self, editor, position, dialogue):
+        self.editor = editor
+        self.notebook = editor.notebook
+        self.entry = self.editor.entry
+        self.dialogue = dialogue
+        self.node = None
+        
+        self.page = gtk.ScrolledWindow ()
+        self.label = gtk.Label (_('Notes'))
+        self.page.set_policy (gtk.POLICY_AUTOMATIC,
+                              gtk.POLICY_AUTOMATIC)
+        self.display_list (self.entry, self.editor.lt_nodes)
+
+        self.page.set_data ('pyblio-owner', self)
+        self.page.show_all()
+        self.notebook.insert_page (self.page, self.label, position)
+        #list_remove (self.editor.fields, self.keys) 
+
+        self.enable_buttons()
+
+    def display_list (self, entry, nodes):
+        content = gtk.VBox()
+        for i in range (len(nodes)):
+            node = nodes[i]
+            key = node['key'] 
+            vbox =  gtk.VBox()
+            anno_label = gtk.Label()
+            anno_label.set_alignment (0, 0.5)
+            if node.get('mandatory', False):
+                l = '<b>%s</b>  <span color="red">%s</span>' %(
+                    key, _('mandatory'))
+            else:
+                l = "<b>%s</b>" %(key)
+            anno_label.set_markup(l)
+            vbox.pack_start (anno_label)
+            if not entry.has_key(key):
+                entry[key] = Fields.LongText('')
+            t = str (entry[key])
+            l = min (len(t), 150)
+            text_label = gtk.Label(t[0:l])
+            text_label.set_line_wrap (True)
+            text_label.set_size_request ( 500, 45) ##  XXX
+            text_label.set_alignment (0.1, .2)
+            vbox.pack_start (text_label)
+            ebox = gtk.Button()
+            ebox.add (vbox)
+            ebox.connect ('clicked', self.lt_select_detail, i)
+            content.pack_start(ebox, False, False)
+
+        page_child = self.page.get_child()
+        if page_child:
+            self.page.remove (page_child)
+        self.page.add_with_viewport (content)
+        self.page.show_all()
+
+
+    #------------------------------------------------------------
+    #   Buttons
+
+    def enable_buttons(self):
+        """Sets and enables buttons for the longtext fields."""
+        d = self.dialogue
+        d.new_b.set_sensitive (True)
+
+    def lt_select_detail (self, button, pos):
+        self.editor.lt_display (pos)
+
+
+
+class LT_Widget_2:
+
+    def __init__ (self, notebook, position, dialogue):
+        self.notebook = notebook
+        self.position = position + 1
+        self.dialogue = dialogue
+        self.node = None
+        self.page = gtk.ScrolledWindow()
+        self.page.set_policy (gtk.POLICY_AUTOMATIC,
+                              gtk.POLICY_AUTOMATIC)
+        self.buff = gtk.TextBuffer()
+        self.content = gtk.TextView(self.buff)
+        self.label = gtk.Label()
+        self.page.add(self.content)
+        self.content.grab_focus()
+        self.page.set_data ('pyblio-owner', self)
+        self.content.set_wrap_mode (gtk.WRAP_WORD)
+        self.buff.connect('changed', self.changed_cb)
+        self.hidden = True
+        
+    def display (self, node, item):
+        self.node = node
+        self.entry = item
+        self.label.set_text (node.get('name', 'Text'))
+        key = node['key']
+        if not item.has_key(key):
+            item[key] = Fields.LongText(_('Enter text here'))
+        self.buff.set_text (str(item[key]), -1)
+        self.buff.set_modified (False)
+        self.page.show_all ()
+        if self.hidden:
+            self.hidden = False
+            self.notebook.insert_page (
+                self.page, self.label, self.position)
+        pos = self.notebook.page_num (self.page)
+        self.notebook.set_current_page (self.position)
+
+    def update (self):
+        if self.buff.get_modified ():
+            start, end = self.buff.get_bounds()
+            key = self.node['key']
+            text = self.buff.get_text (start, end)
+            self.entry[key].text = text
+            self.node.setdefault ('modified', True)
+            
+        
+    def hide (self):
+        if self.hidden:
+            return
+        pos = self.notebook.page_num (self.page)
+        if pos == -1:
+            print 'ERROR -- LT WIDGET 2: not in notebook'
+            return
+        self.node = None
+        #self.disable_buttons()
+        if not self.hidden:
+            self.notebook.remove_page (pos)#position)
+        self.hidden = True
+
+    def changed_cb (self, *args):
+
+        start, end = self.buff.get_bounds()
+        key = self.node['key']
+        self.entry[key].text = self.buff.get_text (start, end)
+        
+
+    def enable_buttons (self):
+        """Add and enable buttons."""
+        d = self.dialogue
+        d.del_b.set_sensitive(True)
+
+class  LT_Dialog_1     :
+
+    def __init__ (self, parent=None):
+        self.dialog = gtk.Dialog(
+            "New Annotation Name", parent, 0,
+            (gtk.STOCK_OK, gtk.RESPONSE_ACCEPT,
+             gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT))
+        self.dialog.vbox.set_border_width (24)
+        self.dialog.vbox. pack_start (
+            gtk.Label (
+            _('Name of the new annotation:')),
+            True, True, 6)
+        menu = gtk.Menu()
+        self.options = gtk.OptionMenu()
+        self.options.set_menu(menu)
+        self.dialog.vbox.pack_start (self.options, True, True, 12)
+        self.fields = [ x for x in Config.get ('base/fields').data
+                        if Types.get_field(x).type == Fields.LongText]
+        self.fields.sort()
+        for i in self.fields:
+            menu.append(gtk.MenuItem(i))
+        self.options.set_history(0)
+        self.options.grab_focus()
+        self.options.connect ('changed', self.changed)
+        self.dialog.set_default_response(gtk.RESPONSE_ACCEPT)
+
+    def changed (self, *args):
+        val = self.options.get_history()
+        self.value = self.fields[val]
+
+    def run (self):
+        self.dialog.show_all()
+        r = self.dialog.run()
+        if r == gtk.RESPONSE_ACCEPT:
+            name= self.value
+        else:
+            name = None
+        self.dialog.destroy()
+        return name
+
+
+     
+def list_remove (target, subtrahend):
+    for k in subtrahend:
+        try:
+            target.remove(k)
+        except ValueError:
+            pass
+    return target

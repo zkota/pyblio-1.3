@@ -376,6 +376,23 @@ class Text:
         return ft (self.text)
 
 
+class LongText (Text) :
+    """This subclass of text is used for long texts,
+    i.e. notes and abstracts. """
+
+    def __str__  (self):
+        return self.text
+    
+    def __repr__ (self):
+        return 'LongText (%s)' % `self.text`
+
+    def __len__  (self):
+        return len (self.text)
+
+    def __getitem__ (self, key):
+        return self.text[key]
+    
+   
 class URL:
     ''' Holder for URL data (for example, the location of a database) '''
 

@@ -25,7 +25,7 @@
 
 import sys, re, string
 
-from Pyblio import Iterator, Base, Fields, Exceptions, Utils
+from Pyblio import Base, Exceptions, Fields, Iterator, Types, Utils
 
 SimpleField  = 0
 AuthorField  = 1
@@ -33,7 +33,8 @@ SourceField  = 2
 KeywordField = 3
 
 separator_re = re.compile (r'<\d+>$')
-source_re    = re.compile (r'(\w+)?\(([^\)]+)\):(\d+-\d+)')
+#source_re    = re.compile (r'(\w+)?\(([^\)]+)\):(\d+-\d+)')
+
 compact_dot  = re.compile (r'\.(\s*\.)+')
 
 long_month = {
@@ -52,10 +53,11 @@ for key in long_month.keys ():
 
 class OvidLike (Iterator.Iterator):
 
-    def __init__ (self, file, mapping, deftype):
+    def __init__ (self, file, mapping, deftype, sourceregexp):
         self.file    = file
         self.deftype = deftype
         self.mapping = mapping
+        self.source_re = re.compile(sourceregexp, flags= re.VERBOSE)
         return
 
     def first (self):
@@ -71,8 +73,7 @@ class OvidLike (Iterator.Iterator):
             if line == '': continue
             
             if separator_re.match (line): break
-            
-            raise Exceptions.ParserError (["bad file format"])
+            print 'Ignored Prelude Line:', line
         
         return self.next ()
 
@@ -125,10 +126,11 @@ class OvidLike (Iterator.Iterator):
                 continue
 
             (name, type) = self.mapping [key]
+            text_type = Types.get_field (name).type
 
             # parse a simple text field
             if type == SimpleField:
-                entry [name] = Fields.Text (string.strip (dict [key]))
+                entry [name] = text_type (string.strip (dict [key]))
                 continue
 
             if type == KeywordField:
@@ -136,7 +138,7 @@ class OvidLike (Iterator.Iterator):
                 if entry.has_key (name):
                     text = str (entry [name]) + '  ' + text
                     
-                entry [name] = Fields.Text (text)
+                entry [name] = text_type (text)
                 continue
 
             # parse an author field
@@ -168,52 +170,46 @@ class OvidLike (Iterator.Iterator):
 
             # parse a source field
             if type == SourceField:
-                # separate fields by ,
-                fields = string.split(dict [key], ',')
 
-                if len (fields) == 1:
-                    print "warning: can't parse source"
-                    continue
+                m = self.source_re.match (dict[key])
 
-                journalName = string.strip(fields [0])
-                # extract volume, number, pages, ...
-                for i in range(1, len(fields)):
-                    fs = string.strip(fields[i])
-                    if fs[0:4] == 'vol.':
-                        entry ['volume'] = Fields.Text (fs[4:])
-                    elif fs[0:3] == "no.":
-                        entry ['number'] = Fields.Text (fs[3:])
-                    elif fs[0:3] == "pp.":
-                        fss = string.split(fs,'.')
-                        entry ['pages'] = Fields.Text(fss[1])
-                        journalName = journalName + ","\
-                                      + string.join(fss[2:], '.')
-                        # the date field precedes pages
-                        fss = string.split(fields[i-1])
-                        # we have to work from the end since there may be
-                        # characters unrelated to the date at the start of the
-                        # field
+                if m:
+                    year, month, day = None, None, None
+
+                    j, v, n, p, o, y, m = m.group(
+                        'journal', 'volume', 'number', 'pages',
+                        'other', 'year', 'month')
+
+                    if j:
+                        entry [name] = Fields.Text (j)
+
+                    if v:
+                        entry ['volume'] = Fields.Text (v)
+
+                    if n:
+                        entry ['number'] = Fields.Text (n)
+
+                    if p:
+                        entry ['pages'] = Fields.Text (p)
+
+                    if o:
+                        entry ['other-note'] = Fields.Text(o)
+
+                    if y:
+                        year = int(y)
+
+                    if m and not m.isspace():
+                        dates = m.split ()                    
                         try:
-                            year = int(fss[-1])
-                        except:
-                            year  = None
-                            print "warning: cannot parse year"
-                            print "offending line:", dict[key]
-                        try:
-                            month = long_month [fss[-2][:3]]
-                        except:
-                            month = None
-                        try:
-                            day = int(fss[-3])
-                        except:
-                            day   = None
-                        entry ['date'] = Fields.Date((year, month, day))
-                    else:
-                        # additional information we do not want to loose
-                        journalName = journalName + ", " + fs
-                        
-                # the journal name and additional information
-                entry [name [0]] = Fields.Text (journalName)
+                            month = long_month [dates[0]]
+                        except KeyError:
+                            print 'OVID Warning: %s is not representable in %s' %(
+                                dates[0], m)
+                        if len(dates) > 1:
+                            day = int (dates[1])
+                            
+                    entry ['date'] = Fields.Date((year, month, day))
+                
                 continue
 
             raise TypeError, "unknown field type `%d'" % type

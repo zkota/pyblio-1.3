@@ -34,6 +34,7 @@ _unpickle_db = _bibtex.open_string ("<unpickled>", '', 0);
 
 _base_fieldtype = {
     Text        : 0,
+    LongText    : 0,
     Date        : 3,
     AuthorGroup : 1,
     URL         : 0,
@@ -75,6 +76,23 @@ class BibTextField (Text):
 	    return self.native
 
 	return Text.format (self, fmt)
+
+
+class BibLongTextField (LongText):
+    ''' This class overrides the basic LongText class and provides
+    a specific method to write the entries as latex code '''
+
+    def __init__ (self, text, native):
+	LongText.__init__ (self, text)
+	self.native = native
+	return
+
+    def format (self, fmt):
+
+	if string.lower (fmt) == 'latex':
+	    return self.native
+
+	return LongText.format (self, fmt)
 
 
 class Entry (Base.Entry):
@@ -266,6 +284,10 @@ class Entry (Base.Entry):
 	elif fieldtype == Date:
 	    # Date
 	    val = Date ((ret [3], None, None))
+
+	elif fieldtype == LongText:
+	    # Annotation text
+	    val = BibLongTextField (ret [2], self.get_latex (key))
 
 	elif fieldtype == Text:
 	    # Any other text

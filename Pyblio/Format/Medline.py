@@ -156,11 +156,11 @@ class MedlineIterator (Iterator.Iterator):
             
         # The simple fields...
         for f in table.keys ():
-            if one_to_one.has_key (f):
-                norm [one_to_one [f]] = Fields.Text (string.join (table [f], " ; "))
-            else:
-                norm ['medline-' + string.lower (f)] = \
-                     Fields.Text (string.join (table [f], " ; "))
+            f_mapped = one_to_one.get(f, 'medline-%s' %(f.lower()))
+            text_type = Types.get_field(f_mapped).type
+            print 'MEDLINE: field name %s has type %s' %(
+                f_mapped, text_type)
+            norm [f_mapped] = text_type (string.join (table [f], " ; "))
         
         return Base.Entry (None, type, norm)
 
