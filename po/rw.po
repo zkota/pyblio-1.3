@@ -1,0 +1,1307 @@
+# translation of pybliographer to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the pybliographer package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-04-01 21:32-0700\n"
+"PO-Revision-Date: 2005-03-31 20:55-0700\n"
+"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
+"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"ULL NAME <EMAIL@ADDRESS>\n"
+
+#: Pyblio/Autoload.py:78
+#, fuzzy, python-format
+msgid "warning: can't import %s: %s"
+msgstr "Iburira Kuzana"
+
+#: Pyblio/Config.py:50
+#, fuzzy, python-format
+msgid "value of `%s' should be of type %s"
+msgstr "Agaciro Bya Bya Ubwoko"
+
+# svx/source\options\optcolor.src:RID_SVXPAGE_COLORCONFIG.CT_COLORCONFIG.WN_SCROLL.FT_BASICSTRING.text
+#: Pyblio/Config.py:209
+msgid "String"
+msgstr "Ikurikiranyanyuguti"
+
+#: Pyblio/Config.py:218
+msgid "Boolean"
+msgstr "Icyungo"
+
+#: Pyblio/Config.py:237
+msgid "Integer"
+msgstr "Umubare wuzuye"
+
+#: Pyblio/Config.py:239
+#, python-format
+msgid "Integer under %d"
+msgstr ""
+
+#: Pyblio/Config.py:241
+#, fuzzy, python-format
+msgid "Integer over %d"
+msgstr "KURI"
+
+#: Pyblio/Config.py:243
+#, fuzzy, python-format
+msgid "Integer between %d and %d"
+msgstr "hagati Na"
+
+#: Pyblio/Config.py:255
+#, fuzzy, python-format
+msgid "Element in `%s'"
+msgstr "in"
+
+#: Pyblio/Config.py:275
+#, python-format
+msgid "Tuple (%s)"
+msgstr ""
+
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFont.List.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFontCJK.List.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....DefaultFontCTL.List.text
+#: Pyblio/Config.py:296
+#, fuzzy, python-format
+msgid "List (%s)"
+msgstr "Urutonde"
+
+# #-#-#-#-#  svtools.pot (PACKAGE VERSION)  #-#-#-#-#
+# svtools/source\control\ctrlbox.src:STR_SVT_COLLATE_DICTIONARY.text
+# #-#-#-#-#  svtools.pot (PACKAGE VERSION)  #-#-#-#-#
+# svtools/source\control\ctrlbox.src:STR_SVT_INDEXENTRY_DICTIONARY.text
+#: Pyblio/Config.py:321
+#, fuzzy, python-format
+msgid "Dictionary (%s, %s)"
+msgstr "Inkoranyamagambo"
+
+#: Pyblio/Fields.py:261
+#, fuzzy
+msgid "Illegal year value"
+msgstr "Umwaka Agaciro"
+
+#: Pyblio/Fields.py:265
+#, fuzzy
+msgid "Illegal month value"
+msgstr "Ukwezi Agaciro"
+
+#: Pyblio/Fields.py:269
+#, fuzzy
+msgid "Illegal day value"
+msgstr "UMUNSI Agaciro"
+
+# vcl/source\src\units.src:SV_FUNIT_STRINGS.10.text
+#: Pyblio/Fields.py:463
+#, fuzzy, python-format
+msgid "in %s"
+msgstr "in"
+
+#: Pyblio/Format/BibTeX.py:369 Pyblio/Format/BibTeX.py:427
+#, fuzzy, python-format
+msgid "key `%s' is malformed"
+msgstr "Urufunguzo ni"
+
+#: Pyblio/Format/BibTeX.py:390 Pyblio/Format/BibTeX.py:411
+#, fuzzy, python-format
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d:Urufunguzo"
+
+#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
+#, fuzzy
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr "Amahinduka Kuri Ongera utangire Aderesi"
+
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\miscdlgs.src:RID_SCDLG_COL_OPT.FT_LABEL.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\miscdlgs.src:RID_SCDLG_ROW_OPT.FT_LABEL.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\scstring.src:STR_OPT_ROWHEIGHT.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\scstring.src:STR_OPT_COLWIDTH.text
+#: Pyblio/GnomeUI/Config.py:429
+msgid "Add"
+msgstr "Kongera"
+
+#: Pyblio/GnomeUI/Config.py:432
+msgid "Update"
+msgstr "Kuvugurura"
+
+# sc/source\ui\dbgui\pivot.src:RID_SCDLG_PIVOT_LAYOUT.BTN_REMOVE.text
+#: Pyblio/GnomeUI/Config.py:435 Pyblio/GnomeUI/Config.py:547
+msgid "Remove"
+msgstr "Gukuraho"
+
+#: Pyblio/GnomeUI/Config.py:544
+msgid "Set"
+msgstr "Gushyiraho"
+
+# svtools/source\dialogs\colrdlg.src:DLG_COLOR.FT_KEY.text
+#: Pyblio/GnomeUI/Config.py:559
+#, fuzzy
+msgid "Key:"
+msgstr "Urufunguzo"
+
+#: Pyblio/GnomeUI/Config.py:561
+msgid "Value:"
+msgstr "Agaciro:"
+
+#: Pyblio/GnomeUI/Document.py:132
+#, fuzzy
+msgid "Unnamed bibliographic database"
+msgstr "Ububikoshingiro"
+
+#: Pyblio/GnomeUI/Document.py:219
+#, fuzzy, python-format
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr "Gufungura IDOSIYE kugirango"
+
+#: Pyblio/GnomeUI/Document.py:240
+#, python-format
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+
+# 4048
+#: Pyblio/GnomeUI/Document.py:256
+#, fuzzy
+msgid "New database"
+msgstr "ubushyinguro bushya"
+
+#: Pyblio/GnomeUI/Document.py:264 Pyblio/GnomeUI/Document.py:268
+#, fuzzy
+msgid "[no entry]"
+msgstr "[Oya Icyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:265
+#, fuzzy
+msgid "[1 entry]"
+msgstr "[1. Icyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:266
+#, fuzzy, python-format
+msgid "[%d entries]"
+msgstr "[%dIbyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:269
+#, fuzzy, python-format
+msgid "[%d/1 entry]"
+msgstr "[%d/1. Icyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:270
+#, fuzzy, python-format
+msgid "[%d/%d entries]"
+msgstr "[%d/%dIbyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:275
+#, fuzzy
+msgid "[modified]"
+msgstr "[Byahinduwe"
+
+#: Pyblio/GnomeUI/Document.py:288
+#, fuzzy
+msgid ""
+"The database has been modified.\n"
+"Discard changes ?"
+msgstr "Ububikoshingirobwahinduwe."
+
+#. no result.
+#: Pyblio/GnomeUI/Document.py:313
+#, fuzzy
+msgid "Your query returned no result"
+msgstr "Ikibazo# Oya Igisubizo"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:323
+#, fuzzy
+msgid "Merge file"
+msgstr "IDOSIYE"
+
+#: Pyblio/GnomeUI/Document.py:335 Pyblio/GnomeUI/Document.py:389
+#, fuzzy
+msgid "Open error"
+msgstr "Ikosa"
+
+#: Pyblio/GnomeUI/Document.py:359
+#, fuzzy
+msgid "Merge status"
+msgstr "Imimerere"
+
+# sfx2/sdi\sfxslots.src:SID_OPENDOC.text
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:370
+#, fuzzy
+msgid "Open file"
+msgstr "Gufungura Dosiye"
+
+#: Pyblio/GnomeUI/Document.py:418
+#, fuzzy
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr "Ububikoshingiro Byahinduwe Gusimbuza Amahinduka"
+
+#: Pyblio/GnomeUI/Document.py:428
+#, fuzzy, python-format
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr "Kuri Kubika"
+
+#: Pyblio/GnomeUI/Document.py:436
+#, fuzzy
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr "By'imbere Ikosa Kuri Kubika"
+
+#. get a new file name
+#: Pyblio/GnomeUI/Document.py:450
+msgid "Save As..."
+msgstr "Bika nka..."
+
+#: Pyblio/GnomeUI/Document.py:456
+#, fuzzy, python-format
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr "Idosiyeisanzweho."
+
+#: Pyblio/GnomeUI/Document.py:463
+#, fuzzy, python-format
+msgid ""
+"During opening:\n"
+"%s"
+msgstr "Gufungura %s%S"
+
+#: Pyblio/GnomeUI/Document.py:481
+#, fuzzy
+msgid "Reopen error"
+msgstr "Ikosa"
+
+#: Pyblio/GnomeUI/Document.py:528
+#, fuzzy, python-format
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr "Icyinjijwe Na Kongeramo"
+
+#: Pyblio/GnomeUI/Document.py:565
+#, fuzzy
+msgid "Really remove all the entries ?"
+msgstr "Gukuraho... Byose i Ibyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:585
+#, fuzzy
+msgid "Create new entry"
+msgstr "Gishya Icyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:599
+#, fuzzy, python-format
+msgid "Really edit %d entries ?"
+msgstr "Guhindura Ibyinjijwe"
+
+#: Pyblio/GnomeUI/Document.py:637
+#, fuzzy, python-format
+msgid "Remove all the %d entries ?"
+msgstr "Byose i Ibyinjijwe"
+
+# 5063
+#: Pyblio/GnomeUI/Document.py:639
+#, fuzzy, python-format
+msgid "Remove entry `%s' ?"
+msgstr "Vanaho Umwinjizo"
+
+#: Pyblio/GnomeUI/Document.py:725 Pyblio/GnomeUI/Document.py:733
+#, fuzzy, python-format
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr "Kwihuza Kuri"
+
+#: Pyblio/GnomeUI/Document.py:806
+#, fuzzy, python-format
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr "Kugaragaza"
+
+#: Pyblio/GnomeUI/Document.py:814
+#, fuzzy
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "Porogaramu ni i"
+
+#: Pyblio/GnomeUI/Document.py:815
+#, fuzzy
+msgid "Gnome interface to the Pybliographer system."
+msgstr "Kuri i Sisitemu"
+
+#: Pyblio/GnomeUI/Document.py:825
+msgid "Gnome Translation Team"
+msgstr ""
+
+#: Pyblio/GnomeUI/Document.py:830
+msgid "Pybliographer Home Page"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:39
+msgid "Last Name, First Name"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:40 Pyblio/GnomeUI/Editor.py:1290
+#: Pyblio/GnomeUI/Fields.py:39 glade/config1.glade.h:14
+#: glade/fields1.glade.h:19
+msgid "Text"
+msgstr "Umwandiko"
+
+#: Pyblio/GnomeUI/Editor.py:137 Pyblio/GnomeUI/Editor.py:973
+#, fuzzy
+msgid "Error in native string parsing"
+msgstr "in Ikurikiranyanyuguti"
+
+# svtools/source\control\calendar.src:STR_SVT_CALENDAR_DAY.text
+#: Pyblio/GnomeUI/Editor.py:316
+msgid "Day"
+msgstr "Umunsi"
+
+# sw/source\ui\utlui\initui.src:STR_AUTH_FIELD_MONTH.text
+#: Pyblio/GnomeUI/Editor.py:325
+msgid "Month"
+msgstr "Ukwezi"
+
+# sw/source\ui\utlui\initui.src:STR_AUTH_FIELD_YEAR.text
+#: Pyblio/GnomeUI/Editor.py:334
+msgid "Year"
+msgstr "Umwaka"
+
+#: Pyblio/GnomeUI/Editor.py:359
+#, fuzzy
+msgid "Invalid day field in date"
+msgstr "UMUNSI Umwanya in Itariki"
+
+#: Pyblio/GnomeUI/Editor.py:367
+#, fuzzy
+msgid "Invalid month field in date"
+msgstr "Ukwezi Umwanya in Itariki"
+
+#: Pyblio/GnomeUI/Editor.py:375
+#, fuzzy
+msgid "Invalid year field in date"
+msgstr "Umwaka Umwanya in Itariki"
+
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.SID_BASICIDE_DELETECURRENT.text
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_DEL.text
+#. A delete button
+#: Pyblio/GnomeUI/Editor.py:423 Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "Gusiba"
+
+#: Pyblio/GnomeUI/Editor.py:434 Pyblio/GnomeUI/Editor.py:447
+#: Pyblio/GnomeUI/Editor.py:450
+msgid "[ Drop an Entry here ]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
+#: glade/config1.glade.h:8 glade/fields1.glade.h:6
+#, fuzzy
+msgid "Entry type"
+msgstr "Ubwoko"
+
+# 3348
+#: Pyblio/GnomeUI/Editor.py:525
+msgid "Key"
+msgstr "Urufunguzo"
+
+#: Pyblio/GnomeUI/Editor.py:566
+msgid "Create Field"
+msgstr ""
+
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_AXIS.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_X_AXIS.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_Y_AXIS.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_Z_AXIS.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_GRID.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib2.src:TAB_LINE.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib.src:TAB_TITLE.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib.src:TAB_LEGEND.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib.src:TAB_DATA_LINE.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib.src:TAB_DATA_POINT.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib3.src:TAB_DIAGRAM_FLOOR.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib3.src:TAB_DIAGRAM_AREA.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib4.src:TAB_DIAGRAM_STOCK_LOSS.1.text
+# #-#-#-#-#  sch.pot (PACKAGE VERSION)  #-#-#-#-#
+# sch/source\ui\dlg\attrib4.src:TAB_DIAGRAM_STOCK_PLUS.1.text
+#. navigation buttons
+#: Pyblio/GnomeUI/Editor.py:571
+msgid "Back"
+msgstr "Inyuma"
+
+#: Pyblio/GnomeUI/Editor.py:574
+msgid "Next"
+msgstr "Ikurikira"
+
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:451
+msgid "Mandatory"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:452
+msgid "Optional"
+msgstr "Bitari ngombwa"
+
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Impress.xcs:....Print.Content.Note.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\WriterWeb.xcs:....Content.Display.Note.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Content.Display.Note.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Agenda.Elements.Notes.text
+#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Editor.py:1205
+msgid "Notes"
+msgstr "Ibisobanuro"
+
+#: Pyblio/GnomeUI/Editor.py:691
+#, fuzzy
+msgid "Extra"
+msgstr "Birenga"
+
+#: Pyblio/GnomeUI/Editor.py:870
+#, fuzzy
+msgid "Invalid key format"
+msgstr "Urufunguzo Imiterere"
+
+#: Pyblio/GnomeUI/Editor.py:878
+#, python-format
+msgid "Key `%s' already exists"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:895
+#, fuzzy, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "Umwanya Kirimo a 1. IKIMENYETSO"
+
+#: Pyblio/GnomeUI/Editor.py:965
+#, fuzzy
+msgid "Your text contains non Latin-1 symbols"
+msgstr "Umwandiko Kirimo 1. Ibimenyetso"
+
+#: Pyblio/GnomeUI/Editor.py:986
+#, fuzzy
+msgid "Edit entry"
+msgstr "Icyinjijwe"
+
+#: Pyblio/GnomeUI/Editor.py:1000 Pyblio/GnomeUI/Editor.py:1071
+msgid "Native Editing"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:1100
+msgid "Standard Editing"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:1227
+msgid "mandatory"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:1293
+#, fuzzy
+msgid "Enter text here"
+msgstr "Umwandiko"
+
+#: Pyblio/GnomeUI/Editor.py:1345
+msgid "New Annotation Name"
+msgstr ""
+
+#: Pyblio/GnomeUI/Editor.py:1351
+#, fuzzy
+msgid "Name of the new annotation:"
+msgstr "Bya i Gishya Inyandiko nyongera"
+
+#: Pyblio/GnomeUI/Entry.py:114
+#, fuzzy, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr "Gufungura"
+
+#: Pyblio/GnomeUI/Fields.py:38
+msgid "Authors"
+msgstr "Abahanzi"
+
+#: Pyblio/GnomeUI/Fields.py:40
+msgid "Long Text"
+msgstr ""
+
+#: Pyblio/GnomeUI/Fields.py:41 glade/config1.glade.h:16
+#: glade/fields1.glade.h:21
+msgid "URL"
+msgstr "URL"
+
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\scfuncs.src:RID_SC_FUNCTION_DESCRIPTIONS1.SC_OPCODE_FORMULA.2.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\scfuncs.src:RID_SC_FUNCTION_DESCRIPTIONS1.SC_OPCODE_CELL.4.text
+#: Pyblio/GnomeUI/Fields.py:42
+msgid "Reference"
+msgstr "Indango"
+
+#: Pyblio/GnomeUI/Fields.py:43
+msgid "Date"
+msgstr "Itariki"
+
+#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
+#: glade/fields1.glade.h:10
+msgid "Name"
+msgstr "Izina"
+
+# filter/source\xsltdialog\xmlfilterdialogstrings.src:STR_COLUMN_HEADER_TYPE.text
+#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
+#: glade/fields1.glade.h:20
+msgid "Type"
+msgstr "Ubwoko"
+
+# setup2/source\ui\pages\pipath.src:RESID_PAGE_PAGEINSTPATH.STR_FREE.text
+#: Pyblio/GnomeUI/Fields.py:300
+msgid "Available"
+msgstr "Bihari"
+
+#: Pyblio/GnomeUI/Fields.py:310
+msgid "Associated"
+msgstr ""
+
+#: Pyblio/GnomeUI/Fields.py:321
+#, fuzzy
+msgid "Please, select an entry type from previous page."
+msgstr "Guhitamo Icyinjijwe Ubwoko Bivuye Ibanjirije Ipaji"
+
+#: Pyblio/GnomeUI/Fields.py:332
+#, fuzzy, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "Na: B B Icyinjijwe Ubwoko"
+
+# sc/source\ui\src\scfuncs.src:RID_SC_FUNCTION_DESCRIPTIONS2.SC_OPCODE_DDE.4.text
+#: Pyblio/GnomeUI/FileSelector.py:46
+msgid "File"
+msgstr "Idosiye"
+
+#: Pyblio/GnomeUI/FileSelector.py:101
+#, fuzzy
+msgid "Bibliography type:"
+msgstr "Ubwoko"
+
+#: Pyblio/GnomeUI/FileSelector.py:119
+#, fuzzy
+msgid " - According to file suffix - "
+msgstr "-Kuri IDOSIYE Ingereka"
+
+#: Pyblio/GnomeUI/Index.py:104
+msgid "Add..."
+msgstr "Kingeraho"
+
+# dbaccess/source/ui/inc/toolbox.hrc:MID_DBUI_QUERY_EDIT_JOINCONNECTION.text
+#: Pyblio/GnomeUI/Index.py:106
+msgid "Edit..."
+msgstr "Kwandika..."
+
+# sfx2/source\dialog\dialog.src:MN_CONTEXT_TEMPLDLG.ID_DELETE.text
+#: Pyblio/GnomeUI/Index.py:108
+msgid "Delete..."
+msgstr "Gusiba..."
+
+#. The root of the search tree is the full database
+#: Pyblio/GnomeUI/Search.py:71
+#, fuzzy
+msgid "Full database"
+msgstr "Ububikoshingiro"
+
+#: Pyblio/GnomeUI/Search.py:142
+#, fuzzy
+msgid "internal error during evaluation"
+msgstr "By'imbere Ikosa"
+
+#: Pyblio/GnomeUI/Search.py:196
+#, fuzzy, python-format
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr "Ikosa"
+
+#. These are additional search fields
+#: Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr ""
+
+#: Pyblio/GnomeUI/Utils.py:194
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr "Amakosa"
+
+#: Pyblio/GnomeUI/__init__.py:45
+#, fuzzy, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "ni"
+
+#: Pyblio/LyX.py:37
+#, fuzzy, python-format
+msgid "no input pipe `%s'"
+msgstr "Oya Iyinjiza"
+
+#: Pyblio/LyX.py:43
+#, fuzzy, python-format
+msgid "no output pipe `%s'"
+msgstr "Oya Ibisohoka"
+
+#: Pyblio/Open.py:95
+#, fuzzy, python-format
+msgid "method `%s' provides no opener"
+msgstr "Uburyo Oya"
+
+#: Pyblio/Open.py:103 Pyblio/Open.py:149
+#, fuzzy, python-format
+msgid "File `%s' does not exist"
+msgstr "Idosiye OYA"
+
+#: Pyblio/Open.py:114 Pyblio/Open.py:160
+#, fuzzy, python-format
+msgid "don't know how to open `%s'"
+msgstr "Kuri Gufungura"
+
+#: Pyblio/Open.py:141
+#, fuzzy, python-format
+msgid "method `%s' provides no iterator"
+msgstr "Uburyo Oya"
+
+#: Pyblio/Style/Parser.py:261
+#, fuzzy, python-format
+msgid "missing '%s' attribute"
+msgstr "Ibuze Ikiranga"
+
+#: Pyblio/Style/Parser.py:271
+#, fuzzy, python-format
+msgid "invalid opening tag: %s"
+msgstr "Sibyo Gufungura %s%S Itagi:"
+
+#: Pyblio/Style/Parser.py:281
+#, fuzzy, python-format
+msgid "invalid closing tag: %s"
+msgstr "Sibyo Itagi:"
+
+#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
+#: glade/medline.glade.h:1 glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: glade/config1.glade.h:2
+#, fuzzy
+msgid "<b>Entry type</b>"
+msgstr "<B Ubwoko B"
+
+# sw/source\ui\index\cnttab.src:TP_TOX_ENTRY.WIN_TOKEN.STR_TOKEN_AUTHORITY.text
+#: glade/config1.glade.h:3
+msgid "A"
+msgstr "A"
+
+#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+msgid "Association"
+msgstr ""
+
+#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+msgid "Datum"
+msgstr ""
+
+#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "Muhinduzi"
+
+# #-#-#-#-#  sw.pot (PACKAGE VERSION)  #-#-#-#-#
+# sw/source\ui\index\cnttab.src:DLG_MULTI_TOX.1.TP_TOX_ENTRY.text
+# #-#-#-#-#  sw.pot (PACKAGE VERSION)  #-#-#-#-#
+# sw/source\ui\index\cnttab.src:DLG_CREATE_AUTOMARK.FL_ENTRIES.text
+#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "Ibyinjizwa"
+
+#: glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr ""
+
+#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+#, fuzzy
+msgid "Fields "
+msgstr "Imyanya"
+
+#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+#, fuzzy
+msgid "Name "
+msgstr "Izina"
+
+#: glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr ""
+
+#: glade/config1.glade.h:17
+#, fuzzy
+msgid "standard fields"
+msgstr "Bisanzwe Imyanya"
+
+#: glade/fields1.glade.h:7
+#, fuzzy
+msgid "Entry types and field names configuration"
+msgstr "Na Umwanya Amazina Iboneza"
+
+#: glade/fields1.glade.h:9
+#, fuzzy
+msgid "Information for <b>Article</b> entry type"
+msgstr "kugirango B B Icyinjijwe Ubwoko"
+
+#: glade/fields1.glade.h:12
+#, fuzzy
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr "Icyinjijwe Ubwoko Na Imyanya ku i Komeza>> Ipaji"
+
+#: glade/format.glade.h:2
+#, fuzzy
+msgid "Bibliography style:"
+msgstr "IMISUSIRE"
+
+#: glade/format.glade.h:3
+#, fuzzy
+msgid "Format entries"
+msgstr "Ibyinjijwe"
+
+#: glade/format.glade.h:4
+#, fuzzy
+msgid "Output file:"
+msgstr "IDOSIYE"
+
+#: glade/format.glade.h:5
+#, fuzzy
+msgid "Output format:"
+msgstr "Imiterere"
+
+#: glade/format.glade.h:6
+#, fuzzy
+msgid "Save Formatted as"
+msgstr "Kubika Nka"
+
+#: glade/format.glade.h:7
+msgid "Style Selection"
+msgstr ""
+
+#: glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr ""
+
+# sfx2/source\dialog\mailwindow.src:RID_MAIL_WINDOW.FT_MAILWIN_FROM.text
+#: glade/medline.glade.h:3
+msgid "From:"
+msgstr "Birava"
+
+#: glade/medline.glade.h:4
+#, fuzzy
+msgid "Limited to:"
+msgstr "Kuri"
+
+#: glade/medline.glade.h:5
+#, fuzzy
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr "Ibisubizo ku"
+
+#: glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr ""
+
+#: glade/medline.glade.h:8
+#, fuzzy
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr "Bya Gucapa"
+
+#: glade/medline.glade.h:10
+#, fuzzy
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr "Na:"
+
+#: glade/medline.glade.h:12
+#, fuzzy
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr "kugirango"
+
+#: glade/medline.glade.h:14
+#, fuzzy
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr "Umubare"
+
+# address labels
+# LOCALIZATION NOTE addressingWidgetOverlay.dtd The basic mail/news composition headers as they are seen in UI
+#: glade/medline.glade.h:16
+msgid "To:"
+msgstr "Kuri:"
+
+#: glade/medline.glade.h:17
+#, fuzzy
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr "i Imiterere Na UMUNSI Bitari ngombwa"
+
+#: glade/pyblio.glade.h:1
+msgid "Cite"
+msgstr ""
+
+#: glade/pyblio.glade.h:2
+msgid "Cite..."
+msgstr ""
+
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\dbgui\validate.src:TP_VALIDATION_INPUTHELP.FL_CONTENT.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\dbgui\validate.src:TP_VALIDATION_ERROR.FL_CONTENT.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\navipi\navipi.src:RID_SCDLG_NAVIGATOR.TBX_CMD.IID_ZOOMOUT.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\navipi\navipi.src:SCSTR_CONTENT_ROOT.text
+#: glade/pyblio.glade.h:3
+msgid "Contents"
+msgstr "Ibigize"
+
+# sw/source\ui\inc\swmn.hrc:_MN_EDIT_FIELD.FN_EDIT_FIELD.text
+#: glade/pyblio.glade.h:4
+msgid "Fields..."
+msgstr "Imyanya..."
+
+#: glade/pyblio.glade.h:5
+#, fuzzy
+msgid "Forget all changes"
+msgstr "Byose Amahinduka"
+
+# svx/source\dialog\srchdlg.src:RID_SVXDLG_SEARCH.BTN_FORMAT.text
+#: glade/pyblio.glade.h:6
+#, fuzzy
+msgid "Format..."
+msgstr "Imiterere..."
+
+#: glade/pyblio.glade.h:7
+msgid "Medline Query..."
+msgstr ""
+
+#: glade/pyblio.glade.h:8
+msgid "Merge With..."
+msgstr ""
+
+# sfx2/sdi\sfxslots.src:SID_OPENDOC.text
+#: glade/pyblio.glade.h:9
+msgid "Open File"
+msgstr "Gufungura Dosiye"
+
+#: glade/pyblio.glade.h:10
+msgid "Previous Documents"
+msgstr ""
+
+#: glade/pyblio.glade.h:11
+msgid "Pybliographer"
+msgstr ""
+
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\menue.src:SCCFG_PLUGINMENU.SUBMENU_DATA.SID_SORT.text
+# #-#-#-#-#  sc.pot (PACKAGE VERSION)  #-#-#-#-#
+# sc/source\ui\src\menue.src:SCCFG_MENUBAR.SUBMENU_DATA.SID_SORT.text
+#: glade/pyblio.glade.h:12
+#, fuzzy
+msgid "S_ort..."
+msgstr "Gushungura..."
+
+#: glade/pyblio.glade.h:13
+msgid "Save File"
+msgstr "Bika idosiye"
+
+#: glade/pyblio.glade.h:14
+msgid "Settings"
+msgstr "Amagenamiterere"
+
+# padmin/source\padialog.src:RID_FONTNAMEDIALOG.RID_FNTNM_BTN_IMPORT.text
+#: glade/pyblio.glade.h:15
+#, fuzzy
+msgid "_Add..."
+msgstr "Kongeraho"
+
+# dbaccess/source/ui/inc/toolbox.hrc:MID_EDIT_DELETE.text
+#: glade/pyblio.glade.h:16
+#, fuzzy
+msgid "_Delete..."
+msgstr "Guhanagura..."
+
+# dbaccess/source/ui/inc/toolbox.hrc:MID_DBUI_QUERY_EDIT_JOINCONNECTION.text
+#: glade/pyblio.glade.h:17
+#, fuzzy
+msgid "_Edit..."
+msgstr "Kwandika..."
+
+# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
+#: glade/pyblio.glade.h:18
+#, fuzzy
+msgid "_New"
+msgstr "Gishya"
+
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_CLOSE.text
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\macrodlg.src:RID_STR_CLOSE.text
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_CLOSE.text
+# #-#-#-#-#  basctl.pot (PACKAGE VERSION)  #-#-#-#-#
+# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_CLOSE.text
+#: glade/search.glade.h:2
+msgid "Close"
+msgstr "Gufunga"
+
+#: glade/search.glade.h:3
+msgid "Expert Search"
+msgstr ""
+
+# wizards/source\formwizard\dbwizres.src:RID_DB_REPORT_WIZARD_START_+_71.text
+#: glade/search.glade.h:4
+msgid "Field"
+msgstr "Umwanya"
+
+# svx/source\tbxctrls\tbcontrl.src:RID_SVXSTR_FILLPATTERN.text
+#: glade/search.glade.h:5
+msgid "Pattern"
+msgstr "Umutako"
+
+#: glade/search.glade.h:6
+msgid "Query"
+msgstr "Ikibazo"
+
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\inetdlg.src:RID_OFADLG_INTERNET.1.RID_SVXPAGE_INET_SEARCH.text
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_INET_DLG.3.text
+#: glade/search.glade.h:7
+msgid "Search"
+msgstr "Gushaka"
+
+#: glade/search.glade.h:8
+msgid "Simple Search"
+msgstr ""
+
+#: glade/sort.glade.h:1
+#, fuzzy
+msgid "Select sort criterions"
+msgstr "Ishungura"
+
+#: glade/sort.glade.h:2
+#, fuzzy
+msgid "Set as default"
+msgstr "Shyiraho nka Mburabuzi."
+
+#: pybliographer.py:43
+#, fuzzy, python-format
+msgid "This is %s, version %s"
+msgstr "ni Verisiyo"
+
+#: pybliographer.py:47 pybliographer.py:54
+#, fuzzy
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "ni Kigenga Na:"
+
+#: pybliographer.py:48
+#, fuzzy
+msgid "For details, type `warranty'."
+msgstr "Birambuye Ubwoko"
+
+#: pybliographer.py:111 pybliographer.py:163
+#, fuzzy, python-format
+msgid "%s: error: can't open file `%s'"
+msgstr "%s:Ikosa Gufungura IDOSIYE"
+
+#: pybliographer.py:124
+#, fuzzy, python-format
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "Ifashayobora Gukoresha Na Ubwoko ku i Urwinjiriro"
+
+#: pybliographer.py:133
+#, fuzzy
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr "Amabwiriza Ifashayobora Kuri Kubona Kuri"
+
+#. save history
+#: pybliographic.desktop.in.h:1
+msgid "Bibliography Manager"
+msgstr ""
+
+#: pybliographic.desktop.in.h:2
+#, fuzzy
+msgid "Manage bibliographic databases"
+msgstr "Ububikoshingiro"
+
+#: pybliographic.desktop.in.h:3
+msgid "Pybliographic Bibliography Manager"
+msgstr ""
+
+#: scripts/pybcheck.py:31
+#, fuzzy
+msgid "usage: pybcheck <file | directory>..."
+msgstr "Ikoresha: IDOSIYE bushyinguro"
+
+#: scripts/pybcheck.py:60
+#, fuzzy, python-format
+msgid "file `%s' is ok [%d entries]"
+msgstr "IDOSIYE ni YEGO Ibyinjijwe"
+
+#: scripts/pybcompact.py:30
+#, fuzzy
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "Ikoresha:"
+
+#: scripts/pybcompact.py:34
+#, fuzzy, python-format
+msgid "pybcompact: error: %s\n"
+msgstr "Ikosa"
+
+# sc/source\ui\miscdlgs\acredlin.src:RID_SCDLG_CHANGES.STR_NO_ENTRY.text
+#: scripts/pybcompact.py:99
+#, fuzzy
+msgid "no entry"
+msgstr "Nta cyinjijwe"
+
+#: scripts/pybcompact.py:162 scripts/pybtext.py:240
+#, fuzzy, python-format
+msgid "can't find the following entries: %s"
+msgstr "Gushaka i Ibyinjijwe"
+
+#: scripts/pybconvert.py:29
+#, fuzzy
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr ""
+"Project- Id- Version: basctl\n"
+"POT- Creation- Date: 2003- 12- 07 17: 13+ 02\n"
+"PO- Revision- Date: 2004- 11- 04 10: 13- 0700\n"
+"Last- Translator: Language- Team:< en@ li. org> MIME- Version: 1. 0\n"
+"Content- Type: text/ plain; charset= UTF- 8\n"
+"Content- Transfer- Encoding: 8bit\n"
+"X- Generator: KBabel 1. 0\n"
+"."
+
+#: scripts/pybconvert.py:38
+#, fuzzy
+msgid "pybconvert: error: bad conversion format"
+msgstr "Ikosa Ihindurangero Imiterere"
+
+#: scripts/pybformat.py:34
+#, fuzzy
+msgid ""
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
+msgstr ""
+"Ikoresha: Amahitamo Ububikoshingiro Amahitamo o IDOSIYE Ibisohoka Ibisohoka "
+"S IMISUSIRE IMISUSIRE a Irangabitabo F Imiterere Imiterere Ibisohoka H "
+"Umutwempangano Umutwempangano a Umutwempangano Imperampangano Imperampangano "
+"a Imperampangano L Urutonde i Bihari Ibisohoka h iyi Ifashayobora v iyi "
+"Ifashayobora"
+
+#: scripts/pybformat.py:49
+#, fuzzy, python-format
+msgid "pybformat: error: %s\n"
+msgstr "Ikosa"
+
+#: scripts/pybformat.py:55
+#, fuzzy, python-format
+msgid "pybformat: warning: %s\n"
+msgstr "Iburira"
+
+#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
+#: scripts/pybtext.py:321
+#, fuzzy, python-format
+msgid "can't open `%s': %s"
+msgstr "Gufungura"
+
+#: scripts/pybformat.py:97
+#, fuzzy, python-format
+msgid "unknown list `%s'"
+msgstr "Kitazwi Urutonde"
+
+#: scripts/pybformat.py:100
+#, fuzzy, python-format
+msgid "pybformat: available values for `%s':"
+msgstr "Bihari Uduciro kugirango"
+
+#: scripts/pybformat.py:104
+#, fuzzy, python-format
+msgid "empty value list `%s'"
+msgstr "ubusa Agaciro Urutonde"
+
+#: scripts/pybformat.py:132
+#, fuzzy
+msgid "too few arguments"
+msgstr "ingingo"
+
+#: scripts/pybformat.py:139 scripts/pybtext.py:117
+#, fuzzy, python-format
+msgid "unknown output format `%s'"
+msgstr "Kitazwi Ibisohoka Imiterere"
+
+#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
+#, fuzzy, python-format
+msgid "can't find style `%s'"
+msgstr "Gushaka IMISUSIRE"
+
+#: scripts/pybformat.py:155
+#, fuzzy, python-format
+msgid "pybformat: using style `%s', format `%s'\n"
+msgstr "ikoresha IMISUSIRE Imiterere"
+
+#: scripts/pybformat.py:170
+#, fuzzy, python-format
+msgid "can't open header `%s': %s"
+msgstr "Gufungura Umutwempangano"
+
+#: scripts/pybformat.py:178
+#, fuzzy, python-format
+msgid "can't open database: %s"
+msgstr "Gufungura Ububikoshingiro"
+
+#: scripts/pybformat.py:193
+#, fuzzy, python-format
+msgid "can't open footer `%s': %s"
+msgstr "Gufungura Imperampangano"
+
+#: scripts/pybtex.py:34
+#, fuzzy
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "Ikoresha:"
+
+#: scripts/pybtex.py:38
+#, fuzzy, python-format
+msgid "pybtex: error: %s\n"
+msgstr "Ikosa"
+
+#. warn the user that some entries were not found
+#: scripts/pybtex.py:59
+#, fuzzy
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "Iburira i Utubuto OYA"
+
+#. If the LaTeX document declares no style...
+#: scripts/pybtex.py:64
+#, fuzzy
+msgid "no style defined"
+msgstr "Oya IMISUSIRE"
+
+#: scripts/pybtext.py:41
+#, fuzzy
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
+msgstr "Ikoresha: o S IMISUSIRE"
+
+#: scripts/pybtext.py:45
+#, fuzzy, python-format
+msgid "pybtext: error: %s\n"
+msgstr "Ikosa"
+
+#: scripts/pybtext.py:50
+#, fuzzy, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "Iburira"
+
+#: scripts/pybtext.py:124
+#, fuzzy, python-format
+msgid "File already exists: `%s'"
+msgstr "Iyo dosiye isanzwe ihari"
+
+#: scripts/pybtext.py:127
+#, fuzzy, python-format
+msgid "A file with the same name already exists: `%s'"
+msgstr "A IDOSIYE Na: i Izina:"
+
+#: scripts/pybtext.py:178
+#, fuzzy
+msgid "no citation found"
+msgstr "Oya Iyerekana Byabonetse"
+
+#: scripts/pybtext.py:193
+#, fuzzy, python-format
+msgid "pybtext: using style `%s', format `%s'\n"
+msgstr "ikoresha IMISUSIRE Imiterere"
+
+#: scripts/pybtext.py:316
+#, fuzzy, python-format
+msgid "can't create `%s'"
+msgstr "Kurema"
+
+#: scripts/pybtext.py:342
+#, fuzzy, python-format
+msgid "can't remove `%s'"
+msgstr "Gukuraho..."
+
+# Statusbar
+#: scripts/pybtext.py:344
+msgid "Done"
+msgstr "Byakozwe"
