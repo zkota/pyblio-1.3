@@ -23,7 +23,6 @@
 
 ''' This module defines a Document class '''
 
-from gettext import gettext as _
 from gnome import ui
 
 import gnome

@@ -27,8 +27,6 @@ import re, string
 from gnome import ui
 import gtk
 
-from gettext import gettext as _
-
 import copy, re
 
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
