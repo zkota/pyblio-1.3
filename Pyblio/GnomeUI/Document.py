@@ -60,7 +60,10 @@ class Document (Connector.Publisher):
 
         self.w = self.xml.get_widget ('main')
         self.paned = self.xml.get_widget ('main_pane')
-
+        
+        self.w_save_btn = self.xml.get_widget ('_w_save_btn')
+        self.w_save_mnu = self.xml.get_widget ('_w_save_mnu')
+        
         # The Index list
         self.index = Index.Index ()
         self.paned.add1 (self.index.w)
@@ -268,6 +271,9 @@ class Document (Connector.Publisher):
         
         if self.changed:
             text = text + ' ' + _("[modified]")
+
+        self.w_save_btn.set_sensitive (self.changed)
+        self.w_save_mnu.set_sensitive (self.changed)
 
         self.statusbar.set_default (text)
         return
