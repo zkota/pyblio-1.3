@@ -21,9 +21,7 @@
 
 from Pyblio import Types
 
-import string, gettext
-_ = gettext.gettext
-
+import string
 
 class Sort:
     ''' This class defines the methods used to sort a database '''

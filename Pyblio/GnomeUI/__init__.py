@@ -22,8 +22,6 @@
 # Perform the first initialisation of Gnome, so that the options passed to the script
 # are not passed to Gnome
 
-from gettext import gettext as _
-
 import sys, string
 
 sys.argv = sys.argv [:2] + ['--'] + sys.argv [2:]

@@ -25,9 +25,7 @@
 import gobject, gtk, gtk.glade
 import gnome.ui 
 
-import copy, gettext, os.path, re, string   
-
-_ = gettext.gettext
+import copy, os.path, re, string   
 
 from Pyblio.GnomeUI import Utils
 from Pyblio import Config, version

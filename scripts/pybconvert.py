@@ -20,9 +20,7 @@
 # 
 # 
 
-import os, sys, string, gettext
-
-_ = gettext.gettext
+import os, sys, string
 
 if len (sys.argv) < 4 or len (sys.argv) > 5:
     print _("usage: pybconvert <source>..<target> <input> [output]")

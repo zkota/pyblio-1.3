@@ -20,9 +20,7 @@
 # 
 # 
 
-import string, sys, os, gettext
-
-_ = gettext.gettext
+import string, sys, os
 
 from Pyblio.Output import latexutils
 

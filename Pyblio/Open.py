@@ -23,10 +23,7 @@
 from types import *
 from Pyblio import Autoload, Fields, Help, Exceptions
 
-import urlparse, urllib, traceback, os, sys, tempfile, string, gettext
-
-_ = gettext.gettext
-
+import urlparse, urllib, traceback, os, sys, tempfile, string
 
 def url_to_local (url):
 

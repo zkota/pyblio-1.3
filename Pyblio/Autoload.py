@@ -38,9 +38,7 @@ the module is expected to call Autoload.register to define which entry
 point it provides.
 """
 
-import os, string, re, gettext, sys
-
-_ = gettext.gettext
+import os, string, re, sys
 
 class Loader:
     ''' An object containing the description of a loadable object '''

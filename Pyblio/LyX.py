@@ -19,9 +19,7 @@
 # 
 # 
 
-import os, string, gettext, select, signal
-
-_ = gettext.gettext
+import os, string, select, signal
 
 from Pyblio import Config
 

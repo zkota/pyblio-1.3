@@ -30,11 +30,6 @@ from types import *
 
 from Pyblio import Config, Open, Utils, Key, Iterator, Selection, Autoload
 
-import gettext
-_ = gettext.gettext
-
-
-
 class Entry:
     '''
     A database entry. It behaves like a dictionnary, which

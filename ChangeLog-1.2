@@ -2,6 +2,29 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2004-07-17 20:10:38 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-135
+
+    Summary:
+      regularized use of gettext
+    Revision:
+      pybliographer--stable--1.2--patch-135
+
+    gettext is initialized and installed in pybliographer.py. All the scripts and module
+    are then request to _not_ import gettext and bind _ themselve as it would be done with
+    wrong parameter.
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/Autoload.py Pyblio/Base.py
+     Pyblio/Config.py Pyblio/Fields.py Pyblio/GnomeUI/Config.py
+     Pyblio/GnomeUI/Document.py Pyblio/GnomeUI/Editor.py
+     Pyblio/GnomeUI/Fields.py Pyblio/GnomeUI/Index.py
+     Pyblio/GnomeUI/Pybliographic.py Pyblio/GnomeUI/Utils.py
+     Pyblio/GnomeUI/__init__.py Pyblio/LyX.py Pyblio/Open.py
+     Pyblio/Sort.py scripts/pybcompact.py scripts/pybconvert.py
+     scripts/pybformat.py scripts/pybtex.py scripts/pybtext.py
+
+
 2004-07-16 09:07:53 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-134
 
     Summary:

@@ -21,9 +21,7 @@
 
 ''' Main Module holding all the documents '''
 
-import gettext, copy, os, stat
-
-_ = gettext.gettext
+import copy, os, stat
 
 from Pyblio.GnomeUI import Document, Utils
 from Pyblio import Base, Config

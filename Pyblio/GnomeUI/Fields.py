@@ -29,9 +29,7 @@ bibliography '''
 
 import gobject, gtk
 
-import copy, gettext, os, re, string
-
-_ = gettext.gettext
+import copy, os, re, string
 
 from Pyblio import Config, Fields, Types, version
 from Pyblio.GnomeUI import Utils

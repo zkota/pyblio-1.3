@@ -26,13 +26,11 @@
 # Created by Zoltán Kóta. March, 2004.
 '''Processing keys in a text file and appending a reference list'''
 
-import string, os, re, copy, gettext, sys, getopt
+import string, os, re, copy, sys, getopt
 from shutil import copyfile
 
 from Pyblio import Base, Key, Autoload
 from Pyblio.Style import Utils
-
-_ = gettext.gettext
 
 from Pyblio import pybtextvar
 

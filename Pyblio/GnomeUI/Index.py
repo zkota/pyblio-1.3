@@ -39,12 +39,10 @@ from Pyblio.GnomeUI import FieldsInfo, Utils, Mime
 
 from string import *
 
-import gettext, cPickle
+import cPickle
 
 pickle = cPickle
 del cPickle
-
-_ = gettext.gettext
 
 _safechar = ['_'] * 256
 for c in ascii_letters + digits:

@@ -31,10 +31,6 @@ from gnome import ui
 from Pyblio import Config, version
 
 import gconf
-try : _
-except NameError:
-    import gettext
-    _ = gettext.gettext
 
 class Callback:
 

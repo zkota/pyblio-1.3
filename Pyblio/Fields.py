@@ -21,10 +21,9 @@
 
 from Pyblio import Key, Exceptions
 
-import string, types, re, string, recode, urlparse, os, gettext, time
+import string, types, re, string, recode, urlparse, os, time
 
 import copy, re
-_ = gettext.gettext
 
 year_match = re.compile ('(\d\d\d\d)')
 

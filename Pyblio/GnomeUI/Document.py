@@ -39,9 +39,7 @@ from Pyblio import version, Fields, Types, Query
 
 import Pyblio.Style.Utils
 
-import gettext, os, string, copy, types, sys, traceback, stat
-
-_ = gettext.gettext
+import os, string, copy, types, sys, traceback, stat
 
 import cPickle
 

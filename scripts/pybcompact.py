@@ -20,10 +20,8 @@
 # 
 # 
 
-import string, os, re, copy, gettext, sys
+import string, os, re, copy, sys
 from Pyblio import Base, Key
-
-_ = gettext.gettext
 
 def usage ():
     print _("usage: pybcompact <latexfile> <bibtexfiles...>")

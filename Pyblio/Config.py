@@ -19,13 +19,10 @@
 # 
 # 
 
-import atexit, cPickle, gettext, os, string, sys, types
+import atexit, cPickle, os, string, sys, types
 
 pickle = cPickle
 del cPickle
-
-_ = gettext.gettext
-
 
 ''' System for Configuration handling '''
 

@@ -23,13 +23,7 @@
 #   entry editor for more than 50 chars
 # added: Note taking widget
 
-try: _
-except NameError:
-    import gettext
-    _ = gettext.gettext
-
-
-import gettext, re, string
+import re, string
 from gnome import ui
 import gtk
 
