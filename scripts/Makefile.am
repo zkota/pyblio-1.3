@@ -29,7 +29,7 @@ bin_SCRIPTS = 	pybliographic	\
 		pybformat	\
 		pybtext
 
-pyb_SCRIPTS = 	pybliographic.py	\
+pyb_DATA = 	pybliographic.py	\
 		pybcheck.py 		\
 		pybconvert.py 		\
 		pybcompact.py 		\
