@@ -61,6 +61,10 @@ EXTRA_DIST = 	setup-check.py			\
 		pybliographic.png		\
 		pybliographic-logo.png
 
+pybliographic.desktop: pybliographic.desktop.in po/*.po
+	intltool-merge -d po pybliographic.desktop.in pybliographic.desktop \
+		|| echo "**** Warning: cannot update desktop file"
+
 pybliographer: $(top_srcdir)/pybliographer.py etc/installer
 	$(SHELL) etc/installer < $(top_srcdir)/pybliographer.py > pybliographer
 	chmod 755 pybliographer
