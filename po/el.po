@@ -1,19 +1,20 @@
-# Dutch translation of pybliographer.
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# This file is distributed under the same license as the pybliographer package.
-# Elros Cyriatan <cyriatan@fastmail.fm>, 2003.
+# translation of el.po to Greek
+# This file is distributed under the same license as the PACKAGE package.
+# kostas: 23Nov2003, 185 messages, initial translation
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Kostas Papadimas <pkst@gnome.org>, 2003.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pybliographer v_1_0_x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-21 04:33+0100\n"
-"PO-Revision-Date: 2003-11-21 19:46+0100\n"
-"Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
-"Language-Team: Dutch <vertaling@nl.linux.org>\n"
+"Project-Id-Version: el\n"
+"POT-Creation-Date: 2003-11-22 04:32+0100\n"
+"PO-Revision-Date: 2003-11-23 13:41+0200\n"
+"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. This file is part of pybliographer
 #.
@@ -39,7 +40,7 @@ msgstr ""
 #: Pyblio/Autoload.py:80
 #, python-format
 msgid "warning: can't import %s: %s"
-msgstr "waarschuwing: kan %s niet importeren: %s"
+msgstr "προειδοποίηση: αδυναμία εισαγωγής %s: %s"
 
 #. get info from the given group
 #. are we preregistering an existing key ?
@@ -104,7 +105,7 @@ msgstr "waarschuwing: kan %s niet importeren: %s"
 #: Pyblio/Config.py:53
 #, python-format
 msgid "value of `%s' should be of type %s"
-msgstr "waarde van `%s' moet zijn van soort %s"
+msgstr "η τιμή του `%s' θα πρέπει να είναι του τύπου %s"
 
 #. eventually call the hook
 #. get all domains from the keys
@@ -113,50 +114,50 @@ msgstr "waarde van `%s' moet zijn van soort %s"
 #. print 'SET AND SAVE:', key, value
 #: Pyblio/Config.py:207
 msgid "String"
-msgstr "Tekst"
+msgstr "Αλφαριθμητικό"
 
 #: Pyblio/Config.py:216
 msgid "Boolean"
-msgstr "Booleaans"
+msgstr "Boolean"
 
 #: Pyblio/Config.py:235
 msgid "Integer"
-msgstr "Integer"
+msgstr "Ακέραιος"
 
 #: Pyblio/Config.py:237
 #, python-format
 msgid "Integer under %d"
-msgstr "Integer onder %d"
+msgstr "Ακέραιος κάτω από %d"
 
 #: Pyblio/Config.py:239
 #, python-format
 msgid "Integer over %d"
-msgstr "Integer boven %d"
+msgstr "Ακέραιος πάνω  από  %d"
 
 #: Pyblio/Config.py:241
 #, python-format
 msgid "Integer between %d and %d"
-msgstr "Integer tussen %d en %d"
+msgstr "Ακέραιος μεταξύ %d και %d"
 
 #: Pyblio/Config.py:253
 #, python-format
 msgid "Element in `%s'"
-msgstr "Element in `%s'"
+msgstr "Στοιχείο σε `%s'"
 
 #: Pyblio/Config.py:273
 #, python-format
 msgid "Tuple (%s)"
-msgstr "Resultaat paar (%s)"
+msgstr "Tuple (%s)"
 
 #: Pyblio/Config.py:294
 #, python-format
 msgid "List (%s)"
-msgstr "Lijst (%s)"
+msgstr "Λίστα (%s)"
 
 #: Pyblio/Config.py:319
 #, python-format
 msgid "Dictionary (%s, %s)"
-msgstr "Woordenboek (%s, %s)"
+msgstr "Λεξικό  (%s, %s)"
 
 #. load the saved items
 #. read what has to be saved again
@@ -248,22 +249,22 @@ msgstr "Woordenboek (%s, %s)"
 #. cleanup
 #: Pyblio/Fields.py:265
 msgid "Illegal year value"
-msgstr "Ongeldige jaar-waarde"
+msgstr "Μή έγκυρη τιμή έτους"
 
 #: Pyblio/Fields.py:269
 msgid "Illegal month value"
-msgstr "Ongeldige maand-waarde"
+msgstr "Μή έγκυρη τιμή μήνα"
 
 #: Pyblio/Fields.py:273
 msgid "Illegal day value"
-msgstr "Ongeldige dag-waarde"
+msgstr "Μή έγκυρη τιμή ημέρας"
 
 #. Consider we handle a local file
 #. get the list of databases
 #: Pyblio/Fields.py:443
 #, python-format
 msgid "in %s"
-msgstr "in %s"
+msgstr "σε %s"
 
 #. This file is part of pybliographer
 #.
@@ -305,16 +306,18 @@ msgstr "in %s"
 #. specific fields, like URL
 #. Ouvrir le fichier associe
 #. Incorporer les definitions de l'utilisateur
-#: Pyblio/Format/BibTeX.py:346 Pyblio/Format/BibTeX.py:404
+#: Pyblio/Format/BibTeX.py:346
+#: Pyblio/Format/BibTeX.py:404
 #, python-format
 msgid "key `%s' is malformed"
-msgstr "sleutel `%s' is onjuist formuleerd"
+msgstr "το κλειδί `%s' είναι κακοδιατυπωμένο"
 
 #. Creer la base de cles
-#: Pyblio/Format/BibTeX.py:367 Pyblio/Format/BibTeX.py:388
+#: Pyblio/Format/BibTeX.py:367
+#: Pyblio/Format/BibTeX.py:388
 #, python-format
 msgid "%s:%d: key `%s' already defined"
-msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
+msgstr "%s:%d: κλειδί `%s' 'εχει ήδη καθοριστεί"
 
 #. set the entry parser to the current one, so
 #. that we keep the current string definitions
@@ -580,13 +583,14 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. #                     tooltips.set_tip (button, desc)
 #. items should not be spread vertically, however
 #. Put the complete table in a scrolled window
-#: Pyblio/GnomeUI/Config.py:149 Pyblio/GnomeUI/Fields.py:412
+#: Pyblio/GnomeUI/Config.py:149
+#: Pyblio/GnomeUI/Fields.py:412
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
 msgstr ""
-"Om bepaalde wijzigingen van kracht te laten zijn\n"
-"is het nodig om Pybliographic opnieuw te starten"
+"Κάποιες αλλαγές απαιτούν την επανεκκίνηση του Pybliographic\n"
+"για να εφαρμοστούν σωστά"
 
 #. print 'CHANGED:', self.key
 #. print 'UPDATE:', self.key, self.get(), force
@@ -597,30 +601,31 @@ msgstr ""
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
 #: Pyblio/GnomeUI/Config.py:431
 msgid "Add"
-msgstr "Toevoegen"
+msgstr "Προσθήκη"
 
 #: Pyblio/GnomeUI/Config.py:434
 msgid "Update"
-msgstr "Bijwerken"
+msgstr "Ενημέρωση"
 
-#: Pyblio/GnomeUI/Config.py:437 Pyblio/GnomeUI/Config.py:549
+#: Pyblio/GnomeUI/Config.py:437
+#: Pyblio/GnomeUI/Config.py:549
 msgid "Remove"
-msgstr "Verwijderen"
+msgstr "Απομάκρυνση"
 
 #. Bottom
 #. col.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
 #: Pyblio/GnomeUI/Config.py:546
 msgid "Set"
-msgstr "Instellen"
+msgstr "Ορισμός"
 
 #. Bottom
 #: Pyblio/GnomeUI/Config.py:561
 msgid "Key:"
-msgstr "Sleutel:"
+msgstr "Κλειδίq"
 
 #: Pyblio/GnomeUI/Config.py:563
 msgid "Value:"
-msgstr "Waarde:"
+msgstr "Τιμή:"
 
 #. print 'REMOVE:', m, iter, dict
 #. print 'UPDATE:', self.valuew.get()
@@ -673,7 +678,7 @@ msgid ""
 "can't open file `%s' for writing:\n"
 "%s"
 msgstr ""
-"kan bestand `%s' niet openen om te schrijven:\n"
+"Αδύνατο το άνοιγμα αρχείου `%s' για εγγραφή:\n"
 "%s"
 
 #: Pyblio/GnomeUI/Document.py:224
@@ -682,71 +687,73 @@ msgid ""
 "Error while parsing `%s':\n"
 "%s"
 msgstr ""
-"Fout bij inlezen `%s':\n"
+"Σφάλμα κατά την ανάλυση `%s':\n"
 "%s"
 
 #: Pyblio/GnomeUI/Document.py:240
 msgid "New database"
-msgstr "Nieuwe gegevensbank"
+msgstr "Νέα βάση δεδομένων"
 
-#: Pyblio/GnomeUI/Document.py:248 Pyblio/GnomeUI/Document.py:252
+#: Pyblio/GnomeUI/Document.py:248
+#: Pyblio/GnomeUI/Document.py:252
 msgid "[no entry]"
-msgstr "[geen ingang]"
+msgstr "[καμμία καταχώρηση]"
 
 #: Pyblio/GnomeUI/Document.py:249
 msgid "[1 entry]"
-msgstr "[1 ingang]"
+msgstr "[1 καταχώρηση]"
 
 #: Pyblio/GnomeUI/Document.py:250
 #, python-format
 msgid "[%d entries]"
-msgstr "[%d ingangen]"
+msgstr "[%d καταχωρήσεις]"
 
 #: Pyblio/GnomeUI/Document.py:253
 #, python-format
 msgid "[%d/1 entry]"
-msgstr "[%d/1 ingang]"
+msgstr "[%d/1 καταχώρηση]"
 
 #: Pyblio/GnomeUI/Document.py:254
 #, python-format
 msgid "[%d/%d entries]"
-msgstr "[%d/%d ingangen]"
+msgstr "[%d/%d καταχωρήσεις]"
 
 #: Pyblio/GnomeUI/Document.py:259
 msgid "[modified]"
-msgstr "[gewijzigd]"
+msgstr "[τροποιήθηκε]"
 
 #: Pyblio/GnomeUI/Document.py:269
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
 msgstr ""
-"De gegevensbank is gewijzigd.\n"
-"Veranderingen weggooien?"
+"Η βάση δεδομένων έχει τροποποιηθεί.\n"
+"Απόρριψη αλλαγών ?"
 
 #. no result.
 #: Pyblio/GnomeUI/Document.py:294
 msgid "Your query returned no result"
-msgstr "Uw zoekopdracht gaf geen resultaat"
+msgstr "Το ερώτημα σας δεν επέστρεψε αποτέλεσμα"
 
 #. get a new file name
 #: Pyblio/GnomeUI/Document.py:304
 msgid "Merge file"
-msgstr "Bestand samenvoegen"
+msgstr "Συγχώνευση αρχείου"
 
-#: Pyblio/GnomeUI/Document.py:316 Pyblio/GnomeUI/Document.py:370
+#: Pyblio/GnomeUI/Document.py:316
+#: Pyblio/GnomeUI/Document.py:370
 msgid "Open error"
-msgstr "Open fout"
+msgstr "Σφάλμα ανοίγματος"
 
 #. loop over the entries
 #: Pyblio/GnomeUI/Document.py:340
 msgid "Merge status"
-msgstr "Status samenvoegen"
+msgstr "Κατάσταση συγχώνευσης"
 
 #. get a new file name
 #: Pyblio/GnomeUI/Document.py:351
 msgid "Open file"
-msgstr "Bestand openen"
+msgstr "Άνοιγμα αρχείου"
 
 #. eventually warn interested objects
 #: Pyblio/GnomeUI/Document.py:397
@@ -754,8 +761,8 @@ msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
 msgstr ""
-"De gegevensbank is extern gewijzigd.\n"
-"Veranderingen overschrijven?"
+"Η βάση δεδομένων έχει τροποποιηθεί εξωτερικά.\n"
+"Επικάλυψη αλλαγών ?"
 
 #: Pyblio/GnomeUI/Document.py:407
 #, python-format
@@ -763,22 +770,22 @@ msgid ""
 "Unable to save `%s':\n"
 "%s"
 msgstr ""
-"Kan `%s' niet opslaan:\n"
-"%s"
+"Αδυναμία αποθήκευσης `%s'\n"
+" %s"
 
 #: Pyblio/GnomeUI/Document.py:415
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
 msgstr ""
-"Er is een interne fout opgetreden bij het opslaan\n"
-"Probeer Opslaan Als..."
+"Δημιουργήθηκε ένα εσωτερικό σφάλμα κατά την αποθήκευση\n"
+"Προσπαθήστε την Αποθήκευση ως..."
 
 #. get the current modification date
 #. get a new file name
 #: Pyblio/GnomeUI/Document.py:429
 msgid "Save As..."
-msgstr "Opslaan als..."
+msgstr "Αποθήκευση ως..."
 
 #: Pyblio/GnomeUI/Document.py:435
 #, python-format
@@ -786,8 +793,8 @@ msgid ""
 "The file `%s' already exists.\n"
 "Overwrite it ?"
 msgstr ""
-"Het bestand `%s' bestaat al.\n"
-"Dit bestand overschrijven?"
+"Το αρχείο `%s' υπάρχει ήδη.\n"
+"Να αντικατασταθεί ?"
 
 #: Pyblio/GnomeUI/Document.py:442
 #, python-format
@@ -795,12 +802,12 @@ msgid ""
 "During opening:\n"
 "%s"
 msgstr ""
-"Bij het openen:\n"
+"Κατά το άνοιγμα:\n"
 "%s"
 
 #: Pyblio/GnomeUI/Document.py:460
 msgid "Reopen error"
-msgstr "Her-open fout"
+msgstr "Σφάλμα ανοίγματος ξανά"
 
 #: Pyblio/GnomeUI/Document.py:501
 #, python-format
@@ -808,39 +815,40 @@ msgid ""
 "An entry called `%s' already exists.\n"
 "Rename and add it anyway ?"
 msgstr ""
-"Er bestaat al een ingang genaamd `%s'.\n"
-"Hernoemen en toch toevoegen?"
+"Μια καταχώρηση με το όνομα `%s' υπάρχει ήδη.\n"
+"Μετονομασία και προσθήκη της οπωσδήποτε?"
 
 #: Pyblio/GnomeUI/Document.py:538
 msgid "Really remove all the entries ?"
-msgstr "Echt alle ingangen verwijderen?"
+msgstr "Αλήθεια, να απομακρυνθούν όλες οι καταχωρήσεις?"
 
 #: Pyblio/GnomeUI/Document.py:558
 msgid "Create new entry"
-msgstr "Nieuwe ingang maken"
+msgstr "Δημιουργία νέας καταχώρησης"
 
 #: Pyblio/GnomeUI/Document.py:572
 #, python-format
 msgid "Really edit %d entries ?"
-msgstr "Echt %d ingangen bewerken?"
+msgstr "Είστε σίγουροι για την επεξεργασία %d καταχωρήσεων?"
 
 #: Pyblio/GnomeUI/Document.py:610
 #, python-format
 msgid "Remove all the %d entries ?"
-msgstr "Alle %d ingangen verwijderen?"
+msgstr "Απομάκρυνση όλων των %d καταχωρήσεων?"
 
 #: Pyblio/GnomeUI/Document.py:612
 #, python-format
 msgid "Remove entry `%s' ?"
-msgstr "Ingang `%s' verwijderen?"
+msgstr "Απομάκρυνση καταχώρησης  `%s' ?"
 
-#: Pyblio/GnomeUI/Document.py:676 Pyblio/GnomeUI/Document.py:683
+#: Pyblio/GnomeUI/Document.py:676
+#: Pyblio/GnomeUI/Document.py:683
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
 "%s"
 msgstr ""
-"Kan niet verbinden met LyX:\n"
+"Αδυναμία σύνδεσης με  LyX:\n"
 "%s"
 
 #. filter out special keys
@@ -853,19 +861,19 @@ msgstr ""
 #. updates the index's config
 #: Pyblio/GnomeUI/Document.py:753
 msgid "This program is copyrighted under the GNU GPL"
-msgstr "Dit programma is auteursrechtelijk beschermd onder de GNU GPL"
+msgstr "Αυτό το πρόγραμμα καλύπτεται από την άδεια χρήσης  GNU GPL"
 
 #: Pyblio/GnomeUI/Document.py:754
 msgid "Gnome interface to the Pybliographer system."
-msgstr "Gnome gebruikersinterface voor het Pybliographer systeem."
+msgstr "Διεπαφή Gnome για το σύστημα Pybliographer."
 
 #: Pyblio/GnomeUI/Document.py:763
 msgid "Gnome Translation Team"
-msgstr "Elros Cyriatan"
+msgstr "Ομάδα Μετάφρασης του Gnome"
 
 #: Pyblio/GnomeUI/Document.py:768
 msgid "Pybliographer Home Page"
-msgstr "Pybliographer thuispagina"
+msgstr "Αρχική σελίδα του Pybliographer"
 
 #. This file is part of pybliographer
 #.
@@ -891,47 +899,51 @@ msgstr "Pybliographer thuispagina"
 #. entry editor for more than 50 chars
 #: Pyblio/GnomeUI/Editor.py:38
 msgid "Last Name, First Name"
-msgstr "Achternaam, Voornaam"
+msgstr "Επίθετο, Όνομα"
 
-#: Pyblio/GnomeUI/Editor.py:39 Pyblio/GnomeUI/Fields.py:41
-#: glade/config1.glade.h:14 glade/fields1.glade.h:19
+#: Pyblio/GnomeUI/Editor.py:39
+#: Pyblio/GnomeUI/Fields.py:41
+#: glade/config1.glade.h:14
+#: glade/fields1.glade.h:19
 msgid "Text"
-msgstr "Tekst"
+msgstr "Κείμενο"
 
 #: Pyblio/GnomeUI/Editor.py:322
 msgid "Day"
-msgstr "Dag"
+msgstr "Ημέρα"
 
 #: Pyblio/GnomeUI/Editor.py:331
 msgid "Month"
-msgstr "Maand"
+msgstr "Μήνας"
 
 #: Pyblio/GnomeUI/Editor.py:340
 msgid "Year"
-msgstr "Jaar"
+msgstr "Έτος"
 
 #: Pyblio/GnomeUI/Editor.py:365
 msgid "Invalid day field in date"
-msgstr "Ongeldig dag-veld in datum"
+msgstr "Μή έγκυρο πεδίο ημέρας στην ημερομηνία"
 
 #: Pyblio/GnomeUI/Editor.py:373
 msgid "Invalid month field in date"
-msgstr "Ongeldig maand-veld in datum"
+msgstr "Μή έγκυρο πεδίο μήνα στην ημερομηνία"
 
 #: Pyblio/GnomeUI/Editor.py:381
 msgid "Invalid year field in date"
-msgstr "Ongeldig jaar-veld in datum"
+msgstr "Μή έγκυρο πεδίο έτους στην ημερομηνία"
 
 #. self.edit.set_editable (True)
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:431 Pyblio/GnomeUI/Search.py:86
+#: Pyblio/GnomeUI/Editor.py:431
+#: Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr "Διαγραφή"
 
-#: Pyblio/GnomeUI/Editor.py:442 Pyblio/GnomeUI/Editor.py:454
+#: Pyblio/GnomeUI/Editor.py:442
+#: Pyblio/GnomeUI/Editor.py:454
 #: Pyblio/GnomeUI/Editor.py:457
 msgid "[ Drop an Entry here ]"
-msgstr "[ Sleep hier een ingang heen ]"
+msgstr "[ Drop an Entry here ]"
 
 #. Config save?
 #. print 'SELF:FM[P][2]:', self.fm[p] [2]
@@ -939,66 +951,69 @@ msgstr "[ Sleep hier een ingang heen ]"
 #. ------------------------------------------------------------
 #. Page 2
 #. PAGE 2
-#: Pyblio/GnomeUI/Editor.py:527 Pyblio/GnomeUI/Fields.py:231
-#: glade/config1.glade.h:8 glade/fields1.glade.h:6
+#: Pyblio/GnomeUI/Editor.py:527
+#: Pyblio/GnomeUI/Fields.py:231
+#: glade/config1.glade.h:8
+#: glade/fields1.glade.h:6
 msgid "Entry type"
-msgstr "Soort ingang"
+msgstr "Τύπος καταχώρησης"
 
 #: Pyblio/GnomeUI/Editor.py:529
 msgid "Key"
-msgstr "Sleutel"
+msgstr "Κλειδί"
 
 #: Pyblio/GnomeUI/Editor.py:570
 msgid "Create Field"
-msgstr "Veld maken"
+msgstr "Δημιουργία πεδίου"
 
 #. Notebook
 #. scroll = gtk.ScrolledWindow ()
 #. scroll.set_policy (GTK.POLICY_AUTOMATIC, GTK.POLICY_AUTOMATIC)
 #. scroll.add_with_viewport (self.notebook)
 #. update the current entry
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:446
+#: Pyblio/GnomeUI/Editor.py:625
+#: Pyblio/GnomeUI/Fields.py:446
 msgid "Mandatory"
-msgstr "Verplicht"
+msgstr "Υποχρεωτικό"
 
-#: Pyblio/GnomeUI/Editor.py:625 Pyblio/GnomeUI/Fields.py:447
+#: Pyblio/GnomeUI/Editor.py:625
+#: Pyblio/GnomeUI/Fields.py:447
 msgid "Optional"
-msgstr "Optioneel"
+msgstr "Προαιρετικό"
 
 #: Pyblio/GnomeUI/Editor.py:625
 msgid "Extra"
-msgstr "Extra"
+msgstr "Έξτρα"
 
 #. update the current entry
 #: Pyblio/GnomeUI/Editor.py:694
 msgid "Invalid key format"
-msgstr "Ongeldig sleutel formaat"
+msgstr "Μή έγκυρος τύπος κλειδιού"
 
 #: Pyblio/GnomeUI/Editor.py:702
 #, python-format
 msgid "Key `%s' already exists"
-msgstr "Sleutel `%s' bestaat al"
+msgstr "Το κλειδί '%s' υπάρχει ήδη."
 
 #: Pyblio/GnomeUI/Editor.py:763
-#, fuzzy
 msgid "Error in native string parsing"
-msgstr "Fout in verwerken eigen-taal tekst"
+msgstr "Σφάλμα στην 'ιθαγενή' ανάλυση αλφαριθμητικού"
 
 #: Pyblio/GnomeUI/Editor.py:776
 msgid "Edit entry"
-msgstr "Ingang bewerken"
+msgstr "Επεξεργασία καταχώρησης"
 
 #. check if the database supports native editing
-#: Pyblio/GnomeUI/Editor.py:790 Pyblio/GnomeUI/Editor.py:846
-#, fuzzy
+#: Pyblio/GnomeUI/Editor.py:790
+#: Pyblio/GnomeUI/Editor.py:846
 msgid "Native Editing"
-msgstr "Taal-eigen bewerken"
+msgstr "Ιθαγενής επεξεργασία"
 
 #. Reject the switch if the data is invalid
 #. native edition
 #: Pyblio/GnomeUI/Editor.py:868
 msgid "Standard Editing"
-msgstr "Standaard bewerkmodus"
+msgstr "Κανονική επεξεργασία"
 
 #. set window size
 #. This file is part of pybliographer
@@ -1049,52 +1064,55 @@ msgstr "Standaard bewerkmodus"
 #. cleaning up
 #: Pyblio/GnomeUI/Fields.py:40
 msgid "Authors"
-msgstr "Auteurs"
+msgstr "Συγγραφείς"
 
-#: Pyblio/GnomeUI/Fields.py:42 glade/config1.glade.h:16
+#: Pyblio/GnomeUI/Fields.py:42
+#: glade/config1.glade.h:16
 #: glade/fields1.glade.h:21
 msgid "URL"
 msgstr "URL"
 
 #: Pyblio/GnomeUI/Fields.py:43
 msgid "Reference"
-msgstr "Verwijzing"
+msgstr "Αναφορά"
 
 #: Pyblio/GnomeUI/Fields.py:44
 msgid "Date"
-msgstr "Datum"
+msgstr "Ημερομηνία"
 
 #. ------------------------------------------------------------
 #. Page 1
-#: Pyblio/GnomeUI/Fields.py:119 glade/config1.glade.h:11
+#: Pyblio/GnomeUI/Fields.py:119
+#: glade/config1.glade.h:11
 #: glade/fields1.glade.h:10
 msgid "Name"
-msgstr "Naam"
+msgstr "Όνομα"
 
-#: Pyblio/GnomeUI/Fields.py:122 glade/config1.glade.h:15
+#: Pyblio/GnomeUI/Fields.py:122
+#: glade/config1.glade.h:15
 #: glade/fields1.glade.h:20
 msgid "Type"
-msgstr "Soort"
+msgstr "Τύπος"
 
 #. print self.entries.keys()
 #. ------------------------------------------------------------
 #. Page 3
 #: Pyblio/GnomeUI/Fields.py:295
 msgid "Available"
-msgstr "Beschikbaar"
+msgstr "Διαθέσιμα"
 
 #: Pyblio/GnomeUI/Fields.py:305
 msgid "Associated"
-msgstr "Geassocieerd"
+msgstr "Συσχετισμός"
 
 #: Pyblio/GnomeUI/Fields.py:316
 msgid "Please, select an entry type from previous page."
-msgstr "Selecteer alstublieft een ingangssoort op de vorige pagina."
+msgstr "Παρακαλώ, επιλέξτε ένα τύπο καταχώρησης από την προηγούμενη σελίδα."
 
 #: Pyblio/GnomeUI/Fields.py:327
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
-msgstr "Velden geassocieerd met <b>%s</b> ingangssoort"
+msgstr "Πεδία που συσχετίζονται με <b>%s</b> τύπο καταχώρησης"
 
 #. This file is part of pybliographer
 #.
@@ -1138,13 +1156,13 @@ msgstr "Velden geassocieerd met <b>%s</b> ingangssoort"
 #.
 #: Pyblio/GnomeUI/FileSelector.py:44
 msgid "File"
-msgstr "Bestand"
+msgstr "Αρχείο"
 
 #. url handler
 #. type selector
 #: Pyblio/GnomeUI/FileSelector.py:79
 msgid "Bibliography type:"
-msgstr "Soort bibliografie:"
+msgstr "Τύπος Βιβλιογραφίας:"
 
 #. menu content
 #. If we select a directory, this means the user did not select
@@ -1200,15 +1218,15 @@ msgstr "Soort bibliografie:"
 #. contextual popup menu
 #: Pyblio/GnomeUI/Index.py:95
 msgid "Add..."
-msgstr "Toevoegen..."
+msgstr "Προσθήκη..."
 
 #: Pyblio/GnomeUI/Index.py:97
 msgid "Edit..."
-msgstr "Bewerken..."
+msgstr "Επεξεργασία..."
 
 #: Pyblio/GnomeUI/Index.py:99
 msgid "Delete..."
-msgstr "Verwijderen..."
+msgstr "Διαγραφή..."
 
 #. some events we want to react to...
 #. DnD configuration
@@ -1326,13 +1344,13 @@ msgstr "Verwijderen..."
 #. The root of the search tree is the full database
 #: Pyblio/GnomeUI/Search.py:71
 msgid "Full database"
-msgstr "Volledige gegevensbank"
+msgstr "Πλήρης βάση δεδομένων"
 
 #. We are set up.
 #. Expert search
 #: Pyblio/GnomeUI/Search.py:141
 msgid "internal error during evaluation"
-msgstr "Interne fout tijdens evaluatie"
+msgstr "εσωτερικό σφάλμα κατά την εκτίμηση"
 
 #. Simple Search
 #. get the type description
@@ -1342,8 +1360,8 @@ msgid ""
 "while compiling %s\n"
 "error: %s"
 msgstr ""
-"tijdens compileren %s\n"
-"fout: %s"
+"κατά το compiling %s\n"
+"σφάλμα: %s"
 
 #. No search
 #. Get the path to the query being refined
@@ -1386,11 +1404,11 @@ msgstr ""
 #. These are additional search fields
 #: Pyblio/GnomeUI/Sort.py:97
 msgid "[Entry Type]"
-msgstr "[Soort ingang]"
+msgstr "[Τύπος καταχώρησης]"
 
 #: Pyblio/GnomeUI/Sort.py:98
 msgid "[Key Value]"
-msgstr "[Sleutel waarde]"
+msgstr "[Τιμή κλειδιού]"
 
 #. Update the list with the current user settings
 #. In the list, display the fields that are used in the current
@@ -1423,7 +1441,7 @@ msgstr "[Sleutel waarde]"
 #. exported as an instance attribute.
 #: Pyblio/GnomeUI/Utils.py:196
 msgid "The following errors occured:\n"
-msgstr "De volgende fouten zijn opgetreden:\n"
+msgstr "Παρουσιάστηκαν τα ακόλουθα σφάλματα:\n"
 
 #. This file is part of pybliographer
 #.
@@ -1534,117 +1552,122 @@ msgstr "De volgende fouten zijn opgetreden:\n"
 #: Pyblio/LyX.py:39
 #, python-format
 msgid "no input pipe `%s'"
-msgstr "geen invoerpijp `%s'"
+msgstr "no input pipe `%s'"
 
 #: Pyblio/LyX.py:45
 #, python-format
 msgid "no output pipe `%s'"
-msgstr "geen uitvoerpijp `%s'"
+msgstr "no output pipe `%s'"
 
-#. Say hello !
-#. print self.pout.read ()
-#. ans = string.strip (ans)
-#. if ans [0:4] != 'INFO':
-#. raise IOError, ("LyX server error: " + ans,)
-#. print self.pout.read ()
-#. This file is part of pybliographer
-#.
-#. Copyright (C) 1998-2003 Frederic GOBRY
-#. Email : gobry@pybliographer.org
-#.
-#. This program is free software; you can redistribute it and/or
-#. modify it under the terms of the GNU General Public License
-#. as published by the Free Software Foundation; either version 2
-#. of the License, or (at your option) any later version.
-#.
-#. This program is distributed in the hope that it will be useful,
-#. but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. GNU General Public License for more details.
-#.
-#. You should have received a copy of the GNU General Public License
-#. along with this program; if not, write to the Free Software
-#. Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-#.
-#.
+#  Say hello !
+#  print self.pout.read ()
+#  ans = string.strip (ans)
+#  if ans [0:4] != 'INFO':
+#  raise IOError, ("LyX server error: " + ans,)
+#  print self.pout.read ()
+#  This file is part of pybliographer
+#  Copyright (C) 1998-2003 Frederic GOBRY
+#  Email : gobry@pybliographer.org
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #: Pyblio/Open.py:97
 #, python-format
 msgid "method `%s' provides no opener"
-msgstr "methode `%s' biedt geen opener aan"
+msgstr "η μέδοδος  `%s' δεν παρέχει opener"
 
 #. Consider the reference as an URL
-#: Pyblio/Open.py:105 Pyblio/Open.py:151
+#: Pyblio/Open.py:105
+#: Pyblio/Open.py:151
 #, python-format
 msgid "File `%s' does not exist"
-msgstr "Bestand `%s' bestaat niet"
+msgstr "Το αρχείο `%s' δεν υπάρχει."
 
 #. eventually load a new module
-#: Pyblio/Open.py:116 Pyblio/Open.py:162
+#: Pyblio/Open.py:116
+#: Pyblio/Open.py:162
 #, python-format
 msgid "don't know how to open `%s'"
-msgstr "weet niet hoe `%s' kan worden geopend"
+msgstr "δεν γνωρίζω πως να ανοίξω το `%s'"
 
 #: Pyblio/Open.py:143
 #, python-format
 msgid "method `%s' provides no iterator"
-msgstr "methode `%s' biedt geen iterator aan"
+msgstr "η μέθοδος  `%s'  δεν παρέχει  iterator"
 
-#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
-#: glade/medline.glade.h:1 glade/search.glade.h:1
+#: glade/config1.glade.h:1
+#: glade/fields1.glade.h:1
+#: glade/format.glade.h:1
+#: glade/medline.glade.h:1
+#: glade/search.glade.h:1
 msgid "*"
 msgstr "*"
 
 #: glade/config1.glade.h:2
 msgid "<b>Entry type</b>"
-msgstr "<b>Soort ingang</b>"
+msgstr "<b>Τύπος καταχώρησης</b>"
 
 #: glade/config1.glade.h:3
 msgid "A"
-msgstr "EEN"
+msgstr "A"
 
-#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+#: glade/config1.glade.h:4
+#: glade/fields1.glade.h:2
 msgid "Association"
-msgstr "Associatie"
+msgstr "Συσχετισμός"
 
-#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+#: glade/config1.glade.h:5
+#: glade/fields1.glade.h:3
 msgid "Datum"
-msgstr "Gegeven"
+msgstr "Datum"
 
-#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+#: glade/config1.glade.h:6
+#: glade/fields1.glade.h:4
 msgid "Editor"
-msgstr "Bewerker"
+msgstr "Επεξεργαστής"
 
-#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+#: glade/config1.glade.h:7
+#: glade/fields1.glade.h:5
 msgid "Entries"
-msgstr "Ingangen"
+msgstr "Καταχωρήσεις"
 
 #: glade/config1.glade.h:9
 msgid "FIELDS DEFINITION"
-msgstr "VELDDEFINITIE"
+msgstr "ΟΡΙΣΜΟΣ ΠΕΔΙΩΝ"
 
-#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+#: glade/config1.glade.h:10
+#: glade/fields1.glade.h:8
 msgid "Fields "
-msgstr "Velden"
+msgstr "Πεδία"
 
-#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+#: glade/config1.glade.h:12
+#: glade/fields1.glade.h:11
 msgid "Name "
-msgstr "Naam"
+msgstr "Όνομα"
 
 #: glade/config1.glade.h:13
 msgid "Pybliographer Configuration"
-msgstr "Pybliographer configuratie"
+msgstr "Ρύθμιση Pybliographer"
 
 #: glade/config1.glade.h:17
 msgid "standard fields"
-msgstr "standaard velden"
+msgstr "στάνταρ πεδία"
 
 #: glade/fields1.glade.h:7
 msgid "Entry types and field names configuration"
-msgstr "Invoersoorten en veldnamen configuratie"
+msgstr "Τύποι καταχώρησης και ρύθμιση ονομάτων πεδίων"
 
 #: glade/fields1.glade.h:9
 msgid "Information for <b>Article</b> entry type"
-msgstr "Informatie voor <b>Artikel</b> invoersoort"
+msgstr "Πληροφορίες για <b>Άρθρο</b> τύπο καταχώρησης"
 
 #: glade/fields1.glade.h:12
 msgid ""
@@ -1655,140 +1678,140 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
-"Kies een invoersoort en geef aan welke \n"
-"velden (verplicht en optioneel) ermee\n"
-"verbonden zijn op de volgende pagina.\n"
+"Επιλέξτε ένα τύπο καταχώρησης και καθορίστε \n"
+"τα συσχετιζόμενα (υποχρεωτικά και\n"
+"προαιρετικά) πεδία στην επόμενη σελίδα.\n"
 "\n"
 "\n"
 "\n"
 
 #: glade/format.glade.h:2
 msgid "Bibliography style:"
-msgstr "Bibliografie stijl:"
+msgstr "Στυλ βιβλιογραφίας:"
 
 #: glade/format.glade.h:3
 msgid "Format entries"
-msgstr "Ingangen formatteren"
+msgstr "Μορφοποίηση καταχωρήσεων"
 
 #: glade/format.glade.h:4
 msgid "Output file:\n"
-msgstr "Uitvoerbestand:\n"
+msgstr "Αρχείο αποτελέσματος:\n"
 
 #: glade/format.glade.h:6
 msgid "Output format:"
-msgstr "Uitvoerformaat:"
+msgstr "Μορφή αποτελέσματος:"
 
 #: glade/format.glade.h:7
 msgid "Save Formatted as"
-msgstr "Opgemaakt opslaan als"
+msgstr "Αποθήκευση μορφοποίησης ως"
 
 #: glade/format.glade.h:8
 msgid "Style Selection"
-msgstr "Stijl selectie"
+msgstr "Επιλογή στυλ"
 
 #: glade/medline.glade.h:2
 msgid "Enter your Medline Query"
-msgstr "Voer uw Medline verzoek in"
+msgstr "ΐσάγετε το Medline ερώτημα σας"
 
 #: glade/medline.glade.h:3
 msgid "From:"
-msgstr "Van:"
+msgstr "Από:"
 
 #: glade/medline.glade.h:4
 msgid "Limited to:"
-msgstr "Beperkt tot:"
+msgstr "Περιορισμός σε:"
 
 #: glade/medline.glade.h:5
 msgid ""
 "Maximum number\n"
 "of results:"
 msgstr ""
-"Maximum aantal\n"
-"resultaten:"
+"Μέγιστος αριθμός\n"
+"αποτελεσμάτων:"
 
 #: glade/medline.glade.h:7
 msgid "Medline Query"
-msgstr "Medline verzoek"
+msgstr "Ερώτημα Medline"
 
 #: glade/medline.glade.h:8
 msgid ""
 "Only items \n"
 "ahead of print"
 msgstr ""
-"Alleen items \n"
-"vóór druk"
+"Μόνο αντικείμενα \n"
+"ahead of print"
 
 #: glade/medline.glade.h:10
 msgid ""
 "Only items \n"
 "with abstracts"
 msgstr ""
-"Alleen exemplaren \n"
-"met samenvatting"
+"Μόνο αντικείμενα \n"
+"με abstracts"
 
 #: glade/medline.glade.h:12
 msgid ""
 "Search \n"
 "PubMed for:"
 msgstr ""
-"Zoeken in \n"
-"PubMed naar:"
+"Αναζήτηση \n"
+"PubMed για:"
 
 #: glade/medline.glade.h:14
 msgid ""
 "Starting listing at\n"
 "result number:"
 msgstr ""
-"Begin lijst bij\n"
-"resultaatnummer:"
+"Έναρξη λίστας σε\n"
+"αριθμό αποτελέσματος:"
 
 #: glade/medline.glade.h:16
 msgid "To:"
-msgstr "Tot:"
+msgstr "Σε:"
 
 #: glade/medline.glade.h:17
 msgid ""
 "Use the format YYYY/MM/DD\n"
 "Month and day are optional."
 msgstr ""
-"Gebruik het formaat JJJJ/MM/DD\n"
-"Maand en dag zijn optioneel."
+"Χρήση της μορφής YYYY/MM/DD\n"
+"Μήνας  και ημέρα είναι προαιρετικά."
 
 #: glade/pyblio.glade.h:1
 msgid "Cite"
-msgstr "Citeren"
+msgstr "Παράθεση"
 
 #: glade/pyblio.glade.h:2
 msgid "Cite..."
-msgstr "Citeren..."
+msgstr "Παράθεση..."
 
 #: glade/pyblio.glade.h:3
 msgid "Fields..."
-msgstr "Velden..."
+msgstr "Πεδία..."
 
 #: glade/pyblio.glade.h:4
 msgid "Forget all changes"
-msgstr "Alle wijzigingen vergeten"
+msgstr "Απόρριψη όλων των αλλαγών"
 
 #: glade/pyblio.glade.h:5
 msgid "Format..."
-msgstr "Formaat..."
+msgstr "Μορφοποίηση..."
 
 #: glade/pyblio.glade.h:6
 msgid "Medline Query..."
-msgstr "Medline verzoek..."
+msgstr "Ερώτημα Medline..."
 
 #: glade/pyblio.glade.h:7
 msgid "Merge With..."
-msgstr "Samenvoegen met..."
+msgstr "Συγχώνευση με..."
 
 #: glade/pyblio.glade.h:8
 msgid "Open File"
-msgstr "Bestand openen"
+msgstr "Άνοιγμα αρχείου"
 
 #: glade/pyblio.glade.h:9
 msgid "Previous Documents"
-msgstr "Vorige documenten"
+msgstr "Προηγούμενα έγγραφα"
 
 #: glade/pyblio.glade.h:10
 msgid "Pybliographer"
@@ -1796,67 +1819,67 @@ msgstr "Pybliographer"
 
 #: glade/pyblio.glade.h:11
 msgid "S_ort..."
-msgstr "_Sorteren..."
+msgstr "Τα_ξινόμηση..."
 
 #: glade/pyblio.glade.h:12
 msgid "Save File"
-msgstr "Bestand opslaan"
+msgstr "Αποθήκευση αρχείου"
 
 #: glade/pyblio.glade.h:13
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Ρυθμίσεις"
 
 #: glade/pyblio.glade.h:14
 msgid "_Add..."
-msgstr "_Toevoegen..."
+msgstr "_Προσθήκη..."
 
 #: glade/pyblio.glade.h:15
 msgid "_Delete..."
-msgstr "_Verwijderen..."
+msgstr "_Διαγραφή..."
 
 #: glade/pyblio.glade.h:16
 msgid "_Edit..."
-msgstr "Be_werken..."
+msgstr "_Επεξεργασία..."
 
 #: glade/pyblio.glade.h:17
 msgid "_New"
-msgstr "_Nieuw"
+msgstr "_Νέο"
 
 #: glade/search.glade.h:2
 msgid "Close"
-msgstr "Sluiten"
+msgstr "Κλείσιμο"
 
 #: glade/search.glade.h:3
 msgid "Expert Search"
-msgstr "Geavanceerd zoeken"
+msgstr "Προχωρημένη αναζήτηση"
 
 #: glade/search.glade.h:4
 msgid "Field"
-msgstr "Veld"
+msgstr "Πεδίο"
 
 #: glade/search.glade.h:5
 msgid "Pattern"
-msgstr "Patroon"
+msgstr "Μοτίβο"
 
 #: glade/search.glade.h:6
 msgid "Query"
-msgstr "Verzoek"
+msgstr "Ερώτημα"
 
 #: glade/search.glade.h:7
 msgid "Search"
-msgstr "Zoeken"
+msgstr "Αναζήτηση"
 
 #: glade/search.glade.h:8
 msgid "Simple Search"
-msgstr "Eenvoudig zoeken"
+msgstr "Απλή αναζήτηση:"
 
 #: glade/sort.glade.h:1
 msgid "Select sort criterions"
-msgstr "Kies sorteercriteria"
+msgstr "Επιλογή κριτηρίων ταξινόμησης"
 
 #: glade/sort.glade.h:2
 msgid "Set as default"
-msgstr "Instellen als standaard"
+msgstr "Ορισμός ως προεπιλογής"
 
 #. ! @python_path@
 #. This file is part of pybliographer
@@ -1882,28 +1905,30 @@ msgstr "Instellen als standaard"
 #: pybliographer.py:45
 #, python-format
 msgid "This is %s, version %s"
-msgstr "Dit is %s, versie %s"
+msgstr "Αυτό είναι το %s, έκδοση %s"
 
-#: pybliographer.py:49 pybliographer.py:56
+#: pybliographer.py:49
+#: pybliographer.py:56
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
-msgstr "Dit is vrije software met ABSOLUUT GEEN GARANTIE."
+msgstr "Αυτό είναι ένα ελεύθερο λογισμικό με ΚΑΜΜΙΑ ΑΠΟΛΥΤΩΣ ΕΓΓΥΗΣΓ"
 
 #: pybliographer.py:50
 msgid "For details, type `warranty'."
-msgstr "Typ voor details `warranty'."
+msgstr "Για λεπτομέρειες, πληκτρολογήστε `warranty'."
 
 #. ---------- Lire les fichiers de conf
 #. Fichiers standards
 #. Fichiers passes en argument au programme
-#: pybliographer.py:113 pybliographer.py:165
+#: pybliographer.py:113
+#: pybliographer.py:165
 #, python-format
 msgid "%s: error: can't open file `%s'"
-msgstr "%s: fout: kan bestand `%s' niet openen"
+msgstr "%s: "
 
 #: pybliographer.py:126
 #, python-format
 msgid "For help, run %s and type `help' at the prompt"
-msgstr "Voer voor hulp %s uit en typ `help' bij de opdrachtregel"
+msgstr "Γιο βοήθεια, εκτελέστε %s και πληκτρολογήστε `help' "
 
 #. ---------- Initialisation
 #: pybliographer.py:135
@@ -1912,9 +1937,9 @@ msgid ""
 "\thelp     to get some help\n"
 "\tquit     to quit\n"
 msgstr ""
-"Nuttige opdrachten:\n"
-"\thelp     om wat hulp te krijgen\n"
-"\tquit     om af te sluiten\n"
+"Χρήσιμες εντολές:\n"
+"\thelp     για λήψη βοήθειας\n"
+"\tquit     για έξοδο\n"
 
 #. Quand on a tout lu, le programme est fini !
 #. ---------- Initialisations du parser
@@ -1972,12 +1997,12 @@ msgstr ""
 #.
 #: scripts/pybcompact.py:29
 msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
-msgstr "gebruik: pybcompact <latexbestand> <bibtexbestanden...>"
+msgstr "χρήση: pybcompact <latexfile> <bibtexfiles...>"
 
 #: scripts/pybcompact.py:33
 #, python-format
 msgid "pybcompact: error: %s\n"
-msgstr "pybcompact: fout: %s\n"
+msgstr "pybcompact: σφάλμα: %s\n"
 
 #. test input arguments
 #. regular expression to match in the .aux file
@@ -1989,7 +2014,7 @@ msgstr "pybcompact: fout: %s\n"
 #. is there something to do ?
 #: scripts/pybcompact.py:96
 msgid "no entry"
-msgstr "geen ingang"
+msgstr "καμμία καταχώρηση"
 
 #. use the bibliographic databases in order of declaration
 #. to solve the references
@@ -2009,7 +2034,7 @@ msgstr "geen ingang"
 #: scripts/pybcompact.py:141
 #, python-format
 msgid "can't find the following entries: %s"
-msgstr "kan de volgende ingangen niet vinden: %s"
+msgstr "αδυναμία εύρεσξς των ακόλουθων καταχωρήσεων"
 
 #. -*- python -*-
 #. This file is part of pybliographer
@@ -2034,11 +2059,11 @@ msgstr "kan de volgende ingangen niet vinden: %s"
 #.
 #: scripts/pybconvert.py:28
 msgid "usage: pybconvert <source>..<target> <input> [output]"
-msgstr "gebruik: pybconvert <bron>..<doel> <invoer> [uitvoer]"
+msgstr "χρήση: pybconvert <source>..<target> <input> [output]"
 
 #: scripts/pybconvert.py:37
 msgid "pybconvert: bad conversion format"
-msgstr "pybconvert: slecht conversieformaat"
+msgstr "pybconvert: εσφαλμένος τύπος μετατροπής"
 
 #. -*- python -*-
 #. This file is part of pybliographer
@@ -2063,25 +2088,26 @@ msgstr "pybconvert: slecht conversieformaat"
 #.
 #: scripts/pybformat.py:33
 msgid "usage: pybformat [bibtexfiles...]\n"
-msgstr "gebruik: pybformat [bibtexbestanden...]\n"
+msgstr "χρήση: pybformat [bibtexfiles...]\n"
 
 #: scripts/pybformat.py:37
 #, python-format
 msgid "pybformat: error: %s\n"
-msgstr "pybformat: fout: %s\n"
+msgstr "pybformat: σφάλμα: %s\n"
 
 #: scripts/pybformat.py:43
 #, python-format
 msgid "pybformat: warning: %s\n"
-msgstr "pybformat: waarschuwing: %s\n"
+msgstr "pybformat: προειδοποίηση: %s\n"
 
 #. test input arguments
 #. user gave wrong arguments...
 #. get the specified style and the output
-#: scripts/pybformat.py:140 scripts/pybtex.py:85
+#: scripts/pybformat.py:140
+#: scripts/pybtex.py:85
 #, python-format
 msgid "can't find style `%s'"
-msgstr "kan stijl `%s' niet vinden"
+msgstr "αδυναμία εύρεσης στυλ`%s'"
 
 #. first, write the header
 #. write the data
@@ -2130,12 +2156,12 @@ msgstr "kan stijl `%s' niet vinden"
 #.
 #: scripts/pybtex.py:33
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
-msgstr "gebruik: pybtex <latexbestand> [bibtexbestanden...]"
+msgstr "χρήση: pybtex <latexfile> [bibtexfiles...]"
 
 #: scripts/pybtex.py:37
 #, python-format
 msgid "pybtex: error: %s\n"
-msgstr "pybtex: fout: %s\n"
+msgstr "pybtex: σφάλμα: %s\n"
 
 #. test input arguments
 #. user gave wrong arguments...
@@ -2145,9 +2171,10 @@ msgstr "pybtex: fout: %s\n"
 #. warn the user that some entries were not found
 #: scripts/pybtex.py:58
 msgid "pybtex: warning: the following keys were not resolved"
-msgstr "pybtex: waarschuwing: de volgende sleutels kon niet worden gevonden"
+msgstr "pybtex: προειδοποίηση: τα ακόλουθα κλειδιά δεν επιλύθηκαν"
 
 #. If the LaTeX document declares no style...
 #: scripts/pybtex.py:63
 msgid "no style defined"
-msgstr "geen stijl gedefinieerd"
+msgstr "δεν καθορίστηκε στυλ"
+
