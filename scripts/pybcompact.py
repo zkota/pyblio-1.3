@@ -23,12 +23,15 @@
 import string, os, re, copy, sys
 from Pyblio import Base, Key
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 def usage ():
-    print _("usage: pybcompact <latexfile> <bibtexfiles...>")
+    print _("usage: pybcompact <latexfile> <bibtexfiles...>").encode (charset)
     return
 
 def error (msg):
-    sys.stderr.write (_("pybcompact: error: %s\n") % msg)
+    sys.stderr.write ((_("pybcompact: error: %s\n") % msg).encode (charset))
     sys.exit (1)
     return
 
@@ -54,8 +57,9 @@ def list_entries (file):
     try:
         aux = open (auxfile, 'r')
     except IOError, err:
-        error ('%s: %s' % (auxfile, err))
-    
+        error ("`%s': %s" % (auxfile, str (err).decode (charset)))
+
+
     citations = []
 
     # parse the whole file

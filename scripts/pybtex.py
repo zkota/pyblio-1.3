@@ -27,12 +27,15 @@ from Pyblio.Output import latexutils
 from Pyblio import Base, Autoload, Fields
 from Pyblio.Style import Utils
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 def usage ():
-    print _("usage: pybtex <latexfile> [bibtexfiles...]")
+    print _("usage: pybtex <latexfile> [bibtexfiles...]").encode (charset)
     return
 
 def error (message):
-    sys.stderr.write (_("pybtex: error: %s\n") % message)
+    sys.stderr.write ((_("pybtex: error: %s\n") % message).encode (charset))
     sys.exit (1)
     return
 
@@ -53,7 +56,7 @@ db, keys, style, missing = latexutils.find_entries (latex, bibtex)
 
 if missing:
     # warn the user that some entries were not found
-    print _("pybtex: warning: the following keys were not resolved")
+    print _("pybtex: warning: the following keys were not resolved").encode (charset)
     print '	' + string.join (missing, '\n	') + '\n'
 
 if style is None:

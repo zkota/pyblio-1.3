@@ -27,18 +27,21 @@ from Pyblio.Output import latexutils
 from Pyblio import Base, Autoload
 from Pyblio.Style import Utils
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 def usage ():
-    sys.stderr.write (_("usage: pybformat [bibtexfiles...]\n"))
+    print _("usage: pybformat [-o outputfile] [-s style] [-f format] [-H header] [-F footer] <database...>").encode (charset)
     return
 
 def error (text, exit = 1):
-    sys.stderr.write (_("pybformat: error: %s\n") % text)
+    sys.stderr.write ((_("pybformat: error: %s\n") % text).encode (charset))
     if exit:
         sys.exit (1)
     return
 
 def warning (text, exit = 0):
-    sys.stderr.write (_("pybformat: warning: %s\n") % text)
+    sys.stderr.write ((_("pybformat: warning: %s\n") % text).encode (charset))
     if exit:
         sys.exit (1)
     return
@@ -73,21 +76,21 @@ for opt, value in optlist:
         try:
             outfile = open (value, 'w')
         except IOError, err:
-            error ("can't open `%s': %s" % (value, err))
+            error (_("can't open `%s': %s") % (value, str (err).decode (charset)))
         continue
 
     if opt == '-l' or opt == '--list':
         try:
             list = Autoload.available (value)
         except KeyError:
-            error ("unknown list `%s'" % value)
+            error (_("unknown list `%s'") % value)
             
         if list:
-            print "pybformat: available values for `%s':" % value
+            print (_("pybformat: available values for `%s':") % value).encode (charset)
             print "  " + string.join (list, ", ")
             sys.exit (0)
         else:
-            warning ("empty value list `%s'" % value)
+            warning (_("empty value list `%s'") % value)
             sys.exit (0)
             
     if opt == '-h' or opt == '--help':
@@ -115,14 +118,14 @@ for opt, value in optlist:
 if len (args) < 1:
     # user gave wrong arguments...
     usage ()
-    error ("too few arguments")
+    error (_("too few arguments"))
 
 files  = args
 
 # get the specified style and the output
 output = Autoload.get_by_name ('output', format)
 if output is None:
-    error ("unknown output format `%s'" % format)
+    error (_("unknown output format `%s'") % format)
 
 url = None
 style = os.path.splitext (style) [0]
@@ -138,8 +141,7 @@ if not url:
     error (_("can't find style `%s'") % style)
 
 
-sys.stderr.write ("pybformat: using style `%s', format `%s'\n" \
-                  % (style, output.name))
+sys.stderr.write ((_("pybformat: using style `%s', format `%s'\n") % (style, output.name)).encode (charset))
 
 formatter = output.data
 
@@ -154,7 +156,8 @@ if header:
                 outfile.write (line)
         h.close ()
     except IOError, err:
-        error ("can't open header `%s': %s" % (header, err))
+        error (_("can't open header `%s': %s") % (header, str (err).decode (charset)))
+
 
 # write the data
 for file in files:
@@ -162,7 +165,7 @@ for file in files:
     try:
         db = bibopen (file)
     except IOError, err:
-        error ("can't open database: %s" % file)
+        error (_("can't open database: %s") % file)
 
     Utils.generate (url, formatter, db, db.keys (), outfile)
     
@@ -177,7 +180,8 @@ if footer:
                 outfile.write (line)
         h.close ()
     except IOError, err:
-        error ("can't open footer `%s': %s" % (header, err))
+	sys.stderr.write ("%s\n" % err)
+        error (_("can't open footer `%s': %s") % (footer, str (err).decode (charset)))
 
         
 outfile.close ()

@@ -34,17 +34,20 @@ from Pyblio.Style import Utils
 
 from Pyblio import pybtextvar
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 def usage ():
-    print _("usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>")
+    print _("usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>").encode (charset)
     return
 
 def error (msg):
-    sys.stderr.write (_("pybtext: error: %s\n") % msg)
+    sys.stderr.write ((_("pybtext: error: %s\n") % msg).encode (charset))
     sys.exit (1)
     return
 
 def warning (msg, exit = 0):
-    sys.stderr.write (_("pybtext: warning: %s\n") % msg)
+    sys.stderr.write ((_("pybtext: warning: %s\n") % msg).encode (charset))
     if exit:
         sys.exit (1)
     return
@@ -111,17 +114,17 @@ else:
 output = Autoload.get_by_name ('output', format)
 
 if output is None:
-    error ("unknown output format `%s'" % format)
+    error (_("unknown output format `%s'") % format)
 
 
 
 reffile = outfile + '.ref'
 
 if os.path.exists(outfile):
-    error ("File already exists: `%s'" % outfile)
+    error (_("File already exists: `%s'") % outfile)
 
 if os.path.exists(reffile):
-    error ("The file `%s' to be used for creating the reference list already exists." % reffile)
+    error (_("A file with the same name already exists: `%s'") % reffile)
 
 textfile = args [0]
 bibfile = args [1:]
@@ -137,7 +140,7 @@ def list_entries (file):
     try:
         txt = open (textfile, 'r')
     except IOError, err:
-        error ('%s: %s' % (textfile, err))
+        error ("`%s': %s" % (textfile, str (err).decode (charset)))
     
     citations = []
 
@@ -187,8 +190,7 @@ entries = h
 order = copy.copy (entries)
 
 
-sys.stderr.write ("pybtext: using style `%s', format `%s'\n" \
-                  % (style, output.name))
+sys.stderr.write ((_("pybtext: using style `%s', format `%s'\n") % (style, output.name)).encode (charset))
 
 formatter = output.data
 
@@ -247,7 +249,7 @@ keys = map (lambda x: Key.Key (r, x), order)
 try:
     refs = open (reffile, 'w')
 except IOError, err:
-    error ("can't open `%s': %s" % (reffile, err))
+    error (_("can't open `%s': %s") % (reffile, str (err).decode (charset)))
 
 refs.write ("\n\nReferences:\n")
 
@@ -268,12 +270,12 @@ if oldnew:
     try:
         txt = open (textfile, 'r')
     except IOError, err:
-        error ('%s: %s' % (textfile, err))
+        error ("`%s': %s" % (textfile, str (err).decode (charset)))
 
     try:
         dest = open (outfile, 'a')
     except IOError, err:
-        error ("can't open `%s': %s" % (outfile, err))
+        error (_("can't open `%s': %s") % (outfile, str (err).decode (charset)))
 
     citations = []
     
@@ -311,19 +313,19 @@ else:
     try:
         copyfile (textfile, outfile)
     except:
-        error ("can't create `%s'" % outfile)
+        error (_("can't create `%s'") % outfile)
 
     try:
         dest = open (outfile, 'a')
     except IOError, err:
-        error ("can't open `%s': %s" % (outfile, err))
+        error (_("can't open `%s': %s") % (outfile, str (err).decode (charset)))
 
 
 # appending the reference list
 try:
     refs = open (reffile, 'r')
 except IOError, err:
-    error ('%s: %s' % (reffile, err))
+    error ("`%s': %s" % (reffile, str (err).decode (charset)))
 
 while 1:
     line = refs.readline ()
@@ -337,6 +339,6 @@ dest.close ()
 try:
     os.remove (reffile)
 except:
-    warning ("can't remove `%s'" % reffile)
+    warning (_("can't remove `%s'") % reffile)
 
-print "Done"
+print _("Done").encode (charset)

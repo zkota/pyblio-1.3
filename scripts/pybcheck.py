@@ -23,9 +23,12 @@
 import os, sys, string
 from Pyblio import Config, Exceptions
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 # check the arguments
 if len (sys.argv) < 3:
-    print "usage: pybcheck <file | directory>..."
+    print _("usage: pybcheck <file | directory>...").encode (charset)
     sys.exit (1)
 
 # list containing the broken entries
@@ -54,7 +57,7 @@ for dir in sys.argv [2:]:
         # try to open the database
         try:
             b = bibopen (f)
-            print "file `%s' is ok [%d entries]" % (f, len (b))
+            print (_("file `%s' is ok [%d entries]") % (f, len (b))).encode (charset)
         except (Exceptions.ParserError, KeyError), err:
             broken.append (str (err))
 

@@ -22,8 +22,11 @@
 
 import os, sys, string
 
+import locale
+charset = locale.getlocale () [1] or 'ascii'
+
 if len (sys.argv) < 4 or len (sys.argv) > 5:
-    print _("usage: pybconvert <source>..<target> <input> [output]")
+    print _("usage: pybconvert <source>..<target> <input> [output]").encode (charset)
     sys.exit (1)
 
 
@@ -32,7 +35,7 @@ format = sys.argv [2]
 try:
     source, target = string.split (format, '..')
 except:
-    print _("pybconvert: bad conversion format")
+    print _("pybconvert: error: bad conversion format").encode (charset)
     sys.exit (1)
 
 
