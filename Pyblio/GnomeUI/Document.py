@@ -19,7 +19,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
-# $Id: Document.py,v 1.18.2.34 2003/10/03 15:56:41 fredgo Exp $
+# $Id: Document.py,v 1.18.2.35 2003/10/30 14:12:14 fredgo Exp $
 
 ''' This module defines a Document class '''
 

@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
-# $Id: Format.py,v 1.4.2.3 2003/09/10 15:06:48 fredgo Exp $
+# $Id: Format.py,v 1.4.2.4 2003/10/30 14:12:15 fredgo Exp $
 
 ''' Defines a Dialog to format a subset of entries as a bibliography '''
 
