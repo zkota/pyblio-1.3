@@ -79,3 +79,4 @@ scripts/pybconvert.py
 scripts/pybformat.py
 scripts/pybliographic.py
 scripts/pybtex.py
+scripts/pybtext.py
