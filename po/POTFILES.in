@@ -65,6 +65,7 @@ Pyblio/__init__.py
 Pyblio/recode.py
 Pyblio/version.py.in
 glade/config1.glade
+glade/fields1.glade
 glade/format.glade
 glade/medline.glade
 glade/pyblio.glade
