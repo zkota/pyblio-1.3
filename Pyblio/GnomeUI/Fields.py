@@ -59,8 +59,7 @@ class FieldsDialog:
         tooltips = gtk.Tooltips ()
         tooltips.enable ()
         
-        #self.dialog.set_parent (parent) ####
-        self.dialog.set_title (_("Entry types and field names configuration"))
+        if parent: self.dialog.set_transient_for (parent)
         self.warning = 0
         self.parent = parent
         self.init_page_1()
@@ -94,7 +93,7 @@ class FieldsDialog:
 
     def check (self):
         if len(self.fields) != len(self.fm):
-            print 'ERROR LEN OF FIELDS (%d) /= LEN OF FM (%)' %(
+            print 'ERROR LEN OF FIELDS (%d) /= LEN OF FM (%d)' %(
                 len(self.fields), len(self.fm))
             import traceback
             traceback.print_tb()
@@ -455,5 +454,9 @@ def run (w):
     if __fields_object:
         __fields_object.show()
     else:
+        def is_destroyed (* args):
+            global __fields_object
+            __fields_object = None
+            
         __fields_object = FieldsDialog(w)
-
+        __fields_object.dialog.connect ('destroy', is_destroyed)
