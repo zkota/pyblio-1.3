@@ -24,6 +24,7 @@
 ''' This module defines a Document class '''
 
 from gnome import ui
+
 import gnome
 import gtk
 import gtk.glade
@@ -116,8 +117,21 @@ class Document (Connector.Publisher):
         if default is not None: default = pickle.loads (default)
 
         self.sort_view (default)
+
+        self._title_set ()
         return
 
+    def _title_set (self):
+        
+        if self.data.key is None:
+            self.w.set_title (_('Pybliographic - Unnamed database'))
+            return
+
+        name = os.path.basename (self.data.key.url [2])
+        
+        self.w.set_title (_('Pybliographic - %s') % name)
+        return
+        
 
     def set_preferences (self, * arg):
         from Pyblio.GnomeUI import Config
@@ -379,6 +393,8 @@ class Document (Connector.Publisher):
         self.data    = data
         self.redisplay_index (0)
         
+        self._title_set ()
+
         # eventually warn interested objects
         self.issue ('open-document', self)
         return
@@ -463,6 +479,8 @@ class Document (Connector.Publisher):
             return
             
         self.redisplay_index ()
+        self._title_set ()
+
         self.issue ('open-document', self)
             
         Utils.set_cursor (self.w, 'normal')
