@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # -*- python -*-
 # This file is part of pybliographer
 # 

@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
