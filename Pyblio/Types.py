@@ -67,6 +67,9 @@ class FieldDescription:
     def __str__ (self):
 	return "`%s' field" % self.name
 
+    def __repr__ (self):
+	return "FieldDescription (%s)" % `self.name`
+
 
 class EntryDescription:
     ''' Informations on a given entry '''
@@ -86,6 +89,8 @@ class EntryDescription:
     def __str__ (self):
 	return "`%s' entry" % self.name
 
+    def __repr__ (self):
+        return 'EntryDescription (%s)' % `self.name`
 
     def __getattr__ (self, attr):
 	if attr == 'fields':

@@ -225,6 +225,7 @@
 			  <property name="label" translatable="yes">_Delete...</property>
 			  <property name="use_underline">True</property>
 			  <signal name="activate" handler="delete_entry" last_modification_time="Mon, 09 Jun 2003 18:56:54 GMT"/>
+			  <accelerator key="Delete" modifiers="0" signal="activate"/>
 
 			  <child internal-child="image">
 			    <widget class="GtkImage" id="image41">
