@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-21 04:33+0100\n"
-"PO-Revision-Date: 2003-11-21 19:46+0100\n"
+"POT-Creation-Date: 2003-11-28 04:33+0100\n"
+"PO-Revision-Date: 2003-11-28 19:59+0100\n"
 "Last-Translator: Elros Cyriatan <cyriatan@fastmail.fm>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -342,6 +342,7 @@ msgstr "%s:%d: sleutel `%s' is al gedefinieerd"
 #. write the entries with no cross references
 #. Ouvrir le fichier associe
 #. create a database to generate correct keys
+#. -*- coding: latin-1 -*-
 #. This file is part of pybliographer
 #.
 #. Copyright (C) 1998-2003 Frederic GOBRY
@@ -980,9 +981,8 @@ msgid "Key `%s' already exists"
 msgstr "Sleutel `%s' bestaat al"
 
 #: Pyblio/GnomeUI/Editor.py:763
-#, fuzzy
 msgid "Error in native string parsing"
-msgstr "Fout in verwerken eigen-taal tekst"
+msgstr "Fout bij verwerken tekst in eigen formaat"
 
 #: Pyblio/GnomeUI/Editor.py:776
 msgid "Edit entry"
@@ -990,9 +990,8 @@ msgstr "Ingang bewerken"
 
 #. check if the database supports native editing
 #: Pyblio/GnomeUI/Editor.py:790 Pyblio/GnomeUI/Editor.py:846
-#, fuzzy
 msgid "Native Editing"
-msgstr "Taal-eigen bewerken"
+msgstr "Bewerken in eigen formaat"
 
 #. Reject the switch if the data is invalid
 #. native edition
