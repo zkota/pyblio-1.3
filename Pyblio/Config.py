@@ -46,9 +46,9 @@ class ConfigItem:
 
         if self.type:
             if not self.type.match (value):
-                raise ValueError, \
-                      _("value of `%s' should be of type %s") % (self.name,
-                                                                 str (self.type))
+                raise ValueError (
+                    _("value of `%s' should be of type %s") % (
+                    self.name, str (self.type)))
             
         # eventually call the hook
         if self.hook:

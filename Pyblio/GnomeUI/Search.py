@@ -234,9 +234,9 @@ class SearchDialog (Connector.Publisher, Utils.GladeWindow):
         s, i = self._selection.get_selected ()
         if i is None: return
         
-        data = self._model [s.get_path (i)][1]
+        data = self._model [s.get_path (i)]
 
-        self.issue ('search-data', data)
+        self.issue ('search-data', * data)
         return
 
     

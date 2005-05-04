@@ -274,6 +274,9 @@ class Document (Connector.Publisher):
         if self.changed:
             text = text + ' ' + _("[modified]")
 
+        if self.selection.search:
+            text += ' - ' + _('view limited to: %s') % self.selection_name
+            
         self.w_save_btn.set_sensitive (self.changed)
         self.w_save_mnu.set_sensitive (self.changed)
 
@@ -659,8 +662,9 @@ class Document (Connector.Publisher):
         return
 
 
-    def limit_view (self, search):
+    def limit_view (self, name, search):
         self.selection.search = search
+        self.selection_name = name
         self.redisplay_index ()
         return
 
