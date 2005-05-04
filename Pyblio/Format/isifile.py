@@ -30,6 +30,7 @@ key_map = {
     'CR' : ('citedref', ' ; '),
     'C1' : ('authoraddress', ' ; '),
     'DE' : ('keywords', ' '),
+    'ED' : ('editor', '  '),
     'IS' : ('number', ' ; '),
     'LA' : ('language', ' ; '),
     'PA' : ('address', ' ; '),
@@ -152,21 +153,24 @@ class IsifileIterator(Iterator.Iterator):
         type = Types.get_entry ('article')
             
 
-        key = 'AU'
-        if lines.has_key(key):
-            field = Types.get_field('author')
-            group = Fields.AuthorGroup()
-            for item in lines[key]:
-                if string.strip(item) =='[Anon]' :
-                    auth = [item]
-                else:        
-                    name, firstn = string.split (item, ',')
-                    auth = ["%s, " % name]
-                    for i in string.strip (firstn):
-                        auth.append ("%s. " % i)
-                group.append (Fields.Author("".join(auth)))
-            in_table['author'] = group
-            del lines[key]                  
+	for key in ( 'AU', 'ED'):
+	    if lines.has_key(key):
+		field = Types.get_field('author')
+		group = Fields.AuthorGroup()
+		for item in lines[key]:
+		    if string.strip(item) =='[Anon]' :
+			auth = [item]
+		    else:        
+			name, firstn = string.split (item, ',')
+			auth = ["%s, " % name]
+			for i in string.strip (firstn):
+			    auth.append ("%s. " % i)
+		    group.append (Fields.Author("".join(auth)))
+		if key == 'AU':
+		    in_table['author'] = group
+		elif key == 'ED':
+		    in_table['editor'] = group
+		del lines[key]                  
 
         key, key1, key2 = 'PG', 'BP', 'EP'
         if lines.has_key(key1) and lines.has_key(key2):

@@ -28,7 +28,14 @@ GA BK33K
 %% * size *  27 p.
 ER
 """
+
 example_2 = """AU X, ABC
+   Y, D
+   Z, EFGH
+ER
+"""
+
+example_3 = """ED X, ABC
    Y, D
    Z, EFGH
 ER
@@ -80,6 +87,26 @@ class ReaderCase (unittest.TestCase):
 		self.assertEqual (
 		    auth.first, comparison [auth.last])
 	    e = rdr.next ()
+
+    def test03 (self):
+	"""Test that Editors are accepted."""
+	
+	comparison = {'X': 'A. B. C.',
+		      'Y': 'D.',
+		      'Z': 'E. F. G. H.'}
+	    
+	inpt = cStringIO.StringIO (example_3)
+	rdr = isifile.IsifileIterator (inpt)
+	e = rdr.first ()
+	self.assertEqual (e.has_key ('editor'), True)
+	while e:
+	    print e
+	    for auth in e['editor']:
+		print auth
+		self.assertEqual (
+		    auth.first, comparison [auth.last])
+	    e = rdr.next ()
+
 
 def suite():
     theSuite = unittest.TestSuite()
