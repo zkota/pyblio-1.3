@@ -1,106 +1,106 @@
 # Czech translation of pybliographer.
-# Copyright (C) 2003, 2004 pybliographer's COPYRIGHT HOLDER
-# Copyright (C) 2003, 2004 Miloslav Trmac <mitr@volny.cz>
+# Copyright (C) 2003, 2004, 2005 pybliographer's COPYRIGHT HOLDER
+# Copyright (C) 2003, 2004, 2005 Miloslav Trmac <mitr@volny.cz>
 # This file is distributed under the same license as the pybliographer package.
-# Miloslav Trmac <mitr@volny.cz>, 2003, 2004.
+# Miloslav Trmac <mitr@volny.cz>, 2003 - 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-20 19:24+0100\n"
-"PO-Revision-Date: 2005-01-20 20:23+0100\n"
+"POT-Creation-Date: 2005-06-12 04:03+0000\n"
+"PO-Revision-Date: 2005-06-12 15:33+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Pyblio/Autoload.py:78
+#: ../Pyblio/Autoload.py:78
 #, python-format
 msgid "warning: can't import %s: %s"
 msgstr "varování: nemohu importovat %s: %s"
 
-#: Pyblio/Config.py:50
+#: ../Pyblio/Config.py:50
 #, python-format
 msgid "value of `%s' should be of type %s"
 msgstr "hodnota `%s' by měla mít typ %s"
 
-#: Pyblio/Config.py:209
+#: ../Pyblio/Config.py:209
 msgid "String"
 msgstr "Řetězec"
 
-#: Pyblio/Config.py:218
+#: ../Pyblio/Config.py:218
 msgid "Boolean"
 msgstr "Booleovská hodnota"
 
-#: Pyblio/Config.py:237
+#: ../Pyblio/Config.py:237
 msgid "Integer"
 msgstr "Celé číslo"
 
-#: Pyblio/Config.py:239
+#: ../Pyblio/Config.py:239
 #, python-format
 msgid "Integer under %d"
 msgstr "Celé číslo menší než %d"
 
-#: Pyblio/Config.py:241
+#: ../Pyblio/Config.py:241
 #, python-format
 msgid "Integer over %d"
 msgstr "Celé číslo větší než %d"
 
-#: Pyblio/Config.py:243
+#: ../Pyblio/Config.py:243
 #, python-format
 msgid "Integer between %d and %d"
 msgstr "Celé číslo mezi %d a %d"
 
-#: Pyblio/Config.py:255
+#: ../Pyblio/Config.py:255
 #, python-format
 msgid "Element in `%s'"
 msgstr "Prvek `%s'"
 
-#: Pyblio/Config.py:275
+#: ../Pyblio/Config.py:275
 #, python-format
 msgid "Tuple (%s)"
 msgstr "Dvojice (%s)"
 
-#: Pyblio/Config.py:296
+#: ../Pyblio/Config.py:296
 #, python-format
 msgid "List (%s)"
 msgstr "Seznam (%s)"
 
-#: Pyblio/Config.py:321
+#: ../Pyblio/Config.py:321
 #, python-format
 msgid "Dictionary (%s, %s)"
 msgstr "Slovník (%s, %s)"
 
-#: Pyblio/Fields.py:262
+#: ../Pyblio/Fields.py:261
 msgid "Illegal year value"
 msgstr "Neplatná hodnota roku"
 
-#: Pyblio/Fields.py:266
+#: ../Pyblio/Fields.py:265
 msgid "Illegal month value"
 msgstr "Neplatná hodnota měsíce"
 
-#: Pyblio/Fields.py:270
+#: ../Pyblio/Fields.py:269
 msgid "Illegal day value"
 msgstr "Neplatná hodnota dne"
 
-#: Pyblio/Fields.py:464
+#: ../Pyblio/Fields.py:463
 #, python-format
 msgid "in %s"
 msgstr "v %s"
 
-#: Pyblio/Format/BibTeX.py:369 Pyblio/Format/BibTeX.py:427
+#: ../Pyblio/Format/BibTeX.py:369 ../Pyblio/Format/BibTeX.py:427
 #, python-format
 msgid "key `%s' is malformed"
 msgstr "klíč `%s' není ve správném tvaru"
 
-#: Pyblio/Format/BibTeX.py:390 Pyblio/Format/BibTeX.py:411
+#: ../Pyblio/Format/BibTeX.py:390 ../Pyblio/Format/BibTeX.py:411
 #, python-format
 msgid "%s:%d: key `%s' already defined"
 msgstr "%s:%d: klíč `%s' je již definován"
 
-#: Pyblio/GnomeUI/Config.py:147 Pyblio/GnomeUI/Fields.py:417
+#: ../Pyblio/GnomeUI/Config.py:147 ../Pyblio/GnomeUI/Fields.py:417
 msgid ""
 "Some changes require to restart Pybliographic\n"
 "to be correctly taken into account"
@@ -108,35 +108,35 @@ msgstr ""
 "Pro správnou reakci na některá nastavení je\n"
 "třeba restartovat Pybliographic"
 
-#: Pyblio/GnomeUI/Config.py:429
+#: ../Pyblio/GnomeUI/Config.py:429
 msgid "Add"
 msgstr "Přidat"
 
-#: Pyblio/GnomeUI/Config.py:432
+#: ../Pyblio/GnomeUI/Config.py:432
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: Pyblio/GnomeUI/Config.py:435 Pyblio/GnomeUI/Config.py:547
+#: ../Pyblio/GnomeUI/Config.py:435 ../Pyblio/GnomeUI/Config.py:549
 msgid "Remove"
 msgstr "Odstranit"
 
-#: Pyblio/GnomeUI/Config.py:544
+#: ../Pyblio/GnomeUI/Config.py:546
 msgid "Set"
 msgstr "Nastavit"
 
-#: Pyblio/GnomeUI/Config.py:559
+#: ../Pyblio/GnomeUI/Config.py:561
 msgid "Key:"
 msgstr "Klíč:"
 
-#: Pyblio/GnomeUI/Config.py:561
+#: ../Pyblio/GnomeUI/Config.py:563
 msgid "Value:"
 msgstr "Hodnota:"
 
-#: Pyblio/GnomeUI/Document.py:132
+#: ../Pyblio/GnomeUI/Document.py:132
 msgid "Unnamed bibliographic database"
 msgstr "Nepojmenovaná bibliografická databáze"
 
-#: Pyblio/GnomeUI/Document.py:221
+#: ../Pyblio/GnomeUI/Document.py:219
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -145,7 +145,7 @@ msgstr ""
 "nemohu otevřít soubor `%s' pro zápis:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:242
+#: ../Pyblio/GnomeUI/Document.py:240
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -154,38 +154,43 @@ msgstr ""
 "Chyba při zpracovávání `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:258
+#: ../Pyblio/GnomeUI/Document.py:256
 msgid "New database"
 msgstr "Nová databáze"
 
-#: Pyblio/GnomeUI/Document.py:266 Pyblio/GnomeUI/Document.py:270
+#: ../Pyblio/GnomeUI/Document.py:264 ../Pyblio/GnomeUI/Document.py:268
 msgid "[no entry]"
 msgstr "[žádná položka]"
 
-#: Pyblio/GnomeUI/Document.py:267
+#: ../Pyblio/GnomeUI/Document.py:265
 msgid "[1 entry]"
 msgstr "[1 položka]"
 
-#: Pyblio/GnomeUI/Document.py:268
+#: ../Pyblio/GnomeUI/Document.py:266
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d položek]"
 
-#: Pyblio/GnomeUI/Document.py:271
+#: ../Pyblio/GnomeUI/Document.py:269
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 položka]"
 
-#: Pyblio/GnomeUI/Document.py:272
+#: ../Pyblio/GnomeUI/Document.py:270
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d položek]"
 
-#: Pyblio/GnomeUI/Document.py:277
+#: ../Pyblio/GnomeUI/Document.py:275
 msgid "[modified]"
 msgstr "[změněno]"
 
-#: Pyblio/GnomeUI/Document.py:290
+#: ../Pyblio/GnomeUI/Document.py:278
+#, python-format
+msgid "view limited to: %s"
+msgstr "pohled omezen na: %s"
+
+#: ../Pyblio/GnomeUI/Document.py:291
 msgid ""
 "The database has been modified.\n"
 "Discard changes ?"
@@ -194,29 +199,29 @@ msgstr ""
 "Zahodit změny?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:315
+#: ../Pyblio/GnomeUI/Document.py:316
 msgid "Your query returned no result"
 msgstr "Váš dotaz nevrátil žádný výsledek"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:325
+#: ../Pyblio/GnomeUI/Document.py:326
 msgid "Merge file"
 msgstr "Sloučit soubor"
 
-#: Pyblio/GnomeUI/Document.py:337 Pyblio/GnomeUI/Document.py:391
+#: ../Pyblio/GnomeUI/Document.py:338 ../Pyblio/GnomeUI/Document.py:392
 msgid "Open error"
 msgstr "Chyba při otevírání"
 
-#: Pyblio/GnomeUI/Document.py:361
+#: ../Pyblio/GnomeUI/Document.py:362
 msgid "Merge status"
 msgstr "Stav sloučení"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:372
+#: ../Pyblio/GnomeUI/Document.py:373
 msgid "Open file"
 msgstr "Otevřít soubor"
 
-#: Pyblio/GnomeUI/Document.py:420
+#: ../Pyblio/GnomeUI/Document.py:421
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -224,7 +229,7 @@ msgstr ""
 "Databáze byla změněna zvenčí.\n"
 "Přepsat změny?"
 
-#: Pyblio/GnomeUI/Document.py:430
+#: ../Pyblio/GnomeUI/Document.py:431
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -233,7 +238,7 @@ msgstr ""
 "Nemohu uložit `%s':\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:438
+#: ../Pyblio/GnomeUI/Document.py:439
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -242,11 +247,11 @@ msgstr ""
 "Zkuste Uložit jako..."
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:452
+#: ../Pyblio/GnomeUI/Document.py:453
 msgid "Save As..."
 msgstr "Uložit jako..."
 
-#: Pyblio/GnomeUI/Document.py:458
+#: ../Pyblio/GnomeUI/Document.py:459
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -255,7 +260,7 @@ msgstr ""
 "Soubor `%s' již existuje.\n"
 "Přepsat jej?"
 
-#: Pyblio/GnomeUI/Document.py:465
+#: ../Pyblio/GnomeUI/Document.py:466
 #, python-format
 msgid ""
 "During opening:\n"
@@ -264,11 +269,11 @@ msgstr ""
 "Při otevírání:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:483
+#: ../Pyblio/GnomeUI/Document.py:484
 msgid "Reopen error"
 msgstr "Chyba při opětovném otevření"
 
-#: Pyblio/GnomeUI/Document.py:530
+#: ../Pyblio/GnomeUI/Document.py:531
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -277,30 +282,30 @@ msgstr ""
 "Položka nazvaná `%s' již existuje.\n"
 "Přejmenovat ji a přesto přidat?"
 
-#: Pyblio/GnomeUI/Document.py:567
+#: ../Pyblio/GnomeUI/Document.py:568
 msgid "Really remove all the entries ?"
 msgstr "Opravdu odstranit všechny položky?"
 
-#: Pyblio/GnomeUI/Document.py:587
+#: ../Pyblio/GnomeUI/Document.py:588
 msgid "Create new entry"
 msgstr "Vytvořit novou položku"
 
-#: Pyblio/GnomeUI/Document.py:601
+#: ../Pyblio/GnomeUI/Document.py:602
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Opravdu opravit %d položek?"
 
-#: Pyblio/GnomeUI/Document.py:639
+#: ../Pyblio/GnomeUI/Document.py:640
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Odstranit všech %d položek?"
 
-#: Pyblio/GnomeUI/Document.py:641
+#: ../Pyblio/GnomeUI/Document.py:642
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Odstranit položku `%s'?"
 
-#: Pyblio/GnomeUI/Document.py:732 Pyblio/GnomeUI/Document.py:740
+#: ../Pyblio/GnomeUI/Document.py:729 ../Pyblio/GnomeUI/Document.py:737
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -309,7 +314,7 @@ msgstr ""
 "Nemohu se připojit k LyX:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:813
+#: ../Pyblio/GnomeUI/Document.py:810
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -319,156 +324,156 @@ msgstr ""
 "%s"
 
 # Sheesh.
-#: Pyblio/GnomeUI/Document.py:821
+#: ../Pyblio/GnomeUI/Document.py:818
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Tento program je chráněn copyrightem a šířen pod podmínkami GNU GPL"
 
-#: Pyblio/GnomeUI/Document.py:822
+#: ../Pyblio/GnomeUI/Document.py:819
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Rozhraní pro Gnome k systému Pybliographer."
 
-#: Pyblio/GnomeUI/Document.py:832
+#: ../Pyblio/GnomeUI/Document.py:829
 msgid "Gnome Translation Team"
 msgstr "Tým překladatelů Gnome"
 
-#: Pyblio/GnomeUI/Document.py:837
+#: ../Pyblio/GnomeUI/Document.py:834
 msgid "Pybliographer Home Page"
 msgstr "Domovská stránka Pybliographeru"
 
-#: Pyblio/GnomeUI/Editor.py:39
+#: ../Pyblio/GnomeUI/Editor.py:39
 msgid "Last Name, First Name"
 msgstr "Příjmení, křestní jméno"
 
-#: Pyblio/GnomeUI/Editor.py:40 Pyblio/GnomeUI/Editor.py:1286
-#: Pyblio/GnomeUI/Fields.py:39 glade/config1.glade.h:14
-#: glade/fields1.glade.h:19
+#: ../Pyblio/GnomeUI/Editor.py:40 ../Pyblio/GnomeUI/Editor.py:1290
+#: ../Pyblio/GnomeUI/Fields.py:39 ../glade/config1.glade.h:14
+#: ../glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Text"
 
-#: Pyblio/GnomeUI/Editor.py:137 Pyblio/GnomeUI/Editor.py:969
+#: ../Pyblio/GnomeUI/Editor.py:137 ../Pyblio/GnomeUI/Editor.py:973
 msgid "Error in native string parsing"
 msgstr "Chyba ve zpracovávání nativního řetězce"
 
-#: Pyblio/GnomeUI/Editor.py:316
+#: ../Pyblio/GnomeUI/Editor.py:316
 msgid "Day"
 msgstr "Den"
 
-#: Pyblio/GnomeUI/Editor.py:325
+#: ../Pyblio/GnomeUI/Editor.py:325
 msgid "Month"
 msgstr "Měsíc"
 
-#: Pyblio/GnomeUI/Editor.py:334
+#: ../Pyblio/GnomeUI/Editor.py:334
 msgid "Year"
 msgstr "Rok"
 
-#: Pyblio/GnomeUI/Editor.py:359
+#: ../Pyblio/GnomeUI/Editor.py:359
 msgid "Invalid day field in date"
 msgstr "Neplatné pole dne v datu"
 
-#: Pyblio/GnomeUI/Editor.py:367
+#: ../Pyblio/GnomeUI/Editor.py:367
 msgid "Invalid month field in date"
 msgstr "Neplatné pole měsíce v datu"
 
-#: Pyblio/GnomeUI/Editor.py:375
+#: ../Pyblio/GnomeUI/Editor.py:375
 msgid "Invalid year field in date"
 msgstr "Neplatné pole roku v datu"
 
 #. A delete button
-#: Pyblio/GnomeUI/Editor.py:423 Pyblio/GnomeUI/Search.py:86
+#: ../Pyblio/GnomeUI/Editor.py:423 ../Pyblio/GnomeUI/Search.py:86
 msgid "Delete"
 msgstr "Odstranit"
 
-#: Pyblio/GnomeUI/Editor.py:434 Pyblio/GnomeUI/Editor.py:447
-#: Pyblio/GnomeUI/Editor.py:450
+#: ../Pyblio/GnomeUI/Editor.py:434 ../Pyblio/GnomeUI/Editor.py:447
+#: ../Pyblio/GnomeUI/Editor.py:450
 msgid "[ Drop an Entry here ]"
 msgstr "[ Pusťte sem položku ]"
 
-#: Pyblio/GnomeUI/Editor.py:523 Pyblio/GnomeUI/Fields.py:236
-#: glade/config1.glade.h:8 glade/fields1.glade.h:6
+#: ../Pyblio/GnomeUI/Editor.py:523 ../Pyblio/GnomeUI/Fields.py:236
+#: ../glade/config1.glade.h:8 ../glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Typ položky"
 
-#: Pyblio/GnomeUI/Editor.py:525
+#: ../Pyblio/GnomeUI/Editor.py:525
 msgid "Key"
 msgstr "Klíč"
 
-#: Pyblio/GnomeUI/Editor.py:566
+#: ../Pyblio/GnomeUI/Editor.py:566
 msgid "Create Field"
 msgstr "Vytvořit pole"
 
 #. navigation buttons
-#: Pyblio/GnomeUI/Editor.py:571
+#: ../Pyblio/GnomeUI/Editor.py:571
 msgid "Back"
 msgstr "Zpět"
 
-#: Pyblio/GnomeUI/Editor.py:574
+#: ../Pyblio/GnomeUI/Editor.py:574
 msgid "Next"
 msgstr "Vpřed"
 
-#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:451
+#: ../Pyblio/GnomeUI/Editor.py:691 ../Pyblio/GnomeUI/Fields.py:451
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Fields.py:452
+#: ../Pyblio/GnomeUI/Editor.py:691 ../Pyblio/GnomeUI/Fields.py:452
 msgid "Optional"
 msgstr "Nepovinné"
 
-#: Pyblio/GnomeUI/Editor.py:691 Pyblio/GnomeUI/Editor.py:1201
+#: ../Pyblio/GnomeUI/Editor.py:691 ../Pyblio/GnomeUI/Editor.py:1205
 msgid "Notes"
 msgstr "Poznámky"
 
-#: Pyblio/GnomeUI/Editor.py:691
+#: ../Pyblio/GnomeUI/Editor.py:691
 msgid "Extra"
 msgstr "Přídavné"
 
-#: Pyblio/GnomeUI/Editor.py:866
+#: ../Pyblio/GnomeUI/Editor.py:870
 msgid "Invalid key format"
 msgstr "Neplatný formát klíček"
 
-#: Pyblio/GnomeUI/Editor.py:874
+#: ../Pyblio/GnomeUI/Editor.py:878
 #, python-format
 msgid "Key `%s' already exists"
 msgstr "Klíč `%s' již existuje"
 
 # GREAT idea
-#: Pyblio/GnomeUI/Editor.py:891
+#: ../Pyblio/GnomeUI/Editor.py:895
 #, python-format
 msgid "The `%s' field contains a non Latin-1 symbol"
 msgstr "Pole `%s' obsahuje symbol mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:961
+#: ../Pyblio/GnomeUI/Editor.py:965
 msgid "Your text contains non Latin-1 symbols"
 msgstr "Váš text obsahuje symboly mimo Latin-1"
 
-#: Pyblio/GnomeUI/Editor.py:982
+#: ../Pyblio/GnomeUI/Editor.py:986
 msgid "Edit entry"
 msgstr "Upravit položku"
 
-#: Pyblio/GnomeUI/Editor.py:996 Pyblio/GnomeUI/Editor.py:1067
+#: ../Pyblio/GnomeUI/Editor.py:1000 ../Pyblio/GnomeUI/Editor.py:1071
 msgid "Native Editing"
 msgstr "Nativní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:1096
+#: ../Pyblio/GnomeUI/Editor.py:1100
 msgid "Standard Editing"
 msgstr "Standardní úpravy"
 
-#: Pyblio/GnomeUI/Editor.py:1223
+#: ../Pyblio/GnomeUI/Editor.py:1227
 msgid "mandatory"
 msgstr "povinné"
 
-#: Pyblio/GnomeUI/Editor.py:1289
+#: ../Pyblio/GnomeUI/Editor.py:1293
 msgid "Enter text here"
 msgstr "Sem zadejte text"
 
-#: Pyblio/GnomeUI/Editor.py:1341
+#: ../Pyblio/GnomeUI/Editor.py:1345
 msgid "New Annotation Name"
 msgstr "Název nové poznámky"
 
-#: Pyblio/GnomeUI/Editor.py:1347
+#: ../Pyblio/GnomeUI/Editor.py:1351
 msgid "Name of the new annotation:"
 msgstr "Název nové poznámky:"
 
-#: Pyblio/GnomeUI/Entry.py:114
+#: ../Pyblio/GnomeUI/Entry.py:114
 #, python-format
 msgid ""
 "Cannot open URL:\n"
@@ -477,88 +482,88 @@ msgstr ""
 "Nemohu otevřít URL:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Fields.py:38
+#: ../Pyblio/GnomeUI/Fields.py:38
 msgid "Authors"
 msgstr "Autoři"
 
-#: Pyblio/GnomeUI/Fields.py:40
+#: ../Pyblio/GnomeUI/Fields.py:40
 msgid "Long Text"
 msgstr "Dlouhý text"
 
-#: Pyblio/GnomeUI/Fields.py:41 glade/config1.glade.h:16
-#: glade/fields1.glade.h:21
+#: ../Pyblio/GnomeUI/Fields.py:41 ../glade/config1.glade.h:16
+#: ../glade/fields1.glade.h:21
 msgid "URL"
 msgstr "URL"
 
-#: Pyblio/GnomeUI/Fields.py:42
+#: ../Pyblio/GnomeUI/Fields.py:42
 msgid "Reference"
 msgstr "Odkaz"
 
-#: Pyblio/GnomeUI/Fields.py:43
+#: ../Pyblio/GnomeUI/Fields.py:43
 msgid "Date"
 msgstr "Datum"
 
-#: Pyblio/GnomeUI/Fields.py:124 glade/config1.glade.h:11
-#: glade/fields1.glade.h:10
+#: ../Pyblio/GnomeUI/Fields.py:124 ../glade/config1.glade.h:11
+#: ../glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Název"
 
-#: Pyblio/GnomeUI/Fields.py:127 glade/config1.glade.h:15
-#: glade/fields1.glade.h:20
+#: ../Pyblio/GnomeUI/Fields.py:127 ../glade/config1.glade.h:15
+#: ../glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Typ"
 
-#: Pyblio/GnomeUI/Fields.py:300
+#: ../Pyblio/GnomeUI/Fields.py:300
 msgid "Available"
 msgstr "Dostupné"
 
-#: Pyblio/GnomeUI/Fields.py:310
+#: ../Pyblio/GnomeUI/Fields.py:310
 msgid "Associated"
 msgstr "Související"
 
-#: Pyblio/GnomeUI/Fields.py:321
+#: ../Pyblio/GnomeUI/Fields.py:321
 msgid "Please, select an entry type from previous page."
 msgstr "Vyberte prosím typ položky na předchozí straně."
 
-#: Pyblio/GnomeUI/Fields.py:332
+#: ../Pyblio/GnomeUI/Fields.py:332
 #, python-format
 msgid "Fields associated with <b>%s</b> entry type"
 msgstr "Pole asociovaná s typem pole <b>%s</b>"
 
-#: Pyblio/GnomeUI/FileSelector.py:46
+#: ../Pyblio/GnomeUI/FileSelector.py:46
 msgid "File"
 msgstr "Soubor"
 
-#: Pyblio/GnomeUI/FileSelector.py:101
+#: ../Pyblio/GnomeUI/FileSelector.py:101
 msgid "Bibliography type:"
 msgstr "Typ bibliografie:"
 
-#: Pyblio/GnomeUI/FileSelector.py:119
+#: ../Pyblio/GnomeUI/FileSelector.py:119
 msgid " - According to file suffix - "
 msgstr " - podle přípony souboru - "
 
-#: Pyblio/GnomeUI/Index.py:104
+#: ../Pyblio/GnomeUI/Index.py:104
 msgid "Add..."
 msgstr "Přidat..."
 
-#: Pyblio/GnomeUI/Index.py:106
+#: ../Pyblio/GnomeUI/Index.py:106
 msgid "Edit..."
 msgstr "Upravit..."
 
-#: Pyblio/GnomeUI/Index.py:108
+#: ../Pyblio/GnomeUI/Index.py:108
 msgid "Delete..."
 msgstr "Odstranit..."
 
 #. The root of the search tree is the full database
-#: Pyblio/GnomeUI/Search.py:71
+#: ../Pyblio/GnomeUI/Search.py:71
 msgid "Full database"
 msgstr "Úplná databáze"
 
-#: Pyblio/GnomeUI/Search.py:142
+#: ../Pyblio/GnomeUI/Search.py:142
 msgid "internal error during evaluation"
 msgstr "interní chyba při vyhodnocování"
 
-#: Pyblio/GnomeUI/Search.py:196
+#: ../Pyblio/GnomeUI/Search.py:196
 #, python-format
 msgid ""
 "while compiling %s\n"
@@ -568,127 +573,128 @@ msgstr ""
 "chyba: %s"
 
 #. These are additional search fields
-#: Pyblio/GnomeUI/Sort.py:97
+#: ../Pyblio/GnomeUI/Sort.py:97
 msgid "[Entry Type]"
 msgstr "[Typ položky]"
 
-#: Pyblio/GnomeUI/Sort.py:98
+#: ../Pyblio/GnomeUI/Sort.py:98
 msgid "[Key Value]"
 msgstr "[Hodnota klíče]"
 
-#: Pyblio/GnomeUI/Utils.py:194
+#: ../Pyblio/GnomeUI/Utils.py:194
 msgid "The following errors occured:\n"
 msgstr "Došlo k následujícím chybám:\n"
 
-#: Pyblio/GnomeUI/__init__.py:45
+#: ../Pyblio/GnomeUI/__init__.py:45
 #, python-format
 msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
 msgstr "Toto je Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
 
-#: Pyblio/LyX.py:37
+#: ../Pyblio/LyX.py:37
 #, python-format
 msgid "no input pipe `%s'"
 msgstr "žádná vstupní roura `%s'"
 
-#: Pyblio/LyX.py:43
+#: ../Pyblio/LyX.py:43
 #, python-format
 msgid "no output pipe `%s'"
 msgstr "žádná výstupní roura `%s'"
 
 # otvírák :-)
-#: Pyblio/Open.py:95
+#: ../Pyblio/Open.py:95
 #, python-format
 msgid "method `%s' provides no opener"
 msgstr "metoda `%s' neposkytuje otevírač"
 
-#: Pyblio/Open.py:103 Pyblio/Open.py:149
+#: ../Pyblio/Open.py:103 ../Pyblio/Open.py:149
 #, python-format
 msgid "File `%s' does not exist"
 msgstr "Soubor `%s' neexistuje"
 
-#: Pyblio/Open.py:114 Pyblio/Open.py:160
+#: ../Pyblio/Open.py:114 ../Pyblio/Open.py:160
 #, python-format
 msgid "don't know how to open `%s'"
 msgstr "nevím, jak otevřít `%s'"
 
-#: Pyblio/Open.py:141
+#: ../Pyblio/Open.py:141
 #, python-format
 msgid "method `%s' provides no iterator"
 msgstr "metoda `%s' neposkytuje iterátor"
 
-#: Pyblio/Style/Parser.py:261
+#: ../Pyblio/Style/Parser.py:261
 #, python-format
 msgid "missing '%s' attribute"
 msgstr "chybí atribut '%s'"
 
-#: Pyblio/Style/Parser.py:271
+#: ../Pyblio/Style/Parser.py:271
 #, python-format
 msgid "invalid opening tag: %s"
 msgstr "neplatný otevírací tag: %s"
 
-#: Pyblio/Style/Parser.py:281
+#: ../Pyblio/Style/Parser.py:281
 #, python-format
 msgid "invalid closing tag: %s"
 msgstr "neplatný ukončovací tag: %s"
 
-#: glade/config1.glade.h:1 glade/fields1.glade.h:1 glade/format.glade.h:1
-#: glade/medline.glade.h:1 glade/search.glade.h:1
+#: ../glade/config1.glade.h:1 ../glade/fields1.glade.h:1
+#: ../glade/format.glade.h:1 ../glade/medline.glade.h:1
+#: ../glade/search.glade.h:1
 msgid "*"
 msgstr "*"
 
-#: glade/config1.glade.h:2
+#: ../glade/config1.glade.h:2
 msgid "<b>Entry type</b>"
 msgstr "<b>Typ položky</b>"
 
-#: glade/config1.glade.h:3
+#: ../glade/config1.glade.h:3
 msgid "A"
 msgstr "A"
 
-#: glade/config1.glade.h:4 glade/fields1.glade.h:2
+#: ../glade/config1.glade.h:4 ../glade/fields1.glade.h:2
 msgid "Association"
 msgstr "Souvislost"
 
-#: glade/config1.glade.h:5 glade/fields1.glade.h:3
+#: ../glade/config1.glade.h:5 ../glade/fields1.glade.h:3
 msgid "Datum"
 msgstr "Datum"
 
-#: glade/config1.glade.h:6 glade/fields1.glade.h:4
+#: ../glade/config1.glade.h:6 ../glade/fields1.glade.h:4
 msgid "Editor"
 msgstr "Editor"
 
-#: glade/config1.glade.h:7 glade/fields1.glade.h:5
+#: ../glade/config1.glade.h:7 ../glade/fields1.glade.h:5
 msgid "Entries"
 msgstr "Položky"
 
-#: glade/config1.glade.h:9
+#: ../glade/config1.glade.h:9
 msgid "FIELDS DEFINITION"
 msgstr "DEFINICE POLÍ"
 
-#: glade/config1.glade.h:10 glade/fields1.glade.h:8
+#: ../glade/config1.glade.h:10 ../glade/fields1.glade.h:8
 msgid "Fields "
 msgstr "Pole "
 
-#: glade/config1.glade.h:12 glade/fields1.glade.h:11
+#: ../glade/config1.glade.h:12 ../glade/fields1.glade.h:11
 msgid "Name "
 msgstr "Název "
 
-#: glade/config1.glade.h:13
+#: ../glade/config1.glade.h:13
 msgid "Pybliographer Configuration"
 msgstr "Nastavení Pybliographeru"
 
-#: glade/config1.glade.h:17
+#: ../glade/config1.glade.h:17
 msgid "standard fields"
 msgstr "standardní pole"
 
-#: glade/fields1.glade.h:7
+#: ../glade/fields1.glade.h:7
 msgid "Entry types and field names configuration"
 msgstr "Nastavení typů položek a názvů polí"
 
-#: glade/fields1.glade.h:9
+#: ../glade/fields1.glade.h:9
 msgid "Information for <b>Article</b> entry type"
 msgstr "Informace o typu pole <b>Článek</b>"
 
-#: glade/fields1.glade.h:12
+#: ../glade/fields1.glade.h:12
 msgid ""
 "Select an entry type and specify \n"
 "its associated (mandatory and\n"
@@ -704,43 +710,43 @@ msgstr ""
 "\n"
 "\n"
 
-#: glade/format.glade.h:2
+#: ../glade/format.glade.h:2
 msgid "Bibliography style:"
 msgstr "Styl bibliografie:"
 
-#: glade/format.glade.h:3
+#: ../glade/format.glade.h:3
 msgid "Format entries"
 msgstr "Formátovat položky"
 
-#: glade/format.glade.h:4
+#: ../glade/format.glade.h:4
 msgid "Output file:"
 msgstr "Výstupní soubor:"
 
-#: glade/format.glade.h:5
+#: ../glade/format.glade.h:5
 msgid "Output format:"
 msgstr "Výstupní formát:"
 
-#: glade/format.glade.h:6
+#: ../glade/format.glade.h:6
 msgid "Save Formatted as"
 msgstr "Uložit formátované jako"
 
-#: glade/format.glade.h:7
+#: ../glade/format.glade.h:7
 msgid "Style Selection"
 msgstr "Výběr stylu"
 
-#: glade/medline.glade.h:2
+#: ../glade/medline.glade.h:2
 msgid "Enter your Medline Query"
 msgstr "Zadejte svůj dotaz Medline"
 
-#: glade/medline.glade.h:3
+#: ../glade/medline.glade.h:3
 msgid "From:"
 msgstr "Od:"
 
-#: glade/medline.glade.h:4
+#: ../glade/medline.glade.h:4
 msgid "Limited to:"
 msgstr "Omezeno na:"
 
-#: glade/medline.glade.h:5
+#: ../glade/medline.glade.h:5
 msgid ""
 "Maximum number\n"
 "of results:"
@@ -748,11 +754,11 @@ msgstr ""
 "Maximální počet\n"
 "výsledků:"
 
-#: glade/medline.glade.h:7
+#: ../glade/medline.glade.h:7
 msgid "Medline Query"
 msgstr "Dotaz Medline"
 
-#: glade/medline.glade.h:8
+#: ../glade/medline.glade.h:8
 msgid ""
 "Only items \n"
 "ahead of print"
@@ -760,7 +766,7 @@ msgstr ""
 "Jen položky \n"
 "před vytištěním"
 
-#: glade/medline.glade.h:10
+#: ../glade/medline.glade.h:10
 msgid ""
 "Only items \n"
 "with abstracts"
@@ -768,7 +774,7 @@ msgstr ""
 "Jen položky \n"
 "s abstrakty"
 
-#: glade/medline.glade.h:12
+#: ../glade/medline.glade.h:12
 msgid ""
 "Search \n"
 "PubMed for:"
@@ -776,7 +782,7 @@ msgstr ""
 "Hledat \n"
 "v PubMed:"
 
-#: glade/medline.glade.h:14
+#: ../glade/medline.glade.h:14
 msgid ""
 "Starting listing at\n"
 "result number:"
@@ -784,11 +790,11 @@ msgstr ""
 "Začít výpis\n"
 "od výsledku číslo:"
 
-#: glade/medline.glade.h:16
+#: ../glade/medline.glade.h:16
 msgid "To:"
 msgstr "Do:"
 
-#: glade/medline.glade.h:17
+#: ../glade/medline.glade.h:17
 msgid ""
 "Use the format YYYY/MM/DD\n"
 "Month and day are optional."
@@ -796,138 +802,138 @@ msgstr ""
 "Použijte formát RRRR/MM/DD\n"
 "Měsíc a den jsou nepovinné."
 
-#: glade/pyblio.glade.h:1
+#: ../glade/pyblio.glade.h:1
 msgid "Cite"
 msgstr "Citovat"
 
-#: glade/pyblio.glade.h:2
+#: ../glade/pyblio.glade.h:2
 msgid "Cite..."
 msgstr "Citovat..."
 
-#: glade/pyblio.glade.h:3
+#: ../glade/pyblio.glade.h:3
 msgid "Contents"
 msgstr "Obsah"
 
-#: glade/pyblio.glade.h:4
+#: ../glade/pyblio.glade.h:4
 msgid "Fields..."
 msgstr "Pole... "
 
-#: glade/pyblio.glade.h:5
+#: ../glade/pyblio.glade.h:5
 msgid "Forget all changes"
 msgstr "Zapomenout všechny změny"
 
-#: glade/pyblio.glade.h:6
+#: ../glade/pyblio.glade.h:6
 msgid "Format..."
 msgstr "Formát..."
 
-#: glade/pyblio.glade.h:7
+#: ../glade/pyblio.glade.h:7
 msgid "Medline Query..."
 msgstr "Dotaz Medline..."
 
-#: glade/pyblio.glade.h:8
+#: ../glade/pyblio.glade.h:8
 msgid "Merge With..."
 msgstr "Sloučit s..."
 
-#: glade/pyblio.glade.h:9
+#: ../glade/pyblio.glade.h:9
 msgid "Open File"
 msgstr "Otevřít soubor"
 
-#: glade/pyblio.glade.h:10
+#: ../glade/pyblio.glade.h:10
 msgid "Previous Documents"
 msgstr "Předchozí dokumenty"
 
-#: glade/pyblio.glade.h:11
+#: ../glade/pyblio.glade.h:11
 msgid "Pybliographer"
 msgstr "Pybliographer"
 
-#: glade/pyblio.glade.h:12
+#: ../glade/pyblio.glade.h:12
 msgid "S_ort..."
 msgstr "_Třídit..."
 
-#: glade/pyblio.glade.h:13
+#: ../glade/pyblio.glade.h:13
 msgid "Save File"
 msgstr "Uložit soubor"
 
-#: glade/pyblio.glade.h:14
+#: ../glade/pyblio.glade.h:14
 msgid "Settings"
 msgstr "Nastavení"
 
-#: glade/pyblio.glade.h:15
+#: ../glade/pyblio.glade.h:15
 msgid "_Add..."
 msgstr "_Přidat..."
 
-#: glade/pyblio.glade.h:16
+#: ../glade/pyblio.glade.h:16
 msgid "_Delete..."
 msgstr "_Odstranit..."
 
-#: glade/pyblio.glade.h:17
+#: ../glade/pyblio.glade.h:17
 msgid "_Edit..."
 msgstr "_Upravit..."
 
-#: glade/pyblio.glade.h:18
+#: ../glade/pyblio.glade.h:18
 msgid "_New"
 msgstr "_Nový"
 
-#: glade/search.glade.h:2
+#: ../glade/search.glade.h:2
 msgid "Close"
 msgstr "Zavřít"
 
-#: glade/search.glade.h:3
+#: ../glade/search.glade.h:3
 msgid "Expert Search"
 msgstr "Hledání pro experty"
 
-#: glade/search.glade.h:4
+#: ../glade/search.glade.h:4
 msgid "Field"
 msgstr "Pole"
 
-#: glade/search.glade.h:5
+#: ../glade/search.glade.h:5
 msgid "Pattern"
 msgstr "Vzor"
 
-#: glade/search.glade.h:6
+#: ../glade/search.glade.h:6
 msgid "Query"
 msgstr "Dotaz"
 
-#: glade/search.glade.h:7
+#: ../glade/search.glade.h:7
 msgid "Search"
 msgstr "Hledat"
 
-#: glade/search.glade.h:8
+#: ../glade/search.glade.h:8
 msgid "Simple Search"
 msgstr "Jednoduché hledání"
 
-#: glade/sort.glade.h:1
+#: ../glade/sort.glade.h:1
 msgid "Select sort criterions"
 msgstr "Vyberte kráká kritéria"
 
-#: glade/sort.glade.h:2
+#: ../glade/sort.glade.h:2
 msgid "Set as default"
 msgstr "Nastavit jako implicitní"
 
-#: pybliographer.py:43
+#: ../pybliographer.py:43
 #, python-format
 msgid "This is %s, version %s"
 msgstr "Toto je %s, verze %s"
 
-#: pybliographer.py:47 pybliographer.py:54
+#: ../pybliographer.py:47 ../pybliographer.py:54
 msgid "This is free software with ABSOLUTELY NO WARRANTY."
 msgstr "Toto je free software ABSOLUTNĚ BEZ ZÁRUKY."
 
-#: pybliographer.py:48
+#: ../pybliographer.py:48
 msgid "For details, type `warranty'."
 msgstr "Pro detaily napište `warranty'."
 
-#: pybliographer.py:111 pybliographer.py:163
+#: ../pybliographer.py:111 ../pybliographer.py:163
 #, python-format
 msgid "%s: error: can't open file `%s'"
 msgstr "%s: chyba: nemohu otevřít soubor `%s'"
 
-#: pybliographer.py:124
+#: ../pybliographer.py:124
 #, python-format
 msgid "For help, run %s and type `help' at the prompt"
 msgstr "Pro nápovědu spusťte %s a na výzvu odpovězte `help'"
 
-#: pybliographer.py:133
+#: ../pybliographer.py:133
 msgid ""
 "Useful commands:\n"
 "\thelp     to get some help\n"
@@ -938,54 +944,54 @@ msgstr ""
 "\tquit     pro ukončení\n"
 
 #. save history
-#: pybliographic.desktop.in.h:1
+#: ../pybliographic.desktop.in.h:1
 msgid "Bibliography Manager"
 msgstr "Správce bibliografie"
 
-#: pybliographic.desktop.in.h:2
+#: ../pybliographic.desktop.in.h:2
 msgid "Manage bibliographic databases"
 msgstr "Spravovat bibliografické databáze"
 
-#: pybliographic.desktop.in.h:3
+#: ../pybliographic.desktop.in.h:3
 msgid "Pybliographic Bibliography Manager"
 msgstr "Správce bibliografie Pybliographic"
 
-#: scripts/pybcheck.py:31
+#: ../scripts/pybcheck.py:31
 msgid "usage: pybcheck <file | directory>..."
 msgstr "použití: pybcheck <soubor | adresář>..."
 
-#: scripts/pybcheck.py:60
+#: ../scripts/pybcheck.py:60
 #, python-format
 msgid "file `%s' is ok [%d entries]"
 msgstr "soubor `%s' je v pořádku [%d položek]"
 
-#: scripts/pybcompact.py:30
+#: ../scripts/pybcompact.py:30
 msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
 msgstr "použití: pybcompact <souborlatex> <souborybibtex...>"
 
-#: scripts/pybcompact.py:34
+#: ../scripts/pybcompact.py:34
 #, python-format
 msgid "pybcompact: error: %s\n"
 msgstr "fpybcompact: chyba: %s\n"
 
-#: scripts/pybcompact.py:99
+#: ../scripts/pybcompact.py:99
 msgid "no entry"
 msgstr "žádná položka"
 
-#: scripts/pybcompact.py:144 scripts/pybtext.py:240
+#: ../scripts/pybcompact.py:162 ../scripts/pybtext.py:240
 #, python-format
 msgid "can't find the following entries: %s"
 msgstr "nemohu najít následující položky: %s"
 
-#: scripts/pybconvert.py:29
+#: ../scripts/pybconvert.py:29
 msgid "usage: pybconvert <source>..<target> <input> [output]"
 msgstr "použití: pybconvert <zdroj>..<cíl> <vstup> [výstup]"
 
-#: scripts/pybconvert.py:38
+#: ../scripts/pybconvert.py:38
 msgid "pybconvert: error: bad conversion format"
 msgstr "pybconvert: chyba: špatný formát konverze"
 
-#: scripts/pybformat.py:34
+#: ../scripts/pybformat.py:34
 msgid ""
 "usage: pybformat [options] <database...>\n"
 "\n"
@@ -1013,135 +1019,136 @@ msgstr ""
 "      -v, --version\t\t\tzobrazit tuto zprávu s nápovědou\n"
 "    "
 
-#: scripts/pybformat.py:49
+#: ../scripts/pybformat.py:49
 #, python-format
 msgid "pybformat: error: %s\n"
 msgstr "pybformat: chyba: %s\n"
 
-#: scripts/pybformat.py:55
+#: ../scripts/pybformat.py:55
 #, python-format
 msgid "pybformat: warning: %s\n"
 msgstr "pybformat: varování: %s\n"
 
-#: scripts/pybformat.py:90 scripts/pybtext.py:252 scripts/pybtext.py:278
-#: scripts/pybtext.py:321
+#: ../scripts/pybformat.py:90 ../scripts/pybtext.py:252
+#: ../scripts/pybtext.py:278 ../scripts/pybtext.py:321
 #, python-format
 msgid "can't open `%s': %s"
 msgstr "nemohu otevřít `%s': %s"
 
-#: scripts/pybformat.py:97
+#: ../scripts/pybformat.py:97
 #, python-format
 msgid "unknown list `%s'"
 msgstr "neznámý seznam `%s'"
 
-#: scripts/pybformat.py:100
+#: ../scripts/pybformat.py:100
 #, python-format
 msgid "pybformat: available values for `%s':"
 msgstr "pybformat: dostupné hodnoty pro `%s':"
 
-#: scripts/pybformat.py:104
+#: ../scripts/pybformat.py:104
 #, python-format
 msgid "empty value list `%s'"
 msgstr "prázdný seznam hodnot `%s'"
 
-#: scripts/pybformat.py:132
+#: ../scripts/pybformat.py:132
 msgid "too few arguments"
 msgstr "příliš málo parametrů"
 
-#: scripts/pybformat.py:139 scripts/pybtext.py:117
+#: ../scripts/pybformat.py:139 ../scripts/pybtext.py:117
 #, python-format
 msgid "unknown output format `%s'"
 msgstr "neznámý formát výstupu `%s'"
 
-#: scripts/pybformat.py:152 scripts/pybtex.py:86 scripts/pybtext.py:94
+#: ../scripts/pybformat.py:152 ../scripts/pybtex.py:86
+#: ../scripts/pybtext.py:94
 #, python-format
 msgid "can't find style `%s'"
 msgstr "nemohu najít styl `%s'"
 
-#: scripts/pybformat.py:155
+#: ../scripts/pybformat.py:155
 #, python-format
 msgid "pybformat: using style `%s', format `%s'\n"
 msgstr "pybformat: používám styl `%s', formát `%s'\n"
 
-#: scripts/pybformat.py:170
+#: ../scripts/pybformat.py:170
 #, python-format
 msgid "can't open header `%s': %s"
 msgstr "nemohu otevřít hlavičku `%s': %s"
 
-#: scripts/pybformat.py:178
+#: ../scripts/pybformat.py:178
 #, python-format
 msgid "can't open database: %s"
 msgstr "nemohu otevřít databázi: %s"
 
-#: scripts/pybformat.py:193
+#: ../scripts/pybformat.py:193
 #, python-format
 msgid "can't open footer `%s': %s"
 msgstr "nemohu otevřít patičku `%s': %s"
 
-#: scripts/pybtex.py:34
+#: ../scripts/pybtex.py:34
 msgid "usage: pybtex <latexfile> [bibtexfiles...]"
 msgstr "použití: pybtex <souborlatex> [souborybibtex...]"
 
-#: scripts/pybtex.py:38
+#: ../scripts/pybtex.py:38
 #, python-format
 msgid "pybtex: error: %s\n"
 msgstr "pybtex: chyba: %s\n"
 
 #. warn the user that some entries were not found
-#: scripts/pybtex.py:59
+#: ../scripts/pybtex.py:59
 msgid "pybtex: warning: the following keys were not resolved"
 msgstr "pybtex: varování: následující klíče nebyly nalezeny"
 
 #. If the LaTeX document declares no style...
-#: scripts/pybtex.py:64
+#: ../scripts/pybtex.py:64
 msgid "no style defined"
 msgstr "nedefinován styl"
 
-#: scripts/pybtext.py:41
+#: ../scripts/pybtext.py:41
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
 msgstr ""
 "použití: pybtext [-o výstupnísoubor] [-s styl] <soubortextu> <souborybib...>"
 
-#: scripts/pybtext.py:45
+#: ../scripts/pybtext.py:45
 #, python-format
 msgid "pybtext: error: %s\n"
 msgstr "pybtext: chyba: %s\n"
 
-#: scripts/pybtext.py:50
+#: ../scripts/pybtext.py:50
 #, python-format
 msgid "pybtext: warning: %s\n"
 msgstr "pybtext: varování: %s\n"
 
-#: scripts/pybtext.py:124
+#: ../scripts/pybtext.py:124
 #, python-format
 msgid "File already exists: `%s'"
 msgstr "Soubor již existuje: `%s'"
 
-#: scripts/pybtext.py:127
+#: ../scripts/pybtext.py:127
 #, python-format
 msgid "A file with the same name already exists: `%s'"
 msgstr "Soubor se stejným názvem již existuje: `%s'"
 
-#: scripts/pybtext.py:178
+#: ../scripts/pybtext.py:178
 msgid "no citation found"
 msgstr "citace nenalezena"
 
-#: scripts/pybtext.py:193
+#: ../scripts/pybtext.py:193
 #, python-format
 msgid "pybtext: using style `%s', format `%s'\n"
 msgstr "pybtext: používám styl `%s', formát `%s'\n"
 
-#: scripts/pybtext.py:316
+#: ../scripts/pybtext.py:316
 #, python-format
 msgid "can't create `%s'"
 msgstr "nemohu vytvořit `%s'"
 
-#: scripts/pybtext.py:342
+#: ../scripts/pybtext.py:342
 #, python-format
 msgid "can't remove `%s'"
 msgstr "nemohu odstranit `%s'"
 
-#: scripts/pybtext.py:344
+#: ../scripts/pybtext.py:344
 msgid "Done"
 msgstr "Hotovo"
 
