@@ -751,6 +751,11 @@ class Document (Connector.Publisher):
     def key_pressed (self, app, event):
 
         # filter out special keys
+        
+        if event.keyval == gtk.keysyms.Escape:
+            # the Esc key restores view to "all entries"
+            self.limit_view (None, None)
+        
         if (event.string < 'a' or event.string > 'z') and \
            (event.string < '0' or event.string > '9'): return False
 
