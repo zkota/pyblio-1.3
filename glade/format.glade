@@ -11,6 +11,11 @@
   <property name="modal">False</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">True</property>
 
   <child internal-child="vbox">
@@ -32,6 +37,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-6</property>
 	      <signal name="clicked" handler="_on_close" last_modification_time="Thu, 30 Oct 2003 12:46:09 GMT"/>
 	    </widget>
@@ -46,6 +52,7 @@
 	      <property name="label">gtk-ok</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-5</property>
 	      <signal name="clicked" handler="_on_validate" last_modification_time="Thu, 30 Oct 2003 12:46:14 GMT"/>
 	    </widget>
@@ -124,6 +131,8 @@
 	      <property name="browse_dialog_title" translatable="yes">Style Selection</property>
 	      <property name="directory_entry">False</property>
 	      <property name="modal">False</property>
+	      <property name="use_filechooser">True</property>
+	      <property name="filechooser_action">GTK_FILE_CHOOSER_ACTION_OPEN</property>
 
 	      <child internal-child="entry">
 		<widget class="GtkEntry" id="_w_style">
@@ -134,7 +143,7 @@
 		  <property name="max_length">0</property>
 		  <property name="text" translatable="yes"></property>
 		  <property name="has_frame">True</property>
-		  <property name="invisible_char" translatable="yes">*</property>
+		  <property name="invisible_char">*</property>
 		  <property name="activates_default">False</property>
 		</widget>
 	      </child>
@@ -156,6 +165,8 @@
 	      <property name="browse_dialog_title" translatable="yes">Save Formatted as</property>
 	      <property name="directory_entry">False</property>
 	      <property name="modal">False</property>
+	      <property name="use_filechooser">True</property>
+	      <property name="filechooser_action">GTK_FILE_CHOOSER_ACTION_SAVE</property>
 
 	      <child internal-child="entry">
 		<widget class="GtkEntry" id="_w_output">
@@ -166,7 +177,7 @@
 		  <property name="max_length">0</property>
 		  <property name="text" translatable="yes"></property>
 		  <property name="has_frame">True</property>
-		  <property name="invisible_char" translatable="yes">*</property>
+		  <property name="invisible_char">*</property>
 		  <property name="activates_default">False</property>
 		</widget>
 	      </child>

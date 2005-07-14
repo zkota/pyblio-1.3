@@ -43,6 +43,9 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
                   'root': '_w_format',
                   'name': 'format'
                   }
+
+    style  = os.path.join (version.pybdir, 'Styles', 'Alpha.xml')
+    output = None
     
     def __init__ (self, parent = None):
 
@@ -61,10 +64,12 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
         self._w_menu.set_history (0)
         self.menu_item = outlist [0]
 
-        path = os.path.join (version.pybdir, 'Styles')
-        
-        self._w_style_entry.set_default_path (path)
-        self._w_style.set_text (path)
+        self._w_style_entry.set_default_path (FormatDialog.style)
+        self._w_style.set_text (FormatDialog.style)
+
+        if FormatDialog.output:
+            self._w_output_entry.set_default_path (FormatDialog.output)
+            self._w_output.set_text (FormatDialog.output)
         
         self._w_format.show ()
         return
@@ -79,6 +84,9 @@ class FormatDialog (Connector.Publisher, Utils.GladeWindow):
 
         style  = self._w_style_entry.get_full_path (False)
         output = self._w_output_entry.get_full_path (False)
+
+        FormatDialog.style  = style
+        FormatDialog.output = output
         
         format = Autoload.get_by_name ('output', self.menu_item).data
 
