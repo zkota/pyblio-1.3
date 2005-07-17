@@ -290,16 +290,18 @@ class DataBase:
         # create a temporary file for the new version
         tmp = os.path.join (os.path.dirname (name),
                             '.#' + os.path.basename (name))
-        
+
         tmpfile = open (tmp, 'w')
 
         iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
 	Open.bibwrite (iterator, out = tmpfile, how = self.id)
-        
+
 	tmpfile.close ()
-        
-	# if we succeeded, backup file
-	os.rename (name, name + '.bak')
+
+	# if we succeeded, and backup is set backup file
+        if Config.get ('base/backup').data:
+            os.rename (name, name + '.bak')
+
 	# ...and bring new version online
         os.rename (tmp, name)
         return
