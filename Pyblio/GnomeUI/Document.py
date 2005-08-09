@@ -23,6 +23,8 @@
 
 ''' This module defines a Document class '''
 
+import gobject
+
 from gnome import ui
 
 import gnome
@@ -116,6 +118,9 @@ class Document (Connector.Publisher):
         self.incremental_search = ''
         
         self.modification_date = None
+
+        # for autosave
+        self.source_id = None
 
         # set the default sort method
         default = Utils.config.get_string ('/apps/pybliographic/sort/default')
@@ -380,7 +385,27 @@ class Document (Connector.Publisher):
     def open_document (self, url, how = None, no_name = False):
 
         Utils.set_cursor (self.w, 'clock')
-        
+
+        orig_url = Fields.URL (url)
+        url = str (orig_url)
+
+        restore = False
+
+        if orig_url.url [0] == 'file':
+
+            name = orig_url.url [2]
+            auto_save = os.path.join (os.path.dirname (name),
+                            'x-pyblio-save-' + os.path.basename (name))
+
+            if os.path.exists (auto_save):
+                mod_date = os.stat (name) [stat.ST_MTIME]
+                mod_date_auto = os.stat (auto_save) [stat.ST_MTIME]
+                if mod_date < mod_date_auto:
+                    restore = Utils.Callback (_("An autosave file was found which is newer than the original file.\nDo you want to restore it?"), self.w).answer ()
+
+                    if restore: url = auto_save
+
+
         try:
             data = Open.bibopen (url, how = how)
             
@@ -393,18 +418,84 @@ class Document (Connector.Publisher):
                                 parent = self.w)
             return
 
+
+        # remove the old autosave object
+        if self.data.key is not None and self.source_id:
+            gobject.source_remove (self.source_id)
+
+        # remove old autosave file if exists
+        if self.data.key:
+            if self.data.key.url [0] == 'file':
+                old_file = self.data.key.url [2]
+                old_auto_save = os.path.join (os.path.dirname (old_file),
+                                'x-pyblio-save-' + os.path.basename (old_file))
+
+                if os.path.exists (old_auto_save):
+                    try:
+                        os.remove (old_auto_save)
+                    except (OSError, IOError), error:
+                        Utils.set_cursor (self.w, 'normal')
+                        self.w.error (_("Unable to remove autosave file `%s':\n%s") % (str (old_auto_save), str (error)))
+                        return
+
+
         Utils.set_cursor (self.w, 'normal')
 
         if no_name: data.key = None
         
         self.data    = data
-        self.redisplay_index (0)
+
+
+        if restore:
+
+            # restore the original url internally,
+            # and change the document status
+            self.data.key = orig_url
+            self.redisplay_index (1)
+
+        else:
+            self.redisplay_index (0)
         
+
         self._title_set ()
 
         # eventually warn interested objects
         self.issue ('open-document', self)
+
+        # create autosave object if needed
+        if Config.get ('base/autosave').data:
+    	    savetimeout = Config.get ('base/autosave interval').data
+            self.source_id = gobject.timeout_add (savetimeout * 60 * 1000, self.autosave, url, self.data.id)
+
         return
+
+
+    def autosave (self, url, how):
+        ''' autosave file as x-pyblio-save-filename '''
+
+        if self.data.key.url [0] != 'file': return False
+
+        name = self.data.key.url [2]
+
+        # create an autosave file
+        save = os.path.join (os.path.dirname (name),
+                            'x-pyblio-save-' + os.path.basename (name))
+
+        if self.changed:
+
+            try:
+                savefile = open (save, 'w')
+            except (IOError, OSError), error:
+                self.w.error (_("Error during autosaving:\n%s") % error [1])
+                return False
+
+            iterator = Selection.Selection (sort = self.selection.sort)
+            Open.bibwrite (iterator.iterator (self.data.iterator ()),
+                           out = savefile, how = how)
+
+            savefile.close ()
+
+        return True
 
     
     def save_document (self, * arg):
@@ -472,6 +563,26 @@ class Document (Connector.Publisher):
         Open.bibwrite (iterator.iterator (self.data.iterator ()),
                        out = file, how = how)
         file.close ()
+
+        # remove the old autosave object
+        if self.data.key is not None and self.source_id:
+            gobject.source_remove (self.source_id)
+
+        # remove old autosave file
+        if self.data.key:
+            if self.data.key.url [0] == 'file':
+                old_file = self.data.key.url [2]
+                old_auto_save = os.path.join (os.path.dirname (old_file),
+                                'x-pyblio-save-' + os.path.basename (old_file))
+
+                if os.path.exists (old_auto_save):
+                    try:
+                        os.remove (old_auto_save)
+                    except (OSError, IOError), error:
+                        Utils.set_cursor (self.w, 'normal')
+                        self.w.error (_("Unable to remove autosave file `%s':\n%s") % (str (old_auto_save), str (error)))
+                        return
+
         
         try:
             self.data = Open.bibopen (url, how = how)
@@ -493,6 +604,12 @@ class Document (Connector.Publisher):
         Utils.set_cursor (self.w, 'normal')
 
         self.update_status (0)
+
+        # create the new autosave object if needed
+        if Config.get ('base/autosave').data:
+            savetimeout = Config.get ('base/autosave interval').data
+            self.source_id = gobject.timeout_add (savetimeout * 60 * 1000, self.autosave, url, self.data.id)
+
         return
 
     
@@ -506,7 +623,27 @@ class Document (Connector.Publisher):
 
 
     def close_document_request (self):
-        return self.confirm ()
+        answer = self.confirm ()
+        # remove autosave object with closing
+        if answer and self.source_id:
+            gobject.source_remove (self.source_id)
+
+        # remove old autosave file
+        if answer and self.data.key:
+            if self.data.key.url [0] == 'file':
+                old_file = self.data.key.url [2]
+                old_auto_save = os.path.join (os.path.dirname (old_file),
+                                'x-pyblio-save-' + os.path.basename (old_file))
+
+                if os.path.exists (old_auto_save):
+                    try:
+                        os.remove (old_auto_save)
+                    except (OSError, IOError), error:
+                        Utils.set_cursor (self.w, 'normal')
+                        self.w.error (_("Unable to remove autosave file `%s':\n%s") % (str (old_auto_save), str (error)))
+                        return
+
+        return answer
 
     
     def exit_application (self, * arg):
