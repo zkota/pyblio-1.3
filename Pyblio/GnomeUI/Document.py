@@ -45,18 +45,149 @@ import Pyblio.Style.Utils
 
 import os, string, copy, types, sys, traceback, stat
 
-import cPickle
-
-pickle = cPickle
-del cPickle
+import cPickle as pickle
 
 printable = string.lowercase + string.uppercase + string.digits
+
+
+uim_content = '''
+<ui>
+    <menubar name="Menubar">
+        <menu action="File">
+             <menuitem action="New"/>
+             <menuitem action="Open"/>
+             <menuitem action="Merge"/>
+             <menuitem action="Medline"/>
+             <menuitem action="Save"/>
+             <menuitem action="Save_As"/>
+             <separator/>
+             <menu action="Recent">
+                <placeholder name="Previous"/>
+             </menu>
+             <separator/>
+             <menuitem action="Close"/>
+             <menuitem action="Quit"/>
+        </menu>
+        <menu action="EditMenu">
+             <menuitem action="Cut"/>
+             <menuitem action="Copy"/>
+             <menuitem action="Paste"/>
+             <menuitem action="Clear"/>
+             <separator/>
+             <menuitem action="Add"/>
+             <menuitem action="Edit"/>
+             <menuitem action="Delete"/>
+             <separator/>
+             <menuitem action="Find"/>
+             <menuitem action="Sort"/>
+        </menu>
+        <menu action="CiteMenu">
+             <menuitem action="Cite"/>
+             <menuitem action="Format"/>
+        </menu>
+        <menu action="Settings">
+             <menuitem action="Fields"/>
+             <menuitem action="Preferences"/>
+             <separator/>
+             <menuitem action="Forget"/>
+        </menu>
+        <menu action="HelpMenu">
+             <menuitem action="Contents"/>
+             <menuitem action="About"/>
+        </menu>
+    </menubar>
+
+    <toolbar name="Toolbar">
+        <toolitem action="Open"/>
+        <toolitem action="Save"/>
+        <separator/>
+        <toolitem action="Add"/>
+        <separator/>
+        <toolitem action="Find"/>
+        <toolitem action="Cite"/>
+    </toolbar>
+    
+    <popup name="Popup">
+         <menuitem action="Add"/>
+         <menuitem action="Edit"/>
+         <menuitem action="Delete"/>
+    </popup>
+</ui>
+'''
 
 class Document (Connector.Publisher):
     
     def __init__ (self, database):
 
+        self.uim = gtk.UIManager ()
 
+        self.recents = None
+        
+        self.actiongroup = gtk.ActionGroup ('Main')
+        
+        self.actiongroup.add_actions ([
+            # id     stock            label         accel   tooltip   callback
+            ('File', None,            _('_File')),
+            ('EditMenu', None,            _('_Edit')),
+            ('CiteMenu', None,            _('_Cite')),
+            ('Settings', None,        _('_Settings')),
+            ('HelpMenu', None, _('_Help')),
+            ('Recent', None, _('Recent documents')),
+            
+            ('New',  gtk.STOCK_NEW,   None,         None,   None,     self.new_document),
+            ('Open', gtk.STOCK_OPEN,  None,         None,   None,     self.ui_open_document),
+            ('Save', gtk.STOCK_SAVE,  None,         None,   None,     self.save_document),
+            ('Save_As', gtk.STOCK_SAVE_AS,  None,         None,   None,     self.save_document_as),
+            ('Close', gtk.STOCK_CLOSE,  None,         None,   None,     self.close_document),
+            ('Quit', gtk.STOCK_QUIT,  None,         None,   None,     self.exit_application),
+
+            ('Merge',   None, _('Merge With...'),    '<control>g',  None, self.merge_database),
+            ('Medline', None, _('Medline Query...'), '<control>m',  None, self.query_database),
+
+
+
+            ('Cut', gtk.STOCK_CUT,  None,         None,   None,     self.cut_entry),
+            ('Copy', gtk.STOCK_COPY,  None,         None,   None,     self.copy_entry),
+            ('Paste', gtk.STOCK_PASTE,  None,         None,   None,     self.paste_entry),
+            ('Clear', gtk.STOCK_CLEAR,  None,         None,   None,     self.clear_entries),
+            ('Add', gtk.STOCK_ADD,  None,         None,   None,     self.add_entry),
+            ('Delete', gtk.STOCK_DELETE,  None,         None,   None,     self.delete_entry),
+            ('Find', gtk.STOCK_FIND,  None,         None,   None,     self.find_entries),
+            
+            ('Sort', None, _('S_ort...'), None,  None, self.sort_entries),
+            ('Cite', gtk.STOCK_JUMP_TO,   _('Cite...'), None,  None, self.lyx_cite),
+            ('Format', gtk.STOCK_EXECUTE, _('Format...'), None,  None, self.format_entries),
+
+            ('Fields', None, _('Fields...'), None,  None, self.set_fields),
+            ('Preferences', gtk.STOCK_PREFERENCES,  None,         None,   None,     self.set_preferences),
+            ('Forget', None, _('Forget all changes'),     None,   None,     self.forget_changes_cb),
+            
+            ('Contents', gtk.STOCK_HELP, None,   None,   None,     self.on_documentation),
+            ])
+
+        if gtk.pygtk_version >= (2,6,0):
+            self.actiongroup.add_actions ([
+                ('About', gtk.STOCK_ABOUT, None,   None,   None,     self.about),
+                ('Edit', gtk.STOCK_EDIT,  None,         None,   None,     self.edit_entry),
+                ])
+
+        else:
+            self.actiongroup.add_actions ([
+                ('About', None, _('_About'),   None,   None,     self.about),
+                ('Edit', None,  _('_Edit'),    None,   None,     self.edit_entry),
+                ])
+            
+        prev = self.actiongroup.get_action ('Recent')
+        
+        prev.set_property ('is-important', True)
+        prev.set_property ('hide-if-empty', False)
+        
+        self.uim.insert_action_group (self.actiongroup, 0)
+        self.uim.add_ui_from_string (uim_content)
+
+        self.uim.ensure_update ()
+
+        
         gp = os.path.join (version.pybdir, 'glade', 'pyblio.glade')
         
         self.xml = gtk.glade.XML (gp, 'main', domain = 'pybliographer')
@@ -64,6 +195,11 @@ class Document (Connector.Publisher):
 
         self.w = self.xml.get_widget ('main')
         self.paned = self.xml.get_widget ('main_pane')
+
+        self.w.set_menus (self.uim.get_widget ('/Menubar'))
+        self.w.set_toolbar (self.uim.get_widget ('/Toolbar'))
+        
+        self.w.add_accel_group (self.uim.get_accel_group ())
 
         self.w.add_events (gdk.KEY_PRESS_MASK)
         
@@ -129,6 +265,7 @@ class Document (Connector.Publisher):
         self.sort_view (default)
 
         self._title_set ()
+        self._set_edit_actions (False)
         return
 
     def _title_set (self):
@@ -160,43 +297,40 @@ class Document (Connector.Publisher):
 
     def update_history (self, history):
         ''' fill the " Previous Documents " menu with the specified list of documents '''
-        sub = self.xml.get_widget ('previous_documents')
-        factory = gtk.ItemFactory (gtk.Menu, '<main>', None)
 
-        # This list contains the info needed to create the "Previous Documents" menu.
-        menuinfo = []
+        if self.recents:
+            for mid in self.recents_mid:
+                self.uim.remove_ui (mid)
+                
+            self.uim.remove_action_group (self.recents)
 
-        # This list contains the names of the menu entries that can be
-        # fetched back by factory.get_widget calls. The two lists
-        # differ as the factory.create_items () function interprets
-        # underscores to mark shortcuts, whereas the get_widget call
-        # does not escape the underscores...
-        names = []
-        
+        self.recents_mid = []
+        self.recents = gtk.ActionGroup ('Recent')
+
+        self.uim.insert_action_group (self.recents, 1)
+
         for item in history:
             # Display name in the menu
-            filename = string.replace (item [0], '/', '\/')
-            quoted   = string.replace (filename, '_', '__')
-            menuinfo.append (('/' + quoted, None,
-                              self._history_open_cb, 0, None))
-            names.append ('/' + filename)
+            quoted   = string.replace (item [0], '_', '__')
+        
+            mid = self.uim.new_merge_id ()
 
-        factory.create_items (menuinfo)
-
-        # Bind the actual file info to each menu entry
-        i = 0
-        for item in names:
-            w = factory.get_widget (item)
-            w.set_data ('file', history [i])
-            i = i + 1
+            self.recents_mid.append (mid)
             
-        sub.set_submenu (factory.get_widget ('<main>'))
+            action = gtk.Action (str (mid), quoted, None, None)
+            self.recents.add_action (action)
+
+            action.connect ('activate', self._history_open_cb, item)
+        
+            self.uim.add_ui (mid, '/Menubar/File/Recent', str (mid),
+                             str (mid), gtk.UI_MANAGER_MENUITEM, False)
+
         return
 
 
     def _history_open_cb (self, id, w):
 
-        file, type = w.get_data ('file')
+        file, type = w
         
         if not self.confirm (): return
 
@@ -281,9 +415,8 @@ class Document (Connector.Publisher):
 
         if self.selection.search:
             text += ' - ' + _('view limited to: %s') % self.selection_name
-            
-        self.w_save_btn.set_sensitive (self.changed)
-        self.w_save_mnu.set_sensitive (self.changed)
+
+        self.actiongroup.get_action ('Save').set_property ('sensitive', self.changed)
 
         self.statusbar.set_default (text)
         return
@@ -875,13 +1008,23 @@ class Document (Connector.Publisher):
         return
     
 
+    def _set_edit_actions (self, value):
+        for action in ('Delete', 'Edit', 'Cut', 'Copy', 'Cite'):
+            self.actiongroup.get_action (action).set_property ('sensitive', value)
+        
+        return
+        
     def update_display (self, entry):
-        self.display.display (entry)
+        if entry:
+            self.display.display (entry)
+
+        self._set_edit_actions (entry is not None)
         return
 
     
     def freeze_display (self, entry):
         self.display.clear ()
+        self._set_edit_actions (True)
         return
 
 
@@ -961,6 +1104,7 @@ class Document (Connector.Publisher):
                           _("Gnome interface to the Pybliographer system."),
                           ['Hervé Dréau',
                            'Frédéric Gobry',
+                           'Zoltán Kóta',
                            'Travis Oliphant',
                            'Darrell Rudmann',
                            'Peter Schulte-Stracke',

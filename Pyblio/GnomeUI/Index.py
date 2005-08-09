@@ -415,6 +415,10 @@ class Index (Connector.Publisher):
         if len (entries) == 1:
             self.issue ('select-entry', entries [0])
             return
+
+        if len (entries) == 0:
+            self.issue ('select-entry', None)
+            return
         return
 
 

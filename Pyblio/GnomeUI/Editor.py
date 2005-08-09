@@ -25,7 +25,7 @@
 
 import re, string
 from gnome import ui
-import gtk
+import gtk, gobject
 
 import copy, re
 
@@ -534,12 +534,19 @@ class RealEditor (Connector.Publisher):
         table.attach (self.key,
                       1, 2, 1, 2, yoptions = 0)
 
-        self.menu = gtk.OptionMenu ()
-        menu = gtk.Menu ()
-        self.menu.set_menu (menu)
+        # The list store will hold both the identifier and the type of
+        # each entry
+        liststore = gtk.ListStore (gobject.TYPE_STRING,
+                                   gobject.TYPE_PYOBJECT)
 
-        table.attach (self.menu,
-                      0, 1, 1, 2, yoptions = 0)
+        self.menu = gtk.ComboBox (liststore)
+
+        cell = gtk.CellRendererText()
+
+        self.menu.pack_start (cell, True)
+        self.menu.add_attribute (cell, 'text', 0)
+
+        table.attach (self.menu, 0, 1, 1, 2, yoptions = 0)
 
         entry_list = Config.get ("base/entries").data.values ()
         entry_list.sort (lambda x, y: cmp (x.name, y.name))
@@ -548,11 +555,12 @@ class RealEditor (Connector.Publisher):
         history = 0
         for entry in entry_list:
             if entry == self.entry.type: history = i
-            Utils.popup_add (menu, entry.name,
-                             self.menu_select, entry)
+            liststore.append ((entry.name, entry))
+            
             i = i + 1
 
-        self.menu.set_history (history)
+        self.menu.set_active (history)
+        self.menu.connect ("changed", self.menu_select)
         
         table.show_all ()
         self.w.pack_start (table, False, False)
@@ -593,7 +601,10 @@ class RealEditor (Connector.Publisher):
         return
 
 
-    def menu_select (self, menu, entry):
+    def menu_select (self, menu):
+        idx   = menu.get_active_iter ()
+        entry = menu.get_model ().get_value (idx, 1)
+        
         # update the current entry
         new = self.update (self.database, copy.deepcopy (self.entry))
         if new is None:
@@ -1350,23 +1361,23 @@ class  LT_Dialog_1     :
             gtk.Label (
             _('Name of the new annotation:')),
             True, True, 6)
-        menu = gtk.Menu()
-        self.options = gtk.OptionMenu()
-        self.options.set_menu(menu)
+        
+        self.options = gtk.combo_box_new_text ()
+
         self.dialog.vbox.pack_start (self.options, True, True, 12)
         self.fields = [ x for x in Config.get ('base/fields').data
                         if Types.get_field(x).type == Fields.LongText]
         self.fields.sort()
         for i in self.fields:
-            menu.append(gtk.MenuItem(i))
-        self.options.set_history(0)
-        self.options.grab_focus()
+            self.options.append_text (i)
+        self.options.set_active (0)
+
         self.options.connect ('changed', self.changed)
         self.dialog.set_default_response(gtk.RESPONSE_ACCEPT)
         self.value = self.fields[0]
 
     def changed (self, *args):
-        val = self.options.get_history()
+        val = self.options.get_active ()
         self.value = self.fields[val]
 
     def run (self):

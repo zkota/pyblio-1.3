@@ -81,7 +81,7 @@ class ConfigDialog (Utils.GladeWindow):
 
                 nice  = string.capitalize (string.split (item, '/') [1])
                 label = gtk.Label()
-                label.set_use_markup(gtk.TRUE)
+                label.set_use_markup(True)
 
                 label.set_markup('<b>%s</b>' % (nice))
                 label.set_alignment(xalign=0.5, yalign=0)
@@ -284,7 +284,7 @@ class BooleanConfig (BaseConfig):
         
         self.button.connect  ('clicked', self.update, True)
         description = gtk.Label()
-        description.set_use_markup(gtk.TRUE)
+        description.set_use_markup(True)
         description.set_line_wrap(True)
         description.set_justify(gtk.JUSTIFY_LEFT) #default?
         description.set_markup('%s' % (help_text))
@@ -316,32 +316,32 @@ class ElementConfig (BaseConfig):
         if key:
             data = str(Config.get (key).data)
         else: data = ''
-        self.m = gtk.Menu()
-        self.items = dtype.get()
+
+        self.m = gtk.combo_box_new_text ()
+        self.items = dtype.get ()
 
         ix = 0
         select = -1
         for i in self.items:
-            self.m.append (gtk.MenuItem(str(i)))
+            self.m.append_text (str (i))
             if data == str(i):
                 select = ix
             ix += 1
-        self.o = gtk.OptionMenu()
-        self.o.set_menu(self.m)
-        self.o.set_history (select)
-        self.o.connect ('changed', self.update, True)
+        
+        self.m.set_active (select)
+        self.m.connect ('changed', self.update, True)
         
         self.w = gtk.HBox(spacing = 12)
-        self.w.pack_start(self.o, True, True, padding=12)
+        self.w.pack_start(self.m, True, True, padding=12)
         self.w.show_all ()
         return
 
     def get (self):
-        return self.items[self.o.get_history()]
+        return self.items[self.m.get_active ()]
     
     def set (self, value):
         self.freeze ()
-        self.o.set_history (self.items.index(value))
+        self.m.set_active (self.items.index (value))
         self.thaw ()
         return
     

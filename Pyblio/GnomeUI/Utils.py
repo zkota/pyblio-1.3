@@ -138,7 +138,7 @@ def set_cursor (self, name):
     window.set_cursor (cursor [name])
         
     while gtk.events_pending ():
-        gtk.mainiteration (False)
+        gtk.main_iteration (False)
     return
 
 

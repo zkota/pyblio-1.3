@@ -36,7 +36,7 @@ for pair in map (None, version, testversion):
     if pair [0] > pair [1]: break
     
     if pair [0] < pair [1]:
-        error ('minmal version %s, detected %s' % (
+        error ('requested version for python is %s, but I detected %s' % (
             sys.argv [1], sys.version))
         
 # check for gtk and gnome 2.0
@@ -53,7 +53,7 @@ try:
     import gconf
 
     v = string.join (map (str, gtk.pygtk_version), '.')
-    
+
     fd = open ('conftest.out', 'a')
     fd.write ('PyGtk_Version="%s"\n' % v)
     fd.close ()
@@ -84,6 +84,9 @@ except:
 
     error ('unexpected error')
 
+if gtk.pygtk_version < (2,4,0):
+    error ('requested version for PyGtk is %s, but I detected %s' % ('2.4.0', v))
+    
 
 try:
     import _recode

@@ -30,11 +30,11 @@ from Pyblio import Open, Types, Base, Fields, Config, Autoload
 from Pyblio.GnomeUI import Utils
 
 if gtk.__dict__.has_key('FileChooserDialog'):
-	has_file_chooser = True
-	FileSelect = gtk.FileChooserDialog
+    has_file_chooser = True
+    FileSelect = gtk.FileChooserDialog
 else:
-	has_file_chooser = False
-	FileSelect = gtk.FileSelection
+    has_file_chooser = False
+    FileSelect = gtk.FileSelection
 
 
 class URLFileSelection (FileSelect):
@@ -101,37 +101,41 @@ class URLFileSelection (FileSelect):
         hbox.pack_start (gtk.Label (_("Bibliography type:")),
                          expand = False, fill = False)
 
-        self.menu = gtk.OptionMenu ()
+        self.menu = gtk.combo_box_new_text ()
+	
         hbox.pack_start (self.menu)
         if not has_file_chooser:
            vbox.pack_start (hbox, expand = False, fill = False)
         else:
-           self.set_extra_widget(hbox)
+           self.set_extra_widget (hbox)
 
         # menu content
-        menu = gtk.Menu ()
-        self.menu.set_menu (menu)
         
         liste = Autoload.available ('format')
         liste.sort ()
-        
+
+        self.formats = [ None ]
+	
         if has_auto:
-            Utils.popup_add (menu, _(' - According to file suffix - '), self.menu_select, None)
+            self.menu.append_text (_(' - According to file suffix - '))
             self.ftype = None
         else:
             self.ftype = liste [0]
             
         for avail in liste:
-            Utils.popup_add (menu, avail, self.menu_select, avail)
+            self.menu.append_text (avail)
 
-        self.menu.set_history (0)
+        self.formats += liste
 
+        self.menu.set_active (0)
+        self.menu.connect ("changed", self.menu_select)
+        
         vbox.show_all ()
         return
 
 
-    def menu_select (self, widget, selection):
-        self.ftype = selection
+    def menu_select (self, widget):
+        self.ftype = self.formats [widget.get_active ()]
         return
         
 

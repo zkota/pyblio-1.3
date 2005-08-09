@@ -2,6 +2,69 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2005-08-09 08:35:50 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-198
+
+    Summary:
+      merged the fix for pygtk 2.4 compatibility
+    Revision:
+      pybliographer--stable--1.2--patch-198
+
+    Patches applied:
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--base-0
+       tag of gobry@pybliographer.org--public/pybliographer--stable--1.2--patch-196
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-1
+       fixed trivial warning due to old gtk calls
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-2
+       removed OptionMenu from the Annotation dialog
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-3
+       removed use of OptionMenu in the file selector
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-4
+       removed use of OptionMenu in the configuration menu
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-5
+       half-migrated to the UIManager for menu and toolbars
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-6
+       the recent documents UI is now handled by UIManager
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-7
+       made the save button insensitive when there a no changes to save
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-8
+       correctly set sensitivity to all actions needing a selected record
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-9
+       fixed compatibility with pygtk 2.4
+    
+     * gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-10
+       added shortcuts for Edit and About in compatibility mode
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/ConfDir/GnomeUI.py
+     Pyblio/GnomeUI/Config.py Pyblio/GnomeUI/Document.py
+     Pyblio/GnomeUI/Editor.py Pyblio/GnomeUI/FileSelector.py
+     Pyblio/GnomeUI/Index.py Pyblio/GnomeUI/Utils.py setup-check.py
+
+    new patches:
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--base-0
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-1
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-2
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-3
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-4
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-5
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-6
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-7
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-8
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-9
+     gobry@pybliographer.org--2005/pyblio--nogtkwarnings--1.2--patch-10
+
+
 2005-08-09 06:31:08 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-197
 
     Summary:

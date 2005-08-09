@@ -46,7 +46,7 @@ Config.define ('gnomeui/multiline',
 
 
 Config.set ('gnomeui/monospaced',
-            gtk.load_font ('-*-*-*-r-normal-*-*-*-*-*-c-*-iso8859-1'))
+            gtk.gdk.Font ('-*-*-*-r-normal-*-*-*-*-*-c-*-iso8859-1'))
 
 
 
