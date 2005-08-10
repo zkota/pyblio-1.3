@@ -462,7 +462,7 @@ class Document (Connector.Publisher):
         ''' add all the entries of another database to the current one '''
         # get a new file name
         (url, how) = FileSelector.URLFileSelection (_("Merge file"),
-                                                    url = True, has_auto = True).run ()
+                                                    has_auto = True).run ()
 
         if url is None: return
 
@@ -675,7 +675,7 @@ class Document (Connector.Publisher):
     def save_document_as (self, * arg):
         # get a new file name
         (url, how) = FileSelector.URLFileSelection (_("Save As..."),
-                                                    url = False, has_auto = False, is_save = True).run ()
+                                                    has_auto = False, is_save = True).run ()
         
         if url is None: return
 

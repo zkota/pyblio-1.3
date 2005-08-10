@@ -29,71 +29,44 @@ from Pyblio import Open, Types, Base, Fields, Config, Autoload
 
 from Pyblio.GnomeUI import Utils
 
-if gtk.__dict__.has_key('FileChooserDialog'):
-    has_file_chooser = True
-    FileSelect = gtk.FileChooserDialog
-else:
-    has_file_chooser = False
-    FileSelect = gtk.FileSelection
 
-
-class URLFileSelection (FileSelect):
+class URLFileSelection (gtk.FileChooserDialog):
     ''' Extended file selection dialog, with an URL field and a type
     selector. '''
 
     defaultdir = None
     
     def __init__(self, title = _("File"),
-                 url = True, modal = True, has_auto = True,is_save = False,
+                 modal = True, has_auto = True, is_save = False,
                  directory = None):
 
-        if has_file_chooser:
-            FileSelect.__init__ (self)
+        gtk.FileChooserDialog.__init__ (self)
 
-            accelerator = gtk.AccelGroup ()
-            self.add_accel_group (accelerator)
+        accelerator = gtk.AccelGroup ()
+        self.add_accel_group (accelerator)
 
-            b = self.add_button (gtk.STOCK_OK, gtk.RESPONSE_OK)
-            b.add_accelerator ('clicked', accelerator, gtk.keysyms.Return, 0, 0)
+        b = self.add_button (gtk.STOCK_OK, gtk.RESPONSE_OK)
+        b.add_accelerator ('clicked', accelerator, gtk.keysyms.Return, 0, 0)
 
-            b = self.add_button (gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT)
-            b.add_accelerator ('clicked', accelerator, gtk.keysyms.Escape, 0, 0)
-                
-        else:
-            FileSelect.__init__ (self)
+        b = self.add_button (gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT)
+        b.add_accelerator ('clicked', accelerator, gtk.keysyms.Escape, 0, 0)
 
-        if has_file_chooser and is_save:
+        if is_save:
             self.set_action(gtk.FILE_CHOOSER_ACTION_SAVE)
 
+        self.set_local_only (False)
+
         self.set_title (title)
-        if not has_file_chooser:
-            self.hide_fileop_buttons ()
         
         if directory:
-            self.set_filename (directory)
+            self.set_current_folder (directory)
             
         elif self.defaultdir:
-            self.set_filename (self.defaultdir)
+            self.set_current_folder (self.defaultdir)
         
             
         self.ret = None
-        self.url = None
         
-        if not has_file_chooser:
-            vbox = self.main_vbox
-        else:
-            vbox = self.vbox
-        
-        # url handler
-        if url:
-            hbox = gtk.HBox ()
-            hbox.set_spacing (5)
-            hbox.set_border_width (5)
-            hbox.pack_start (gtk.Label ('URL:'), expand = False, fill = False)
-            self.url = gtk.Entry ()
-            hbox.pack_start (self.url)
-            vbox.pack_start (hbox, expand = False, fill = False)
-
         # type selector
         hbox = gtk.HBox ()
         hbox.set_spacing (5)
@@ -104,10 +77,8 @@ class URLFileSelection (FileSelect):
         self.menu = gtk.combo_box_new_text ()
 	
         hbox.pack_start (self.menu)
-        if not has_file_chooser:
-           vbox.pack_start (hbox, expand = False, fill = False)
-        else:
-           self.set_extra_widget (hbox)
+
+        self.set_extra_widget (hbox)
 
         # menu content
         
@@ -130,7 +101,7 @@ class URLFileSelection (FileSelect):
         self.menu.set_active (0)
         self.menu.connect ("changed", self.menu_select)
         
-        vbox.show_all ()
+        hbox.show_all ()
         return
 
 
@@ -147,36 +118,8 @@ class URLFileSelection (FileSelect):
 
         if ret != gtk.RESPONSE_OK: return (None, None)
         
-
-        # If we select a directory, this means the user did not select
-        # a file, so we consider the URL. Otherwise, consider the user
-        # input as a plain file.
-        
-        if not os.path.isdir (file):
-            URLFileSelection.defaultdir = os.path.dirname (file) + '/'
-
-            return (file, self.ftype)
-
-        # If it is an URL, we still need to track the last directory selected.
-        URLFileSelection.defaultdir = file + '/'
-        
-        if not self.url: return (None, None)
-        
-        ret = self.url.get_text ()
-        if ret == '': return (None, None)
-        
-        # construct a nice URL
-        if string.lower (ret [0:5]) != 'http:' and \
-               string.lower (ret [0:4]) != 'ftp:':
+        URLFileSelection.defaultdir = os.path.dirname (file)
             
-            if ret [0:2] != '//':
-                ret = '//' + ret
-                
-            file = 'http:' + ret
-
-        else:
-            file = ret
-                
         return (file, self.ftype)
 
             
