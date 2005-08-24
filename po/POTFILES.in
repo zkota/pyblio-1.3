@@ -32,6 +32,7 @@ Pyblio/GnomeUI/FileSelector.py
 Pyblio/GnomeUI/Format.py
 Pyblio/GnomeUI/Index.py
 Pyblio/GnomeUI/Medline.py
+Pyblio/GnomeUI/OpenURL.py
 Pyblio/GnomeUI/Mime.py
 Pyblio/GnomeUI/Pybliographic.py
 Pyblio/GnomeUI/Search.py
@@ -68,6 +69,7 @@ glade/config1.glade
 glade/fields1.glade
 glade/format.glade
 glade/medline.glade
+glade/openurl.glade
 glade/pyblio.glade
 glade/search.glade
 glade/sort.glade
