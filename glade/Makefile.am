@@ -7,7 +7,8 @@ glade_DATA = 					\
 	sort.glade 				\
 	format.glade				\
 	medline.glade 				\
-	config1.glade
+	config1.glade				\
+	openurl.glade
 
 EXTRA_DIST = $(glade_DATA)
 

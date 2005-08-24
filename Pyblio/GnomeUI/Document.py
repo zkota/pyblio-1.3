@@ -34,7 +34,7 @@ import gtk.glade
 from gtk import gdk
 
 from Pyblio.GnomeUI import Index, Entry, Utils, FileSelector, Editor
-from Pyblio.GnomeUI import Search, Format
+from Pyblio.GnomeUI import Search, Format, OpenURL
 from Pyblio.GnomeUI.Sort import SortDialog
 from Pyblio.GnomeUI.Medline import MedlineUI
 
@@ -56,6 +56,7 @@ uim_content = '''
         <menu action="File">
              <menuitem action="New"/>
              <menuitem action="Open"/>
+             <menuitem action="Open_URL"/>
              <menuitem action="Merge"/>
              <menuitem action="Medline"/>
              <menuitem action="Save"/>
@@ -136,6 +137,7 @@ class Document (Connector.Publisher):
             
             ('New',  gtk.STOCK_NEW,   None,         None,   None,     self.new_document),
             ('Open', gtk.STOCK_OPEN,  None,         None,   None,     self.ui_open_document),
+            ('Open_URL', None, _('Open _Location'), '<control>l',   None, self.ui_open_location),
             ('Save', gtk.STOCK_SAVE,  None,         None,   None,     self.save_document),
             ('Save_As', gtk.STOCK_SAVE_AS,  None,         None,   None,     self.save_document_as),
             ('Close', gtk.STOCK_CLOSE,  None,         None,   None,     self.close_document),
@@ -514,7 +516,19 @@ class Document (Connector.Publisher):
         self.open_document (url, how)
         return
 
+
+    def ui_open_location (self, * arg):
+        ''' callback corresponding to "Open Location" '''
+
+        if not self.confirm (): return
+
+        (url, how) = OpenURL.OpenDialog (self.w).run ()
+
+        if url == None or url == "": return
+        self.open_document (url, how)
+        return
     
+
     def open_document (self, url, how = None, no_name = False):
 
         Utils.set_cursor (self.w, 'clock')

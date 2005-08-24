@@ -33,6 +33,7 @@ EXTRA_DIST = \
 	FileSelector.py 	\
 	Index.py 		\
 	Mime.py 		\
+	OpenURL.py		\
 	Pybliographic.py 	\
 	Search.py 		\
 	Sort.py 		\
