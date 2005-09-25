@@ -37,8 +37,8 @@ _base_fieldtype = {
     LongText    : 0,
     Date        : 3,
     AuthorGroup : 1,
-    URL         : 0,
-    Reference   : 0,
+    URL         : 4,
+    Reference   : 4,
     }
 
 _text_fieldtype = Config.get ('bibtex+/capitalize').data
@@ -178,17 +178,12 @@ class Entry (Base.Entry):
         if isinstance (value, Date): return
         
         # then, convert as bibtex.
-        quote = 1
         if isinstance (value, Reference):
             value = string.join (map (lambda item: item.key, value.list), ', ')
-            quote = 0
             
-        if isinstance (value, URL):
-            quote = 0
-        
 	self.dict [key] = _bibtex.reverse (_fieldtype (Types.get_field (key)),
                                            Config.get ('bibtex+/braces').data,
-                                           value, quote)
+                                           value)
 	return
 
 
@@ -371,7 +366,7 @@ class DataBase (Base.DataBase):
 		_bibtex.set_string (self.parser, k,
 				    _bibtex.reverse (_base_fieldtype [Text],
                                                      Config.get ('bibtex+/braces').data,
-						     user [k] [0], 0))
+						     user [k] [0]))
 
 	finished = 0
 	errors = []
