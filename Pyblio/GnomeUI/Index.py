@@ -53,8 +53,10 @@ _safechar = ''.join (_safechar)
 class Index (Connector.Publisher):
     ''' Graphical index of an iterator '''
     
-    def __init__ (self, fields = None):
+    def __init__ (self, fields = None, popup = None):
         ''' Creates a new list of entries '''
+
+        self._w_popup = popup
         
         fields = fields or Config.get ('gnome/columns').data
         self.fields = map (lower, fields)
@@ -98,16 +100,6 @@ class Index (Connector.Publisher):
 
         self.access = []
 
-        # contextual popup menu
-        self.menu = gtk.Menu ()
-        
-        Utils.popup_add (self.menu, _('Add...'),
-                         self.entry_new)
-        Utils.popup_add (self.menu, _('Edit...'),
-                         self.entry_edit)
-        Utils.popup_add (self.menu, _('Delete...'),
-                         self.entry_delete)
-        
         # some events we want to react to...
         self.selinfo.connect ('changed', self.select_row)
 
@@ -447,20 +439,9 @@ class Index (Connector.Publisher):
 
         if not (event.type == gtk.gdk.BUTTON_PRESS and
                 event.button == 3): return
-        
-        # what menu items are accessible ?
-        sel = self.selection ()
-            
-        if len (sel) == 0: mask = (1, 0, 0)
-        else:              mask = (1, 1, 1)
 
-        child = self.menu.get_children ()
-        for i in range (3):
-            child [i].set_sensitive (mask [i])
-            
-        self.menu.popup (None, None, None, event.button, event.time)
+        self._w_popup.popup (None, None, None, event.button, event.time)
         return
-
 
     def entry_new (self, * arg):
         self.issue ('new-entry')

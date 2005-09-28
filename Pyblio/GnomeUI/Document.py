@@ -209,7 +209,7 @@ class Document (Connector.Publisher):
         self.w_save_mnu = self.xml.get_widget ('_w_save_mnu')
         
         # The Index list
-        self.index = Index.Index ()
+        self.index = Index.Index (popup = self.uim.get_widget ('/Popup'))
         self.paned.add1 (self.index.w)
         
         self.index.Subscribe ('new-entry',      self.add_entry)
