@@ -81,7 +81,7 @@ install-data-local:
 pybliographic.keys: pybliographic.keys.in Makefile
 	sed -e 's^\@icondir\@^$(appicondir)^g' \
 	< $(srcdir)/pybliographic.keys.in > pybliographic.keys.tmp \
-	&& mv pybliographic.keys.tmp pybliographic.keys 
+	&& mv pybliographic.keys.tmp pybliographic.keys
 
 install-data-hook:
 	update-desktop-database $(DESTDIR)$(appdir) \
