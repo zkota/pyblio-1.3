@@ -21,6 +21,12 @@
 
 import atexit, cPickle, os, string, sys, types
 
+try: _
+except NameError:
+    def _(str) \
+	: return str
+    
+
 pickle = cPickle
 del cPickle
 
@@ -74,11 +80,11 @@ class Storage:
 
         if self.items.has_key (key): return
         domain = string.split (key, '/') [0]
-
+##	print 'DOMAIN:', domain
         if self.sources.has_key (domain):
             file = self.sources [domain]
+##	    print 'READ:', self.sources [domain]
             del self.sources [domain]
-
             execfile (file, globals (), globals ())
 
         return
@@ -140,6 +146,7 @@ class Storage:
 ConfigItems = Storage ()
 
 def define (key, description, vtype = None, hook = None, user = None):
+##    print '>>>>>>> DEFINE', key, description#, vtype, hook, user
     if ConfigItems.has_key (key):
         raise KeyError, "key `%s' already defined" % key
 
@@ -160,7 +167,7 @@ _changes = {}
 
 def set_and_save  (key, value):
     set (key, value)
-    #print 'SET AND SAVE:', key, value
+##    print 'SET AND SAVE:', key, value
     global _changes
     _changes [key] = value
     

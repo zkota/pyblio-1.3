@@ -77,7 +77,7 @@ def iterator (url, check):
         )
 
 
-def writer (iter, output):
+def writer (iter, output, **argh):
     
     mapping = Config.get ('ovid/mapping').data
     OvidLike.writer (iter, output, mapping)

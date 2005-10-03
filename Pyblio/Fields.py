@@ -399,23 +399,68 @@ class LongText (Text) :
 class URL:
     ''' Holder for URL data (for example, the location of a database) '''
 
-    def __init__ (self, url):
+    def __init__ (self, url, invalid=False,
+		  inexact=False, date='', note=''):
+	"""Accepts as first argument either a string (extended
+	syntax, as parsed by parse_full), or a tuple as used by urllib."""
+	
+	self.invalid = invalid
+	self.inexact = inexact
+	self.date = date
+	self.note = note
+	
+	try:
+	    url = url.strip ()
+	    self.parse_full (url)
+	except AttributeError:
+	    self.url = ['', '', '', '', '', '']
 
-        if type (url) is types.StringType:
-            url = string.strip (url)
-            url = list (urlparse.urlparse (url))
-
-        if url [0] == '':
+	    # N.B. six fields in lieu of five, because we
+	    # are using (deprecated) URLPARSE in lieu of
+	    # URLSPLIT --ptr.
+	    
+        if self.url [0] == '':
             # Consider we handle a local file
-            url [0] = 'file'
-            url [2] = os.path.expanduser (url [2])
-            
-            if not os.path.isabs (url [2]):
-                url [2] = os.path.normpath (os.path.join (os.getcwd(), url [2]))
+            self.url [0] = 'file'
+            self.url [2] = os.path.expanduser (self.url [2])
+            if not os.path.isabs (self.url [2]):
+                self.url [2] = os.path.normpath (os.path.join (os.getcwd(), self.url [2]))
 
-        self.url = tuple (url)
         return
 
+    def set (self, other):
+	self.url = other .url
+	self.invalid = other.invalid
+	self.inexact = other.inexact
+	self.date = other.date
+	self.note = other.note
+
+    def full (self):
+	a = (self.invalid and u'!') or u''
+	b = (self.inexact and u'*') or u''
+	d = (self.date and '|') or ''
+	n = (self.note and '|') or ''
+	return u"%s%s%s%s%s%s%s" %( a, b, self.get_url (),
+				    d, self.date, n, self.note)
+
+    rx = re.compile ("\s*(!?\*?)([^|]*)(:?\|([^|]*)(:?\|([^|]*))?)?")
+
+    def parse_full (self, s):
+	"""Parse string s encoding invalid and inexact flags and
+	containig date and note subfields"""
+	
+	m = self.rx.match (s)
+	if m:
+	    ii, us, fil1, date, fil2, note = m.groups ()
+	    self.invalid |= ii.startswith ('!')
+	    self.inexact |= ii.endswith ('*')
+	    self.url =  list (urlparse.urlparse (us))
+	    self.date = date or self.date
+	    self.note = note or self.note
+	else:
+	    print 'ERROR PARSING URL:', s
+	    self.note = "ERROR PARSING THIS URL"
+	
     def match (self, regex):
         ''' '''
         return regex.search (str (self))
@@ -427,12 +472,14 @@ class URL:
         return hash (str (self))
 
     def __str__ (self):
-        return urlparse.urlunparse (self.url)
+        return self.full ()
     
-
     def __repr__ (self):
         return 'URL (%s)' % `urlparse.urlunparse (self.url)`
-    
+
+    def get_url (self):
+	return urlparse.urlunparse (self.url)
+	
 
 class Reference:
     ''' Holder for a reference to a bibliographic entry (which can be

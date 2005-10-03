@@ -38,6 +38,7 @@ PYTHON = \
 	Key.py 		\
 	LyX.py 		\
 	Open.py 	\
+	Resource.py	\
 	Search.py 	\
 	Selection.py 	\
 	Sort.py 	\
@@ -48,6 +49,7 @@ PYTHON = \
 	Query.py	\
 	pybtextvar.py	\
 	recode.py       \
+	userexit.py	\
 	userformat.py
 
 SUBDIRS = GnomeUI Output Format ConfDir Style

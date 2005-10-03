@@ -2,6 +2,109 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2005-10-03 20:34:13 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-207
+
+    Summary:
+      merged the new code from Peter
+    Revision:
+      pybliographer--stable--1.2--patch-207
+
+    This contains the @preamble handler and better support for resources.
+    
+    Patches applied:
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--base-0
+       tag of gobry@pybliographer.org--public/pybliographer--stable--1.2--patch-199
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-1
+       @Preamble support for BibTeX 
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-2
+       Added preamble support to »save as«  action
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-3
+       View associated resources (New feature)
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-4
+       Fixed: preamble support (autosave), icon for GnomeUI.Index
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-5
+       URL Button and file chooser
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-6
+       Miscellaneous fixes
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-7
+       Added icon
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-11
+       upstream changes
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-12
+       Upstream
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-13
+       integrating changes from upstream and devel branch 
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-14
+       Miscellaneous fixes
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-15
+       upstream
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-16
+       upstream
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-17
+       Various fixes, popup menu via UIM
+    
+     * peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-18
+       Misc. fixes
+    
+
+    new files:
+     .arch-ids/pybliographic-viewer.png.id
+     Pyblio/.arch-ids/Resource.py.id
+     Pyblio/.arch-ids/userexit.py.id
+     Pyblio/ConfDir/.arch-ids/Resource.py.id
+     Pyblio/ConfDir/Resource.py
+     Pyblio/GnomeUI/.arch-ids/Common.py.id Pyblio/GnomeUI/Common.py
+     Pyblio/Resource.py Pyblio/userexit.py pybliographic-viewer.png
+     tests/.arch-ids/preamble.bib.id tests/preamble.bib
+
+    modified files:
+     ChangeLog-1.2 Makefile.am Pyblio/Base.py
+     Pyblio/ConfDir/Base.py Pyblio/ConfDir/BibTeX.py
+     Pyblio/ConfDir/Gnome.py Pyblio/ConfDir/Makefile.am
+     Pyblio/Config.py Pyblio/Fields.py Pyblio/Format/BibTeX.py
+     Pyblio/Format/Medline.py Pyblio/Format/Ovid.py
+     Pyblio/Format/Refer.py Pyblio/Format/isifile.py
+     Pyblio/Format/ut_Isi.py Pyblio/GnomeUI/Document.py
+     Pyblio/GnomeUI/Editor.py Pyblio/GnomeUI/Entry.py
+     Pyblio/GnomeUI/FileSelector.py Pyblio/GnomeUI/Index.py
+     Pyblio/GnomeUI/Makefile.am Pyblio/Makefile.am Pyblio/Open.py
+     Pyblio/userformat.py configure.ac setup-check.py
+     tests/Makefile.am
+
+    new patches:
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--base-0
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-1
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-2
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-3
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-4
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-5
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-6
+     peter@schulte-stracke.de--pyb05/pyblio--devel--1.2--patch-7
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-11
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-12
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-13
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-14
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-15
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-16
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-17
+     peter@schulte-stracke.de--pyb05/pyblio--peter--1.2--patch-18
+
+
 2005-09-29 14:54:39 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-206
 
     Summary:

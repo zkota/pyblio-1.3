@@ -19,6 +19,11 @@
 # 
 # 
 
+try: _
+except NameError:
+    def _ (str)\
+	: return str
+
 import getpass, re, rfc822, string, time, types
 
 from Pyblio import Autoload, Base, Fields, Iterator, Open, Types, Utils
@@ -30,7 +35,7 @@ key_map = {
     'CR' : ('citedref', ' ; '),
     'C1' : ('authoraddress', ' ; '),
     'DE' : ('keywords', ' '),
-    'ED' : ('editor', '  '),
+    'ED' : ('editor', ' '),
     'IS' : ('number', ' ; '),
     'LA' : ('language', ' ; '),
     'PA' : ('address', ' ; '),
@@ -358,7 +363,7 @@ def writer (iter, output_stream, preamble=None, postamble = None):
     
 
 def opener (url, check):
-        
+
         base = None
         if (not check) or (url.url [2] [-4:] == '.isi'):
                 base = Isifile (url)

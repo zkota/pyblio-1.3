@@ -117,7 +117,7 @@ class Entry:
                     
                 return
                 
-            button.connect ('clicked', url_open, str (field))
+            button.connect ('clicked', url_open, field.get_url ())
             
             self.text.add_child_at_anchor (button, anchor)
             return

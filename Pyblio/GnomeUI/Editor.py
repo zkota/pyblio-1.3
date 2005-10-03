@@ -23,15 +23,11 @@
 #   entry editor for more than 50 chars
 # added: Note taking widget
 
-import re, string
+import copy, gobject, gtk, re, string
 from gnome import ui
-import gtk, gobject
-
-import copy, re
 
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
-
-from Pyblio.GnomeUI import FieldsInfo, Mime, Utils
+from Pyblio.GnomeUI import Common, FieldsInfo, FileSelector, Mime, Utils
 
 key_re = re.compile ("^[\w:_+-.()]+$")
 
@@ -452,7 +448,9 @@ class Reference (BaseField):
         self.initial = self.current
         return
     
+
     def drag_received (self, *arg):
+
         selection = arg [4]
         info      = arg [5]
 
@@ -489,18 +487,46 @@ class Reference (BaseField):
 class URL (BaseField):
     
     def create_widget (self, h):
-        self.edit = gtk.Entry ()
-        self.edit.set_editable (True)
-        self.edit.set_text (self.string.decode ('latin-1'))
-        self.edit.show ()
+## 	self.url = self.value
+## 	self.edit = Common.filechooserbutton(self.url, 'enter/edit',)
+##      self.edit.show ()
+##      h.pack_start (self.edit)
+	self.newurl = None
 
-        h.pack_start (self.edit)
+	self.box = gtk.HBox (spacing=6)
+	self.edit = gtk.Entry ()
+	self.edit.set_editable (True)
+	self.old_url = self.string.decode ('latin-1')
+	self.edit.set_text (self.old_url)
+	self.box.pack_start (self.edit)
+	self.button = gtk.Button (_('Browse...'))
+	self.button.connect ("clicked", self.cb_clicked)
+	self.box.pack_start (self.button, False)
+	h.pack_start (self.box)
         return 0
-
+  
+##    def update (self, entry):
+	
+##	self.newurl = self.edit.get_url ()
+	
+## 	if self.newurl:
+## 	    entry [self.field] = self.newurl
+## 	    return 1
+## 	else:
+## 	    return 0
+	
 
     def update_content (self, entry, text):
         entry [self.field] = Fields.URL (text)
         return
+
+    def cb_clicked (self, *args):
+	(url, how) = FileSelector.URLFileSelection (
+	    _("Select file"), show_type = False).run ()
+	if url:
+	    self.edit.set_text (url)
+	return 
+	
 
 
 class RealEditor (Connector.Publisher):

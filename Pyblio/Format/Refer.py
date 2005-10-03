@@ -171,7 +171,7 @@ class ReferIterator (Iterator.Iterator):
             data = data + ' ' + line
 
 
-def writer (iter, output):
+def writer (iter, output, **argh):
     entry   = iter.first ()
     mapping = Config.get ("refer/mapping").data
     

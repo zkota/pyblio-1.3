@@ -36,7 +36,7 @@ def author_editor_format (item):
     
     if len (r) == 1:
         a = r[0]
-        s.append ("%s, %s" %(
+        s.append ("%s, %s" %( 
             a.last, a.initials()))
     
     elif len (r) > 3:       
@@ -62,15 +62,19 @@ def author_title_format (item):
         s = []
         
     r = item.get ('title') or item.get ('booktitle', '[no title]')
-    s.append (str(r))
+    s.append (r)
 
     return ''.join (s)
-
 
 ### Local Variables:
 ### Mode: python
 ### py-master-file : "ut_userformat.py"
 ### End:
 
+
+### Local Variables:
+### Mode: python
+### py-master-file : "ut_userformat.py"
+### End:
             
         

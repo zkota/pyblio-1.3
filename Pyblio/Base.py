@@ -28,7 +28,7 @@ import re, copy, os
 import Pyblio.Help
 from types import *
 
-from Pyblio import Config, Open, Utils, Key, Iterator, Selection, Autoload
+from Pyblio import Autoload, Config, Iterator, Key, Open, Selection, Utils
 
 class Entry:
     '''
@@ -165,7 +165,7 @@ class DataBase:
     class Key. '''
 
     properties = {}
-
+    filemeta = {}
     id = 'VirtualDB'
 
     def __init__ (self, url):
@@ -173,6 +173,8 @@ class DataBase:
 	self.key = url
 
 	self.dict = {}
+
+	self.file_metadata = {}
 	return
 
 
@@ -278,7 +280,6 @@ class DataBase:
 	''' Returns an iterator for that database '''
 	return Iterator.DBIterator (self)
 
-
     def update (self, sorting = None):
 	''' Updates the Entries stored in the database '''
 	
@@ -294,7 +295,7 @@ class DataBase:
         tmpfile = open (tmp, 'w')
 
         iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
-	Open.bibwrite (iterator, out = tmpfile, how = self.id)
+	Open.bibwrite (iterator, out = tmpfile, how = self.id, database=self)
 
 	tmpfile.close ()
 
@@ -306,3 +307,9 @@ class DataBase:
         os.rename (tmp, name)
         return
 
+
+    def get_metadata (self, key, default=None):
+	return self.file_metadata.get (key, default)
+    
+    def set_metadata (self, key, value):
+	self.file_metadata [key] = value

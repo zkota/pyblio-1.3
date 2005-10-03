@@ -38,7 +38,7 @@ class URLFileSelection (gtk.FileChooserDialog):
     
     def __init__(self, title = _("File"),
                  modal = True, has_auto = True, is_save = False,
-                 directory = None):
+                 directory = None, show_type=True):
 
         gtk.FileChooserDialog.__init__ (self)
 
@@ -66,42 +66,44 @@ class URLFileSelection (gtk.FileChooserDialog):
         
             
         self.ret = None
-        
-        # type selector
-        hbox = gtk.HBox ()
-        hbox.set_spacing (5)
-        hbox.set_border_width (5)
-        hbox.pack_start (gtk.Label (_("Bibliography type:")),
-                         expand = False, fill = False)
-
-        self.menu = gtk.combo_box_new_text ()
+	self.ftype = None
 	
-        hbox.pack_start (self.menu)
+	if show_type:
+	    # type selector
+	    hbox = gtk.HBox ()
+	    hbox.set_spacing (5)
+	    hbox.set_border_width (5)
+	    hbox.pack_start (gtk.Label (_("Bibliography type:")),
+			     expand = False, fill = False)
 
-        self.set_extra_widget (hbox)
+	    self.menu = gtk.combo_box_new_text ()
 
-        # menu content
-        
-        liste = Autoload.available ('format')
-        liste.sort ()
+	    hbox.pack_start (self.menu)
 
-        self.formats = [ None ]
-	
-        if has_auto:
-            self.menu.append_text (_(' - According to file suffix - '))
-            self.ftype = None
-        else:
-            self.ftype = liste [0]
-            
-        for avail in liste:
-            self.menu.append_text (avail)
+	    self.set_extra_widget (hbox)
 
-        self.formats += liste
+	    # menu content
 
-        self.menu.set_active (0)
-        self.menu.connect ("changed", self.menu_select)
-        
-        hbox.show_all ()
+	    liste = Autoload.available ('format')
+	    liste.sort ()
+
+	    self.formats = [ None ]
+
+	    if has_auto:
+		self.menu.append_text (_(' - According to file suffix - '))
+		self.ftype = None
+	    else:
+		self.ftype = liste [0]
+
+	    for avail in liste:
+		self.menu.append_text (avail)
+
+	    self.formats += liste
+
+	    self.menu.set_active (0)
+	    self.menu.connect ("changed", self.menu_select)
+
+	    hbox.show_all ()
         return
 
 

@@ -29,6 +29,7 @@ EXTRA_DIST = \
 	GnomeUI.py 	\
 	Medline.py 	\
 	Ovid.py 	\
-	Refer.py
+	Refer.py	\
+	Resource.py
 
 pyb_DATA   = $(EXTRA_DIST)

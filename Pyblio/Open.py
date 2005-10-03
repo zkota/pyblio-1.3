@@ -22,13 +22,13 @@
 
 from types import *
 
-from Pyblio import Autoload, Fields, Help, Exceptions
+from Pyblio import Autoload, Config, Exceptions, Fields, Help
 
-import urlparse, urllib, traceback, os, sys, tempfile, string
+import os, string, sys, tempfile, traceback, urllib, urlparse
 
 def url_to_local (url):
 
-    (file, headers) = urllib.urlretrieve (str (url))
+    (file, headers) = urllib.urlretrieve (url.get_url ())
     return file
 
 
@@ -74,6 +74,7 @@ def bibopen (entity, how = None):
     ''' Generic function to open a bibliographic database '''
 
     def simple_try (url, how):
+	# url is Fields.URL instance, only to be passed to opener
 	base = None
 
 	if how == None:
@@ -96,15 +97,15 @@ def bibopen (entity, how = None):
 
 	return base
 
-    # Consider the reference as an URL
+    # Consider the reference as an URL: url is an Fields.URL instance
     url = Fields.URL (entity)
 
     if url.url [0] == 'file' and not os.path.exists (url.url [2]):
-	raise Exceptions.FileError (_("File `%s' does not exist") % str (url))
+	raise Exceptions.FileError (_("File `%s' does not exist") % url.get_url ())
 
     # eventually load a new module
     if how is None:
-	handler = Autoload.get_by_regexp ("format", str (url))
+	handler = Autoload.get_by_regexp ("format", url.get_url ())
 	if handler:
 	    how = handler.name
 
@@ -120,8 +121,9 @@ def bibiter (entity, how = None):
     ''' Generic function to iterate on a bibliographic database '''
 
     def simple_try (url, how):
+	# url is Fields.URL instance, only to be passed to opener
+	
 	base = None
-
 	if how == None:
 	    listedmethods = Autoload.available ('format')
 
@@ -150,7 +152,7 @@ def bibiter (entity, how = None):
 
     # eventually load a new module
     if how is None:
-	handler = Autoload.get_by_regexp ('format', str (url))
+	handler = Autoload.get_by_regexp ('format', url.get_url ())
 	if handler:
 	    how = handler.name
 
@@ -171,9 +173,14 @@ default, this formatting is the same as the one used by `more'.
 """)
 
 
-def bibwrite (iter, out = None, how = None):
+def bibwrite (iter, out = None, how = None, database=None):
     ''' writes a descriptions of a list of entries '''
 
+    if database and Config.get ('bibtex/keep-preamble').data:
+	preamble = database.get_metadata ('bibtex-preamble', [])
+    else:
+	preamble = []
+	
     # default output
     out = out or sys.stdout
 
@@ -189,8 +196,7 @@ def bibwrite (iter, out = None, how = None):
 
     if writer is None:
 	raise IOError, "type `%s' does not specify write method" % how
-
-    writer (iter, out)
+    writer (iter, out, preamble=preamble)
     return
 
 
@@ -221,4 +227,4 @@ def bibnew (name, type = None):
 	url [0] = 'file'
 	url [2] = os.path.expanduser (url [2])
 
-    return opener (url)
+    return opener (Fields.URL(url))

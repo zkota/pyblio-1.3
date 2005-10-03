@@ -2,6 +2,11 @@ from Pyblio import Config
 
 # ==================================================
 
+Config.define ('bibtex/keep-preamble',
+	       """A boolean requesting that a @preamble in the
+	       BibTeX file be kept""",
+	       Config.Boolean ())
+
 Config.define ('bibtex/strict',
                """ A boolean indicating the strictness of the parsing """,
                Config.Boolean ())
@@ -20,6 +25,8 @@ Config.define ('bibtex/months', """ A hash table linking month names to their
 values """)
 
 # ==================================================
+
+Config.set ('bibtex/keep-preamble', 1)
 
 Config.set ('bibtex/strict', 0)
 

@@ -36,7 +36,7 @@ appicondir = $(datadir)/pixmaps
 appicon_DATA = pybliographic.png 
 
 pixmapsdir = $(datadir)/pixmaps
-pixmaps_DATA = pybliographic-logo.png
+pixmaps_DATA = pybliographic-logo.png pybliographic-viewer.png
 
 
 Mimedir = $(datadir)/mime-info
@@ -59,7 +59,8 @@ EXTRA_DIST = 	setup-check.py			\
 		pybliographic.mime		\
 		pybliographic.desktop.in	\
 		pybliographic.png		\
-		pybliographic-logo.png
+		pybliographic-logo.png		\
+		pybliographic-viewer.png	
 
 
 dist-hook:

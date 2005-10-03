@@ -30,12 +30,13 @@
 
 ''' Main index containing the columned view of the entries '''
 
-from Pyblio import Fields, Config, Connector, Types, Sort, userformat
+from Pyblio import Config, Connector, Fields, Resource
+from Pyblio import Types, Sort, userformat, version
 
 from gnome import ui
-import gtk, gobject
+import gtk, gtk.gdk, gobject, os.path, pango
 
-from Pyblio.GnomeUI import FieldsInfo, Utils, Mime
+from Pyblio.GnomeUI import FieldsInfo, Mime, Utils
 
 from string import *
 
@@ -62,15 +63,25 @@ class Index (Connector.Publisher):
         self.fields = map (lower, fields)
 
         self.model = apply (gtk.ListStore,
-                            (gobject.TYPE_STRING,) * len (fields))
+                            (gobject.TYPE_STRING,) * len (fields) + (gobject.TYPE_OBJECT,))
 
         self.list = gtk.TreeView ()
         self.list.set_model (self.model)
-        
         self.selinfo = self.list.get_selection ()
         self.selinfo.set_mode (gtk.SELECTION_MULTIPLE)
-        
-        i = 0
+
+	i = 0	
+        self.gvpixbuf = gtk.gdk.pixbuf_new_from_file(
+	    os.path.join (version.datadir, 'pixmaps', 'pybliographic-viewer.png'))
+	if True:
+	    rend = gtk.CellRendererPixbuf ()
+	    col = gtk.TreeViewColumn ('P', rend, pixbuf = len(fields))
+	    col.set_fixed_width (22)
+	    self.list.append_column (col)
+	    i += 1
+	    
+        i, self.prefix_columns =  0, i
+
         for f in fields:
             col = gtk.TreeViewColumn (f, gtk.CellRendererText (),
                                       text = i)
@@ -87,7 +98,6 @@ class Index (Connector.Publisher):
             if w:
                 col.set_sizing (gtk.TREE_VIEW_COLUMN_FIXED)
                 col.set_fixed_width (w)
-            
             col.connect ('clicked', self.click_column, i)
             
             self.list.append_column (col)
@@ -270,8 +280,7 @@ class Index (Connector.Publisher):
 
 
     def get_item_position (self, item):
-        try:
-            
+        try:            
             return self.access.index (item)
         except ValueError:
             return -1
@@ -317,6 +326,7 @@ class Index (Connector.Publisher):
             row = []
 
             i = 0
+
             for f in self.fields:
                 row.append (i)
                 i = i + 1
@@ -346,7 +356,15 @@ class Index (Connector.Publisher):
                 else:
                     row.append ('')
 
+	    if True:
+		row.append (i)
+		if Resource.is_viewable (entry):
+		    row.append (self.gvpixbuf)
+		else:
+		    row.append (None)
+	    
             iter = self.model.append  ()
+
             apply (self.model.set, [iter] + row)
             
             self.access.append (entry)
@@ -399,7 +417,7 @@ class Index (Connector.Publisher):
         ''' handler for row selection '''
 
         entries = self.selection ()
-        
+##	print 'ROW_SELECTED:', [x.key.key for x in entries]
         if len (entries) > 1:
             self.issue ('select-entries', entries)
             return
@@ -423,7 +441,7 @@ class Index (Connector.Publisher):
             entries.append (self.access [path [0]])
 
         self.selinfo.selected_foreach (retrieve)
-
+	
         return entries
 
 
@@ -440,14 +458,13 @@ class Index (Connector.Publisher):
         if not (event.type == gtk.gdk.BUTTON_PRESS and
                 event.button == 3): return
 
-        self._w_popup.popup (None, None, None, event.button, event.time)
-        return
-
+	self._w_popup.popup (None, None, None, event.button, event.time)
+	return 
+    
     def entry_new (self, * arg):
         self.issue ('new-entry')
         return
 
-    
     def entry_edit (self, * arg):
         sel = self.selection ()
         if not sel: return
@@ -455,7 +472,6 @@ class Index (Connector.Publisher):
         self.issue ('edit-entry', sel)
         return
 
-        
     def entry_delete (self, * arg):
         sel = self.selection ()
         if not sel: return
@@ -467,12 +483,10 @@ class Index (Connector.Publisher):
     def update_configuration (self):
 
         for i in range (len (self.fields)):
-            w = self.list.get_column (i).get_width ()
-
+            w = self.list.get_column (i + self.prefix_columns).get_width ()
             f = self.fields [i]
             f = f.translate (_safechar)
-
             k = '/apps/pybliographic/columns/%s' % f
-            
             Utils.config.set_int (k, w)
+
         return

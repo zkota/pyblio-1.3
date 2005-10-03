@@ -43,7 +43,6 @@ Config.define ('base/fields', """ Existing fields.  It's a hash table,
 Config.define ('base/entries', """ Existing entries.  It's a hash
                table, with the entry name (lower case) as key, and a
                instance of Types.EntryDescription as value. """,
-
                hook = _check_default)
 
 Config.define ('base/defaulttype', """ Default type for a newly created entry """,

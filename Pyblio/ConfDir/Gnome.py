@@ -1,5 +1,12 @@
 from Pyblio import Config
 
+def columns_checker (obj, value, userdata):
+    """Only allow column names that display correctly.
+    Return True if OK."""
+    print '>>>>>>>>>>>>>>>>>>>>', obj, value, userdata
+    return len (value) > 0
+
+    
 Config.define ('gnome/columns', """ A list of the fields displayed
 on the main screen of the interface """,
                Config.List (Config.String ()))

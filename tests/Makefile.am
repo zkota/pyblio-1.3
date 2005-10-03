@@ -49,6 +49,7 @@ EXTRA_DIST =  \
 	reorder.py		\
 	medline.med		\
 	medline.bib		\
+	preamble.bib		\
 	pubmed.med		\
 	pubmed.bib		\
 	ovid.ovid		\

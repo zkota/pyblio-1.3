@@ -1,12 +1,17 @@
-#    -*- coding: 'iso8859-1' -*-
+#    -*- coding: iso8859-1 -*-
 
 
 import cStringIO, os, sys, unittest
 
 sys.path.append (os.path.abspath('../..'))
+print os.path.abspath('../..')
+
+
 
 from Pyblio.Format import isifile
 from Pyblio import Base, Config, Fields
+
+
 
 example_1 = """AU Bogin, B
 TI Evolutionary hypotheses for human childhood
@@ -28,13 +33,11 @@ GA BK33K
 %% * size *  27 p.
 ER
 """
-
 example_2 = """AU X, ABC
    Y, D
    Z, EFGH
 ER
 """
-
 example_3 = """ED X, ABC
    Y, D
    Z, EFGH
@@ -47,6 +50,11 @@ class ReaderCase (unittest.TestCase):
 
         Config.parse_directory (os.path.abspath('../ConfDir'))
         Config.load_user ()
+	print 'CONFIGURATION'
+	print 50*'-'
+	for i in Config.domains ():
+	    print i, Config.keys_in_domain (i)
+	print 'END', 50*'-'
         self.db = Base.DataBase ('//localhost/Internal')
         self.output = cStringIO.StringIO()
 
@@ -87,6 +95,25 @@ class ReaderCase (unittest.TestCase):
 		self.assertEqual (
 		    auth.first, comparison [auth.last])
 	    e = rdr.next ()
+
+    def test03 (self):
+	"""Test that Editors are accepted."""
+	
+	comparison = {'X': 'A. B. C.',
+		      'Y': 'D.',
+		      'Z': 'E. F. G. H.'}
+	    
+	inpt = cStringIO.StringIO (example_3)
+	rdr = isifile.IsifileIterator (inpt)
+	e = rdr.first ()
+	while e:
+	    print e
+	    for auth in e['editor']:
+		print auth
+		self.assertEqual (
+		    auth.first, comparison [auth.last])
+	    e = rdr.next ()
+
 
     def test03 (self):
 	"""Test that Editors are accepted."""

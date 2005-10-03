@@ -99,12 +99,18 @@ try:
 
     if l != c:
         error ('broken recode version')
-    
 
 except ImportError, msg:
 
     error ('error in python modules dependencies: %s' % msg)
 
+try:
+    _bibtex.next_unfiltered
+
+except AttributeError, msg:
+
+    error ('Error in python-bibtex module: required function »next_unfiltered« missing: %s'
+	   % msg)
     
 except:
     etype, value, tb = sys.exc_info ()

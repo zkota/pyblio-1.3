@@ -217,7 +217,7 @@ class Medline (Base.DataBase):
         return
 
 
-def writer (iter, output):
+def writer (iter, output, **argh):
 
     entry = iter.first ()
     while entry:

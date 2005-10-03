@@ -33,13 +33,13 @@ import gtk.glade
 
 from gtk import gdk
 
-from Pyblio.GnomeUI import Index, Entry, Utils, FileSelector, Editor
-from Pyblio.GnomeUI import Search, Format, OpenURL
+from Pyblio.GnomeUI import Editor, Entry, FileSelector, Format
+from Pyblio.GnomeUI import Index, OpenURL, Search, Utils
 from Pyblio.GnomeUI.Sort import SortDialog
 from Pyblio.GnomeUI.Medline import MedlineUI
 
-from Pyblio import Connector, Open, Exceptions, Selection, Sort, Base, Config
-from Pyblio import version, Fields, Types, Query
+from Pyblio import Base, Config, Connector, Exceptions, Fields, Open
+from Pyblio import Query, Resource, Selection, Sort, Types, version
 
 import Pyblio.Style.Utils
 
@@ -48,6 +48,8 @@ import os, string, copy, types, sys, traceback, stat
 import cPickle as pickle
 
 printable = string.lowercase + string.uppercase + string.digits
+
+
 
 
 uim_content = '''
@@ -82,6 +84,11 @@ uim_content = '''
              <menuitem action="Find"/>
              <menuitem action="Sort"/>
         </menu>
+	<menu action="ViewMenu">
+	     <menu action="ViewResource">
+                 <placeholder name="Viewables" />
+             </menu>
+        </menu>
         <menu action="CiteMenu">
              <menuitem action="Cite"/>
              <menuitem action="Format"/>
@@ -111,6 +118,9 @@ uim_content = '''
     <popup name="Popup">
          <menuitem action="Add"/>
          <menuitem action="Edit"/>
+	 <menu action="ViewResource">
+	     <placeholder name="Viewables" />
+         </menu>
          <menuitem action="Delete"/>
     </popup>
 </ui>
@@ -123,16 +133,18 @@ class Document (Connector.Publisher):
         self.uim = gtk.UIManager ()
 
         self.recents = None
-        
+        self.viewables = None
+	
         self.actiongroup = gtk.ActionGroup ('Main')
         
         self.actiongroup.add_actions ([
             # id     stock            label         accel   tooltip   callback
-            ('File', None,            _('_File')),
+            ('File', None,                _('_File')),
             ('EditMenu', None,            _('_Edit')),
+	    ('ViewMenu', None,            _('_View')),
             ('CiteMenu', None,            _('_Cite')),
-            ('Settings', None,        _('_Settings')),
-            ('HelpMenu', None, _('_Help')),
+            ('Settings', None,            _('_Settings')),
+            ('HelpMenu', None,            _('_Help')),
             ('Recent', None, _('Recent documents')),
             
             ('New',  gtk.STOCK_NEW,   None,         None,   None,     self.new_document),
@@ -165,6 +177,7 @@ class Document (Connector.Publisher):
             ('Forget', None, _('Forget all changes'),     None,   None,     self.forget_changes_cb),
             
             ('Contents', gtk.STOCK_HELP, None,   None,   None,     self.on_documentation),
+	    ('ViewResource', None, _('_Resource'), None, None, self.view_entry),
             ])
 
         if gtk.pygtk_version >= (2,6,0):
@@ -183,7 +196,9 @@ class Document (Connector.Publisher):
         
         prev.set_property ('is-important', True)
         prev.set_property ('hide-if-empty', False)
-        
+
+        view_action = self.actiongroup.get_action ('ViewResource')
+	view_action.set_property ('hide-if-empty', False)
         self.uim.insert_action_group (self.actiongroup, 0)
         self.uim.add_ui_from_string (uim_content)
 
@@ -214,6 +229,7 @@ class Document (Connector.Publisher):
         
         self.index.Subscribe ('new-entry',      self.add_entry)
         self.index.Subscribe ('edit-entry',     self.edit_entry)
+##      self.index.Subscribe ('view-entry',     self.view_entry)
         self.index.Subscribe ('delete-entry',   self.delete_entry)
         self.index.Subscribe ('select-entry',   self.update_display)
         self.index.Subscribe ('select-entries', self.freeze_display)
@@ -329,7 +345,6 @@ class Document (Connector.Publisher):
 
         return
 
-
     def _history_open_cb (self, id, w):
 
         file, type = w
@@ -396,7 +411,7 @@ class Document (Connector.Publisher):
         if self.data.key is None:
             text = _("New database")
         else:
-            text = str (self.data.key)
+            text = self.data.key.get_url ()
 
         li = len (self.index)
         ld = len (self.data)
@@ -534,7 +549,7 @@ class Document (Connector.Publisher):
         Utils.set_cursor (self.w, 'clock')
 
         orig_url = Fields.URL (url)
-        url = str (orig_url)
+        url = orig_url.get_url ()
 
         restore = False
 
@@ -638,7 +653,7 @@ class Document (Connector.Publisher):
 
             iterator = Selection.Selection (sort = self.selection.sort)
             Open.bibwrite (iterator.iterator (self.data.iterator ()),
-                           out = savefile, how = how)
+                           out = savefile, how = how, database=self.data)
 
             savefile.close ()
 
@@ -656,8 +671,9 @@ class Document (Connector.Publisher):
             mod_date = os.stat (file) [stat.ST_MTIME]
             
             if mod_date > self.modification_date:
-                if not Utils.Callback (_("The database has been externally modified.\nOverwrite changes ?"),
-                                       self.w).answer ():
+                if not Utils.Callback (
+		    _("The database has been externally modified.\nOverwrite changes ?"),
+		    self.w).answer ():
                     return
         
         Utils.set_cursor (self.w, 'clock')
@@ -688,14 +704,15 @@ class Document (Connector.Publisher):
     
     def save_document_as (self, * arg):
         # get a new file name
-        (url, how) = FileSelector.URLFileSelection (_("Save As..."),
-                                                    has_auto = False, is_save = True).run ()
+        (url, how) = FileSelector.URLFileSelection (
+	    _("Save As..."), has_auto = False, is_save = True).run ()
         
         if url is None: return
 
         if os.path.exists (url):
-            if not Utils.Callback (_("The file `%s' already exists.\nOverwrite it ?")
-                                   % url, parent = self.w).answer ():
+            if not Utils.Callback (
+		_("The file `%s' already exists.\nOverwrite it ?")
+		% url, parent = self.w).answer ():
                 return
 
         try:
@@ -708,7 +725,7 @@ class Document (Connector.Publisher):
 
         iterator = Selection.Selection (sort = self.selection.sort)
         Open.bibwrite (iterator.iterator (self.data.iterator ()),
-                       out = file, how = how)
+                       out = file, how = how, database=self.data)
         file.close ()
 
         # remove the old autosave object
@@ -911,7 +928,15 @@ class Document (Connector.Publisher):
         self.index.select_item (new)
         return
     
-    
+
+    def view_entry (self, action, *item):
+	if item:
+	    entry, key, url, value = item [0]
+##	    print 'VIEW ENTRY:', entry, key, url, value
+	    Resource.StartViewer (entry, key, value, parent=self.w, document=self)
+	else: #print 'Call to VIEW ENTRY ignored'
+	    return
+
     def delete_entry (self, * arg):
         ''' removes the selected list of items after confirmation '''
         entries = self.index.selection ()
@@ -1023,15 +1048,14 @@ class Document (Connector.Publisher):
     
 
     def _set_edit_actions (self, value):
-        for action in ('Delete', 'Edit', 'Cut', 'Copy', 'Cite'):
+        for action in ('Cite', 'Copy', 'Cut', 'Delete', 'Edit', 'ViewResource'):
             self.actiongroup.get_action (action).set_property ('sensitive', value)
-        
         return
         
     def update_display (self, entry):
         if entry:
             self.display.display (entry)
-
+	    self.update_viewables (entry)
         self._set_edit_actions (entry is not None)
         return
 
@@ -1041,7 +1065,34 @@ class Document (Connector.Publisher):
         self._set_edit_actions (True)
         return
 
+    def update_viewables (self, entry):
 
+	if self.viewables:
+	    for item in self.viewables_id:
+		self.uim.remove_ui (item)
+	    self.uim.remove_action_group (self.viewables)
+
+	self.viewables_id = []
+	self.viewables = gtk.ActionGroup ('Viewables')
+	self.uim.insert_action_group (self.viewables, 1)
+	
+	viewables = Resource.get_viewables (entry)
+	for key, url, value in viewables:
+## 	    text = u'<span foreground="BLUE" weight="bold">%s</span>   %s' %(
+## 		key.upper (), value)
+	    text = u"%s   %s" % (key.upper (), value)
+	    mergeid = self.uim.new_merge_id ()
+	    self.viewables_id.append (mergeid)
+	    action = gtk.Action (str(mergeid), text, None, None)
+	    self.viewables.add_action (action)
+	    action.connect ('activate', self.view_entry, (entry, key, url, value))
+
+	    self.uim.add_ui (mergeid, '/Menubar/ViewMenu/ViewResource', str(mergeid), 
+			     str(mergeid), gtk.UI_MANAGER_MENUITEM, False)
+	    self.uim.add_ui (mergeid, '/Popup/ViewResource', str(mergeid), 
+			     str(mergeid), gtk.UI_MANAGER_MENUITEM, False)
+	return
+    
     def key_pressed (self, app, event):
 
         # filter out special keys
