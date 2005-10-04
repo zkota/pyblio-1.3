@@ -71,10 +71,3 @@ def author_title_format (item):
 ### py-master-file : "ut_userformat.py"
 ### End:
 
-
-### Local Variables:
-### Mode: python
-### py-master-file : "ut_userformat.py"
-### End:
-            
-        

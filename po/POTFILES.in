@@ -10,6 +10,7 @@ Pyblio/ConfDir/GnomeUI.py
 Pyblio/ConfDir/Medline.py
 Pyblio/ConfDir/Ovid.py
 Pyblio/ConfDir/Refer.py
+Pyblio/ConfDir/Resource.py
 Pyblio/Config.py
 Pyblio/Connector.py
 Pyblio/Exceptions.py
@@ -51,6 +52,7 @@ Pyblio/Output/latexutils.py
 Pyblio/Output/raw.py
 Pyblio/Output/text.py
 Pyblio/Query.py
+Pyblio/Resource.py
 Pyblio/Search.py
 Pyblio/Selection.py
 Pyblio/Sort.py
@@ -64,13 +66,14 @@ Pyblio/Types.py
 Pyblio/Utils.py
 Pyblio/__init__.py
 Pyblio/recode.py
+Pyblio/userexit.py
 Pyblio/version.py.in
 glade/config1.glade
 glade/fields1.glade
 glade/format.glade
 glade/medline.glade
 glade/openurl.glade
-glade/pyblio.glade
+glade/pyblio.glade.in
 glade/search.glade
 glade/sort.glade
 pybliographer.py

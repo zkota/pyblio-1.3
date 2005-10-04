@@ -77,26 +77,24 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
     
     if uri.invalid or uri.inexact:
 	message = Utils.Callback (
-	    "Warning: This URL is marked as Invalid or Approximate: %s\n Continue?" % fileuri)
+	    _("Warning: This URL is marked as Invalid or Approximate: %s\n Continue?") % fileuri)
 	if not message.answer (): return
 
     if document:
-	document.statusbar.set_status ("Determining Mime Type ... ")
+	document.statusbar.set_status (_("Determining Mime Type..."))
 
     try:
 	mimetype =  gnomevfs.get_mime_type (fileuri)
     except RuntimeError, mesg:
-	Utils.error_dialog("For item %s Cannot determine mime type" % entry.key.key, 
-			   "URL in question is: %s\n"
-			   "You should check the url or path given for errors.\n"
-			   "Details: %s"
-			   % (fileuri, mesg))
+	Utils.error_dialog (_("For item %s cannot determine mime type") % entry.key.key, 
+			    _("URL in question is: %s\nYou should check the url or path given for errors.\nDetails: %s")
+			    % (fileuri, mesg))
 	if document:
 	    document.statusbar.pop ()
 	return
     
     if document:
- 	document.statusbar.set_status ("Accessing resource...")
+ 	document.statusbar.set_status (_("Accessing resource..."))
 
     if scheme == 'file' and not location:
 	filename = path
@@ -114,9 +112,8 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	    filename = tempname
 	    mimetype =  gnomevfs.get_mime_type (filename)
 	except RuntimeError, mesg:
-	    Utils.error_dialog ("IOError for item %s: cannot unzip."
-				% item.key.key, 
-				"URL: %s\Details: %s"
+	    Utils.error_dialog (_("IOError for item %s: cannot unzip.")	% item.key.key,
+				_("URL: %s\nDetails: %s")
 				% (filename, mesg))
 	    if document:
 		document.statusbar.pop ()
@@ -132,12 +129,11 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	    ) or "%s %s&" %(cmd, filename)
 
 	if document:
-	    document.statusbar.set_status ("Starting application...")
+	    document.statusbar.set_status (_("Starting application..."))
 	os.system (command)
     else:
-	Utils.error_dialog ("Failure for item %s" % item.key.key,
-			    "No viewer found in Config resource/viewers\n"
-			    "URL: %s" % fileuri)
+	Utils.error_dialog (_("Failure for item %s") % item.key.key,
+			    _("No viewer found in Config resource/viewers\nURL: %s") % fileuri)
     if document:
  	document.statusbar.pop ()
 
