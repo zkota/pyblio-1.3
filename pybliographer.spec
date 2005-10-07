@@ -1,34 +1,37 @@
-Summary: A framework for working with bibliographic databases.
+Summary: A framework for working with bibliographic databases
 Name: pybliographer
-Version: 1.2.6
-Release: 1.rhfdr_core_2
+Version: 1.2.7
+Release: 1
 License: GPL
 Group: Applications/Publishing
-Source: http://dl.sf.net/pybliographer/pybliographer-1.2.6.tar.gz
+Source: http://dl.sf.net/pybliographer/pybliographer-1.2.7.tar.gz
 Url: http://www.pybliographer.org/
-Packager: Zoltan Kota <z.kota at gmx.net>
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 
-PreReq: scrollkeeper >= 0.1.4
-
 BuildRequires: python >= 2.2
-BuildRequires: pygtk2 >= 2.0.0
-BuildRequires: pygtk2-libglade >= 2.0.0
-BuildRequires: gnome-python2 >= 2.0.0
-BuildRequires: gnome-python2-gconf >= 2.0.0
-BuildRequires: python-bibtex >= 1.1.93.1
+BuildRequires: pygtk2 >= 2.4.0
+BuildRequires: pygtk2-libglade >= 2.4.0
+BuildRequires: gnome-python2 >= 2.0.3
+BuildRequires: gnome-python2-gconf >= 2.0.3
+BuildRequires: python-bibtex >= 1.2.2
 BuildRequires: gettext
-BuildRequires: scrollkeeper >= 0.1.4
+BuildRequires: scrollkeeper
 
 Requires: python >= 2.2
-Requires: pygtk2 >= 2.0.0
-Requires: pygtk2-libglade >= 2.0.0
-Requires: gnome-python2 >= 2.0.0
-Requires: gnome-python2-gconf >= 2.0.0
-Requires: python-bibtex >= 1.1.93.1
+Requires: pygtk2 >= 2.4.0
+Requires: pygtk2-libglade >= 2.4.0
+Requires: gnome-python2 >= 2.0.3
+Requires: gnome-python2-gconf >= 2.0.3
+Requires: gnome-python2-gnomevfs >= 2.0.3
+Requires: python-bibtex >= 1.2.2
 Requires: recode >= 3.6-11
-Requires: desktop-file-utils
+
+Requires(post): scrollkeeper
+Requires(postun): scrollkeeper
+Requires(post): desktop-file-utils
+Requires(postun): desktop-file-utils
+
 
 %description
 Pybliographer is a tool for managing bibliographic databases. It can be 
@@ -54,6 +57,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
+%__rm -f $RPM_BUILD_ROOT%{_datadir}/applications/mimeinfo.cache
 %__rm -rf $RPM_BUILD_ROOT%{_localstatedir}/scrollkeeper
 
 # Compile .pyc and .pyo

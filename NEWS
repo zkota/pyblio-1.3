@@ -1,5 +1,30 @@
 -*- text -*-
 
+New in 1.2.7 - 2005-10-06
+
+       * Added a file browser for url fields in the 
+         edit window (Peter)
+       * Added new features to help in the management and 
+         use of Resources (Peter)
+       * BibTeX preamble support (Peter), closes bug #1223989
+       * A new bibtex field type (BIBTEX_VERBATIM) added for urls
+         and references (Frédéric)
+       * A new menu item and dialog has been added for opening 
+         URLs (Zoltán), closes bug #1256166
+       * File selector reworked (Frédéric)
+       * Updated code to pygtk 2.4 (Frédéric)
+       * Autosave feature (Zoltán)
+       * Backup toggling (Zoltán)
+       * Hitting escape in the main window resets the search 
+         filter (Frédéric)
+       * Improvements of the format dialog (Frédéric)
+       * Added a small notification of the current query (Frédéric)
+       * Fixes of sort and isifile issues, and config editor
+         (Peter, Frédéric)
+       * i18n fixes (Zoltán)
+       * Updated translations (Gnome I18n team)
+
+
 New in 1.2.6 - 2005-01-29
 
        * Fixed parsing of .aux files in pybcompact script (Peter)

@@ -4,28 +4,28 @@
         <title>Typographical conventions</title>
 	<para>
           In this book, we'll mark some words with special typography:
-          <simplelist>
-	    <member><application>Applications</application></member>
-	    <member><command>Commands</command> you type at the command 
-            line</member>
-            <member><filename>Filenames</filename></member>
-            <member><replaceable>Replaceable text</replaceable></member>
-	    <member><guilabel>Labels</guilabel> for buttons and other
-             portions of the graphical interface</member>
+        </para>
+          <itemizedlist mark='bullet'>
+            <listitem><para><application>Applications</application></para></listitem>
+	    <listitem><para><command>Commands</command> you type at the command 
+            line</para></listitem>
+            <listitem><para><filename>Filenames</filename></para></listitem>
+            <listitem><para><replaceable>Replaceable text</replaceable></para></listitem>
+	    <listitem><para><guilabel>Labels</guilabel> for buttons and other
+             portions of the graphical interface</para></listitem>
 
-            <member> Menu selections look like this:
+           <listitem><para> Menu selections look like this:
                        <menuchoice>
                           <guimenu>Menu</guimenu>
                           <guisubmenu>Submenu</guisubmenu> 
                           <guimenuitem>Menu Item</guimenuitem>
                      </menuchoice>
-            </member>
-	    <member><guibutton>Buttons</guibutton> you can
-            click</member> 
-            <member><userinput>Anything you type
-            in</userinput></member>
-	 </simplelist>
-        </para>
+            </para></listitem>
+	    <listitem><para><guibutton>Buttons</guibutton> you can
+            click</para></listitem>
+            <listitem><para><userinput>Anything you type
+            in</userinput></para></listitem>
+	 </itemizedlist>
 
         <para>
         We'll provide assorted bits of additional information in tips 
@@ -82,35 +82,110 @@
         (e.g. /usr/share/doc/pybliographer). Some of the features include:
       </para>
       <variablelist>
-          <varlistentry>
-            <term>pybcompact</term>
+         <varlistentry>
+            <term>File browser for url fields</term>
             <listitem>
               <para>
-                Crossref handling and parsing of .aux files in pybcompact script are fixed.
+                To simplify selection of an existing local file in the Edit
+                window, fields of type URL come now equipped with a button
+                to the right of the entry widget, that starts a File selection dialog.
+                With this dialog, the user can navigate the directories, and select an 
+                existing file. If the dialog is left through the <guibutton>OK
+                </guibutton> button, this file will become the new value of the field in 
+                question.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Popups</term>
+            <term>Supporting resources</term>
             <listitem>
               <para>
-                All the popups can be closed with escape.
+                &app; &appversion; adds new features to help in the management and 
+                use of *Resources*, i.e. files referred to from an item, such as Eprints 
+                and other electronic versions of it.
+              </para>
+              <para>
+                You can set the viewable fields and the applications used to view the 
+                resources in the 'Resource' tab under the
+                <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences
+                </guimenuitem></menuchoice> menu. If an item contains one or more fields 
+                containing viewable resources, it is marked with an icon at the left 
+                edge of the item in the main window. The available resources are presented 
+                to the user under both the <menuchoice><guimenu>View</guimenu>
+                <guisubmenu>Resource</guisubmenu></menuchoice> submenu item and the
+                <menuchoice><guimenu>Resource</guimenu></menuchoice> pop up menu provided
+                for the item list.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>BibTeX keys</term>
+            <term>BibTeX preamble support</term>
             <listitem>
               <para>
-                Parentheses are now allowed in BibTeX keys.
+                The @preamble items at the beginning of a BibTeX file (.bib) are 
+                conserved now by default. They are no longer effectively deleted upon 
+                saving the file. This feature requires python-bibtex >= 1.2.2.
+              </para>
+              <para>
+                If the previous behaviour (i.e. deleting the preamble upon saving or 
+                copying the file) is wanted, it can be switched off in Preferences.
+                (This option is for compatibility only.)
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Ovid</term>
+            <term>New bibtex field type</term>
             <listitem>
               <para>
-                Miscellaneous fixes in the Ovid import.
+                A new bibtex field type (BIBTEX_VERBATIM) is used for urls and references.
+                This type ensures symbols like ~ don't get escaped.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Opening URL</term>
+            <listitem>
+              <para>
+                A new menu item and dialog has been added for opening URLs. See 
+                the <menuchoice><guimenu>File</guimenu><guimenuitem>Open Location
+                </guimenuitem></menuchoice> menu.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>File selector reworked</term>
+            <listitem>
+              <para>
+                File selector is simplified; it supports only the gtk 2.4 FileChooser,
+                and the URL entry has been removed.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Updated code to pygtk 2.4</term>
+            <listitem>
+              <para>
+                The GUI code is updated so that it is compatible with pygtk 2.4. 
+                &app; &appversion; requires pygtk >= 2.4.0.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Autosave</term>
+            <listitem>
+              <para>
+                The possibility of autosaving opened database files has been added.
+                There is a toggle in preferences to switch on autosaving. The time 
+                interval also can be adjusted.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Backup is optional</term>
+            <listitem>
+              <para>
+                Creating backup copy of files before saving is optional. There is an 
+                option in preferences for switching off backup (default is ON).
               </para>
             </listitem>
           </varlistentry>
@@ -118,32 +193,33 @@
             <term>Search</term>
             <listitem>
               <para>
-                Restored Search as you type.
+                Hitting escape in the main window resets the search filter.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Default database</term>
+            <term>Format dialog</term>
             <listitem>
               <para>
-                Added PYBLIOGRAPHER_DATABASE environment variable to specify a default 
-                database for pybliographic.
+                The file info (both the style and output file) is preserved across runs of 
+                the format menu. The Format dialog uses the new file selector now.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>BibTeX field name check</term>
+            <term>Added a small notification of the current query</term>
             <listitem>
               <para>
-                Added a check for an (approximately ?) valid bibtex field name to GnomeUI.Editor.
+                When the query is limited, the name of the query is displayed in the bottom bar.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>Sort and Iterator</term>
+            <term>Bugfixes</term>
             <listitem>
               <para>
-                Sort and Iterator codes are reworked.
+                Many bugs (e.g. bugs related to sort and isifile issues, fileselector, config editor) 
+                are fixed.
               </para>
             </listitem>
           </varlistentry>
@@ -156,13 +232,6 @@
             </listitem>
           </varlistentry>
         </variablelist>
-
-      <para>
-  	<note id="note-1.2.6.2">
-          <title>Note for 1.2.6.2</title>
-	  <para>pybliographer-1.2.6.2 is a bugfix release for version 1.2.6.</para>
-        </note>   
-      </para>
 
     </sect1>
 </preface>

@@ -34,11 +34,14 @@ LANGUAGES = 		\
 	hu 		\
 	it 		\
 	ja 		\
+	nb		\
 	nl		\
 	no 		\
+	pa		\
 	pt_BR 		\
 	pt		\
 	ru 		\
+	rw		\
 	sk 		\
 	sr@Latn 	\
 	sr 		\

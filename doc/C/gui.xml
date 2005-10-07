@@ -20,10 +20,10 @@
     you will save it the first time.</para>
 
     <para>To  add   a  new  entry,   you  can  use   the  <menuchoice>
-	<guimenu>Edit</guimenu>       <guimenuitem>Add...</guimenuitem>
+	<guimenu>Edit</guimenu>       <guimenuitem>Add</guimenuitem>
 	</menuchoice> menu, directly the <guibutton>Add</guibutton> 
         toolbar button or click with the right button in the list window 
-        and select <guibutton>Add...</guibutton>
+        and select <guibutton>Add</guibutton>.
     </para>
     
     <para>You will find more information on the main window's usage in
@@ -55,12 +55,16 @@
     </figure>
     
     <para>A   file   selection  dialog   will   pop   up  (see   <xref
-      linkend="figopen" />) and let  you select a file or enter an
-      URL. The type of the database  can also be selected. In the case
-      of a  new database,  it is mandatory  to select a  type, whereas
-      while opening an  existing database, the type can  be guessed if
-      you select <guibutton>- Auto -</guibutton>.</para>
-    
+      linkend="figopen" />) and let you select a file. The type of the database
+      can also be selected. Opening an existing database, the type can be guessed if
+      you select <guibutton>- According to file suffix -</guibutton>.
+    </para>
+    <para>
+      It is also possible to open a file at a remote location (as well as a local file)
+      by typing the URI of the file (e.g. http://my.remote.site/pyblio.bib) using the 
+      'Open Location' dialog, which can be invoked by the <menuchoice><guimenu>File</guimenu>
+      <guimenuitem>Open Location</guimenuitem></menuchoice> menu item.
+    </para>
   </sect1>
   
   <sect1 id="gui-navigate">
@@ -74,22 +78,35 @@
       menu item.</para>
 
     <tip>
-      <para>It is possible to display two types of combined fields: 
+    <para>It is possible to display two types of combined fields: 
       <emphasis>-author/editor</emphasis> and <emphasis>-author/title-</emphasis>.
-      </para>
+    </para>
     </tip>
 
-      <para>Clicking on an entry displays its full content on the lower part of 
+    <para>Clicking on an entry displays its full content on the lower part of 
       the window. It is also possible to use the arrow keys to navigate in the 
-      upper list.</para>
+      upper list.
+    </para>
 
-    <tip>
-      <para>If an entry contains an <emphasis>URL</emphasis> field, 
-      clicking on the small box next to the url, the appropriate 
+    <para>If an entry contains an <emphasis>URL</emphasis> field, 
+      clicking on the small button next to the url, the appropriate 
       application is launched to view the target object 
       (e.g. PDF viewer for pdf files, web browser for http address).
       See <xref linkend="gui-edit" /> about how to add an URL field to 
-      an entry.</para>
+      an entry. Alternatively, you can open the URL with the help of the 
+      <menuchoice><guimenu>View</guimenu><guisubmenu>Resource</guisubmenu>
+      </menuchoice> submenu item or the <menuchoice><guimenu>Resource</guimenu>
+      </menuchoice> pop up menu provided for the item list. If an item contains one or 
+      more viewable fields (like url) containing viewable resources, it is marked with 
+      an icon at the left edge of the item in the upper part of the main window (see 
+      <xref  linkend="figmain" />).
+    </para>
+
+    <tip>
+    <para>You can set the viewable fields and the applications used to view the resources 
+          in the 'Resource' tab under the <menuchoice><guimenu>Settings</guimenu>
+          <guimenuitem>Preferences</guimenuitem></menuchoice> menu.
+    </para>
     </tip>
 
     
@@ -125,6 +142,9 @@
 	<para>edit the currently selected items</para>
       </listitem>
       <listitem>
+	<para>view the resource associated with the selected item</para>
+      </listitem>
+      <listitem>
 	<para>delete the currently selected items</para>
       </listitem>
     </itemizedlist>
@@ -140,7 +160,7 @@
   <sect1 id="gui-searching">
     <title>Searching</title>
     
-    <para>&pyc; offers  a quite powerful serching  mechanism. To open
+    <para>&Pyc; offers  a quite powerful searching  mechanism. To open
       the search dialog, click on the <guibutton>Find</guibutton> toolbar
       button or on <menuchoice> <guimenu>Edit</guimenu>
       <guimenuitem>Search</guimenuitem> </menuchoice> in the menu.
@@ -241,7 +261,8 @@
 
       <para>To select the full list of database entries again, just
         click on the <emphasis>Full database</emphasis> item at the top
-        of the search tree.</para>
+        of the search tree, or push the 'Esc' button on the keyboard when 
+        you are in the main window.</para>
     </sect2>
     
   </sect1>
@@ -437,7 +458,7 @@
       clicking  the <guibutton>Cite</guibutton>  toolbar button,  or 
       selecting the
       <menuchoice><guimenu>Cite</guimenu>
-	<guimenuitem>Cite</guimenuitem>
+	<guimenuitem>Cite...</guimenuitem>
       </menuchoice>
       menu item.</para>
 
@@ -457,7 +478,7 @@
     <title>Saving entries in different formats</title>
 
     <para>Selected entries can be saved in different formats using  
-    the <menuchoice><guimenu>Cite</guimenu> <guimenuitem>Format
+    the <menuchoice><guimenu>Cite</guimenu> <guimenuitem>Format...
     </guimenuitem></menuchoice> menu item (<xref linkend="figformat" />).
     </para>
 
@@ -488,7 +509,7 @@
     
     <para>With &pyc;, it is possible to perform a Medline search. To 
     use this option, click on the <menuchoice><guimenu>File</guimenu> 
-    <guimenuitem>Medline query</guimenuitem></menuchoice> menu item. The
+    <guimenuitem>Medline query...</guimenuitem></menuchoice> menu item. The
     upcoming window is represented in <xref linkend="figmed" />.</para>
 
     <figure id="figmed">
@@ -552,8 +573,9 @@
     <guimenuitem>Preferences</guimenuitem></menuchoice> menu item, a 
     lot of configuration options can be controlled. Such options are, 
     for instance, settings of the different type of bibliographic 
-    database formats, size of history, defult editing mode and 
-    the default type of a newly created entry.</para>
+    database formats, autosave, size of history, defult editing mode,
+    the default type of a newly created entry, and resource configuration.
+    </para>
     </sect2>
   </sect1>
 </chapter>
