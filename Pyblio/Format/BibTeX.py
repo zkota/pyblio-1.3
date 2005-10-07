@@ -445,7 +445,7 @@ class DataBase (Base.DataBase):
 		_bibtex.set_string (self.parser, k,
 				    _bibtex.reverse (_base_fieldtype [Text],
                                                      Config.get ('bibtex+/braces').data,
-						     user [k] [0], 0))
+						     user [k] [0]))
 	return
 
 
@@ -494,8 +494,7 @@ class DataBase (Base.DataBase):
 def _nativify (field, fieldtype):
     ''' private method to convert from field to native format '''
 
-    obj = _bibtex.reverse (fieldtype, Config.get ('bibtex+/braces').data,
-                           field, 1)
+    obj = _bibtex.reverse (fieldtype, Config.get ('bibtex+/braces').data, field)
     return _bibtex.get_native (obj)
 
 
