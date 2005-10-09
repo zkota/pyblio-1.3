@@ -34,7 +34,7 @@ from Pyblio import Config, Connector, Fields, Resource
 from Pyblio import Types, Sort, userformat, version
 
 from gnome import ui
-import gtk, gtk.gdk, gobject, os.path, pango
+import gobject, gtk, gtk.gdk, os.path, pango
 
 from Pyblio.GnomeUI import FieldsInfo, Mime, Utils
 

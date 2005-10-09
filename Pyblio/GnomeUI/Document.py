@@ -52,6 +52,8 @@ printable = string.lowercase + string.uppercase + string.digits
 
 
 
+
+
 uim_content = '''
 <ui>
     <menubar name="Menubar">
@@ -83,6 +85,11 @@ uim_content = '''
              <separator/>
              <menuitem action="Find"/>
              <menuitem action="Sort"/>
+        </menu>
+	<menu action="ViewMenu">
+	     <menu action="ViewResource">
+                 <placeholder name="Viewables" />
+             </menu>
         </menu>
 	<menu action="ViewMenu">
 	     <menu action="ViewResource">
@@ -164,7 +171,7 @@ class Document (Connector.Publisher):
             ('Copy', gtk.STOCK_COPY,  None,         None,   None,     self.copy_entry),
             ('Paste', gtk.STOCK_PASTE,  None,         None,   None,     self.paste_entry),
             ('Clear', gtk.STOCK_CLEAR,  None,         None,   None,     self.clear_entries),
-            ('Add', gtk.STOCK_ADD,  None,         None,   None,     self.add_entry),
+            ('Add', gtk.STOCK_ADD,  None,   '<shift><control>n',  None,     self.add_entry),
             ('Delete', gtk.STOCK_DELETE,  None,         None,   None,     self.delete_entry),
             ('Find', gtk.STOCK_FIND,  None,         None,   None,     self.find_entries),
             
@@ -183,13 +190,13 @@ class Document (Connector.Publisher):
         if gtk.pygtk_version >= (2,6,0):
             self.actiongroup.add_actions ([
                 ('About', gtk.STOCK_ABOUT, None,   None,   None,     self.about),
-                ('Edit', gtk.STOCK_EDIT,  None,         None,   None,     self.edit_entry),
+                ('Edit', gtk.STOCK_EDIT,  None, '<shift><control>o',   None,     self.edit_entry),
                 ])
 
         else:
             self.actiongroup.add_actions ([
                 ('About', None, _('_About'),   None,   None,     self.about),
-                ('Edit', None,  _('_Edit'),    None,   None,     self.edit_entry),
+                ('Edit', None,  _('_Edit'),    '<shift><control>o', None,    self.edit_entry),
                 ])
             
         prev = self.actiongroup.get_action ('Recent')
@@ -443,12 +450,34 @@ class Document (Connector.Publisher):
         ''' eventually ask for modification cancellation '''
         
         if self.changed:
-            return Utils.Callback (_("The database has been modified.\nDiscard changes ?"),
-                                   self.w).answer ()
-        
-        return 1
+	    if Config.get('gnome/old-confirmation-dialog').data:
+		return Utils.Callback (_("The database has been modified.\nDiscard changes?"),
+				       self.w).answer ()
+      
+	    else:
+		if Utils.Callback (_("The database has been modified.\nSave changes?"),
+				   self.w).answer () and self.modification_check ():
+		    self.save_document ()
+		else:
+		    return False
+	return 1
 
-        
+    def modification_check (self):
+	"""Check for external modification, if necessary,
+	ask user for permission to save.
+	Returns True if no modifications or overwrite accepted by user."""
+ 
+        if self.modification_date:
+            mod_date = os.stat (self.data.key.url [2]) [stat.ST_MTIME]
+            
+            if mod_date > self.modification_date:
+                return  Utils.Callback (
+		    _("The database has been externally modified.\nOverwrite changes ?"),
+		    self.w).answer ()
+	    
+	return True
+	
+      
     def new_document (self, * arg):
         ''' callback corresponding to the "New Document" button '''
         
@@ -667,15 +696,9 @@ class Document (Connector.Publisher):
 
         file = self.data.key.url [2]
         
-        if self.modification_date:
-            mod_date = os.stat (file) [stat.ST_MTIME]
-            
-            if mod_date > self.modification_date:
-                if not Utils.Callback (
-		    _("The database has been externally modified.\nOverwrite changes ?"),
-		    self.w).answer ():
-                    return
-        
+	if not self.modification_check ():
+	    return
+	
         Utils.set_cursor (self.w, 'clock')
         try:
             try:

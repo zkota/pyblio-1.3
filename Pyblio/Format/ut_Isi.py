@@ -125,6 +125,25 @@ class ReaderCase (unittest.TestCase):
 	inpt = cStringIO.StringIO (example_3)
 	rdr = isifile.IsifileIterator (inpt)
 	e = rdr.first ()
+	while e:
+	    print e
+	    for auth in e['editor']:
+		print auth
+		self.assertEqual (
+		    auth.first, comparison [auth.last])
+	    e = rdr.next ()
+
+
+    def test03 (self):
+	"""Test that Editors are accepted."""
+	
+	comparison = {'X': 'A. B. C.',
+		      'Y': 'D.',
+		      'Z': 'E. F. G. H.'}
+	    
+	inpt = cStringIO.StringIO (example_3)
+	rdr = isifile.IsifileIterator (inpt)
+	e = rdr.first ()
 	self.assertEqual (e.has_key ('editor'), True)
 	while e:
 	    print e

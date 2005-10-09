@@ -3,7 +3,7 @@ from Pyblio import Config
 def columns_checker (obj, value, userdata):
     """Only allow column names that display correctly.
     Return True if OK."""
-    print '>>>>>>>>>>>>>>>>>>>>', obj, value, userdata
+##  print '>>>>>>>>>>>>>>>>>>>>', obj, value, userdata
     return len (value) > 0
 
     
@@ -16,6 +16,9 @@ tooltips are enabled """, Config.Boolean ())
 
 Config.define ('gnome/native-as-default', """ Should we edit the
 entries in their native format by default ? """, Config.Boolean ())
+
+Config.define ('gnome/old-confirmation-dialog',
+	       """ Should we use the old dialog when closing, and ask for permission to skip saving? """, Config.Boolean ())
 
 Config.define ('gnome/searched', """ List of searchable fields """,
                Config.List (Config.String ()))
@@ -33,6 +36,8 @@ Config.set ('gnome/searched', ['Author', 'Title', 'Abstract', 'Date'])
 Config.set ('gnome/tooltips', 1)
 
 Config.set ('gnome/native-as-default', 0)
+
+Config.set ('gnome/old-confirmation-dialog', 0)
 
 Config.set ('gnome/columns', ('Author', 'Date', 'Title'))
 

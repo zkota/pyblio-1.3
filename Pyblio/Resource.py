@@ -81,20 +81,25 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	if not message.answer (): return
 
     if document:
-	document.statusbar.set_status (_("Determining Mime Type..."))
+	document.statusbar.set_status (_("Determining Mime Type ... "))
 
     try:
 	mimetype =  gnomevfs.get_mime_type (fileuri)
     except RuntimeError, mesg:
-	Utils.error_dialog (_("For item %s cannot determine mime type") % entry.key.key, 
-			    _("URL in question is: %s\nYou should check the url or path given for errors.\nDetails: %s")
-			    % (fileuri, mesg))
+	Utils.error_dialog(_("For item %s Cannot determine mime type") % entry.key.key, 
+			   _("URL in question is: %s\n"
+			   "You should check the url or path given for errors.\n"
+			   "Details: %s")
+			   % (fileuri, mesg))
 	if document:
 	    document.statusbar.pop ()
 	return
-    
+
+    mimetype1 = mimetype.split ('/', 1) [0]
+    print mimetype1
+
     if document:
- 	document.statusbar.set_status (_("Accessing resource..."))
+ 	document.statusbar.set_status (_("Accessing resource ..."))
 
     if scheme == 'file' and not location:
 	filename = path
@@ -119,9 +124,13 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 		document.statusbar.pop ()
 	    return
 
-    viewers = [item [1] for item in
-	       Config.get (config_viewers).data if item [0] == mimetype]
-    
+    viewers = [
+	item [1] for item in
+	Config.get (config_viewers).data if item [0] == mimetype] or [
+	item [1] for item in
+	Config.get (config_viewers).data if item [0].endswith ('/*') and
+	item [0] [:-2] == mimetype1]
+
     if viewers:
 	cmd = viewers [0]
 	command = userexit.resource_viewer_setup (
@@ -129,11 +138,14 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	    ) or "%s %s&" %(cmd, filename)
 
 	if document:
-	    document.statusbar.set_status (_("Starting application..."))
+	    document.statusbar.set_status (_("Starting application ..."))
 	os.system (command)
     else:
-	Utils.error_dialog (_("Failure for item %s") % item.key.key,
-			    _("No viewer found in Config resource/viewers\nURL: %s") % fileuri)
+	Utils.error_dialog (_("No application to view resource"),
+			    _("For mime type %s, no entry found in \n"
+			    "configuration option resource/viewers.\n"
+			    "Please consider adding one.\n"
+			    "URL: %s") % (mimetype, fileuri))
     if document:
  	document.statusbar.pop ()
 

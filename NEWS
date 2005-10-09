@@ -2,6 +2,7 @@
 
 New in 1.2.7 - 2005-10-06
 
+       * Added shortcut keys for 'Add' and 'Edit' (Peter)
        * Added a file browser for url fields in the 
          edit window (Peter)
        * Added new features to help in the management and 
@@ -20,7 +21,9 @@ New in 1.2.7 - 2005-10-06
        * Improvements of the format dialog (Frédéric)
        * Added a small notification of the current query (Frédéric)
        * Fixes of sort and isifile issues, and config editor
-         (Peter, Frédéric)
+         (Peter, Frédéric) 
+       * Corrected confirmation request when closing a
+         modified file (with compatibility switch) (Peter) 
        * i18n fixes (Zoltán)
        * Updated translations (Gnome I18n team)
 

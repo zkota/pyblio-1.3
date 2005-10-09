@@ -27,6 +27,12 @@ except NameError:
 	: return str
     
 
+try: _
+except NameError:
+    def _(str) \
+	: return str
+    
+
 pickle = cPickle
 del cPickle
 
