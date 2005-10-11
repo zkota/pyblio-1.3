@@ -77,7 +77,7 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
     
     if uri.invalid or uri.inexact:
 	message = Utils.Callback (
-	    _("Warning: This URL is marked as Invalid or Approximate: %s\n Continue?") % fileuri)
+	    _("Warning: This URL is marked as Invalid or Approximate: %s\nContinue?") % fileuri)
 	if not message.answer (): return
 
     if document:
@@ -86,7 +86,7 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
     try:
 	mimetype =  gnomevfs.get_mime_type (fileuri)
     except RuntimeError, mesg:
-	Utils.error_dialog(_("For item %s Cannot determine mime type") % entry.key.key, 
+	Utils.error_dialog(_("Cannot determine mime type for item %s ") % entry.key.key, 
 			   _("URL in question is: %s\n"
 			   "You should check the url or path given for errors.\n"
 			   "Details: %s")
@@ -96,7 +96,6 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	return
 
     mimetype1 = mimetype.split ('/', 1) [0]
-    print mimetype1
 
     if document:
  	document.statusbar.set_status (_("Accessing resource ..."))
@@ -117,8 +116,8 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	    filename = tempname
 	    mimetype =  gnomevfs.get_mime_type (filename)
 	except RuntimeError, mesg:
-	    Utils.error_dialog (_("IOError for item %s: cannot unzip.")	% item.key.key,
-				_("URL: %s\nDetails: %s")
+	    Utils.error_dialog (_("IOError for item %s: cannot uncompress resource.")
+				% entry.key.key, _("URL: %s\nDetails: %s")
 				% (filename, mesg))
 	    if document:
 		document.statusbar.pop ()
@@ -134,7 +133,7 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
     if viewers:
 	cmd = viewers [0]
 	command = userexit.resource_viewer_setup (
-	    Director, item, key, cmd, filename, uri, mimetype
+	    Director, entry, key, cmd, filename, uri, mimetype
 	    ) or "%s %s&" %(cmd, filename)
 
 	if document:

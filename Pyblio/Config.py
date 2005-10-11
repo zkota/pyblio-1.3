@@ -19,24 +19,14 @@
 # 
 # 
 
+''' System for Configuration handling '''
+
+
 import atexit, cPickle, os, string, sys, types
-
-try: _
-except NameError:
-    def _(str) \
-	: return str
-    
-
-try: _
-except NameError:
-    def _(str) \
-	: return str
-    
 
 pickle = cPickle
 del cPickle
 
-''' System for Configuration handling '''
 
 class ConfigItem:
 

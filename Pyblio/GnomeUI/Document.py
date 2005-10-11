@@ -91,11 +91,6 @@ uim_content = '''
                  <placeholder name="Viewables" />
              </menu>
         </menu>
-	<menu action="ViewMenu">
-	     <menu action="ViewResource">
-                 <placeholder name="Viewables" />
-             </menu>
-        </menu>
         <menu action="CiteMenu">
              <menuitem action="Cite"/>
              <menuitem action="Format"/>
@@ -459,7 +454,7 @@ class Document (Connector.Publisher):
 				   self.w).answer () and self.modification_check ():
 		    self.save_document ()
 		else:
-		    return False
+		    return True
 	return 1
 
     def modification_check (self):
