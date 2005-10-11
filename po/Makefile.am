@@ -35,6 +35,7 @@ LANGUAGES = 		\
 	it 		\
 	ja 		\
 	nb		\
+	ne		\
 	nl		\
 	no 		\
 	pa		\
