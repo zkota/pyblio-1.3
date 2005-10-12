@@ -82,7 +82,17 @@
         (e.g. /usr/share/doc/pybliographer). Some of the features include:
       </para>
       <variablelist>
-         <varlistentry>
+          <varlistentry>
+            <term>New shortcuts</term>
+            <listitem>
+              <para>
+                Shortcut keys have been added for <menuchoice><guimenu>
+                Add</guimenu></menuchoice> and <menuchoice><guimenu>
+                Edit</guimenu></menuchoice> menu items.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
             <term>File browser for url fields</term>
             <listitem>
               <para>
@@ -124,7 +134,7 @@
               <para>
                 The @preamble items at the beginning of a BibTeX file (.bib) are 
                 conserved now by default. They are no longer effectively deleted upon 
-                saving the file. This feature requires python-bibtex >= 1.2.2.
+                saving the file. This feature requires python-bibtex 1.2.2 or later.
               </para>
               <para>
                 If the previous behaviour (i.e. deleting the preamble upon saving or 
@@ -166,7 +176,7 @@
             <listitem>
               <para>
                 The GUI code is updated so that it is compatible with pygtk 2.4. 
-                &app; &appversion; requires pygtk >= 2.4.0.
+                &app; &appversion; requires pygtk 2.4.0 or later.
               </para>
             </listitem>
           </varlistentry>
@@ -211,6 +221,16 @@
             <listitem>
               <para>
                 When the query is limited, the name of the query is displayed in the bottom bar.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Changed confirmation dialog</term>
+            <listitem>
+              <para>
+                When closing a modified database (file), it is asked whether or not to
+                save the database. The old behaviour can be obtained by setting the
+                old-confirmation-dialog option in preferences.
               </para>
             </listitem>
           </varlistentry>

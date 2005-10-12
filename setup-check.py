@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import sys, string, re, traceback, os
 
 base_version = string.split (sys.version) [0]
