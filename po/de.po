@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer-1.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-05 13:46+0200\n"
-"PO-Revision-Date: 2005-10-05 12:28+0100\n"
+"POT-Creation-Date: 2005-10-12 13:23+0200\n"
+"PO-Revision-Date: 2005-10-12 13:22+0200\n"
 "Last-Translator: Frank Arnold <frank@scirocco-5v-turbo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,57 +21,57 @@ msgstr ""
 msgid "warning: can't import %s: %s"
 msgstr "Warnung: %s kann nicht importiert werden: %s"
 
-#: ../Pyblio/Config.py:56
+#: ../Pyblio/Config.py:52
 #, python-format
 msgid "value of `%s' should be of type %s"
 msgstr "Wert von »%s« sollte vom Typ %s sein"
 
-#: ../Pyblio/Config.py:216
+#: ../Pyblio/Config.py:212
 msgid "String"
 msgstr "String"
 
-#: ../Pyblio/Config.py:225
+#: ../Pyblio/Config.py:221
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../Pyblio/Config.py:244
+#: ../Pyblio/Config.py:240
 msgid "Integer"
 msgstr "Integer"
 
-#: ../Pyblio/Config.py:246
+#: ../Pyblio/Config.py:242
 #, python-format
 msgid "Integer under %d"
 msgstr "Integer unter %d"
 
-#: ../Pyblio/Config.py:248
+#: ../Pyblio/Config.py:244
 #, python-format
 msgid "Integer over %d"
 msgstr "Integer über %d"
 
-#: ../Pyblio/Config.py:250
+#: ../Pyblio/Config.py:246
 #, python-format
 msgid "Integer between %d and %d"
 msgstr "Integer zwischen %d und %d"
 
-#: ../Pyblio/Config.py:262
+#: ../Pyblio/Config.py:258
 #, python-format
 msgid "Element in `%s'"
 msgstr "Element in »%s«"
 
-#: ../Pyblio/Config.py:282
+#: ../Pyblio/Config.py:278
 #, python-format
 msgid "Tuple (%s)"
 msgstr "Sequenz (Tupel) (%s)"
 
-#: ../Pyblio/Config.py:303
+#: ../Pyblio/Config.py:299
 #, python-format
 msgid "List (%s)"
 msgstr "Liste (%s)"
 
-#: ../Pyblio/Config.py:328
+#: ../Pyblio/Config.py:324
 #, python-format
 msgid "Dictionary (%s, %s)"
-msgstr "Wörterbuch (%s, %s)"
+msgstr "Indizierte Liste (Dictionary) (%s, %s)"
 
 #: ../Pyblio/Fields.py:261
 msgid "Illegal year value"
@@ -133,79 +133,79 @@ msgid "Value:"
 msgstr "Wert:"
 
 #. id     stock            label         accel   tooltip   callback
-#: ../Pyblio/GnomeUI/Document.py:142
+#: ../Pyblio/GnomeUI/Document.py:144
 msgid "_File"
 msgstr "_Datei"
 
-#: ../Pyblio/GnomeUI/Document.py:143 ../Pyblio/GnomeUI/Document.py:192
+#: ../Pyblio/GnomeUI/Document.py:145 ../Pyblio/GnomeUI/Document.py:194
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../Pyblio/GnomeUI/Document.py:144
+#: ../Pyblio/GnomeUI/Document.py:146
 msgid "_View"
 msgstr "_Ansicht"
 
-#: ../Pyblio/GnomeUI/Document.py:145
+#: ../Pyblio/GnomeUI/Document.py:147
 msgid "_Cite"
 msgstr "_Zitat"
 
-#: ../Pyblio/GnomeUI/Document.py:146
+#: ../Pyblio/GnomeUI/Document.py:148
 msgid "_Settings"
 msgstr "_Einstellungen"
 
-#: ../Pyblio/GnomeUI/Document.py:147
+#: ../Pyblio/GnomeUI/Document.py:149
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../Pyblio/GnomeUI/Document.py:148
+#: ../Pyblio/GnomeUI/Document.py:150
 msgid "Recent documents"
 msgstr "Zuletzt geöffnete Dokumente"
 
-#: ../Pyblio/GnomeUI/Document.py:152
+#: ../Pyblio/GnomeUI/Document.py:154
 msgid "Open _Location"
 msgstr "_Ort öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:158 ../glade/pyblio.glade.in.h:8
+#: ../Pyblio/GnomeUI/Document.py:160 ../glade/pyblio.glade.in.h:8
 msgid "Merge With..."
 msgstr "Zusammenführen mit…"
 
-#: ../Pyblio/GnomeUI/Document.py:159 ../glade/pyblio.glade.in.h:7
+#: ../Pyblio/GnomeUI/Document.py:161 ../glade/pyblio.glade.in.h:7
 msgid "Medline Query..."
 msgstr "Medline-Abfrage…"
 
-#: ../Pyblio/GnomeUI/Document.py:171 ../glade/pyblio.glade.in.h:12
+#: ../Pyblio/GnomeUI/Document.py:173 ../glade/pyblio.glade.in.h:12
 msgid "S_ort..."
 msgstr "S_ortieren…"
 
-#: ../Pyblio/GnomeUI/Document.py:172 ../glade/pyblio.glade.in.h:2
+#: ../Pyblio/GnomeUI/Document.py:174 ../glade/pyblio.glade.in.h:2
 msgid "Cite..."
 msgstr "Zitat…"
 
-#: ../Pyblio/GnomeUI/Document.py:173 ../glade/pyblio.glade.in.h:6
+#: ../Pyblio/GnomeUI/Document.py:175 ../glade/pyblio.glade.in.h:6
 msgid "Format..."
 msgstr "Format…"
 
-#: ../Pyblio/GnomeUI/Document.py:175 ../glade/pyblio.glade.in.h:4
+#: ../Pyblio/GnomeUI/Document.py:177 ../glade/pyblio.glade.in.h:4
 msgid "Fields..."
 msgstr "Felder…"
 
-#: ../Pyblio/GnomeUI/Document.py:177 ../glade/pyblio.glade.in.h:5
+#: ../Pyblio/GnomeUI/Document.py:179 ../glade/pyblio.glade.in.h:5
 msgid "Forget all changes"
 msgstr "Alle Änderungen verwerfen"
 
-#: ../Pyblio/GnomeUI/Document.py:180
+#: ../Pyblio/GnomeUI/Document.py:182
 msgid "_Resource"
 msgstr "_Ressource"
 
-#: ../Pyblio/GnomeUI/Document.py:191
+#: ../Pyblio/GnomeUI/Document.py:193
 msgid "_About"
 msgstr "_Info"
 
-#: ../Pyblio/GnomeUI/Document.py:292
+#: ../Pyblio/GnomeUI/Document.py:294
 msgid "Unnamed bibliographic database"
 msgstr "Unbenannte bibliographische Datenbank"
 
-#: ../Pyblio/GnomeUI/Document.py:375
+#: ../Pyblio/GnomeUI/Document.py:377
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -214,7 +214,7 @@ msgstr ""
 "Datei »%s« kann nicht zum Schreiben geöffnet werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:396
+#: ../Pyblio/GnomeUI/Document.py:398
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -223,74 +223,90 @@ msgstr ""
 "Fehler beim Parsen »%s«:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:412
+#: ../Pyblio/GnomeUI/Document.py:414
 msgid "New database"
 msgstr "Neue Datenbank"
 
-#: ../Pyblio/GnomeUI/Document.py:420 ../Pyblio/GnomeUI/Document.py:424
+#: ../Pyblio/GnomeUI/Document.py:422 ../Pyblio/GnomeUI/Document.py:426
 msgid "[no entry]"
 msgstr "[kein Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:421
+#: ../Pyblio/GnomeUI/Document.py:423
 msgid "[1 entry]"
 msgstr "[1 Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:422
+#: ../Pyblio/GnomeUI/Document.py:424
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d Einträge]"
 
-#: ../Pyblio/GnomeUI/Document.py:425
+#: ../Pyblio/GnomeUI/Document.py:427
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 Eintrag]"
 
-#: ../Pyblio/GnomeUI/Document.py:426
+#: ../Pyblio/GnomeUI/Document.py:428
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d Einträge]"
 
-#: ../Pyblio/GnomeUI/Document.py:431
+#: ../Pyblio/GnomeUI/Document.py:433
 msgid "[modified]"
 msgstr "[geändert]"
 
-#: ../Pyblio/GnomeUI/Document.py:434
+#: ../Pyblio/GnomeUI/Document.py:436
 #, python-format
 msgid "view limited to: %s"
 msgstr "Ansicht begrenzt auf: %s"
 
-#: ../Pyblio/GnomeUI/Document.py:446
+#: ../Pyblio/GnomeUI/Document.py:449
 msgid ""
 "The database has been modified.\n"
-"Discard changes ?"
+"Discard changes?"
 msgstr ""
 "Diese Datenbank wurde geändert.\n"
-"Änderungen verwerfen ?"
+"Änderungen verwerfen?"
+
+#: ../Pyblio/GnomeUI/Document.py:453
+msgid ""
+"The database has been modified.\n"
+"Save changes?"
+msgstr ""
+"Diese Datenbank wurde geändert.\n"
+"Änderungen speichern?"
+
+#: ../Pyblio/GnomeUI/Document.py:470
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"Diese Datenbank wurde extern verändert.\n"
+"Änderungen überschreiben?"
 
 #. no result.
-#: ../Pyblio/GnomeUI/Document.py:471
+#: ../Pyblio/GnomeUI/Document.py:495
 msgid "Your query returned no result"
 msgstr "Die Abfrage lieferte kein Ergebnis"
 
 #. get a new file name
-#: ../Pyblio/GnomeUI/Document.py:481
+#: ../Pyblio/GnomeUI/Document.py:505
 msgid "Merge file"
 msgstr "Datei zusammenführen"
 
-#: ../Pyblio/GnomeUI/Document.py:493 ../Pyblio/GnomeUI/Document.py:579
+#: ../Pyblio/GnomeUI/Document.py:517 ../Pyblio/GnomeUI/Document.py:603
 msgid "Open error"
 msgstr "Fehler beim Öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:517
+#: ../Pyblio/GnomeUI/Document.py:541
 msgid "Merge status"
 msgstr "Status der Zusammenführung"
 
 #. get a new file name
-#: ../Pyblio/GnomeUI/Document.py:528
+#: ../Pyblio/GnomeUI/Document.py:552
 msgid "Open file"
 msgstr "Datei öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:566
+#: ../Pyblio/GnomeUI/Document.py:590
 msgid ""
 "An autosave file was found which is newer than the original file.\n"
 "Do you want to restore it?"
@@ -299,8 +315,8 @@ msgstr ""
 "Originaldatei ist.\n"
 "Möchten Sie diese Datei wiederherstellen?"
 
-#: ../Pyblio/GnomeUI/Document.py:600 ../Pyblio/GnomeUI/Document.py:747
-#: ../Pyblio/GnomeUI/Document.py:807
+#: ../Pyblio/GnomeUI/Document.py:624 ../Pyblio/GnomeUI/Document.py:765
+#: ../Pyblio/GnomeUI/Document.py:825
 #, python-format
 msgid ""
 "Unable to remove autosave file `%s':\n"
@@ -309,7 +325,7 @@ msgstr ""
 "Löschen der automatisch gespeicherten Datei »%s« fehlgeschlagen:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:651
+#: ../Pyblio/GnomeUI/Document.py:675
 #, python-format
 msgid ""
 "Error during autosaving:\n"
@@ -318,15 +334,7 @@ msgstr ""
 "Fehler während des automatischen Speicherns:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:675
-msgid ""
-"The database has been externally modified.\n"
-"Overwrite changes ?"
-msgstr ""
-"Diese Datenbank wurde extern verändert.\n"
-"Änderungen verwerfen ?"
-
-#: ../Pyblio/GnomeUI/Document.py:685
+#: ../Pyblio/GnomeUI/Document.py:703
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -335,7 +343,7 @@ msgstr ""
 "»%s« kann nicht gespeichert werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:693
+#: ../Pyblio/GnomeUI/Document.py:711
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -343,11 +351,11 @@ msgstr ""
 "Ein interner Fehler trat während des Speicherns auf\n"
 "Probieren Sie »Speichern unter…«"
 
-#: ../Pyblio/GnomeUI/Document.py:708
+#: ../Pyblio/GnomeUI/Document.py:726
 msgid "Save As..."
 msgstr "Speichern unter…"
 
-#: ../Pyblio/GnomeUI/Document.py:714
+#: ../Pyblio/GnomeUI/Document.py:732
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -356,7 +364,7 @@ msgstr ""
 "Die Datei »%s« existiert bereits.\n"
 "Überschreiben?"
 
-#: ../Pyblio/GnomeUI/Document.py:721
+#: ../Pyblio/GnomeUI/Document.py:739
 #, python-format
 msgid ""
 "During opening:\n"
@@ -365,11 +373,11 @@ msgstr ""
 "Während des Öffnens:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:759
+#: ../Pyblio/GnomeUI/Document.py:777
 msgid "Reopen error"
 msgstr "Fehler beim erneuten Öffnen"
 
-#: ../Pyblio/GnomeUI/Document.py:832
+#: ../Pyblio/GnomeUI/Document.py:850
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -378,30 +386,30 @@ msgstr ""
 "Ein Eintrag mit dem Namen »%s« existiert bereits.\n"
 "Trotzdem umbenennen und hinzufügen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:869
+#: ../Pyblio/GnomeUI/Document.py:887
 msgid "Really remove all the entries ?"
 msgstr "Wirklich alle Einträge entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:889
+#: ../Pyblio/GnomeUI/Document.py:907
 msgid "Create new entry"
 msgstr "Neuen Eintrag erstellen"
 
-#: ../Pyblio/GnomeUI/Document.py:903
+#: ../Pyblio/GnomeUI/Document.py:921
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Wirklich %d Einträge bearbeiten ?"
 
-#: ../Pyblio/GnomeUI/Document.py:949
+#: ../Pyblio/GnomeUI/Document.py:967
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Alle %d Einträge entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:951
+#: ../Pyblio/GnomeUI/Document.py:969
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Eintrag »%s« entfernen ?"
 
-#: ../Pyblio/GnomeUI/Document.py:1038 ../Pyblio/GnomeUI/Document.py:1046
+#: ../Pyblio/GnomeUI/Document.py:1056 ../Pyblio/GnomeUI/Document.py:1064
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -410,7 +418,7 @@ msgstr ""
 "Es kann keine Verbindung zu LyX hergestellt werden:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:1160
+#: ../Pyblio/GnomeUI/Document.py:1178
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -419,19 +427,19 @@ msgstr ""
 "Konnte Dokumentation nicht anzeigen:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:1168
+#: ../Pyblio/GnomeUI/Document.py:1186
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Dieses Programm steht unter der GNU GPL"
 
-#: ../Pyblio/GnomeUI/Document.py:1169
+#: ../Pyblio/GnomeUI/Document.py:1187
 msgid "Gnome interface to the Pybliographer system."
 msgstr "GNOME-Schnittstelle zum Pybliographer-System."
 
-#: ../Pyblio/GnomeUI/Document.py:1180
+#: ../Pyblio/GnomeUI/Document.py:1198
 msgid "Gnome Translation Team"
 msgstr "GNOME Translation Team"
 
-#: ../Pyblio/GnomeUI/Document.py:1185
+#: ../Pyblio/GnomeUI/Document.py:1203
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer-Homepage"
 
@@ -718,18 +726,18 @@ msgstr "Methode »%s« unterstützt keinen Iterator"
 #, python-format
 msgid ""
 "Warning: This URL is marked as Invalid or Approximate: %s\n"
-" Continue?"
+"Continue?"
 msgstr ""
 "Warnung: Diese Adresse ist als »ungültig« oder »annähernd« markiert: %s\n"
 "Fortsetzen?"
 
 #: ../Pyblio/Resource.py:84
-msgid "Determining Mime Type..."
-msgstr "Bestimmen des MIME-Typs…"
+msgid "Determining Mime Type ... "
+msgstr "MIME-Typ wird bestimmt…"
 
 #: ../Pyblio/Resource.py:89
 #, python-format
-msgid "For item %s cannot determine mime type"
+msgid "Cannot determine mime type for item %s "
 msgstr "Der MIME-Typ für das Objekt »%s« konnte nicht bestimmt werden"
 
 #: ../Pyblio/Resource.py:90
@@ -743,16 +751,17 @@ msgstr ""
 "Überprüfen Sie diese Adresse oder den gegebenen Pfad auf Fehler.\n"
 "Nähere Informationen: %s"
 
-#: ../Pyblio/Resource.py:97
-msgid "Accessing resource..."
+#: ../Pyblio/Resource.py:101
+msgid "Accessing resource ..."
 msgstr "Zugriff auf die Ressource wird ausgeführt…"
 
-#: ../Pyblio/Resource.py:115
+#: ../Pyblio/Resource.py:119
 #, python-format
-msgid "IOError for item %s: cannot unzip."
-msgstr "Ein-/Ausgabefehler für das Objekt %s: Entpacken fehlgeschlagen."
+msgid "IOError for item %s: cannot uncompress resource."
+msgstr ""
+"Ein-/Ausgabefehler für das Objekt %s: Entpacken der Ressource fehlgeschlagen."
 
-#: ../Pyblio/Resource.py:116
+#: ../Pyblio/Resource.py:120
 #, python-format
 msgid ""
 "URL: %s\n"
@@ -761,22 +770,25 @@ msgstr ""
 "Adresse: %s\n"
 "Nähere Informationen: %s"
 
-#: ../Pyblio/Resource.py:132
-msgid "Starting application..."
+#: ../Pyblio/Resource.py:140
+msgid "Starting application ..."
 msgstr "Anwendung wird gestartet…"
 
-#: ../Pyblio/Resource.py:135
-#, python-format
-msgid "Failure for item %s"
-msgstr "Fehler für das Objekt %s"
+#: ../Pyblio/Resource.py:143
+msgid "No application to view resource"
+msgstr "Keine Anwendung zur Ansicht der Ressource verfügbar"
 
-#: ../Pyblio/Resource.py:136
+#: ../Pyblio/Resource.py:144
 #, python-format
 msgid ""
-"No viewer found in Config resource/viewers\n"
+"For mime type %s, no entry found in \n"
+"configuration option resource/viewers.\n"
+"Please consider adding one.\n"
 "URL: %s"
 msgstr ""
-"Kein Betrachter in der Konfiguration Ressourcen/Betrachter gefunden\n"
+"Für den MIME-Typ %s wurde kein Eintrag in der\n"
+"Konfigurationsoption Ressource/Betrachter gefunden.\n"
+"Fügen Sie bitte einen Eintrag hinzu.\n"
 "Adresse: %s"
 
 #: ../Pyblio/Style/Parser.py:261
@@ -1291,6 +1303,16 @@ msgstr "»%s« konnte nicht gelöscht werden"
 #: ../scripts/pybtext.py:344
 msgid "Done"
 msgstr "Fertig"
+
+#~ msgid "Failure for item %s"
+#~ msgstr "Fehler für das Objekt %s"
+
+#~ msgid ""
+#~ "No viewer found in Config resource/viewers\n"
+#~ "URL: %s"
+#~ msgstr ""
+#~ "Kein Betrachter in der Konfiguration Ressourcen/Betrachter gefunden\n"
+#~ "Adresse: %s"
 
 #~ msgid "Add..."
 #~ msgstr "Hinzufügen…"
