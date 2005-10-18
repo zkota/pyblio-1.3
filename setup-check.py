@@ -86,9 +86,10 @@ except:
 
     error ('unexpected error')
 
-if gtk.pygtk_version < (2,4,0):
-    error ('requested version for PyGtk is %s, but I detected %s' % ('2.4.0', v))
-    
+else:
+    if gtk.pygtk_version < (2,4,0):
+        error ('requested version for PyGtk is %s, but I detected %s' % ('2.4.0', v))
+
 
 try:
     import _recode
