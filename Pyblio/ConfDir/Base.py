@@ -36,6 +36,11 @@ Config.define ('base/autosave interval', """ Time in minutes. It specifies the t
 Config.define ('base/backup', """ Create a backup copy of files before saving """,
                vtype = Config.Boolean ())
 
+Config.define ('base/directsave', """ Direct save. It is an optional saving method
+               which doesn't break links. WARNING: the risk of data loss is
+               higher with this method, use only if you really need it! """,
+               vtype = Config.Boolean ())
+
 Config.define ('base/fields', """ Existing fields.  It's a hash table,
                with the field name (lower case) as key, and a instance
                of Types.FieldDescription as value. """)
@@ -180,3 +185,4 @@ Config.set ('base/autosave interval', 10)
 
 Config.set ('base/backup', 1)
 
+Config.set ('base/directsave', 0)

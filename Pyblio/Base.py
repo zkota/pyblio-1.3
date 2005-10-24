@@ -30,6 +30,8 @@ from types import *
 
 from Pyblio import Autoload, Config, Iterator, Key, Open, Selection, Utils
 
+from shutil import copyfile
+
 class Entry:
     '''
     A database entry. It behaves like a dictionnary, which
@@ -288,23 +290,37 @@ class DataBase:
 
 	name = self.key.url [2]
 
-        # create a temporary file for the new version
-        tmp = os.path.join (os.path.dirname (name),
-                            '.#' + os.path.basename (name))
+        if Config.get ('base/directsave').data:
+            if Config.get ('base/backup').data:
+                copyfile (name, name + '.bak')
 
-        tmpfile = open (tmp, 'w')
+            namefile = open (name, 'w')
 
-        iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
-	Open.bibwrite (iterator, out = tmpfile, how = self.id, database=self)
+            iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
+	    Open.bibwrite (iterator, out = namefile, how = self.id, database=self)
 
-	tmpfile.close ()
+            namefile.close ()
 
-	# if we succeeded, and backup is set backup file
-        if Config.get ('base/backup').data:
-            os.rename (name, name + '.bak')
+        else:
 
-	# ...and bring new version online
-        os.rename (tmp, name)
+            # create a temporary file for the new version
+            tmp = os.path.join (os.path.dirname (name),
+                                '.#' + os.path.basename (name))
+
+            tmpfile = open (tmp, 'w')
+
+            iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
+	    Open.bibwrite (iterator, out = tmpfile, how = self.id, database=self)
+
+	    tmpfile.close ()
+
+	    # if we succeeded, and backup is set, backup file
+            if Config.get ('base/backup').data:
+                os.rename (name, name + '.bak')
+
+	    # ...and bring new version online
+            os.rename (tmp, name)
+
         return
 
 
