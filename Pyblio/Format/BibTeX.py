@@ -425,7 +425,7 @@ class DataBase (Base.DataBase):
             else:
                 if self.dict.has_key (entry.key):
                     errors.append (_("%s:%d: key `%s' already defined") % (
-                        str (self.key), entry.line, entry.key.key))
+                        repr (self.key), entry.line, repr (entry.key.key)))
                 else:
                     self.dict [entry.key] = entry
 

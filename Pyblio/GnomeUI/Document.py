@@ -1052,7 +1052,6 @@ class Document (Connector.Publisher):
             try:
                 self.lyx = LyX.LyXClient ()
             except IOError, msg:
-                msg = msg [1].decode (enc)
                 self.w.error (_("Can't connect to LyX:\n%s") % msg)
                 return
 
