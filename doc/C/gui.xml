@@ -475,7 +475,7 @@
   </sect1>
 
   <sect1 id="gui-formats">
-    <title>Saving entries in different formats</title>
+    <title>Saving selected entries in different formats</title>
 
     <para>Selected entries can be saved in different formats using  
     the <menuchoice><guimenu>Cite</guimenu> <guimenuitem>Format...
