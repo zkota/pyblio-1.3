@@ -65,11 +65,8 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 
     if not is_interactive (): 	return
 
-    from Pyblio.GnomeUI import Utils    
-    try:
-	import gnomevfs
-    except ImportError:
-	import gnome.vfs as gnomevfs
+    from Pyblio.GnomeUI import Compat, Utils    
+
 
     uri = Fields.URL (stringuri)
     scheme, location, path, parameters, query, fragment  = uri.url
@@ -84,7 +81,7 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	document.statusbar.set_status (_("Determining Mime Type ... "))
 
     try:
-	mimetype =  gnomevfs.get_mime_type (fileuri)
+	mimetype =  Compat.get_mime_type (fileuri)
     except RuntimeError, mesg:
 	Utils.error_dialog(_("Cannot determine mime type for item %s ") % entry.key.key, 
 			   _("URL in question is: %s\n"
@@ -114,7 +111,7 @@ def StartViewer (entry, key, stringuri, parent=None, document=None):
 	    tempname = os.tmpnam ()
 	    os.system ("gzip -d < %s >%s" %(filename, tempname))
 	    filename = tempname
-	    mimetype =  gnomevfs.get_mime_type (filename)
+	    mimetype =  Compat.get_mime_type (filename)
 	except RuntimeError, mesg:
 	    Utils.error_dialog (_("IOError for item %s: cannot uncompress resource.")
 				% entry.key.key, _("URL: %s\nDetails: %s")

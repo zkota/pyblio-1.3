@@ -111,7 +111,7 @@ class MedlineIterator (Iterator.Iterator):
                 first, last, lineage = [], [], []
                 
                 for part in string.split (au, ' '):
-                    if part == string.upper (part):
+		    if part.isupper ():
                         # in upper-case, this is a first name
                         if len (last) > 0:
                             first.append (part)
@@ -130,7 +130,7 @@ class MedlineIterator (Iterator.Iterator):
                     first = first [0:1]
 
                 if len (first) > 0:
-                    first = string.join (first [0], '.') + '.'
+                    first = string.join (first [0], '. ') + '.'
                 else:
                     first = None
 
@@ -158,8 +158,6 @@ class MedlineIterator (Iterator.Iterator):
         for f in table.keys ():
             f_mapped = one_to_one.get(f, 'medline-%s' %(f.lower()))
             text_type = Types.get_field(f_mapped).type
-            print 'MEDLINE: field name %s has type %s' %(
-                f_mapped, text_type)
             norm [f_mapped] = text_type (string.join (table [f], " ; "))
         
         return Base.Entry (None, type, norm)
@@ -302,3 +300,8 @@ def iterator (url, check):
 Autoload.register ('format', 'Medline', {'open'  : opener,
                                          'write' : writer,
                                          'iter'  : iterator})
+
+### Local Variables:
+### Mode: python
+### py-master-file : "ut_medline.py"
+### End:

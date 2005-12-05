@@ -27,7 +27,7 @@ import copy, gobject, gtk, re, string
 from gnome import ui
 
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
-from Pyblio.GnomeUI import Common, FieldsInfo, FileSelector, Mime, Utils
+from Pyblio.GnomeUI import Common, Compat, FieldsInfo, FileSelector, Mime, Utils
 
 key_re = re.compile ("^[\w:_+-.()]+$")
 
@@ -352,7 +352,7 @@ class Date (BaseField):
         if text != '':
             try: day = int (text)
             except ValueError:
-                ui.gnome_error_dialog_parented (_("Invalid day field in date"),
+                Compat.error_dialog_parented (_("Invalid day field in date"),
                                                 self.day.get_toplevel ())
                 return -1
         
@@ -360,7 +360,7 @@ class Date (BaseField):
         if text != '':
             try: month = int (text)
             except ValueError, err:
-                ui.gnome_error_dialog_parented (_("Invalid month field in date"),
+                Compat.error_dialog_parented (_("Invalid month field in date"),
                                                 self.day.get_toplevel ())
                 return -1
         
@@ -368,7 +368,7 @@ class Date (BaseField):
         if text != '':
             try: year = int (text)
             except ValueError: 
-                ui.gnome_error_dialog_parented (_("Invalid year field in date"),
+                Compat.error_dialog_parented (_("Invalid year field in date"),
                                                 self.day.get_toplevel ())
                 return -1
         
@@ -381,7 +381,7 @@ class Date (BaseField):
         try:
             entry [self.field] = Fields.Date ((year, month, day))
         except Exceptions.DateError, error:
-            ui.gnome_error_dialog_parented (str (error),
+            Compat.error_dialog_parented (str (error),
                                             self.day.get_toplevel ())
             return -1
         return 1
@@ -903,7 +903,7 @@ class RealEditor (Connector.Publisher):
             modified = True
         else:
             if not key_re.match (key):
-                ui.gnome_error_dialog_parented (
+                Compat.error_dialog_parented (
                     _("Invalid key format"), self.w.get_toplevel ())
                 return None
 
@@ -911,7 +911,7 @@ class RealEditor (Connector.Publisher):
 
             if key != self.entry.key:
                 if database.has_key (key):
-                     ui.gnome_error_dialog_parented (
+                     Compat.error_dialog_parented (
                          _("Key `%s' already exists") % str (key.key),
                          self.w.get_toplevel ())
                      return None
@@ -928,7 +928,7 @@ class RealEditor (Connector.Publisher):
             except UnicodeError:
                 f = Types.get_field (item.field)
                 
-                ui.gnome_error_dialog_parented (
+                Compat.error_dialog_parented (
                     _("The `%s' field contains a non Latin-1 symbol") %
                     f.name, self.w.get_toplevel ())
                 return None
@@ -998,7 +998,7 @@ class NativeEditor (Connector.Publisher):
             text = text.encode ('latin-1')
 
         except UnicodeError:
-            ui.gnome_error_dialog_parented (
+            Compat.error_dialog_parented (
                 _("Your text contains non Latin-1 symbols"),
                 self.w.get_toplevel ())
             return None
