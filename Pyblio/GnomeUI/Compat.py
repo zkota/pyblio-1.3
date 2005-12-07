@@ -26,6 +26,7 @@ Compatability module
 
 """
 
+# gnome-python (2.x)
 try:
     from gnome.ui import gnome_error_dialog_parented
 except ImportError:
@@ -34,6 +35,7 @@ except ImportError:
 error_dialog_parented = gnome_error_dialog_parented
 
 
+# gnome-python (2.x)
 try:
     import gnomevfs
 except ImportError:
