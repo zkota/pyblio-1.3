@@ -87,11 +87,13 @@ class URLFileSelection (gtk.FileChooserDialog):
 	    liste = Autoload.available ('format')
 	    liste.sort ()
 
-	    self.formats = [ None ]
+	    self.formats = []
 
 	    if has_auto:
 		self.menu.append_text (_(' - According to file suffix - '))
 		self.ftype = None
+                self.formats.append(None)
+                
 	    else:
 		self.ftype = liste [0]
 
