@@ -7,9 +7,9 @@
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
 <!ENTITY Pyc "Pybliographic">
-<!ENTITY appversion "1.2.7">
+<!ENTITY appversion "1.2.8">
 <!ENTITY manrevision "2.6">
-<!ENTITY date "October 2005">
+<!ENTITY date "January 2006">
 <!ENTITY app "Pybliographer">
 
 <!ENTITY preface SYSTEM "preface.xml">
@@ -27,11 +27,11 @@
     <title>&app; Manual V&manrevision;</title>
   <bookinfo>
     <copyright> 
-      <year>2003-2005</year>
+      <year>2003-2006</year>
       <holder>Zolt&#225;n K&#243;ta</holder> 
     </copyright> 
     <copyright> 
-      <year>1999-2005</year>
+      <year>1999-2006</year>
       <holder>Fr&#233;d&#233;ric Gobry</holder> 
     </copyright>
 <!-- translators: uncomment this:

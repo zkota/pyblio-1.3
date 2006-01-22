@@ -83,154 +83,11 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>New shortcuts</term>
+            <term>Direct save</term>
             <listitem>
               <para>
-                Shortcut keys have been added for <menuchoice><guimenu>
-                Add</guimenu></menuchoice> and <menuchoice><guimenu>
-                Edit</guimenu></menuchoice> menu items.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>File browser for url fields</term>
-            <listitem>
-              <para>
-                To simplify selection of an existing local file in the Edit
-                window, fields of type URL come now equipped with a button
-                to the right of the entry widget, that starts a File selection dialog.
-                With this dialog, the user can navigate the directories, and select an 
-                existing file. If the dialog is left through the <guibutton>OK
-                </guibutton> button, this file will become the new value of the field in 
-                question.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Supporting resources</term>
-            <listitem>
-              <para>
-                &app; &appversion; adds new features to help in the management and 
-                use of *Resources*, i.e. files referred to from an item, such as Eprints 
-                and other electronic versions of it.
-              </para>
-              <para>
-                You can set the viewable fields and the applications used to view the 
-                resources in the 'Resource' tab under the
-                <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences
-                </guimenuitem></menuchoice> menu. If an item contains one or more fields 
-                containing viewable resources, it is marked with an icon at the left 
-                edge of the item in the main window. The available resources are presented 
-                to the user under both the <menuchoice><guimenu>View</guimenu>
-                <guisubmenu>Resource</guisubmenu></menuchoice> submenu item and the
-                <menuchoice><guimenu>Resource</guimenu></menuchoice> pop up menu provided
-                for the item list.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>BibTeX preamble support</term>
-            <listitem>
-              <para>
-                The @preamble items at the beginning of a BibTeX file (.bib) are 
-                conserved now by default. They are no longer effectively deleted upon 
-                saving the file. This feature requires python-bibtex 1.2.2 or later.
-              </para>
-              <para>
-                If the previous behaviour (i.e. deleting the preamble upon saving or 
-                copying the file) is wanted, it can be switched off in Preferences.
-                (This option is for compatibility only.)
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>New bibtex field type</term>
-            <listitem>
-              <para>
-                A new bibtex field type (BIBTEX_VERBATIM) is used for urls and references.
-                This type ensures symbols like ~ don't get escaped.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Opening URL</term>
-            <listitem>
-              <para>
-                A new menu item and dialog has been added for opening URLs. See 
-                the <menuchoice><guimenu>File</guimenu><guimenuitem>Open Location
-                </guimenuitem></menuchoice> menu.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>File selector reworked</term>
-            <listitem>
-              <para>
-                File selector is simplified; it supports only the gtk 2.4 FileChooser,
-                and the URL entry has been removed.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Updated code to pygtk 2.4</term>
-            <listitem>
-              <para>
-                The GUI code is updated so that it is compatible with pygtk 2.4. 
-                &app; &appversion; requires pygtk 2.4.0 or later.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Autosave</term>
-            <listitem>
-              <para>
-                The possibility of autosaving opened database files has been added.
-                There is a toggle in preferences to switch on autosaving. The time 
-                interval also can be adjusted.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Backup is optional</term>
-            <listitem>
-              <para>
-                Creating backup copy of files before saving is optional. There is an 
-                option in preferences for switching off backup (default is ON).
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Search</term>
-            <listitem>
-              <para>
-                Hitting escape in the main window resets the search filter.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Format dialog</term>
-            <listitem>
-              <para>
-                The file info (both the style and output file) is preserved across runs of 
-                the format menu. The Format dialog uses the new file selector now.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Added a small notification of the current query</term>
-            <listitem>
-              <para>
-                When the query is limited, the name of the query is displayed in the bottom bar.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Changed confirmation dialog</term>
-            <listitem>
-              <para>
-                When closing a modified database (file), it is asked whether or not to
-                save the database. The old behaviour can be obtained by setting the
-                old-confirmation-dialog option in preferences.
+                An alternative saving method has been added. It doesn't break
+                links. This option can be switched on in Preferences.
               </para>
             </listitem>
           </varlistentry>
@@ -238,8 +95,8 @@
             <term>Bugfixes</term>
             <listitem>
               <para>
-                Many bugs (e.g. bugs related to sort and isifile issues, fileselector, config editor) 
-                are fixed.
+                Many bugs are fixed. These are related to installation, 
+                error reporting/dialogs, and Save As.
               </para>
             </listitem>
           </varlistentry>

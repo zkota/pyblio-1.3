@@ -1,5 +1,18 @@
 -*- text -*-
 
+New in 1.2.8 - 2006-01-20
+
+       * setup-check.py fixed (Zoltán)
+       * An alternative saving method added. It doesn't break
+         links (Zoltán)
+       * Fixed error reporting when the lyx pipe is not 
+         available (Frédéric)
+       * Fixed bug related to error_dialog_parented. A 
+         compatibility module introduced (Peter)
+       * Fixed document type selection for Save As (Frédéric)
+       * Updated translations (Gnome I18n team)
+
+
 New in 1.2.7 - 2005-10-11
 
        * Added shortcut keys for 'Add' and 'Edit' (Peter)
