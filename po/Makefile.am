@@ -49,6 +49,7 @@ LANGUAGES = 		\
 	sv 		\
 	tr 		\
 	uk		\
+	vi		\
 	zh_CN
 
 
