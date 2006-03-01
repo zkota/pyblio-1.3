@@ -29,7 +29,7 @@ from gnome import ui
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Key, Types
 from Pyblio.GnomeUI import Common, Compat, FieldsInfo, FileSelector, Mime, Utils
 
-key_re = re.compile ("^[\w:_+-.()]+$")
+key_re = re.compile ("^[\w:_+-.()/]+$")
 
 _newcontent = {
     Fields.AuthorGroup : _("Last Name, First Name"),
