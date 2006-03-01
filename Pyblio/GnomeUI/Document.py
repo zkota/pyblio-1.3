@@ -40,6 +40,7 @@ from Pyblio.GnomeUI.Medline import MedlineUI
 
 from Pyblio import Base, Config, Connector, Exceptions, Fields, Open
 from Pyblio import Query, Resource, Selection, Sort, Types, version
+from Pyblio import Search as SearchCls
 
 import Pyblio.Style.Utils
 
@@ -113,8 +114,8 @@ uim_content = '''
         <separator/>
         <toolitem action="Add"/>
         <separator/>
-        <toolitem action="Find"/>
         <toolitem action="Cite"/>
+        <separator/>
     </toolbar>
     
     <popup name="Popup">
@@ -217,13 +218,31 @@ class Document (Connector.Publisher):
 
         self.w.set_menus (self.uim.get_widget ('/Menubar'))
         self.w.set_toolbar (self.uim.get_widget ('/Toolbar'))
-        
+
         self.w.add_accel_group (self.uim.get_accel_group ())
 
         self.w.add_events (gdk.KEY_PRESS_MASK)
         
         self.w_save_btn = self.xml.get_widget ('_w_save_btn')
         self.w_save_mnu = self.xml.get_widget ('_w_save_mnu')
+
+        # We manually add a simple search area
+        t = self.uim.get_widget ('/Toolbar')
+        h = gtk.HBox()
+
+        i = gtk.Image()
+        i.set_from_stock(gtk.STOCK_FIND, gtk.ICON_SIZE_LARGE_TOOLBAR)
+        h.pack_start(i, False, False)
+        
+        self.quick_search = gtk.Entry()
+        self.quick_search.connect('activate', self.simple_search)
+        h.pack_start(self.quick_search, False, False)
+        
+        i = gtk.ToolItem()
+        i.add(h)
+        t.insert(i, -1)
+        
+        i.show_all()
         
         # The Index list
         self.index = Index.Index (popup = self.uim.get_widget ('/Popup'))
@@ -978,7 +997,15 @@ class Document (Connector.Publisher):
         self.redisplay_index (1)
         self.index.select_item (offset)
         return
-    
+
+    def simple_search(self, w, *arg):
+        q = w.get_text().strip().encode('latin-1')
+        if q:
+            test = SearchCls.AnyTester(q)
+        else:
+            test = None
+
+        self.limit_view(q, test)
     
     def find_entries (self, * arg):
         if self.search_dg is None:
@@ -1117,7 +1144,8 @@ class Document (Connector.Publisher):
         if event.keyval == gtk.keysyms.Escape:
             # the Esc key restores view to "all entries"
             self.limit_view (None, None)
-        
+            self.quick_search.set_text('')
+            
         if (event.string < 'a' or event.string > 'z') and \
            (event.string < '0' or event.string > '9'): return False
 
