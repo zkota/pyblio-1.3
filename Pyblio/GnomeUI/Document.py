@@ -999,9 +999,13 @@ class Document (Connector.Publisher):
         return
 
     def simple_search(self, w, *arg):
-        q = w.get_text().strip().encode('latin-1')
+        q = w.get_text().strip()
         if q:
-            test = SearchCls.AnyTester(q)
+            try:
+                test = SearchCls.AnyTester(q.encode('latin-1'))
+            except UnicodeEncodeError:
+                self.w.error (_("your search text must contain\nlatin-1 characters only"))
+                return
         else:
             test = None
 
