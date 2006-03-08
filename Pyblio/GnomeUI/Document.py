@@ -151,9 +151,9 @@ class Document (Connector.Publisher):
             ('Recent', None, _('Recent documents')),
             
             ('New',  gtk.STOCK_NEW,   None,         None,   None,     self.new_document),
-            ('Open', gtk.STOCK_OPEN,  None,         None,   None,     self.ui_open_document),
+            ('Open', gtk.STOCK_OPEN,  None,         None,   _('Open a file'), self.ui_open_document),
             ('Open_URL', None, _('Open _Location'), '<control>l',   None, self.ui_open_location),
-            ('Save', gtk.STOCK_SAVE,  None,         None,   None,     self.save_document),
+            ('Save', gtk.STOCK_SAVE,  None,         None,   _('Save the current file'), self.save_document),
             ('Save_As', gtk.STOCK_SAVE_AS,  None,         None,   None,     self.save_document_as),
             ('Close', gtk.STOCK_CLOSE,  None,         None,   None,     self.close_document),
             ('Quit', gtk.STOCK_QUIT,  None,         None,   None,     self.exit_application),
@@ -167,12 +167,12 @@ class Document (Connector.Publisher):
             ('Copy', gtk.STOCK_COPY,  None,         None,   None,     self.copy_entry),
             ('Paste', gtk.STOCK_PASTE,  None,         None,   None,     self.paste_entry),
             ('Clear', gtk.STOCK_CLEAR,  None,         None,   None,     self.clear_entries),
-            ('Add', gtk.STOCK_ADD,  None,   '<shift><control>n',  None,     self.add_entry),
+            ('Add', gtk.STOCK_ADD,  None,   '<shift><control>n',  _('Add a new entry'), self.add_entry),
             ('Delete', gtk.STOCK_DELETE,  None,         None,   None,     self.delete_entry),
             ('Find', gtk.STOCK_FIND,  None,         None,   None,     self.find_entries),
             
             ('Sort', None, _('S_ort...'), None,  None, self.sort_entries),
-            ('Cite', gtk.STOCK_JUMP_TO,   _('Cite...'), None,  None, self.lyx_cite),
+            ('Cite', gtk.STOCK_JUMP_TO,   _('Cite...'), None,  _('Cite key(s)'), self.lyx_cite),
             ('Format', gtk.STOCK_EXECUTE, _('Format...'), None,  None, self.format_entries),
 
             ('Fields', None, _('Fields...'), None,  None, self.set_fields),
@@ -233,11 +233,15 @@ class Document (Connector.Publisher):
         i = gtk.Image()
         i.set_from_stock(gtk.STOCK_FIND, gtk.ICON_SIZE_LARGE_TOOLBAR)
         h.pack_start(i, False, False)
-        
+
+        # create a tooltips object
+        self.toolbartips = gtk.Tooltips()
+
         self.quick_search = gtk.Entry()
         self.quick_search.connect('activate', self.simple_search)
         h.pack_start(self.quick_search, False, False)
-        
+        self.toolbartips.set_tip(self.quick_search, _('Quick search'))
+
         i = gtk.ToolItem()
         i.add(h)
         t.insert(i, -1)
