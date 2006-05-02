@@ -6,8 +6,8 @@ msgid ""
 ""
 msgstr "Project-Id-Version: pybliographer.v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-27 04:28+0100\n"
-"PO-Revision-Date: 2006-02-05 18:59+1030\n"
+"POT-Creation-Date: 2006-03-30 04:06+0200\n"
+"PO-Revision-Date: 2006-03-30 21:42+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -133,79 +133,99 @@ msgid "Value:"
 msgstr "Giá trị:"
 
 #.id     stock            label         accel   tooltip   callback
-#:../Pyblio/GnomeUI/Document.py:144
+#:../Pyblio/GnomeUI/Document.py:145
 msgid "_File"
 msgstr "_Tập tin"
 
-#:../Pyblio/GnomeUI/Document.py:145 ../Pyblio/GnomeUI/Document.py:194
+#:../Pyblio/GnomeUI/Document.py:146 ../Pyblio/GnomeUI/Document.py:195
 msgid "_Edit"
 msgstr "_Hiệu chỉnh"
 
-#:../Pyblio/GnomeUI/Document.py:146
+#:../Pyblio/GnomeUI/Document.py:147
 msgid "_View"
 msgstr "_Xem"
 
-#:../Pyblio/GnomeUI/Document.py:147
+#:../Pyblio/GnomeUI/Document.py:148
 msgid "_Cite"
 msgstr "_Dẫn"
 
-#:../Pyblio/GnomeUI/Document.py:148
+#:../Pyblio/GnomeUI/Document.py:149
 msgid "_Settings"
 msgstr "Thiết _lập"
 
-#:../Pyblio/GnomeUI/Document.py:149
+#:../Pyblio/GnomeUI/Document.py:150
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#:../Pyblio/GnomeUI/Document.py:150
+#:../Pyblio/GnomeUI/Document.py:151
 msgid "Recent documents"
 msgstr "Tài liệu gần đây"
 
 #:../Pyblio/GnomeUI/Document.py:154
+msgid "Open a file"
+msgstr "Mở tập tin"
+
+#:../Pyblio/GnomeUI/Document.py:155
 msgid "Open _Location"
 msgstr "Mở _Địa điểm"
 
-#:../Pyblio/GnomeUI/Document.py:160 ../glade/pyblio.glade.in.h:8
+#:../Pyblio/GnomeUI/Document.py:156
+msgid "Save the current file"
+msgstr "Lưu tập tin hiện có"
+
+#:../Pyblio/GnomeUI/Document.py:161 ../glade/pyblio.glade.in.h:8
 msgid "Merge With..."
 msgstr "Trộn với ..."
 
-#:../Pyblio/GnomeUI/Document.py:161 ../glade/pyblio.glade.in.h:7
+#:../Pyblio/GnomeUI/Document.py:162 ../glade/pyblio.glade.in.h:7
 msgid "Medline Query..."
 msgstr "Truy vấn Medline..."
 
-#:../Pyblio/GnomeUI/Document.py:173 ../glade/pyblio.glade.in.h:12
+#:../Pyblio/GnomeUI/Document.py:170
+msgid "Add a new entry"
+msgstr "Tạo mục nhập mới"
+
+#:../Pyblio/GnomeUI/Document.py:174 ../glade/pyblio.glade.in.h:12
 msgid "S_ort..."
 msgstr "_Sắp xếp..."
 
-#:../Pyblio/GnomeUI/Document.py:174 ../glade/pyblio.glade.in.h:2
+#:../Pyblio/GnomeUI/Document.py:175 ../glade/pyblio.glade.in.h:2
 msgid "Cite..."
 msgstr "Dẫn..."
 
-#:../Pyblio/GnomeUI/Document.py:175 ../glade/pyblio.glade.in.h:6
+#:../Pyblio/GnomeUI/Document.py:175
+msgid "Cite key(s)"
+msgstr "Xác định phím"
+
+#:../Pyblio/GnomeUI/Document.py:176 ../glade/pyblio.glade.in.h:6
 msgid "Format..."
 msgstr "Dạng thức..."
 
-#:../Pyblio/GnomeUI/Document.py:177 ../glade/pyblio.glade.in.h:4
+#:../Pyblio/GnomeUI/Document.py:178 ../glade/pyblio.glade.in.h:4
 msgid "Fields..."
 msgstr "Trường..."
 
-#:../Pyblio/GnomeUI/Document.py:179 ../glade/pyblio.glade.in.h:5
+#:../Pyblio/GnomeUI/Document.py:180 ../glade/pyblio.glade.in.h:5
 msgid "Forget all changes"
 msgstr "Quên mọi thay đổi"
 
-#:../Pyblio/GnomeUI/Document.py:182
+#:../Pyblio/GnomeUI/Document.py:183
 msgid "_Resource"
 msgstr "_Tài nguyên"
 
-#:../Pyblio/GnomeUI/Document.py:193
+#:../Pyblio/GnomeUI/Document.py:194
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#:../Pyblio/GnomeUI/Document.py:294
+#:../Pyblio/GnomeUI/Document.py:243
+msgid "Quick search"
+msgstr "Tìm kiếm nhanh"
+
+#:../Pyblio/GnomeUI/Document.py:317
 msgid "Unnamed bibliographic database"
 msgstr "Cơ sở dữ liệu thư tịch vô danh"
 
-#:../Pyblio/GnomeUI/Document.py:377
+#:../Pyblio/GnomeUI/Document.py:400
 #,python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -213,7 +233,7 @@ msgid ""
 msgstr "không thể mở tập tin « %s » để ghi:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:398
+#:../Pyblio/GnomeUI/Document.py:421
 #,python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -221,57 +241,57 @@ msgid ""
 msgstr "Gặp lỗi khi phân tách « %s »:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:414
+#:../Pyblio/GnomeUI/Document.py:437
 msgid "New database"
 msgstr "Cơ sở dữ liệu mới"
 
-#:../Pyblio/GnomeUI/Document.py:422 ../Pyblio/GnomeUI/Document.py:426
+#:../Pyblio/GnomeUI/Document.py:445 ../Pyblio/GnomeUI/Document.py:449
 msgid "[no entry]"
 msgstr "[không có mục nhập]"
 
-#:../Pyblio/GnomeUI/Document.py:423
+#:../Pyblio/GnomeUI/Document.py:446
 msgid "[1 entry]"
 msgstr "[1 mục nhập]"
 
-#:../Pyblio/GnomeUI/Document.py:424
-#, python-format
+#:../Pyblio/GnomeUI/Document.py:447
+#,python-format
 msgid "[%d entries]"
 msgstr "[%d mục nhập]"
 
-#:../Pyblio/GnomeUI/Document.py:427
+#:../Pyblio/GnomeUI/Document.py:450
 #,python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 mục nhập]"
 
-#:../Pyblio/GnomeUI/Document.py:428
+#:../Pyblio/GnomeUI/Document.py:451
 #,python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d mục nhâp]"
 
-#:../Pyblio/GnomeUI/Document.py:433
+#:../Pyblio/GnomeUI/Document.py:456
 msgid "[modified]"
 msgstr "[đã sửa đổi]"
 
-#:../Pyblio/GnomeUI/Document.py:436
+#:../Pyblio/GnomeUI/Document.py:459
 #,python-format
 msgid "view limited to: %s"
 msgstr "khung xem bị giới hạn thành: %s"
 
-#:../Pyblio/GnomeUI/Document.py:449
+#:../Pyblio/GnomeUI/Document.py:472
 msgid ""
 "The database has been modified.\n"
 "Discard changes?"
 msgstr "Cơ sử dữ liệu đã được sửa đổi.\n"
 "Hủy các thay đổi không?"
 
-#:../Pyblio/GnomeUI/Document.py:453
+#:../Pyblio/GnomeUI/Document.py:476
 msgid ""
 "The database has been modified.\n"
 "Save changes?"
 msgstr "Cơ sử dữ liệu đã được sửa đổi.\n"
 "Lưu các thay đổi chứ?"
 
-#:../Pyblio/GnomeUI/Document.py:470
+#:../Pyblio/GnomeUI/Document.py:493
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -279,37 +299,37 @@ msgstr "Cơ sử dữ liệu đã được sửa đổi một cách bên ngoài.
 "Ghi đè lên các thay đổi không?"
 
 #.no result.
-#:../Pyblio/GnomeUI/Document.py:495
+#:../Pyblio/GnomeUI/Document.py:518
 msgid "Your query returned no result"
 msgstr "Truy vấn của bạn không trả lại kết quả"
 
 #.get a new file name
-#:../Pyblio/GnomeUI/Document.py:505
+#:../Pyblio/GnomeUI/Document.py:528
 msgid "Merge file"
 msgstr "Tập tin trộn"
 
-#:../Pyblio/GnomeUI/Document.py:517 ../Pyblio/GnomeUI/Document.py:603
+#:../Pyblio/GnomeUI/Document.py:540 ../Pyblio/GnomeUI/Document.py:626
 msgid "Open error"
 msgstr "Lỗi mở"
 
-#:../Pyblio/GnomeUI/Document.py:541
+#:../Pyblio/GnomeUI/Document.py:564
 msgid "Merge status"
 msgstr "Trạng thái trộn"
 
 #.get a new file name
-#:../Pyblio/GnomeUI/Document.py:552
+#:../Pyblio/GnomeUI/Document.py:575
 msgid "Open file"
 msgstr "Mở tập tin"
 
-#:../Pyblio/GnomeUI/Document.py:590
+#:../Pyblio/GnomeUI/Document.py:613
 msgid ""
 "An autosave file was found which is newer than the original file.\n"
 "Do you want to restore it?"
 msgstr "Đã tìm một tập tin tự động lưu mà mới hơn tập tin gốc.\n"
 "Bạn có muốn phục hồi nó không?"
 
-#:../Pyblio/GnomeUI/Document.py:624 ../Pyblio/GnomeUI/Document.py:765
-#:../Pyblio/GnomeUI/Document.py:825
+#:../Pyblio/GnomeUI/Document.py:647 ../Pyblio/GnomeUI/Document.py:788
+#:../Pyblio/GnomeUI/Document.py:848
 #,python-format
 msgid ""
 "Unable to remove autosave file `%s':\n"
@@ -317,7 +337,7 @@ msgid ""
 msgstr "Không thể gỡ bỏ tập tin tự động lưu « %s »:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:675
+#:../Pyblio/GnomeUI/Document.py:698
 #,python-format
 msgid ""
 "Error during autosaving:\n"
@@ -325,7 +345,7 @@ msgid ""
 msgstr "Gặp lỗi trong khi tự động lưu :\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:703
+#:../Pyblio/GnomeUI/Document.py:726
 #,python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -333,18 +353,18 @@ msgid ""
 msgstr "Không thể lưu « %s »:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:711
+#:../Pyblio/GnomeUI/Document.py:734
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
 msgstr "Gặp lỗi nội bộ trong khi lưu.\n"
 "Hãy thử Lưu dạng..."
 
-#:../Pyblio/GnomeUI/Document.py:726
+#:../Pyblio/GnomeUI/Document.py:749
 msgid "Save As..."
 msgstr "Lưu dạng..."
 
-#:../Pyblio/GnomeUI/Document.py:732
+#:../Pyblio/GnomeUI/Document.py:755
 #,python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -352,7 +372,7 @@ msgid ""
 msgstr "Tập tin « %s » đã có.\n"
 "Bạn có muốn ghi đè lên không?"
 
-#:../Pyblio/GnomeUI/Document.py:739
+#:../Pyblio/GnomeUI/Document.py:762
 #,python-format
 msgid ""
 "During opening:\n"
@@ -360,11 +380,11 @@ msgid ""
 msgstr "Trong khi mở :\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:777
+#:../Pyblio/GnomeUI/Document.py:800
 msgid "Reopen error"
 msgstr "Lỗi mở lại"
 
-#:../Pyblio/GnomeUI/Document.py:850
+#:../Pyblio/GnomeUI/Document.py:873
 #,python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -372,30 +392,36 @@ msgid ""
 msgstr "Mục nhập tên « %s » đã có.\n"
 "Thay đổi tên rồi vẫn thêm nó không?"
 
-#:../Pyblio/GnomeUI/Document.py:887
+#:../Pyblio/GnomeUI/Document.py:910
 msgid "Really remove all the entries ?"
 msgstr "Thật sự muốn gỡ bỏ mọi mục nhập không?"
 
-#:../Pyblio/GnomeUI/Document.py:907
+#:../Pyblio/GnomeUI/Document.py:930
 msgid "Create new entry"
 msgstr "Tạo mục nhập mới"
 
-#:../Pyblio/GnomeUI/Document.py:921
+#:../Pyblio/GnomeUI/Document.py:944
 #,python-format
 msgid "Really edit %d entries ?"
 msgstr "Thật sự hiệu chỉnh %d mục nhập không?"
 
-#:../Pyblio/GnomeUI/Document.py:967
+#:../Pyblio/GnomeUI/Document.py:990
 #,python-format
 msgid "Remove all the %d entries ?"
 msgstr "Gỡ bỏ mọi mục nhập %d không?"
 
-#:../Pyblio/GnomeUI/Document.py:969
+#:../Pyblio/GnomeUI/Document.py:992
 #,python-format
 msgid "Remove entry `%s' ?"
 msgstr "Gỡ bỏ mục nhập « %s » không?"
 
-#:../Pyblio/GnomeUI/Document.py:1055 ../Pyblio/GnomeUI/Document.py:1063
+#:../Pyblio/GnomeUI/Document.py:1011
+msgid ""
+"your search text must contain\n"
+"latin-1 characters only"
+msgstr "chuỗi tìm kiếm phải chứa chỉ ký tự ISO-8859-1 (Latin-1)"
+
+#:../Pyblio/GnomeUI/Document.py:1090 ../Pyblio/GnomeUI/Document.py:1098
 #,python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -403,7 +429,7 @@ msgid ""
 msgstr "Không thể kết nối đến LyX:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:1177
+#:../Pyblio/GnomeUI/Document.py:1213
 #,python-format
 msgid ""
 "Can't display documentation:\n"
@@ -411,19 +437,19 @@ msgid ""
 msgstr "Không thể hiển thị tài liệu hướng dẫn:\n"
 "%s"
 
-#:../Pyblio/GnomeUI/Document.py:1185
+#:../Pyblio/GnomeUI/Document.py:1221
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Chương trình này được phát hành với điều kiện của Quyền Công Chung GNU (GPL)."
 
-#:../Pyblio/GnomeUI/Document.py:1186
+#:../Pyblio/GnomeUI/Document.py:1222
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Giao diện Gnome cho hệ thống Pybliographer."
 
-#:../Pyblio/GnomeUI/Document.py:1197
+#:../Pyblio/GnomeUI/Document.py:1233
 msgid "Gnome Translation Team"
 msgstr "Nhóm Dịch Gnome"
 
-#:../Pyblio/GnomeUI/Document.py:1202
+#:../Pyblio/GnomeUI/Document.py:1238
 msgid "Pybliographer Home Page"
 msgstr "Trang chủ của Pybliographer"
 
@@ -710,12 +736,12 @@ msgstr "Cảnh báo : địa chỉ Mạng có nhãn Không hợp lệ hay Xấp 
 
 #:../Pyblio/Resource.py:81
 msgid "Determining Mime Type ... "
-msgstr "Đang xác định kiểu MIME ..."
+msgstr "Đang xác định kiểu MIME ... "
 
 #:../Pyblio/Resource.py:86
 #,python-format
 msgid "Cannot determine mime type for item %s "
-msgstr "Không thể xác định kiểu MIME cho mục %s"
+msgstr "Không thể xác định kiểu MIME cho mục %s "
 
 #:../Pyblio/Resource.py:87
 #,python-format
@@ -816,11 +842,11 @@ msgstr "ĐỊNH NGHĨA TRƯỜNG"
 
 #:../glade/config1.glade.h:10 ../glade/fields1.glade.h:8
 msgid "Fields "
-msgstr "Trường"
+msgstr "Trường "
 
 #:../glade/config1.glade.h:12 ../glade/fields1.glade.h:11
 msgid "Name "
-msgstr "Tên"
+msgstr "Tên "
 
 #:../glade/config1.glade.h:13
 msgid "Pybliographer Configuration"
@@ -849,8 +875,7 @@ msgid ""
 msgstr "Hãy chọn một kiểu mục nhập\n"
 "và ghi rõ các trường tương ứng\n"
 "(bắt buộc và tùy chọn)\n"
-"trong trang kế tiếp."
-"\n"
+"trong trang kế tiếp.\n"
 "\n"
 "\n"
 
@@ -888,7 +913,7 @@ msgstr "Từ :"
 
 #:../glade/medline.glade.h:4
 msgid "Limited to:"
-msgstr "Giới hạn: "
+msgstr "Giới hạn:"
 
 #:../glade/medline.glade.h:5
 msgid ""
@@ -963,8 +988,8 @@ msgstr "Mở tập tin"
 msgid "Previous Documents"
 msgstr "Tài liệu trước"
 
-#:../glade/pyblio.glade.in.h:11
 # Name: don't translate / Tên: đừng dịch
+#:../glade/pyblio.glade.in.h:11
 msgid "Pybliographer"
 msgstr "Pybliographer"
 
@@ -1057,8 +1082,8 @@ msgid ""
 "\thelp     to get some help\n"
 "\tquit     to quit\n"
 msgstr "Lếnh hữu dụng:\n"
-"	help		xem _trợ giúp_\n"
-"	quit		_thoát_\n"
+"\thelp\t\txem _trợ giúp_\n"
+"\tquit\t\t_thoát_\n"
 
 #.save history
 #:../pybliographic.desktop.in.h:1
@@ -1222,7 +1247,8 @@ msgstr "chưa định nghĩa kiểu dáng"
 
 #:../scripts/pybtext.py:41
 msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
-msgstr "cách sử dụng: pybtext [-o tập_tin_xuất] [-s kiểu_dáng] <tập_tin_văn_bản> <các_tập_tin_bib...>"
+msgstr "cách sử dụng: pybtext [-o tập_tin_xuất] [-s kiểu_dáng] <tập_tin_văn_bản> "
+"<các_tập_tin_bib...>"
 
 #:../scripts/pybtext.py:45
 #,python-format
