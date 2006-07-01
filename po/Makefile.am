@@ -37,7 +37,6 @@ LANGUAGES = 		\
 	nb		\
 	ne		\
 	nl		\
-	no 		\
 	pa		\
 	pt_BR 		\
 	pt		\
