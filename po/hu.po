@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-11 09:52+0200\n"
-"PO-Revision-Date: 2005-10-11 10:58+0100\n"
+"POT-Creation-Date: 2006-06-30 14:58+0200\n"
+"PO-Revision-Date: 2006-06-30 15:23+0100\n"
 "Last-Translator: Zoltan Kota <kota@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -136,87 +136,107 @@ msgid "Value:"
 msgstr "Érték:"
 
 #. id     stock            label         accel   tooltip   callback
-#: Pyblio/GnomeUI/Document.py:144
+#: Pyblio/GnomeUI/Document.py:145
 msgid "_File"
 msgstr "_Fájl"
 
-#: Pyblio/GnomeUI/Document.py:145
-#: Pyblio/GnomeUI/Document.py:194
+#: Pyblio/GnomeUI/Document.py:146
+#: Pyblio/GnomeUI/Document.py:195
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: Pyblio/GnomeUI/Document.py:146
+#: Pyblio/GnomeUI/Document.py:147
 msgid "_View"
 msgstr "_Nézet"
 
-#: Pyblio/GnomeUI/Document.py:147
+#: Pyblio/GnomeUI/Document.py:148
 msgid "_Cite"
 msgstr "_Idézés"
 
-#: Pyblio/GnomeUI/Document.py:148
+#: Pyblio/GnomeUI/Document.py:149
 msgid "_Settings"
 msgstr "_Beállítások"
 
-#: Pyblio/GnomeUI/Document.py:149
+#: Pyblio/GnomeUI/Document.py:150
 msgid "_Help"
 msgstr "_Súgó"
 
-#: Pyblio/GnomeUI/Document.py:150
+#: Pyblio/GnomeUI/Document.py:151
 msgid "Recent documents"
 msgstr "Előző dokumentumok"
 
 #: Pyblio/GnomeUI/Document.py:154
+msgid "Open a file"
+msgstr "Fájl megnyitása"
+
+#: Pyblio/GnomeUI/Document.py:155
 msgid "Open _Location"
 msgstr "_Hely megnyitása"
 
-#: Pyblio/GnomeUI/Document.py:160
+#: Pyblio/GnomeUI/Document.py:156
+msgid "Save the current file"
+msgstr "Aktuális fájl mentése"
+
+#: Pyblio/GnomeUI/Document.py:161
 #: glade/pyblio.glade.in.h:8
 msgid "Merge With..."
 msgstr "Hozzáfűzés..."
 
-#: Pyblio/GnomeUI/Document.py:161
+#: Pyblio/GnomeUI/Document.py:162
 #: glade/pyblio.glade.in.h:7
 msgid "Medline Query..."
 msgstr "Medline keresés..."
 
-#: Pyblio/GnomeUI/Document.py:173
+#: Pyblio/GnomeUI/Document.py:170
+msgid "Add a new entry"
+msgstr "Új bejegyzés hozzáadása"
+
+#: Pyblio/GnomeUI/Document.py:174
 #: glade/pyblio.glade.in.h:12
 msgid "S_ort..."
 msgstr "_Rendezés..."
 
-#: Pyblio/GnomeUI/Document.py:174
+#: Pyblio/GnomeUI/Document.py:175
 #: glade/pyblio.glade.in.h:2
 msgid "Cite..."
 msgstr "Idézés..."
 
 #: Pyblio/GnomeUI/Document.py:175
+msgid "Cite key(s)"
+msgstr "Kulcs(ok) idézése"
+
+#: Pyblio/GnomeUI/Document.py:176
 #: glade/pyblio.glade.in.h:6
 msgid "Format..."
 msgstr "Formázás..."
 
-#: Pyblio/GnomeUI/Document.py:177
+#: Pyblio/GnomeUI/Document.py:178
 #: glade/pyblio.glade.in.h:4
 msgid "Fields..."
 msgstr "Mezők..."
 
-#: Pyblio/GnomeUI/Document.py:179
+#: Pyblio/GnomeUI/Document.py:180
 #: glade/pyblio.glade.in.h:5
 msgid "Forget all changes"
 msgstr "Felejtsen el minden változást"
 
-#: Pyblio/GnomeUI/Document.py:182
+#: Pyblio/GnomeUI/Document.py:183
 msgid "_Resource"
 msgstr "_Erőforrás"
 
-#: Pyblio/GnomeUI/Document.py:193
+#: Pyblio/GnomeUI/Document.py:194
 msgid "_About"
 msgstr "_Névjegy"
 
-#: Pyblio/GnomeUI/Document.py:294
+#: Pyblio/GnomeUI/Document.py:243
+msgid "Quick search"
+msgstr "Gyorskeresés"
+
+#: Pyblio/GnomeUI/Document.py:317
 msgid "Unnamed bibliographic database"
 msgstr "Névtelen bibliográfiai adatbázis"
 
-#: Pyblio/GnomeUI/Document.py:377
+#: Pyblio/GnomeUI/Document.py:400
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -225,7 +245,7 @@ msgstr ""
 "nem lehet írásra megnyitni a(z) `%s' fájlt:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:398
+#: Pyblio/GnomeUI/Document.py:421
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -234,44 +254,44 @@ msgstr ""
 "Hiba `%s' elemzése során:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:414
+#: Pyblio/GnomeUI/Document.py:437
 msgid "New database"
 msgstr "Új adatbázis"
 
-#: Pyblio/GnomeUI/Document.py:422
-#: Pyblio/GnomeUI/Document.py:426
+#: Pyblio/GnomeUI/Document.py:445
+#: Pyblio/GnomeUI/Document.py:449
 msgid "[no entry]"
 msgstr "[nincs bejegyzés]"
 
-#: Pyblio/GnomeUI/Document.py:423
+#: Pyblio/GnomeUI/Document.py:446
 msgid "[1 entry]"
 msgstr "[1 bejegyzés]"
 
-#: Pyblio/GnomeUI/Document.py:424
+#: Pyblio/GnomeUI/Document.py:447
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d bejegyzés]"
 
-#: Pyblio/GnomeUI/Document.py:427
+#: Pyblio/GnomeUI/Document.py:450
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 bejegyzés]"
 
-#: Pyblio/GnomeUI/Document.py:428
+#: Pyblio/GnomeUI/Document.py:451
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d bejegyzés]"
 
-#: Pyblio/GnomeUI/Document.py:433
+#: Pyblio/GnomeUI/Document.py:456
 msgid "[modified]"
 msgstr "[módosítva]"
 
-#: Pyblio/GnomeUI/Document.py:436
+#: Pyblio/GnomeUI/Document.py:459
 #, python-format
 msgid "view limited to: %s"
 msgstr "megjelenítési limit: %s"
 
-#: Pyblio/GnomeUI/Document.py:449
+#: Pyblio/GnomeUI/Document.py:472
 msgid ""
 "The database has been modified.\n"
 "Discard changes?"
@@ -279,7 +299,7 @@ msgstr ""
 "Az adatbázis módosítva lett.\n"
 "Eldobja a változásokat?"
 
-#: Pyblio/GnomeUI/Document.py:453
+#: Pyblio/GnomeUI/Document.py:476
 msgid ""
 "The database has been modified.\n"
 "Save changes?"
@@ -287,7 +307,7 @@ msgstr ""
 "Az adatbázis módosítva lett.\n"
 "Elmenti a változásokat?"
 
-#: Pyblio/GnomeUI/Document.py:470
+#: Pyblio/GnomeUI/Document.py:493
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -296,30 +316,30 @@ msgstr ""
 "Felülírja a változásokat?"
 
 #. no result.
-#: Pyblio/GnomeUI/Document.py:495
+#: Pyblio/GnomeUI/Document.py:518
 msgid "Your query returned no result"
 msgstr "A keresés eredménytelen volt"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:505
+#: Pyblio/GnomeUI/Document.py:528
 msgid "Merge file"
 msgstr "Fájl hozzáfűzése"
 
-#: Pyblio/GnomeUI/Document.py:517
-#: Pyblio/GnomeUI/Document.py:603
+#: Pyblio/GnomeUI/Document.py:540
+#: Pyblio/GnomeUI/Document.py:626
 msgid "Open error"
 msgstr "Megnyitási hiba"
 
-#: Pyblio/GnomeUI/Document.py:541
+#: Pyblio/GnomeUI/Document.py:564
 msgid "Merge status"
 msgstr "Hozzáfűzés állapota"
 
 #. get a new file name
-#: Pyblio/GnomeUI/Document.py:552
+#: Pyblio/GnomeUI/Document.py:575
 msgid "Open file"
 msgstr "Fájl megnyitása"
 
-#: Pyblio/GnomeUI/Document.py:590
+#: Pyblio/GnomeUI/Document.py:613
 msgid ""
 "An autosave file was found which is newer than the original file.\n"
 "Do you want to restore it?"
@@ -327,9 +347,9 @@ msgstr ""
 "A megnyitandó fájlnál egy újabb, automatikusan elmentett biztonsági fájlt találtam.\n"
 "Kívánja visszaállítani?"
 
-#: Pyblio/GnomeUI/Document.py:624
-#: Pyblio/GnomeUI/Document.py:765
-#: Pyblio/GnomeUI/Document.py:825
+#: Pyblio/GnomeUI/Document.py:647
+#: Pyblio/GnomeUI/Document.py:788
+#: Pyblio/GnomeUI/Document.py:848
 #, python-format
 msgid ""
 "Unable to remove autosave file `%s':\n"
@@ -338,7 +358,7 @@ msgstr ""
 "Nem lehet a(z) `%s' fájlt eltávolítani:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:675
+#: Pyblio/GnomeUI/Document.py:698
 #, python-format
 msgid ""
 "Error during autosaving:\n"
@@ -347,7 +367,7 @@ msgstr ""
 "Hiba az automatikus mentés során:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:703
+#: Pyblio/GnomeUI/Document.py:726
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -356,7 +376,7 @@ msgstr ""
 "Nem lehet `%s'-t menteni:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:711
+#: Pyblio/GnomeUI/Document.py:734
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -364,11 +384,11 @@ msgstr ""
 "Belső hiba történt a mentés során\n"
 "Próbálja más néven: Mentés másként..."
 
-#: Pyblio/GnomeUI/Document.py:726
+#: Pyblio/GnomeUI/Document.py:749
 msgid "Save As..."
 msgstr "Mentés másként..."
 
-#: Pyblio/GnomeUI/Document.py:732
+#: Pyblio/GnomeUI/Document.py:755
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -377,7 +397,7 @@ msgstr ""
 "A(z) `%s' fájl már létezik.\n"
 "Felülírja?"
 
-#: Pyblio/GnomeUI/Document.py:739
+#: Pyblio/GnomeUI/Document.py:762
 #, python-format
 msgid ""
 "During opening:\n"
@@ -386,11 +406,11 @@ msgstr ""
 "A megnyitás során:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:777
+#: Pyblio/GnomeUI/Document.py:800
 msgid "Reopen error"
 msgstr "Megnyitási hiba"
 
-#: Pyblio/GnomeUI/Document.py:850
+#: Pyblio/GnomeUI/Document.py:873
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -399,31 +419,39 @@ msgstr ""
 "`%s' néven már létezik egy bejegyzés.\n"
 "Akarja, hogy átnevezzük és hozzáadjuk?"
 
-#: Pyblio/GnomeUI/Document.py:887
+#: Pyblio/GnomeUI/Document.py:910
 msgid "Really remove all the entries ?"
 msgstr "Valóban törölni akarja az összes bejegyzést?"
 
-#: Pyblio/GnomeUI/Document.py:907
+#: Pyblio/GnomeUI/Document.py:930
 msgid "Create new entry"
 msgstr "Új bejegyzés"
 
-#: Pyblio/GnomeUI/Document.py:921
+#: Pyblio/GnomeUI/Document.py:944
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Valóban szerkeszteni akarja a(z) %d bejegyzéseket?"
 
-#: Pyblio/GnomeUI/Document.py:967
+#: Pyblio/GnomeUI/Document.py:990
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "%d bejegyzés törlése?"
 
-#: Pyblio/GnomeUI/Document.py:969
+#: Pyblio/GnomeUI/Document.py:992
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "`%s' bejegyzés törlése?"
 
-#: Pyblio/GnomeUI/Document.py:1056
-#: Pyblio/GnomeUI/Document.py:1064
+#: Pyblio/GnomeUI/Document.py:1011
+msgid ""
+"your search text must contain\n"
+"latin-1 characters only"
+msgstr ""
+"A keresési kulcsszavak csak latin-1\n"
+"karaktereket tartalmazhatnak"
+
+#: Pyblio/GnomeUI/Document.py:1090
+#: Pyblio/GnomeUI/Document.py:1098
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -432,7 +460,7 @@ msgstr ""
 "Nem lehet kapcsolódni a LyX-hez:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:1178
+#: Pyblio/GnomeUI/Document.py:1213
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -441,19 +469,19 @@ msgstr ""
 "Nem lehet megjeleníteni a dokumentációt:\n"
 "%s"
 
-#: Pyblio/GnomeUI/Document.py:1186
+#: Pyblio/GnomeUI/Document.py:1221
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "Ez a program a GNU GPL-nek megfelelő szerzői joggal védett"
 
-#: Pyblio/GnomeUI/Document.py:1187
+#: Pyblio/GnomeUI/Document.py:1222
 msgid "Gnome interface to the Pybliographer system."
 msgstr "Gnome-felület a Pybliographer-hez."
 
-#: Pyblio/GnomeUI/Document.py:1198
+#: Pyblio/GnomeUI/Document.py:1233
 msgid "Gnome Translation Team"
 msgstr "Gnome-fordító csapat"
 
-#: Pyblio/GnomeUI/Document.py:1203
+#: Pyblio/GnomeUI/Document.py:1238
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer honlapja"
 
@@ -750,7 +778,7 @@ msgstr "Nem tudom hogy nyissam meg a(z) `%s'-t"
 msgid "method `%s' provides no iterator"
 msgstr "`%s' módszer nem biztosít iterátort"
 
-#: Pyblio/Resource.py:80
+#: Pyblio/Resource.py:77
 #, python-format
 msgid ""
 "Warning: This URL is marked as Invalid or Approximate: %s\n"
@@ -759,16 +787,16 @@ msgstr ""
 "Figyelmeztetés: Ez az URL érvénytelennek vagy közelítőnek van megjelölve: %s\n"
 "Folytatja?"
 
-#: Pyblio/Resource.py:84
+#: Pyblio/Resource.py:81
 msgid "Determining Mime Type ... "
 msgstr "MIME-típus meghatározása ..."
 
-#: Pyblio/Resource.py:89
+#: Pyblio/Resource.py:86
 #, python-format
 msgid "Cannot determine mime type for item %s "
 msgstr "%s elem: nem sikerült meghatározni a MIME-típust"
 
-#: Pyblio/Resource.py:90
+#: Pyblio/Resource.py:87
 #, python-format
 msgid ""
 "URL in question is: %s\n"
@@ -779,16 +807,16 @@ msgstr ""
 "Ellenőrizze nem hibás-e az url vagy elérési út.\n"
 "Részletek: %s"
 
-#: Pyblio/Resource.py:101
+#: Pyblio/Resource.py:98
 msgid "Accessing resource ..."
 msgstr "Erőforrás hozzáférése ..."
 
-#: Pyblio/Resource.py:119
+#: Pyblio/Resource.py:116
 #, python-format
 msgid "IOError for item %s: cannot uncompress resource."
 msgstr "I/O hiba a(z) %s elem esetén: nem lehet kitömöríteni az erőforrást."
 
-#: Pyblio/Resource.py:120
+#: Pyblio/Resource.py:117
 #, python-format
 msgid ""
 "URL: %s\n"
@@ -797,15 +825,15 @@ msgstr ""
 "URL: %s\n"
 "Részletek: %s"
 
-#: Pyblio/Resource.py:140
+#: Pyblio/Resource.py:137
 msgid "Starting application ..."
 msgstr "Alkalmazás indítása ..."
 
-#: Pyblio/Resource.py:143
+#: Pyblio/Resource.py:140
 msgid "No application to view resource"
 msgstr "Nincs alkalmazás az erőforrás megtekintéséhez"
 
-#: Pyblio/Resource.py:144
+#: Pyblio/Resource.py:141
 #, python-format
 msgid ""
 "For mime type %s, no entry found in \n"
