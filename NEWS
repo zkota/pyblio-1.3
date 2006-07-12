@@ -1,5 +1,15 @@
 -*- text -*-
 
+New in 1.2.9 - 2006-07-11
+
+       * Toolbar search widget (Frédéric)
+       * Improved tooltips (Zoltán)
+       * Improved latex aux file parsing (Frédéric)
+       * Fixed bugs related to unicode search queries and 
+         bibtex keys (Frédéric)
+       * Updated translations (Gnome I18n team)
+
+
 New in 1.2.8 - 2006-01-20
 
        * setup-check.py fixed (Zoltán)

@@ -160,9 +160,9 @@
   <sect1 id="gui-searching">
     <title>Searching</title>
     
-    <para>&Pyc; offers  a quite powerful searching  mechanism. To open
-      the search dialog, click on the <guibutton>Find</guibutton> toolbar
-      button or on <menuchoice> <guimenu>Edit</guimenu>
+    <para>&Pyc; offers  a quite powerful searching  mechanism. For searching 
+      you can use the quick search entry of the toolbar or the search dialog. 
+      To open the search dialog, click on <menuchoice> <guimenu>Edit</guimenu>
       <guimenuitem>Search</guimenuitem> </menuchoice> in the menu.
 
       The  dialog   that  appears  (see   <xref  linkend="figsearch" />)

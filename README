@@ -53,4 +53,4 @@ If the configure script reports the following errors:
  ** "broken recode version"
 
    Your recode package does not behave properly.  Consult
-   http://pybliographer.org/help/recode for more information.
+   http://pybliographer.org/RecodeHelp for more information.

@@ -7,7 +7,7 @@
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
 <!ENTITY Pyc "Pybliographic">
-<!ENTITY appversion "1.2.8">
+<!ENTITY appversion "1.2.9">
 <!ENTITY manrevision "2.6">
 <!ENTITY date "January 2006">
 <!ENTITY app "Pybliographer">
@@ -128,7 +128,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; 
       application or this manual, follow the directions in the  
-      <ulink type="http" url="http://www.pybliographer.org/help">
+      <ulink type="http" url="http://www.pybliographer.org/Help">
       Pybliographer help page</ulink>.
       </para>
 <!-- Translators may also add here feedback address for translations -->

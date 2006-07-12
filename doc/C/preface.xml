@@ -83,11 +83,26 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>Direct save</term>
+            <term>Toolbar search</term>
             <listitem>
               <para>
-                An alternative saving method has been added. It doesn't break
-                links. This option can be switched on in Preferences.
+                A toolbar search widget has been implemented.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>New tooltips</term>
+            <listitem>
+              <para>
+                Added some new GUI tooltips.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Latex</term>
+            <listitem>
+              <para>
+                Improved latex aux file parsing.
               </para>
             </listitem>
           </varlistentry>
@@ -95,8 +110,8 @@
             <term>Bugfixes</term>
             <listitem>
               <para>
-                Many bugs are fixed. These are related to installation, 
-                error reporting/dialogs, and Save As.
+                Bugs related to unicode search queries and bibtex keys 
+                are fixed.
               </para>
             </listitem>
           </varlistentry>
