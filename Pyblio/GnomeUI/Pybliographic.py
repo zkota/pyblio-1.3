@@ -56,6 +56,7 @@ class Pybliographic:
 
         # register several callbacks
         doc.Subscribe ('new-document',     self.new_document)
+        doc.Subscribe ('open-in-new',      self.open_document)
         doc.Subscribe ('open-document',    self.cb_open_document)
         doc.Subscribe ('close-document',   self.close_document)
         doc.Subscribe ('exit-application', self.exit_application)
@@ -93,10 +94,10 @@ class Pybliographic:
         return
 
     
-    def open_document (self, url, how = None):
+    def open_document (self, url, how = None, no_name=False):
         doc = self.new_document ()
-        doc.open_document (url, how)
-        
+        doc.open_document(url, how, no_name)
+            
         return doc
 
     

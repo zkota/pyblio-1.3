@@ -502,11 +502,15 @@ class Document (Connector.Publisher):
         self.issue ('new-document', self)
         return
 
+    def open_in_new(self, url, how=None, no_name=False):
+        ''' open a document in a new window '''
+        
+        self.issue('open-in-new', url, how, no_name)
+        return
+
 
     def query_database (self, * arg):
         ''' callback corresponding to the "Medline Query..." button '''
-
-        if not self.confirm (): return
 
         data = MedlineUI (self.w).run ()
         if data is None: return
@@ -518,7 +522,7 @@ class Document (Connector.Publisher):
             self.w.error (_("Your query returned no result"))
             return
         
-        self.open_document (url, 'medline', no_name = True)
+        self.open_in_new(url, 'medline', no_name=True)
         return
 
 
