@@ -355,7 +355,10 @@
       the result,  as they will be  quoted by the  system.  For fields
       requiring  names (like  author  and editor),  use the  following
       format:  type one  name per  line, in  the  <emphasis>last name,
-      lineage, first name</emphasis> order.</para>
+      lineage, first name</emphasis> order. If an author or editor field
+      has too many names, you can end the list of names with <emphasis>
+      others</emphasis>; the standard bibtex styles convert this to 
+      <emphasis>et al</emphasis>.</para>
     <para>In addition to the standard fields, you can create your 
      own fields using the <guibutton>Create Field</guibutton> button.
     </para>
