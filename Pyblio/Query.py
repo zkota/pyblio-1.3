@@ -26,7 +26,7 @@ This code has been contributed by: John Vu <jvu001@umaryland.edu>
 """
 
 # The time module is added for querying date ranges of publications
-import urllib, sys, re, string, time
+import urllib, urllib2, sys, re, string, time, tempfile, os
 
 query_url = 'http://www.ncbi.nlm.nih.gov/entrez/utils/pmqty.fcgi'
 fetch_url = 'http://www.ncbi.nlm.nih.gov/entrez/utils/pmfetch.fcgi'
@@ -53,7 +53,7 @@ def query_info (searchterm, field, displaynum, displaystart, edate):
             'dispstart' : displaystart - 1
             })
 
-    f = urllib.urlopen ("%s?%s" % (query_url, params))
+    f = urllib2.urlopen("%s?%s" % (query_url, params))
     uids = []
     in_body = 0
     uid_re = re.compile (r'^([\d]+)<br>')
@@ -269,7 +269,13 @@ def medline_query (keyword,maxcount,displaystart,field,abstract,epubahead,pubtyp
 
     url = "%s?%s&id=%s" % (fetch_url, params, str(uids))
 
-    file, data = urllib.urlretrieve (url)
-    
-    return file
+    content = urllib2.urlopen(url)
+    fd, fn = tempfile.mkstemp('.medline', 'pyblio-')
+    while 1:
+        data = content.read(8192)
+        if not data:
+            break
+        os.write(fd, data)
+    os.close(fd)
 
+    return fn

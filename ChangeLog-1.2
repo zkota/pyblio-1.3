@@ -2,6 +2,21 @@
 # arch-tag: automatic-ChangeLog--gobry@pybliographer.org--public/pybliographer--stable--1.2
 #
 
+2007-01-11 13:12:21 GMT	Frederic Gobry <gobry@puck.ch>	patch-248
+
+    Summary:
+      use urllib2 to fetch Medline results
+    Revision:
+      pybliographer--stable--1.2--patch-248
+
+    urllib2 supposedly supports proxies with authentification. The current code leaks a temporary file
+    for every query.
+    
+
+    modified files:
+     ChangeLog-1.2 Pyblio/Query.py
+
+
 2007-01-10 22:21:21 GMT	Frederic Gobry <frederic.gobry@epfl.ch>	patch-247
 
     Summary:
