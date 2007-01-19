@@ -83,35 +83,10 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>Toolbar search</term>
+            <term>Medline query</term>
             <listitem>
               <para>
-                A toolbar search widget has been implemented.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>New tooltips</term>
-            <listitem>
-              <para>
-                Added some new GUI tooltips.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Latex</term>
-            <listitem>
-              <para>
-                Improved latex aux file parsing.
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>Bugfixes</term>
-            <listitem>
-              <para>
-                Bugs related to unicode search queries and bibtex keys 
-                are fixed.
+                Improvements and fixes of Medline query.
               </para>
             </listitem>
           </varlistentry>

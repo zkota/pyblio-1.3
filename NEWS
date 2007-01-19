@@ -1,5 +1,13 @@
 -*- text -*-
 
+New in 1.2.10 - 2007-01-18
+
+       * Open medline queries in a new window (Frédéric)
+       * Better proxy support for medline query (Frédéric)
+       * Minor documentation update (Zoltán)
+       * Updated translations (Gnome I18n team)
+
+
 New in 1.2.9 - 2006-07-11
 
        * Toolbar search widget (Frédéric)
