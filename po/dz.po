@@ -1,0 +1,1377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pybliographer.v_1_0_x.pot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-10 03:26+0000\n"
+"PO-Revision-Date: 2007-01-17 10:29+0530\n"
+"Last-Translator: sonam pelden <sonaa_peldn@yahoo.com>\n"
+"Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1)\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: Bhutan\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../Pyblio/Autoload.py:78
+#, python-format
+msgid "warning: can't import %s: %s"
+msgstr "ཉེན་བརྡ: %s ནང་འདྲེན་འབད་མི་ཚུགས: %s  "
+
+#: ../Pyblio/Config.py:52
+#, python-format
+msgid "value of `%s' should be of type %s"
+msgstr " `%s' གི་གནས་གོང་འདི་  %s དབྱེ་བ་བཟུམ་དགོཔ་ཨིན་"
+
+#: ../Pyblio/Config.py:212
+msgid "String"
+msgstr "ཡིག་རྒྱུན་"
+
+#: ../Pyblio/Config.py:221
+msgid "Boolean"
+msgstr "བུ་ལིན་"
+
+#: ../Pyblio/Config.py:240
+msgid "Integer"
+msgstr "ཧྲིལ་གྲངས་"
+
+#: ../Pyblio/Config.py:242
+#, python-format
+msgid "Integer under %d"
+msgstr "%d གི་འོག་ལུ་ཧྲིལ་གྲངས་"
+
+#: ../Pyblio/Config.py:244
+#, python-format
+msgid "Integer over %d"
+msgstr " %d གུ་ཧྲིལ་གྲངས་"
+
+#: ../Pyblio/Config.py:246
+#, python-format
+msgid "Integer between %d and %d"
+msgstr "%d དང་ %d གི་བར་ན་ཧྲིལ་གྲངས་"
+
+#: ../Pyblio/Config.py:258
+#, python-format
+msgid "Element in `%s'"
+msgstr "`%s' ནང་ཆ་ཤས་"
+
+#: ../Pyblio/Config.py:278
+#, python-format
+msgid "Tuple (%s)"
+msgstr "ཊུ་པཱལ་ (%s)"
+
+#: ../Pyblio/Config.py:299
+#, python-format
+msgid "List (%s)"
+msgstr "ཐོ་ཡིག་ (%s)"
+
+#: ../Pyblio/Config.py:324
+#, python-format
+msgid "Dictionary (%s, %s)"
+msgstr "ཚིག་མཛོད་ (%s, %s)"
+
+#: ../Pyblio/Fields.py:261
+msgid "Illegal year value"
+msgstr "ཁྲིམས་འགལ་ལོའི་གནས་གོང་"
+
+#: ../Pyblio/Fields.py:265
+msgid "Illegal month value"
+msgstr "ཁྲིམས་འགལ་ཟླཝ་གི་གནས་གོང་"
+
+#: ../Pyblio/Fields.py:269
+msgid "Illegal day value"
+msgstr "ཁྲིམས་འགལ་ཉིནམ་གྱི་གནས་གོང་"
+
+#: ../Pyblio/Fields.py:510
+#, python-format
+msgid "in %s"
+msgstr "%s ནང་"
+
+#: ../Pyblio/Format/BibTeX.py:385
+#: ../Pyblio/Format/BibTeX.py:443
+#, python-format
+msgid "key `%s' is malformed"
+msgstr "ལྡེ་མིག་ `%s' འདི་བཟོ་ཉེས་གྱུར་བའི་"
+
+#: ../Pyblio/Format/BibTeX.py:406
+#: ../Pyblio/Format/BibTeX.py:427
+#, python-format
+msgid "%s:%d: key `%s' already defined"
+msgstr "%s:%d: ལྡེ་མིག་ `%s' འདི་ཧེ་མ་ལས་རང་ངོས་འཛིན་འབད་ཡོདཔ་"
+
+#: ../Pyblio/GnomeUI/Config.py:147
+#: ../Pyblio/GnomeUI/Fields.py:417
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+"བསྒྱུར་བཅོས་ལ་ལོ་ཅིག་ལུ་  པིབ་ལིའོ་གར་ཕིཀ་ལོག་འགོ་བཙུགས་དགོཔ་ཨིན་\n"
+"ནོར་བ་མེདཔ་སྦེ་རྩིས་ཐོའི་ནང་འབག་ནིའི་དོན་ལུ་ཨིན།"
+
+#: ../Pyblio/GnomeUI/Config.py:429
+msgid "Add"
+msgstr "ཁ་སྐོང་བརྐྱབ་"
+
+#: ../Pyblio/GnomeUI/Config.py:432
+msgid "Update"
+msgstr "དུས་མཐུན་བཟོ་"
+
+#: ../Pyblio/GnomeUI/Config.py:435
+#: ../Pyblio/GnomeUI/Config.py:549
+msgid "Remove"
+msgstr "རྩ་བསྐྲད་གཏང་"
+
+#: ../Pyblio/GnomeUI/Config.py:546
+msgid "Set"
+msgstr "གཞི་སྒྲིག་འབད་"
+
+#: ../Pyblio/GnomeUI/Config.py:561
+msgid "Key:"
+msgstr "ལྡེ་མིག:"
+
+#: ../Pyblio/GnomeUI/Config.py:563
+msgid "Value:"
+msgstr "གནས་གོང་:"
+
+#. id     stock            label         accel   tooltip   callback
+#: ../Pyblio/GnomeUI/Document.py:145
+msgid "_File"
+msgstr "ཡིག་སྣོད། (_F)"
+
+#: ../Pyblio/GnomeUI/Document.py:146
+#: ../Pyblio/GnomeUI/Document.py:195
+msgid "_Edit"
+msgstr "ཞུན་དག་འབད། (_E)"
+
+#: ../Pyblio/GnomeUI/Document.py:147
+msgid "_View"
+msgstr "མཐོང་སྣང་། (_V)"
+
+#: ../Pyblio/GnomeUI/Document.py:148
+msgid "_Cite"
+msgstr "བརྗོད་པ། (_C)"
+
+#: ../Pyblio/GnomeUI/Document.py:149
+msgid "_Settings"
+msgstr "སྒྲིག་སྟངས་ཚུ། (_S)"
+
+#: ../Pyblio/GnomeUI/Document.py:150
+msgid "_Help"
+msgstr "གྲོགས་རམ། (_H)"
+
+#: ../Pyblio/GnomeUI/Document.py:151
+msgid "Recent documents"
+msgstr "འཕྲལ་གྱི་ཡིག་ཆ་ཚུ་"
+
+#: ../Pyblio/GnomeUI/Document.py:154
+msgid "Open a file"
+msgstr "ཡིག་སྣོད་ཅིག་ཁ་ཕྱེ་"
+
+#: ../Pyblio/GnomeUI/Document.py:155
+msgid "Open _Location"
+msgstr "གནས་ཁོངས་ཁ་ཕྱེ། (_L)"
+
+#: ../Pyblio/GnomeUI/Document.py:156
+msgid "Save the current file"
+msgstr "ད་ལྟོའི་ཡིག་སྣོད་འདི་སྲུང་བཞག་འབད་"
+
+#: ../Pyblio/GnomeUI/Document.py:161
+#: ../glade/pyblio.glade.in.h:8
+msgid "Merge With..."
+msgstr "མཉམ་སྡོམས་འབད་ནི..."
+
+#: ../Pyblio/GnomeUI/Document.py:162
+#: ../glade/pyblio.glade.in.h:7
+msgid "Medline Query..."
+msgstr "མིཌི་ལའིན་འདྲི་དཔྱད..."
+
+#: ../Pyblio/GnomeUI/Document.py:170
+msgid "Add a new entry"
+msgstr "ཐོ་བཀོད་གསརཔ་ཅིག་ཁ་སྐོང་བརྐྱབ་"
+
+#: ../Pyblio/GnomeUI/Document.py:174
+#: ../glade/pyblio.glade.in.h:12
+msgid "S_ort..."
+msgstr "དབྱེ་སེལ་འབད... (_o)"
+
+#: ../Pyblio/GnomeUI/Document.py:175
+#: ../glade/pyblio.glade.in.h:2
+msgid "Cite..."
+msgstr "བརྗོད་པ..."
+
+#: ../Pyblio/GnomeUI/Document.py:175
+msgid "Cite key(s)"
+msgstr "བརྗོད་པའི་ལྡེ་མིག་ (s)"
+
+#: ../Pyblio/GnomeUI/Document.py:176
+#: ../glade/pyblio.glade.in.h:6
+msgid "Format..."
+msgstr "རྩ་སྒྲིག..."
+
+#: ../Pyblio/GnomeUI/Document.py:178
+#: ../glade/pyblio.glade.in.h:4
+msgid "Fields..."
+msgstr "ས་སྒོ་ཚུ..."
+
+#: ../Pyblio/GnomeUI/Document.py:180
+#: ../glade/pyblio.glade.in.h:5
+msgid "Forget all changes"
+msgstr "བསྒྱུར་བཅོས་ཚུ་ཆ་མཉམ་བརྗེད་ནི་"
+
+#: ../Pyblio/GnomeUI/Document.py:183
+msgid "_Resource"
+msgstr "ཐོན་ཁུངས། (_R)"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+msgid "_About"
+msgstr "སྐོར་ལས། (_A)"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+msgid "Quick search"
+msgstr "མགྱོགས་པར་འཚོལ་ཞིབ་འབད་"
+
+#: ../Pyblio/GnomeUI/Document.py:317
+msgid "Unnamed bibliographic database"
+msgstr "མིང་མ་བཏགས་པའི་དེབ་ཐོའི་གནས་སྡུད་གཞི་རྟེན་"
+
+#: ../Pyblio/GnomeUI/Document.py:400
+#, python-format
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr ""
+"འབྲི་ནིའི་དོན་ལུ་ ཡིག་སྣོད་ `%s' འདི་ཁ་ཕྱེ་མི་ཚུགས:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:421
+#, python-format
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr ""
+"`%s'མིང་དཔྱད་འབདཝ་ད་གི་འཛོལ་བ:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:437
+msgid "New database"
+msgstr "གནས་སྡུད་གཞི་རྟེན་གསརཔ་"
+
+#: ../Pyblio/GnomeUI/Document.py:445
+#: ../Pyblio/GnomeUI/Document.py:449
+msgid "[no entry]"
+msgstr "[ཐོ་བཀོད་མེད]"
+
+#: ../Pyblio/GnomeUI/Document.py:446
+msgid "[1 entry]"
+msgstr "[ཐོ་བཀོད་ ༡]"
+
+#: ../Pyblio/GnomeUI/Document.py:447
+#, python-format
+msgid "[%d entries]"
+msgstr "[ཐོ་བཀོད་ %d ]"
+
+#: ../Pyblio/GnomeUI/Document.py:450
+#, python-format
+msgid "[%d/1 entry]"
+msgstr "[ཐོ་བཀོད་%d/1]"
+
+#: ../Pyblio/GnomeUI/Document.py:451
+#, python-format
+msgid "[%d/%d entries]"
+msgstr "[ཐོ་བཀོད་%d/%d ]"
+
+#: ../Pyblio/GnomeUI/Document.py:456
+msgid "[modified]"
+msgstr "[ལེགས་བཅོས་འབད་ཡོདཔ་]"
+
+#: ../Pyblio/GnomeUI/Document.py:459
+#, python-format
+msgid "view limited to: %s"
+msgstr "%sལུ་ཚད་ཀྱི་མཐོང་སྣང་:"
+
+#: ../Pyblio/GnomeUI/Document.py:472
+msgid ""
+"The database has been modified.\n"
+"Discard changes?"
+msgstr ""
+"གནས་སྡུད་གཞི་རྟེན་འདི་ལེགས་བཅོས་འབད་ནུག། \n"
+"བསྒྱུར་བཅོས་ཚུ་བཏོན་བཀོག་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:476
+msgid ""
+"The database has been modified.\n"
+"Save changes?"
+msgstr ""
+"གནས་སྡུད་གཞི་རྟེན་འདི་ལེགས་བཅོས་འབད་ནུག། \n"
+"བསྒྱུར་བཅོས་ཚུ་སྲུང་བཞག་འབད་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:493
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+"གནས་སྡུད་གཞི་རྟེན་འདི་ཕྱིའི་ཐོག་ལས་སྦེ་ལེགས་བཅོས་འབད་ནུག། \n"
+"བསྒྱུར་བཅོས་ཚུ་ཚབ་སྲུང་འབད་ག?"
+
+#. no result.
+#: ../Pyblio/GnomeUI/Document.py:522
+msgid "Your query returned no result"
+msgstr "ཁྱོད་རའི་འདྲི་དཔྱད་དེ་གིས་  གྲུབ་འབྲས་སླར་ལོག་མ་འབད་བས་"
+
+#. get a new file name
+#: ../Pyblio/GnomeUI/Document.py:532
+msgid "Merge file"
+msgstr "ཡིག་སྣོད་མཉམ་སྡོམས་འབད་"
+
+#: ../Pyblio/GnomeUI/Document.py:544
+#: ../Pyblio/GnomeUI/Document.py:630
+msgid "Open error"
+msgstr "འཛོལ་བ་ཁ་ཕྱེ་"
+
+#: ../Pyblio/GnomeUI/Document.py:568
+msgid "Merge status"
+msgstr "གནས་ཚད་མཉམ་སྡོམས་འབད་"
+
+#. get a new file name
+#: ../Pyblio/GnomeUI/Document.py:579
+msgid "Open file"
+msgstr "ཡིག་སྣོད་ཁ་ཕྱེ་"
+
+#: ../Pyblio/GnomeUI/Document.py:617
+msgid ""
+"An autosave file was found which is newer than the original file.\n"
+"Do you want to restore it?"
+msgstr ""
+"ཡིག་སྣོད་ངོ་མ་ལས་གསརཔ་ཨིན་པའི་  རང་བཞིན་སྲུང་བཞག་གི་ཡིག་སྣོད་ཅིག་ཐོབ་ཡོད། \n"
+"ཁྱོད་ཀྱིས་སོར་ཆུད་འབད་ནི་ཨིན་ན?"
+
+#: ../Pyblio/GnomeUI/Document.py:651
+#: ../Pyblio/GnomeUI/Document.py:792
+#: ../Pyblio/GnomeUI/Document.py:852
+#, python-format
+msgid ""
+"Unable to remove autosave file `%s':\n"
+"%s"
+msgstr ""
+"རང་བཞིན་སྲུང་བཞག་འབད་ནིའི་ཡིག་སྣོད་ `%s' འདི་རྩ་བསྐྲད་གཏང་མ་ཚུགས: \n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:702
+#, python-format
+msgid ""
+"Error during autosaving:\n"
+"%s"
+msgstr ""
+"རང་བཞིན་སྲུང་བཞག་འབདཝ་ད་གི་འཛོལ་བ:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:730
+#, python-format
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr ""
+"`%s'སྲུང་བཞག་འབད་མ་ཚུགས:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:738
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+"སྲུང་བཞག་འབད་བའི་བསྒང་ ནང་འཁོད་ཀྱི་འཛོལ་བ་བྱུང་ཡོདཔ། \n"
+"སྲུང་ནི་ལུ་འབད་བརྩོལ་བསྐྱེད་ད..."
+
+#: ../Pyblio/GnomeUI/Document.py:753
+msgid "Save As..."
+msgstr "དེ་སྦེ་སྲུང་..."
+
+#: ../Pyblio/GnomeUI/Document.py:759
+#, python-format
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr ""
+"`%s' ཡིག་སྣོད་འདི་ཧེ་མ་ལས་རང་འདུག། \n"
+"ཚབ་སྲུང་འབད་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:766
+#, python-format
+msgid ""
+"During opening:\n"
+"%s"
+msgstr ""
+"ཁ་ཕྱེ་བའི་བསྒང་:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:804
+msgid "Reopen error"
+msgstr "འཛོལ་བ་འདི་ལོག་ཁ་ཕྱེ་"
+
+#: ../Pyblio/GnomeUI/Document.py:877
+#, python-format
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+"`%s' ཟེར་བའི་ཐོ་བཀོད་འདི་ཧེ་མ་ལས་ཡང་འདུག། \n"
+"ག་ལས་སྐོར་རུང་  བསྐྱར་མིང་བཏགས་ནི་དང་ཁ་སྐོང་བརྐྱབ་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:914
+msgid "Really remove all the entries ?"
+msgstr "འཛུལ་ཞུགས་ཚུ་ངོ་མ་འབད་རང་རྩ་བསྐྲད་གཏང་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:934
+msgid "Create new entry"
+msgstr "ཐོ་བཀོད་གསརཔ་གསར་བསྐྲུན་འབད་"
+
+#: ../Pyblio/GnomeUI/Document.py:948
+#, python-format
+msgid "Really edit %d entries ?"
+msgstr "%d འཛུལ་ཞུགས་ཚུ་ངོ་མ་འབད་རང་ཞུན་དག་འབད་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:994
+#, python-format
+msgid "Remove all the %d entries ?"
+msgstr "%d འཛུལ་ཞུགས་ཚུ་ཆ་མཉམ་རྩ་བསྐྲད་གཏང་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:996
+#, python-format
+msgid "Remove entry `%s' ?"
+msgstr "`%s' འཛུལ་ཞུགས་རྩ་བསྐྲད་གཏང་ག?"
+
+#: ../Pyblio/GnomeUI/Document.py:1015
+msgid ""
+"your search text must contain\n"
+"latin-1 characters only"
+msgstr ""
+"ཁྱོད་ཀྱི་འཚོལ་ཞིབ་ཚིག་ཡིག་དེ་གིས་  \n"
+"latin-1ཡིག་འབྲུ་ཚུ་རྐྱངམ་ཅིག་གནས་དགོཔ་ཨིན་"
+
+#: ../Pyblio/GnomeUI/Document.py:1094
+#: ../Pyblio/GnomeUI/Document.py:1102
+#, python-format
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr ""
+" LyXལུ་མཐུད་མ་ཚུགས:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:1217
+#, python-format
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr ""
+"ཡིག་ཐོག་བཀོད་པ་འདི་བཀྲམ་སྟོན་འབད་མ་ཚུགས:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Document.py:1225
+msgid "This program is copyrighted under the GNU GPL"
+msgstr "ལས་རིམ་འདི་  ཇི་ཨེན་ཡུ་  ཇི་པི་ཨེལ་གྱི་འོག་ལུ་ འདྲ་བཤུས་དབང་ཆ་འབད་ནུག་"
+
+#: ../Pyblio/GnomeUI/Document.py:1226
+msgid "Gnome interface to the Pybliographer system."
+msgstr "པིབ་ལིའོ་གར་ཕར་རིམ་ལུགས་ལུ་  ཇི་ནོམ་ནང་འཁོད།"
+
+#: ../Pyblio/GnomeUI/Document.py:1237
+msgid "Gnome Translation Team"
+msgstr "ཇི་ནོམ་སྐད་བསྒྱུར་པའི་རུ་ཚན་"
+
+#: ../Pyblio/GnomeUI/Document.py:1242
+msgid "Pybliographer Home Page"
+msgstr "པིབ་ལིའོ་གར་ཕར་གྱི་ཁྱིམ་གྱི་ཤོག་ལེབ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:35
+msgid "Last Name, First Name"
+msgstr "མཇུག་གི་མིང་ མགོའི་མིང་"
+
+#: ../Pyblio/GnomeUI/Editor.py:36
+#: ../Pyblio/GnomeUI/Editor.py:1327
+#: ../Pyblio/GnomeUI/Fields.py:39
+#: ../glade/config1.glade.h:14
+#: ../glade/fields1.glade.h:19
+msgid "Text"
+msgstr "ཚིག་ཡིག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:133
+#: ../Pyblio/GnomeUI/Editor.py:1010
+msgid "Error in native string parsing"
+msgstr "རང་ཡུལ་ཡིག་རྒྱུན་མིང་དཔྱད་འབད་མི་ནང་འཛོལ་བ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:312
+msgid "Day"
+msgstr "ཉིནམ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:321
+msgid "Month"
+msgstr "ཟླཝ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:330
+msgid "Year"
+msgstr "ལོ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:355
+msgid "Invalid day field in date"
+msgstr "ཚེས་གྲངས་ནང་ནུས་ཅན་མེད་པའི་ཉིནམ་གྱི་ས་་སྒོ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:363
+msgid "Invalid month field in date"
+msgstr "ཚེས་གྲངས་ནང་ཐུས་ཅན་མེད་པའི་ཟླཝ་གི་ས་སྒོ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:371
+msgid "Invalid year field in date"
+msgstr "ཚེས་གྲངས་ནང་  ནུས་ཅན་མེད་པའི་ལོའི་ས་སྒོ་"
+
+#. A delete button
+#: ../Pyblio/GnomeUI/Editor.py:419
+#: ../Pyblio/GnomeUI/Search.py:86
+msgid "Delete"
+msgstr "བཏོན་གཏང་"
+
+#: ../Pyblio/GnomeUI/Editor.py:430
+#: ../Pyblio/GnomeUI/Editor.py:443
+#: ../Pyblio/GnomeUI/Editor.py:446
+msgid "[ Drop an Entry here ]"
+msgstr "[ ཐོ་བཀོད་འདི་ནཱ་ལུ་བཞག་ ]"
+
+#: ../Pyblio/GnomeUI/Editor.py:502
+msgid "Browse..."
+msgstr "བརྡ་འཚོལ་འབད..."
+
+#: ../Pyblio/GnomeUI/Editor.py:525
+msgid "Select file"
+msgstr "ཡིག་སྣོད་སེལ་འཐུ་འབད་"
+
+#: ../Pyblio/GnomeUI/Editor.py:549
+#: ../Pyblio/GnomeUI/Fields.py:236
+#: ../glade/config1.glade.h:8
+#: ../glade/fields1.glade.h:6
+msgid "Entry type"
+msgstr "ཐོ་བཀོད་ཡིག་དཔར་བརྐྱབ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:551
+msgid "Key"
+msgstr "ལྡེ་མིག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:600
+msgid "Create Field"
+msgstr "ས་སྒོ་གསར་བསྐྲུན་འབད་"
+
+#. navigation buttons
+#: ../Pyblio/GnomeUI/Editor.py:605
+msgid "Back"
+msgstr "ལོག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:608
+msgid "Next"
+msgstr "ཤུལ་མ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Fields.py:451
+msgid "Mandatory"
+msgstr "ངེས་མཁོ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Fields.py:452
+msgid "Optional"
+msgstr "གདམ་ཁ་ཅན་"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Editor.py:1242
+msgid "Notes"
+msgstr "དྲན་འཛིན་ཚུ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+msgid "Extra"
+msgstr "ཐེབས་"
+
+#: ../Pyblio/GnomeUI/Editor.py:907
+msgid "Invalid key format"
+msgstr "ནུས་ཅན་མེད་པའི་ལྡེ་མིག་གི་རྩ་སྒྲིག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:915
+#, python-format
+msgid "Key `%s' already exists"
+msgstr "ལྡེ་མིག་`%s'འདི་ ཧེ་མ་ལས་རང་འདུག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:932
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr "`%s' ས་སྒོ་འདི་ལུ་  Latin-1 བརྡ་ཚོན་མ་ཡིན་པ་ཅིག་ཡོད་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1002
+msgid "Your text contains non Latin-1 symbols"
+msgstr "ཁྱོད་ཀྱི་ཚིག་ཡིག་འདི་ལུ་  Latin-1 བརྡ་མཚོན་འདི་ཡོདཔ་ཨིན་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1023
+msgid "Edit entry"
+msgstr "ཐོ་བཀོད་འདི་ཞུན་དག་འབད་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1037
+#: ../Pyblio/GnomeUI/Editor.py:1108
+msgid "Native Editing"
+msgstr "རང་བསྐྱེད་ཞུན་དག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1137
+msgid "Standard Editing"
+msgstr "ཚད་ལྡན་ཞུན་དག་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1264
+msgid "mandatory"
+msgstr "ངེས་མཁོ་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1330
+msgid "Enter text here"
+msgstr "ནཱ་ལུ་ཚིག་ཡིག་ཐོ་བཀོད་འབད་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1382
+msgid "New Annotation Name"
+msgstr "མཆན་འགྲེལ་གསརཔ་གི་མིང་"
+
+#: ../Pyblio/GnomeUI/Editor.py:1388
+msgid "Name of the new annotation:"
+msgstr "མཆན་འགྲེལ་གསརཔ་གི་མིང་:"
+
+#: ../Pyblio/GnomeUI/Entry.py:114
+#, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr ""
+"ཡུ་ཨར་ཨེལ་ཁ་ཕྱེ་མ་ཚུགས:\n"
+"%s"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+msgid "Authors"
+msgstr "རྩོམ་པ་པོ་"
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+msgid "Long Text"
+msgstr "ཚིག་ཡིག་རིངམ་"
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+#: ../glade/config1.glade.h:16
+#: ../glade/fields1.glade.h:21
+msgid "URL"
+msgstr "ཡུ་ཨར་ཨེལ་"
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+msgid "Reference"
+msgstr "གཞི་བསྟུན་"
+
+#: ../Pyblio/GnomeUI/Fields.py:43
+msgid "Date"
+msgstr "ཚེས་གྲངས་"
+
+#: ../Pyblio/GnomeUI/Fields.py:124
+#: ../glade/config1.glade.h:11
+#: ../glade/fields1.glade.h:10
+msgid "Name"
+msgstr "མིང་"
+
+#: ../Pyblio/GnomeUI/Fields.py:127
+#: ../glade/config1.glade.h:15
+#: ../glade/fields1.glade.h:20
+msgid "Type"
+msgstr "དབྱེ་བ་"
+
+#: ../Pyblio/GnomeUI/Fields.py:300
+msgid "Available"
+msgstr "ཐོབ་ཚུགསཔ་"
+
+#: ../Pyblio/GnomeUI/Fields.py:310
+msgid "Associated"
+msgstr "འབྲེལ་བའི་"
+
+#: ../Pyblio/GnomeUI/Fields.py:321
+msgid "Please, select an entry type from previous page."
+msgstr "ཧེ་མའི་ཤོག་ལེབ་ལས་  ཐོ་བཀོད་དབྱེ་བ་ཅིག་སེལ་འཐུ་འབད་གནང་།"
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr "ས་སྒོ་ཚུ་ <b>%s</b> ཐོ་བཀོད་དབྱེ་བ་དང་ཅིག་དང་འབྲེལ་བའི་"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:39
+msgid "File"
+msgstr "ཡིག་སྣོད་"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:76
+#: ../glade/openurl.glade.h:2
+msgid "Bibliography type:"
+msgstr "དེབ་ཐོའི་དབྱེ་བ:"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:93
+#: ../Pyblio/GnomeUI/OpenURL.py:61
+msgid " - According to file suffix - "
+msgstr "-ཡིག་སྣོད་རྗེས་ཚིག་དང་འཁྲིལཝ་ད-"
+
+#. The root of the search tree is the full database
+#: ../Pyblio/GnomeUI/Search.py:71
+msgid "Full database"
+msgstr "གནས་སྡུད་གཞི་རྟེན་ཆ་ཚང་"
+
+#: ../Pyblio/GnomeUI/Search.py:142
+msgid "internal error during evaluation"
+msgstr "ནང་འཁོད་ཀྱི་འཛོལ་བའི་སྐབས་བརྟག་ཞིབ་"
+
+#: ../Pyblio/GnomeUI/Search.py:196
+#, python-format
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"ཕྱོགས་སྒྲིག་འབདཝ་ད %s\n"
+"error: %s"
+
+#. These are additional search fields
+#: ../Pyblio/GnomeUI/Sort.py:97
+msgid "[Entry Type]"
+msgstr "[ཐོ་བཀོད་ཀྱི་དབྱེ་བ]"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+msgid "[Key Value]"
+msgstr "[གནས་གོང་གཙོ་བོ་]"
+
+#: ../Pyblio/GnomeUI/Utils.py:194
+msgid "The following errors occured:\n"
+msgstr "འོག་གི་འཛོལ་བ་ཚུ་བྱུང་ཡོདཔ:\n"
+
+#: ../Pyblio/GnomeUI/__init__.py:45
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr "འདི་ པིབ་ལིའོ་གར་ཕིཀ་ཨིན་%s [Python %s, Gtk %s, PyGTK %s]"
+
+#: ../Pyblio/LyX.py:37
+#, python-format
+msgid "no input pipe `%s'"
+msgstr "ཨིན་པུཊི་རྒྱུད་དུང་ `%s' མེད་"
+
+#: ../Pyblio/LyX.py:43
+#, python-format
+msgid "no output pipe `%s'"
+msgstr "ཨའེཊི་པུཊི་རྒྱུད་དུང་`%s'མེད་"
+
+#: ../Pyblio/Open.py:96
+#, python-format
+msgid "method `%s' provides no opener"
+msgstr "ཐབས་ལམ་ `%s' དེ་གིས་ཁ་ཕྱེ་མི་མི་བྱིན་མས་"
+
+#: ../Pyblio/Open.py:104
+#: ../Pyblio/Open.py:151
+#, python-format
+msgid "File `%s' does not exist"
+msgstr "ཡིག་སྣོད་ `%s' འདི་མེད་"
+
+#: ../Pyblio/Open.py:115
+#: ../Pyblio/Open.py:162
+#, python-format
+msgid "don't know how to open `%s'"
+msgstr "`%s' ག་དེ་སྦེ་ཕྱེ་ནི་ཨིན་ན་མི་ཤེས་བས་"
+
+#: ../Pyblio/Open.py:143
+#, python-format
+msgid "method `%s' provides no iterator"
+msgstr "ཐབས་ལམ་ `%s' དེ་གིས་ཨའི་ཊི་རེ་ཊར་མི་བྱིན་མས་"
+
+#: ../Pyblio/Resource.py:77
+#, python-format
+msgid ""
+"Warning: This URL is marked as Invalid or Approximate: %s\n"
+"Continue?"
+msgstr ""
+"ཉེན་བརྡ: ཡུ་ཨར་ཨེལ་འདི་ནུས་ཅན་མེདཔ་དང་ཧ་ལམ་སྦེ་རྟགས་བཀལ: %s\n"
+"འཕྲོ་མཐུད་ནི་ཨིན་ན?"
+
+#: ../Pyblio/Resource.py:81
+msgid "Determining Mime Type ... "
+msgstr "མ་ཡིམ་དབྱེ་བ་གཏན་འབེབས་བཟོ་དོ..."
+
+#: ../Pyblio/Resource.py:86
+#, python-format
+msgid "Cannot determine mime type for item %s "
+msgstr "རྣམ་གྲངས་ %s གི་དོན་ལུ་  མ་ཡིམ་དབྱེ་བ་གཏན་འབེབས་བཟོ་མ་ཚུགས་"
+
+#: ../Pyblio/Resource.py:87
+#, python-format
+msgid ""
+"URL in question is: %s\n"
+"You should check the url or path given for errors.\n"
+"Details: %s"
+msgstr ""
+"དྲི་བའི་ནང་གི་ཡུ་ཨར་ཨེལ་འདི:  %s\n"
+"འཛོལ་བའི་དོན་ལུ་བྱིན་ཡོད་པའི་  ཡུ་ཨར་ཨེལ་ཡང་ན་འགྲུལ་ལམ་འདི་  ཁྱོད་ཀྱིས་ཞིབ་དཔྱད་འབད་དགོ། \n"
+"རྒྱས་བཤད་ཚུ: %s"
+
+#: ../Pyblio/Resource.py:98
+msgid "Accessing resource ..."
+msgstr "ཐོན་ཁུངས་འཛུལ་སྤྱོད་དོ..."
+
+#: ../Pyblio/Resource.py:116
+#, python-format
+msgid "IOError for item %s: cannot uncompress resource."
+msgstr "%s རྣམ་གྲངས་ཀྱི་དོན་ལུ་ཨའི་ཨོ་འཛོལ་བ: ཐོན་ཁུངས་འདི་ཨེབ་བཙུག་འབད་མི་ཚུགས།"
+
+#: ../Pyblio/Resource.py:117
+#, python-format
+msgid ""
+"URL: %s\n"
+"Details: %s"
+msgstr ""
+"ཡུ་ཨར་ཨེལ: %s\n"
+"རྒྱས་བཤད་ཚུ: %s"
+
+#: ../Pyblio/Resource.py:137
+msgid "Starting application ..."
+msgstr "གློག་རིམ་འགོ་བཙུག་དོ..."
+
+#: ../Pyblio/Resource.py:140
+msgid "No application to view resource"
+msgstr "ཐོན་ཁུངས་སྟོན་ནིའི་དོན་ལུ་  གློག་རིམ་མེད་"
+
+#: ../Pyblio/Resource.py:141
+#, python-format
+msgid ""
+"For mime type %s, no entry found in \n"
+"configuration option resource/viewers.\n"
+"Please consider adding one.\n"
+"URL: %s"
+msgstr ""
+"མ་ཡིམ་དབྱེ་བ་ %sགི་དོན་ལུ་ རིམ་སྒྲིག་གདམ་ཁའི་ཐོན་ཁུངས་/མཐོང་བྱེད་ནང་ \n"
+"ཐོ་བཀོད་མ་ཐོབ།\n"
+"གཅིག་ཁ་སྐོང་བརྐྱབ་ནི་ལུ་ཆ་འཇོག་འབད།\n"
+"ཡུ་ཨར་ཨེལ: %s"
+
+#: ../Pyblio/Style/Parser.py:261
+#, python-format
+msgid "missing '%s' attribute"
+msgstr "'%s' ཁྱད་རྣམ་འདི་བརླག་སྟོར་ཞུགས་ནུག་"
+
+#: ../Pyblio/Style/Parser.py:271
+#, python-format
+msgid "invalid opening tag: %s"
+msgstr "ནུས་ཅན་མེད་པའི་ངོ་རྟགས་ཁ་ཕྱེ་དོ: %s"
+
+#: ../Pyblio/Style/Parser.py:281
+#, python-format
+msgid "invalid closing tag: %s"
+msgstr "ནུས་ཅན་མེད་པའི་ཁ་བསྡམ་པའི་ངོ་རྟགས: %s"
+
+#: ../glade/config1.glade.h:1
+#: ../glade/fields1.glade.h:1
+#: ../glade/medline.glade.h:1
+#: ../glade/openurl.glade.h:1
+#: ../glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: ../glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>ཐོ་བཀོད་ཡིག་དཔར་བརྐྱབ</b>"
+
+#: ../glade/config1.glade.h:3
+msgid "A"
+msgstr "ཨེ་"
+
+#: ../glade/config1.glade.h:4
+#: ../glade/fields1.glade.h:2
+msgid "Association"
+msgstr "ཚོགས་པ་"
+
+#: ../glade/config1.glade.h:5
+#: ../glade/fields1.glade.h:3
+msgid "Datum"
+msgstr "ཌེ་ཊམ་"
+
+#: ../glade/config1.glade.h:6
+#: ../glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "ཞུན་དགཔ་"
+
+#: ../glade/config1.glade.h:7
+#: ../glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "འཛུལ་ཞུགས་"
+
+#: ../glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "FIELDS DEFINITION"
+
+#: ../glade/config1.glade.h:10
+#: ../glade/fields1.glade.h:8
+msgid "Fields "
+msgstr "ས་སྒོ་ཚུ་"
+
+#: ../glade/config1.glade.h:12
+#: ../glade/fields1.glade.h:11
+msgid "Name "
+msgstr "མིང་"
+
+#: ../glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr "པིམ་ལིའོ་གར་ཕར་རིམ་སྒྲིག་"
+
+#: ../glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "ཚད་ལྡན་ཡོད་པའི་ས་སྒོ་ཚུ་"
+
+#: ../glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr "ཐོ་བཀོད་དབྱེ་བ་ཚུ་དང་  ས་སྒོའི་མིང་ཚུ་གི་རིམ་སྒྲིག་"
+
+#: ../glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr "ཐོ་བཀོད་དབྱེ་བའི་དོན་ལུ་<b>Article</b> འཛུལ་ཞུགས་ཀྱི་བརྡ་དོན་"
+
+#: ../glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+"ཐོ་བཀོད་དབྱེ་བ་སེལ་འཐུ་འབད་ནི་དང་ \n"
+"དེ་གི་འབྲེལ་ཡོད་པའི་ (ངེས་མཁོ་དང་\n"
+"གདམ་ཁ་ཅན་) ས་སྒོ་ཚུ་  ཤུལ་མའི་ཤོག་ལེབ་གུ་གསལ་བཀོད་འབད།\n"
+"\n"
+"\n"
+"\n"
+
+#: ../glade/format.glade.h:1
+msgid "Bibliography style:"
+msgstr "དེབ་ཐོའི་བཟོ་རྣམ:"
+
+#: ../glade/format.glade.h:2
+msgid "Format entries"
+msgstr "རྩ་སྒྲིག་གི་འཛུལ་ཞུགས་"
+
+#: ../glade/format.glade.h:3
+msgid "Output file:"
+msgstr "ཨའུཊི་པུཊི་ཡིག་སྣོད:"
+
+#: ../glade/format.glade.h:4
+msgid "Output format:"
+msgstr "ཨའུཊི་པུཊི་རྩ་སྒྲིག:"
+
+#: ../glade/format.glade.h:5
+msgid "Save Formatted as"
+msgstr "རྩ་སྒྲིག་འབད་ཡོདཔ་སྲུང་"
+
+#: ../glade/format.glade.h:6
+msgid "Style Selection"
+msgstr "བཟོ་རྣམ་སེལ་འཐུ་"
+
+#: ../glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr "ཁྱོད་རའི་མིཌི་ལའིན་འདྲི་དཔྱད་འདི་ཐོ་བཀོད་འབད་"
+
+#: ../glade/medline.glade.h:3
+msgid "From:"
+msgstr "རྣམ་པ:"
+
+#: ../glade/medline.glade.h:4
+msgid "Limited to:"
+msgstr "བཅད་མཚམས:"
+
+#: ../glade/medline.glade.h:5
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+"གྲུབ་འབྲས་ཀྱི་\n"
+"ཨང་གྲངས་མང་མཐའ:"
+
+#: ../glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr "མིཌི་ལའིན་འདྲི་དཔྱད་"
+
+#: ../glade/medline.glade.h:8
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+"དཔར་བསྐྲུན་གྱི་ ཧེ་མ་\n"
+"རྣམ་གྲངས་ཚུ་རྐྱངམ་ཅིག་"
+
+#: ../glade/medline.glade.h:10
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+"སྙིང་བཅུད་ཚུ་དང་ཅིག་ཁར་ \n"
+"རྣམ་གྲངས་ཚུ་རྐྱངམ་ཅིག་"
+
+#: ../glade/medline.glade.h:12
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+"པབ་མིཌི་ \n"
+"འཚོལ་ཞིབ་འབད:"
+
+#: ../glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"གྲུབ་འབྲས་ཀྱི་ཨང་གྲངས་ལུ་\n"
+"ཐོ་ཡིག་བརྐྱབ་ནི་འགོ་བཙུག་དོ:"
+
+#: ../glade/medline.glade.h:16
+msgid "To:"
+msgstr "ལུ:"
+
+#: ../glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+"YYYY/MM/DDརྩ་སྒྲིག་འདི་ལག་ལེན་འཐབ\n"
+"ཟླཝ་དང་ཉིནམ་འདི་གདམ་ཁ་ཅན་ཨིན།"
+
+#: ../glade/openurl.glade.h:3
+msgid "Enter the location (URI) of the file you would like to open:"
+msgstr "ཁྱོད་ཀྱིས་ཁ་ཕྱེ་དགོ་མནོ་མི་ཡིག་སྣོད་ཀྱི་  གནས་ཁོངས་ (ཡུ་ཨར་ཨའི་) འདི་ཐོ་བཀོད་འབད:"
+
+#: ../glade/openurl.glade.h:4
+msgid "Open Location"
+msgstr "གནས་ཁོངས་ཁ་ཕྱེ་"
+
+#: ../glade/pyblio.glade.in.h:1
+msgid "Cite"
+msgstr "བརྗོད་པ་"
+
+#: ../glade/pyblio.glade.in.h:3
+msgid "Contents"
+msgstr "ནང་དོན་ཚུ་"
+
+#: ../glade/pyblio.glade.in.h:9
+msgid "Open File"
+msgstr "ཡིག་སྣོད་ཁ་ཕྱེ་"
+
+#: ../glade/pyblio.glade.in.h:10
+msgid "Previous Documents"
+msgstr "ཧེ་མའི་ཡིག་ཆ་ཚུ་"
+
+#: ../glade/pyblio.glade.in.h:11
+msgid "Pybliographer"
+msgstr "པིབ་ལིའོ་གར་ཕར་"
+
+#: ../glade/pyblio.glade.in.h:13
+msgid "Save File"
+msgstr "ཡིག་སྣོད་སྲུང་"
+
+#: ../glade/pyblio.glade.in.h:14
+msgid "Settings"
+msgstr "སྒྲིག་སྟངས་ཚུ་"
+
+#: ../glade/pyblio.glade.in.h:15
+msgid "_Add..."
+msgstr "ཁ་སྐོང་བརྐྱབ... (_A)"
+
+#: ../glade/pyblio.glade.in.h:16
+msgid "_Delete..."
+msgstr "བཏོན་གཏང... (_D)"
+
+#: ../glade/pyblio.glade.in.h:17
+msgid "_Edit..."
+msgstr "ཞུན་དག་འབད... (_E)"
+
+#: ../glade/pyblio.glade.in.h:18
+msgid "_New"
+msgstr "གསརཔ། (_N)"
+
+#: ../glade/search.glade.h:2
+msgid "Close"
+msgstr "ཁ་བསྡམ་"
+
+#: ../glade/search.glade.h:3
+msgid "Expert Search"
+msgstr "མཁས་པའི་འཚོལ་ཞིབ་"
+
+#: ../glade/search.glade.h:4
+msgid "Field"
+msgstr "ས་སྒོ་"
+
+#: ../glade/search.glade.h:5
+msgid "Pattern"
+msgstr "དཔེ་གཞི་"
+
+#: ../glade/search.glade.h:6
+msgid "Query"
+msgstr "འདྲི་དཔྱད་"
+
+#: ../glade/search.glade.h:7
+msgid "Search"
+msgstr "འཚོལ་ཞིབ་འབད་"
+
+#: ../glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "འཚོལ་ཞིབ་འཇམ་སམ་"
+
+#: ../glade/sort.glade.h:1
+msgid "Select sort criterions"
+msgstr "དབྱེ་སེལ་ཚད་གཞི་ཚུ་སེལ་འཐུ་འབད་"
+
+#: ../glade/sort.glade.h:2
+msgid "Set as default"
+msgstr "སྔོན་སྒྲིག་སྦེ་གཞི་སྒྲིག་འབད་"
+
+#: ../pybliographer.py:43
+#, python-format
+msgid "This is %s, version %s"
+msgstr "%s ཐོན་རིམ་ %s ཨིན་"
+
+#: ../pybliographer.py:47
+#: ../pybliographer.py:54
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr "འདི་ ABSOLUTELY NO WARRANTY དང་ཅིག་ཁར་མཉེན་ཆས་སྟོངམ་ཨིན།"
+
+#: ../pybliographer.py:48
+msgid "For details, type `warranty'."
+msgstr "རྒྱས་བཤད་མངམ་གྱི་དོན་ལུ་   `warranty' ཡིག་དཔར་བརྐྱབ།"
+
+#: ../pybliographer.py:111
+#: ../pybliographer.py:163
+#, python-format
+msgid "%s: error: can't open file `%s'"
+msgstr "%s: འཛོལ་བ: `%s'ཡིག་སྣོད་འདི་ཁ་ཕྱེ་མ་ཚུགས"
+
+#: ../pybliographer.py:124
+#, python-format
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "གྲོགས་རམ་གྱི་དོན་ལུ་  %s གཡོག་བཀོལ་ནི་དང་ ནུས་སྤེལ་གྱི་དོན་ལུ་ `help' ཡིག་དཔར་བརྐྱབ་"
+
+#: ../pybliographer.py:133
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+"ཕན་ཐོག་ཅན་གྱི་བརྡ་བཀོད་ཚུ: \n"
+"\thelp    གྲོགས་རམ་ལེན་ནིའི་དོན་ལུ་\n"
+"\tquit    སྤང་ནི་ལུ་\n"
+
+#. save history
+#: ../pybliographic.desktop.in.h:1
+msgid "Bibliography Manager"
+msgstr "དེབ་ཐོའི་འཛིན་སྐྱོང་པ་"
+
+#: ../pybliographic.desktop.in.h:2
+msgid "Manage bibliographic databases"
+msgstr "དེབ་ཐོའི་གནས་སྡུད་གཞི་རྟེན་འདི་འཛིན་སྐྱོང་འཐབ་"
+
+#: ../pybliographic.desktop.in.h:3
+msgid "Pybliographic Bibliography Manager"
+msgstr "པིབ་ལིའོ་གར་ཕིཀ་དེབ་ཐོ་གི་འཛིན་སྐྱོང་པ་"
+
+#: ../scripts/pybcheck.py:31
+msgid "usage: pybcheck <file | directory>..."
+msgstr "བེད་སྤྱོད:པིབ་ཞིབ་དཔྱད་<file | directory>..."
+
+#: ../scripts/pybcheck.py:60
+#, python-format
+msgid "file `%s' is ok [%d entries]"
+msgstr "ཡིག་སྣོད་ `%s' འདི་བཏུབ [%d entries]"
+
+#: ../scripts/pybcompact.py:30
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr "བེད་སྤྱོད: པིབ་སྲབ་ཆུང་<latexfile> <bibtexfiles...>"
+
+#: ../scripts/pybcompact.py:34
+#, python-format
+msgid "pybcompact: error: %s\n"
+msgstr "པིབ་སྲབ་ཆུང་: འཛོལ་བ: %s\n"
+
+#: ../scripts/pybcompact.py:99
+msgid "no entry"
+msgstr "ཐོ་བཀོད་མེད་"
+
+#: ../scripts/pybcompact.py:162
+#: ../scripts/pybtext.py:240
+#, python-format
+msgid "can't find the following entries: %s"
+msgstr "འོག་གི་འཛུལ་ཞུགས་ཚུ་མེད: %s"
+
+#: ../scripts/pybconvert.py:29
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr "བེད་སྤྱོད: པིབ་གཞི་བསྒྱུར་ <source>..<target> <input> [output]"
+
+#: ../scripts/pybconvert.py:38
+msgid "pybconvert: error: bad conversion format"
+msgstr "པིབ་གཞི་བསྒྱུར: འཛོལ་བ: གཞི་བསྒྱུར་རྩ་སྒྲིག་བྱག་ཉེས་"
+
+#: ../scripts/pybformat.py:34
+msgid ""
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
+msgstr ""
+"བེད་སྤྱོད: པིབ་རྩ་སྒྲིག་[options] <database...>\n"
+"\n"
+"    གདམ་ཁ་ཚུ:\n"
+"      -o file, --output=file\t\t  དེ་གིས་ཡིག་སྣོད་མིང་འདི་གསལ་བཀོད་འབད།\n"
+"      -s style, --style=style\t\t  དེ་གིས་  དེབ་ཐོའི་བཟོ་རྣམ་འདི་གསལ་བཀོད་འབད།\n"
+"      -f format, --format=format\t  དེ་གིསཨའུཊི་པུཊི་རྩ་སྒྲིག་འདི་གསལ་བཀོད་འབད།\n"
+"      -H header, --header=header\t  དེ་གིས་ མགོ་ཡིག་ཡིག་སྣོད་འདི་ངོས་འཛིན་འབདཝ་ཨིན།\n"
+"      -F footer, --footer=footer\t  དེ་གིས་ མཇུག་ཡིག་ཅིག་ངོས་འཛིན་འབདཝ་ཨིན།\n"
+"      -l 'output', --list='output'\t  དེ་གིས་  ཐོབ་ཚུགས་པའི་ཨའུཊི་པུཊི་རྩ་སྒྲིག་ཚུ་ཐོ་ཡིག་བརྐྱབ།\n"
+"      -h, --help\t\t\t དེ་གིས་གྲོགས་རམ་འཕྲིན་དོན་འདི་སྟོན།\n"
+"      -v, --version\t\t\t  དེ་གིས་  གྲོགས་རམ་འཕྲིན་དོན་འདི་སྟོན།\n"
+"    "
+
+#: ../scripts/pybformat.py:49
+#, python-format
+msgid "pybformat: error: %s\n"
+msgstr "པིབ་རྩ་སྒྲིག: འཛོལ་བ: %s\n"
+
+#: ../scripts/pybformat.py:55
+#, python-format
+msgid "pybformat: warning: %s\n"
+msgstr "པིབ་རྩ་སྒྲིག: ཉེན་བརྡ: %s\n"
+
+#: ../scripts/pybformat.py:90
+#: ../scripts/pybtext.py:252
+#: ../scripts/pybtext.py:278
+#: ../scripts/pybtext.py:321
+#, python-format
+msgid "can't open `%s': %s"
+msgstr "`%s'ཁ་ཕྱེ་མ་ཚུགས: %s"
+
+#: ../scripts/pybformat.py:97
+#, python-format
+msgid "unknown list `%s'"
+msgstr "མ་ཤེས་པའི་ཐོ་ཡིག `%s'"
+
+#: ../scripts/pybformat.py:100
+#, python-format
+msgid "pybformat: available values for `%s':"
+msgstr "པིབ་རྩ་སྒྲིག: `%s' གི་དོན་ལུ་ཐོབ་ཚུགས་པའི་གནས་གོང་:"
+
+#: ../scripts/pybformat.py:104
+#, python-format
+msgid "empty value list `%s'"
+msgstr "`%s' གནས་གོང་ཐོ་ཡིག་སྟོངམ་"
+
+#: ../scripts/pybformat.py:132
+msgid "too few arguments"
+msgstr "སྒྲུབ་རྟགས་དག་པ་ཅི་"
+
+#: ../scripts/pybformat.py:139
+#: ../scripts/pybtext.py:117
+#, python-format
+msgid "unknown output format `%s'"
+msgstr "མ་ཤེས་པའི་ཨའུཊི་པུཊི་རྩ་སྒྲིག་ `%s'"
+
+#: ../scripts/pybformat.py:152
+#: ../scripts/pybtex.py:86
+#: ../scripts/pybtext.py:94
+#, python-format
+msgid "can't find style `%s'"
+msgstr "`%s' བཟོ་རྣམ་མ་ཐོབ་"
+
+#: ../scripts/pybformat.py:155
+#, python-format
+msgid "pybformat: using style `%s', format `%s'\n"
+msgstr "པིབ་རྩ་སྒྲིག: བཟོ་རྣམ་`%s'ལག་ལེན་འཐབ་དོ་ རྩ་སྒྲིག་ `%s'\n"
+
+#: ../scripts/pybformat.py:170
+#, python-format
+msgid "can't open header `%s': %s"
+msgstr "མགོ་ཡིག་`%s'ཁ་ཕྱེ་མ་ཚུགས: %s"
+
+#: ../scripts/pybformat.py:178
+#, python-format
+msgid "can't open database: %s"
+msgstr "གནས་སྡུད་གཞི་རྟེན་ཁ་ཕྱེ་མ་ཚུགས: %s"
+
+#: ../scripts/pybformat.py:193
+#, python-format
+msgid "can't open footer `%s': %s"
+msgstr "མཇུག་ཡིག་ `%s' ཁ་ཕྱེ་མ་ཚུགས:  %s"
+
+#: ../scripts/pybtex.py:34
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr "བེད་སྤྱོད: པིབ་ཊེགསི་ <latexfile> [bibtexfiles...]"
+
+#: ../scripts/pybtex.py:38
+#, python-format
+msgid "pybtex: error: %s\n"
+msgstr "པིབ་ཊེགསི: འཛོལ་བ: %s\n"
+
+#. warn the user that some entries were not found
+#: ../scripts/pybtex.py:59
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr "པིབ་ཊེགསི: ཉེན་བརྡ: འོག་གི་ལྡེ་མིག་ཚུ་མོས་མཐུན་མ་བཟོ་བས་"
+
+#. If the LaTeX document declares no style...
+#: ../scripts/pybtex.py:64
+msgid "no style defined"
+msgstr "བཟོ་རྣམ་ངེས་འཛིན་མ་འབད་བས་"
+
+#: ../scripts/pybtext.py:41
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
+msgstr "བེད་སྤྱོད: པིབ་ཚིགཡིག་ [-o outputfile] [-s style] <textfile> <bibfiles...>"
+
+#: ../scripts/pybtext.py:45
+#, python-format
+msgid "pybtext: error: %s\n"
+msgstr "པིབ་ཚིག་ཡིག: འཛོལ་བ: %s\n"
+
+#: ../scripts/pybtext.py:50
+#, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "པིབ་ཚིག་ཡིག: ཉེན་བརྡ: %s\n"
+
+#: ../scripts/pybtext.py:124
+#, python-format
+msgid "File already exists: `%s'"
+msgstr "ཡིག་སྣོད་འདི་ཧེ་མ་ལས་རང་འདུག: `%s'"
+
+#: ../scripts/pybtext.py:127
+#, python-format
+msgid "A file with the same name already exists: `%s'"
+msgstr "མིང་གཅིག་པའི་ཡིག་སྣོད་འདི་  ཧེ་མ་ལས་རང་འདུག: `%s'"
+
+#: ../scripts/pybtext.py:178
+msgid "no citation found"
+msgstr "ལུང་འདྲེན་མ་ཐོབ་"
+
+#: ../scripts/pybtext.py:193
+#, python-format
+msgid "pybtext: using style `%s', format `%s'\n"
+msgstr "པིབ་ཚིག་ཡིག: བཟོ་རྣམ་ལག་ལེན་འཐབ་དོ་ `%s', རྩ་སྒྲིག་ `%s'\n"
+
+#: ../scripts/pybtext.py:316
+#, python-format
+msgid "can't create `%s'"
+msgstr "`%s'གསར་བསྐྲུན་འབད་མ་ཚུགས་"
+
+#: ../scripts/pybtext.py:342
+#, python-format
+msgid "can't remove `%s'"
+msgstr "`%s' རྩ་བསྐྲད་གཏང་མ་ཚུགས་"
+
+#: ../scripts/pybtext.py:344
+msgid "Done"
+msgstr "འབད་ཚར་"
+

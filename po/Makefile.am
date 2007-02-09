@@ -24,6 +24,7 @@ LANGUAGES = 		\
 	cs 		\
 	da 		\
 	de 		\
+	dz		\
 	el		\
 	en_CA		\
 	en_GB		\

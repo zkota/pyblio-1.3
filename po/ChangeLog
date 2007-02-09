@@ -1,3 +1,8 @@
+2007-02-06  Pema Geyleg  <pema.geyleg@gmail.com>
+
+	* Makefile.am: Added dz to LANGUAGES.
+	* dz.po: Added Dzongkha Translation.
+
 2006-10-24  Ilkka Tuohela  <hile@iki.fi>
 
 	* fi.po: Updated Finnish translation.
