@@ -24,9 +24,9 @@ run ()
     $* || error "while running $*"
 }
 
-run aclocal-1.7 ${aclocal_extra}
-run autoconf2.50
-run automake-1.7 -a
+run aclocal ${aclocal_extra}
+run autoconf
+run automake -a
 
 if [ -x ./config.status ] ; then
     run ./config.status --recheck
