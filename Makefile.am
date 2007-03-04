@@ -22,7 +22,7 @@
 pybdir  = $(datadir)/$(PACKAGE)
 appdir  = $(datadir)/applications
 
-SUBDIRS = 	Pyblio 		\
+SUBDIRS = 	Legacy 		\
 		glade		\
 		.		\
 		scripts		\

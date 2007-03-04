@@ -73,12 +73,12 @@ AC_CONFIG_FILES(
 	scripts/Makefile
 	tests/Makefile
 	glade/Makefile
-	Pyblio/Makefile
-	Pyblio/GnomeUI/Makefile
-	Pyblio/Format/Makefile
-	Pyblio/Output/Makefile
-	Pyblio/ConfDir/Makefile
-	Pyblio/Style/Makefile
+	Legacy/Makefile
+	Legacy/GnomeUI/Makefile
+	Legacy/Format/Makefile
+	Legacy/Output/Makefile
+	Legacy/ConfDir/Makefile
+	Legacy/Style/Makefile
 	doc/Makefile
 	doc/C/Makefile
 	Styles/Makefile

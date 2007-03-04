@@ -29,10 +29,10 @@
 import string, os, re, copy, sys, getopt
 from shutil import copyfile
 
-from Pyblio import Base, Key, Autoload
-from Pyblio.Style import Utils
+from Legacy import Base, Key, Autoload
+from Legacy.Style import Utils
 
-from Pyblio import pybtextvar
+from Legacy import pybtextvar
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'
@@ -85,7 +85,7 @@ style = os.path.splitext (style) [0]
 if os.path.exists (style + '.xml'):
     url = Fields.URL (style + '.xml')
 else:
-    from Pyblio import version
+    from Legacy import version
     full = os.path.join (version.pybdir, 'Styles', style)
     full = full + '.xml'
     if os.path.exists (full): url = Fields.URL (full)

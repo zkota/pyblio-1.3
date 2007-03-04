@@ -1,8 +1,8 @@
 # Site configuration
 
-from Pyblio import Autoload, Config, version
+from Legacy import Autoload, Config, version
 
-from Pyblio.TextUI import *
+from Legacy.TextUI import *
 
 # ==================================================
 
@@ -32,14 +32,14 @@ Autoload.preregister ('output', 'Textau',  'Pyblio.Output.textau')
 
 # define key formats
 
-Autoload.preregister ('key', 'Default', 'Pyblio.Utils')
+Autoload.preregister('key', 'Default', 'Legacy.Utils')
 
 # Parse the configuration directory
 
-rootconfig = os.path.join ('Pyblio', 'ConfDir')
+rootconfig = os.path.join ('Legacy', 'ConfDir')
 
 if not os.path.isdir (rootconfig):
-    rootconfig = os.path.join (version.pybdir, 'Pyblio', 'ConfDir')
+    rootconfig = os.path.join (version.pybdir, 'Legacy', 'ConfDir')
     
 if os.path.isdir (rootconfig):
     Config.parse_directory (rootconfig)

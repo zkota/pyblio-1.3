@@ -1,4 +1,3 @@
-# -*- python -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -20,34 +19,21 @@
 # 
 # 
 
-import os, sys, string
+from Legacy.Style import Parser
+from Legacy import Fields, Autoload
 
-import locale
-charset = locale.getlocale () [1] or 'ascii'
-
-if len (sys.argv) < 4 or len (sys.argv) > 5:
-    print _("usage: pybconvert <source>..<target> <input> [output]").encode (charset)
-    sys.exit (1)
-
-
-format = sys.argv [2]
-
-try:
-    source, target = string.split (format, '..')
-except:
-    print _("pybconvert: error: bad conversion format").encode (charset)
-    sys.exit (1)
-
-
-from Legacy import Open
-
-f_in = sys.argv [3]
-
-if len (sys.argv) == 4:
-    f_out = sys.stdout
-else:
-    f_out = open (sys.argv [4], 'w')
-
-database = Open.bibopen (f_in, source)
-Open.bibwrite (database.iterator (), how = target, out = f_out)
+def generate (style_url, format, database, keys, output):
     
+    fmt = format (output)
+    p = Parser.XMLBib (style_url)
+    p.configure ()
+
+    (table, keys) = p.methods ['keys'] (database, keys, fmt.coding)
+
+    fmt.start_group ('')
+    for key in keys:
+        entry = database [table [key]]
+        p.format.output (entry, fmt, key)
+    
+    fmt.end_group ()
+    return

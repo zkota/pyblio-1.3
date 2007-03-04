@@ -22,10 +22,10 @@
 
 import os, sys
 
-from Pyblio.GnomeUI.Pybliographic import Pybliographic
-from Pyblio.Fields import URL
+from Legacy.GnomeUI.Pybliographic import Pybliographic
+from Legacy.Fields import URL
 
-from Pyblio.GnomeUI import ui_version
+from Legacy.GnomeUI import ui_version
 
 print ui_version
 

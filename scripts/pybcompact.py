@@ -21,7 +21,7 @@
 # 
 
 import string, os, re, copy, sys
-from Pyblio import Base, Config, Fields, Key
+from Legacy import Base, Config, Fields, Key
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'

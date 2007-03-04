@@ -151,7 +151,7 @@ for filename in sources:
 		execfile (filename, user_global)
 
 if load_config:
-	from Pyblio import Config
+	from Legacy import Config
 	Config.load_user ()
 
 # Fichiers passes en argument au programme
@@ -170,7 +170,7 @@ if len (args) > 0 :
 
 import re, traceback
 import code
-import Pyblio.Help
+import Legacy.Help
 import string
 
 try:
@@ -211,7 +211,7 @@ while not finished:
 	if what <> None:
 		command = what.group (1)
 		if command == "help":
-			Pyblio.Help.help (string.strip (what.group (2)))
+			Legacy.Help.help (string.strip (what.group (2)))
 			continue
 		elif command == "quit" or command == "exit":
 			finished = 1

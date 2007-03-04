@@ -21,7 +21,7 @@
 # 
 
 import os, sys, string
-from Pyblio import Config, Exceptions
+from Legacy import Config, Exceptions
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'

@@ -22,10 +22,10 @@
 
 import string, sys, os
 
-from Pyblio.Output import latexutils
+from Legacy.Output import latexutils
 
-from Pyblio import Base, Autoload, Fields
-from Pyblio.Style import Utils
+from Legacy import Base, Autoload, Fields
+from Legacy.Style import Utils
 
 import locale
 charset = locale.getlocale () [1] or 'ascii'
@@ -77,7 +77,7 @@ if os.path.exists (style + '.xml'):
     url = Fields.URL (style + '.xml')
 else:
 
-    from Pyblio import version
+    from Legacy import version
     full = os.path.join (version.pybdir, 'Styles', style)
     full = full + '.xml'
     if os.path.exists (full): url = Fields.URL (full)

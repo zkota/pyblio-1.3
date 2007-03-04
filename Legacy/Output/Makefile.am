@@ -1,4 +1,3 @@
-# -*- python -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -20,34 +19,15 @@
 # 
 # 
 
-import os, sys, string
+pybdir = $(datadir)/$(PACKAGE)/Legacy/Output
 
-import locale
-charset = locale.getlocale () [1] or 'ascii'
+EXTRA_DIST = 	__init__.py	\
+		latexutils.py	\
+		LaTeX.py	\
+		text.py		\
+		raw.py		\
+		html.py		\
+		textau.py	\
+		textnum.py
 
-if len (sys.argv) < 4 or len (sys.argv) > 5:
-    print _("usage: pybconvert <source>..<target> <input> [output]").encode (charset)
-    sys.exit (1)
-
-
-format = sys.argv [2]
-
-try:
-    source, target = string.split (format, '..')
-except:
-    print _("pybconvert: error: bad conversion format").encode (charset)
-    sys.exit (1)
-
-
-from Legacy import Open
-
-f_in = sys.argv [3]
-
-if len (sys.argv) == 4:
-    f_out = sys.stdout
-else:
-    f_out = open (sys.argv [4], 'w')
-
-database = Open.bibopen (f_in, source)
-Open.bibwrite (database.iterator (), how = target, out = f_out)
-    
+pyb_DATA = $(EXTRA_DIST)

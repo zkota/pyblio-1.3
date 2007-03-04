@@ -1,4 +1,3 @@
-# -*- python -*-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -20,34 +19,38 @@
 # 
 # 
 
-import os, sys, string
+# Perform the first initialisation of Gnome, so that the options passed to the script
+# are not passed to Gnome
 
-import locale
-charset = locale.getlocale () [1] or 'ascii'
+import sys, string
 
-if len (sys.argv) < 4 or len (sys.argv) > 5:
-    print _("usage: pybconvert <source>..<target> <input> [output]").encode (charset)
-    sys.exit (1)
+files    = sys.argv [2:]
+sys.argv = sys.argv [:2] + ['--'] + files
 
+# correctly identify the program
+import pygtk
+pygtk.require ('2.0')
 
-format = sys.argv [2]
+import gnome, gtk
+import gnome.ui
 
-try:
-    source, target = string.split (format, '..')
-except:
-    print _("pybconvert: error: bad conversion format").encode (charset)
-    sys.exit (1)
+from Legacy import version
 
+prg = gnome.init ('pybliographer', version.version)
+prg.set_property (gnome.PARAM_APP_DATADIR, version.datadir)
 
-from Legacy import Open
+def _vnum (t):
+    return string.join (map (str, t), '.')
 
-f_in = sys.argv [3]
-
-if len (sys.argv) == 4:
-    f_out = sys.stdout
-else:
-    f_out = open (sys.argv [4], 'w')
-
-database = Open.bibopen (f_in, source)
-Open.bibwrite (database.iterator (), how = target, out = f_out)
+ui_version = _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
+    version.version, _vnum (sys.version_info [:3]),
+    _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
     
+# clean up our garbage
+sys.argv = sys.argv [:2] + files
+
+del sys, files
+
+import gtk.glade
+
+gtk.glade.bindtextdomain ("pybliographer", version.localedir)
