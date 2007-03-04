@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy/GnomeUI
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/GnomeUI
 
 EXTRA_DIST = \
 	Medline.py		\

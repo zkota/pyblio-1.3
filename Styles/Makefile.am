@@ -18,7 +18,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
 
-styledir  = $(datadir)/$(PACKAGE)/Styles
+styledir  = $(datadir)/$(PACKAGE)$(EXTENSION)/Styles
 
 EXTRA_DIST = apa4e.xml Abbrev.xml Alpha.xml abbrvau.xml abbrvbib.xml abbrvnum.xml bibstyle.dtd
 

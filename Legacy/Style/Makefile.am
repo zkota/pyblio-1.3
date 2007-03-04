@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy/Style
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/Style
 
 EXTRA_DIST = 	__init__.py	\
 		apa4e.py	\

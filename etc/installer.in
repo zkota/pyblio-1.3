@@ -29,7 +29,7 @@ exec_prefix="@exec_prefix@"
 libdir="@libdir@"
 datadir="@datadir@"
 libpyb="${libdir}/@PACKAGE@"
-datapyb="${datadir}/@PACKAGE@"
+datapyb="${datadir}/@PACKAGE@@EXTENSION@"
 localedir="${datadir}/locale"
 
 bindir="@bindir@"
@@ -43,6 +43,7 @@ s%@datapyb@%${datapyb}%g
 s%@python_path@%@Python@%g
 s%@package@%@PACKAGE@%g
 s%@version@%@VERSION@%g
+s%@extension@%@EXTENSION@%g
 s%@localedir@%${localedir}%g
 s%@p_datadir@%${datadir}%g
 "

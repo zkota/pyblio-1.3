@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy/ConfDir
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/ConfDir
 
 EXTRA_DIST = \
 	Base.py 	\

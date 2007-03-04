@@ -19,15 +19,15 @@
 # 
 # 
 
-pybdir  = $(datadir)/$(PACKAGE)
+pybdir  = $(datadir)/$(PACKAGE)$(EXTENSION)
 
-bin_SCRIPTS = 	pybliographic	\
-		pybcheck	\
-		pybconvert	\
-		pybcompact	\
-		pybtex		\
-		pybformat	\
-		pybtext
+bin_SCRIPTS = 	pybliographic$(EXTENSION)	\
+		pybcheck$(EXTENSION)		\
+		pybconvert$(EXTENSION)		\
+		pybcompact$(EXTENSION)		\
+		pybtex$(EXTENSION)		\
+		pybformat$(EXTENSION)		\
+		pybtext$(EXTENSION)
 
 pyb_DATA = 	pybliographic.py	\
 		pybcheck.py 		\

@@ -2,18 +2,27 @@
 # -*- sh -*-
 
 prefix="@datapyb@"
+progname="pybliographer@extension@"
 
-if test -x "./pybliographer" ; then
-    pyblio="./pybliographer"
+if test -x "./${progname}" ; then
+    pyblio="./${progname}"
     # eventually add the extras directory
     PYTHONPATH="$PYTHONPATH:extras"
     export PYTHONPATH
 else
-    pyblio="@bin_dir@/pybliographer"
+    pyblio="@bin_dir@/${progname}"
 fi
 
+sanitize() {
+  if [ "@extension@" = "" ] ; then
+      echo "$1"
+  else
+      echo "$1" | sed -e "s/@extension@$//"
+  fi
+}
+
 invocation=$0
-script="${invocation}.py"
+script=$(sanitize "${invocation}")".py"
 
 if test -r ${script} ; then
     exec ${pyblio} --quiet ${script} $*
@@ -21,7 +30,7 @@ if test -r ${script} ; then
     exit 1
 fi
 
-progname=`basename ${invocation}`
+progname=$(sanitize `basename ${invocation}`)
 script="${prefix}/${progname}.py"
 
 if test -r ${script} ; then

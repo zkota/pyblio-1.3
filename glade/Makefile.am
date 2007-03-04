@@ -1,4 +1,4 @@
-gladedir   = $(datadir)/$(PACKAGE)/glade
+gladedir   = $(datadir)/$(PACKAGE)$(EXTENSION)/glade
 appicondir = $(datadir)/pixmaps
 
 glade_DATA = 					\

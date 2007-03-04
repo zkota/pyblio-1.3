@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy
 
 EXTRA_DIST = \
 	version.py.in	\

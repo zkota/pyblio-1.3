@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy/Output
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/Output
 
 EXTRA_DIST = 	__init__.py	\
 		latexutils.py	\

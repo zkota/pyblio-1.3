@@ -24,7 +24,8 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 
 AC_INIT
-AM_INIT_AUTOMAKE(pybliographer, 1.2.10)
+AM_INIT_AUTOMAKE(pybliographer, 1.3.0)
+AC_SUBST(EXTENSION, [-1.3])
 
 AC_CONFIG_SRCDIR(pybliographer.py)
 
@@ -37,7 +38,7 @@ if test "${Python}" = "no" ; then
 fi
 
 dnl Python version
-MINIMUM_VERSION="2.2"
+MINIMUM_VERSION="2.3"
 
 AC_MSG_CHECKING([python requirements])
 

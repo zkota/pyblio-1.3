@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir = $(datadir)/$(PACKAGE)/Legacy/Format
+pybdir = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/Format
 
 EXTRA_DIST = \
 	__init__.py	\

@@ -19,7 +19,7 @@
 # 
 # 
 
-pybdir  = $(datadir)/$(PACKAGE)
+pybdir  = $(datadir)/$(PACKAGE)$(EXTENSION)
 appdir  = $(datadir)/applications
 
 SUBDIRS = 	Legacy 		\
@@ -31,6 +31,7 @@ SUBDIRS = 	Legacy 		\
 		po		\
 		doc
 
+binary = pybliographer$(EXTENSION)
 
 appicondir = $(datadir)/pixmaps
 appicon_DATA = pybliographic.png 
@@ -44,7 +45,7 @@ Mime_DATA = pybliographic.keys pybliographic.mime
 
 app_DATA = pybliographic.desktop
 
-bin_SCRIPTS = pybliographer
+bin_SCRIPTS = $(binary)
 
 EXTRA_DIST = 	setup-check.py			\
 		COPYING-DOCS			\
@@ -70,9 +71,9 @@ pybliographic.desktop: pybliographic.desktop.in po/*.po
 	intltool-merge -d po pybliographic.desktop.in pybliographic.desktop \
 		|| echo "**** Warning: cannot update desktop file"
 
-pybliographer: $(top_srcdir)/pybliographer.py etc/installer
-	$(SHELL) etc/installer < $(top_srcdir)/pybliographer.py > pybliographer
-	chmod 755 pybliographer
+$(binary): $(top_srcdir)/pybliographer.py etc/installer
+	$(SHELL) etc/installer < $(top_srcdir)/pybliographer.py > $(binary)
+	chmod 755 $(binary)
 
 install-data-local:
 	mv -f $(DESTDIR)$(pybdir)/pybrc.py $(DESTDIR)$(pybdir)/pybrc.old || true
