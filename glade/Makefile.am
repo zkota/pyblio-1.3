@@ -9,7 +9,8 @@ glade_DATA = 					\
 	format.glade				\
 	medline.glade 				\
 	config1.glade				\
-	openurl.glade
+	openurl.glade				\
+	wpconnect.glade
 
 EXTRA_DIST = $(glade_DATA) pyblio.glade.in
 

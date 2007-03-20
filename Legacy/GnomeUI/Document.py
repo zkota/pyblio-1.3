@@ -34,7 +34,7 @@ import gtk.glade
 from gtk import gdk
 
 from Legacy.GnomeUI import Editor, Entry, FileSelector, Format
-from Legacy.GnomeUI import Index, OpenURL, Search, Utils
+from Legacy.GnomeUI import Index, OpenURL, Search, Utils, Citation
 from Legacy.GnomeUI.Sort import SortDialog
 from Legacy.GnomeUI.Medline import MedlineUI
 
@@ -49,11 +49,6 @@ import os, string, copy, types, sys, traceback, stat
 import cPickle as pickle
 
 printable = string.lowercase + string.uppercase + string.digits
-
-
-
-
-
 
 uim_content = '''
 <ui>
@@ -93,6 +88,7 @@ uim_content = '''
              </menu>
         </menu>
         <menu action="CiteMenu">
+             <menuitem action="Connect"/>
              <menuitem action="Cite"/>
              <menuitem action="Format"/>
         </menu>
@@ -172,6 +168,7 @@ class Document (Connector.Publisher):
             ('Find', gtk.STOCK_FIND,  None,         None,   None,     self.find_entries),
             
             ('Sort', None, _('S_ort...'), None,  None, self.sort_entries),
+            ('Connect', gtk.STOCK_CONNECT, _('C_onnect'), None, None, self._on_connect),
             ('Cite', gtk.STOCK_JUMP_TO,   _('Cite...'), None,  _('Cite key(s)'), self.lyx_cite),
             ('Format', gtk.STOCK_EXECUTE, _('Format...'), None,  None, self.format_entries),
 
@@ -1070,6 +1067,8 @@ class Document (Connector.Publisher):
         self.redisplay_index ()
         return
 
+    def _on_connect(self, *args):
+        print Citation.Connect(None).run()
 
     def lyx_cite (self, * arg):
 

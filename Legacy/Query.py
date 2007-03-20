@@ -84,7 +84,9 @@ def query_info (searchterm, field, displaynum, displaystart, edate):
     return uids
 
 
-def medline_query (keyword,maxcount,displaystart,field,abstract,epubahead,pubtype,language,subset,agerange,humananimal,gender,entrezdate,pubdate,fromdate,todate):
+def medline_query(keyword, maxcount, displaystart, field, abstract, epubahead, pubtype,
+                  language, subset, agerange, humananimal, gender, entrezdate,
+                  pubdate, fromdate, todate):
     # note all the parameters needed to perform the query
     # Search with field limits
     if field == 'All Fields': field = 'ALL'
@@ -255,9 +257,9 @@ def medline_query (keyword,maxcount,displaystart,field,abstract,epubahead,pubtyp
     # and then to get the entries that is passed to pyblio to open
     uids = query_info (keyword, field, maxcount, displaystart, entrezdate) # get the pubmed UIDs and dump into uids variable
     
-    uids = string.replace (str(uids),'[','') # get rid of open bracket in string
-    uids = string.replace (str(uids),']','') # get rid of close bracket in the string
-    uids = string.replace (str(uids),' ','') # get rid of all the spaces in the string
+    uids = string.replace(str(uids),'[','') # get rid of open bracket in string
+    uids = string.replace(str(uids),']','') # get rid of close bracket in the string
+    uids = string.replace(str(uids),' ','') # get rid of all the spaces in the string
 
     if uids.strip () == '': return None
     
