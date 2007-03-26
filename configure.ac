@@ -73,9 +73,9 @@ AC_CONFIG_FILES(
 	etc/installer
 	scripts/Makefile
 	tests/Makefile
-	glade/Makefile
 	Legacy/Makefile
 	Legacy/GnomeUI/Makefile
+	Legacy/GnomeUI/glade/Makefile
 	Legacy/Format/Makefile
 	Legacy/Output/Makefile
 	Legacy/ConfDir/Makefile

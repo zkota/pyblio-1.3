@@ -23,7 +23,6 @@ pybdir  = $(datadir)/$(PACKAGE)$(EXTENSION)
 appdir  = $(datadir)/applications
 
 SUBDIRS = 	Legacy 		\
-		glade		\
 		.		\
 		scripts		\
 		tests		\

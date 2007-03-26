@@ -53,6 +53,7 @@ class Callback:
         self.dialog.destroy ()
         return res
 
+glade_root = os.path.join(os.path.dirname(__file__), 'glade')
 
 class GladeWindow:
 
@@ -84,9 +85,7 @@ class GladeWindow:
 
     def __init__ (self, parent = None, window = None):
         
-        gp = os.path.join (version.pybdir, 'glade',
-                           self.gladeinfo ['file'])
-        
+        gp = os.path.join(glade_root, self.gladeinfo ['file'])
         self.xml = gtk.glade.XML (gp, window, domain = "pybliographer")
         self.xml.signal_autoconnect (self)
 

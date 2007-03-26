@@ -204,8 +204,7 @@ class Document (Connector.Publisher):
 
         self.uim.ensure_update ()
 
-        
-        gp = os.path.join (version.pybdir, 'glade', 'pyblio.glade')
+        gp = os.path.join(Utils.glade_root, 'pyblio.glade')
         
         self.xml = gtk.glade.XML (gp, 'main', domain = 'pybliographer')
         self.xml.signal_autoconnect (self)
