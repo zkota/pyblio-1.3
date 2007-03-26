@@ -6,7 +6,7 @@ def _get_fields ():
 
 def _get_url_fields ():
     fields = Config.get ('base/fields').data
-    return [ x for x in fields.keys () if fields [x] == Fields.URL]
+    return [ k for (k, v) in fields.items() if v.type is Fields.URL]
  
 Config.define  ('resource/viewable-fields',
 		"""A list of fieldnames referring to
@@ -17,11 +17,7 @@ Config.define ('resource/viewers',
 	       """A list of mime type, viewer application name tuples. """,
 	       Config.List (Config.Tuple ((Config.String(), Config.String ()))))
 
-
-
-Config.set     ('resource/viewable-fields',
-		['url', ])
-
+Config.set('resource/viewable-fields', _get_url_fields())
 
 Config.set ('resource/viewers',
 	    [['application/pdf', 'acroread'],

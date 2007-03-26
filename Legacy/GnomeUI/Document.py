@@ -1222,7 +1222,7 @@ class Document (Connector.Publisher):
         about = ui.About ('Pybliographic',
                           version.version,
                           _("This program is copyrighted under the GNU GPL"),
-                          _("Gnome interface to the Pybliographer system."),
+                          _("GNOME interface to the Pybliographer system."),
                           ['Hervé Dréau',
                            'Frédéric Gobry',
                            'Zoltán Kóta',
@@ -1233,7 +1233,7 @@ class Document (Connector.Publisher):
                           ['Yuri Bongiorno',
                            'Frédéric Gobry',
                            'Zoltán Kóta'],
-                          _('Gnome Translation Team'))
+                          _('GNOME Translation Team'))
 
         about.set_transient_for (self.w)
         

@@ -48,7 +48,7 @@ class ConfigItem:
 
         if self.type:
             if not self.type.match (value):
-                raise ValueError (
+                raise ValueError(
                     _("value of `%s' should be of type %s") % (
                     self.name, str (self.type)))
             
@@ -252,7 +252,7 @@ class Element:
         return
 
     def match (self, value):
-        return self.get ().count (value)
+        return value in self.get()
 
     def __str__ (self):
         return _("Element in `%s'") % str (self.get ())
@@ -336,9 +336,13 @@ def load_user ():
     file.close ()
 
     for item in changed.keys ():
-        ConfigItems.eventually_resolve (item)
-        set (item, changed [item])
-        
+        ConfigItems.eventually_resolve(item)
+        try:
+            set(item, changed[item])
+        except ValueError, msg:
+            print >> sys.stderr, \
+                  _("warning: could not restore setting %r to %r: %s") % (
+                item, changed[item], msg)
     return
         
 def save_user (changed):
