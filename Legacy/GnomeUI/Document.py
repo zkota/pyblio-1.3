@@ -508,7 +508,9 @@ class Document (Connector.Publisher):
     def query_database (self, * arg):
         ''' callback corresponding to the "Medline Query..." button '''
 
-        data = MedlineUI (self.w).run ()
+        MedlineUI(self.w)
+        return
+    
         if data is None: return
         
         url = apply (Query.medline_query, data)

@@ -19,8 +19,8 @@
 # 
 # 
 
-# Perform the first initialisation of Gnome, so that the options passed to the script
-# are not passed to Gnome
+# Perform the first initialisation of Gnome, so that the options
+# passed to the script are not passed to Gnome
 
 import sys, string
 
@@ -48,9 +48,11 @@ ui_version = _("This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]") % (
     
 # clean up our garbage
 sys.argv = sys.argv [:2] + files
-
 del sys, files
 
 import gtk.glade
-
 gtk.glade.bindtextdomain ("pybliographer", version.localedir)
+
+# this needs to be done before any import of the reactor
+from twisted.internet import gtk2reactor
+gtk2reactor.install()

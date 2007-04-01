@@ -8,6 +8,7 @@ glade_DATA = 					\
 	sort.glade 				\
 	format.glade				\
 	medline.glade 				\
+	fetch.glade 				\
 	config1.glade				\
 	openurl.glade				\
 	wpconnect.glade

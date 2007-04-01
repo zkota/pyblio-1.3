@@ -20,9 +20,16 @@
 # 
 
 from gnome import ui
+import os
 import gtk
+import gobject
+import datetime
 
 from Legacy.GnomeUI import Utils
+from Pyblio.External import PubMed
+from Pyblio import Store, Registry, Adapter
+from Pyblio.Cite import Citator
+from Pyblio.Format import HTML
 
 class MedlineUI (Utils.GladeWindow):
 
@@ -31,117 +38,157 @@ class MedlineUI (Utils.GladeWindow):
                   'root': '_w_medline'
                   }
 
-    def __init__ (self, parent = None):
+    helper = PubMed.QueryHelper()
 
-        Utils.GladeWindow.__init__ (self, parent)
+    def __init__ (self, parent=None):
+        Utils.GladeWindow.__init__(self, parent)
 
-        # Fill in the combo boxes
-        self._w_field.set_popdown_strings (['All Fields', 'Affiliation',
-                                            'Author Name', 'EC/RN Number',
-                                            'Entrez Date', 'Filter',
-                                            'Issue', 'Journal Name',
-                                            'Language', 'MeSH Date',
-                                            'MeSH Major Topic',
-                                            'MeSH Subheading', 'MeSH Terms',
-                                            'Pagination', 'Publication Date',
-                                            'Publication Type', 'Secondary Source ID',
-                                            'Substance Name', 'Text Word',
-                                            'Title', 'Title/Abstract',
-                                            'UID', 'Volume'])
+        # helper to fill in combo boxes with values from a dictionary
+        def new_box(w, title, values, sorted=True, default=None):
+            model = gtk.ListStore(gobject.TYPE_PYOBJECT,
+                                  gobject.TYPE_STRING)
+            w.set_model(model)
+            cell = gtk.CellRendererText()
+            w.pack_start(cell, True)
+            w.add_attribute(cell, 'text', 1)
+            if sorted:
+                pairs = values.items()
+                pairs.sort(key=lambda x:x[1])
+            else:
+                pairs = values
+            if title:
+                model.append((default, title))
+            for pair in pairs:
+                model.append(pair)
+            w.set_active(0)
 
-        self._w_pub_type.set_popdown_strings (['Publication Types', 'Addresses',
-                                               'Bibliography', 'Biography',
-                                               'Classical Article', 'Clinical Conference',
-                                               'Clinical Trial', 'Clinical Trial, Phase I',
-                                               'Clinical Trial, Phase II', 'Clinical Trial, Phase III',
-                                               'Clinical Trial, Phase IV', 'Comment',
-                                               'Congresses', 'Consensus Development Conference',
-                                               'Consensus Development Conference, NIH',
-                                               'Controlled Clinical Trial',
-                                               'Corrected and Republished Article', 'Dictionary',
-                                               'Directory', 'Duplicate Publication',
-                                               'Editorial', 'Evaluation Studies',
-                                               'Festschrift', 'Government Publications',
-                                               'Guideline', 'Historical Article',
-                                               'Interview', 'Journal Article', 'Lectures',
-                                               'Legal Cases', 'Legislation', 'Letter',
-                                               'Meta-Analysis', 'Multicenter Study', 'News',
-                                               'Newspaper Article', 'Overall', 'Periodical Index',
-                                               'Practice Guideline', 'Published Erratum',
-                                               'Randomized Controlled Trial', 'Retraction of Publication',
-                                               'Retracted Publication', 'Review', 'Review, Academic',
-                                               'Review Literature', 'Review, Multicase',
-                                               'Review of Reported Cases', 'Review, Tutorial',
-                                               'Scientific Integrity Review', 'Technical Report',
-                                               'Twin Study', 'Validation Studies'])
+        new_box(self._w_pub_type, _("Any publication type"),
+                self.helper.publication_types)
+        new_box(self._w_language, _("Any language"),
+                self.helper.language)
+        new_box(self._w_subset, _("Any journal"),
+                self.helper.subset)
+        new_box(self._w_age, _("Any age"),
+                self.helper.age_range, sorted=False)
+        new_box(self._w_human, _("Human or animal"),
+                self.helper.human_animal)
+        new_box(self._w_gender, _("Any gender"),
+                self.helper.gender)
 
-        self._w_language.set_popdown_strings (['Languages', 'English',
-                                               'French', 'German', 'Italian',
-                                               'Japanese', 'Russian', 'Spanish'])
+        today = datetime.date.today()
+        def range(days):
+            return (today - datetime.timedelta(days), today)
+        new_box(self._w_entrez_date, _("Entrez date"), [
+            (range(30), _("30 days")),
+            (range(60), _("60 days")),
+            (range(90), _("90 days")),
+            (range(180), _("180 days")),
+            (range(365), _("1 year")),
+            (range(365*2), _("2 years")),
+            (range(365*5), _("5 years")),
+            (range(365*10), _("10 years")),
+            ], sorted=False, default=(None, None))
 
-        self._w_subset.set_popdown_strings (['Subsets', 'AIDS', 'AIDS/HIV journals',
-                                             'Bioethics', 'Bioethics journals',
-                                             'Biotechnology journals', 'Communication disorders journals',
-                                             'Complementary and Alternative Medicine',
-                                             'Consumer health journals', 'Core clinical journals',
-                                             'Dental journals', 'Health administration journals',
-                                             'Health tech assessment journals', 'History of Medicine',
-                                             'History of Medicine journals', 'In process',
-                                             'Index Medicus journals', 'MEDLINE', 'NASA journals',
-                                             'Nursing journals', 'PubMed Central', 'Reproduction journals',
-                                             'Space Life Sciences', 'Supplied by Publisher', 'Toxicology'])
-        
-        self._w_age.set_popdown_strings (['Ages', 'All Infant: birth-23 month',
-                                          'All Child: 0-18 years', 'All Adult: 19+ years',
-                                          'Newborn: birth-1 month', 'Infant: 1-23 months',
-                                          'Preschool Child: 2-5 years', 'Child: 6-12 years',
-                                          'Adolescent: 13-18 years', 'Adult: 19-44 years',
-                                          'Middle Aged: 45-64 years', 'Aged: 65+ years',
-                                          '80 and over: 80+ years'])
-
-        self._w_human.set_popdown_strings (['Human or Animal', 'Human', 'Animal'])
-
-        self._w_gender.set_popdown_strings (['Gender', 'Female', 'Male'])
-
-        self._w_entrez_date.set_popdown_strings (['Entrez Date', '30 Days', '60 Days',
-                                                  '90 Days', '180 Days', '1 Year', '2 Years',
-                                                  '5 Years', '10 Years'])
-
-        self._w_pub_date.set_popdown_strings (['Publication Date', 'Entrez Date'])
+        new_box(self._w_pub_date, None,
+                [(True, _("Publication date")),
+                 (False,_("Entrez date"))],
+                sorted=False)
 
         self._w_medline.show ()
         return
 
     
-    def run (self):
+    def _on_search(self, w):
+        def get(w):
+            return w.get_model()[w.get_active()][0]
 
-        ret = self._w_medline.run ()
+        from_date, to_date = get(self._w_entrez_date)
+        if from_date is None:
+            def parse(text):
+                try:
+                    parts = [int(x) for x in text.split('/')]
+                except ValueError:
+                    return None
+                if not parts:
+                    return None
+                if len(parts) == 1:
+                    return datetime.date(year=parts[0],
+                                         month=12, day=31)
+                if len(parts) == 2:
+                    return (datetime.date(year=parts[0],
+                                          month=parts[1]+1,
+                                          day=1) -
+                            datetime.timedelta(days=1))
+                return datetime.date(*parts[:3])
+            from_date, to_date = (
+                parse(self._w_from_date.get_text()),
+                parse(self._w_to_date.get_text()))
 
-        if ret != gtk.RESPONSE_OK:
-            self._w_medline.destroy ()
-            return None
+        q = self.helper.makeQuery(
+            keyword=self._w_keyword.entry.get_text(),
+            abstract=self._w_abstracts.get_active(),
+            epubahead=self._w_ahead.get_active(),
+            publication_type=get(self._w_pub_type),
+            language=get(self._w_language),
+            subset=get(self._w_subset),
+            age_range=get(self._w_age),
+            human_animal=get(self._w_human),
+            gender=get(self._w_gender),
+            use_publication_date=get(self._w_pub_date),
+            from_date=from_date, to_date=to_date)
 
-        data = (
-            self._w_keyword.entry.get_text (),
-            self._w_max_results.get_value_as_int (),
-            self._w_start_results.get_value_as_int (),
-            self._w_field.entry.get_text (),
-            self._w_abstracts.get_active (),
-            self._w_ahead.get_active (),
-            self._w_pub_type.entry.get_text (),
-            self._w_language.entry.get_text (),
-            self._w_subset.entry.get_text (),
-            self._w_age.entry.get_text (),
-            self._w_human.entry.get_text (),
-            self._w_gender.entry.get_text (),
-            self._w_entrez_date.entry.get_text (),
-            self._w_pub_date.entry.get_text (),
-            self._w_from_date.get_text (),
-            self._w_to_date.get_text ()
-            )
+        s = Registry.getSchema('org.pybliographer/pubmed/0.1')
+        db = Store.get('memory').dbcreate(None, s)
+        pm = PubMed.PubMed(db)
 
-        self._w_keyword.append_history (True, data [0])
-        
-        self._w_medline.destroy ()
+        results, rs = pm.search(q)
 
-        return data
+        Fetch(_("PubMed results for %s") % q, db, rs, results,
+              self._w_medline)
+
+class Fetch(Utils.GladeWindow):
+
+    gladeinfo = { 'name': 'fetch',
+                  'file': 'fetch.glade',
+                  'root': '_w_fetch'
+                  }
+
+    def __init__ (self, title, db, rs, callback, parent=None):
+        self.cell = None
+        Utils.GladeWindow.__init__(self, parent)
+
+        self._w_fetch.set_title(title)
+        self._w_summary.set_text(title)
+        self._w_progress.set_fraction(0.0)
+        self._w_progress.set_text(_("Fetching results"))
+
+        # in order to display a compact form of the results, we need
+        # to format them. use a mapping on top of the bibtex version.
+        self.bibtex = Adapter.adapt_schema(db, 'org.pybliographer/bibtex/0.1')
+        self.cite = Citator.Citator()
+        self.cite.xmlload(os.path.join(
+            Registry.RIP_dirs['system'], 'unsrt.cip'))
+        self.cite.prepare(self.bibtex, None)
+
+        model = gtk.ListStore(gobject.TYPE_PYOBJECT,
+                              gobject.TYPE_STRING)
+        self.cell = gtk.CellRendererText()
+        column = gtk.TreeViewColumn(None, self.cell, markup=1)
+        self._w_view.append_column(column)
+        self._w_view.set_model(model)
+
+        def done(total):
+            self._w_stop.set_sensitive(False)
+            self._w_progress.set_fraction(1.0)
+            self._w_progress.set_text(_("Done %d/%d") % (
+                len(db.entries), total))
+            for k, v in db.entries.iteritems():
+                t = HTML.generate(self.cite.formatter(v))
+                print t
+                model.append((k, t))
+
+        callback.addCallback(done)
+
+    def _on_new_size(self, w, rectangle):
+        if self.cell:
+            self.cell.set_property('wrap-width', rectangle.width)

@@ -43,7 +43,8 @@ elif pyblio_path:
 else:
     main.new_document ()
 
-import gtk
+from twisted.internet import reactor
+reactor.run()
 
-gtk.main ()
-
+## import gtk
+## gtk.main ()

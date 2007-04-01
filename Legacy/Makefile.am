@@ -46,7 +46,6 @@ PYTHON = \
 	Types.py 	\
 	Utils.py 	\
 	__init__.py 	\
-	Query.py	\
 	pybtextvar.py	\
 	recode.py       \
 	userexit.py	\

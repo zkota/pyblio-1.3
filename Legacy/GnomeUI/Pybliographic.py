@@ -139,6 +139,7 @@ class Pybliographic:
             doc.w.destroy ()
             self.documents.remove (doc)
 
-        main_quit ()
+        from twisted.internet import reactor
+        reactor.stop()
         return
     

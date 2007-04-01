@@ -132,6 +132,10 @@ if not quiet:
 	copyright ()
 	print _("Useful commands:\n	help     to get some help\n	quit     to quit\n").encode (charset)
 
+# ---------- Load default schemas
+from Pyblio import Registry
+Registry.parse_default()
+
 # ---------- Lire les fichiers de conf
 
 user_global = {'__builtins__' : __builtins__,
