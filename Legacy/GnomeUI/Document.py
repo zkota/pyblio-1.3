@@ -508,21 +508,8 @@ class Document (Connector.Publisher):
     def query_database (self, * arg):
         ''' callback corresponding to the "Medline Query..." button '''
 
-        MedlineUI(self.w)
+        MedlineUI(self, self.w)
         return
-    
-        if data is None: return
-        
-        url = apply (Query.medline_query, data)
-
-        if url is None:
-            # no result.
-            self.w.error (_("Your query returned no result"))
-            return
-        
-        self.open_in_new(url, 'medline', no_name=True)
-        return
-
 
     def merge_database (self, * arg):
         ''' add all the entries of another database to the current one '''
@@ -1238,8 +1225,8 @@ class Document (Connector.Publisher):
 
         about.set_transient_for (self.w)
         
-        link = ui.HRef ('http://www.pybliographer.org/',
-                        _("Pybliographer Home Page"))
+        link = ui.HRef('http://pybliographer.org/',
+                       _("Pybliographer Home Page"))
         link.show ()
         about.vbox.pack_start (link)
         about.show()

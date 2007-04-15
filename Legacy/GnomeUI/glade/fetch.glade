@@ -20,6 +20,7 @@
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
   <property name="has_separator">True</property>
+  <signal name="delete_event" handler="_w_destroy" last_modification_time="Sun, 15 Apr 2007 10:47:06 GMT"/>
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox1">
@@ -151,6 +152,7 @@
 		  <property name="hover_selection">False</property>
 		  <property name="hover_expand">False</property>
 		  <signal name="size_allocate" handler="_on_new_size" last_modification_time="Sun, 01 Apr 2007 12:46:58 GMT"/>
+		  <signal name="row_activated" handler="_w_row_activate" last_modification_time="Sun, 15 Apr 2007 11:03:01 GMT"/>
 		</widget>
 	      </child>
 	    </widget>

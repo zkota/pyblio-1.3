@@ -24,12 +24,16 @@ import os
 import gtk
 import gobject
 import datetime
+import StringIO
+import Legacy.Format.BibTeX
 
+from Legacy import Fields, Connector
 from Legacy.GnomeUI import Utils
 from Pyblio.External import PubMed
 from Pyblio import Store, Registry, Adapter
 from Pyblio.Cite import Citator
 from Pyblio.Format import HTML
+from Pyblio.Parsers.Semantic import BibTeX
 
 class MedlineUI (Utils.GladeWindow):
 
@@ -40,9 +44,9 @@ class MedlineUI (Utils.GladeWindow):
 
     helper = PubMed.QueryHelper()
 
-    def __init__ (self, parent=None):
+    def __init__ (self, document, parent=None):
         Utils.GladeWindow.__init__(self, parent)
-
+        self.document = document
         # helper to fill in combo boxes with values from a dictionary
         def new_box(w, title, values, sorted=True, default=None):
             model = gtk.ListStore(gobject.TYPE_PYOBJECT,
@@ -141,9 +145,10 @@ class MedlineUI (Utils.GladeWindow):
         db = Store.get('memory').dbcreate(None, s)
         pm = PubMed.PubMed(db)
 
-        results, rs = pm.search(q)
+        results, rs = pm.search(q, maxhits=100)
 
-        Fetch(_("PubMed results for %s") % q, db, rs, results,
+        Fetch(self.document,
+              _("PubMed results for %s") % q, db, rs, results,
               self._w_medline)
 
 class Fetch(Utils.GladeWindow):
@@ -153,21 +158,25 @@ class Fetch(Utils.GladeWindow):
                   'root': '_w_fetch'
                   }
 
-    def __init__ (self, title, db, rs, callback, parent=None):
+    def __init__ (self, document, title, db, rs, callback, parent=None):
         self.cell = None
         Utils.GladeWindow.__init__(self, parent)
 
+        self.document = document
+        self.db = db
+        url = Fields.URL('file:/dev/null')
+        self.parser = Legacy.Format.BibTeX.DataBase(url)
         self._w_fetch.set_title(title)
         self._w_summary.set_text(title)
         self._w_progress.set_fraction(0.0)
         self._w_progress.set_text(_("Fetching results"))
-
+        self.writer = BibTeX.Writer()
         # in order to display a compact form of the results, we need
         # to format them. use a mapping on top of the bibtex version.
         self.bibtex = Adapter.adapt_schema(db, 'org.pybliographer/bibtex/0.1')
         self.cite = Citator.Citator()
         self.cite.xmlload(os.path.join(
-            Registry.RIP_dirs['system'], 'unsrt.cip'))
+            Registry.RIP_dirs['system'], 'full.cip'))
         self.cite.prepare(self.bibtex, None)
 
         model = gtk.ListStore(gobject.TYPE_PYOBJECT,
@@ -184,11 +193,18 @@ class Fetch(Utils.GladeWindow):
                 len(db.entries), total))
             for k, v in db.entries.iteritems():
                 t = HTML.generate(self.cite.formatter(v))
-                print t
                 model.append((k, t))
-
         callback.addCallback(done)
 
+    def _w_row_activate(self, w, position, column):
+        m = w.get_model()
+        io = StringIO.StringIO()
+        rs = self.bibtex.rs.new()
+        rs.add(m[position][0])
+        self.writer.write(io, rs, self.bibtex)
+        entry = self.parser.create_native(io.getvalue())
+        self.document.drag_received([entry])
+        
     def _on_new_size(self, w, rectangle):
         if self.cell:
             self.cell.set_property('wrap-width', rectangle.width)

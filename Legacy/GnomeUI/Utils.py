@@ -108,15 +108,17 @@ class GladeWindow:
             root.set_transient_for(parent)
         return
 
-    def size_save (self):
-        root = self.xml.get_widget (self.gladeinfo ['root'])
-        cfg  = '/apps/pybliographic/%s/' % self.gladeinfo ['name']
+    def _w_destroy(self, *w):
+        self.size_save()
+
+    def size_save(self):
+        root = self.xml.get_widget (self.gladeinfo['root'])
+        cfg  = '/apps/pybliographic/%s/' % self.gladeinfo['name']
 
         w, h = root.get_size ()
 
-        config.set_int (cfg + 'width',  w)
-        config.set_int (cfg + 'height', h)
-
+        config.set_int(cfg + 'width',  w)
+        config.set_int(cfg + 'height', h)
         return
     
     
