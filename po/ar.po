@@ -1,0 +1,1467 @@
+# Arabic translations for PACKAGE package.
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-14 03:36+0100\n"
+"PO-Revision-Date: 2007-04-14 18:41+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Arabic\n"
+
+#: ../Pyblio/Autoload.py:78
+#, fuzzy, python-format
+msgid "warning: can't import %s: %s"
+msgstr "استو_رد نص التدريب"
+
+#: ../Pyblio/Config.py:52
+#, fuzzy, python-format
+msgid "value of `%s' should be of type %s"
+msgstr "هل تريد تنميق الملف %s؟"
+
+#: ../Pyblio/Config.py:212
+#, fuzzy
+msgid "String"
+msgstr "نصّ"
+
+#: ../Pyblio/Config.py:221
+#, fuzzy
+msgid "Boolean"
+msgstr "منطقي"
+
+#: ../Pyblio/Config.py:240
+#, fuzzy
+msgid "Integer"
+msgstr "عدد صحيح"
+
+#: ../Pyblio/Config.py:242
+#, fuzzy, python-format
+msgid "Integer under %d"
+msgstr "ح_فظ بإسم:"
+
+#: ../Pyblio/Config.py:244
+#, fuzzy, python-format
+msgid "Integer over %d"
+msgstr "إنتهت اللعبة!"
+
+#: ../Pyblio/Config.py:246
+#, fuzzy, python-format
+msgid "Integer between %d and %d"
+msgstr "بين منتصف الليل و 8 ص"
+
+#: ../Pyblio/Config.py:258
+#, fuzzy, python-format
+msgid "Element in `%s'"
+msgstr "تكبير"
+
+#: ../Pyblio/Config.py:278
+#, fuzzy, python-format
+msgid "Tuple (%s)"
+msgstr "مجموعة"
+
+#: ../Pyblio/Config.py:299
+#, fuzzy, python-format
+msgid "List (%s)"
+msgstr "اسرد"
+
+#: ../Pyblio/Config.py:324
+#, fuzzy, python-format
+msgid "Dictionary (%s, %s)"
+msgstr "قاموس"
+
+#: ../Pyblio/Config.py:344
+#, python-format
+msgid "warning: could not restore setting %r to %r: %s"
+msgstr ""
+
+#: ../Pyblio/Fields.py:261
+#, fuzzy
+msgid "Illegal year value"
+msgstr "قيمة التكبير المحلي"
+
+#: ../Pyblio/Fields.py:265
+#, fuzzy
+msgid "Illegal month value"
+msgstr "قيمة التكبير المحلي"
+
+#: ../Pyblio/Fields.py:269
+#, fuzzy
+msgid "Illegal day value"
+msgstr "قيمة التكبير المحلي"
+
+#: ../Pyblio/Fields.py:510
+#, fuzzy, python-format
+msgid "in %s"
+msgstr "داخل:"
+
+#: ../Pyblio/Format/BibTeX.py:385
+#: ../Pyblio/Format/BibTeX.py:443
+#, fuzzy, python-format
+msgid "key `%s' is malformed"
+msgstr "التّساوق مفتاح"
+
+#: ../Pyblio/Format/BibTeX.py:406
+#: ../Pyblio/Format/BibTeX.py:427
+#, fuzzy, python-format
+msgid "%s:%d: key `%s' already defined"
+msgstr "الشّارة \"%s\" معرفة مسبقا"
+
+#: ../Pyblio/GnomeUI/Config.py:147
+#: ../Pyblio/GnomeUI/Fields.py:417
+msgid ""
+"Some changes require to restart Pybliographic\n"
+"to be correctly taken into account"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Config.py:429
+#, fuzzy
+msgid "Add"
+msgstr "اضف"
+
+#: ../Pyblio/GnomeUI/Config.py:432
+#, fuzzy
+msgid "Update"
+msgstr "حدّث"
+
+#: ../Pyblio/GnomeUI/Config.py:435
+#: ../Pyblio/GnomeUI/Config.py:549
+#, fuzzy
+msgid "Remove"
+msgstr "احذف"
+
+#: ../Pyblio/GnomeUI/Config.py:546
+#, fuzzy
+msgid "Set"
+msgstr "ضبط"
+
+#: ../Pyblio/GnomeUI/Config.py:561
+#, fuzzy
+msgid "Key:"
+msgstr "مفتاح:"
+
+#: ../Pyblio/GnomeUI/Config.py:563
+#, fuzzy
+msgid "Value:"
+msgstr "القيمة:"
+
+#. id     stock            label         accel   tooltip   callback
+#: ../Pyblio/GnomeUI/Document.py:145
+#, fuzzy
+msgid "_File"
+msgstr "_ملف"
+
+#: ../Pyblio/GnomeUI/Document.py:146
+#: ../Pyblio/GnomeUI/Document.py:195
+#, fuzzy
+msgid "_Edit"
+msgstr "_حرّر"
+
+#: ../Pyblio/GnomeUI/Document.py:147
+#, fuzzy
+msgid "_View"
+msgstr "إ_عرض"
+
+#: ../Pyblio/GnomeUI/Document.py:148
+#, fuzzy
+msgid "_Cite"
+msgstr "إستشهد به"
+
+#: ../Pyblio/GnomeUI/Document.py:149
+#, fuzzy
+msgid "_Settings"
+msgstr "_تعيينات"
+
+#: ../Pyblio/GnomeUI/Document.py:150
+#, fuzzy
+msgid "_Help"
+msgstr "م_ساعدة"
+
+#: ../Pyblio/GnomeUI/Document.py:151
+#, fuzzy
+msgid "Recent documents"
+msgstr "المستندات الحديثة"
+
+#: ../Pyblio/GnomeUI/Document.py:154
+#, fuzzy
+msgid "Open a file"
+msgstr "افتح ملف"
+
+#: ../Pyblio/GnomeUI/Document.py:155
+#, fuzzy
+msgid "Open _Location"
+msgstr "افتح ال_موقع"
+
+#: ../Pyblio/GnomeUI/Document.py:156
+#, fuzzy
+msgid "Save the current file"
+msgstr "احفظ الملف الحالي"
+
+#: ../Pyblio/GnomeUI/Document.py:161
+#: ../glade/pyblio.glade.in.h:8
+#, fuzzy
+msgid "Merge With..."
+msgstr "دمج مع الخلفية التي في الأعلى"
+
+#: ../Pyblio/GnomeUI/Document.py:162
+#: ../glade/pyblio.glade.in.h:7
+#, fuzzy
+msgid "Medline Query..."
+msgstr "تحديث الإستفسار"
+
+#: ../Pyblio/GnomeUI/Document.py:170
+#, fuzzy
+msgid "Add a new entry"
+msgstr "أضف مُدْخَل جديد"
+
+#: ../Pyblio/GnomeUI/Document.py:174
+#: ../glade/pyblio.glade.in.h:12
+#, fuzzy
+msgid "S_ort..."
+msgstr "ر_تب..."
+
+#: ../Pyblio/GnomeUI/Document.py:175
+#: ../glade/pyblio.glade.in.h:2
+#, fuzzy
+msgid "Cite..."
+msgstr "إستشهد به"
+
+#: ../Pyblio/GnomeUI/Document.py:175
+#, fuzzy
+msgid "Cite key(s)"
+msgstr "تشفير المفتاح"
+
+#: ../Pyblio/GnomeUI/Document.py:176
+#: ../glade/pyblio.glade.in.h:6
+#, fuzzy
+msgid "Format..."
+msgstr "التنسيق:"
+
+#: ../Pyblio/GnomeUI/Document.py:178
+#: ../glade/pyblio.glade.in.h:4
+#, fuzzy
+msgid "Fields..."
+msgstr "&حقول:"
+
+#: ../Pyblio/GnomeUI/Document.py:180
+#: ../glade/pyblio.glade.in.h:5
+#, fuzzy
+msgid "Forget all changes"
+msgstr "إبقاء كل تغييرات المستند"
+
+#: ../Pyblio/GnomeUI/Document.py:183
+#, fuzzy
+msgid "_Resource"
+msgstr "المورد"
+
+#: ../Pyblio/GnomeUI/Document.py:194
+#, fuzzy
+msgid "_About"
+msgstr "_حول"
+
+#: ../Pyblio/GnomeUI/Document.py:243
+#, fuzzy
+msgid "Quick search"
+msgstr "عطّل البحث السّريع"
+
+#: ../Pyblio/GnomeUI/Document.py:317
+#, fuzzy
+msgid "Unnamed bibliographic database"
+msgstr "تفضيلات قاعدة بيانات القرص المدمج"
+
+#: ../Pyblio/GnomeUI/Document.py:400
+#, fuzzy, python-format
+msgid ""
+"can't open file `%s' for writing:\n"
+"%s"
+msgstr "تعذّر فتح الملف %s للكتابة\n"
+
+#: ../Pyblio/GnomeUI/Document.py:421
+#, fuzzy, python-format
+msgid ""
+"Error while parsing `%s':\n"
+"%s"
+msgstr "خطأ أثناء ترجمة المرشِّح: %s: %s"
+
+#: ../Pyblio/GnomeUI/Document.py:437
+#, fuzzy
+msgid "New database"
+msgstr "خادم قاعدة بيانات"
+
+#: ../Pyblio/GnomeUI/Document.py:445
+#: ../Pyblio/GnomeUI/Document.py:449
+#, fuzzy
+msgid "[no entry]"
+msgstr "إدخال مباشر"
+
+#: ../Pyblio/GnomeUI/Document.py:446
+#, fuzzy
+msgid "[1 entry]"
+msgstr "خانة"
+
+#: ../Pyblio/GnomeUI/Document.py:447
+#, fuzzy, python-format
+msgid "[%d entries]"
+msgstr "الخانات"
+
+#: ../Pyblio/GnomeUI/Document.py:450
+#, fuzzy, python-format
+msgid "[%d/1 entry]"
+msgstr "خانة"
+
+#: ../Pyblio/GnomeUI/Document.py:451
+#, fuzzy, python-format
+msgid "[%d/%d entries]"
+msgstr "الخانات"
+
+#: ../Pyblio/GnomeUI/Document.py:456
+#, fuzzy
+msgid "[modified]"
+msgstr "<b>آخر تعديل:</b>"
+
+#: ../Pyblio/GnomeUI/Document.py:459
+#, fuzzy, python-format
+msgid "view limited to: %s"
+msgstr "أعِد ضبط المشهد للإ_فتراضي"
+
+#: ../Pyblio/GnomeUI/Document.py:472
+msgid ""
+"The database has been modified.\n"
+"Discard changes?"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:476
+msgid ""
+"The database has been modified.\n"
+"Save changes?"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:493
+msgid ""
+"The database has been externally modified.\n"
+"Overwrite changes ?"
+msgstr ""
+
+#. no result.
+#: ../Pyblio/GnomeUI/Document.py:522
+#, fuzzy
+msgid "Your query returned no result"
+msgstr "لم يُعثر على نتائِج تُطابِق استعلامك"
+
+#. get a new file name
+#: ../Pyblio/GnomeUI/Document.py:532
+#, fuzzy
+msgid "Merge file"
+msgstr "إنتقي ملف"
+
+#: ../Pyblio/GnomeUI/Document.py:544
+#: ../Pyblio/GnomeUI/Document.py:630
+#, fuzzy
+msgid "Open error"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#: ../Pyblio/GnomeUI/Document.py:568
+#, fuzzy
+msgid "Merge status"
+msgstr "اضبط الحالة"
+
+#. get a new file name
+#: ../Pyblio/GnomeUI/Document.py:579
+#, fuzzy
+msgid "Open file"
+msgstr "افتح ملف"
+
+#: ../Pyblio/GnomeUI/Document.py:617
+msgid ""
+"An autosave file was found which is newer than the original file.\n"
+"Do you want to restore it?"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:651
+#: ../Pyblio/GnomeUI/Document.py:792
+#: ../Pyblio/GnomeUI/Document.py:852
+#, fuzzy, python-format
+msgid ""
+"Unable to remove autosave file `%s':\n"
+"%s"
+msgstr "فشل حذف ملف القفل `%s': %s"
+
+#: ../Pyblio/GnomeUI/Document.py:702
+#, fuzzy, python-format
+msgid ""
+"Error during autosaving:\n"
+"%s"
+msgstr "خطأ أثناء التحويل: %s"
+
+#: ../Pyblio/GnomeUI/Document.py:730
+#, fuzzy, python-format
+msgid ""
+"Unable to save `%s':\n"
+"%s"
+msgstr "لا يمكن حفظ {0}."
+
+#: ../Pyblio/GnomeUI/Document.py:738
+msgid ""
+"An internal error occured during saving\n"
+"Try to Save As..."
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:753
+#, fuzzy
+msgid "Save As..."
+msgstr "احفظ كـ..."
+
+#: ../Pyblio/GnomeUI/Document.py:759
+#, fuzzy, python-format
+msgid ""
+"The file `%s' already exists.\n"
+"Overwrite it ?"
+msgstr "فشل في نسخ الملف: الملف موجود مسبقا."
+
+#: ../Pyblio/GnomeUI/Document.py:766
+#, fuzzy, python-format
+msgid ""
+"During opening:\n"
+"%s"
+msgstr "فتح التقويم"
+
+#: ../Pyblio/GnomeUI/Document.py:804
+#, fuzzy
+msgid "Reopen error"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#: ../Pyblio/GnomeUI/Document.py:877
+#, python-format
+msgid ""
+"An entry called `%s' already exists.\n"
+"Rename and add it anyway ?"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:914
+#, fuzzy
+msgid "Really remove all the entries ?"
+msgstr "هل تريد إزالة جميع الملفات؟"
+
+#: ../Pyblio/GnomeUI/Document.py:934
+#, fuzzy
+msgid "Create new entry"
+msgstr "إنشاء خا&نة جديدة..."
+
+#: ../Pyblio/GnomeUI/Document.py:948
+#, fuzzy, python-format
+msgid "Really edit %d entries ?"
+msgstr "اشمل المدخلات المستبعدة"
+
+#: ../Pyblio/GnomeUI/Document.py:994
+#, fuzzy, python-format
+msgid "Remove all the %d entries ?"
+msgstr "إظهار كافّة المدُخلات"
+
+#: ../Pyblio/GnomeUI/Document.py:996
+#, fuzzy, python-format
+msgid "Remove entry `%s' ?"
+msgstr "حذف المدخل"
+
+#: ../Pyblio/GnomeUI/Document.py:1015
+msgid ""
+"your search text must contain\n"
+"latin-1 characters only"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:1094
+#: ../Pyblio/GnomeUI/Document.py:1102
+#, fuzzy, python-format
+msgid ""
+"Can't connect to LyX:\n"
+"%s"
+msgstr "اتصل بالموقع الغير موثوق؟"
+
+#: ../Pyblio/GnomeUI/Document.py:1217
+#, fuzzy, python-format
+msgid ""
+"Can't display documentation:\n"
+"%s"
+msgstr "تعذّر عرض الموقع \"%s\""
+
+#: ../Pyblio/GnomeUI/Document.py:1225
+msgid "This program is copyrighted under the GNU GPL"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Document.py:1226
+#, fuzzy
+msgid "Gnome interface to the Pybliographer system."
+msgstr "مرحبا بك مع الإصدارة التمهيدية %s من أدوات نظام جنوم"
+
+#: ../Pyblio/GnomeUI/Document.py:1237
+#, fuzzy
+msgid "Gnome Translation Team"
+msgstr "قائمة بجداول التّرجمة"
+
+#: ../Pyblio/GnomeUI/Document.py:1242
+#, fuzzy
+msgid "Pybliographer Home Page"
+msgstr "عنوان صفحة المستخدم الرئيسية."
+
+#: ../Pyblio/GnomeUI/Editor.py:35
+#, fuzzy
+msgid "Last Name, First Name"
+msgstr "أدخل اسمك الأول"
+
+#: ../Pyblio/GnomeUI/Editor.py:36
+#: ../Pyblio/GnomeUI/Editor.py:1327
+#: ../Pyblio/GnomeUI/Fields.py:39
+#: ../glade/config1.glade.h:14
+#: ../glade/fields1.glade.h:19
+#, fuzzy
+msgid "Text"
+msgstr "النّص"
+
+#: ../Pyblio/GnomeUI/Editor.py:133
+#: ../Pyblio/GnomeUI/Editor.py:1010
+msgid "Error in native string parsing"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:312
+#, fuzzy
+msgid "Day"
+msgstr "اليوم"
+
+#: ../Pyblio/GnomeUI/Editor.py:321
+#, fuzzy
+msgid "Month"
+msgstr "الشّهر"
+
+#: ../Pyblio/GnomeUI/Editor.py:330
+#, fuzzy
+msgid "Year"
+msgstr "السّنة"
+
+#: ../Pyblio/GnomeUI/Editor.py:355
+msgid "Invalid day field in date"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:363
+msgid "Invalid month field in date"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:371
+msgid "Invalid year field in date"
+msgstr ""
+
+#. A delete button
+#: ../Pyblio/GnomeUI/Editor.py:419
+#: ../Pyblio/GnomeUI/Search.py:86
+#, fuzzy
+msgid "Delete"
+msgstr "احذف"
+
+#: ../Pyblio/GnomeUI/Editor.py:430
+#: ../Pyblio/GnomeUI/Editor.py:443
+#: ../Pyblio/GnomeUI/Editor.py:446
+#, fuzzy
+msgid "[ Drop an Entry here ]"
+msgstr "إضبط التكملة التلقائية هنا"
+
+#: ../Pyblio/GnomeUI/Editor.py:502
+#, fuzzy
+msgid "Browse..."
+msgstr "استعرض..."
+
+#: ../Pyblio/GnomeUI/Editor.py:525
+#, fuzzy
+msgid "Select file"
+msgstr "انتقِ ملفاً"
+
+#: ../Pyblio/GnomeUI/Editor.py:549
+#: ../Pyblio/GnomeUI/Fields.py:236
+#: ../glade/config1.glade.h:8
+#: ../glade/fields1.glade.h:6
+#, fuzzy
+msgid "Entry type"
+msgstr "نوع الخانة"
+
+#: ../Pyblio/GnomeUI/Editor.py:551
+#, fuzzy
+msgid "Key"
+msgstr "المفتاح"
+
+#: ../Pyblio/GnomeUI/Editor.py:600
+#, fuzzy
+msgid "Create Field"
+msgstr "حقل ال_قيمة"
+
+#. navigation buttons
+#: ../Pyblio/GnomeUI/Editor.py:605
+#, fuzzy
+msgid "Back"
+msgstr "إلى الخلف"
+
+#: ../Pyblio/GnomeUI/Editor.py:608
+#, fuzzy
+msgid "Next"
+msgstr "التّالية"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Fields.py:451
+#, fuzzy
+msgid "Mandatory"
+msgstr "إلزامي"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Fields.py:452
+#, fuzzy
+msgid "Optional"
+msgstr "اختياري"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#: ../Pyblio/GnomeUI/Editor.py:1242
+#, fuzzy
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: ../Pyblio/GnomeUI/Editor.py:728
+#, fuzzy
+msgid "Extra"
+msgstr "إضافي"
+
+#: ../Pyblio/GnomeUI/Editor.py:907
+#, fuzzy
+msgid "Invalid key format"
+msgstr "تنسيق '%s' غير صحيح"
+
+#: ../Pyblio/GnomeUI/Editor.py:915
+#, fuzzy, python-format
+msgid "Key `%s' already exists"
+msgstr "الشهادة موجودة مسبقا."
+
+#: ../Pyblio/GnomeUI/Editor.py:932
+#, python-format
+msgid "The `%s' field contains a non Latin-1 symbol"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:1002
+msgid "Your text contains non Latin-1 symbols"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Editor.py:1023
+#, fuzzy
+msgid "Edit entry"
+msgstr "حرر المدخلات"
+
+#: ../Pyblio/GnomeUI/Editor.py:1037
+#: ../Pyblio/GnomeUI/Editor.py:1108
+#, fuzzy
+msgid "Native Editing"
+msgstr "حرّر الطوْر: %s"
+
+#: ../Pyblio/GnomeUI/Editor.py:1137
+#, fuzzy
+msgid "Standard Editing"
+msgstr "حرّر الطوْر: %s"
+
+#: ../Pyblio/GnomeUI/Editor.py:1264
+#, fuzzy
+msgid "mandatory"
+msgstr "إلزامي"
+
+#: ../Pyblio/GnomeUI/Editor.py:1330
+#, fuzzy
+msgid "Enter text here"
+msgstr "أدخل النصّ هنا !"
+
+#: ../Pyblio/GnomeUI/Editor.py:1382
+#, fuzzy
+msgid "New Annotation Name"
+msgstr "اسم المشهد الجديد:"
+
+#: ../Pyblio/GnomeUI/Editor.py:1388
+#, fuzzy
+msgid "Name of the new annotation:"
+msgstr "اسم المشهد الجديد:"
+
+#: ../Pyblio/GnomeUI/Entry.py:114
+#, fuzzy, python-format
+msgid ""
+"Cannot open URL:\n"
+"%s"
+msgstr "تعذّر عرض المسار:"
+
+#: ../Pyblio/GnomeUI/Fields.py:38
+#, fuzzy
+msgid "Authors"
+msgstr "المؤلّفون"
+
+#: ../Pyblio/GnomeUI/Fields.py:40
+#, fuzzy
+msgid "Long Text"
+msgstr "نص طويل"
+
+#: ../Pyblio/GnomeUI/Fields.py:41
+#: ../glade/config1.glade.h:16
+#: ../glade/fields1.glade.h:21
+#, fuzzy
+msgid "URL"
+msgstr "URL"
+
+#: ../Pyblio/GnomeUI/Fields.py:42
+#, fuzzy
+msgid "Reference"
+msgstr "الإشارة"
+
+#: ../Pyblio/GnomeUI/Fields.py:43
+#, fuzzy
+msgid "Date"
+msgstr "التاريخ"
+
+#: ../Pyblio/GnomeUI/Fields.py:124
+#: ../glade/config1.glade.h:11
+#: ../glade/fields1.glade.h:10
+#, fuzzy
+msgid "Name"
+msgstr "اسم"
+
+#: ../Pyblio/GnomeUI/Fields.py:127
+#: ../glade/config1.glade.h:15
+#: ../glade/fields1.glade.h:20
+#, fuzzy
+msgid "Type"
+msgstr "النّوع"
+
+#: ../Pyblio/GnomeUI/Fields.py:300
+#, fuzzy
+msgid "Available"
+msgstr "متوفر"
+
+#: ../Pyblio/GnomeUI/Fields.py:310
+#, fuzzy
+msgid "Associated"
+msgstr "ربط"
+
+#: ../Pyblio/GnomeUI/Fields.py:321
+msgid "Please, select an entry type from previous page."
+msgstr ""
+
+#: ../Pyblio/GnomeUI/Fields.py:332
+#, python-format
+msgid "Fields associated with <b>%s</b> entry type"
+msgstr ""
+
+#: ../Pyblio/GnomeUI/FileSelector.py:39
+#, fuzzy
+msgid "File"
+msgstr "الملف"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:76
+#: ../glade/openurl.glade.h:2
+#, fuzzy
+msgid "Bibliography type:"
+msgstr "نوع التّنبيه"
+
+#: ../Pyblio/GnomeUI/FileSelector.py:93
+#: ../Pyblio/GnomeUI/OpenURL.py:61
+#, fuzzy
+msgid " - According to file suffix - "
+msgstr "اسم الملف (بدون التمديدة)"
+
+#. The root of the search tree is the full database
+#: ../Pyblio/GnomeUI/Search.py:71
+#, fuzzy
+msgid "Full database"
+msgstr "خادم قاعدة بيانات"
+
+#: ../Pyblio/GnomeUI/Search.py:142
+#, fuzzy
+msgid "internal error during evaluation"
+msgstr "خطأ أثناء إتمام التهيئة"
+
+#: ../Pyblio/GnomeUI/Search.py:196
+#, fuzzy, python-format
+msgid ""
+"while compiling %s\n"
+"error: %s"
+msgstr ""
+"\n"
+"خطأ في قراءة الاختيار\n"
+
+#. These are additional search fields
+#: ../Pyblio/GnomeUI/Sort.py:97
+#, fuzzy
+msgid "[Entry Type]"
+msgstr "نوع الخانة"
+
+#: ../Pyblio/GnomeUI/Sort.py:98
+#, fuzzy
+msgid "[Key Value]"
+msgstr "قيمة التحجيم"
+
+#: ../Pyblio/GnomeUI/Utils.py:194
+#, fuzzy
+msgid "The following errors occured:\n"
+msgstr "حدث خطأ مجهول"
+
+#: ../Pyblio/GnomeUI/__init__.py:45
+#, python-format
+msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+msgstr ""
+
+#: ../Pyblio/LyX.py:37
+#, fuzzy, python-format
+msgid "no input pipe `%s'"
+msgstr "أجهزة الدّخْل دون امتدادات"
+
+#: ../Pyblio/LyX.py:43
+#, fuzzy, python-format
+msgid "no output pipe `%s'"
+msgstr "لا دليل خرج!"
+
+#: ../Pyblio/Open.py:96
+#, fuzzy, python-format
+msgid "method `%s' provides no opener"
+msgstr "%s:%u لايحتوي على اسم طريقة."
+
+#: ../Pyblio/Open.py:104
+#: ../Pyblio/Open.py:151
+#, fuzzy, python-format
+msgid "File `%s' does not exist"
+msgstr "الملف غير موجود."
+
+#: ../Pyblio/Open.py:115
+#: ../Pyblio/Open.py:162
+#, fuzzy, python-format
+msgid "don't know how to open `%s'"
+msgstr "لا أعرف كيفيّة التّعامل مع حسّ المعتمدات \"%s\""
+
+#: ../Pyblio/Open.py:143
+#, fuzzy, python-format
+msgid "method `%s' provides no iterator"
+msgstr "%s:%u لايحتوي على اسم طريقة."
+
+#: ../Pyblio/Resource.py:77
+#, python-format
+msgid ""
+"Warning: This URL is marked as Invalid or Approximate: %s\n"
+"Continue?"
+msgstr ""
+
+#: ../Pyblio/Resource.py:81
+#, fuzzy
+msgid "Determining Mime Type ... "
+msgstr "نوع MIME غير معروف"
+
+#: ../Pyblio/Resource.py:86
+#, python-format
+msgid "Cannot determine mime type for item %s "
+msgstr ""
+
+#: ../Pyblio/Resource.py:87
+#, python-format
+msgid ""
+"URL in question is: %s\n"
+"You should check the url or path given for errors.\n"
+"Details: %s"
+msgstr ""
+
+#: ../Pyblio/Resource.py:98
+#, fuzzy
+msgid "Accessing resource ..."
+msgstr "<b>استبعد مورد</b>"
+
+#: ../Pyblio/Resource.py:116
+#, python-format
+msgid "IOError for item %s: cannot uncompress resource."
+msgstr ""
+
+#: ../Pyblio/Resource.py:117
+#, fuzzy, python-format
+msgid ""
+"URL: %s\n"
+"Details: %s"
+msgstr "عنوان VoIP"
+
+#: ../Pyblio/Resource.py:137
+#, fuzzy
+msgid "Starting application ..."
+msgstr "<b>خيارات البرنامج:</b>"
+
+#: ../Pyblio/Resource.py:140
+#, fuzzy
+msgid "No application to view resource"
+msgstr "اختر تطبيقاً لعرض وصفه."
+
+#: ../Pyblio/Resource.py:141
+#, python-format
+msgid ""
+"For mime type %s, no entry found in \n"
+"configuration option resource/viewers.\n"
+"Please consider adding one.\n"
+"URL: %s"
+msgstr ""
+
+#: ../Pyblio/Style/Parser.py:261
+#, fuzzy, python-format
+msgid "missing '%s' attribute"
+msgstr "السطر %d العامود %d: الصفة \"%s\" مفقودة"
+
+#: ../Pyblio/Style/Parser.py:271
+#, fuzzy, python-format
+msgid "invalid opening tag: %s"
+msgstr "الشارة \"%s\" لها خاصية غير صالحة \"%s\""
+
+#: ../Pyblio/Style/Parser.py:281
+#, fuzzy, python-format
+msgid "invalid closing tag: %s"
+msgstr "الشارة \"%s\" لها خاصية غير صالحة \"%s\""
+
+#: ../glade/config1.glade.h:1
+#: ../glade/fields1.glade.h:1
+#: ../glade/medline.glade.h:1
+#: ../glade/openurl.glade.h:1
+#: ../glade/search.glade.h:1
+#, fuzzy
+msgid "*"
+msgstr "*"
+
+#: ../glade/config1.glade.h:2
+#, fuzzy
+msgid "<b>Entry type</b>"
+msgstr "نوع الخانة"
+
+#: ../glade/config1.glade.h:3
+#, fuzzy
+msgid "A"
+msgstr "A"
+
+#: ../glade/config1.glade.h:4
+#: ../glade/fields1.glade.h:2
+#, fuzzy
+msgid "Association"
+msgstr "الجمعيّة"
+
+#: ../glade/config1.glade.h:5
+#: ../glade/fields1.glade.h:3
+#, fuzzy
+msgid "Datum"
+msgstr "الحقيقة"
+
+#: ../glade/config1.glade.h:6
+#: ../glade/fields1.glade.h:4
+#, fuzzy
+msgid "Editor"
+msgstr "المحرر"
+
+#: ../glade/config1.glade.h:7
+#: ../glade/fields1.glade.h:5
+#, fuzzy
+msgid "Entries"
+msgstr "الخانات"
+
+#: ../glade/config1.glade.h:9
+#, fuzzy
+msgid "FIELDS DEFINITION"
+msgstr "وصف التعريف"
+
+#: ../glade/config1.glade.h:10
+#: ../glade/fields1.glade.h:8
+#, fuzzy
+msgid "Fields "
+msgstr "&حقول:"
+
+#: ../glade/config1.glade.h:12
+#: ../glade/fields1.glade.h:11
+#, fuzzy
+msgid "Name "
+msgstr "اسم"
+
+#: ../glade/config1.glade.h:13
+#, fuzzy
+msgid "Pybliographer Configuration"
+msgstr "مساعد الإعداد"
+
+#: ../glade/config1.glade.h:17
+#, fuzzy
+msgid "standard fields"
+msgstr "_حقول الشهادة"
+
+#: ../glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr ""
+
+#: ../glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr ""
+
+#: ../glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+
+#: ../glade/format.glade.h:1
+#, fuzzy
+msgid "Bibliography style:"
+msgstr "<b>مظهر البرنامج:</b>"
+
+#: ../glade/format.glade.h:2
+#, fuzzy
+msgid "Format entries"
+msgstr "تنسيق الفيديو"
+
+#: ../glade/format.glade.h:3
+#, fuzzy
+msgid "Output file:"
+msgstr "ملف الخرْج"
+
+#: ../glade/format.glade.h:4
+#, fuzzy
+msgid "Output format:"
+msgstr "تنسيق ال_خرْج"
+
+#: ../glade/format.glade.h:5
+#, fuzzy
+msgid "Save Formatted as"
+msgstr "احفظ الملف كـ"
+
+#: ../glade/format.glade.h:6
+#, fuzzy
+msgid "Style Selection"
+msgstr "<b>الحرف المنتقى:</b>"
+
+#: ../glade/medline.glade.h:2
+#, fuzzy
+msgid "Enter your Medline Query"
+msgstr "أدخل اسمك الأول"
+
+#: ../glade/medline.glade.h:3
+#, fuzzy
+msgid "From:"
+msgstr "من:"
+
+#: ../glade/medline.glade.h:4
+#, fuzzy
+msgid "Limited to:"
+msgstr "مسجل ل %s"
+
+#: ../glade/medline.glade.h:5
+#, fuzzy
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr "أ_قصى عدد معروض من النتائج:"
+
+#: ../glade/medline.glade.h:7
+#, fuzzy
+msgid "Medline Query"
+msgstr "تحديث الإستفسار"
+
+#: ../glade/medline.glade.h:8
+#, fuzzy
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr "اعرض فقط العناصر التي يكون فيها"
+
+#: ../glade/medline.glade.h:10
+#, fuzzy
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr "اعرض فقط العناصر التي يكون فيها"
+
+#: ../glade/medline.glade.h:12
+#, fuzzy
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr "ابحث عن نص"
+
+#: ../glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+
+#: ../glade/medline.glade.h:16
+#, fuzzy
+msgid "To:"
+msgstr "إلى:"
+
+#: ../glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+
+#: ../glade/openurl.glade.h:3
+#, fuzzy
+msgid "Enter the location (URI) of the file you would like to open:"
+msgstr "أدخل _موقع الملف (URI) الذي تريد فتحه:"
+
+#: ../glade/openurl.glade.h:4
+#, fuzzy
+msgid "Open Location"
+msgstr "افتح الموقع"
+
+#: ../glade/pyblio.glade.in.h:1
+#, fuzzy
+msgid "Cite"
+msgstr "إستشهد به"
+
+#: ../glade/pyblio.glade.in.h:3
+#, fuzzy
+msgid "Contents"
+msgstr "المحتويات"
+
+#: ../glade/pyblio.glade.in.h:9
+#, fuzzy
+msgid "Open File"
+msgstr "افتح ملف"
+
+#: ../glade/pyblio.glade.in.h:10
+#, fuzzy
+msgid "Previous Documents"
+msgstr "المستندات الحديثة"
+
+#: ../glade/pyblio.glade.in.h:11
+msgid "Pybliographer"
+msgstr ""
+
+#: ../glade/pyblio.glade.in.h:13
+#, fuzzy
+msgid "Save File"
+msgstr "حفظ الملف"
+
+#: ../glade/pyblio.glade.in.h:14
+#, fuzzy
+msgid "Settings"
+msgstr "التعيينات"
+
+#: ../glade/pyblio.glade.in.h:15
+#, fuzzy
+msgid "_Add..."
+msgstr "أ_ضِف..."
+
+#: ../glade/pyblio.glade.in.h:16
+#, fuzzy
+msgid "_Delete..."
+msgstr "_حذف..."
+
+#: ../glade/pyblio.glade.in.h:17
+#, fuzzy
+msgid "_Edit..."
+msgstr "ت_حرير..."
+
+#: ../glade/pyblio.glade.in.h:18
+#, fuzzy
+msgid "_New"
+msgstr "_جديد"
+
+#: ../glade/search.glade.h:2
+#, fuzzy
+msgid "Close"
+msgstr "اغلق"
+
+#: ../glade/search.glade.h:3
+#, fuzzy
+msgid "Expert Search"
+msgstr "<b>محركات بحث</b>"
+
+#: ../glade/search.glade.h:4
+#, fuzzy
+msgid "Field"
+msgstr "الحقل"
+
+#: ../glade/search.glade.h:5
+#, fuzzy
+msgid "Pattern"
+msgstr "النمط"
+
+#: ../glade/search.glade.h:6
+#, fuzzy
+msgid "Query"
+msgstr "استعلم"
+
+#: ../glade/search.glade.h:7
+#, fuzzy
+msgid "Search"
+msgstr "ابحث"
+
+#: ../glade/search.glade.h:8
+#, fuzzy
+msgid "Simple Search"
+msgstr "بحث بسيط جديد..."
+
+#: ../glade/sort.glade.h:1
+#, fuzzy
+msgid "Select sort criterions"
+msgstr "رتّب العناصر حسب"
+
+#: ../glade/sort.glade.h:2
+#, fuzzy
+msgid "Set as default"
+msgstr "اضبط كا_فتراضي"
+
+#: ../pybliographer.py:43
+#, fuzzy, python-format
+msgid "This is %s, version %s"
+msgstr "نسخة هذا التّطبيق"
+
+#: ../pybliographer.py:47
+#: ../pybliographer.py:54
+msgid "This is free software with ABSOLUTELY NO WARRANTY."
+msgstr ""
+
+#: ../pybliographer.py:48
+#, fuzzy
+msgid "For details, type `warranty'."
+msgstr "%s لنوعيّة محفّز مجهولة"
+
+#: ../pybliographer.py:111
+#: ../pybliographer.py:163
+#, fuzzy, python-format
+msgid "%s: error: can't open file `%s'"
+msgstr "لا يمكن فتح الملف"
+
+#: ../pybliographer.py:124
+#, fuzzy, python-format
+msgid "For help, run %s and type `help' at the prompt"
+msgstr "للمساعدة، أدخل <command>m</command> على سطر الأوامر للحصول على قائمة بالأوامر."
+
+#: ../pybliographer.py:133
+msgid ""
+"Useful commands:\n"
+"\thelp     to get some help\n"
+"\tquit     to quit\n"
+msgstr ""
+
+#. save history
+#: ../pybliographic.desktop.in.h:1
+#, fuzzy
+msgid "Bibliography Manager"
+msgstr "مدير الملحقات"
+
+#: ../pybliographic.desktop.in.h:2
+#, fuzzy
+msgid "Manage bibliographic databases"
+msgstr "أدر حلقة المفاتيح الخاصة بك"
+
+#: ../pybliographic.desktop.in.h:3
+#, fuzzy
+msgid "Pybliographic Bibliography Manager"
+msgstr "مدير الصوت - الصفحة %d/%d"
+
+#: ../scripts/pybcheck.py:31
+#, fuzzy
+msgid "usage: pybcheck <file | directory>..."
+msgstr "الدليل الجذري لمتصفح الملفات "
+
+#: ../scripts/pybcheck.py:60
+#, fuzzy, python-format
+msgid "file `%s' is ok [%d entries]"
+msgstr "لا يمكن قراءة الملف."
+
+#: ../scripts/pybcompact.py:30
+msgid "usage: pybcompact <latexfile> <bibtexfiles...>"
+msgstr ""
+
+#: ../scripts/pybcompact.py:34
+#, fuzzy, python-format
+msgid "pybcompact: error: %s\n"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#: ../scripts/pybcompact.py:99
+#, fuzzy
+msgid "no entry"
+msgstr "إدخال مباشر"
+
+#: ../scripts/pybcompact.py:162
+#: ../scripts/pybtext.py:240
+#, fuzzy, python-format
+msgid "can't find the following entries: %s"
+msgstr "%s: لم أجد مستخدم GDM '%s'.إلغاء!"
+
+#: ../scripts/pybconvert.py:29
+msgid "usage: pybconvert <source>..<target> <input> [output]"
+msgstr ""
+
+#: ../scripts/pybconvert.py:38
+msgid "pybconvert: error: bad conversion format"
+msgstr ""
+
+#: ../scripts/pybformat.py:34
+msgid ""
+"usage: pybformat [options] <database...>\n"
+"\n"
+"    options:\n"
+"      -o file, --output=file\t\tspecify an output filename\n"
+"      -s style, --style=style\t\tspecify a bibliography style\n"
+"      -f format, --format=format\tspecify an output format\n"
+"      -H header, --header=header\tdefines a header file\n"
+"      -F footer, --footer=footer\tdefines a footer file\n"
+"      -l 'output', --list='output'\tlists the available output formats\n"
+"      -h, --help\t\t\tshow this help message\n"
+"      -v, --version\t\t\tshow this help message\n"
+"    "
+msgstr ""
+
+#: ../scripts/pybformat.py:49
+#, fuzzy, python-format
+msgid "pybformat: error: %s\n"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#: ../scripts/pybformat.py:55
+#, fuzzy, python-format
+msgid "pybformat: warning: %s\n"
+msgstr "تحذير أمني"
+
+#: ../scripts/pybformat.py:90
+#: ../scripts/pybtext.py:252
+#: ../scripts/pybtext.py:278
+#: ../scripts/pybtext.py:321
+#, fuzzy, python-format
+msgid "can't open `%s': %s"
+msgstr "%s: لا يمكن فتح fifo!"
+
+#: ../scripts/pybformat.py:97
+#, fuzzy, python-format
+msgid "unknown list `%s'"
+msgstr "لائحة مجهولة %s\n"
+
+#: ../scripts/pybformat.py:100
+#, fuzzy, python-format
+msgid "pybformat: available values for `%s':"
+msgstr "المعلومات المتوفرة للملف %1:"
+
+#: ../scripts/pybformat.py:104
+#, fuzzy, python-format
+msgid "empty value list `%s'"
+msgstr "قيمة قائمة _جديدة:"
+
+#: ../scripts/pybformat.py:132
+#, fuzzy
+msgid "too few arguments"
+msgstr "\"%s\" لا يتوقّع معاملات"
+
+#: ../scripts/pybformat.py:139
+#: ../scripts/pybtext.py:117
+#, fuzzy, python-format
+msgid "unknown output format `%s'"
+msgstr "تهيئة الصورة مجهولة"
+
+#: ../scripts/pybformat.py:152
+#: ../scripts/pybtex.py:86
+#: ../scripts/pybtext.py:94
+#, fuzzy, python-format
+msgid "can't find style `%s'"
+msgstr "%s: لم أجد مستخدم GDM '%s'.إلغاء!"
+
+#: ../scripts/pybformat.py:155
+#, fuzzy, python-format
+msgid "pybformat: using style `%s', format `%s'\n"
+msgstr "تنسيق مستندك باﻷنماط"
+
+#: ../scripts/pybformat.py:170
+#, fuzzy, python-format
+msgid "can't open header `%s': %s"
+msgstr "%s: لا يمكن فتح fifo!"
+
+#: ../scripts/pybformat.py:178
+#, fuzzy, python-format
+msgid "can't open database: %s"
+msgstr "%s: لا يمكن فتح fifo!"
+
+#: ../scripts/pybformat.py:193
+#, fuzzy, python-format
+msgid "can't open footer `%s': %s"
+msgstr "%s: لا يمكن فتح fifo!"
+
+#: ../scripts/pybtex.py:34
+msgid "usage: pybtex <latexfile> [bibtexfiles...]"
+msgstr ""
+
+#: ../scripts/pybtex.py:38
+#, fuzzy, python-format
+msgid "pybtex: error: %s\n"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#. warn the user that some entries were not found
+#: ../scripts/pybtex.py:59
+msgid "pybtex: warning: the following keys were not resolved"
+msgstr ""
+
+#. If the LaTeX document declares no style...
+#: ../scripts/pybtex.py:64
+#, fuzzy
+msgid "no style defined"
+msgstr "لا علامات موقع معرفة"
+
+#: ../scripts/pybtext.py:41
+msgid "usage: pybtext [-o outputfile] [-s style] <textfile> <bibfiles...>"
+msgstr ""
+
+#: ../scripts/pybtext.py:45
+#, fuzzy, python-format
+msgid "pybtext: error: %s\n"
+msgstr ""
+"خطأ GConf:\n"
+"  %s"
+
+#: ../scripts/pybtext.py:50
+#, fuzzy, python-format
+msgid "pybtext: warning: %s\n"
+msgstr "تحذير أمني"
+
+#: ../scripts/pybtext.py:124
+#, fuzzy, python-format
+msgid "File already exists: `%s'"
+msgstr "الملف موجود مسبّقا"
+
+#: ../scripts/pybtext.py:127
+#, fuzzy, python-format
+msgid "A file with the same name already exists: `%s'"
+msgstr "هناك مجلّد موجود بنفس الإسم"
+
+#: ../scripts/pybtext.py:178
+#, fuzzy
+msgid "no citation found"
+msgstr "لم يُعثر على أي جهاز"
+
+#: ../scripts/pybtext.py:193
+#, fuzzy, python-format
+msgid "pybtext: using style `%s', format `%s'\n"
+msgstr "تنسيق مستندك باﻷنماط"
+
+#: ../scripts/pybtext.py:316
+#, fuzzy, python-format
+msgid "can't create `%s'"
+msgstr "فشل: تعذّر انشاء %s: %s\n"
+
+#: ../scripts/pybtext.py:342
+#, fuzzy, python-format
+msgid "can't remove `%s'"
+msgstr "لا يمكن حذف %s: %s\n"
+
+#: ../scripts/pybtext.py:344
+#, fuzzy
+msgid "Done"
+msgstr "تم"
+

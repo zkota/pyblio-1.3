@@ -19,6 +19,7 @@
 # 
 
 LANGUAGES = 		\
+	ar		\
 	az 		\
 	ca		\
 	cs 		\
