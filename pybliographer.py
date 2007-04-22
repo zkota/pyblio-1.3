@@ -132,9 +132,16 @@ if not quiet:
 	copyright ()
 	print _("Useful commands:\n	help     to get some help\n	quit     to quit\n").encode (charset)
 
-# ---------- Load default schemas
+# ---------- Load default schemas, set logging
 from Pyblio import Registry
 Registry.parse_default()
+
+if False:
+	from Pyblio import init_logging
+	import logging
+
+	init_logging()
+	logging.getLogger('pyblio').setLevel(logging.DEBUG)
 
 # ---------- Lire les fichiers de conf
 
