@@ -168,7 +168,7 @@ def popup_add (menu, item, action = None, argument = None):
     
     return tmp
 
-def error_dialog (title, err, parent = None):
+def error_dialog(title, err, parent = None):
 
     dialog = \
            gtk.MessageDialog (parent,

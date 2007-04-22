@@ -30,11 +30,12 @@ from xml.sax.saxutils import escape
 
 from Legacy import Fields, Connector
 from Legacy.GnomeUI import Utils
-from Pyblio.External import PubMed
+from Pyblio.External import PubMed, WOK
 from Pyblio import Store, Registry, Adapter
 from Pyblio.Cite import Citator
 from Pyblio.Format import HTML
 from Pyblio.Parsers.Semantic import BibTeX
+from Pyblio import Exceptions
 
 class MedlineUI (Utils.GladeWindow):
 
@@ -102,7 +103,12 @@ class MedlineUI (Utils.GladeWindow):
         self.size_save()
         self._w_medline.destroy()
 
-    def _on_search(self, w):
+    def _on_wok_search(self, w):
+        Fetch(self.document,
+              self._w_wok.child.get_text(),
+              WOK.WOK, self._w_medline)
+
+    def _on_medline_search(self, w):
         def get(w):
             return w.get_model()[w.get_active()][0]
 
@@ -129,7 +135,7 @@ class MedlineUI (Utils.GladeWindow):
                 parse(self._w_to_date.get_text()))
 
         q = self.helper.makeQuery(
-            keyword=self._w_keyword.entry.get_text(),
+            keyword=self._w_keyword.child.get_text(),
             abstract=self._w_abstracts.get_active(),
             epubahead=self._w_ahead.get_active(),
             publication_type=get(self._w_pub_type),
@@ -141,7 +147,7 @@ class MedlineUI (Utils.GladeWindow):
             use_publication_date=get(self._w_pub_date),
             from_date=from_date, to_date=to_date)
 
-        Fetch(self.document, q, self._w_medline)
+        Fetch(self.document, q, PubMed.PubMed, self._w_medline)
 
 class Fetch(Utils.GladeWindow):
 
@@ -150,22 +156,20 @@ class Fetch(Utils.GladeWindow):
                   'root': '_w_fetch'
                   }
 
-    def __init__ (self, document, query, parent=None):
+    def __init__ (self, document, query, engine, parent=None):
         self.cell = None
         Utils.GladeWindow.__init__(self, parent)
 
         s = Registry.getSchema('org.pybliographer/pubmed/0.1')
         db = Store.get('memory').dbcreate(None, s)
-        pm = PubMed.PubMed(db)
-        pm.BATCH_SIZE = 50
+        self.pm = engine(db)
+        self.pm.BATCH_SIZE = 50
 
         self.document = document
         self.db = db
         url = Fields.URL('file:/dev/null')
         self.parser = Legacy.Format.BibTeX.DataBase(url)
-        self._w_fetch.set_title(_("PubMed results for: %s") % query)
-        self._w_summary.set_markup(_("PubMed results for <i>%s</i>") %
-                                   escape(query))
+        self._w_fetch.set_title(_("Results for: %s") % query)
         self.writer = BibTeX.Writer()
         # in order to display a compact form of the results, we need
         # to format them. use a mapping on top of the bibtex version.
@@ -175,33 +179,58 @@ class Fetch(Utils.GladeWindow):
             Registry.RIP_dirs['system'], 'full.cip'))
         self.cite.prepare(self.bibtex, None)
 
-        model = gtk.ListStore(gobject.TYPE_PYOBJECT,
-                              gobject.TYPE_STRING)
+        model = gtk.ListStore(gobject.TYPE_PYOBJECT, gobject.TYPE_STRING)
         self.cell = gtk.CellRendererText()
+
+        l = gtk.Label()
+        l.set_markup(_("Results for <i>%s</i>") % escape(query))
         column = gtk.TreeViewColumn(None, self.cell, markup=1)
+        column.set_widget(l)
+        l.show()
+
         self._w_view.append_column(column)
         self._w_view.set_model(model)
 
-        callback = pm.count(query)
+        callback = self.pm.count(query)
 
         self._w_progress.set_fraction(0.0)
         self._w_progress.set_text(_("Fetching results"))
 
-        def failure(msg):
-            # TODO: provide a user level error message
-            print "FAILURE", msg
-        
+        def failure(failure):
+            self._w_stop.set_sensitive(False)
+            if failure.check(Exceptions.QueryError):
+                message = _("Failed to get results")
+                secondary = str(failure.value)
+            else:
+                message = failure.getErrorMessage()
+                secondary = failure.getTraceback()
+            d = gtk.MessageDialog(self._w_fetch,
+                                  gtk.DIALOG_DESTROY_WITH_PARENT,
+                                  gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                  message)
+            if secondary:
+                d.format_secondary_text(secondary)
+            d.run()
+            d.destroy()
+
+        def fallback(failure):
+            print failure
+
         def done_count(total):
             self._total = total
             self._got = 0.0
             target = min(total, 100)
             def set_progress():
-                self._w_progress.set_fraction(self._got / target)
+                if target > 0:
+                    ratio = self._got / target
+                else:
+                    ratio = 0
+                self._w_progress.set_fraction(ratio)
                 self._w_progress.set_text(_("Done %d/%d (%d total)") % (
                     len(db.entries), target, self._total))
             set_progress()
 
-            l2cb, rs = pm.search(query, maxhits=100)
+            l2cb, rs = self.pm.search(query, maxhits=100)
             def _on_add(k):
                 v = db[k]
                 t = HTML.generate(self.cite.formatter(v))
@@ -218,15 +247,21 @@ class Fetch(Utils.GladeWindow):
                 self._w_progress.set_fraction(1.0)
                 self._w_progress.set_text(_("Done %d (%d total)") % (
                     len(db.entries), total))
-            l2cb.addCallback(done).addErrback(failure)
-        callback.addCallback(done_count).addErrback(failure)
+            l2cb.addCallback(done).\
+                addErrback(failure).\
+                addErrback(fallback)
+
+        callback.addCallback(done_count).\
+            addErrback(failure).\
+            addErrback(fallback)
 
     def _w_close(self, w):
         self.size_save()
         self._w_fetch.destroy()
         
     def _on_stop(self, w):
-        # TODO: cancel action
+        self.pm.cancel()
+        self._w_stop.set_sensitive(False)
         return
     
     def _w_row_activate(self, w, position, column):
