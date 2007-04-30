@@ -1,4 +1,4 @@
-gladedir   = $(datadir)/$(PACKAGE)$(EXTENSION)/glade
+gladedir   = $(datadir)/$(PACKAGE)$(EXTENSION)/Legacy/GnomeUI/glade
 appicondir = $(datadir)/pixmaps
 
 glade_DATA = 					\

@@ -23,10 +23,14 @@
 
 
 import atexit, cPickle, os, string, sys, types
+from Legacy import version
 
 pickle = cPickle
 del cPickle
 
+user_confdir = os.path.expanduser(
+    os.path.join('~', '.pyblio%s' % version.extension))
+user_config = os.path.join(user_confdir, 'pybrc.conf')
 
 class ConfigItem:
 
@@ -329,7 +333,7 @@ class Dict:
 def load_user ():
     # load the saved items
     try:
-        file = open (os.path.expanduser ('~/.pybrc.conf'), 'r')
+        file = open(user_config, 'r')
     except IOError: return
 
     changed = pickle.load (file)
@@ -351,15 +355,18 @@ def save_user (changed):
         return
     # read what has to be saved again
     try:
-        file = open (os.path.expanduser ('~/.pybrc.conf'), 'r')
+        file = open (user_config, 'r')
         previous = pickle.load (file)
         file.close ()
     except IOError: previous = {}
     previous.update(changed)
-    
-    file = open (os.path.expanduser ('~/.pybrc.conf'), 'w')
-    pickle.dump (previous, file)
-    file.close ()
+
+    if not os.path.isdir(user_confdir):
+        os.mkdir(user_confdir, 0700)
+
+    file = open(user_config, 'w')
+    pickle.dump(previous, file)
+    file.close()
     return
 
 

@@ -17,10 +17,10 @@ For more information, please consult the documentation at:
 Before installing pybliographer, please install:
 
        
-  - GNU Recode (v. 3.5)
+  - pyblio-core (v >= 1.3.x)
   - python-bibtex (also available from http://pybliographer.org/)
+  - GNU Recode (v. 3.5)
   - Gnome 2.x and gnome-python 2.x
-
 
 * Installation 
   ------------

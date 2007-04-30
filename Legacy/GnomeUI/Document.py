@@ -39,7 +39,7 @@ from Legacy.GnomeUI.Sort import SortDialog
 from Legacy.GnomeUI.Medline import MedlineUI
 
 from Legacy import Base, Config, Connector, Exceptions, Fields, Open
-from Legacy import Query, Resource, Selection, Sort, Types, version
+from Legacy import Resource, Selection, Sort, Types, version
 from Legacy import Search as SearchCls
 
 import Legacy.Style.Utils

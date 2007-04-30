@@ -25,6 +25,7 @@ progname = "@package@"
 
 data_pybdir = "@datapyb@"
 localedir   = "@localedir@"
+extension   = "@extension@"
 
 import sys
 
@@ -91,7 +92,8 @@ try:             os.stat ("pybrc.py")
 except os.error: sources = [ os.path.join (data_pybdir, "pybrc.py") ]
 else:  	         sources = [ "pybrc.py" ]
 
-sources.append (os.path.expanduser('~/.pybrc.py'))
+sources.append(os.path.expanduser(
+	os.path.join('~', '.pyblio' + extension, 'pybrc.py')))
 load_config = 1
 
 for opt, value in optlist:
