@@ -114,7 +114,7 @@ class MedlineUI (Utils.GladeWindow):
 
         from_date, to_date = get(self._w_entrez_date)
         if from_date is None:
-            def parse(text):
+            def parse(text, first=True):
                 try:
                     parts = [int(x) for x in text.split('/')]
                 except ValueError:
@@ -122,17 +122,26 @@ class MedlineUI (Utils.GladeWindow):
                 if not parts:
                     return None
                 if len(parts) == 1:
-                    return datetime.date(year=parts[0],
-                                         month=12, day=31)
+                    if first:
+                        return datetime.date(year=parts[0],
+                                             month=1, day=1)
+                    else:
+                        return datetime.date(year=parts[0],
+                                             month=12, day=31)
                 if len(parts) == 2:
-                    return (datetime.date(year=parts[0],
-                                          month=parts[1]+1,
-                                          day=1) -
-                            datetime.timedelta(days=1))
+                    if first:
+                        return datetime.date(year=parts[0],
+                                             month=parts[1],
+                                             day=1)
+                    else:
+                        return (datetime.date(year=parts[0],
+                                              month=parts[1]+1,
+                                              day=1) -
+                                datetime.timedelta(days=1))
                 return datetime.date(*parts[:3])
             from_date, to_date = (
-                parse(self._w_from_date.get_text()),
-                parse(self._w_to_date.get_text()))
+                parse(self._w_from_date.get_text(), True),
+                parse(self._w_to_date.get_text(), False))
 
         q = self.helper.makeQuery(
             keyword=self._w_keyword.child.get_text(),
