@@ -169,7 +169,7 @@ class Fetch(Utils.GladeWindow):
         self.cell = None
         Utils.GladeWindow.__init__(self, parent)
 
-        s = Registry.getSchema('org.pybliographer/pubmed/0.1')
+        s = Registry.getSchema(engine.schema)
         db = Store.get('memory').dbcreate(None, s)
         self.pm = engine(db)
         self.pm.BATCH_SIZE = 50
@@ -241,7 +241,7 @@ class Fetch(Utils.GladeWindow):
 
             l2cb, rs = self.pm.search(query, maxhits=100)
             def _on_add(k):
-                v = db[k]
+                v = self.bibtex[k]
                 t = HTML.generate(self.cite.formatter(v))
                 model.append((k, t))
                 self._got += 1

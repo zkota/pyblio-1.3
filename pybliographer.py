@@ -92,8 +92,11 @@ try:             os.stat ("pybrc.py")
 except os.error: sources = [ os.path.join (data_pybdir, "pybrc.py") ]
 else:  	         sources = [ "pybrc.py" ]
 
-sources.append(os.path.expanduser(
-	os.path.join('~', '.pyblio' + extension, 'pybrc.py')))
+homedir = os.path.join(os.path.expanduser('~'), '.pyblio' + extension)
+if not os.path.isdir(homedir):
+	os.mkdir(homedir, 0700)
+	
+sources.append(os.path.join(homedir, 'pybrc.py'))
 load_config = 1
 
 for opt, value in optlist:
@@ -138,12 +141,11 @@ if not quiet:
 from Pyblio import Registry
 Registry.parse_default()
 
-if False:
-	from Pyblio import init_logging
-	import logging
+from Pyblio import init_logging
+import logging
 
-	init_logging()
-	logging.getLogger('pyblio').setLevel(logging.DEBUG)
+init_logging(os.path.join(homedir, 'log'))
+logging.getLogger('pyblio').setLevel(logging.DEBUG)
 
 # ---------- Lire les fichiers de conf
 
