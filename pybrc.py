@@ -10,25 +10,25 @@ import string, os
 
 # define autoloaded formats
 
-Autoload.preregister ('format', 'BibTeX',  'Pyblio.Format.BibTeX',  '.*\.bib')
-Autoload.preregister ('format', 'Ovid',    'Pyblio.Format.Ovid',    '.*\.ovid')
-Autoload.preregister ('format', 'Medline', 'Pyblio.Format.Medline', '.*\.med')
-Autoload.preregister ('format', 'Refer',   'Pyblio.Format.Refer',   '.*\.refer')
-Autoload.preregister ('format', 'ISIFile', 'Pyblio.Format.isifile', '.*\.isi')
+Autoload.preregister ('format', 'BibTeX',  'Legacy.Format.BibTeX',  '.*\.bib')
+Autoload.preregister ('format', 'Ovid',    'Legacy.Format.Ovid',    '.*\.ovid')
+Autoload.preregister ('format', 'Medline', 'Legacy.Format.Medline', '.*\.med')
+Autoload.preregister ('format', 'Refer',   'Legacy.Format.Refer',   '.*\.refer')
+Autoload.preregister ('format', 'ISIFile', 'Legacy.Format.isifile', '.*\.isi')
 
 
 # define styles and outputs
 
-Autoload.preregister ('style', 'Generic', 'Pyblio.Style.Generic')
-Autoload.preregister ('style', 'apa4e',   'Pyblio.Style.apa4e')
-Autoload.preregister ('style', 'abbrv',   'Pyblio.Style.abbrv')
+Autoload.preregister ('style', 'Generic', 'Legacy.Style.Generic')
+Autoload.preregister ('style', 'apa4e',   'Legacy.Style.apa4e')
+Autoload.preregister ('style', 'abbrv',   'Legacy.Style.abbrv')
 
-Autoload.preregister ('output', 'Text',    'Pyblio.Output.text')
-Autoload.preregister ('output', 'Raw',     'Pyblio.Output.raw')
-Autoload.preregister ('output', 'HTML',    'Pyblio.Output.html')
-Autoload.preregister ('output', 'LaTeX',   'Pyblio.Output.LaTeX')
-Autoload.preregister ('output', 'Textnum', 'Pyblio.Output.textnum')
-Autoload.preregister ('output', 'Textau',  'Pyblio.Output.textau')
+Autoload.preregister ('output', 'Text',    'Legacy.Output.text')
+Autoload.preregister ('output', 'Raw',     'Legacy.Output.raw')
+Autoload.preregister ('output', 'HTML',    'Legacy.Output.html')
+Autoload.preregister ('output', 'LaTeX',   'Legacy.Output.LaTeX')
+Autoload.preregister ('output', 'Textnum', 'Legacy.Output.textnum')
+Autoload.preregister ('output', 'Textau',  'Legacy.Output.textau')
 
 # define key formats
 
