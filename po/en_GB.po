@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pybliographer v_1_0_x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-12 07:18+0100\n"
-"PO-Revision-Date: 2006-09-12 07:18-0000\n"
+"POT-Creation-Date: 2007-05-16 08:50+0100\n"
+"PO-Revision-Date: 2007-05-16 08:50-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English/GB <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,11 @@ msgstr "List (%s)"
 #, python-format
 msgid "Dictionary (%s, %s)"
 msgstr "Dictionary (%s, %s)"
+
+#: ../Pyblio/Config.py:344
+#, python-format
+msgid "warning: could not restore setting %r to %r: %s"
+msgstr "warning: could not restore setting %r to %r: %s"
 
 #: ../Pyblio/Fields.py:261
 msgid "Illegal year value"
@@ -179,12 +184,12 @@ msgid "Save the current file"
 msgstr "Save the current file"
 
 #: ../Pyblio/GnomeUI/Document.py:161
-#: ../glade/pyblio.glade.in.h:8
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:8
 msgid "Merge With..."
 msgstr "Merge With..."
 
 #: ../Pyblio/GnomeUI/Document.py:162
-#: ../glade/pyblio.glade.in.h:7
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:7
 msgid "Medline Query..."
 msgstr "Medline Query..."
 
@@ -193,12 +198,12 @@ msgid "Add a new entry"
 msgstr "Add a new entry"
 
 #: ../Pyblio/GnomeUI/Document.py:174
-#: ../glade/pyblio.glade.in.h:12
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:12
 msgid "S_ort..."
 msgstr "S_ort..."
 
 #: ../Pyblio/GnomeUI/Document.py:175
-#: ../glade/pyblio.glade.in.h:2
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:2
 msgid "Cite..."
 msgstr "Cite..."
 
@@ -207,17 +212,17 @@ msgid "Cite key(s)"
 msgstr "Cite key(s)"
 
 #: ../Pyblio/GnomeUI/Document.py:176
-#: ../glade/pyblio.glade.in.h:6
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:6
 msgid "Format..."
 msgstr "Format..."
 
 #: ../Pyblio/GnomeUI/Document.py:178
-#: ../glade/pyblio.glade.in.h:4
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:4
 msgid "Fields..."
 msgstr "Fields..."
 
 #: ../Pyblio/GnomeUI/Document.py:180
-#: ../glade/pyblio.glade.in.h:5
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:5
 msgid "Forget all changes"
 msgstr "Forget all changes"
 
@@ -229,15 +234,15 @@ msgstr "_Resource"
 msgid "_About"
 msgstr "_About"
 
-#: ../Pyblio/GnomeUI/Document.py:243
+#: ../Pyblio/GnomeUI/Document.py:242
 msgid "Quick search"
 msgstr "Quick search"
 
-#: ../Pyblio/GnomeUI/Document.py:317
+#: ../Pyblio/GnomeUI/Document.py:316
 msgid "Unnamed bibliographic database"
 msgstr "Unnamed bibliographic database"
 
-#: ../Pyblio/GnomeUI/Document.py:400
+#: ../Pyblio/GnomeUI/Document.py:399
 #, python-format
 msgid ""
 "can't open file `%s' for writing:\n"
@@ -246,7 +251,7 @@ msgstr ""
 "can't open file `%s' for writing:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:421
+#: ../Pyblio/GnomeUI/Document.py:420
 #, python-format
 msgid ""
 "Error while parsing `%s':\n"
@@ -255,44 +260,44 @@ msgstr ""
 "Error while parsing `%s':\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:437
+#: ../Pyblio/GnomeUI/Document.py:436
 msgid "New database"
 msgstr "New database"
 
-#: ../Pyblio/GnomeUI/Document.py:445
-#: ../Pyblio/GnomeUI/Document.py:449
+#: ../Pyblio/GnomeUI/Document.py:444
+#: ../Pyblio/GnomeUI/Document.py:448
 msgid "[no entry]"
 msgstr "[no entry]"
 
-#: ../Pyblio/GnomeUI/Document.py:446
+#: ../Pyblio/GnomeUI/Document.py:445
 msgid "[1 entry]"
 msgstr "[1 entry]"
 
-#: ../Pyblio/GnomeUI/Document.py:447
+#: ../Pyblio/GnomeUI/Document.py:446
 #, python-format
 msgid "[%d entries]"
 msgstr "[%d entries]"
 
-#: ../Pyblio/GnomeUI/Document.py:450
+#: ../Pyblio/GnomeUI/Document.py:449
 #, python-format
 msgid "[%d/1 entry]"
 msgstr "[%d/1 entry]"
 
-#: ../Pyblio/GnomeUI/Document.py:451
+#: ../Pyblio/GnomeUI/Document.py:450
 #, python-format
 msgid "[%d/%d entries]"
 msgstr "[%d/%d entries]"
 
-#: ../Pyblio/GnomeUI/Document.py:456
+#: ../Pyblio/GnomeUI/Document.py:455
 msgid "[modified]"
 msgstr "[modified]"
 
-#: ../Pyblio/GnomeUI/Document.py:459
+#: ../Pyblio/GnomeUI/Document.py:458
 #, python-format
 msgid "view limited to: %s"
 msgstr "view limited to: %s"
 
-#: ../Pyblio/GnomeUI/Document.py:472
+#: ../Pyblio/GnomeUI/Document.py:471
 msgid ""
 "The database has been modified.\n"
 "Discard changes?"
@@ -300,7 +305,7 @@ msgstr ""
 "The database has been modified.\n"
 "Discard changes?"
 
-#: ../Pyblio/GnomeUI/Document.py:476
+#: ../Pyblio/GnomeUI/Document.py:475
 msgid ""
 "The database has been modified.\n"
 "Save changes?"
@@ -308,7 +313,7 @@ msgstr ""
 "The database has been modified.\n"
 "Save changes?"
 
-#: ../Pyblio/GnomeUI/Document.py:493
+#: ../Pyblio/GnomeUI/Document.py:492
 msgid ""
 "The database has been externally modified.\n"
 "Overwrite changes ?"
@@ -317,30 +322,30 @@ msgstr ""
 "Overwrite changes ?"
 
 #. no result.
-#: ../Pyblio/GnomeUI/Document.py:518
+#: ../Pyblio/GnomeUI/Document.py:521
 msgid "Your query returned no result"
 msgstr "Your query returned no result"
 
 #. get a new file name
-#: ../Pyblio/GnomeUI/Document.py:528
+#: ../Pyblio/GnomeUI/Document.py:531
 msgid "Merge file"
 msgstr "Merge file"
 
-#: ../Pyblio/GnomeUI/Document.py:540
-#: ../Pyblio/GnomeUI/Document.py:626
+#: ../Pyblio/GnomeUI/Document.py:543
+#: ../Pyblio/GnomeUI/Document.py:629
 msgid "Open error"
 msgstr "Open error"
 
-#: ../Pyblio/GnomeUI/Document.py:564
+#: ../Pyblio/GnomeUI/Document.py:567
 msgid "Merge status"
 msgstr "Merge status"
 
 #. get a new file name
-#: ../Pyblio/GnomeUI/Document.py:575
+#: ../Pyblio/GnomeUI/Document.py:578
 msgid "Open file"
 msgstr "Open file"
 
-#: ../Pyblio/GnomeUI/Document.py:613
+#: ../Pyblio/GnomeUI/Document.py:616
 msgid ""
 "An autosave file was found which is newer than the original file.\n"
 "Do you want to restore it?"
@@ -348,9 +353,9 @@ msgstr ""
 "An autosave file was found which is newer than the original file.\n"
 "Do you want to restore it?"
 
-#: ../Pyblio/GnomeUI/Document.py:647
-#: ../Pyblio/GnomeUI/Document.py:788
-#: ../Pyblio/GnomeUI/Document.py:848
+#: ../Pyblio/GnomeUI/Document.py:650
+#: ../Pyblio/GnomeUI/Document.py:791
+#: ../Pyblio/GnomeUI/Document.py:851
 #, python-format
 msgid ""
 "Unable to remove autosave file `%s':\n"
@@ -359,7 +364,7 @@ msgstr ""
 "Unable to remove autosave file `%s':\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:698
+#: ../Pyblio/GnomeUI/Document.py:701
 #, python-format
 msgid ""
 "Error during autosaving:\n"
@@ -368,7 +373,7 @@ msgstr ""
 "Error during autosaving:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:726
+#: ../Pyblio/GnomeUI/Document.py:729
 #, python-format
 msgid ""
 "Unable to save `%s':\n"
@@ -377,7 +382,7 @@ msgstr ""
 "Unable to save `%s':\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:734
+#: ../Pyblio/GnomeUI/Document.py:737
 msgid ""
 "An internal error occured during saving\n"
 "Try to Save As..."
@@ -385,11 +390,11 @@ msgstr ""
 "An internal error occured during saving\n"
 "Try to Save As..."
 
-#: ../Pyblio/GnomeUI/Document.py:749
+#: ../Pyblio/GnomeUI/Document.py:752
 msgid "Save As..."
 msgstr "Save As..."
 
-#: ../Pyblio/GnomeUI/Document.py:755
+#: ../Pyblio/GnomeUI/Document.py:758
 #, python-format
 msgid ""
 "The file `%s' already exists.\n"
@@ -398,7 +403,7 @@ msgstr ""
 "The file `%s' already exists.\n"
 "Overwrite it ?"
 
-#: ../Pyblio/GnomeUI/Document.py:762
+#: ../Pyblio/GnomeUI/Document.py:765
 #, python-format
 msgid ""
 "During opening:\n"
@@ -407,11 +412,11 @@ msgstr ""
 "During opening:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:800
+#: ../Pyblio/GnomeUI/Document.py:803
 msgid "Reopen error"
 msgstr "Reopen error"
 
-#: ../Pyblio/GnomeUI/Document.py:873
+#: ../Pyblio/GnomeUI/Document.py:876
 #, python-format
 msgid ""
 "An entry called `%s' already exists.\n"
@@ -420,30 +425,30 @@ msgstr ""
 "An entry called `%s' already exists.\n"
 "Rename and add it anyway ?"
 
-#: ../Pyblio/GnomeUI/Document.py:910
+#: ../Pyblio/GnomeUI/Document.py:913
 msgid "Really remove all the entries ?"
 msgstr "Really remove all the entries ?"
 
-#: ../Pyblio/GnomeUI/Document.py:930
+#: ../Pyblio/GnomeUI/Document.py:933
 msgid "Create new entry"
 msgstr "Create new entry"
 
-#: ../Pyblio/GnomeUI/Document.py:944
+#: ../Pyblio/GnomeUI/Document.py:947
 #, python-format
 msgid "Really edit %d entries ?"
 msgstr "Really edit %d entries ?"
 
-#: ../Pyblio/GnomeUI/Document.py:990
+#: ../Pyblio/GnomeUI/Document.py:993
 #, python-format
 msgid "Remove all the %d entries ?"
 msgstr "Remove all the %d entries ?"
 
-#: ../Pyblio/GnomeUI/Document.py:992
+#: ../Pyblio/GnomeUI/Document.py:995
 #, python-format
 msgid "Remove entry `%s' ?"
 msgstr "Remove entry `%s' ?"
 
-#: ../Pyblio/GnomeUI/Document.py:1011
+#: ../Pyblio/GnomeUI/Document.py:1014
 msgid ""
 "your search text must contain\n"
 "latin-1 characters only"
@@ -451,8 +456,8 @@ msgstr ""
 "your search text must contain\n"
 "latin-1 characters only"
 
-#: ../Pyblio/GnomeUI/Document.py:1090
-#: ../Pyblio/GnomeUI/Document.py:1098
+#: ../Pyblio/GnomeUI/Document.py:1093
+#: ../Pyblio/GnomeUI/Document.py:1101
 #, python-format
 msgid ""
 "Can't connect to LyX:\n"
@@ -461,7 +466,7 @@ msgstr ""
 "Can't connect to LyX:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:1213
+#: ../Pyblio/GnomeUI/Document.py:1216
 #, python-format
 msgid ""
 "Can't display documentation:\n"
@@ -470,19 +475,19 @@ msgstr ""
 "Can't display documentation:\n"
 "%s"
 
-#: ../Pyblio/GnomeUI/Document.py:1221
+#: ../Pyblio/GnomeUI/Document.py:1224
 msgid "This program is copyrighted under the GNU GPL"
 msgstr "This program is copyrighted under the GNU GPL"
 
-#: ../Pyblio/GnomeUI/Document.py:1222
-msgid "Gnome interface to the Pybliographer system."
-msgstr "Gnome interface to the Pybliographer system."
+#: ../Pyblio/GnomeUI/Document.py:1225
+msgid "GNOME interface to the Pybliographer system."
+msgstr "GNOME interface to the Pybliographer system."
 
-#: ../Pyblio/GnomeUI/Document.py:1233
-msgid "Gnome Translation Team"
-msgstr "Gnome Translation Team"
+#: ../Pyblio/GnomeUI/Document.py:1236
+msgid "GNOME Translation Team"
+msgstr "GNOME Translation Team"
 
-#: ../Pyblio/GnomeUI/Document.py:1238
+#: ../Pyblio/GnomeUI/Document.py:1241
 msgid "Pybliographer Home Page"
 msgstr "Pybliographer Home Page"
 
@@ -493,8 +498,8 @@ msgstr "Last Name, First Name"
 #: ../Pyblio/GnomeUI/Editor.py:36
 #: ../Pyblio/GnomeUI/Editor.py:1327
 #: ../Pyblio/GnomeUI/Fields.py:39
-#: ../glade/config1.glade.h:14
-#: ../glade/fields1.glade.h:19
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:14
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:19
 msgid "Text"
 msgstr "Text"
 
@@ -549,8 +554,8 @@ msgstr "Select file"
 
 #: ../Pyblio/GnomeUI/Editor.py:549
 #: ../Pyblio/GnomeUI/Fields.py:236
-#: ../glade/config1.glade.h:8
-#: ../glade/fields1.glade.h:6
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:8
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:6
 msgid "Entry type"
 msgstr "Entry type"
 
@@ -655,8 +660,8 @@ msgid "Long Text"
 msgstr "Long Text"
 
 #: ../Pyblio/GnomeUI/Fields.py:41
-#: ../glade/config1.glade.h:16
-#: ../glade/fields1.glade.h:21
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:16
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:21
 msgid "URL"
 msgstr "URL"
 
@@ -669,14 +674,14 @@ msgid "Date"
 msgstr "Date"
 
 #: ../Pyblio/GnomeUI/Fields.py:124
-#: ../glade/config1.glade.h:11
-#: ../glade/fields1.glade.h:10
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:11
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:10
 msgid "Name"
 msgstr "Name"
 
 #: ../Pyblio/GnomeUI/Fields.py:127
-#: ../glade/config1.glade.h:15
-#: ../glade/fields1.glade.h:20
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:15
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:20
 msgid "Type"
 msgstr "Type"
 
@@ -702,7 +707,7 @@ msgid "File"
 msgstr "File"
 
 #: ../Pyblio/GnomeUI/FileSelector.py:76
-#: ../glade/openurl.glade.h:2
+#: ../Pyblio/GnomeUI/glade/openurl.glade.h:2
 msgid "Bibliography type:"
 msgstr "Bibliography type:"
 
@@ -738,7 +743,7 @@ msgstr "[Entry Type]"
 msgid "[Key Value]"
 msgstr "[Key Value]"
 
-#: ../Pyblio/GnomeUI/Utils.py:194
+#: ../Pyblio/GnomeUI/Utils.py:193
 msgid "The following errors occured:\n"
 msgstr "The following errors occured:\n"
 
@@ -746,6 +751,268 @@ msgstr "The following errors occured:\n"
 #, python-format
 msgid "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
 msgstr "This is Pybliographic %s [Python %s, Gtk %s, PyGTK %s]"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:1
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:1
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:1
+#: ../Pyblio/GnomeUI/glade/openurl.glade.h:1
+#: ../Pyblio/GnomeUI/glade/search.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:2
+msgid "<b>Entry type</b>"
+msgstr "<b>Entry type</b>"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:3
+msgid "A"
+msgstr "A"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:4
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:2
+msgid "Association"
+msgstr "Association"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:5
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:3
+msgid "Datum"
+msgstr "Datum"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:6
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:4
+msgid "Editor"
+msgstr "Editor"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:7
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:5
+msgid "Entries"
+msgstr "Entries"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:9
+msgid "FIELDS DEFINITION"
+msgstr "FIELDS DEFINITION"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:10
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:8
+msgid "Fields "
+msgstr "Fields "
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:12
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:11
+msgid "Name "
+msgstr "Name "
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:13
+msgid "Pybliographer Configuration"
+msgstr "Pybliographer Configuration"
+
+#: ../Pyblio/GnomeUI/glade/config1.glade.h:17
+msgid "standard fields"
+msgstr "standard fields"
+
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:7
+msgid "Entry types and field names configuration"
+msgstr "Entry types and field names configuration"
+
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:9
+msgid "Information for <b>Article</b> entry type"
+msgstr "Information for <b>Article</b> entry type"
+
+#: ../Pyblio/GnomeUI/glade/fields1.glade.h:12
+msgid ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+msgstr ""
+"Select an entry type and specify \n"
+"its associated (mandatory and\n"
+"optional) fields on the next page.\n"
+"\n"
+"\n"
+"\n"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:1
+msgid "Bibliography style:"
+msgstr "Bibliography style:"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:2
+msgid "Format entries"
+msgstr "Format entries"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:3
+msgid "Output file:"
+msgstr "Output file:"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:4
+msgid "Output format:"
+msgstr "Output format:"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:5
+msgid "Save Formatted as"
+msgstr "Save Formatted as"
+
+#: ../Pyblio/GnomeUI/glade/format.glade.h:6
+msgid "Style Selection"
+msgstr "Style Selection"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:2
+msgid "Enter your Medline Query"
+msgstr "Enter your Medline Query"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:3
+msgid "From:"
+msgstr "From:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:4
+msgid "Limited to:"
+msgstr "Limited to:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:5
+msgid ""
+"Maximum number\n"
+"of results:"
+msgstr ""
+"Maximum number\n"
+"of results:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:7
+msgid "Medline Query"
+msgstr "Medline Query"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:8
+msgid ""
+"Only items \n"
+"ahead of print"
+msgstr ""
+"Only items \n"
+"ahead of print"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:10
+msgid ""
+"Only items \n"
+"with abstracts"
+msgstr ""
+"Only items \n"
+"with abstracts"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:12
+msgid ""
+"Search \n"
+"PubMed for:"
+msgstr ""
+"Search \n"
+"PubMed for:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:14
+msgid ""
+"Starting listing at\n"
+"result number:"
+msgstr ""
+"Starting listing at\n"
+"result number:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:16
+msgid "To:"
+msgstr "To:"
+
+#: ../Pyblio/GnomeUI/glade/medline.glade.h:17
+msgid ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+msgstr ""
+"Use the format YYYY/MM/DD\n"
+"Month and day are optional."
+
+#: ../Pyblio/GnomeUI/glade/openurl.glade.h:3
+msgid "Enter the location (URI) of the file you would like to open:"
+msgstr "Enter the location (URI) of the file you would like to open:"
+
+#: ../Pyblio/GnomeUI/glade/openurl.glade.h:4
+msgid "Open Location"
+msgstr "Open Location"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:1
+msgid "Cite"
+msgstr "Cite"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:3
+msgid "Contents"
+msgstr "Contents"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:9
+msgid "Open File"
+msgstr "Open File"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:10
+msgid "Previous Documents"
+msgstr "Previous Documents"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:11
+msgid "Pybliographer"
+msgstr "Pybliographer"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:13
+msgid "Save File"
+msgstr "Save File"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:14
+msgid "Settings"
+msgstr "Settings"
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:15
+msgid "_Add..."
+msgstr "_Add..."
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:16
+msgid "_Delete..."
+msgstr "_Delete..."
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:17
+msgid "_Edit..."
+msgstr "_Edit..."
+
+#: ../Pyblio/GnomeUI/glade/pyblio.glade.in.h:18
+msgid "_New"
+msgstr "_New"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:2
+msgid "Close"
+msgstr "Close"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:3
+msgid "Expert Search"
+msgstr "Expert Search"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:4
+msgid "Field"
+msgstr "Field"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:5
+msgid "Pattern"
+msgstr "Pattern"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:6
+msgid "Query"
+msgstr "Query"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:7
+msgid "Search"
+msgstr "Search"
+
+#: ../Pyblio/GnomeUI/glade/search.glade.h:8
+msgid "Simple Search"
+msgstr "Simple Search"
+
+#: ../Pyblio/GnomeUI/glade/sort.glade.h:1
+msgid "Select sort criterions"
+msgstr "Select sort criteria"
+
+#: ../Pyblio/GnomeUI/glade/sort.glade.h:2
+msgid "Set as default"
+msgstr "Set as default"
 
 #: ../Pyblio/LyX.py:37
 #, python-format
@@ -861,268 +1128,6 @@ msgstr "invalid opening tag: %s"
 #, python-format
 msgid "invalid closing tag: %s"
 msgstr "invalid closing tag: %s"
-
-#: ../glade/config1.glade.h:1
-#: ../glade/fields1.glade.h:1
-#: ../glade/medline.glade.h:1
-#: ../glade/openurl.glade.h:1
-#: ../glade/search.glade.h:1
-msgid "*"
-msgstr "*"
-
-#: ../glade/config1.glade.h:2
-msgid "<b>Entry type</b>"
-msgstr "<b>Entry type</b>"
-
-#: ../glade/config1.glade.h:3
-msgid "A"
-msgstr "A"
-
-#: ../glade/config1.glade.h:4
-#: ../glade/fields1.glade.h:2
-msgid "Association"
-msgstr "Association"
-
-#: ../glade/config1.glade.h:5
-#: ../glade/fields1.glade.h:3
-msgid "Datum"
-msgstr "Datum"
-
-#: ../glade/config1.glade.h:6
-#: ../glade/fields1.glade.h:4
-msgid "Editor"
-msgstr "Editor"
-
-#: ../glade/config1.glade.h:7
-#: ../glade/fields1.glade.h:5
-msgid "Entries"
-msgstr "Entries"
-
-#: ../glade/config1.glade.h:9
-msgid "FIELDS DEFINITION"
-msgstr "FIELDS DEFINITION"
-
-#: ../glade/config1.glade.h:10
-#: ../glade/fields1.glade.h:8
-msgid "Fields "
-msgstr "Fields "
-
-#: ../glade/config1.glade.h:12
-#: ../glade/fields1.glade.h:11
-msgid "Name "
-msgstr "Name "
-
-#: ../glade/config1.glade.h:13
-msgid "Pybliographer Configuration"
-msgstr "Pybliographer Configuration"
-
-#: ../glade/config1.glade.h:17
-msgid "standard fields"
-msgstr "standard fields"
-
-#: ../glade/fields1.glade.h:7
-msgid "Entry types and field names configuration"
-msgstr "Entry types and field names configuration"
-
-#: ../glade/fields1.glade.h:9
-msgid "Information for <b>Article</b> entry type"
-msgstr "Information for <b>Article</b> entry type"
-
-#: ../glade/fields1.glade.h:12
-msgid ""
-"Select an entry type and specify \n"
-"its associated (mandatory and\n"
-"optional) fields on the next page.\n"
-"\n"
-"\n"
-"\n"
-msgstr ""
-"Select an entry type and specify \n"
-"its associated (mandatory and\n"
-"optional) fields on the next page.\n"
-"\n"
-"\n"
-"\n"
-
-#: ../glade/format.glade.h:1
-msgid "Bibliography style:"
-msgstr "Bibliography style:"
-
-#: ../glade/format.glade.h:2
-msgid "Format entries"
-msgstr "Format entries"
-
-#: ../glade/format.glade.h:3
-msgid "Output file:"
-msgstr "Output file:"
-
-#: ../glade/format.glade.h:4
-msgid "Output format:"
-msgstr "Output format:"
-
-#: ../glade/format.glade.h:5
-msgid "Save Formatted as"
-msgstr "Save Formatted as"
-
-#: ../glade/format.glade.h:6
-msgid "Style Selection"
-msgstr "Style Selection"
-
-#: ../glade/medline.glade.h:2
-msgid "Enter your Medline Query"
-msgstr "Enter your Medline Query"
-
-#: ../glade/medline.glade.h:3
-msgid "From:"
-msgstr "From:"
-
-#: ../glade/medline.glade.h:4
-msgid "Limited to:"
-msgstr "Limited to:"
-
-#: ../glade/medline.glade.h:5
-msgid ""
-"Maximum number\n"
-"of results:"
-msgstr ""
-"Maximum number\n"
-"of results:"
-
-#: ../glade/medline.glade.h:7
-msgid "Medline Query"
-msgstr "Medline Query"
-
-#: ../glade/medline.glade.h:8
-msgid ""
-"Only items \n"
-"ahead of print"
-msgstr ""
-"Only items \n"
-"ahead of print"
-
-#: ../glade/medline.glade.h:10
-msgid ""
-"Only items \n"
-"with abstracts"
-msgstr ""
-"Only items \n"
-"with abstracts"
-
-#: ../glade/medline.glade.h:12
-msgid ""
-"Search \n"
-"PubMed for:"
-msgstr ""
-"Search \n"
-"PubMed for:"
-
-#: ../glade/medline.glade.h:14
-msgid ""
-"Starting listing at\n"
-"result number:"
-msgstr ""
-"Starting listing at\n"
-"result number:"
-
-#: ../glade/medline.glade.h:16
-msgid "To:"
-msgstr "To:"
-
-#: ../glade/medline.glade.h:17
-msgid ""
-"Use the format YYYY/MM/DD\n"
-"Month and day are optional."
-msgstr ""
-"Use the format YYYY/MM/DD\n"
-"Month and day are optional."
-
-#: ../glade/openurl.glade.h:3
-msgid "Enter the location (URI) of the file you would like to open:"
-msgstr "Enter the location (URI) of the file you would like to open:"
-
-#: ../glade/openurl.glade.h:4
-msgid "Open Location"
-msgstr "Open Location"
-
-#: ../glade/pyblio.glade.in.h:1
-msgid "Cite"
-msgstr "Cite"
-
-#: ../glade/pyblio.glade.in.h:3
-msgid "Contents"
-msgstr "Contents"
-
-#: ../glade/pyblio.glade.in.h:9
-msgid "Open File"
-msgstr "Open File"
-
-#: ../glade/pyblio.glade.in.h:10
-msgid "Previous Documents"
-msgstr "Previous Documents"
-
-#: ../glade/pyblio.glade.in.h:11
-msgid "Pybliographer"
-msgstr "Pybliographer"
-
-#: ../glade/pyblio.glade.in.h:13
-msgid "Save File"
-msgstr "Save File"
-
-#: ../glade/pyblio.glade.in.h:14
-msgid "Settings"
-msgstr "Settings"
-
-#: ../glade/pyblio.glade.in.h:15
-msgid "_Add..."
-msgstr "_Add..."
-
-#: ../glade/pyblio.glade.in.h:16
-msgid "_Delete..."
-msgstr "_Delete..."
-
-#: ../glade/pyblio.glade.in.h:17
-msgid "_Edit..."
-msgstr "_Edit..."
-
-#: ../glade/pyblio.glade.in.h:18
-msgid "_New"
-msgstr "_New"
-
-#: ../glade/search.glade.h:2
-msgid "Close"
-msgstr "Close"
-
-#: ../glade/search.glade.h:3
-msgid "Expert Search"
-msgstr "Expert Search"
-
-#: ../glade/search.glade.h:4
-msgid "Field"
-msgstr "Field"
-
-#: ../glade/search.glade.h:5
-msgid "Pattern"
-msgstr "Pattern"
-
-#: ../glade/search.glade.h:6
-msgid "Query"
-msgstr "Query"
-
-#: ../glade/search.glade.h:7
-msgid "Search"
-msgstr "Search"
-
-#: ../glade/search.glade.h:8
-msgid "Simple Search"
-msgstr "Simple Search"
-
-#: ../glade/sort.glade.h:1
-msgid "Select sort criterions"
-msgstr "Select sort criteria"
-
-#: ../glade/sort.glade.h:2
-msgid "Set as default"
-msgstr "Set as default"
 
 #: ../pybliographer.py:43
 #, python-format
