@@ -101,7 +101,7 @@ class BaseField (Connector.Publisher):
 
     
     def update (self, entry):
-        text = string.strip (self.edit.get_chars (0, -1)).encode ('latin-1')
+        text = string.strip(self.edit.get_chars(0, -1)).encode('latin-1')
 
         if text == self.string: return 0
 
@@ -145,7 +145,7 @@ class Entry (TextBase):
     def create_widget (self, h):
         if len (self.string) < 50:
             self.edit = gtk.Entry ()
-            self.edit.set_text (self.string.decode ('latin-1'))
+            self.edit.set_text(self.string.decode('latin-1'))
             self.edit.set_editable (True)
             self.edit.show ()
 
@@ -163,7 +163,7 @@ class Entry (TextBase):
         self.edit.set_wrap_mode (gtk.WRAP_WORD)
 
         self.buff = self.edit.get_buffer ()
-        self.buff.set_text (self.string.decode ('latin-1'))
+        self.buff.set_text(self.string.decode('latin-1'))
 
         self.edit.show ()
         
@@ -178,10 +178,10 @@ class Entry (TextBase):
         if self.buff:
             text = self.buff.get_text (self.buff.get_start_iter (),
                                        self.buff.get_end_iter ())
-            text = string.rstrip (text).encode ('latin-1')
+            text = string.rstrip (text).encode('latin-1')
         else:
             text = string.rstrip \
-                   (self.edit.get_chars (0, -1)).encode ('latin-1')
+                   (self.edit.get_chars (0, -1)).encode('latin-1')
             
         if text == self.string: return 0
 
@@ -204,7 +204,7 @@ class Text (TextBase):
         self.edit.set_wrap_mode (gtk.WRAP_WORD)
 
         self.buff = self.edit.get_buffer ()
-        self.buff.set_text (self.string.decode ('latin-1'))
+        self.buff.set_text (self.string.decode('latin-1'))
 
         self.edit.show ()
         w.add (self.edit)
@@ -239,7 +239,7 @@ class AuthorGroup (BaseField):
         self.edit.set_editable (True)
 
         self.buff = self.edit.get_buffer ()
-        self.buff.set_text (self.string.decode ('latin-1'))
+        self.buff.set_text (self.string.decode('latin-1'))
         self.edit.show ()
         w.add (self.edit)
         w.show ()
@@ -251,7 +251,7 @@ class AuthorGroup (BaseField):
     def update (self, entry):
         text = self.buff.get_text (self.buff.get_start_iter (),
                                    self.buff.get_end_iter ())
-        text = string.strip (text).encode ('latin-1')
+        text = string.strip (text).encode('latin-1')
         
         if text == self.string: return 0
 
@@ -876,21 +876,23 @@ class RealEditor (Connector.Publisher):
 
     #--------------------------------------------------
     
-    def create_field (self, * arg):
-        widget = self.newfield.gtk_entry ()
-        text   = string.strip (string.lower (widget.get_text ()))
-        if not re.match (r"[a-z][\w_-]*$", text):
-            if not Utils.Callback (
+    def create_field(self, *arg):
+        widget = self.newfield.gtk_entry()
+        text   = string.strip(string.lower(widget.get_text()))
+        if not re.match(r"[a-z][\w_-]*$", text):
+            if not Utils.Callback(
                 "The fieldname '%s' looks invalid.\nReally proceed?" % text,
-                parent=self.w.get_toplevel ()).answer ():
+                parent=self.w.get_toplevel()).answer():
                 return
                 
         # update the current entry
-        self.entry = self.update (self.database, copy.deepcopy (self.entry))
-
-        newtype = Types.get_field (text).type
-        self.entry [text] = newtype (_newcontent [newtype])
-        self.update_notebook ()
+        current = self.update(self.database, copy.deepcopy(self.entry))
+        if current is None:
+            return
+        self.entry = current
+        newtype = Types.get_field(text).type
+        self.entry[text] = newtype(_newcontent[newtype])
+        self.update_notebook()
         return
     
 
@@ -923,14 +925,14 @@ class RealEditor (Connector.Publisher):
         
         for item in self.content:
             try:
-                result = item.update (self.entry)
+                result = item.update(self.entry)
                 
             except UnicodeError:
-                f = Types.get_field (item.field)
+                f = Types.get_field(item.field)
                 
-                Compat.error_dialog_parented (
+                Compat.error_dialog_parented(
                     _("The `%s' field contains a non Latin-1 symbol") %
-                    f.name, self.w.get_toplevel ())
+                    f.name, self.w.get_toplevel())
                 return None
             
             if result == -1: return None
@@ -940,8 +942,8 @@ class RealEditor (Connector.Publisher):
         modified |= self.lt_update()
 
         if not modified:
-            fields = self.entry.keys ()
-            fields.sort ()
+            fields = self.entry.keys()
+            fields.sort()
 
             if fields != self.fields: modified = 1
         
