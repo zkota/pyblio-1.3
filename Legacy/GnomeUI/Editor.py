@@ -1112,9 +1112,9 @@ class Editor (Connector.Publisher):
             self.editor = RealEditor (self.database, self.current, self)
             
             ui_width  = Utils.config.get_int (
-                '/apps/pybliographic/editor/width')  or -1
+                '/apps/pyblio/editor/width')  or -1
             ui_height = Utils.config.get_int (
-                '/apps/pybliographic/editor/height') or -1
+                '/apps/pyblio/editor/height') or -1
 
         else:
             if self.editor:
@@ -1141,9 +1141,9 @@ class Editor (Connector.Publisher):
             self.editor = NativeEditor (self.database, self.current)
 
             ui_width  = Utils.config.get_int (
-                '/apps/pybliographic/native/width')  or -1
+                '/apps/pyblio/native/width')  or -1
             ui_height = Utils.config.get_int (
-                '/apps/pybliographic/native/height') or -1
+                '/apps/pyblio/native/height') or -1
 
 
         self.editor.Subscribe ('apply', self.apply_changes)
@@ -1193,8 +1193,8 @@ class Editor (Connector.Publisher):
         if self.native_mode: field = 'native'
         else:                field = 'editor'
 
-        Utils.config.set_int ('/apps/pybliographic/%s/width' % field,  w)
-        Utils.config.set_int ('/apps/pybliographic/%s/height' % field, h)
+        Utils.config.set_int ('/apps/pyblio/%s/width' % field,  w)
+        Utils.config.set_int ('/apps/pyblio/%s/height' % field, h)
         return
 
     

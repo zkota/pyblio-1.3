@@ -86,7 +86,7 @@ class GladeWindow:
     def __init__ (self, parent = None, window = None):
         
         gp = os.path.join(glade_root, self.gladeinfo['file'])
-        self.xml = gtk.glade.XML (gp, window, domain="pybliographer")
+        self.xml = gtk.glade.XML (gp, window, domain="pyblio")
         self.xml.signal_autoconnect(self)
 
         for w in self.xml.get_widget_prefix('_w_'):
@@ -95,7 +95,7 @@ class GladeWindow:
         # Set the parent window. The root widget is not necessarily
         # exported as an instance attribute.
         root = self.xml.get_widget(self.gladeinfo ['root'])
-        cfg  = '/apps/pybliographic/%s/' % self.gladeinfo ['name']
+        cfg  = '/apps/pyblio/%s/' % self.gladeinfo ['name']
         
         w = config.get_int (cfg + 'width')  or -1
         h = config.get_int (cfg + 'height') or -1
@@ -113,7 +113,7 @@ class GladeWindow:
 
     def size_save(self):
         root = self.xml.get_widget (self.gladeinfo['root'])
-        cfg  = '/apps/pybliographic/%s/' % self.gladeinfo['name']
+        cfg  = '/apps/pyblio/%s/' % self.gladeinfo['name']
 
         w, h = root.get_size ()
 

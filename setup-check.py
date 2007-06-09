@@ -94,6 +94,7 @@ else:
 try:
     import _recode
     import _bibtex
+    import Pyblio
 
     rq = _recode.request ('latin1..latex')
 

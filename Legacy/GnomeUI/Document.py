@@ -58,7 +58,7 @@ uim_content = '''
              <menuitem action="Open"/>
              <menuitem action="Open_URL"/>
              <menuitem action="Merge"/>
-             <menuitem action="Medline"/>
+             <menuitem action="Query"/>
              <menuitem action="Save"/>
              <menuitem action="Save_As"/>
              <separator/>
@@ -155,7 +155,7 @@ class Document (Connector.Publisher):
             ('Quit', gtk.STOCK_QUIT,  None,         None,   None,     self.exit_application),
 
             ('Merge',   None, _('Merge With...'),    '<control>g',  None, self.merge_database),
-            ('Medline', None, _('Medline Query...'), '<control>m',  None, self.query_database),
+            ('Query', None, _('External Query...'), '<control>m',  None, self.query_database),
 
 
 
@@ -206,7 +206,7 @@ class Document (Connector.Publisher):
 
         gp = os.path.join(Utils.glade_root, 'pyblio.glade')
         
-        self.xml = gtk.glade.XML (gp, 'main', domain = 'pybliographer')
+        self.xml = gtk.glade.XML (gp, 'main', domain = 'pyblio')
         self.xml.signal_autoconnect (self)
 
         self.w = self.xml.get_widget ('main')
@@ -268,14 +268,14 @@ class Document (Connector.Publisher):
         self.statusbar = self.xml.get_widget ('statusbar')
         
         # set window size
-        ui_width  = Utils.config.get_int ('/apps/pybliographic/ui/width') or -1
-        ui_height = Utils.config.get_int ('/apps/pybliographic/ui/height') or -1
+        ui_width  = Utils.config.get_int ('/apps/pyblio/ui/width') or -1
+        ui_height = Utils.config.get_int ('/apps/pyblio/ui/height') or -1
 
         if ui_width != -1 and ui_height != -1:
             self.w.set_default_size (ui_width, ui_height)
 
         # set paned size
-        paned_height = Utils.config.get_int ('/apps/pybliographic/ui/paned') or -1
+        paned_height = Utils.config.get_int ('/apps/pyblio/ui/paned') or -1
         self.paned.set_position (paned_height)
         
         self.w.show_all ()
@@ -298,7 +298,7 @@ class Document (Connector.Publisher):
         self.source_id = None
 
         # set the default sort method
-        default = Utils.config.get_string ('/apps/pybliographic/sort/default')
+        default = Utils.config.get_string ('/apps/pyblio/sort/default')
         if default is not None: default = pickle.loads (default)
 
         self.sort_view (default)
@@ -506,7 +506,7 @@ class Document (Connector.Publisher):
 
 
     def query_database (self, * arg):
-        ''' callback corresponding to the "Medline Query..." button '''
+        ''' callback corresponding to the "External Query..." button '''
 
         MedlineUI(self, self.w)
         return
@@ -1182,12 +1182,12 @@ class Document (Connector.Publisher):
         # Save the graphical aspect of the interface
         # 1.- Window size
         alloc = self.w.get_allocation ()
-        Utils.config.set_int ('/apps/pybliographic/ui/width',  alloc [2])
-        Utils.config.set_int ('/apps/pybliographic/ui/height', alloc [3])
+        Utils.config.set_int ('/apps/pyblio/ui/width',  alloc [2])
+        Utils.config.set_int ('/apps/pyblio/ui/height', alloc [3])
 
         # 2.- Proportion between list and text
         height = self.paned.get_position ()
-        Utils.config.set_int ('/apps/pybliographic/ui/paned', height)
+        Utils.config.set_int ('/apps/pyblio/ui/paned', height)
 
         # updates the index's config
         self.index.update_configuration ()
@@ -1198,7 +1198,7 @@ class Document (Connector.Publisher):
         import gobject
 
         try:
-            gnome.help_display ('pybliographer', None)
+            gnome.help_display ('pyblio', None)
             
         except gobject.GError, msg:
             self.w.error (_("Can't display documentation:\n%s") % msg)
@@ -1207,7 +1207,7 @@ class Document (Connector.Publisher):
     
     def about (self, *arg):
         
-        about = ui.About ('Pybliographic',
+        about = ui.About ('Pyblio',
                           version.version,
                           _("This program is copyrighted under the GNU GPL"),
                           _("GNOME interface to the Pybliographer system."),

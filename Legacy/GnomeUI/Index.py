@@ -72,7 +72,7 @@ class Index (Connector.Publisher):
 
 	i = 0	
         self.gvpixbuf = gtk.gdk.pixbuf_new_from_file(
-	    os.path.join (version.datadir, 'pixmaps', 'pybliographic-viewer.png'))
+	    os.path.join (version.datadir, 'pixmaps', 'pyblio-viewer.png'))
 	if True:
 	    rend = gtk.CellRendererPixbuf ()
 	    col = gtk.TreeViewColumn ('P', rend, pixbuf = len(fields))
@@ -91,7 +91,7 @@ class Index (Connector.Publisher):
             f = self.fields [i]
             f = f.translate (_safechar)
             
-            k = '/apps/pybliographic/columns/%s' % f
+            k = '/apps/pyblio/columns/%s' % f
             
             w = Utils.config.get_int (k)
 
@@ -486,7 +486,7 @@ class Index (Connector.Publisher):
             w = self.list.get_column (i + self.prefix_columns).get_width ()
             f = self.fields [i]
             f = f.translate (_safechar)
-            k = '/apps/pybliographic/columns/%s' % f
+            k = '/apps/pyblio/columns/%s' % f
             Utils.config.set_int (k, w)
 
         return

@@ -17,7 +17,7 @@ tst_start ()
     export PYTHONPATH
 
     run ln -fs \
-	${source}/Pyblio \
+	${source}/Legacy \
 	${source}/Styles/Alpha.xml \
 	${source}/pybrc.py \
 	.
@@ -25,6 +25,6 @@ tst_start ()
 
 tst_stop ()
 {
-    run rm -f Pyblio pybrc.py Alpha.xml
+    run rm -f Legacy pybrc.py Alpha.xml
 }
 

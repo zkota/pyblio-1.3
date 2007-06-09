@@ -7,12 +7,12 @@ def _get_text_ent ():
                         Config.get ('base/fields').data.values ()))
 
 Config.define ('bibtex+/braces',
-               """ A boolean specifying if pybliographic should use
+               """ A boolean specifying if pyblio should use
                braces (instead of quotes) to limit entries """,
                Config.Boolean ())
 
 Config.define ('bibtex+/capitalize', """ A flag indicating if
-pybliographer should handle automatic capitalization in the bibtex
+pyblio should handle automatic capitalization in the bibtex
 output """, vtype = Config.Dict (Config.Element (_get_text_ent),
                                  Config.Boolean ()))
 

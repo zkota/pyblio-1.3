@@ -33,16 +33,16 @@ SUBDIRS = 	Legacy 		\
 binary = pybliographer$(EXTENSION)
 
 appicondir = $(datadir)/pixmaps
-appicon_DATA = pybliographic.png 
+appicon_DATA = pyblio.png 
 
 pixmapsdir = $(datadir)/pixmaps
-pixmaps_DATA = pybliographic-logo.png pybliographic-viewer.png
+pixmaps_DATA = pyblio-logo.png pyblio-viewer.png
 
 
 Mimedir = $(datadir)/mime-info
-Mime_DATA = pybliographic.keys pybliographic.mime
+Mime_DATA = pyblio.keys pyblio.mime
 
-app_DATA = pybliographic.desktop
+app_DATA = pyblio.desktop
 
 bin_SCRIPTS = $(binary)
 
@@ -55,19 +55,19 @@ EXTRA_DIST = 	setup-check.py			\
 		pybrc.py 			\
 	 	pybliographer.py 		\
 		etc/installer.in		\
-		pybliographic.keys.in		\
-		pybliographic.mime		\
-		pybliographic.desktop.in	\
-		pybliographic.png		\
-		pybliographic-logo.png		\
-		pybliographic-viewer.png	
+		pyblio.keys.in			\
+		pyblio.mime			\
+		pyblio.desktop.in		\
+		pyblio.png			\
+		pyblio-logo.png			\
+		pyblio-viewer.png		
 
 
 dist-hook:
-	intltool-merge -d po pybliographic.desktop.in $(distdir)/pybliographic.desktop
+	intltool-merge -d po pyblio.desktop.in $(distdir)/pyblio.desktop
 
-pybliographic.desktop: pybliographic.desktop.in po/*.po
-	intltool-merge -d po pybliographic.desktop.in pybliographic.desktop \
+pyblio.desktop: pyblio.desktop.in po/*.po
+	intltool-merge -d po pyblio.desktop.in pyblio.desktop \
 		|| echo "**** Warning: cannot update desktop file"
 
 $(binary): $(top_srcdir)/pybliographer.py etc/installer
@@ -79,10 +79,10 @@ install-data-local:
 	$(INSTALL_DATA) $(srcdir)/pybrc.py $(DESTDIR)$(pybdir)
 	$(Python) -c "import compileall ; compileall.compile_dir ('"$(DESTDIR)$(pybdir)"');"
 
-pybliographic.keys: pybliographic.keys.in Makefile
+pyblio.keys: pyblio.keys.in Makefile
 	sed -e 's^\@icondir\@^$(appicondir)^g' \
-	< $(srcdir)/pybliographic.keys.in > pybliographic.keys.tmp \
-	&& mv pybliographic.keys.tmp pybliographic.keys
+	< $(srcdir)/pyblio.keys.in > pyblio.keys.tmp \
+	&& mv pyblio.keys.tmp pyblio.keys
 
 install-data-hook:
 	update-desktop-database $(DESTDIR)$(appdir) \

@@ -159,7 +159,7 @@ def set (key, value):
         ConfigItems [key].set (value)
     except KeyError:
         sys.stderr.write (
-            "pybliographer: warning: configuration key `%s' is undefined\n"
+            "pyblio: warning: configuration key `%s' is undefined\n"
             % key)
     return
 

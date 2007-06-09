@@ -24,7 +24,7 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 
 AC_INIT
-AM_INIT_AUTOMAKE(pybliographer, 1.3.0)
+AM_INIT_AUTOMAKE(pyblio, 1.3.0)
 AC_SUBST(EXTENSION, [-1.3])
 
 AC_CONFIG_SRCDIR(pybliographer.py)
@@ -88,4 +88,4 @@ AC_CONFIG_FILES(
 
 AC_OUTPUT
 
-echo "pybliographer is now configured. Type make to build it"
+echo "pyblio is now configured. Type make to build it"

@@ -1,5 +1,5 @@
-from Pyblio import Fields, Autoload
-from Pyblio.Style import Utils
+from Legacy import Fields, Autoload
+from Legacy.Style import Utils
 import sys
 
 db   = bibopen (sys.argv [2])

@@ -241,6 +241,7 @@ class Fetch(Utils.GladeWindow):
 
             l2cb, rs = self.pm.search(query, maxhits=100)
             def _on_add(k):
+                print db[k]
                 v = self.bibtex[k]
                 t = HTML.generate(self.cite.formatter(v))
                 model.append((k, t))

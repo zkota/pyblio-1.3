@@ -1,5 +1,5 @@
 import sys
-from Pyblio import Selection, Sort
+from Legacy import Selection, Sort
 
 how = sys.argv [2]
 

@@ -39,8 +39,8 @@ class Pybliographic:
         histsize = Config.get ('gnome/history').data
 
         for i in range (1, histsize + 1):
-            file = Utils.config.get_string  ('/apps/pybliographic/history/file%d' % i) or ''
-            fmat = Utils.config.get_string  ('/apps/pybliographic/history/type%d' % i) or ''
+            file = Utils.config.get_string  ('/apps/pyblio/history/file%d' % i) or ''
+            fmat = Utils.config.get_string  ('/apps/pyblio/history/type%d' % i) or ''
 
             if not file: continue
             
@@ -126,8 +126,8 @@ class Pybliographic:
             name = file [0]
             fmat = file [1] or ''
             
-            Utils.config.set_string ('/apps/pybliographic/history/file%d' % i, name)
-            Utils.config.set_string ('/apps/pybliographic/history/type%d' % i, fmat)
+            Utils.config.set_string ('/apps/pyblio/history/file%d' % i, name)
+            Utils.config.set_string ('/apps/pyblio/history/type%d' % i, fmat)
             i = i + 1
         
         doclist = copy.copy (self.documents)

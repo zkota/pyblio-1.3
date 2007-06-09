@@ -1,5 +1,0 @@
-text/x-bibtex:
-	open=pybliographic %f
-	view=pybliographic %f
-	icon-filename=@icondir@/pybliographic.png
-

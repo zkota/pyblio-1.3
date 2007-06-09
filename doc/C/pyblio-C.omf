@@ -23,7 +23,7 @@
       user's guide
     </type>
     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-    <identifier url="file:/usr/share/gnome/help/pybliographer/C/pybliographer.xml"/>
+    <identifier url="file:/usr/share/gnome/help/pyblio/C/pyblio.xml"/>
     <language code="C"/>
     <relation seriesid="ef478e44-3f87-11d8-99e5-aa7db3d8400c"/>
     <rights type="GNU FDL" license.version="1.1"/>

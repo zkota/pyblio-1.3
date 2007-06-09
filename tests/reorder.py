@@ -1,5 +1,5 @@
 import sys
-from Pyblio import Selection, Sort
+from Legacy import Selection, Sort
 
 a = bibopen (sys.argv [2])
 f = open (sys.argv [3], 'w')

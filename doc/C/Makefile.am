@@ -20,9 +20,9 @@
 
 # Standard Gnome boilerplate for doc installation
 figdir = figures
-docname = pybliographer
+docname = pyblio
 lang = C
-omffile = pybliographer-C.omf
+omffile = pyblio-C.omf
 
 entities = 						\
 	legal.xml authors.xml commandline.xml 		\

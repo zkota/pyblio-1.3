@@ -175,7 +175,7 @@ class SortDialog (Connector.Publisher, Utils.GladeWindow):
         ''' Pickle the current sorting settings to be used as the
         default value '''
         
-        Utils.config.set_string ('/apps/pybliographic/sort/default',
+        Utils.config.set_string ('/apps/pyblio/sort/default',
                                  pickle.dumps (self._results ()))
         return
     
