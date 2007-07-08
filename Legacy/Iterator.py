@@ -1,4 +1,3 @@
-
 # This file is part of pybliographer
 # 
 # Copyright (C) 1998-2004 Frederic GOBRY
@@ -19,6 +18,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 # 
 # 
+
+# TODO: get rid of all of this, and use standard iterators / generators
 
 class Iterator:
 

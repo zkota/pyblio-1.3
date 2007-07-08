@@ -90,7 +90,7 @@ uim_content = '''
         <menu action="CiteMenu">
              <menuitem action="Connect"/>
              <menuitem action="Cite"/>
-             <menuitem action="Format"/>
+             <menuitem action="Update"/>
         </menu>
         <menu action="Settings">
              <menuitem action="Fields"/>
@@ -168,9 +168,9 @@ class Document (Connector.Publisher):
             ('Find', gtk.STOCK_FIND,  None,         None,   None,     self.find_entries),
             
             ('Sort', None, _('S_ort...'), None,  None, self.sort_entries),
-            ('Connect', gtk.STOCK_CONNECT, _('C_onnect'), None, None, self._on_connect),
-            ('Cite', gtk.STOCK_JUMP_TO,   _('Cite...'), None,  _('Cite key(s)'), self.lyx_cite),
-            ('Format', gtk.STOCK_EXECUTE, _('Format...'), None,  None, self.format_entries),
+            ('Connect', gtk.STOCK_CONNECT, _('C_onnect...'), None, None, self._on_connect),
+            ('Cite', gtk.STOCK_JUMP_TO,   _('Cite'), None,  _('Cite key(s)'), self.wp_cite),
+            ('Update', gtk.STOCK_EXECUTE, _('Update document'), None,  None, self.wp_update),
 
             ('Fields', None, _('Fields...'), None,  None, self.set_fields),
             ('Preferences', gtk.STOCK_PREFERENCES,  None,         None,   None,     self.set_preferences),
@@ -285,10 +285,11 @@ class Document (Connector.Publisher):
         self.selection = Selection.Selection ()
         self.search_dg = None
         self.sort_dg   = None
-        self.lyx       = None
+        self.wp        = None  # word processor to cite to
+        self.citator   = None  # citator that will format the citations
         self.changed   = 0
         self.directory = None
-
+        self.editable  = False  # true when some entry is selected
         self.incremental_start  = None
         self.incremental_search = ''
         
@@ -304,7 +305,7 @@ class Document (Connector.Publisher):
         self.sort_view (default)
 
         self._title_set ()
-        self._set_edit_actions (False)
+        self._set_edit_actions(False)
         return
 
     def _title_set (self):
@@ -418,12 +419,10 @@ class Document (Connector.Publisher):
         return
 
 
-    def format_entries (self, * arg):
-        format_dg = Format.FormatDialog (self.w)
-        format_dg.Subscribe ('format-query', self.format_query)
-        return
+    def wp_update(self, *arg):
+        if self.citator:
+            self.citator.update()
 
-    
     def update_status (self, status = -1):
         ''' redisplay status bar according to the current status '''
 
@@ -952,7 +951,7 @@ class Document (Connector.Publisher):
         else:
             self.data.add (new)
 
-        self.freeze_display (None)
+        self.freeze_display(None)
 
         self.redisplay_index (1)
         self.index.select_item (new)
@@ -1056,56 +1055,40 @@ class Document (Connector.Publisher):
         return
 
     def _on_connect(self, *args):
-        print Citation.Connect(None).run()
-
-    def lyx_cite (self, * arg):
-
-        import locale
-
-        try:
-            enc = locale.getpreferredencoding ()
-
-        except AttributeError:
-            enc = locale.getdefaultlocale()[1]
-
+        self.wp, self.citator = Citation.Connect(self.data, self.wp).run()
+        self._set_edit_actions(self.editable)
         
+    def wp_cite(self, *arg):
+        if not self.citator:
+            return
         entries = self.index.selection ()
-        if not entries: return
+        if not entries:
+            return
         
-        if self.lyx is None:
-            from Legacy import LyX
-
-            try:
-                self.lyx = LyX.LyXClient ()
-            except IOError, msg:
-                self.w.error (_("Can't connect to LyX:\n%s") % msg)
-                return
-
-        keys = string.join (map (lambda x: x.key.key, entries), ', ')
-        try:
-            self.lyx ('citation-insert', keys)
-        except IOError, msg:
-            msg = msg [1].decode (enc)
-            self.w.error (_("Can't connect to LyX:\n%s") % msg)
-        return
+        self.citator.cite([x.key for x in entries])
     
 
-    def _set_edit_actions (self, value):
-        for action in ('Cite', 'Copy', 'Cut', 'Delete', 'Edit', 'ViewResource'):
-            self.actiongroup.get_action (action).set_property ('sensitive', value)
+    def _set_edit_actions(self, value):
+        for action in ('Copy', 'Cut', 'Delete', 'Edit', 'ViewResource'):
+            self.actiongroup.get_action (action).set_property('sensitive', value)
+        # one can only cite when there is a selection _and_ a current word processor.
+        self.actiongroup.get_action('Cite').set_property(
+            'sensitive', value and self.citator is not None)
+        self.actiongroup.get_action('Update').set_property(
+            'sensitive', self.citator is not None)
+        self.editable = value
         return
         
-    def update_display (self, entry):
+    def update_display(self, entry):
         if entry:
             self.display.display (entry)
 	    self.update_viewables (entry)
-        self._set_edit_actions (entry is not None)
+        self._set_edit_actions(entry is not None)
         return
 
-    
-    def freeze_display (self, entry):
-        self.display.clear ()
-        self._set_edit_actions (True)
+    def freeze_display(self, entry):
+        self.display.clear()
+        self._set_edit_actions(True)
         return
 
     def update_viewables (self, entry):
@@ -1206,7 +1189,6 @@ class Document (Connector.Publisher):
         return
     
     def about (self, *arg):
-        
         about = ui.About ('Pyblio',
                           version.version,
                           _("This program is copyrighted under the GNU GPL"),
