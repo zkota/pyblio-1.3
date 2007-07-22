@@ -68,6 +68,13 @@ class MedlineUI (Utils.GladeWindow):
                 model.append(pair)
             w.set_active(0)
 
+        # Use the field's value ALL by default
+        fields = {}
+        fields.update(self.helper.query_fields)
+        title = fields['ALL']
+        del fields['ALL']
+        new_box(self._w_queryfield, title, fields, default='ALL')
+        
         new_box(self._w_pub_type, _("Any publication type"),
                 self.helper.publication_types)
         new_box(self._w_language, _("Any language"),
@@ -96,7 +103,7 @@ class MedlineUI (Utils.GladeWindow):
                  (False,_("Entrez date"))],
                 sorted=False)
 
-        self._w_medline.show ()
+        self._w_medline.show()
         return
 
     def _w_close(self, w):
@@ -144,6 +151,7 @@ class MedlineUI (Utils.GladeWindow):
                 parse(self._w_to_date.get_text(), False))
 
         q = self.helper.makeQuery(
+            field=get(self._w_queryfield),
             keyword=self._w_keyword.child.get_text(),
             abstract=self._w_abstracts.get_active(),
             epubahead=self._w_ahead.get_active(),
