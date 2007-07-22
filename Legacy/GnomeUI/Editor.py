@@ -29,7 +29,7 @@ from gnome import ui
 from Legacy import Base, Config, Connector, Exceptions, Fields, Key, Types
 from Legacy.GnomeUI import Common, Compat, FieldsInfo, FileSelector, Mime, Utils
 
-key_re = re.compile ("^[\w:_+-.()/]+$")
+key_re = re.compile("^[\w:_+-.()/]+$")
 
 _newcontent = {
     Fields.AuthorGroup : _("Last Name, First Name"),
@@ -41,40 +41,40 @@ _newcontent = {
     }
 
 
-class BaseField (Connector.Publisher):
+class BaseField(Connector.Publisher):
     ''' common class to each specialized field editor '''
     
-    def __init__ (self, entry, field, content, j):
+    def __init__(self, entry, field, content, j):
+        self.w = gtk.VBox()
 
-        self.w = gtk.VBox ()
+        h = gtk.HBox(spacing=5)
+        self.w.pack_start(gtk.Label(field), False, False)
 
-        h = gtk.HBox (spacing = 5)
-        self.w.pack_start (gtk.Label (field), False, False)
-
-        field = string.lower (field)
+        field = string.lower(field)
         self.field = field
 
         self.setup (entry)
         self.edit = None
-        expand = self.create_widget (h)
+        expand = self.create_widget(h)
         
-        img = gtk.Image ()
+        img = gtk.Image()
         
-        if self.loss: img.set_from_stock (gtk.STOCK_CANCEL,
-                                          gtk.ICON_SIZE_BUTTON)
-        else:         img.set_from_stock (gtk.STOCK_APPLY,
-                                          gtk.ICON_SIZE_BUTTON)
+        if self.loss:
+            img.set_from_stock(gtk.STOCK_CANCEL,
+                               gtk.ICON_SIZE_BUTTON)
+        else:
+            img.set_from_stock(gtk.STOCK_APPLY,
+                               gtk.ICON_SIZE_BUTTON)
         
-        h.pack_start (img, False, False)
+        h.pack_start(img, False, False)
         
-        self.w.pack_start (h, expand, expand)
-        self.w.show_all ()
+        self.w.pack_start(h, expand, expand)
+        self.w.show_all()
 
         flag = 0
-        if expand: flag = gtk.EXPAND | gtk.FILL
-        content.attach (self.w, 0, 1, j, j + 1, yoptions = flag)
-        return
-
+        if expand:
+            flag = gtk.EXPAND | gtk.FILL
+        content.attach(self.w, 0, 1, j, j + 1, yoptions=flag)
 
     def key_handler (self, widget, ev):
         if ev.keyval == gtk.gdk.Return and \
@@ -953,243 +953,213 @@ class RealEditor (Connector.Publisher):
         return entry
     
             
-class NativeEditor (Connector.Publisher):
+class NativeEditor(Connector.Publisher):
     ''' Composit widget to edit an entry in its native format '''
 
-    def __init__ (self, database, entry):
+    def __init__(self, database, entry):
 
         self.entry    = entry
         self.database = database
 
-        if database.has_key (entry.key):
-            self.original = database.get_native (entry)
-        else:
-            self.original = ''
+        self.original = database.get_native(entry)
 
-        self.w = gtk.ScrolledWindow ()
-        self.w.set_policy (gtk.POLICY_NEVER,
-                           gtk.POLICY_AUTOMATIC)
+        self.w = gtk.ScrolledWindow()
+        self.w.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
         
-        self.w_txt = gtk.TextView ()
-        self.w_txt.set_editable (True)
-        self.w_txt.set_wrap_mode (gtk.WRAP_WORD)
+        self.w_txt = gtk.TextView()
+        self.w_txt.set_editable(True)
+        self.w_txt.set_wrap_mode(gtk.WRAP_WORD)
         
-        self.w.add (self.w_txt)
+        self.w.add(self.w_txt)
 
-        self.w_txt.show ()
+        self.w_txt.show()
         
-        self.buff = self.w_txt.get_buffer ()
+        self.buff = self.w_txt.get_buffer()
 
-        iter = self.buff.get_start_iter ()
-        mono = self.buff.create_tag ('body', family = 'Monospace')
+        iter = self.buff.get_start_iter()
+        mono = self.buff.create_tag('body', family='Monospace')
 
-        self.buff.insert_with_tags (
-            iter, self.original.decode ('latin-1'), mono)
+        self.buff.insert_with_tags(
+            iter, self.original.decode('latin-1'), mono)
         return
 
-
-    def update (self, database, entry):
-        ''' updates and returns the new entry '''
-
+    def update(self, database, entry):
+        '''Updates and returns the new entry.'''
         new  = None
-
-        text = self.buff.get_text (
-            self.buff.get_start_iter (),
-            self.buff.get_end_iter ())
+        text = self.buff.get_text(
+            self.buff.get_start_iter(),
+            self.buff.get_end_iter())
         try:
-            text = text.encode ('latin-1')
-
+            text = text.encode('latin-1')
         except UnicodeError:
-            Compat.error_dialog_parented (
+            Compat.error_dialog_parented(
                 _("Your text contains non Latin-1 symbols"),
-                self.w.get_toplevel ())
+                self.w.get_toplevel())
             return None
-
         try:
-            new = self.database.create_native (text)
+            new = self.database.create_native(text)
         except Exceptions.ParserError, msg:
-            Utils.error_dialog (
-                _("Error in native string parsing"), str (msg))
+            Utils.error_dialog(
+                _("Error in native string parsing"), str(msg))
+            return None
         return new
 
     
-class Editor (Connector.Publisher):
-    
-    def __init__ (self, database, entry, parent = None, title = None):
-        self.w = gtk.Dialog ()
-        
-        self.w.set_resizable (True)
-        
-        if title: self.w.set_title (title)
-        else:     self.w.set_title (
-            _("Edit entry") + ' [%s]' % str (entry.key) )
-        
-        self.w.connect ('delete_event', self.close_dialog)
+class Editor(Connector.Publisher):
+    """The editor popup.
 
-        if parent: self.w.set_transient_for (parent)
+    It either displays a NativeEditor (for BibTeX entries) or a
+    RealEditor (structured fields).
 
-        self.apply_b = gtk.Button (stock = gtk.STOCK_APPLY)
-        self.apply_b.connect ('clicked', self.apply_changes)
-        self.apply_b.show ()
+    When adding a new entry, the editor is invoked on an empty entry
+    with no key.
+    """
+    def __init__(self, database, entry, parent=None, title=None):
+        self.w = gtk.Dialog()
+        self.w.set_resizable(True)
+        
+        if title: self.w.set_title(title)
+        else:     self.w.set_title(
+            _("Edit entry") + ' [%s]' % str(entry.key))
+        
+        self.w.connect('delete_event', self.close_dialog)
+
+        if parent: self.w.set_transient_for(parent)
+
+        self.apply_b = gtk.Button(stock=gtk.STOCK_APPLY)
+        self.apply_b.connect('clicked', self.apply_changes)
+        self.apply_b.show()
 
         # check if the database supports native editing
-        self.has_native = hasattr (database, 'get_native')
+        self.has_native = hasattr(database, 'get_native')
 
         if self.has_native:
-            self.native_b = gtk.Button (_("Native Editing"))
-            self.native_b.connect ('clicked', self.toggle_native)
-            self.native_b.show ()
+            self.native_b = gtk.Button(_("Native Editing"))
+            self.native_b.connect('clicked', self.toggle_native)
+            self.native_b.show()
         
-        self.close_b = gtk.Button (stock = gtk.STOCK_CANCEL)
-        self.close_bid = self.close_b.connect (
+        self.close_b = gtk.Button(stock=gtk.STOCK_CANCEL)
+        self.close_bid = self.close_b.connect(
             'clicked', self.close_dialog)
-        self.close_b.show ()
+        self.close_b.show()
 
         # Use Escape to abort, Ctrl-Return to accept
-        accelerator = gtk.AccelGroup ()
-        self.w.add_accel_group (accelerator)
+        accelerator = gtk.AccelGroup()
+        self.w.add_accel_group(accelerator)
 
-        self.close_b.add_accelerator (
+        self.close_b.add_accelerator(
             'clicked', accelerator, gtk.keysyms.Escape, 0, 0)
-        self.apply_b.add_accelerator (
+        self.apply_b.add_accelerator(
             'clicked', accelerator, gtk.keysyms.Return,
             gtk.gdk.CONTROL_MASK, 0)
 
-
         # for use with annotations
-        self.del_b = gtk.Button(stock = gtk.STOCK_DELETE)
+        self.del_b = gtk.Button(stock=gtk.STOCK_DELETE)
         self.del_b.connect ('clicked', self.del_cb, None)
         self.del_b.set_sensitive(False)
-        self.w.action_area.add (self.del_b)
-        self.new_b = gtk.Button (stock = gtk.STOCK_NEW)
-        self.new_b.connect ('clicked', self.add_cb, None)
+        self.w.action_area.add(self.del_b)
+        self.new_b = gtk.Button(stock=gtk.STOCK_NEW)
+        self.new_b.connect('clicked', self.add_cb, None)
         self.new_b.set_sensitive(False)
-        self.w.action_area.add (self.new_b)
+        self.w.action_area.add(self.new_b)
 
-        self.w.action_area.add (self.apply_b)
-        if self.has_native: self.w.action_area.add (self.native_b)
-        self.w.action_area.add (self.close_b)
+        self.w.action_area.add(self.apply_b)
+        if self.has_native: self.w.action_area.add(self.native_b)
+        self.w.action_area.add(self.close_b)
 
-        self.entry       = entry
-        self.database    = database
-        self.editor      = None
+        self.entry    = entry
+        self.database = database
+        self.editor   = None
 
         # this is the working copy of the entry
-        self.current     = copy.deepcopy (entry)
+        self.current  = copy.deepcopy(entry)
         
         # put the negated value, so that we can call
         # toggle to switch and create
-        self.native_mode = not (self.has_native and Config.get (
+        self.native_mode = not (self.has_native and Config.get(
             'gnome/native-as-default').data)
 
-        self.toggle_native ()
-        
+        self.toggle_native()
         self.w.show_all ()
         return
 
-
-    def toggle_native (self, * arg):
-        self.save_size ()
+    def toggle_native(self, *arg):
+        self.save_size()
         
         if self.native_mode:
-
             if self.editor:
-                cur = self.editor.update (self.database, self.current)
-
+                cur = self.editor.update(self.database, self.current)
                 # Reject the switch if the data is invalid
-                if cur is None: return
-                
-                self.editor.w.destroy ()
+                if cur is None:
+                    return
+                self.editor.w.destroy()
                 self.current = cur
-                
             # real edition
             self.native_mode = False
             
             if self.has_native:
-                self.native_b.get_children () [0].set_text (
+                self.native_b.get_children()[0].set_text(
                     _("Native Editing"))
 
-            self.editor = RealEditor (self.database, self.current, self)
+            self.editor = RealEditor(self.database, self.current, self)
             
-            ui_width  = Utils.config.get_int (
+            ui_width  = Utils.config.get_int(
                 '/apps/pyblio/editor/width')  or -1
-            ui_height = Utils.config.get_int (
+            ui_height = Utils.config.get_int(
                 '/apps/pyblio/editor/height') or -1
-
         else:
             if self.editor:
-                cur = self.editor.update (self.database, self.current)
-
-                if cur is None: return
-
-                if not self.database.has_key (cur.key):
-
-                    # We need to insert the entry as it is currently,
-                    # in order to generate a Key
-                    cur = self.database.add (cur)
-                
-                self.editor.w.destroy ()
+                cur = self.editor.update(self.database, self.current)
+                if cur is None:
+                    return
+                if not self.database.has_key(cur.key):
+                    cur.key = self.database.generate_key(cur)
+                self.editor.w.destroy()
                 self.current = cur
 
             # native edition
             self.native_mode = True
 
             if self.has_native:
-                self.native_b.get_children () [0].set_text (
+                self.native_b.get_children()[0].set_text(
                     _("Standard Editing"))
             
-            self.editor = NativeEditor (self.database, self.current)
+            self.editor = NativeEditor(self.database, self.current)
 
-            ui_width  = Utils.config.get_int (
+            ui_width  = Utils.config.get_int(
                 '/apps/pyblio/native/width')  or -1
-            ui_height = Utils.config.get_int (
+            ui_height = Utils.config.get_int(
                 '/apps/pyblio/native/height') or -1
-
-
-        self.editor.Subscribe ('apply', self.apply_changes)
-        self.editor.Subscribe ('next',  self.next_item)
+        self.editor.Subscribe('apply', self.apply_changes)
+        self.editor.Subscribe('next',  self.next_item)
         
-        self.w.vbox.pack_start (self.editor.w)
+        self.w.vbox.pack_start(self.editor.w)
 
         # set window size
         if ui_width != -1 and ui_height != -1:
-            self.w.set_default_size (ui_width, ui_height)
-            self.w.resize (ui_width, ui_height)
-        
-        self.editor.w.show ()
+            self.w.set_default_size(ui_width, ui_height)
+            self.w.resize(ui_width, ui_height)
+        self.editor.w.show()
         return
 
-    def apply_changes (self, * arg):
-        
-        new = self.editor.update (self.database, self.current)
+    def apply_changes(self, *arg):
+        new = self.editor.update(self.database, self.current)
         if new:
-            self.close_dialog ()
+            self.close_dialog()
             if new is not self.entry:
-                self.issue ('commit-edition', self.entry, new)
+                self.issue('commit-edition', self.entry, new)
         return
     
-
-        # set window size
-        if ui_width != -1 and ui_height != -1:        
-            self.w.set_default_size (ui_width, ui_height)
-            self.w.resize (ui_width, ui_height)
-        
-        self.editor.w.show ()
-        return
-
-    
-
-    
-    def next_item (self, * arg):
-        if self.native_mode: return
-        
+    def next_item(self, *arg):
+        if self.native_mode:
+            return
         n = self.editor.notebook
-        box = n.get_nth_page (n.get_current_page ())
+        box = n.get_nth_page(n.get_current_page())
 
-    def save_size (self):
-        if not self.editor: return
-        
-        w, h = self.w.get_size ()
+    def save_size(self):
+        if not self.editor:
+            return
+        w, h = self.w.get_size()
         if self.native_mode: field = 'native'
         else:                field = 'editor'
 
@@ -1198,36 +1168,29 @@ class Editor (Connector.Publisher):
         return
 
     
-    def close_dialog (self, *arg):
-        self.save_size ()
-        self.w.destroy ()
+    def close_dialog(self, *arg):
+        self.save_size()
+        self.w.destroy()
         return
 
-    def add_cb (self, button, data):
+    def add_cb(self, button, data):
         """Called when the add button is pressed"""
 
         if self.editor:
-            self.editor.add_cb (button, data)
+            self.editor.add_cb(button, data)
 
-    def del_cb (self, button, data):
+    def del_cb(self, button, data):
         """Called when the delete button is pressed"""
-
         if self.editor:
-            self.editor.del_cb (button, data)
+            self.editor.del_cb(button, data)
 
-
-    def update_buttons (self, **argh):
+    def update_buttons(self, **argh):
         old = self.lt_callbacks
         self.callbacks.update(argh)  
-
         return old
 
-    def set_buttons (self, **argh):
+    def set_buttons(self, **argh):
         self.callbacks = argh
-        
-
-    
-    
         
 #####################################################################
 

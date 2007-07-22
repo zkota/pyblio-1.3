@@ -57,275 +57,214 @@ class Entry:
 	self.key  = key
 	return
 
-
     def keys (self):
 	''' returns all the keys for this entry '''
-	return self.dict.keys ()
-
+	return self.dict.keys()
 
     def has_key (self, key):
-	if self.dict.has_key (key): return 1
-	return 0
-
+	if self.dict.has_key(key):
+            return True
+	return False
 
     def field_and_loss (self, key):
 	''' return field with indication of convertion loss '''
-	return self.dict [key], 0
-
+	return self.dict[key], 0
 
     def __getitem__ (self, key):
 	''' return text representation of a field '''
+	return self.field_and_loss(key)[0]
 
-	return self.field_and_loss (key) [0]
-
-    def get (self, key, default=None):
-        if self.has_key (key):
-            return self [key]
-        else :
+    def get(self, key, default=None):
+        if self.has_key(key):
+            return self[key]
+        else:
             return default
 
-
-    def __setitem__ (self, name, value):
-	self.dict [name] = value
+    def __setitem__(self, name, value):
+	self.dict[name] = value
 	return
-
 	
-    def __delitem__ (self, name):
-	del self.dict [name]
+    def __delitem__(self, name):
+	del self.dict[name]
 	return
 
-
-    def __add__ (self, other):
+    def __add__(self, other):
 	''' Merges two entries, key by key '''
-
 	ret = Entry (self.key, self.type, {})
-
 	# Prendre ses propres entrees
-	for f in self.keys ():
-	    ret [f] = self [f]
-
+	for f in self.keys():
+	    ret[f] = self[f]
 	# et ajouter celles qu'on n'a pas
-	for f in other.keys ():
-	    if not self.has_key (f):
-		ret [f] = other [f]
-
+	for f in other.keys():
+	    if not self.has_key(f):
+		ret[f] = other[f]
 	return ret
 
-
-    def __repr__ (self):
+    def __repr__(self):
 	''' Internal representation '''
-
 	return 'Entry (%s, %s, %s)' % (`self.key`, `self.type`, `self.dict`)
 
-
-    def __str__ (self):
+    def __str__(self):
 	''' Nice standard entry  '''
-
 	tp = self.type.name
 	fields = self.type.fields
-
         try:
             text = '%s [%s]\n' % (tp, self.key.key)
         except AttributeError:
             text  = '%s [no key]\n' %(tp)
-            
 	text = text + ('-' * 70) + '\n'
-
 	dico = self.keys ()
-
 	for f in fields:
 	    name = f.name
-	    lcname = lower (name)
+	    lcname = lower(name)
 
-	    if not self.has_key (lcname): continue
-
+	    if not self.has_key(lcname):
+                continue
 	    text = text + '  %-14s ' % name
-	    text = text + Utils.format (str (self [lcname]),
-					75, 17, 17) [17:]
+	    text = text + Utils.format(str(self[lcname]),
+                                       75, 17, 17) [17:]
 	    text = text + '\n'
-
 	    try:
-		dico.remove (lcname)
+		dico.remove(lcname)
 	    except ValueError:
 		raise ValueError, \
 		      'multiple definitions of field `%s\' in `%s\'' \
 		      % (name, tp)
-
 	for f in dico:
 	    text = text + '  %-14s ' % f
-	    text = text + Utils.format (str (self [f]),
-				  75, 17, 17) [17:]
+	    text = text + Utils.format(str(self[f]),
+                                       75, 17, 17) [17:]
 	    text = text + '\n'
-
 	return text
 
 
 class DataBase:
-
-    ''' This class represents a full bibliographic database.  It
+    '''This class represents a full bibliographic database.  It
     also looks like a dictionnary, each key being an instance of
-    class Key. '''
-
+    class Key.
+    '''
     properties = {}
     filemeta = {}
-    id = 'VirtualDB'
+    id ='VirtualDB'
 
-    def __init__ (self, url):
+    def __init__(self, url):
 	''' Open the database referenced by the URL '''
 	self.key = url
-
 	self.dict = {}
-
 	self.file_metadata = {}
 	return
 
-
-    def has_property (self, prop):
-	''' indicates if the database has a given property '''
-
+    def has_property(self, prop):
+	'''Indicates if the database has a given property.'''
 	if self.properties.has_key (prop):
 	    return self.properties [prop]
+	return True
 
-	return 1
+    def generate_key(self, entry):
+        # call a key generator
+        keytype = Config.get('base/keyformat').data
+        return Autoload.get_by_name('key', keytype).data(entry, self)
 
-
-    def add (self, entry):
-	''' Adds an (eventually) anonymous entry '''
-
+    def add(self, entry):
+	'''Adds an (eventually) anonymous entry.'''
         if entry.key is None:
-            # call a key generator
-            keytype   = Config.get ('base/keyformat').data
-            entry.key = Autoload.get_by_name ('key', keytype).data (entry, self)
+            entry.key = self.generate_key(entry)
         else:
             entry.key.base = self.key
             
-            if self.has_key (entry.key):
+            if self.has_key(entry.key):
                 prefix = entry.key.key
                 suffix = ord ('a')
-
-                while 1:
-                    key = Key.Key (self, prefix + '-' + chr (suffix))
-                    if not self.has_key (key): break
-                    
-                    suffix = suffix + 1
-
+                while True:
+                    key = Key.Key(self, prefix + '-' + chr(suffix))
+                    if not self.has_key (key):
+                        break
+                    suffix += 1
                 entry.key = key
-            
-	self [entry.key] = entry
+	self[entry.key] = entry
 	return entry
 
+    def new_entry(self, type):
+        '''Creates a new entry of the native type of the database '''
+        return Entry(None, type)
 
-    def new_entry (self, type):
-        ''' Creates a new entry of the native type of the database '''
-        return Entry (None, type)
+    def keys(self):
+	'''Returns a list of all the keys available for the database '''
+	return self.dict.keys()
+
+    def has_key(self, key):
+	'''Tests for a given key '''
+	return self.dict.has_key(key)
+
+    def would_have_key(self, key):
+        '''Test for a key that would be set on the database '''
+        return self.has_key(Key.Key(self, key.key))
     
-
-    def keys (self):
-	''' Returns a list of all the keys available for the database '''
-
-	return self.dict.keys ()
-
-
-    def has_key (self, key):
-	''' Tests for a given key '''
-
-	return self.dict.has_key (key)
-
-
-    def would_have_key (self, key):
-        ''' Test for a key that would be set on the database '''
-
-        return self.has_key (Key.Key (self, key.key))
-
-    
-    def __getitem__ (self, key):
-	''' Returns the Entry object associated with the key '''
-
+    def __getitem__(self, key):
+	'''Returns the Entry object associated with the key '''
 	return self.dict [key]
 
-
     def __setitem__ (self, key, value):
-	''' Sets a key Entry '''
-
+	'''Sets a key Entry '''
         key.base  = self.key
         value.key = key
-	self.dict [key] = value
+	self.dict[key] = value
 	return
 
-
-    def __delitem__ (self, key):
-	''' Removes an Entry from the database, by its key '''
-
-	del self.dict [key]
+    def __delitem__(self, key):
+	'''Removes an Entry from the database, by its key '''
+	del self.dict[key]
 	return
 
+    def __len__(self):
+	'''Number of entries in the database '''
+	return len(self.keys())
 
-    def __len__ (self):
-	''' Number of entries in the database '''
-
-	return len (self.keys ())
-
-    def __str__ (self):
-	''' Database representation '''
-
-	return '<generic bibliographic database (' + `len (self)` + \
+    def __str__(self):
+	'''Database representation '''
+	return '<generic bibliographic database (' + `len(self)` + \
 	       ' entries)>'
 
-
-    def __repr__ (self):
-	''' Database representation '''
-	
+    def __repr__(self):
+	'''Database representation '''
 	return 'DataBase (%s)' % `self.key`
 
-
-    def iterator (self):
+    def iterator(self):
 	''' Returns an iterator for that database '''
-	return Iterator.DBIterator (self)
+	return Iterator.DBIterator(self)
 
-    def update (self, sorting = None):
+    def update(self, sorting=None):
 	''' Updates the Entries stored in the database '''
-	
 	if self.key.url [0] != 'file':
 	    raise IOError, "can't update the remote database `%s'" % self.key
 
-	name = self.key.url [2]
-
-        if Config.get ('base/directsave').data:
-            if Config.get ('base/backup').data:
-                copyfile (name, name + '.bak')
-
-            namefile = open (name, 'w')
-
-            iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
-	    Open.bibwrite (iterator, out = namefile, how = self.id, database=self)
-
+	name = self.key.url[2]
+        if Config.get('base/directsave').data:
+            if Config.get('base/backup').data:
+                copyfile(name, name + '.bak')
+            namefile = open(name, 'w')
+            iterator = Selection.Selection(sort=sorting).iterator(self.iterator())
+	    Open.bibwrite(iterator, out=namefile, how=self.id, database=self)
             namefile.close ()
-
         else:
-
             # create a temporary file for the new version
-            tmp = os.path.join (os.path.dirname (name),
-                                '.#' + os.path.basename (name))
+            tmp = os.path.join(os.path.dirname(name),
+                               '.#' + os.path.basename(name))
+            tmpfile = open(tmp, 'w')
 
-            tmpfile = open (tmp, 'w')
-
-            iterator = Selection.Selection (sort = sorting).iterator (self.iterator ())
-	    Open.bibwrite (iterator, out = tmpfile, how = self.id, database=self)
-
-	    tmpfile.close ()
+            iterator = Selection.Selection(sort=sorting).iterator(self.iterator())
+	    Open.bibwrite(iterator, out=tmpfile, how=self.id, database=self)
+	    tmpfile.close()
 
 	    # if we succeeded, and backup is set, backup file
-            if Config.get ('base/backup').data:
-                os.rename (name, name + '.bak')
-
+            if Config.get('base/backup').data:
+                os.rename(name, name + '.bak')
 	    # ...and bring new version online
-            os.rename (tmp, name)
-
+            os.rename(tmp, name)
         return
 
-
-    def get_metadata (self, key, default=None):
-	return self.file_metadata.get (key, default)
+    def get_metadata(self, key, default=None):
+	return self.file_metadata.get(key, default)
     
-    def set_metadata (self, key, value):
-	self.file_metadata [key] = value
+    def set_metadata(self, key, value):
+	self.file_metadata[key] = value
