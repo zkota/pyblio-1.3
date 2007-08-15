@@ -139,7 +139,7 @@ if not quiet:
 
 # ---------- Load default schemas, set logging
 from Pyblio import Registry
-Registry.parse_default()
+Registry.load_default_settings()
 
 from Pyblio import init_logging
 import logging
