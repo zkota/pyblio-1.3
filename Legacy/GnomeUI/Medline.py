@@ -30,7 +30,7 @@ from xml.sax.saxutils import escape
 
 from Legacy import Fields, Connector
 from Legacy.GnomeUI import Utils
-from Pyblio.External import PubMed, WOK
+from Pyblio.External import PubMed, WOK, Citeseer
 from Pyblio import Store, Registry, Adapter
 from Pyblio.Cite import Citator
 from Pyblio.Format import HTML
@@ -115,6 +115,11 @@ class MedlineUI (Utils.GladeWindow):
               self._w_wok.child.get_text(),
               WOK.WOK, self._w_medline)
 
+    def _on_citeseer_search(self, w):
+        Fetch(self.document,
+              self._w_citeseer.child.get_text(),
+              Citeseer.Citeseer, self._w_medline)
+
     def _on_medline_search(self, w):
         def get(w):
             return w.get_model()[w.get_active()][0]
@@ -180,7 +185,6 @@ class Fetch(Utils.GladeWindow):
         s = Registry.getSchema(engine.schema)
         db = Store.get('memory').dbcreate(None, s)
         self.pm = engine(db)
-        self.pm.BATCH_SIZE = 50
 
         self.document = document
         self.db = db
@@ -239,7 +243,7 @@ class Fetch(Utils.GladeWindow):
             target = min(total, 100)
             def set_progress():
                 if target > 0:
-                    ratio = self._got / target
+                    ratio = min(self._got / target, 1.0)
                 else:
                     ratio = 0
                 self._w_progress.set_fraction(ratio)
