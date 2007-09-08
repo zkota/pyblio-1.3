@@ -155,7 +155,7 @@ class Document (Connector.Publisher):
             ('Quit', gtk.STOCK_QUIT,  None,         None,   None,     self.exit_application),
 
             ('Merge',   None, _('Merge With...'),    '<control>g',  None, self.merge_database),
-            ('Query', None, _('External Query...'), '<control>m',  None, self.query_database),
+            ('Query', None, _('External Query...'), '<control>e',  None, self.query_database),
 
 
 

@@ -34,16 +34,17 @@ pygtk.require ('2.0')
 import gnome, gtk
 import gnome.ui
 
-from Legacy import version
+from Legacy import version as pyblio_version
+from Pyblio import version as core_version
 
-prg = gnome.init ('pyblio', version.version)
-prg.set_property (gnome.PARAM_APP_DATADIR, version.datadir)
+prg = gnome.init ('pyblio', pyblio_version.version)
+prg.set_property (gnome.PARAM_APP_DATADIR, pyblio_version.datadir)
 
 def _vnum (t):
     return string.join (map (str, t), '.')
 
-ui_version = _("This is Pyblio %s [Python %s, Gtk %s, PyGTK %s]") % (
-    version.version, _vnum (sys.version_info [:3]),
+ui_version = _("This is Pyblio %s [Python %s, Pyblio-Core %s, Gtk %s, PyGTK %s]") % (
+    pyblio_version.version, core_version, _vnum (sys.version_info [:3]),
     _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
     
 # clean up our garbage
@@ -51,7 +52,7 @@ sys.argv = sys.argv [:2] + files
 del sys, files
 
 import gtk.glade
-gtk.glade.bindtextdomain ("pyblio", version.localedir)
+gtk.glade.bindtextdomain ("pyblio", pyblio_version.localedir)
 
 # this needs to be done before any import of the reactor
 from twisted.internet import gtk2reactor

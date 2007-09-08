@@ -24,7 +24,7 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 
 AC_INIT
-AM_INIT_AUTOMAKE(pyblio, 1.3.0)
+AM_INIT_AUTOMAKE(pyblio, 1.3.4)
 AC_SUBST(EXTENSION, [-1.3])
 
 AC_CONFIG_SRCDIR(pybliographer.py)
@@ -38,13 +38,13 @@ if test "${Python}" = "no" ; then
 fi
 
 dnl Python version
-MINIMUM_VERSION="2.3"
+REQUIRED_PYTHON_VERSION="2.3"
+REQUIRED_PYBLIO_VERSION="1.3.4"
 
-AC_MSG_CHECKING([python requirements])
+AC_MSG_CHECKING([python dependencies])
+${Python} ${srcdir}/setup-check.py ${REQUIRED_PYTHON_VERSION} ${REQUIRED_PYBLIO_VERSION} 2>&5 1>&2
 
-${Python} ${srcdir}/setup-check.py ${MINIMUM_VERSION} 2>&5 1>&2
-
-result=$?
+result="$?"
 
 if test -f conftest.out ; then
 	. ./conftest.out
@@ -54,9 +54,9 @@ else
 	AC_MSG_ERROR([unable to run the test program])
 fi
 
-if test $result = 0 ; then
+if test "$result" = 0 ; then
 	if test -z "${Status}" ; then
-	  AC_MSG_RESULT([yes (python ${Python_Version}, python-gtk ${PyGtk_Version})])
+	  AC_MSG_RESULT([yes (python ${Python_Version}, python-gtk ${PyGtk_Version}, pyblio-core ${PyblioCore_Version})])
         else
           AC_MSG_RESULT([assuming yes (${Status})])
         fi
@@ -64,8 +64,6 @@ else
 	AC_MSG_RESULT([no])
 	AC_MSG_ERROR([${Status}])
 fi
-
-dnl NLS is now hand-managed for python.
 
 AC_CONFIG_FILES(	
 	Makefile 
@@ -84,8 +82,6 @@ AC_CONFIG_FILES(
 	doc/C/Makefile
 	Styles/Makefile
 )
-
-
 AC_OUTPUT
 
 echo "pyblio is now configured. Type make to build it"
