@@ -44,7 +44,7 @@ def _vnum (t):
     return string.join (map (str, t), '.')
 
 ui_version = _("This is Pyblio %s [Python %s, Pyblio-Core %s, Gtk %s, PyGTK %s]") % (
-    pyblio_version.version, core_version, _vnum (sys.version_info [:3]),
+    pyblio_version.version, _vnum (sys.version_info [:3]), core_version,
     _vnum (gtk.gtk_version), _vnum (gtk.pygtk_version))
     
 # clean up our garbage
