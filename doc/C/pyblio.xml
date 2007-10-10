@@ -7,9 +7,9 @@
 <!ENTITY pyb "pybliographer">
 <!ENTITY pyc "pybliographic">
 <!ENTITY Pyc "Pybliographic">
-<!ENTITY appversion "1.2.10">
+<!ENTITY appversion "1.2.11">
 <!ENTITY manrevision "2.6">
-<!ENTITY date "January 2007">
+<!ENTITY date "September 2007">
 <!ENTITY app "Pybliographer">
 
 <!ENTITY preface SYSTEM "preface.xml">

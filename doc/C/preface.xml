@@ -83,10 +83,19 @@
       </para>
       <variablelist>
           <varlistentry>
-            <term>Medline query</term>
+            <term>Bugfixes</term>
             <listitem>
               <para>
-                Improvements and fixes of Medline query.
+                Fixed multiple creation of entries, fixed bug related to 
+                creating a new field.
+              </para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Config loader</term>
+            <listitem>
+              <para>
+                Improvements of config loader.
               </para>
             </listitem>
           </varlistentry>

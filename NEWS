@@ -1,5 +1,14 @@
 -*- text -*-
 
+New in 1.2.11 - 2007-09-24
+
+       * Fixed multiple creation of entries (Frédéric)
+       * Fixed bug related to creating a new field (Frédéric)
+       * Rearrangement of glade files (Frédéric)
+       * Updated config loader (Frédéric)
+       * Updated translations (Gnome I18n team)
+
+
 New in 1.2.10 - 2007-01-18
 
        * Open medline queries in a new window (Frédéric)

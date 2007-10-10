@@ -15,26 +15,26 @@ fi
 
 sanitize() {
   if [ "@extension@" = "" ] ; then
-      echo "$1"
+      echo "$*"
   else
-      echo "$1" | sed -e "s/@extension@$//"
+      echo "$*" | sed -e "s/@extension@$//"
   fi
 }
 
-invocation=$0
-script=$(sanitize "${invocation}")".py"
+invocation="$0"
+script="$(sanitize ${invocation}).py"
 
-if test -r ${script} ; then
-    exec ${pyblio} --quiet ${script} $*
+if test -r "${script}" ; then
+    exec "${pyblio}" --quiet "${script}" "$@"
     echo "${progname}:error: can't execute the real script"
     exit 1
 fi
 
-progname=$(sanitize `basename ${invocation}`)
+progname="$(sanitize `basename ${invocation}`)"
 script="${prefix}/${progname}.py"
 
 if test -r ${script} ; then
-    exec ${pyblio} --quiet ${script} $*
+    exec "${pyblio}" --quiet "${script}" "$@"
     echo "${progname}:error: can't execute the real script"
     exit 1
 fi
