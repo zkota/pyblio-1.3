@@ -1,5 +1,11 @@
 -*- text -*-
 
+New in ...
+
+       * added a --disable-depchecks configure option to let packagers
+         avoid failing checks when running under fakeroot (gnomevfs
+         for instance would try to create $HOME/.gnome2 when imported)
+
 New in 1.2.11 - 2007-09-24
 
        * Fixed multiple creation of entries (Frédéric)

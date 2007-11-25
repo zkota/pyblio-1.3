@@ -41,7 +41,15 @@ dnl Python version
 REQUIRED_PYTHON_VERSION="2.3"
 REQUIRED_PYBLIO_VERSION="1.3.4"
 
+# PACKAGERS
+AC_ARG_ENABLE(depchecks, 
+[  --disable-depchecks     skip dependency checks (while building packages for instance)],,
+ enable_depchecks="yes")
+
 AC_MSG_CHECKING([python dependencies])
+
+if test ${enable_depchecks} = "yes" ; then
+
 ${Python} ${srcdir}/setup-check.py ${REQUIRED_PYTHON_VERSION} ${REQUIRED_PYBLIO_VERSION} 2>&5 1>&2
 
 result="$?"
@@ -63,6 +71,9 @@ if test "$result" = 0 ; then
 else
 	AC_MSG_RESULT([no])
 	AC_MSG_ERROR([${Status}])
+fi
+else
+  AC_MSG_RESULT([disabled by user])
 fi
 
 AC_CONFIG_FILES(	
